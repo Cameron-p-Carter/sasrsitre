@@ -41,29 +41,94 @@ const AwardsSection = () => {
   ];
 
   return (
-    <section className="bg-[#006cc9] flex flex-col gap-12 lg:gap-20 items-center px-5 lg:px-16 py-12 lg:py-10 w-full">
-      <div className="flex flex-col gap-12 lg:gap-20 max-w-[1280px] w-full">
+    <section className="bg-[#006cc9] flex flex-col gap-12 md:gap-16 lg:gap-20 items-center px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-10 w-full">
+      <div className="flex flex-col gap-12 md:gap-16 lg:gap-20 max-w-[1280px] w-full">
         {/* Mobile: Text above awards */}
-        <div className="lg:hidden flex flex-col gap-5 w-full">
+        <div className="md:hidden flex flex-col gap-5 w-full">
           <p className="font-bold text-[#14d3f3] text-[16px] leading-[1.5] w-full">
             We proudly received awards and are the preferred ICT supplier for NSW and Australian Government Agencies.
           </p>
         </div>
 
+        {/* Tablet: Text above awards, awards in flexible layout */}
+        <div className="hidden md:flex lg:hidden flex-col gap-8 w-full">
+          <p className="font-bold text-[#14d3f3] text-[17px] leading-[1.5] text-center w-full">
+            We proudly received awards and are the preferred ICT supplier for NSW and Australian Government Agencies.
+          </p>
+          
+          {/* Tablet Awards - 2 rows of 3 with responsive sizing */}
+          <div className="flex flex-col gap-6 items-center w-full">
+            {/* First row */}
+            <div className="flex gap-6 items-center justify-center w-full">
+              {awards.slice(0, 3).map((award, index) => {
+                const tabletSizes = [
+                  { width: 140, height: 70 },  // Australian Government - wider
+                  { width: 70, height: 70 },   // NSW Government
+                  { width: 70, height: 70 }    // Atlassian
+                ];
+                
+                return (
+                  <div
+                    key={index}
+                    className="relative flex-shrink-0"
+                    style={{
+                      width: `${tabletSizes[index].width}px`,
+                      height: `${tabletSizes[index].height}px`
+                    }}
+                  >
+                    <Image
+                      src={award.src}
+                      alt={`${award.name} award`}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                );
+              })}
+            </div>
+            
+            {/* Second row */}
+            <div className="flex gap-6 items-center justify-center w-full">
+              {awards.slice(3, 6).map((award, index) => (
+                <div
+                  key={index + 3}
+                  className="relative flex-shrink-0 w-[70px] h-[70px]"
+                >
+                  <Image
+                    src={award.src}
+                    alt={`${award.name} award`}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* Desktop: Text on left, awards on right */}
-        <div className="hidden lg:flex gap-[42px] items-center w-full">
+        <div className="hidden lg:flex gap-8 xl:gap-[42px] items-center w-full">
           {/* Left: Text */}
-          <p className="font-bold text-[#14d3f3] text-[18px] leading-[1.5] w-[222px] flex-shrink-0">
+          <p className="font-bold text-[#14d3f3] text-[18px] leading-[1.5] w-[200px] xl:w-[222px] flex-shrink-0">
             We proudly received awards and are the preferred ICT supplier for NSW and Australian Government Agencies.
           </p>
           
           {/* Right: Awards */}
-          <div className="flex-1 flex flex-col gap-4 h-[123px] w-[1082px]">
-            <div className="flex gap-[35px] h-[164px] items-start w-[1011px]">
+          <div className="flex-1 flex items-center min-w-0">
+            <div className="flex gap-4 xl:gap-[35px] items-center flex-wrap">
               {awards.map((award, index) => {
                 // Desktop sizes based on Figma specifications
                 const desktopSizes = [
-                  { width: 237, height: 120.4 }, // Australian Government
+                  { width: 200, height: 100 }, // Australian Government - smaller for lg
+                  { width: 100, height: 100 }, // NSW Government
+                  { width: 100, height: 100 }, // Atlassian
+                  { width: 100, height: 100 }, // CUB
+                  { width: 100, height: 100 }, // Deloitte
+                  { width: 100, height: 100 }  // CEO Magazine
+                ];
+                
+                const xlSizes = [
+                  { width: 237, height: 120.4 }, // Australian Government - original size for xl
                   { width: 120, height: 120 },   // NSW Government
                   { width: 120, height: 120 },   // Atlassian
                   { width: 120, height: 120 },   // CUB
@@ -94,7 +159,7 @@ const AwardsSection = () => {
         </div>
         
         {/* Mobile: Awards Section - 2 rows of 3 */}
-        <div className="lg:hidden flex flex-col gap-6 items-center justify-center w-full">
+        <div className="md:hidden flex flex-col gap-6 items-center justify-center w-full">
           {/* Mobile: First row (3 badges) */}
           <div className="flex gap-[25px] items-center justify-center h-[83px] w-full">
             {awards.slice(0, 3).map((award, index) => (

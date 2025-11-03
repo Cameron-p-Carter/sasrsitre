@@ -13,10 +13,10 @@ const Header = () => {
   return (
     <header className="bg-[#0c2080] w-full relative z-20">
       {/* Desktop Header */}
-      <div className="hidden lg:flex items-center justify-between h-[72px] px-16 max-w-full">
+      <div className="hidden lg:flex items-center h-[72px] px-4 xl:px-16 max-w-full">
         {/* Logo Section */}
-        <div className="flex items-center gap-6 w-[260px]">
-          <div className="relative h-[51.84px] w-[243px]">
+        <div className="flex items-center gap-2 xl:gap-6 flex-shrink-0">
+          <div className="relative h-[40px] xl:h-[51.84px] w-[188px] xl:w-[243px]">
             <Image
               src="/images/logos/S@S_Logo_WHITE_RGB.png"
               alt="Software@Scale Logo"
@@ -28,21 +28,20 @@ const Header = () => {
         </div>
 
         {/* Decorative S Element */}
-        <div className="flex-1 h-[73px] relative overflow-hidden">
-          <div className="absolute left-[20px] top-[0.5px] w-[269px] h-[72px]">
-            <Image
-              src="/images/logos/Desktop Menu_S_Element.svg"
-              alt="Decorative S Element"
-              fill
-              className="object-contain"
-            />
-          </div>
+        <div className="flex-1 h-[72px] relative overflow-hidden min-w-[200px]">
+          <Image
+            src="/images/logos/Desktop Menu_S_Element.svg"
+            alt="Decorative S Element"
+            fill
+            className="object-cover 2xl:object-contain"
+            style={{ objectPosition: 'center' }}
+          />
         </div>
 
         {/* Navigation */}
-        <nav className="flex items-center gap-8">
+        <nav className="flex items-center gap-2 xl:gap-4 flex-shrink-0">
           {/* Navigation Links */}
-          <div className="flex items-center gap-8">
+          <div className="flex items-center gap-2 xl:gap-4">
             <div className="flex flex-col gap-2.5">
               <div className="flex items-center justify-center gap-1">
                 <span className="font-normal text-white text-base leading-6 whitespace-nowrap">
