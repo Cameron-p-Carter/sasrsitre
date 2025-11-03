@@ -52,22 +52,52 @@ const ProvenApproachSection = () => {
   ];
 
   return (
-    <section className="bg-[#006cc9] flex flex-col gap-20 items-center px-16 py-28 w-full">
-      <div className="flex flex-col gap-20 items-center max-w-[1280px] w-full">
+    <section className="bg-[#006cc9] flex flex-col gap-12 md:gap-20 items-center px-5 md:px-8 lg:px-16 py-16 md:py-28 w-full">
+      <div className="flex flex-col gap-12 md:gap-20 items-center max-w-[1280px] w-full">
         {/* Section Header */}
-        <div className="flex flex-col gap-4 items-center max-w-[768px] w-full">
-          <div className="flex flex-col gap-6 items-center text-white text-center w-full">
-            <h2 className="font-bold text-[48px] leading-[1.2] tracking-[-0.48px] w-full">
+        <div className="flex flex-col gap-3 md:gap-4 items-center max-w-[768px] w-full">
+          <div className="flex flex-col gap-5 md:gap-6 items-center text-white text-center w-full">
+            <h2 className="font-bold text-[32px] md:text-[40px] lg:text-[48px] leading-[1.2] tracking-[-0.32px] md:tracking-[-0.4px] lg:tracking-[-0.48px] w-full">
               Our Proven Approach to Delivering Excellence
             </h2>
-            <p className="font-normal text-[18px] leading-[1.5] w-full">
+            <p className="font-normal text-base md:text-[17px] lg:text-[18px] leading-[1.5] w-full">
               At Software at Scale, we employ a structured methodology that ensures optimal results for our clients. Our approach combines industry best practices with innovative solutions tailored to specific business needs.
             </p>
           </div>
         </div>
 
-        {/* Content Layout */}
-        <div className="flex gap-12 items-center w-full">
+        {/* Mobile Layout: Vertical Stack */}
+        <div className="flex flex-col gap-12 md:hidden w-full">
+          {/* All Features */}
+          {approaches.map((approach, index) => (
+            <div key={index} className="flex flex-col gap-5 items-center w-full">
+              <div className="w-12 h-12">
+                {approach.icon}
+              </div>
+              <div className="flex flex-col gap-3 items-center text-center w-full">
+                <h3 className="font-bold text-[#5ae0f6] text-[20px] leading-[1.4] tracking-[-0.2px] w-full">
+                  {approach.title}
+                </h3>
+                <p className="font-normal text-white text-base leading-[1.5] w-full">
+                  {approach.description}
+                </p>
+              </div>
+            </div>
+          ))}
+          
+          {/* Mobile Image */}
+          <div className="relative w-full aspect-square rounded-2xl overflow-hidden">
+            <Image
+              src="/images/placeholder/placeholder10.jpg"
+              alt="Our proven approach methodology"
+              fill
+              className="object-cover"
+            />
+          </div>
+        </div>
+
+        {/* Desktop Layout: Three Columns */}
+        <div className="hidden md:flex gap-12 items-center w-full">
           {/* Left Column */}
           <div className="flex-1 flex flex-col gap-16 items-center">
             {/* Agile Development Process */}
@@ -76,7 +106,7 @@ const ProvenApproachSection = () => {
                 {approaches[0].icon}
               </div>
               <div className="flex flex-col gap-4 items-center text-center w-full">
-                <h3 className="font-bold text-[#5ae0f6] text-[24px] leading-[1.4] tracking-[-0.24px] w-full">
+                <h3 className="font-bold text-[#5ae0f6] text-[20px] lg:text-[24px] leading-[1.4] tracking-[-0.2px] lg:tracking-[-0.24px] w-full">
                   {approaches[0].title}
                 </h3>
                 <p className="font-normal text-white text-base leading-[1.5] w-full">
@@ -91,7 +121,7 @@ const ProvenApproachSection = () => {
                 {approaches[2].icon}
               </div>
               <div className="flex flex-col gap-4 items-center text-center w-full">
-                <h3 className="font-bold text-[#5ae0f6] text-[24px] leading-[1.4] tracking-[-0.24px] w-full">
+                <h3 className="font-bold text-[#5ae0f6] text-[20px] lg:text-[24px] leading-[1.4] tracking-[-0.2px] lg:tracking-[-0.24px] w-full">
                   {approaches[2].title}
                 </h3>
                 <p className="font-normal text-white text-base leading-[1.5] w-full">
@@ -102,7 +132,7 @@ const ProvenApproachSection = () => {
           </div>
 
           {/* Center Image */}
-          <div className="relative w-[540px] h-[540px] rounded-2xl overflow-hidden flex-shrink-0">
+          <div className="relative w-[400px] lg:w-[540px] h-[400px] lg:h-[540px] rounded-2xl overflow-hidden flex-shrink-0">
             <Image
               src="/images/placeholder/placeholder10.jpg"
               alt="Our proven approach methodology"
@@ -119,7 +149,7 @@ const ProvenApproachSection = () => {
                 {approaches[1].icon}
               </div>
               <div className="flex flex-col gap-4 items-center text-center w-full">
-                <h3 className="font-bold text-[#5ae0f6] text-[24px] leading-[1.4] tracking-[-0.24px] w-full">
+                <h3 className="font-bold text-[#5ae0f6] text-[20px] lg:text-[24px] leading-[1.4] tracking-[-0.2px] lg:tracking-[-0.24px] w-full">
                   {approaches[1].title}
                 </h3>
                 <p className="font-normal text-white text-base leading-[1.5] w-full">
@@ -134,7 +164,7 @@ const ProvenApproachSection = () => {
                 {approaches[3].icon}
               </div>
               <div className="flex flex-col gap-4 items-center text-center w-full">
-                <h3 className="font-bold text-[#5ae0f6] text-[24px] leading-[1.4] tracking-[-0.24px] w-full">
+                <h3 className="font-bold text-[#5ae0f6] text-[20px] lg:text-[24px] leading-[1.4] tracking-[-0.2px] lg:tracking-[-0.24px] w-full">
                   {approaches[3].title}
                 </h3>
                 <p className="font-normal text-white text-base leading-[1.5] w-full">
@@ -146,14 +176,14 @@ const ProvenApproachSection = () => {
         </div>
 
         {/* Action Buttons */}
-        <div className="flex gap-4 items-start">
-          <button className="bg-[#5ae0f6] border border-[#5ae0f6] border-solid flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl">
-            <span className="font-medium text-[#00050a] text-base leading-[1.5] whitespace-nowrap">
+        <div className="flex gap-4 items-center">
+          <button className="bg-[#5ae0f6] border border-[#5ae0f6] border-solid flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl hover:bg-[#4dd0e6] transition-colors">
+            <span className="font-medium text-[#0c2080] text-base leading-[1.5] whitespace-nowrap">
               Learn More
             </span>
           </button>
-          <button className="border border-[#5ae0f6] border-solid flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl">
-            <span className="font-medium text-[#5ae0f6] text-base leading-[1.5] whitespace-nowrap">
+          <button className="border border-[#14d3f3] border-solid flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl hover:bg-[#14d3f3] hover:text-[#0c2080] transition-colors">
+            <span className="font-medium text-[#14d3f3] text-base leading-[1.5] whitespace-nowrap">
               Scale Now
             </span>
           </button>
