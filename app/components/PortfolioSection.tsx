@@ -13,14 +13,14 @@ export default function PortfolioSection() {
       id: 2,
       title: "Mine Super",
       description: "Preparing a Superannuation Platform for Sale and Future Growth.",
-      image: "/images/placeholder/placeholder12.jpg",
+      image: "/images/placeholder/placeholder13.jpg",
       aspectRatio: "aspect-[335/188]"
     },
     {
       id: 3,
       title: "Coates Group",
       description: "Engineering Acceleration for Global Market Leadership.",
-      image: "/images/placeholder/placeholder13.jpg",
+      image: "/images/placeholder/placeholder12.jpg",
       aspectRatio: "aspect-square"
     },
     {
@@ -80,9 +80,9 @@ export default function PortfolioSection() {
         </div>
 
         {/* Desktop Layout: Two Columns */}
-        <div className="hidden md:flex gap-12 items-start justify-center mb-16">
+        <div className="hidden md:flex gap-8 lg:gap-12 items-start justify-center mb-16">
           {/* Left Column */}
-          <div className="flex flex-col gap-16 w-[634px]">
+          <div className="flex flex-col gap-16 flex-1 max-w-[634px]">
             {/* Team Super Card */}
             <div className="flex flex-col gap-6">
               <div className="relative w-full aspect-[632/346.5] rounded-2xl overflow-hidden">
@@ -119,7 +119,7 @@ export default function PortfolioSection() {
             <div className="flex flex-col gap-6">
               <div className="relative w-full h-[357px] rounded-2xl overflow-hidden">
                 <Image
-                  src="/images/placeholder/placeholder12.jpg"
+                  src="/images/placeholder/placeholder13.jpg"
                   alt="Mine Super project"
                   fill
                   className="object-cover"
@@ -154,7 +154,7 @@ export default function PortfolioSection() {
             <div className="flex flex-col gap-6">
               <div className="relative w-full aspect-square rounded-2xl overflow-hidden">
                 <Image
-                  src="/images/placeholder/placeholder13.jpg"
+                  src="/images/placeholder/placeholder12.jpg"
                   alt="Coates Group project"
                   fill
                   className="object-cover"
@@ -183,7 +183,7 @@ export default function PortfolioSection() {
             </div>
 
             {/* GoFundraise Card */}
-            <div className="flex flex-col gap-6 w-[632px]">
+            <div className="flex flex-col gap-6 w-full max-w-[632px]">
               <div className="relative w-full aspect-[632/346.5] rounded-2xl overflow-hidden">
                 <Image
                   src="/images/placeholder/placeholder14.jpg"

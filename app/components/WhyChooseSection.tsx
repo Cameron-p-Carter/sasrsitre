@@ -129,7 +129,7 @@ const WhyChooseSection = () => {
                     </p>
                   </div>
                   <div className="flex flex-col gap-2 w-full">
-                    <button className="flex items-center justify-center gap-2 rounded-xl overflow-hidden">
+                    <button className="flex items-start gap-2 rounded-xl overflow-hidden">
                       <span className="font-medium text-[#14d3f3] text-base leading-[1.5] whitespace-nowrap">
                         Learn More
                       </span>
@@ -160,7 +160,7 @@ const WhyChooseSection = () => {
                     </p>
                   </div>
                   <div className="flex flex-col gap-2 w-full">
-                    <button className="flex items-center justify-center gap-2 rounded-xl overflow-hidden">
+                    <button className="flex items-start gap-2 rounded-xl overflow-hidden">
                       <span className="font-medium text-[#14d3f3] text-base leading-[1.5] whitespace-nowrap">
                         Learn More
                       </span>

@@ -30,7 +30,7 @@ const EliteTalentSection = () => {
       name: "New Relic",
       src: "/images/eliteTalent/new_relic_logo_horizontal.png",
       width: 135.5,
-      height: 11
+      height: 21
     },
     {
       name: "Monoova",

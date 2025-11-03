@@ -96,8 +96,40 @@ const ProvenApproachSection = () => {
           </div>
         </div>
 
+        {/* Tablet Layout: Two Columns */}
+        <div className="hidden md:flex lg:hidden flex-col gap-12 w-full">
+          {/* Image */}
+          <div className="relative w-full max-w-[400px] aspect-square rounded-2xl overflow-hidden mx-auto">
+            <Image
+              src="/images/placeholder/placeholder10.jpg"
+              alt="Our proven approach methodology"
+              fill
+              className="object-cover"
+            />
+          </div>
+          
+          {/* Features Grid */}
+          <div className="grid grid-cols-2 gap-8 w-full">
+            {approaches.map((approach, index) => (
+              <div key={index} className="flex flex-col gap-4 items-center text-center">
+                <div className="w-12 h-12">
+                  {approach.icon}
+                </div>
+                <div className="flex flex-col gap-3 items-center w-full">
+                  <h3 className="font-bold text-[#5ae0f6] text-[18px] leading-[1.4] tracking-[-0.18px] w-full">
+                    {approach.title}
+                  </h3>
+                  <p className="font-normal text-white text-sm leading-[1.5] w-full">
+                    {approach.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Desktop Layout: Three Columns */}
-        <div className="hidden md:flex gap-12 items-center w-full">
+        <div className="hidden lg:flex gap-12 items-center w-full">
           {/* Left Column */}
           <div className="flex-1 flex flex-col gap-16 items-center">
             {/* Agile Development Process */}
@@ -106,7 +138,7 @@ const ProvenApproachSection = () => {
                 {approaches[0].icon}
               </div>
               <div className="flex flex-col gap-4 items-center text-center w-full">
-                <h3 className="font-bold text-[#5ae0f6] text-[20px] lg:text-[24px] leading-[1.4] tracking-[-0.2px] lg:tracking-[-0.24px] w-full">
+                <h3 className="font-bold text-[#5ae0f6] text-[24px] leading-[1.4] tracking-[-0.24px] w-full">
                   {approaches[0].title}
                 </h3>
                 <p className="font-normal text-white text-base leading-[1.5] w-full">
@@ -121,7 +153,7 @@ const ProvenApproachSection = () => {
                 {approaches[2].icon}
               </div>
               <div className="flex flex-col gap-4 items-center text-center w-full">
-                <h3 className="font-bold text-[#5ae0f6] text-[20px] lg:text-[24px] leading-[1.4] tracking-[-0.2px] lg:tracking-[-0.24px] w-full">
+                <h3 className="font-bold text-[#5ae0f6] text-[24px] leading-[1.4] tracking-[-0.24px] w-full">
                   {approaches[2].title}
                 </h3>
                 <p className="font-normal text-white text-base leading-[1.5] w-full">
@@ -132,7 +164,7 @@ const ProvenApproachSection = () => {
           </div>
 
           {/* Center Image */}
-          <div className="relative w-[400px] lg:w-[540px] h-[400px] lg:h-[540px] rounded-2xl overflow-hidden flex-shrink-0">
+          <div className="relative w-[540px] h-[540px] rounded-2xl overflow-hidden flex-shrink-0">
             <Image
               src="/images/placeholder/placeholder10.jpg"
               alt="Our proven approach methodology"
@@ -149,7 +181,7 @@ const ProvenApproachSection = () => {
                 {approaches[1].icon}
               </div>
               <div className="flex flex-col gap-4 items-center text-center w-full">
-                <h3 className="font-bold text-[#5ae0f6] text-[20px] lg:text-[24px] leading-[1.4] tracking-[-0.2px] lg:tracking-[-0.24px] w-full">
+                <h3 className="font-bold text-[#5ae0f6] text-[24px] leading-[1.4] tracking-[-0.24px] w-full">
                   {approaches[1].title}
                 </h3>
                 <p className="font-normal text-white text-base leading-[1.5] w-full">
@@ -164,7 +196,7 @@ const ProvenApproachSection = () => {
                 {approaches[3].icon}
               </div>
               <div className="flex flex-col gap-4 items-center text-center w-full">
-                <h3 className="font-bold text-[#5ae0f6] text-[20px] lg:text-[24px] leading-[1.4] tracking-[-0.2px] lg:tracking-[-0.24px] w-full">
+                <h3 className="font-bold text-[#5ae0f6] text-[24px] leading-[1.4] tracking-[-0.24px] w-full">
                   {approaches[3].title}
                 </h3>
                 <p className="font-normal text-white text-base leading-[1.5] w-full">
