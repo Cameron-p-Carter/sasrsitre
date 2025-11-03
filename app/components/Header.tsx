@@ -206,7 +206,7 @@ const Header = () => {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="absolute top-full left-0 right-0 bg-[#0c2080] border-t border-[#1a3a9a] z-50 md:hidden">
+        <div className="fixed top-[72px] left-0 right-0 bg-[#0c2080] border-t border-[#1a3a9a] z-[60] md:hidden">
           <nav className="flex flex-col p-4">
             <div className="flex flex-col gap-4">
               <div className="flex items-center justify-between py-3 border-b border-[#1a3a9a]">
@@ -265,7 +265,7 @@ const Header = () => {
 
       {/* Tablet Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="absolute top-full left-0 right-0 bg-[#0c2080] border-t border-[#1a3a9a] z-50 hidden md:block lg:hidden">
+        <div className="fixed top-[72px] left-0 right-0 bg-[#0c2080] border-t border-[#1a3a9a] z-[60] hidden md:block lg:hidden">
           <nav className="flex flex-col p-6">
             <div className="grid grid-cols-2 gap-6">
               <div className="flex flex-col gap-4">
