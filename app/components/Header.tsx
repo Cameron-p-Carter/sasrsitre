@@ -11,7 +11,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-[#0c2080] w-full relative z-20 overflow-hidden">
+    <header className="bg-[#0c2080] w-full relative z-20">
       {/* Desktop Header */}
       <div className="hidden lg:flex items-center justify-between h-[72px] px-16 max-w-full">
         {/* Logo Section */}
@@ -28,8 +28,8 @@ const Header = () => {
         </div>
 
         {/* Decorative S Element */}
-        <div className="flex-1 h-[73px] relative">
-          <div className="absolute left-[-6px] top-[0.5px] w-[269px] h-[72px] overflow-hidden">
+        <div className="flex-1 h-[73px] relative overflow-hidden">
+          <div className="absolute left-[-6px] top-[0.5px] w-[269px] h-[72px]">
             <Image
               src="/images/logos/Desktop Menu_S_Element.svg"
               alt="Decorative S Element"
@@ -137,8 +137,8 @@ const Header = () => {
         </div>
 
         {/* Decorative S Element - Smaller */}
-        <div className="flex-1 h-[60px] relative max-w-[200px]">
-          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[200px] h-[60px] overflow-hidden">
+        <div className="flex-1 h-[60px] relative max-w-[200px] overflow-hidden">
+          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[200px] h-[60px]">
             <Image
               src="/images/logos/Desktop Menu_S_Element.svg"
               alt="Decorative S Element"
@@ -182,8 +182,8 @@ const Header = () => {
         </div>
 
         {/* Decorative S Element - Mobile */}
-        <div className="flex-1 h-[72px] relative max-w-[250px]">
-          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-12 w-[240px] h-[240px] overflow-visible">
+        <div className="flex-1 h-[72px] relative max-w-[250px] overflow-hidden">
+          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-12 w-[240px] h-[240px]">
             <Image
               src="/images/logos/S@S_Logo_Mark_RGB.svg"
               alt="Software@Scale Logo Mark"
@@ -206,54 +206,54 @@ const Header = () => {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="fixed top-[72px] left-0 right-0 bg-[#0c2080] border-t border-[#1a3a9a] z-[60] md:hidden">
-          <nav className="flex flex-col p-4">
-            <div className="flex flex-col gap-4">
-              <div className="flex items-center justify-between py-3 border-b border-[#1a3a9a]">
-                <span className="font-normal text-white text-base leading-6">
+        <div className="absolute top-full left-0 right-0 bg-[#0c2080] border-t border-[#1a3a9a] z-[60] md:hidden shadow-lg">
+          <nav className="flex flex-col px-4 py-3">
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center justify-between py-2 border-b border-[#1a3a9a]">
+                <span className="font-normal text-white text-sm leading-5">
                   About
                 </span>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M7 14L12 9L17 14" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
 
-              <div className="flex items-center justify-between py-3 border-b border-[#1a3a9a]">
-                <span className="font-normal text-white text-base leading-6">
+              <div className="flex items-center justify-between py-2 border-b border-[#1a3a9a]">
+                <span className="font-normal text-white text-sm leading-5">
                   Our Services
                 </span>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M7 14L12 9L17 14" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
 
-              <div className="flex items-center justify-between py-3 border-b border-[#1a3a9a]">
-                <span className="font-normal text-white text-base leading-6">
+              <div className="flex items-center justify-between py-2 border-b border-[#1a3a9a]">
+                <span className="font-normal text-white text-sm leading-5">
                   Industries
                 </span>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M7 14L12 9L17 14" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
 
-              <div className="flex items-center justify-between py-3 border-b border-[#1a3a9a]">
-                <span className="font-normal text-white text-base leading-6">
+              <div className="flex items-center justify-between py-2 border-b border-[#1a3a9a]">
+                <span className="font-normal text-white text-sm leading-5">
                   Collections
                 </span>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M7 14L12 9L17 14" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
 
-              <div className="py-3 border-b border-[#1a3a9a]">
-                <span className="font-normal text-white text-base leading-6">
+              <div className="py-2 border-b border-[#1a3a9a]">
+                <span className="font-normal text-white text-sm leading-5">
                   Careers
                 </span>
               </div>
 
-              <div className="pt-4">
-                <button className="bg-[#5ae0f6] flex items-center justify-center gap-2 px-6 py-3 rounded-xl w-full">
-                  <span className="font-medium text-[#002b50] text-base leading-6">
+              <div className="pt-3">
+                <button className="bg-[#5ae0f6] flex items-center justify-center gap-2 px-4 py-2 rounded-xl w-full">
+                  <span className="font-medium text-[#002b50] text-sm leading-5">
                     Contact
                   </span>
                 </button>
