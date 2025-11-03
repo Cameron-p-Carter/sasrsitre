@@ -27,42 +27,47 @@ const LogoSection = () => {
   const duplicatedLogos = [...logos, ...logos];
 
   return (
-    <section className="bg-[#006cc9] px-4 md:px-8 lg:px-16 py-12 md:py-16 lg:py-20 w-full overflow-hidden">
+    <section className="bg-[#006cc9] px-5 lg:px-16 py-12 lg:py-20 w-full overflow-hidden">
       <div className="max-w-[1280px] mx-auto">
-        {/* Header */}
-        <div className="mb-5 md:mb-8">
-          <p className="font-bold text-[#5ae0f6] text-[16px] leading-[1.5] text-center md:text-left">
+        {/* Mobile: Header above logos */}
+        <div className="lg:hidden mb-5">
+          <p className="font-bold text-[#5ae0f6] text-[16px] leading-[1.5] text-center">
             Trusted by top companies worldwide
           </p>
         </div>
 
-        {/* Desktop: Static Grid */}
-        <div className="hidden md:flex flex-wrap items-center justify-center gap-8 lg:gap-12">
-          {logos.slice(0, 5).map((logo, index) => (
-            <motion.div
-              key={logo.name}
-              className="flex items-center justify-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ scale: 1.05 }}
-            >
-              <div className="relative flex items-center justify-center">
+        {/* Desktop: Text on left, logos on right */}
+        <div className="hidden lg:flex gap-[26px] items-center w-full">
+          {/* Left: Text */}
+          <p className="font-bold text-[#5ae0f6] text-[18px] leading-[1.5] w-[320px] flex-shrink-0">
+            Trusted by top companies worldwide
+          </p>
+          
+          {/* Right: Logos */}
+          <div className="flex-1 flex items-center justify-end gap-[45px] h-[100px]">
+            {logos.slice(0, 5).map((logo, index) => (
+              <div
+                key={logo.name}
+                className="flex items-center justify-center"
+                style={{
+                  width: `${logo.width}px`,
+                  height: `${logo.height}px`
+                }}
+              >
                 <Image
                   src={logo.src}
                   alt={logo.name}
                   width={logo.width}
                   height={logo.height}
                   className="object-contain filter brightness-0 invert"
-                  style={{ maxHeight: '60px', width: 'auto' }}
                 />
               </div>
-            </motion.div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Mobile: Marquee Animation */}
-        <div className="md:hidden relative">
+        <div className="lg:hidden relative">
           <div className="flex overflow-hidden">
             <motion.div
               className="flex gap-8 items-center"
@@ -96,33 +101,6 @@ const LogoSection = () => {
                 </div>
               ))}
             </motion.div>
-          </div>
-        </div>
-
-        {/* Tablet: Two Row Layout */}
-        <div className="hidden md:block lg:hidden">
-          <div className="grid grid-cols-3 gap-8 items-center justify-items-center">
-            {logos.slice(0, 6).map((logo, index) => (
-              <motion.div
-                key={logo.name}
-                className="flex items-center justify-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ scale: 1.05 }}
-              >
-                <div className="relative flex items-center justify-center">
-                  <Image
-                    src={logo.src}
-                    alt={logo.name}
-                    width={logo.width}
-                    height={logo.height}
-                    className="object-contain filter brightness-0 invert"
-                    style={{ maxHeight: '50px', width: 'auto' }}
-                  />
-                </div>
-              </motion.div>
-            ))}
           </div>
         </div>
       </div>

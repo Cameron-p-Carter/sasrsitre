@@ -71,32 +71,32 @@ const WhyChooseSection = () => {
   ];
 
   return (
-    <section className="bg-[#006cc9] flex flex-col gap-20 items-center px-16 py-28 w-full">
-      <div className="flex flex-col gap-20 max-w-[1280px] w-full">
+    <section className="bg-[#006cc9] flex flex-col gap-12 lg:gap-20 items-center px-5 lg:px-16 py-16 lg:py-28 w-full">
+      <div className="flex flex-col gap-12 lg:gap-20 max-w-[1280px] w-full">
         {/* Main Heading */}
-        <h2 className="font-bold text-white text-[40px] leading-[1.2] tracking-[-0.4px] max-w-[768px] w-[768px]">
+        <h2 className="font-bold text-white text-[32px] lg:text-[40px] leading-[1.2] tracking-[-0.32px] lg:tracking-[-0.4px] max-w-[768px] w-full lg:w-[768px]">
           Why Choose Software at Scale for Your Digital Transformation Needs?
         </h2>
 
-        {/* Features Grid */}
-        <div className="flex flex-col gap-16 w-full">
-          {/* Row 1 */}
-          <div className="flex gap-12 justify-center w-full">
-            {features.slice(0, 3).map((feature, index) => (
-              <div key={index} className="flex-1 flex flex-col gap-8">
-                <div className="flex flex-col gap-6 w-full">
+        {/* Features - Mobile: Single column, Desktop: 2 rows of 3 */}
+        <div className="flex flex-col gap-12 w-full">
+          {/* Mobile: Single column stack */}
+          <div className="flex lg:hidden flex-col gap-12 w-full">
+            {features.map((feature, index) => (
+              <div key={index} className="flex flex-col gap-6 w-full">
+                <div className="flex flex-col gap-3 w-full">
                   <div className="w-12 h-12">
                     {feature.icon}
                   </div>
-                  <h3 className="font-bold text-[#5ae0f6] text-[24px] leading-[1.4] tracking-[-0.24px] min-w-full">
+                  <h3 className="font-bold text-[#5ae0f6] text-[20px] leading-[1.4] tracking-[-0.2px] w-full">
                     {feature.title}
                   </h3>
-                  <p className="font-normal text-white text-base leading-[1.5] min-w-full">
+                  <p className="font-normal text-white text-base leading-[1.5] w-full">
                     {feature.description}
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 w-full">
-                  <button className="flex items-center justify-center gap-2 rounded-xl overflow-hidden">
+                  <button className="flex items-start gap-2 rounded-xl overflow-hidden">
                     <span className="font-medium text-[#14d3f3] text-base leading-[1.5] whitespace-nowrap">
                       Learn More
                     </span>
@@ -111,35 +111,69 @@ const WhyChooseSection = () => {
             ))}
           </div>
 
-          {/* Row 2 */}
-          <div className="flex gap-12 justify-center w-full">
-            {features.slice(3, 6).map((feature, index) => (
-              <div key={index + 3} className="flex-1 flex flex-col gap-8">
-                <div className="flex flex-col gap-6 w-full">
-                  <div className="w-12 h-12">
-                    {feature.icon}
-                  </div>
-                  <h3 className="font-bold text-[#5ae0f6] text-[24px] leading-[1.4] tracking-[-0.24px] min-w-full">
-                    {feature.title}
-                  </h3>
-                  <p className="font-normal text-white text-base leading-[1.5] min-w-full">
-                    {feature.description}
-                  </p>
-                </div>
-                <div className="flex flex-col gap-2 w-full">
-                  <button className="flex items-center justify-center gap-2 rounded-xl overflow-hidden">
-                    <span className="font-medium text-[#14d3f3] text-base leading-[1.5] whitespace-nowrap">
-                      Learn More
-                    </span>
-                    <div className="w-6 h-6 flex items-center justify-center">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 18L15 12L9 6" stroke="#14d3f3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
+          {/* Desktop: Original 2 rows of 3 columns layout */}
+          <div className="hidden lg:flex flex-col gap-16 w-full">
+            {/* Row 1 */}
+            <div className="flex gap-12 justify-center w-full">
+              {features.slice(0, 3).map((feature, index) => (
+                <div key={index} className="flex-1 flex flex-col gap-8">
+                  <div className="flex flex-col gap-6 w-full">
+                    <div className="w-12 h-12">
+                      {feature.icon}
                     </div>
-                  </button>
+                    <h3 className="font-bold text-[#5ae0f6] text-[24px] leading-[1.4] tracking-[-0.24px] min-w-full">
+                      {feature.title}
+                    </h3>
+                    <p className="font-normal text-white text-base leading-[1.5] min-w-full">
+                      {feature.description}
+                    </p>
+                  </div>
+                  <div className="flex flex-col gap-2 w-full">
+                    <button className="flex items-center justify-center gap-2 rounded-xl overflow-hidden">
+                      <span className="font-medium text-[#14d3f3] text-base leading-[1.5] whitespace-nowrap">
+                        Learn More
+                      </span>
+                      <div className="w-6 h-6 flex items-center justify-center">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M9 18L15 12L9 6" stroke="#14d3f3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+
+            {/* Row 2 */}
+            <div className="flex gap-12 justify-center w-full">
+              {features.slice(3, 6).map((feature, index) => (
+                <div key={index + 3} className="flex-1 flex flex-col gap-8">
+                  <div className="flex flex-col gap-6 w-full">
+                    <div className="w-12 h-12">
+                      {feature.icon}
+                    </div>
+                    <h3 className="font-bold text-[#5ae0f6] text-[24px] leading-[1.4] tracking-[-0.24px] min-w-full">
+                      {feature.title}
+                    </h3>
+                    <p className="font-normal text-white text-base leading-[1.5] min-w-full">
+                      {feature.description}
+                    </p>
+                  </div>
+                  <div className="flex flex-col gap-2 w-full">
+                    <button className="flex items-center justify-center gap-2 rounded-xl overflow-hidden">
+                      <span className="font-medium text-[#14d3f3] text-base leading-[1.5] whitespace-nowrap">
+                        Learn More
+                      </span>
+                      <div className="w-6 h-6 flex items-center justify-center">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M9 18L15 12L9 6" stroke="#14d3f3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

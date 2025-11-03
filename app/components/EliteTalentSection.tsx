@@ -5,64 +5,64 @@ const EliteTalentSection = () => {
     {
       name: "AWS Partner",
       src: "/images/eliteTalent/AWS_Partner-HOR-Logo.png",
-      width: 185,
-      height: 39
+      width: 137,
+      height: 29
     },
     {
       name: "Vercel",
       src: "/images/eliteTalent/Vercel_Logo.png",
-      width: 201,
-      height: 39
+      width: 128,
+      height: 25
     },
     {
       name: "Microsoft",
       src: "/images/eliteTalent/Microsoft_logo.png",
-      width: 185,
-      height: 47.5
+      width: 137,
+      height: 29
     },
     {
       name: "Guidewire",
       src: "/images/eliteTalent/Guidewire_Logo.png",
-      width: 204,
-      height: 31.88
+      width: 135.5,
+      height: 31
     },
     {
       name: "New Relic",
       src: "/images/eliteTalent/new_relic_logo_horizontal.png",
-      width: 233,
-      height: 19
+      width: 135.5,
+      height: 11
     },
     {
       name: "Monoova",
       src: "/images/eliteTalent/Monoova_Logo.png",
-      width: 219,
-      height: 40.8
+      width: 128,
+      height: 25
     },
     {
       name: "6pillars",
       src: "/images/eliteTalent/6pillars_logo.png",
-      width: 185,
-      height: 39
+      width: 137,
+      height: 29
     },
     {
       name: "Zai",
       src: "/images/eliteTalent/Zai_Logo.png",
-      width: 151,
-      height: 50
+      width: 128,
+      height: 47
     }
   ];
 
   return (
-    <section className="bg-[#cce1f4] flex flex-col gap-20 items-center px-16 py-28 w-full">
-      <div className="flex flex-col gap-20 max-w-[1280px] w-full">
-        <div className="flex gap-20 items-center w-full">
+    <section className="bg-[#cce1f4] flex flex-col gap-12 md:gap-16 lg:gap-20 items-center px-5 md:px-8 lg:px-16 py-16 md:py-20 lg:py-28 w-full">
+      <div className="flex flex-col gap-12 md:gap-16 lg:gap-20 max-w-[1280px] w-full">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start lg:items-center w-full">
           {/* Content Section */}
-          <div className="flex-1 flex flex-col gap-8 justify-center">
-            <div className="flex flex-col gap-6 w-full">
-              <h2 className="font-bold text-[#0c2080] text-[48px] leading-[1.2] tracking-[-0.48px] w-full">
+          <div className="w-full lg:flex-1 flex flex-col gap-6 md:gap-8 justify-center">
+            <div className="flex flex-col gap-5 md:gap-6 w-full">
+              <h2 className="font-bold text-[#0c2080] text-[36px] md:text-[44px] lg:text-[48px] leading-[1.2] tracking-[-0.36px] md:tracking-[-0.44px] lg:tracking-[-0.48px] w-full">
                 Elite Talent
               </h2>
-              <div className="font-normal text-[#00050a] text-[18px] leading-[1.5] w-full">
+              <div className="font-normal text-[#00050a] text-[16px] md:text-[17px] lg:text-[18px] leading-[1.5] w-full">
                 <p className="mb-0">As certified partners of AWS (Advanced), Vercel (Silver), 6pillars.ai</p>
                 <p>and New Relic, we're deeply embedded in the modern technology ecosystem trusted to deliver where security, scale and performance are non-negotiable.</p>
               </div>
@@ -92,11 +92,12 @@ const EliteTalentSection = () => {
           </div>
 
           {/* Logo Grid Section */}
-          <div className="flex-1 flex flex-col h-[384px]">
-            <div className="flex flex-wrap gap-2 h-[388px] w-[600px]">
+          <div className="w-full lg:flex-1 flex flex-col gap-2">
+            {/* Mobile: 2-column grid, 4 rows */}
+            <div className="flex lg:hidden flex-col gap-2 w-full">
               {/* Row 1 */}
-              <div className="flex flex-wrap gap-2 h-[89px] w-[600px]">
-                <div className="bg-[#e5f0f9] flex flex-col gap-[14px] h-[84px] items-center justify-center p-[14px] rounded-2xl w-[296px]">
+              <div className="flex gap-2 w-full">
+                <div className="bg-[#e5f0f9] flex flex-col gap-[14px] h-[84px] items-center justify-center p-[14px] rounded-2xl flex-1">
                   <div className="relative" style={{ width: `${partnerLogos[0].width}px`, height: `${partnerLogos[0].height}px` }}>
                     <Image
                       src={partnerLogos[0].src}
@@ -106,8 +107,107 @@ const EliteTalentSection = () => {
                     />
                   </div>
                 </div>
-                <div className="bg-[#e5f0f9] flex flex-col gap-[14px] h-[84px] items-center justify-center p-[14px] rounded-2xl w-[296px]">
+                <div className="bg-[#e5f0f9] flex flex-col gap-[14px] h-[84px] items-center justify-center p-[14px] rounded-2xl flex-1">
                   <div className="relative" style={{ width: `${partnerLogos[1].width}px`, height: `${partnerLogos[1].height}px` }}>
+                    <Image
+                      src={partnerLogos[1].src}
+                      alt={partnerLogos[1].name}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Row 2 */}
+              <div className="flex gap-2 w-full">
+                <div className="bg-[#e5f0f9] flex flex-col gap-[14px] h-[84px] items-center justify-center p-[14px] rounded-2xl flex-1">
+                  <div className="relative" style={{ width: `${partnerLogos[2].width}px`, height: `${partnerLogos[2].height}px` }}>
+                    <Image
+                      src={partnerLogos[2].src}
+                      alt={partnerLogos[2].name}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+                <div className="bg-[#e5f0f9] flex flex-col gap-[14px] h-[84px] items-center justify-center p-[14px] rounded-2xl flex-1">
+                  <div className="relative" style={{ width: `${partnerLogos[3].width}px`, height: `${partnerLogos[3].height}px` }}>
+                    <Image
+                      src={partnerLogos[3].src}
+                      alt={partnerLogos[3].name}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Row 3 */}
+              <div className="flex gap-2 w-full">
+                <div className="bg-[#e5f0f9] flex flex-col gap-[14px] h-[84px] items-center justify-center p-[14px] rounded-2xl flex-1">
+                  <div className="relative" style={{ width: `${partnerLogos[4].width}px`, height: `${partnerLogos[4].height}px` }}>
+                    <Image
+                      src={partnerLogos[4].src}
+                      alt={partnerLogos[4].name}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+                <div className="bg-[#e5f0f9] flex flex-col gap-[14px] h-[84px] items-center justify-center p-[14px] rounded-2xl flex-1">
+                  <div className="relative" style={{ width: `${partnerLogos[5].width}px`, height: `${partnerLogos[5].height}px` }}>
+                    <Image
+                      src={partnerLogos[5].src}
+                      alt={partnerLogos[5].name}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Row 4 */}
+              <div className="flex gap-2 w-full">
+                <div className="bg-[#e5f0f9] flex flex-col gap-[14px] h-[84px] items-center justify-center p-[14px] rounded-2xl flex-1">
+                  <div className="relative" style={{ width: `${partnerLogos[6].width}px`, height: `${partnerLogos[6].height}px` }}>
+                    <Image
+                      src={partnerLogos[6].src}
+                      alt={partnerLogos[6].name}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+                <div className="bg-[#e5f0f9] flex flex-col gap-[14px] h-[84px] items-center justify-center p-[14px] rounded-2xl flex-1">
+                  <div className="relative" style={{ width: `${partnerLogos[7].width}px`, height: `${partnerLogos[7].height}px` }}>
+                    <Image
+                      src={partnerLogos[7].src}
+                      alt={partnerLogos[7].name}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Desktop: Original layout */}
+            <div className="hidden lg:flex flex-wrap gap-2 h-[388px] w-[600px]">
+              {/* Row 1 */}
+              <div className="flex flex-wrap gap-2 h-[89px] w-[600px]">
+                <div className="bg-[#e5f0f9] flex flex-col gap-[14px] h-[84px] items-center justify-center p-[14px] rounded-2xl w-[296px]">
+                  <div className="relative" style={{ width: `${partnerLogos[0].width * 1.35}px`, height: `${partnerLogos[0].height * 1.35}px` }}>
+                    <Image
+                      src={partnerLogos[0].src}
+                      alt={partnerLogos[0].name}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+                <div className="bg-[#e5f0f9] flex flex-col gap-[14px] h-[84px] items-center justify-center p-[14px] rounded-2xl w-[296px]">
+                  <div className="relative" style={{ width: `${partnerLogos[1].width * 1.57}px`, height: `${partnerLogos[1].height * 1.56}px` }}>
                     <Image
                       src={partnerLogos[1].src}
                       alt={partnerLogos[1].name}
@@ -121,7 +221,7 @@ const EliteTalentSection = () => {
               {/* Row 2 */}
               <div className="flex flex-wrap gap-2 h-[89px] w-[600px]">
                 <div className="bg-[#e5f0f9] flex flex-col gap-[14px] h-[84px] items-center justify-center p-[14px] rounded-2xl w-[296px]">
-                  <div className="relative" style={{ width: `${partnerLogos[2].width}px`, height: `${partnerLogos[2].height}px` }}>
+                  <div className="relative" style={{ width: `${partnerLogos[2].width * 1.35}px`, height: `${partnerLogos[2].height * 1.64}px` }}>
                     <Image
                       src={partnerLogos[2].src}
                       alt={partnerLogos[2].name}
@@ -131,7 +231,7 @@ const EliteTalentSection = () => {
                   </div>
                 </div>
                 <div className="bg-[#e5f0f9] flex flex-col gap-[14px] h-[84px] items-center justify-center p-[14px] rounded-2xl w-[296px]">
-                  <div className="relative" style={{ width: `${partnerLogos[3].width}px`, height: `${partnerLogos[3].height}px` }}>
+                  <div className="relative" style={{ width: `${partnerLogos[3].width * 1.51}px`, height: `${partnerLogos[3].height * 1.03}px` }}>
                     <Image
                       src={partnerLogos[3].src}
                       alt={partnerLogos[3].name}
@@ -145,7 +245,7 @@ const EliteTalentSection = () => {
               {/* Row 3 */}
               <div className="flex flex-wrap gap-2 h-[89px] w-[600px]">
                 <div className="bg-[#e5f0f9] flex flex-col gap-[14px] h-[84px] items-center justify-center p-[14px] rounded-2xl w-[296px]">
-                  <div className="relative" style={{ width: `${partnerLogos[4].width}px`, height: `${partnerLogos[4].height}px` }}>
+                  <div className="relative" style={{ width: `${partnerLogos[4].width * 1.72}px`, height: `${partnerLogos[4].height * 1.73}px` }}>
                     <Image
                       src={partnerLogos[4].src}
                       alt={partnerLogos[4].name}
@@ -155,7 +255,7 @@ const EliteTalentSection = () => {
                   </div>
                 </div>
                 <div className="bg-[#e5f0f9] flex flex-col gap-[14px] h-[84px] items-center justify-center p-[14px] rounded-2xl w-[296px]">
-                  <div className="relative" style={{ width: `${partnerLogos[5].width}px`, height: `${partnerLogos[5].height}px` }}>
+                  <div className="relative" style={{ width: `${partnerLogos[5].width * 1.71}px`, height: `${partnerLogos[5].height * 1.63}px` }}>
                     <Image
                       src={partnerLogos[5].src}
                       alt={partnerLogos[5].name}
@@ -169,7 +269,7 @@ const EliteTalentSection = () => {
               {/* Row 4 */}
               <div className="flex flex-wrap gap-2 h-[111.75px] w-[600px]">
                 <div className="bg-[#e5f0f9] flex flex-col gap-[14px] h-[84px] items-center justify-center p-[14px] rounded-2xl w-[296px]">
-                  <div className="relative" style={{ width: `${partnerLogos[6].width}px`, height: `${partnerLogos[6].height}px` }}>
+                  <div className="relative" style={{ width: `${partnerLogos[6].width * 1.35}px`, height: `${partnerLogos[6].height * 1.35}px` }}>
                     <Image
                       src={partnerLogos[6].src}
                       alt={partnerLogos[6].name}
@@ -179,7 +279,7 @@ const EliteTalentSection = () => {
                   </div>
                 </div>
                 <div className="bg-[#e5f0f9] flex flex-col gap-[14px] h-[84px] items-center justify-center p-[14px] rounded-2xl w-[296px]">
-                  <div className="relative" style={{ width: `${partnerLogos[7].width}px`, height: `${partnerLogos[7].height}px` }}>
+                  <div className="relative" style={{ width: `${partnerLogos[7].width * 1.18}px`, height: `${partnerLogos[7].height * 1.06}px` }}>
                     <Image
                       src={partnerLogos[7].src}
                       alt={partnerLogos[7].name}
