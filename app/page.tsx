@@ -170,7 +170,13 @@ export default function Home() {
       <PortfolioSection />
       
       {/* CTA Section */}
-      <CTASection />
+      <CTASection
+        imageSrc="/images/placeholder/placeholder16.jpg"
+        title="Get in Touch with Us"
+        description="Reach out today to discover how we can help accelerate your digital transformation journey."
+        primaryButtonText="Contact"
+        secondaryButtonText="Learn More"
+      />
       
       {/* Footer */}
       <Footer />
