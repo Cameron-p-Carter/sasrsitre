@@ -21,24 +21,24 @@ const CoreValuesSection = () => {
         <div className="absolute inset-0 bg-[#0c2080] opacity-60" />
       </div>
 
-      {/* Content Container (Desktop Layout) */}
-      <div className="relative z-10 box-border flex flex-col gap-[80px] items-center px-16 py-28 w-full">
-        <div className="flex flex-col gap-[80px] items-start max-w-[1280px] mx-auto w-full">
-          <div className="flex gap-[80px] items-start w-full">
-            {/* Left Column: Tagline and Title */}
-            <div className="flex flex-col gap-4 w-1/2 flex-shrink-0">
+      {/* Content Container */}
+      <div className="relative z-10 box-border flex flex-col gap-12 md:gap-[80px] items-center px-5 md:px-16 py-16 md:py-28 w-full">
+        <div className="flex flex-col gap-5 md:gap-[80px] items-start max-w-[1280px] mx-auto w-full">
+          <div className="flex flex-col md:flex-row gap-5 md:gap-[80px] items-start w-full">
+            {/* Left Column: Tagline and Title (Mobile: Full Width, Desktop: 1/2 Width) */}
+            <div className="flex flex-col gap-3 md:gap-4 w-full md:w-1/2 flex-shrink-0">
               <p className="font-semibold text-base leading-[1.5] text-[#14d3f3] whitespace-pre">
                 Empower
               </p>
-              <h1 className="font-extrabold text-white text-[56px] leading-[1.2] tracking-[-0.56px]">
+              <h1 className="font-extrabold text-white text-[40px] md:text-[56px] leading-[1.2] tracking-[-0.4px] md:tracking-[-0.56px]">
                 <span>Our Core </span>
                 <span className="text-[#14d3f3]">Values</span>
               </h1>
             </div>
             
-            {/* Right Column: Description */}
-            <div className="flex flex-col gap-8 w-1/2">
-              <p className="font-normal text-lg leading-[1.5] text-white">
+            {/* Right Column: Description (Mobile: Full Width, Desktop: 1/2 Width) */}
+            <div className="flex flex-col gap-6 md:gap-8 w-full md:w-1/2">
+              <p className="font-normal text-base md:text-lg leading-[1.5] text-white">
                 At Software at Scale, we are committed to driving innovation and excellence in every project. Our core values of integrity, collaboration, and customer focus guide our mission to empower businesses through technology.
               </p>
             </div>

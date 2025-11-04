@@ -25,22 +25,22 @@ const CoreValuesGridSection = () => {
   ];
 
   return (
-    <section className="bg-[#cce1f4] px-16 py-28 w-full">
-      <div className="max-w-[1280px] mx-auto flex flex-col gap-[80px] items-center">
+    <section className="bg-[#cce1f4] px-5 md:px-16 py-16 md:py-28 w-full">
+      <div className="max-w-[1280px] mx-auto flex flex-col gap-12 md:gap-[80px] items-center">
         {/* Section Title and Description */}
-        <div className="flex flex-col gap-4 items-center max-w-[768px] w-full text-center">
-          <h2 className="font-bold text-[#0c2080] text-[48px] leading-[1.2] tracking-[-0.48px] w-full">
+        <div className="flex flex-col gap-5 md:gap-4 items-center max-w-[768px] w-full text-center">
+          <h2 className="font-bold text-[#0c2080] text-[36px] md:text-[48px] leading-[1.2] tracking-[-0.36px] md:tracking-[-0.48px] w-full">
             Our Core Values Shape Our Success
           </h2>
-          <p className="font-normal text-lg leading-[1.5] text-[#00050a] w-full">
+          <p className="font-normal text-base md:text-lg leading-[1.5] text-[#00050a] w-full">
             At Software at Scale, our core values are the foundation of our culture. They inspire us to deliver exceptional results and foster strong partnerships.
           </p>
         </div>
 
-        {/* Core Values Grid (Desktop: 3 Columns) */}
-        <div className="flex gap-12 w-full">
+        {/* Core Values Grid (Mobile: Stacked, Desktop: 3 Columns) */}
+        <div className="flex flex-col md:flex-row gap-12 md:gap-12 w-full">
           {values.map((value, index) => (
-            <div key={index} className="flex flex-col gap-6 items-center w-1/3 text-center">
+            <div key={index} className="flex flex-col gap-5 md:gap-6 items-center w-full md:w-1/3 text-center">
               {/* Icon */}
               <div className="relative w-12 h-12 shrink-0">
                 <Image
@@ -52,8 +52,8 @@ const CoreValuesGridSection = () => {
               </div>
               
               {/* Content */}
-              <div className="flex flex-col gap-6 items-center text-[#00050a] w-full">
-                <h3 className="font-bold text-[32px] leading-[1.3] tracking-[-0.32px] w-full">
+              <div className="flex flex-col gap-5 md:gap-6 items-center text-[#00050a] w-full">
+                <h3 className="font-bold text-[24px] md:text-[32px] leading-[1.3] tracking-[-0.24px] md:tracking-[-0.32px] w-full">
                   {value.title}
                 </h3>
                 <p className="font-normal text-base leading-[1.5] w-full">
