@@ -16,7 +16,7 @@ export default function CTASection({
   secondaryButtonText,
 }: CTASectionProps) {
   return (
-    <section className="relative px-16 py-28">
+    <section className="relative px-5 md:px-16 py-16 md:py-28">
       {/* Background Image */}
       <div className="absolute inset-0 pointer-events-none">
         <Image
@@ -31,13 +31,13 @@ export default function CTASection({
 
       {/* Content Container */}
       <div className="relative z-10 max-w-[1280px] mx-auto">
-        <div className="flex flex-col gap-8 items-center max-w-[768px] mx-auto text-center">
+        <div className="flex flex-col gap-12 md:gap-8 items-center max-w-[768px] mx-auto text-center">
           {/* Content */}
-          <div className="flex flex-col gap-6 text-white">
-            <h2 className="text-[48px] font-bold leading-[1.2] tracking-[-0.48px]">
+          <div className="flex flex-col gap-5 md:gap-6 text-white">
+            <h2 className="text-[36px] md:text-[48px] font-bold leading-[1.2] tracking-[-0.36px] md:tracking-[-0.48px]">
               {title}
             </h2>
-            <p className="text-[18px] font-normal leading-[1.5]">
+            <p className="text-[16px] md:text-[18px] font-normal leading-[1.5]">
               {description}
             </p>
           </div>

@@ -41,24 +41,24 @@ const TEAM_MEMBERS = [
 
 const PeopleTeamSection = () => {
   return (
-    <section className="bg-[#cce1f4] px-16 py-28 w-full">
-      <div className="max-w-[1280px] mx-auto flex flex-col gap-[80px] items-start">
+    <section className="bg-[#cce1f4] px-5 md:px-16 py-16 md:py-28 w-full">
+      <div className="max-w-[1280px] mx-auto flex flex-col gap-12 md:gap-[80px] items-start">
         {/* Section Title */}
-        <div className="flex flex-col gap-4 items-start max-w-[768px] w-full">
-          <h2 className="font-bold text-[#0c2080] text-[48px] leading-[1.2] tracking-[-0.48px] w-full">
+        <div className="flex flex-col gap-3 md:gap-4 items-start max-w-[768px] w-full">
+          <h2 className="font-bold text-[#0c2080] text-[36px] md:text-[48px] leading-[1.2] tracking-[-0.36px] md:tracking-[-0.48px] w-full">
             Executive leadership
           </h2>
-          <p className="font-normal text-lg leading-[1.5] text-[#00050a] w-full">
+          <p className="font-normal text-base md:text-lg leading-[1.5] text-[#00050a] w-full">
             Meet the talented individuals driving our success.
           </p>
         </div>
 
-        {/* Team Grid */}
-        <div className="flex flex-col gap-16 w-full">
+        {/* Team Grid (Mobile: Stacked, Desktop: 3 Columns per row) */}
+        <div className="flex flex-col gap-12 md:gap-16 w-full">
           {[TEAM_MEMBERS.slice(0, 3), TEAM_MEMBERS.slice(3, 6)].map((row, rowIndex) => (
-            <div key={rowIndex} className="flex gap-12 w-full">
+            <div key={rowIndex} className="flex flex-col md:flex-row gap-12 md:gap-12 w-full">
               {row.map((member) => (
-                <div key={member.name} className="flex flex-col gap-6 w-1/3 items-start text-center">
+                <div key={member.name} className="flex flex-col gap-5 md:gap-6 w-full items-start md:w-1/3 md:text-center">
                   {/* Image */}
                   <div className="relative aspect-square rounded-2xl w-full">
                     <Image
@@ -70,12 +70,12 @@ const PeopleTeamSection = () => {
                   </div>
                   
                   {/* Content */}
-                  <div className="flex flex-col gap-4 items-center w-full">
-                    <div className="flex flex-col gap-0 items-center w-full">
-                      <p className="font-semibold text-[#00050a] text-[20px] leading-[1.5] w-full">
+                  <div className="flex flex-col gap-3 md:gap-4 w-full items-start md:items-center">
+                    <div className="flex flex-col gap-0 items-start md:items-center w-full">
+                      <p className="font-semibold text-[#00050a] text-base md:text-[20px] leading-[1.5] w-full">
                         {member.name}
                       </p>
-                      <p className="font-semibold text-[#006cc9] text-[18px] leading-[1.5] w-full">
+                      <p className="font-semibold text-[#006cc9] text-base md:text-[18px] leading-[1.5] w-full">
                         {member.title}
                       </p>
                     </div>
@@ -92,10 +92,10 @@ const PeopleTeamSection = () => {
         {/* We're Hiring CTA */}
         <div className="flex flex-col gap-6 items-start max-w-[768px] w-full">
           <div className="flex flex-col gap-4 w-full">
-            <h4 className="font-bold text-[#0c2080] text-[32px] leading-[1.3] tracking-[-0.32px] w-full">
+            <h4 className="font-bold text-[#0c2080] text-[24px] md:text-[32px] leading-[1.3] tracking-[-0.24px] md:tracking-[-0.32px] w-full">
               We're hiring!
             </h4>
-            <p className="font-normal text-lg leading-[1.5] text-[#00050a] w-full">
+            <p className="font-normal text-base md:text-lg leading-[1.5] text-[#00050a] w-full">
               Join our dynamic team and make an impact.
             </p>
           </div>

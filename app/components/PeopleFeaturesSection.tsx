@@ -25,12 +25,12 @@ const PeopleFeaturesSection = () => {
   ];
 
   return (
-    <section className="bg-[#006cc9] px-16 py-28 w-full">
-      <div className="max-w-[1280px] mx-auto flex flex-col gap-[80px] items-start">
-        {/* Features Grid (Desktop: 3 Columns) */}
-        <div className="flex gap-12 w-full">
+    <section className="bg-[#006cc9] px-5 md:px-16 py-16 md:py-28 w-full">
+      <div className="max-w-[1280px] mx-auto flex flex-col gap-12 md:gap-[80px] items-start">
+        {/* Features Grid (Mobile: Stacked, Desktop: 3 Columns) */}
+        <div className="flex flex-col md:flex-row gap-12 md:gap-12 w-full">
           {features.map((feature, index) => (
-            <div key={index} className="flex flex-col gap-8 w-1/3 items-start">
+            <div key={index} className="flex flex-col gap-6 md:gap-8 w-full md:w-1/3 items-start">
               {/* Icon */}
               <div className="relative w-12 h-12 shrink-0">
                 <Image
@@ -42,8 +42,8 @@ const PeopleFeaturesSection = () => {
               </div>
               
               {/* Content */}
-              <div className="flex flex-col gap-6 items-start w-full">
-                <h3 className="font-bold text-[#14d3f3] text-[32px] leading-[1.3] tracking-[-0.32px] w-full">
+              <div className="flex flex-col gap-5 md:gap-6 items-start w-full">
+                <h3 className="font-bold text-[#14d3f3] text-[24px] md:text-[32px] leading-[1.3] tracking-[-0.24px] md:tracking-[-0.32px] w-full">
                   {feature.title}
                 </h3>
                 <p className="font-normal text-base leading-[1.5] text-white w-full">
