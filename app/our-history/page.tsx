@@ -1,6 +1,8 @@
 import Header from '@/app/components/Header';
 import HeroHeaderSection from '@/app/components/HeroHeaderSection';
 import HistoryTimelineSection from '@/app/components/HistoryTimelineSection';
+import HistoryFeaturesSection from '@/app/components/HistoryFeaturesSection';
+import CTASection from '@/app/components/CTASection';
 import Footer from '@/app/components/Footer';
 
 export default function OurHistoryPage() {
@@ -21,6 +23,14 @@ export default function OurHistoryPage() {
           overlayOpacity={0.5}
         />
         <HistoryTimelineSection />
+        <HistoryFeaturesSection />
+        <CTASection
+          imageSrc="/images/placeholder/placeholder16.jpg"
+          title="Join Us on Our Journey"
+          description="Discover how we are shaping the future of technology and partnerships at Software at Scale."
+          primaryButtonText="Learn More"
+          secondaryButtonText="Contact"
+        />
       </main>
       <Footer />
     </div>
