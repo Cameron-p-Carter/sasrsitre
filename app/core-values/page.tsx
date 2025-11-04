@@ -1,5 +1,5 @@
 import Header from '@/app/components/Header';
-import CoreValuesSection from '@/app/components/CoreValuesSection';
+import HeroHeaderSection from '@/app/components/HeroHeaderSection';
 import CoreValuesMissionSection from '@/app/components/CoreValuesMissionSection';
 import CoreValuesTestimonialSection from '@/app/components/CoreValuesTestimonialSection';
 import CoreValuesGridSection from '@/app/components/CoreValuesGridSection';
@@ -15,7 +15,14 @@ export default function CoreValuesPage() {
       
       {/* Core Values Content */}
       <main className="pt-[72px]">
-        <CoreValuesSection />
+        <HeroHeaderSection
+          imageSrc="/images/placeholder/placeholder17.jpg"
+          tagline="Empower"
+          title="Our Core"
+          titleHighlight="Values"
+          description="At Software at Scale, we are committed to driving innovation and excellence in every project. Our core values of integrity, collaboration, and customer focus guide our mission to empower businesses through technology."
+          overlayOpacity={0.6}
+        />
         <CoreValuesMissionSection />
         <CoreValuesTestimonialSection />
         <CoreValuesGridSection />

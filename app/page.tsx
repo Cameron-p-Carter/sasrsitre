@@ -1,7 +1,7 @@
 import Header from './components/Header';
 import BlogSection from './components/BlogSection';
 import LogoSection from './components/LogoSection';
-import ExpertiseSection from './components/ExpertiseSection';
+import ImageOverlapSection from './components/ImageOverlapSection';
 import AwardsSection from './components/AwardsSection';
 import EliteTalentSection from './components/EliteTalentSection';
 import WhyChooseSection from './components/WhyChooseSection';
@@ -149,7 +149,14 @@ export default function Home() {
       <LogoSection />
       
       {/* Expertise Section */}
-      <ExpertiseSection />
+      <ImageOverlapSection
+        title="Specialised Engineering and Delivery Expertise"
+        description="At Software at Scale, we are dedicated to driving digital acceleration for enterprises through innovative technology solutions. Our mission is to enhance engineering performance and modernize legacy systems while minimizing risk."
+        underImageSrc="/images/placeholder/placeholder5under.jpg"
+        overImageSrc="/images/placeholder/placeholder6ontop.jpg"
+        primaryButtonText="Learn More"
+        secondaryButtonText="Contact"
+      />
       
       {/* Awards Section */}
       <AwardsSection />
