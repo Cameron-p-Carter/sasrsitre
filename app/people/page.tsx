@@ -1,6 +1,11 @@
 import Header from '@/app/components/Header';
 import HeroHeaderSection from '@/app/components/HeroHeaderSection';
 import ImageOverlapSection from '@/app/components/ImageOverlapSection';
+import PeopleFeaturesSection from '@/app/components/PeopleFeaturesSection';
+import PeopleTeamSection from '@/app/components/PeopleTeamSection';
+import CoreValuesTestimonialSection from '@/app/components/CoreValuesTestimonialSection';
+import CTASection from '@/app/components/CTASection';
+import Footer from '@/app/components/Footer';
 
 export default function PeoplePage() {
   return (
@@ -31,7 +36,18 @@ Our multi-disciplinary teams are industry experts in their fields, with speciali
           primaryButtonText="Learn More"
           secondaryButtonText="Contact"
         />
+        <PeopleFeaturesSection />
+        <PeopleTeamSection />
+        <CoreValuesTestimonialSection />
+        <CTASection
+          imageSrc="/images/placeholder/placeholder16.jpg"
+          title="Join Our Talented Team"
+          description="Transform your career with a team that pushes the boundaries of technology and innovation."
+          primaryButtonText="Careers"
+          secondaryButtonText="Contact"
+        />
       </main>
+      <Footer />
     </div>
   );
 }
