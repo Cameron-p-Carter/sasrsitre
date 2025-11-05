@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Header from './components/Header';
 import BlogSection from './components/BlogSection';
 import LogoSection from './components/LogoSection';
@@ -171,16 +172,16 @@ export default function Home() {
             
             {/* Action Buttons - Fixed positioning */}
             <div className="flex gap-4 pt-2 md:pt-0">
-              <button className="bg-[#5ae0f6] border border-[#5ae0f6] border-solid flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl hover:bg-[#4dd0e6] transition-colors">
+              <Link href="/core-values" className="bg-[#5ae0f6] border border-[#5ae0f6] border-solid flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl hover:bg-[#4dd0e6] transition-colors">
                 <span className="font-medium text-[#00050a] text-base leading-[1.5] whitespace-nowrap">
                   Learn More
                 </span>
-              </button>
-              <button className="border border-[#5ae0f6] border-solid flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl hover:bg-[#5ae0f6] hover:text-[#00050a] transition-colors">
+              </Link>
+              <Link href="/contact-us" className="border border-[#5ae0f6] border-solid flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl hover:bg-[#5ae0f6] hover:text-[#00050a] transition-colors">
                 <span className="font-medium text-[#5ae0f6] text-base leading-[1.5] whitespace-nowrap">
                   Scale Now
                 </span>
-              </button>
+              </Link>
             </div>
           </div>
         </div>

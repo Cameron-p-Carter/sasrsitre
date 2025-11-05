@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface CTASectionProps {
   imageSrc: string;
@@ -44,16 +45,16 @@ export default function CTASection({
 
           {/* Action Buttons */}
           <div className="flex gap-4">
-            <button className="bg-[#5ae0f6] border border-[#5ae0f6] border-solid flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl hover:bg-[#4dd0e6] transition-colors">
+            <Link href="/contact-us" className="bg-[#5ae0f6] border border-[#5ae0f6] border-solid flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl hover:bg-[#4dd0e6] transition-colors">
               <span className="font-medium text-[#0c2080] text-[16px] leading-[1.5] whitespace-nowrap">
                 {primaryButtonText}
               </span>
-            </button>
-            <button className="border border-[#5ae0f6] border-solid flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl hover:bg-[#5ae0f6] hover:text-[#0c2080] transition-colors">
+            </Link>
+            <Link href="/core-values" className="border border-[#5ae0f6] border-solid flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl hover:bg-[#5ae0f6] hover:text-[#0c2080] transition-colors">
               <span className="font-medium text-[#5ae0f6] text-[16px] leading-[1.5] whitespace-nowrap hover:text-[#0c2080]">
                 {secondaryButtonText}
               </span>
-            </button>
+            </Link>
           </div>
         </div>
       </div>
