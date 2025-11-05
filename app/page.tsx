@@ -63,7 +63,7 @@ export default function Home() {
       </div>
       
       {/* Hero Section */}
-      <main className="relative h-screen flex items-center justify-center px-5 md:px-8 lg:px-16 py-0">
+      <main className="relative h-screen flex items-center justify-center px-5 md:px-8 lg:px-16 py-0 pt-[72px]">
         {/* Video Background */}
         <video
           autoPlay

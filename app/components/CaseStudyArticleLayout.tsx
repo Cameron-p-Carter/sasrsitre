@@ -8,6 +8,9 @@ import CaseStudyImageFeaturesSection from '@/app/components/CaseStudyImageFeatur
 import CaseStudyOutcomeSection from '@/app/components/CaseStudyOutcomeSection';
 import CaseStudyStatsSection from '@/app/components/CaseStudyStatsSection';
 import CoreValuesTestimonialSection from './CoreValuesTestimonialSection';
+import CaseStudyCustomSection from './CaseStudyCustomSection';
+import CaseStudySolutionSection from './CaseStudySolutionSection';
+import CaseStudyWhatWeDeliveredSection from './CaseStudyWhatWeDeliveredSection';
 
 // --- Shared Data Structures ---
 
@@ -98,6 +101,47 @@ interface CaseStudyOutcomeData {
   imageOnRight?: boolean;
 }
 
+interface CustomSectionData {
+  sectionTitle: string;
+  description: string;
+  listItems: string[];
+  imageSrc: string;
+  backgroundColor: string;
+  titleColor: string;
+  textColor: string;
+  listTextColor: string;
+  imageOnRight?: boolean;
+}
+
+interface SolutionSectionData {
+  sectionTitle: string;
+  description: string;
+  listItems: string[];
+  imageSrc: string;
+  backgroundColor: string;
+  titleColor: string;
+  textColor: string;
+  listTextColor: string;
+  imageOnRight?: boolean;
+}
+
+interface WhatWeDeliveredItem {
+  iconSrc: string;
+  title: string;
+  description: string;
+}
+
+interface WhatWeDeliveredSectionData {
+  sectionTitle: string;
+  sectionDescription: string;
+  deliverables: WhatWeDeliveredItem[];
+  backgroundColor: string;
+  titleColor: string;
+  descriptionColor: string;
+  deliverableTitleColor: string;
+  deliverableTextColor: string;
+}
+
 interface CTASectionData {
   imageSrc: string;
   title: string;
@@ -110,11 +154,14 @@ interface CTASectionData {
 
 interface CaseStudyArticleData {
   hero: HeroSectionData;
-  overview: CaseStudyOverviewData;
-  deliverables: CaseStudyDeliverablesData;
-  imageFeatures: CaseStudyImageFeaturesData;
-  outcome: CaseStudyOutcomeData;
-  stats: CaseStudyStatsData;
+  overview?: CaseStudyOverviewData;
+  deliverables?: CaseStudyDeliverablesData;
+  imageFeatures?: CaseStudyImageFeaturesData;
+  outcome?: CaseStudyOutcomeData;
+  stats?: CaseStudyStatsData;
+  customSection?: CustomSectionData;
+  solutionSection?: SolutionSectionData;
+  whatWeDeliveredSection?: WhatWeDeliveredSectionData;
   cta: CTASectionData;
 }
 
@@ -139,58 +186,109 @@ const CaseStudyArticleLayout = ({ data }: CaseStudyArticleLayoutProps) => {
           overlayOpacity={data.hero.overlayOpacity}
         />
         
-        <CaseStudyOverviewSection
-          overviewTitle={data.overview.overviewTitle}
-          details={data.overview.details}
-          richTextContent={data.overview.richTextContent}
-          backgroundColor={data.overview.backgroundColor}
-          titleColor={data.overview.titleColor}
-          textColor={data.overview.textColor}
-        />
+        {data.overview && (
+          <CaseStudyOverviewSection
+            overviewTitle={data.overview.overviewTitle}
+            details={data.overview.details}
+            richTextContent={data.overview.richTextContent}
+            backgroundColor={data.overview.backgroundColor}
+            titleColor={data.overview.titleColor}
+            textColor={data.overview.textColor}
+          />
+        )}
+
+       {data.customSection && (
+         <CaseStudyCustomSection
+           sectionTitle={data.customSection.sectionTitle}
+           description={data.customSection.description}
+           listItems={data.customSection.listItems}
+           imageSrc={data.customSection.imageSrc}
+           backgroundColor={data.customSection.backgroundColor}
+           titleColor={data.customSection.titleColor}
+           textColor={data.customSection.textColor}
+           listTextColor={data.customSection.listTextColor}
+           imageOnRight={data.customSection.imageOnRight}
+         />
+       )}
+
+       {data.solutionSection && (
+         <CaseStudySolutionSection
+           sectionTitle={data.solutionSection.sectionTitle}
+           description={data.solutionSection.description}
+           listItems={data.solutionSection.listItems}
+           imageSrc={data.solutionSection.imageSrc}
+           backgroundColor={data.solutionSection.backgroundColor}
+           titleColor={data.solutionSection.titleColor}
+           textColor={data.solutionSection.textColor}
+           listTextColor={data.solutionSection.listTextColor}
+           imageOnRight={data.solutionSection.imageOnRight}
+         />
+       )}
+
+       {data.whatWeDeliveredSection && (
+         <CaseStudyWhatWeDeliveredSection
+           sectionTitle={data.whatWeDeliveredSection.sectionTitle}
+           sectionDescription={data.whatWeDeliveredSection.sectionDescription}
+           deliverables={data.whatWeDeliveredSection.deliverables}
+           backgroundColor={data.whatWeDeliveredSection.backgroundColor}
+           titleColor={data.whatWeDeliveredSection.titleColor}
+           descriptionColor={data.whatWeDeliveredSection.descriptionColor}
+           deliverableTitleColor={data.whatWeDeliveredSection.deliverableTitleColor}
+           deliverableTextColor={data.whatWeDeliveredSection.deliverableTextColor}
+         />
+       )}
+       
+       {data.deliverables && (
+          <CaseStudyDeliverablesSection
+            sectionTitle={data.deliverables.sectionTitle}
+            sectionSubtitle={data.deliverables.sectionSubtitle}
+            deliverables={data.deliverables.deliverables}
+            backgroundColor={data.deliverables.backgroundColor}
+            titleColor={data.deliverables.titleColor}
+            subtitleColor={data.deliverables.subtitleColor}
+            textColor={data.deliverables.textColor}
+            iconColor={data.deliverables.iconColor}
+          />
+        )}
         
-        <CaseStudyDeliverablesSection
-          sectionTitle={data.deliverables.sectionTitle}
-          sectionSubtitle={data.deliverables.sectionSubtitle}
-          deliverables={data.deliverables.deliverables}
-          backgroundColor={data.deliverables.backgroundColor}
-          titleColor={data.deliverables.titleColor}
-          subtitleColor={data.deliverables.subtitleColor}
-          textColor={data.deliverables.textColor}
-          iconColor={data.deliverables.iconColor}
-        />
+        {data.imageFeatures && (
+          <CaseStudyImageFeaturesSection
+            sectionTitle={data.imageFeatures.sectionTitle}
+            features={data.imageFeatures.features}
+            imageSrc={data.imageFeatures.imageSrc}
+            backgroundColor={data.imageFeatures.backgroundColor}
+            titleColor={data.imageFeatures.titleColor}
+            featureTitleColor={data.imageFeatures.featureTitleColor}
+            featureTextColor={data.imageFeatures.featureTextColor}
+            imageOnRight={data.imageFeatures.imageOnRight}
+          />
+        )}
         
-        <CaseStudyImageFeaturesSection
-          sectionTitle={data.imageFeatures.sectionTitle}
-          features={data.imageFeatures.features}
-          imageSrc={data.imageFeatures.imageSrc}
-          backgroundColor={data.imageFeatures.backgroundColor}
-          titleColor={data.imageFeatures.titleColor}
-          featureTitleColor={data.imageFeatures.featureTitleColor}
-          featureTextColor={data.imageFeatures.featureTextColor}
-          imageOnRight={data.imageFeatures.imageOnRight}
-        />
-        
-        <CaseStudyOutcomeSection
-          sectionTitle={data.outcome.sectionTitle}
-          outcomes={data.outcome.outcomes}
-          imageSrc={data.outcome.imageSrc}
-          backgroundColor={data.outcome.backgroundColor}
-          titleColor={data.outcome.titleColor}
-          featureTitleColor={data.outcome.featureTitleColor}
-          featureTextColor={data.outcome.featureTextColor}
-          imageOnRight={data.outcome.imageOnRight}
-        />
+        {data.outcome && (
+          <CaseStudyOutcomeSection
+            sectionTitle={data.outcome.sectionTitle}
+            outcomes={data.outcome.outcomes}
+            imageSrc={data.outcome.imageSrc}
+            backgroundColor={data.outcome.backgroundColor}
+            titleColor={data.outcome.titleColor}
+            featureTitleColor={data.outcome.featureTitleColor}
+            featureTextColor={data.outcome.featureTextColor}
+            imageOnRight={data.outcome.imageOnRight}
+          />
+        )}
 
         <CoreValuesTestimonialSection
         />
 
-        <CaseStudyStatsSection
-          sectionTitle={data.stats.sectionTitle}
-          stats={data.stats.stats}
-          backgroundColor={data.stats.backgroundColor}
-          titleColor={data.stats.titleColor}
-          accentColor={data.stats.accentColor}
-        />
+        {data.stats && (
+          <CaseStudyStatsSection
+            sectionTitle={data.stats.sectionTitle}
+            stats={data.stats.stats}
+            backgroundColor={data.stats.backgroundColor}
+            titleColor={data.stats.titleColor}
+            accentColor={data.stats.accentColor}
+          />
+        )}
         
         <CTASection
           imageSrc={data.cta.imageSrc}
