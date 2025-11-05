@@ -12,6 +12,7 @@ interface Project {
   description: string;
   image: string;
   aspectRatio: string;
+  link?: string;
 }
 
 interface PortfolioSectionData {

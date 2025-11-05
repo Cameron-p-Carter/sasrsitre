@@ -7,6 +7,7 @@ interface Project {
   description: string;
   image: string;
   aspectRatio: string;
+  link?: string;
 }
 
 interface PortfolioSectionProps {
@@ -56,7 +57,7 @@ export default function PortfolioSection({
                     {project.description}
                   </p>
                 </div>
-                <Link href="/collections/case-studies" className="flex items-center gap-2 cursor-pointer">
+                <Link href={project.link || "/collections/case-studies"} className="flex items-center gap-2 cursor-pointer hover:opacity-70 transition-opacity">
                   <span className="text-base font-medium leading-[1.5] text-[#00050a]">
                     View project
                   </span>
@@ -95,7 +96,7 @@ export default function PortfolioSection({
                       </p>
                     </div>
                   </div>
-                  <Link href="/collections/case-studies" className="flex items-center gap-2 cursor-pointer">
+                  <Link href={project.link || "/collections/case-studies"} className="flex items-center gap-2 cursor-pointer hover:opacity-70 transition-opacity">
                     <span className="text-base font-medium leading-[1.5] text-[#00050a]">
                       View project
                     </span>
@@ -132,7 +133,7 @@ export default function PortfolioSection({
                       </p>
                     </div>
                   </div>
-                  <Link href="/collections/case-studies" className="flex items-center gap-2 cursor-pointer">
+                  <Link href={project.link || "/collections/case-studies"} className="flex items-center gap-2 cursor-pointer hover:opacity-70 transition-opacity">
                     <span className="text-base font-medium leading-[1.5] text-[#00050a]">
                       View project
                     </span>
