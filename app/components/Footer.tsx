@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -72,21 +73,21 @@ export default function Footer() {
                 Company Info
               </h3>
               <div className="flex flex-col">
-                <a href="#" className="text-white text-sm font-normal leading-[1.5] py-2">
+                <Link href="/" className="text-white text-sm font-normal leading-[1.5] py-2">
                   Home
-                </a>
-                <a href="#" className="text-white text-sm font-normal leading-[1.5] py-2">
+                </Link>
+                <Link href="/services" className="text-white text-sm font-normal leading-[1.5] py-2">
                   Services
-                </a>
-                <a href="#" className="text-white text-sm font-normal leading-[1.5] py-2">
+                </Link>
+                <Link href="/industries" className="text-white text-sm font-normal leading-[1.5] py-2">
                   Industries
-                </a>
-                <a href="#" className="text-white text-sm font-normal leading-[1.5] py-2">
+                </Link>
+                <Link href="/careers" className="text-white text-sm font-normal leading-[1.5] py-2">
                   Careers
-                </a>
-                <a href="#" className="text-white text-sm font-normal leading-[1.5] py-2">
+                </Link>
+                <Link href="/contact-us" className="text-white text-sm font-normal leading-[1.5] py-2">
                   Contact Us
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -96,18 +97,18 @@ export default function Footer() {
                 Resources
               </h3>
               <div className="flex flex-col">
-                <a href="#" className="text-white text-sm font-normal leading-[1.5] py-2">
+                <Link href="/collections/case-studies" className="text-white text-sm font-normal leading-[1.5] py-2">
                   Case Studies
-                </a>
-                <a href="#" className="text-white text-sm font-normal leading-[1.5] py-2">
+                </Link>
+                <Link href="/collections/news" className="text-white text-sm font-normal leading-[1.5] py-2">
                   News
-                </a>
-                <a href="#" className="text-white text-sm font-normal leading-[1.5] py-2">
+                </Link>
+                <Link href="/collections/perspectives" className="text-white text-sm font-normal leading-[1.5] py-2">
                   Perspectives
-                </a>
-                <a href="#" className="text-white text-sm font-normal leading-[1.5] py-2">
+                </Link>
+                <Link href="/careers/referral-program" className="text-white text-sm font-normal leading-[1.5] py-2">
                   Referral Program
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -207,21 +208,21 @@ export default function Footer() {
                 Company Info
               </h3>
               <div className="flex flex-col">
-                <a href="#" className="text-white text-sm font-normal leading-[1.5] py-2">
+                <Link href="/" className="text-white text-sm font-normal leading-[1.5] py-2">
                   Home
-                </a>
-                <a href="#" className="text-white text-sm font-normal leading-[1.5] py-2">
+                </Link>
+                <Link href="/services" className="text-white text-sm font-normal leading-[1.5] py-2">
                   Services
-                </a>
-                <a href="#" className="text-white text-sm font-normal leading-[1.5] py-2">
+                </Link>
+                <Link href="/industries" className="text-white text-sm font-normal leading-[1.5] py-2">
                   Industries
-                </a>
-                <a href="#" className="text-white text-sm font-normal leading-[1.5] py-2">
+                </Link>
+                <Link href="/careers" className="text-white text-sm font-normal leading-[1.5] py-2">
                   Careers
-                </a>
-                <a href="#" className="text-white text-sm font-normal leading-[1.5] py-2">
+                </Link>
+                <Link href="/contact-us" className="text-white text-sm font-normal leading-[1.5] py-2">
                   Contact Us
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -231,18 +232,18 @@ export default function Footer() {
                 Resources
               </h3>
               <div className="flex flex-col">
-                <a href="#" className="text-white text-sm font-normal leading-[1.5] py-2">
+                <Link href="/collections/case-studies" className="text-white text-sm font-normal leading-[1.5] py-2">
                   Case Studies
-                </a>
-                <a href="#" className="text-white text-sm font-normal leading-[1.5] py-2">
+                </Link>
+                <Link href="/collections/news" className="text-white text-sm font-normal leading-[1.5] py-2">
                   News
-                </a>
-                <a href="#" className="text-white text-sm font-normal leading-[1.5] py-2">
+                </Link>
+                <Link href="/collections/perspectives" className="text-white text-sm font-normal leading-[1.5] py-2">
                   Perspectives
-                </a>
-                <a href="#" className="text-white text-sm font-normal leading-[1.5] py-2">
+                </Link>
+                <Link href="/careers/referral-program" className="text-white text-sm font-normal leading-[1.5] py-2">
                   Referral Program
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -342,21 +343,21 @@ export default function Footer() {
                 Company Info
               </h3>
               <div className="flex flex-col">
-                <a href="#" className="text-white text-sm font-normal leading-[1.5] py-2">
+                <Link href="/" className="text-white text-sm font-normal leading-[1.5] py-2">
                   Home
-                </a>
-                <a href="#" className="text-white text-sm font-normal leading-[1.5] py-2">
+                </Link>
+                <Link href="/services" className="text-white text-sm font-normal leading-[1.5] py-2">
                   Services
-                </a>
-                <a href="#" className="text-white text-sm font-normal leading-[1.5] py-2">
+                </Link>
+                <Link href="/industries" className="text-white text-sm font-normal leading-[1.5] py-2">
                   Industries
-                </a>
-                <a href="#" className="text-white text-sm font-normal leading-[1.5] py-2">
+                </Link>
+                <Link href="/careers" className="text-white text-sm font-normal leading-[1.5] py-2">
                   Careers
-                </a>
-                <a href="#" className="text-white text-sm font-normal leading-[1.5] py-2">
+                </Link>
+                <Link href="/contact-us" className="text-white text-sm font-normal leading-[1.5] py-2">
                   Contact Us
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -366,18 +367,18 @@ export default function Footer() {
                 Resources
               </h3>
               <div className="flex flex-col">
-                <a href="#" className="text-white text-sm font-normal leading-[1.5] py-2">
+                <Link href="/collections/case-studies" className="text-white text-sm font-normal leading-[1.5] py-2">
                   Case Studies
-                </a>
-                <a href="#" className="text-white text-sm font-normal leading-[1.5] py-2">
+                </Link>
+                <Link href="/collections/news" className="text-white text-sm font-normal leading-[1.5] py-2">
                   News
-                </a>
-                <a href="#" className="text-white text-sm font-normal leading-[1.5] py-2">
+                </Link>
+                <Link href="/collections/perspectives" className="text-white text-sm font-normal leading-[1.5] py-2">
                   Perspectives
-                </a>
-                <a href="#" className="text-white text-sm font-normal leading-[1.5] py-2">
+                </Link>
+                <Link href="/careers/referral-program" className="text-white text-sm font-normal leading-[1.5] py-2">
                   Referral Program
-                </a>
+                </Link>
               </div>
             </div>
 
