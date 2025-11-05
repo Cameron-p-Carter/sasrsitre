@@ -1,10 +1,12 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface NewsItem {
   id: number;
   imageSrc: string;
   title: string;
   description: string;
+  link?: string;
 }
 
 interface NewsGridSectionProps {
@@ -64,7 +66,7 @@ const NewsGridSection = ({
                   </div>
                   
                   {/* Action Button */}
-                  <div className="flex items-center justify-center gap-2 cursor-pointer">
+                  <Link href="/collections/news/first-article" className="flex items-center gap-2 cursor-pointer hover:opacity-70 transition-opacity">
                     <span className="font-medium text-[#00050a] text-base leading-[1.5] whitespace-nowrap">
                       Read more
                     </span>
@@ -77,7 +79,7 @@ const NewsGridSection = ({
                         className="object-contain"
                       />
                     </div>
-                  </div>
+                  </Link>
                 </div>
               </div>
             ))}
