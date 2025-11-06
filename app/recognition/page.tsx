@@ -3,6 +3,7 @@ import HeroHeaderSection from '@/app/components/HeroHeaderSection';
 import AwardsSection from '@/app/components/AwardsSection';
 import EliteTalentSection from '@/app/components/EliteTalentSection';
 import ImageTextContentSection from '@/app/components/ImageTextContentSection';
+import CoreValuesTestimonialSection from '@/app/components/CoreValuesTestimonialSection';
 import Footer from '@/app/components/Footer';
 
 export default function RecognitionPage() {
@@ -75,6 +76,7 @@ export default function RecognitionPage() {
           titleColor="text-[#0c2080]"
           imageOnRight={false}
         />
+        <CoreValuesTestimonialSection/>
       </main>
       <Footer />
     </div>
