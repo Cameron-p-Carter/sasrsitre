@@ -31,7 +31,7 @@ const CONTACT_INFO_DATA = {
 const CONTACT_FORM_DATA = {
   title: "Contact us",
   description: "Explore our global office locations below.",
-  imageSrc: "/images/placeholder/placeholder29.jpg",
+  imageSrc: "/images/placeholder/placeholder90.jpg",
   backgroundColor: "bg-[#006cc9]",
   titleColor: "text-white",
   textColor: "text-white",

@@ -94,7 +94,7 @@ interface CaseStudyArticleData {
 // --- Data ---
 
 const CASE_STUDY_HERO_DATA: HeroSectionData = {
-  imageSrc: "/images/placeholder/placeholder12.jpg",
+  imageSrc: "/images/placeholder/placeholder82.jpg",
   tagline: "Case Study",
   title: "Coates Group",
   titleHighlight: "",
@@ -159,7 +159,7 @@ const CASE_STUDY_OUTCOME_DATA: CaseStudyOutcomeData = {
       description: "Technology governance frameworks and proactive risk identification streamlined operations and improved delivery transparency."
     }
   ],
-  imageSrc: "/images/placeholder/placeholder36.jpg",
+  imageSrc: "/images/placeholder/placeholder83.jpg",
   backgroundColor: "bg-white",
   titleColor: "text-[#0c2080]",
   featureTitleColor: "text-[#0c2080]",

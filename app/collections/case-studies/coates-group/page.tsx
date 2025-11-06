@@ -94,7 +94,7 @@ interface CaseStudyArticleData {
 // --- Data ---
 
 const CASE_STUDY_HERO_DATA: HeroSectionData = {
-  imageSrc: "/images/placeholder/placeholder12.jpg",
+  imageSrc: "/images/placeholder/placeholder84.png",
   tagline: "Case Study",
   title: "Coates Group",
   titleHighlight: "",
@@ -127,7 +127,7 @@ const CASE_STUDY_CUSTOM_SECTION_DATA: CustomSectionData = {
     "Addressing infrastructure scalability and security gaps ahead of market launch",
     "Uplifting internal engineering capability and governance for enterprise-grade delivery",
   ],
-  imageSrc: "/images/placeholder/placeholder34.jpg",
+  imageSrc: "/images/placeholder/placeholder85.png",
   backgroundColor: "bg-[#cce1f4]",
   titleColor: "text-[#0c2080]",
   textColor: "text-[#00050a]",
@@ -159,7 +159,7 @@ const CASE_STUDY_OUTCOME_DATA: CaseStudyOutcomeData = {
       description: "Technology governance frameworks and proactive risk identification streamlined operations and improved delivery transparency."
     }
   ],
-  imageSrc: "/images/placeholder/placeholder36.jpg",
+  imageSrc: "/images/placeholder/placeholder96.png",
   backgroundColor: "bg-white",
   titleColor: "text-[#0c2080]",
   featureTitleColor: "text-[#0c2080]",

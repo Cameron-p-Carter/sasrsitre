@@ -70,7 +70,7 @@ interface CTASectionData {
 // --- Placeholder Data ---
 
 const CASE_STUDY_HERO_DATA: HeroSectionData = {
-  imageSrc: "/images/placeholder/placeholder11.jpg",
+  imageSrc: "/images/placeholder/80.jpg",
   tagline: "Case Study",
   title: "Team Super: Seamless Data",
   titleHighlight: "Migration",
@@ -180,7 +180,7 @@ const CASE_STUDY_PAGE_DATA = {
         description: "The new platform is now positioned to drive future growth, foster innovation and unlock better insights through data.",
       },
     ],
-    imageSrc: "/images/placeholder/placeholder33.jpg", // Placeholder image
+    imageSrc: "/images/placeholder/placeholder81.jpg", // Placeholder image
     backgroundColor: "bg-[#cce1f4]",
     titleColor: "text-[#0c2080]",
     featureTitleColor: "text-[#00050a]",
