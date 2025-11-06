@@ -10,6 +10,7 @@ interface NewsItem {
   imageSrc: string;
   title: string;
   description: string;
+  link?: string;
 }
 
 interface NewsGridSectionData {
@@ -39,36 +40,42 @@ const NEWS_GRID_DATA: NewsGridSectionData = {
       imageSrc: "/images/placeholder/placeholder74.jpg", // Placeholder
       title: "Approved Supplier: Federal Government ICT Digital and Cloud Marketplace Panels",
       description: "Discover how cloud engineering is transforming businesses today.",
+      link: "/collections/perspectives/first-article",
     },
     {
       id: 2,
       imageSrc: "/images/placeholder/placeholder75.jpg", // Placeholder
       title: "The Importance of Security Architecture",
       description: "Learn why security architecture is crucial for modern enterprises.",
+      link: "/collections/perspectives/first-article",
     },
     {
       id: 3,
       imageSrc: "/images/placeholder/placeholder76.jpg", // Placeholder
       title: "Navigating Project Acceleration Strategies",
       description: "Explore effective strategies for accelerating your projects.",
+      link: "/collections/perspectives/first-article",
     },
     {
       id: 4,
       imageSrc: "/images/placeholder/placeholder77.jpg", // Placeholder
       title: "Understanding Platform Due Diligence",
       description: "Get insights into the importance of platform due diligence.",
+      link: "/collections/perspectives/first-article",
     },
     {
       id: 5,
       imageSrc: "/images/placeholder/placeholder78.jpg", // Placeholder
       title: "Enhancing Engineering Performance Metrics",
       description: "Learn how to improve your engineering performance metrics effectively.",
+      link: "/collections/perspectives/first-article",
     },
     {
       id: 6,
       imageSrc: "/images/placeholder/placeholder79.png", // Placeholder
       title: "Latest Trends in Cloud Technology",
       description: "Stay ahead with the latest trends in cloud technology.",
+      link: "/collections/perspectives/first-article",
     },
   ],
 };

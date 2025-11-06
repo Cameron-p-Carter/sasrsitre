@@ -66,7 +66,7 @@ const NewsGridSection = ({
                   </div>
                   
                   {/* Action Button */}
-                  <Link href="/collections/news/first-article" className="flex items-center gap-2 cursor-pointer hover:opacity-70 transition-opacity">
+                  <Link href={item.link || "/collections/news/first-article"} className="flex items-center gap-2 cursor-pointer hover:opacity-70 transition-opacity">
                     <span className="font-medium text-[#00050a] text-base leading-[1.5] whitespace-nowrap">
                       Read more
                     </span>
