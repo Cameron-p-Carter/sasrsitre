@@ -3,7 +3,7 @@ import ServicePageLayout from '@/app/components/ServicePageLayout';
 // Define the test content for the service page
 const TEST_SERVICE_DATA = {
   hero: {
-    imageSrc: "/images/placeholder/placeholder20.jpg", // Updated image placeholder
+    imageSrc: "/images/placeholder/placeholder53.jpg", // Updated image placeholder
     tagline: "Empower",
     title: "Data and AI",
     titleHighlight: "Services",
@@ -12,32 +12,30 @@ const TEST_SERVICE_DATA = {
   },
   // Future sections will be added here
   imageTextContent: {
-    title: "Optimise your cloud-based services",
-    description: `In today's digital landscape, many businesses have already transitioned to cloud platforms. However, the journey doesn't end with migration. Maximising performance, reducing costs and building resilience is paramount to achieving operational excellence.
+    title: "Unlock the full potential of your data and AI",
+    description: `Data and AI technologies are evolving rapidly, offering powerful opportunities but also complex challenges. Understanding what your organisation truly needs and how to implement it effectively is critical to achieving meaningful results without wasted effort or cost.
 
-At Software@Scale, we specialise in enhancing and customising cloud environments across AWS, Azure and Google Cloud to align with your unique business needs. Whether you're looking to migrate, eliminate manual processes with infrastructure-as-code or fine-tune for efficiency, our cloud engineering approach delivers measurable gains in speed, performance and cost-effectiveness.
+At Software@Scale, we provide comprehensive support across data migration assurance and advanced AI integrations. From custom AI “brain” development to deploying generative models and agentic AI, we help you navigate this evolving landscape with confidence.
 
-Generic, out-of-the-box cloud configurations often fall short in meeting specific organisational requirements. We focus on tailoring architecture and automation to ensure it supports your objectives, enhances agility and provides a competitive edge.
-
-Our approach involves a comprehensive assessment of your current setup, deep performance analysis, and implementation of best practices to ensure your cloud platform is not just functional but exceptional.`,
-    imageSrc: "/images/placeholder/placeholder35.jpg",
+Our focus is on practical, tailored solutions that distinguish genuine AI capabilities from simple automation, ensuring your investment drives real business value. We guide you from strategy through execution to ongoing optimisation, helping you harness AI’s full power while mitigating risks. With our data and AI services, you can lift performance, reduce risk and support sustainable team development.`,
+    imageSrc: "/images/placeholder/placeholder54.jpg",
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
     titleColor: "text-[#0c2080]",
     imageOnRight: true,
   },
   imageTextListContent: {
-    title: "Secure, compliant and resilient systems",
-    introDescription: "Software@Scale’s engineers focus on building and managing resilient cloud environments that reduce costs, support your growth, enhance agility and ensure operational excellence.",
-    listTitle: "How Cloud Engineering works:",
+    title: "Clarity, confidence and innovation",
+    introDescription: "Software@Scale delivers clear insights and practical strategies that help you harness data and AI effectively, turning complex challenges into measurable business outcomes.",
+    listTitle: "How Data and AI Services works:",
     listItems: [
-      "Consultation and assessment",
+      "Discovery and assessment",
+      "Strategy development",
       "Solution design",
-      "Automation setup",
-      "Performance tuning",
-      "Ongoing support",
+      "Implementation and testing",
+      "Ongoing optimisation",
     ],
-    imageSrc: "/images/placeholder/placeholder2.png",
+    imageSrc: "/images/placeholder/placeholder55.jpg",
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
     titleColor: "text-[#0c2080]",
@@ -52,25 +50,26 @@ Our approach involves a comprehensive assessment of your current setup, deep per
         iconSrc: "/images/icons/settings.svg", // Using existing icon path for settings placeholder
         title: "Capabilities",
         content: [
-          "Infrastructure modernisation",
-          "Cloud cost optimisation",
-          "Risk mitigation strategy",
-          "Transformation management",
-          "Internal team upskilling",
+          "Data migration assurance",
+          "Custom AI solutions",
+          "Generative model integration",
+          "Agentic AI expertise",
+          "AI strategy guidance",
         ],
       },
       {
-        iconSrc: "/images/icons/cloud.svg", // Using existing icon path for cloud_done placeholder
+        iconSrc: "/images/icons/cloud_done.svg", // Using existing icon path for cloud_done placeholder
         title: "Delivery",
         content: [
-          "Azure, Google and AWS engineering experience",
-          "Eliminate ClickOps with Infrastructure as Code (IaC)",
-          "Platform-neutral approach",
-          "No long-term commitments",
+          "Tailored AI solutions",
+          "Risk mitigation focus",
+          "Scalable implementations",
+          "Cross-industry expertise",
+          "Continuous support",
         ],
       },
       {
-        iconSrc: "/images/icons/security.svg", // Using existing icon path for devices placeholder
+        iconSrc: "/images/icons/devices.svg", // Using existing icon path for devices placeholder
         title: "Technologies",
         content: "• Next JS • Node JS • Angular • React • Vue.JS • Typescript • PHP • Python • C# .NET • Java • C++ • Docker • Kubernetes • Terraform • CloudFormation • AWS • Azure • GCP • Scala •",
       },

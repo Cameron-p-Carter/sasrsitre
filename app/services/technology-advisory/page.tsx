@@ -3,7 +3,7 @@ import ServicePageLayout from '@/app/components/ServicePageLayout';
 // Define the test content for the service page
 const TEST_SERVICE_DATA = {
   hero: {
-    imageSrc: "/images/placeholder/placeholder23.jpg", // Updated image placeholder
+    imageSrc: "/images/placeholder/placeholder59.jpg", // Updated image placeholder
     tagline: "Empower",
     title: "Technology Advisory and Fractional",
     titleHighlight: "Resources",
@@ -20,7 +20,7 @@ At Software@Scale, we specialise in enhancing and customising cloud environments
 Generic, out-of-the-box cloud configurations often fall short in meeting specific organisational requirements. We focus on tailoring architecture and automation to ensure it supports your objectives, enhances agility and provides a competitive edge.
 
 Our approach involves a comprehensive assessment of your current setup, deep performance analysis, and implementation of best practices to ensure your cloud platform is not just functional but exceptional.`,
-    imageSrc: "/images/placeholder/placeholder35.jpg",
+    imageSrc: "/images/placeholder/placeholder60.jpg",
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
     titleColor: "text-[#0c2080]",
@@ -37,7 +37,7 @@ Our approach involves a comprehensive assessment of your current setup, deep per
       "Performance tuning",
       "Ongoing support",
     ],
-    imageSrc: "/images/placeholder/placeholder2.png",
+    imageSrc: "/images/placeholder/placeholder61.jpg",
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
     titleColor: "text-[#0c2080]",
@@ -52,25 +52,26 @@ Our approach involves a comprehensive assessment of your current setup, deep per
         iconSrc: "/images/icons/settings.svg", // Using existing icon path for settings placeholder
         title: "Capabilities",
         content: [
-          "Infrastructure modernisation",
-          "Cloud cost optimisation",
-          "Risk mitigation strategy",
-          "Transformation management",
-          "Internal team upskilling",
+          "Performance data collection",
+          "Coding standards review",
+          "Process evaluation",
+          "Skill gap analysis",
+          "Engineering and leadership coaching",
         ],
       },
       {
-        iconSrc: "/images/icons/cloud.svg", // Using existing icon path for cloud_done placeholder
+        iconSrc: "/images/icons/cloud_done.svg", // Using existing icon path for cloud_done placeholder
         title: "Delivery",
         content: [
-          "Azure, Google and AWS engineering experience",
-          "Eliminate ClickOps with Infrastructure as Code (IaC)",
-          "Platform-neutral approach",
-          "No long-term commitments",
+          "Detailed technical reports",
+          "Tailored improvement plans",
+          "Team workshops",
+          "Ongoing performance monitoring",
+          "Targeted coaching support",
         ],
       },
       {
-        iconSrc: "/images/icons/security.svg", // Using existing icon path for devices placeholder
+        iconSrc: "/images/icons/devices.svg", // Using existing icon path for devices placeholder
         title: "Technologies",
         content: "• Next JS • Node JS • Angular • React • Vue.JS • Typescript • PHP • Python • C# .NET • Java • C++ • Docker • Kubernetes • Terraform • CloudFormation • AWS • Azure • GCP • Scala •",
       },

@@ -3,7 +3,7 @@ import ServicePageLayout from '@/app/components/ServicePageLayout';
 // Define the test content for the service page
 const TEST_SERVICE_DATA = {
   hero: {
-    imageSrc: "/images/placeholder/placeholder21.jpg", // Updated image placeholder
+    imageSrc: "/images/placeholder/placeholder56.jpg", // Updated image placeholder
     tagline: "Empower",
     title: "Engineering as a Service",
     titleHighlight: "(EaaS)",
@@ -12,32 +12,32 @@ const TEST_SERVICE_DATA = {
   },
   // Future sections will be added here
   imageTextContent: {
-    title: "Optimise your cloud-based services",
-    description: `In today's digital landscape, many businesses have already transitioned to cloud platforms. However, the journey doesn't end with migration. Maximising performance, reducing costs and building resilience is paramount to achieving operational excellence.
+    title: "Build faster with the right people embedded from day one",
+    description: `When projects need to move quickly or scale reliably, access to trusted engineers can make all the difference. Software@Scale’s Engineering as a Service (EaaS) gives you flexible, embedded access to experience software engineers, without the overhead of long hiring cycles.
 
-At Software@Scale, we specialise in enhancing and customising cloud environments across AWS, Azure and Google Cloud to align with your unique business needs. Whether you're looking to migrate, eliminate manual processes with infrastructure-as-code or fine-tune for efficiency, our cloud engineering approach delivers measurable gains in speed, performance and cost-effectiveness.
+Our teams specialise in financial services, cloud and secure systems. They integrate directly with your delivery pipelines and internal teams, helping you move from roadmap to reality, faster.
 
-Generic, out-of-the-box cloud configurations often fall short in meeting specific organisational requirements. We focus on tailoring architecture and automation to ensure it supports your objectives, enhances agility and provides a competitive edge.
+Whether you’re scaling platforms, modernising systems or clearing a backlog, EaaS is designed to keep momentum up and standards high. You stay in control of the product, we support delivery with engineering you can rely on.
 
-Our approach involves a comprehensive assessment of your current setup, deep performance analysis, and implementation of best practices to ensure your cloud platform is not just functional but exceptional.`,
-    imageSrc: "/images/placeholder/placeholder35.jpg",
+It’s engineering support that fits around your needs, accelerates your roadmap and strengthens your team as it goes.`,
+    imageSrc: "/images/placeholder/placeholder57.jpg",
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
     titleColor: "text-[#0c2080]",
     imageOnRight: true,
   },
   imageTextListContent: {
-    title: "Secure, compliant and resilient systems",
-    introDescription: "Software@Scale’s engineers focus on building and managing resilient cloud environments that reduce costs, support your growth, enhance agility and ensure operational excellence.",
-    listTitle: "How Cloud Engineering works:",
+    title: "Accelerated engineering without compromise",
+    introDescription: "At Software@Scale, we hire only the top 1% of engineers worldwide. Our team are rigorously vetted for their technical expertise, problem-solving abilities and efficient deliveries. That means they’re ready to hit the ground running within as little as two weeks on even your most complex projects.",
+    listTitle: "How EaaS works:",
     listItems: [
-      "Consultation and assessment",
-      "Solution design",
-      "Automation setup",
-      "Performance tuning",
+      "Consultation",
+      "Scope definition",
+      "Talent matching",
+      "Real-time monitoring",
       "Ongoing support",
     ],
-    imageSrc: "/images/placeholder/placeholder2.png",
+    imageSrc: "/images/placeholder/placeholder58.jpg",
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
     titleColor: "text-[#0c2080]",
@@ -52,25 +52,26 @@ Our approach involves a comprehensive assessment of your current setup, deep per
         iconSrc: "/images/icons/settings.svg", // Using existing icon path for settings placeholder
         title: "Capabilities",
         content: [
-          "Infrastructure modernisation",
-          "Cloud cost optimisation",
-          "Risk mitigation strategy",
+          "Platform modernisation",
           "Transformation management",
+          "Enterprise processes",
           "Internal team upskilling",
         ],
       },
       {
-        iconSrc: "/images/icons/cloud.svg", // Using existing icon path for cloud_done placeholder
+        iconSrc: "/images/icons/cloud_done.svg", // Using existing icon path for cloud_done placeholder
         title: "Delivery",
         content: [
-          "Azure, Google and AWS engineering experience",
-          "Eliminate ClickOps with Infrastructure as Code (IaC)",
-          "Platform-neutral approach",
-          "No long-term commitments",
+          "Bespoke solutions fit for purpose",
+          "Scalable code base",
+          "Prototype to completion",
+          "Controlled framework model",
+          "QA process development",
+          "Audit report",
         ],
       },
       {
-        iconSrc: "/images/icons/security.svg", // Using existing icon path for devices placeholder
+        iconSrc: "/images/icons/devices.svg", // Using existing icon path for devices placeholder
         title: "Technologies",
         content: "• Next JS • Node JS • Angular • React • Vue.JS • Typescript • PHP • Python • C# .NET • Java • C++ • Docker • Kubernetes • Terraform • CloudFormation • AWS • Azure • GCP • Scala •",
       },
