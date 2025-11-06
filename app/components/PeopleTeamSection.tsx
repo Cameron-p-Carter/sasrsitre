@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const TEAM_MEMBERS = [
   {
@@ -100,11 +101,11 @@ const PeopleTeamSection = () => {
             </p>
           </div>
           <div className="flex flex-col gap-4 w-[155px]">
-            <button className="border border-[#0c2080] border-solid flex items-center justify-center px-6 py-2.5 rounded-xl w-full">
-              <span className="font-medium text-[#0c2080] text-base leading-[1.5] whitespace-nowrap">
+            <Link href="/careers" className="border border-[#0c2080] border-solid flex items-center justify-center px-6 py-2.5 rounded-xl w-full hover:bg-[#0c2080] hover:text-white transition-colors">
+              <span className="font-medium text-[#0c2080] hover:text-white text-base leading-[1.5] whitespace-nowrap">
                 Open Positions
               </span>
-            </button>
+            </Link>
           </div>
         </div>
       </div>
