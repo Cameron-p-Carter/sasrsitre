@@ -145,51 +145,31 @@ To support this, Software@Scale (S@S) was engaged to lead the technical readines
   textColor: "text-[#00050a]",
 };
 
-const CASE_STUDY_CUSTOM_SECTION_DATA: CustomSectionData = {
-  sectionTitle: "Key Challenges",
-  description: "Coates Group faced significant obstacles that jeopardised their market standing. Our team tackled these issues with accuracy and strategic understanding.",
-  listItems: [
-    "Accelerating delivery across global teams within an ambitious timeline",
-    "Resolving production incidents and performance issues across NodeJS and ReactJS stacks",
-    "Addressing infrastructure scalability and security gaps ahead of market launch",
-    "Uplifting internal engineering capability and governance for enterprise-grade delivery",
-  ],
-  imageSrc: "/images/placeholder/placeholder34.jpg",
-  backgroundColor: "bg-[#cce1f4]",
-  titleColor: "text-[#0c2080]",
-  textColor: "text-[#00050a]",
-  listTextColor: "text-[#00050a]",
-  imageOnRight: false,
-};
+
 
 const CASE_STUDY_OUTCOME_DATA: CaseStudyOutcomeData = {
-  sectionTitle: "Results & Impact",
+  sectionTitle: "The Outcome",
   outcomes: [
     {
-      iconSrc: "/images/icons/automation.svg",
-      title: "70% Faster Environment Setup",
-      description: "Automated infrastructure provisioning with AWS CloudFormation dramatically reduced deployment times and improved consistency across environments."
+      iconSrc: "/images/icons/cloud_upload.svg",
+      title: "Future-Proofed Infrastructure",
+      description: "The platform was restructured for standalone use, simplifying the transition for new ownership."
     },
     {
-      iconSrc: "/images/icons/security.svg",
-      title: "40% Reduction in Downtime",
-      description: "Enhanced observability and monitoring using AWS CloudWatch, CloudTrail, and X-Ray significantly improved system reliability and incident response."
+      iconSrc: "/images/icons/fast_forward.svg",
+      title: "Accelerated Sale Process",
+      description: "Comprehensive technical and product due diligence helped move the transaction toward completion."
     },
     {
-      iconSrc: "/images/icons/cloud_done.svg",
-      title: "ISO 27001 Certification Ready",
-      description: "DevSecOps implementation and security hardening prepared Coates Group for successful penetration testing and compliance certification."
-    },
-    {
-      iconSrc: "/images/icons/explore.svg",
-      title: "30% Operational Overhead Reduction",
-      description: "Technology governance frameworks and proactive risk identification streamlined operations and improved delivery transparency."
+      iconSrc: "/images/icons/foundation.svg",
+      title: "Scalable Foundation",
+      description: "New owners now benefit from a compliant, cloud-native solution that can grow with their needs."
     }
   ],
   imageSrc: "/images/placeholder/placeholder83.jpg",
-  backgroundColor: "bg-white",
+  backgroundColor: "bg-[#cce1f4]",
   titleColor: "text-[#0c2080]",
-  featureTitleColor: "text-[#0c2080]",
+  featureTitleColor: "text-[#00050a]",
   featureTextColor: "text-[#00050a]",
   imageOnRight: false,
 };
@@ -265,42 +245,25 @@ const CASE_STUDY_DELIVERABLES_GRID_DATA_2: DeliverablesGridData = {
   deliverableTextColor: "text-white",
 };
 
-const CASE_STUDY_WHAT_WE_DELIVERED_DATA: WhatWeDeliveredSectionData = {
-  sectionTitle: "What We Delivered",
-  sectionDescription: "Our strategy precisely and strategically reshaped the digital landscape of Coates Group.",
-  deliverables: [
-    {
-      iconSrc: "/images/icons/group_work.svg",
-      title: "Rapid Team Mobilisation",
-      description: "Within just two weeks, Software@Scale deployed a 45-person blended team across onshore and offshore locations, including embedded Heads of Engineering, QA, and Delivery, to stabilise delivery and drive immediate impact."
-    },
-    {
-      iconSrc: "/images/icons/engineering.svg",
-      title: "Engineering Turnaround & Delivery Acceleration",
-      description: "Critical technical blockers across the platform's backend (NodeJS) and frontend (ReactJS) were quickly resolved. Software@Scale introduced automated infrastructure provisioning with AWS CloudFormation, reducing environment setup times by 70%. Improved observability using AWS CloudWatch, CloudTrail, and X-Ray helped cut downtime by 40% and significantly strengthened system resilience."
-    },
-    {
-      iconSrc: "/images/icons/cloud.svg",
-      title: "Scalable Cloud & Security Architecture",
-      description: "The team re-architected platform components to optimise scalability and performance on AWS, embedding DevSecOps principles to harden security and prepare for a successful penetration test. This work also supported Coates Group's path toward ISO 27001 certification."
-    },
-    {
-      iconSrc: "/images/icons/settings.svg",
-      title: "Governance & Capability Uplift",
-      description: "Technology and delivery governance frameworks were introduced to improve transparency and consistency. A full-stack technical audit identified key engineering and performance risks, enabling proactive fixes and cutting operational overhead by 30%."
-    }
+
+
+const CASE_STUDY_STATS_DATA = {
+  sectionTitle: "Transforming technical challenges into strategic opportunities",
+  keyTechnologies: "• AWS Cloud Infrastructure • AWS CloudFormation • AWS CloudTrail & KMS • AWS IAM & Auto Scaling • .NET & Angular • Vue.js & Node.js • JMeter",
+  stats: [
+    { value: "50%", description: "Cost reduction" },
+    { value: "45", description: "Engineers" },
+    { value: "99.99%", description: "Up time" },
   ],
-  backgroundColor: "bg-[#006cc9]",
-  titleColor: "text-white",
-  descriptionColor: "text-white",
-  deliverableTitleColor: "text-[#5ae0f6]",
-  deliverableTextColor: "text-white",
+  backgroundColor: "bg-[#cce1f4]",
+  titleColor: "text-[#0c2080]",
+  accentColor: "text-[#006cc9]",
 };
 
 const CASE_STUDY_CTA_DATA: CTASectionData = {
   imageSrc: "/images/placeholder/placeholder16.jpg",
-  title: "Get in Touch with Us",
-  description: "Reach out today to discover how we can help accelerate your digital transformation journey.",
+  title: "Let's Discuss Your Project",
+  description: "Contact us today to explore how we can help you achieve your goals effectively.",
   primaryButtonText: "Contact",
   secondaryButtonText: "Learn More",
 };
@@ -311,9 +274,8 @@ const CASE_STUDY_PAGE_DATA: CaseStudyArticleData = {
   sectionHeader: CASE_STUDY_SECTION_HEADER_DATA,
   deliverablesGrid: CASE_STUDY_DELIVERABLES_GRID_DATA,
   deliverablesGrid2: CASE_STUDY_DELIVERABLES_GRID_DATA_2,
-  customSection: CASE_STUDY_CUSTOM_SECTION_DATA,
-  whatWeDeliveredSection: CASE_STUDY_WHAT_WE_DELIVERED_DATA,
   outcome: CASE_STUDY_OUTCOME_DATA,
+  stats: CASE_STUDY_STATS_DATA,
   cta: CASE_STUDY_CTA_DATA,
 };
 
