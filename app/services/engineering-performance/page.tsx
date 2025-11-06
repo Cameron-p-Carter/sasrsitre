@@ -3,7 +3,7 @@ import ServicePageLayout from '@/app/components/ServicePageLayout';
 // Define the test content for the service page
 const TEST_SERVICE_DATA = {
   hero: {
-    imageSrc: "/images/placeholder/placeholder17.jpg", // Updated image placeholder
+    imageSrc: "/images/placeholder/placeholder50.jpg", // Updated image placeholder
     tagline: "Optimize",
     title: "Elevate Engineering",
     titleHighlight: "Performance",
@@ -12,32 +12,32 @@ const TEST_SERVICE_DATA = {
   },
   // Future sections will be added here
   imageTextContent: {
-    title: "Optimise your cloud-based services",
-    description: `In today's digital landscape, many businesses have already transitioned to cloud platforms. However, the journey doesn't end with migration. Maximising performance, reducing costs and building resilience is paramount to achieving operational excellence.
+    title: "Improve teams’ performance with clarity and confidence",
+    description: `Understanding how your engineering teams are really performing is critical to sustained success, especially during growth, change or high-stakes delivery. Yet many organisations rely on subjective measures or outdated assumptions that don't reflect day-to-day effectiveness.
 
-At Software@Scale, we specialise in enhancing and customising cloud environments across AWS, Azure and Google Cloud to align with your unique business needs. Whether you're looking to migrate, eliminate manual processes with infrastructure-as-code or fine-tune for efficiency, our cloud engineering approach delivers measurable gains in speed, performance and cost-effectiveness.
+At Software@Scale, we take an objective, data-driven approach to performance assessment. We evaluate engineering teams across coding standards, delivery processes, collaboration and leadership capability, providing a clear picture of strengths, gaps and opportunities.
 
-Generic, out-of-the-box cloud configurations often fall short in meeting specific organisational requirements. We focus on tailoring architecture and automation to ensure it supports your objectives, enhances agility and provides a competitive edge.
+This insight allows you to take targeted action. Whether it is introducing better workflows, upskilling teams or refining roles, our recommendations are practical, relevant and tailored to your goals.
 
-Our approach involves a comprehensive assessment of your current setup, deep performance analysis, and implementation of best practices to ensure your cloud platform is not just functional but exceptional.`,
-    imageSrc: "/images/placeholder/placeholder35.jpg",
+Our assessments are designed to be low disruption but high value. With a clear view of where to focus, you can lift performance, reduce risk and support sustainable team development.`,
+    imageSrc: "/images/placeholder/placeholder51.jpg",
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
     titleColor: "text-[#0c2080]",
     imageOnRight: true,
   },
   imageTextListContent: {
-    title: "Secure, compliant and resilient systems",
-    introDescription: "Software@Scale’s engineers focus on building and managing resilient cloud environments that reduce costs, support your growth, enhance agility and ensure operational excellence.",
-    listTitle: "How Cloud Engineering works:",
+    title: "Insight, improvement and impact",
+    introDescription: "Software@Scale provides objective evaluations that reveal skill gaps, enhance team collaboration and deliver tailored recommendations to boost engineering performance.",
+    listTitle: "How Engineering Performance Assessment works:",
     listItems: [
-      "Consultation and assessment",
-      "Solution design",
-      "Automation setup",
-      "Performance tuning",
-      "Ongoing support",
+      "Collect performance data",
+      "Review coding standards",
+      "Evaluate team processes",
+      "Identify improvement areas",
+      "Recommend coaching plans",
     ],
-    imageSrc: "/images/placeholder/placeholder2.png",
+    imageSrc: "/images/placeholder/placeholder52.jpg",
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
     titleColor: "text-[#0c2080]",
@@ -52,25 +52,26 @@ Our approach involves a comprehensive assessment of your current setup, deep per
         iconSrc: "/images/icons/settings.svg", // Using existing icon path for settings placeholder
         title: "Capabilities",
         content: [
-          "Infrastructure modernisation",
-          "Cloud cost optimisation",
-          "Risk mitigation strategy",
-          "Transformation management",
-          "Internal team upskilling",
+          "Performance data collection",
+          "Coding standards review",
+          "Process evaluation",
+          "Skill gap analysis",
+          "Engineering and leadership coaching",
         ],
       },
       {
-        iconSrc: "/images/icons/cloud.svg", // Using existing icon path for cloud_done placeholder
+        iconSrc: "/images/icons/cloud_done.svg", // Using existing icon path for cloud_done placeholder
         title: "Delivery",
         content: [
-          "Azure, Google and AWS engineering experience",
-          "Eliminate ClickOps with Infrastructure as Code (IaC)",
-          "Platform-neutral approach",
-          "No long-term commitments",
+          "Detailed technical reports",
+          "Tailored improvement plans",
+          "Team workshops",
+          "Ongoing performance monitoring",
+          "Targeted coaching support",
         ],
       },
       {
-        iconSrc: "/images/icons/security.svg", // Using existing icon path for devices placeholder
+        iconSrc: "/images/icons/devices.svg", // Using existing icon path for devices placeholder
         title: "Technologies",
         content: "• Next JS • Node JS • Angular • React • Vue.JS • Typescript • PHP • Python • C# .NET • Java • C++ • Docker • Kubernetes • Terraform • CloudFormation • AWS • Azure • GCP • Scala •",
       },
