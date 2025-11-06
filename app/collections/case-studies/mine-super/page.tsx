@@ -96,9 +96,9 @@ interface CaseStudyArticleData {
 const CASE_STUDY_HERO_DATA: HeroSectionData = {
   imageSrc: "/images/placeholder/placeholder82.jpg",
   tagline: "Case Study",
-  title: "Coates Group",
+  title: "Mine Super",
   titleHighlight: "",
-  description: "Engineering Acceleration for Global Market Leadership",
+  description: "Preparing a Superannuation Platform for Sale and Future Growth",
   overlayOpacity: 0.6,
 };
 
