@@ -42,7 +42,7 @@ const OPEN_POSITIONS_DATA = {
 const DISCOVER_SECTION_DATA = {
   sectionTitle: "Discover Your Future with Us",
   sectionDescription: "At Software at Scale, we believe in fostering a culture of innovation and collaboration. Join us to work on cutting-edge projects that make a real impact.",
-  imageSrc: "/images/placeholder/placeholder25.jpg",
+  imageSrc: "/images/placeholder/96.jpg",
   backgroundColor: "bg-[#006cc9]",
   titleColor: "text-white",
   textColor: "text-white",
@@ -55,17 +55,17 @@ const DISCOVER_SECTION_DATA = {
 const BENEFITS_SECTION_DATA = {
   benefits: [
     {
-      iconSrc: "/images/icons/group_work.svg",
+      iconSrc: "/images/icons/diversity_1.svg",
       title: "Emphasizing Growth and Development",
       description: "We are committed to continuous learning and professional development."
     },
     {
-      iconSrc: "/images/icons/heart_plus.svg",
+      iconSrc: "/images/icons/health_cross.svg",
       title: "Comprehensive Benefits for Our Employees",
       description: "Our competitive benefits package supports your well-being and work-life balance."
     },
     {
-      iconSrc: "/images/icons/explore.svg",
+      iconSrc: "/images/icons/forward.svg",
       title: "Join Us in Shaping the Future",
       description: "Become part of a forward-thinking team that values your contributions."
     }
@@ -76,7 +76,7 @@ const BENEFITS_SECTION_DATA = {
 };
 
 const CTA_SECTION_DATA = {
-  imageSrc: "/images/placeholder/placeholder30.jpg",
+  imageSrc: "/images/placeholder/placeholder16.jpg",
   title: "Ready to Join Our Team?",
   description: "Take the next step in your career journey with Software@Scale. We're looking for talented individuals who are passionate about technology and innovation.",
   primaryButtonText: "Apply Now",
@@ -92,11 +92,11 @@ export default function CareersPage() {
       
       <main className="pt-[72px]">
         <HeroHeaderSection
-          imageSrc="/images/placeholder/placeholder20.jpg"
-          tagline="Join Our Team"
-          title="Careers"
+          imageSrc="/images/placeholder/91.jpg"
+          tagline="Careers"
+          title="Join Our Team"
           titleHighlight=""
-          description="Build your career with Australia's leading software engineering consultancy. Join our team of elite engineers and help transform the digital landscape."
+          description="Become part of an innovative community focused on digital transformation and engineering excellence."
           overlayOpacity={0.6}
         />
 

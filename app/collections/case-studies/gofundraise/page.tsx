@@ -71,6 +71,30 @@ interface WhatWeDeliveredSectionData {
   deliverableTextColor: string;
 }
 
+interface SectionHeaderData {
+  title: string;
+  description: string;
+  backgroundColor?: string;
+  textColor?: string;
+}
+
+interface DeliverableGridItem {
+  iconSrc: string;
+  title: string;
+  description: string;
+}
+
+interface DeliverablesGridData {
+  sectionTitle: string;
+  sectionDescription: string;
+  deliverables: DeliverableGridItem[];
+  backgroundColor?: string;
+  titleColor?: string;
+  descriptionColor?: string;
+  deliverableTitleColor?: string;
+  deliverableTextColor?: string;
+}
+
 interface CTASectionData {
   imageSrc: string;
   title: string;
@@ -82,6 +106,8 @@ interface CTASectionData {
 interface CaseStudyArticleData {
   hero: HeroSectionData;
   overview?: CaseStudyOverviewData;
+  sectionHeader?: SectionHeaderData;
+  deliverablesGrid?: DeliverablesGridData;
   deliverables?: any;
   imageFeatures?: any;
   outcome?: CaseStudyOutcomeData;
@@ -96,36 +122,79 @@ interface CaseStudyArticleData {
 const CASE_STUDY_HERO_DATA: HeroSectionData = {
   imageSrc: "/images/placeholder/placeholder87.jpg",
   tagline: "Case Study",
-  title: "Coates Group",
+  title: "GoFundraise",
   titleHighlight: "",
-  description: "Engineering Acceleration for Global Market Leadership",
+  description: "Software@Scale delivers a world-class platform to support GoFundraise’s global growth",
   overlayOpacity: 0.6,
 };
 
 const CASE_STUDY_OVERVIEW_DATA: CaseStudyOverviewData = {
   overviewTitle: "Overview",
   details: [
-    { label: "Client:", value: "Coates Group" },
+    { label: "Client:", value: "GoFundraise" },
     { label: "Partner:", value: "Software@Scale" },
-    { label: "Industry:", value: "Retail/Media" },
-    { label: "Services:", value: "Engineering Performance" },
+    { label: "Industry:", value: "Technology" },
+    { label: "Services:", value: "Engineering as a Service, Technology Advisory / Fractional Resources, Security Architecture, Engineering Performance" },
   ],
-  richTextContent: `Coates Group, a global leader in digital signage and retail technology, sought to accelerate their engineering delivery across global teams to maintain market leadership. They faced challenges in scaling their infrastructure and resolving performance issues across their NodeJS and ReactJS stacks.
+  richTextContent: `When GoFundraise's ambitious expansion plans were at risk from new players entering the market, Software@Scale stepped in to deliver an expanded platform, and then ready it and the business for global markets.
 
-Software@Scale was engaged to provide engineering acceleration services, focusing on uplifting internal capability, resolving critical production issues, and addressing infrastructure scalability and security gaps ahead of a major market launch.`,
+GoFundraise needed a partner with expertise in complex ecosystems and a deep understanding of payment platforms and security standards in a global environment. Software@Scale was chosen because of our reputation for employing the best technology and people to deliver secure, efficient cloud-based solutions.
+
+Within Software@Scale helped GoFundraise transform into a market-leading global fundraising platform, enabling supporters, event organisers and businesses to increase charitable donations while reducing operational costs and inefficiencies.`,
   backgroundColor: "bg-[#cce1f4]",
   titleColor: "text-[#0c2080]",
   textColor: "text-[#00050a]",
 };
 
+const CASE_STUDY_SECTION_HEADER_DATA: SectionHeaderData = {
+  title: "What We Delivered",
+  description: "Precision-driven data assurance strategies that transform complex migration challenges into seamless operational excellence.",
+  backgroundColor: "bg-[#006cc9]",
+  textColor: "text-white",
+};
+
+const CASE_STUDY_DELIVERABLES_GRID_DATA: DeliverablesGridData = {
+  sectionTitle: "A flexible workplace giving platform",
+  sectionDescription: "Software@Scale integrated a new, multi-tenant, workplace giving platform into the existing charity portal. This platform incorporated payroll and reporting tools to facilitate corporate social responsibility impact tracking by participating workplaces.",
+  deliverables: [
+    {
+      iconSrc: "/images/icons/manage_accounts.svg",
+      title: "Streamlined",
+      description: "Designed the system to be easy for employees to manage their donations and tax receipts."
+    },
+    {
+      iconSrc: "/images/icons/finance_mode.svg",
+      title: "Regulatory compliance",
+      description: "Ensured compliance with financial and tax regulations in Australia and other regions in anticipation of future expansion."
+    },
+    {
+      iconSrc: "/images/icons/payments.svg",
+      title: "Payroll integration",
+      description: "Integrated payroll functionality and payment gateways for multi-currency transactions seamlessly, allowing donations to be processed securely and efficiently directly from employees' pays."
+    },
+    {
+      iconSrc: "/images/icons/deployed_code_history.svg",
+      title: "Enhanced team agility",
+      description: "Developed team capability by introducing DevOps practices and improved agile delivery methodology."
+    }
+  ],
+  backgroundColor: "bg-[#006cc9]",
+  titleColor: "text-white",
+  descriptionColor: "text-white",
+  deliverableTitleColor: "text-[#5ae0f6]",
+  deliverableTextColor: "text-white",
+};
+
 const CASE_STUDY_CUSTOM_SECTION_DATA: CustomSectionData = {
-  sectionTitle: "Key Challenges",
-  description: "Coates Group faced significant obstacles that jeopardised their market standing. Our team tackled these issues with accuracy and strategic understanding.",
+  sectionTitle: "Global expansion capability and confidence",
+  description: "Software@Scale facilitated global expansion by testing and optimising the fundraising platform and then developing a comprehensive strategy and roadmap for future success.",
   listItems: [
-    "Accelerating delivery across global teams within an ambitious timeline",
-    "Resolving production incidents and performance issues across NodeJS and ReactJS stacks",
-    "Addressing infrastructure scalability and security gaps ahead of market launch",
-    "Uplifting internal engineering capability and governance for enterprise-grade delivery",
+    "Identified and resolved technical bottlenecks to ensure the GoFundraise platform was ready for international expansion.",
+    "Optimised the system for efficiency and improved server response times; fine-tuned the codebase and frontend components.",
+    "Implemented dynamically adjusted resource management and established the global infrastructure required to support international growth.",
+    "Improved technical capability through strategic acquisitions.",
+    "Aligned platform offerings with diverse market requirements across major markets in the United States, the United Kingdom and New Zealand.",
+    "Established a comprehensive, scalable and innovative foundation for long-term growth in the global fundraising space.",
   ],
   imageSrc: "/images/placeholder/placeholder88.jpg",
   backgroundColor: "bg-[#cce1f4]",
@@ -136,73 +205,45 @@ const CASE_STUDY_CUSTOM_SECTION_DATA: CustomSectionData = {
 };
 
 const CASE_STUDY_OUTCOME_DATA: CaseStudyOutcomeData = {
-  sectionTitle: "Results & Impact",
+  sectionTitle: "The Outcome",
   outcomes: [
     {
-      iconSrc: "/images/icons/automation.svg",
-      title: "70% Faster Environment Setup",
-      description: "Automated infrastructure provisioning with AWS CloudFormation dramatically reduced deployment times and improved consistency across environments."
+      iconSrc: "/images/icons/analytics.svg",
+      title: "Optimised",
+      description: "Positioned GoFundraise as a secure, reliable and flexible platform of choice for charities, corporates and individuals keen to raise funds to support the not-for-profit sector in Australia, the United States, the United Kingdom and New Zealand.\n\nDelivered a fully tested and compliant platform capable of handling a tenfold increase in traffic. Enhanced transaction handling capability across multi-region operations to increase payment processing speed by 40%."
     },
     {
-      iconSrc: "/images/icons/security.svg",
-      title: "40% Reduction in Downtime",
-      description: "Enhanced observability and monitoring using AWS CloudWatch, CloudTrail, and X-Ray significantly improved system reliability and incident response."
-    },
-    {
-      iconSrc: "/images/icons/cloud_done.svg",
-      title: "ISO 27001 Certification Ready",
-      description: "DevSecOps implementation and security hardening prepared Coates Group for successful penetration testing and compliance certification."
-    },
-    {
-      iconSrc: "/images/icons/explore.svg",
-      title: "30% Operational Overhead Reduction",
-      description: "Technology governance frameworks and proactive risk identification streamlined operations and improved delivery transparency."
+      iconSrc: "/images/icons/strategy.svg",
+      title: "Developed growth strategy",
+      description: "Established and implemented a strategy and roadmap for scalable and innovative growth. Built a robust team with access to specialised engineering talent to support the platform's operational and technical needs."
     }
   ],
   imageSrc: "/images/placeholder/placeholder89.jpg",
-  backgroundColor: "bg-white",
+  backgroundColor: "bg-[#cce1f4]",
   titleColor: "text-[#0c2080]",
-  featureTitleColor: "text-[#0c2080]",
+  featureTitleColor: "text-[#00050a]",
   featureTextColor: "text-[#00050a]",
-  imageOnRight: false,
+  imageOnRight: true,
 };
 
-const CASE_STUDY_WHAT_WE_DELIVERED_DATA: WhatWeDeliveredSectionData = {
-  sectionTitle: "What We Delivered",
-  sectionDescription: "Our strategy precisely and strategically reshaped the digital landscape of Coates Group.",
-  deliverables: [
-    {
-      iconSrc: "/images/icons/group_work.svg",
-      title: "Rapid Team Mobilisation",
-      description: "Within just two weeks, Software@Scale deployed a 45-person blended team across onshore and offshore locations, including embedded Heads of Engineering, QA, and Delivery, to stabilise delivery and drive immediate impact."
-    },
-    {
-      iconSrc: "/images/icons/engineering.svg",
-      title: "Engineering Turnaround & Delivery Acceleration",
-      description: "Critical technical blockers across the platform's backend (NodeJS) and frontend (ReactJS) were quickly resolved. Software@Scale introduced automated infrastructure provisioning with AWS CloudFormation, reducing environment setup times by 70%. Improved observability using AWS CloudWatch, CloudTrail, and X-Ray helped cut downtime by 40% and significantly strengthened system resilience."
-    },
-    {
-      iconSrc: "/images/icons/cloud.svg",
-      title: "Scalable Cloud & Security Architecture",
-      description: "The team re-architected platform components to optimise scalability and performance on AWS, embedding DevSecOps principles to harden security and prepare for a successful penetration test. This work also supported Coates Group's path toward ISO 27001 certification."
-    },
-    {
-      iconSrc: "/images/icons/settings.svg",
-      title: "Governance & Capability Uplift",
-      description: "Technology and delivery governance frameworks were introduced to improve transparency and consistency. A full-stack technical audit identified key engineering and performance risks, enabling proactive fixes and cutting operational overhead by 30%."
-    }
+
+const CASE_STUDY_STATS_DATA = {
+  sectionTitle: "Transforming technical challenges into strategic opportunities",
+  keyTechnologies: "• Vue.JS • .NET Core, .NET • Amazon EC2",
+  stats: [
+    { value: "50%", description: "Cost reduction" },
+    { value: "45", description: "Engineers" },
+    { value: "99.99%", description: "Up time" },
   ],
-  backgroundColor: "bg-[#006cc9]",
-  titleColor: "text-white",
-  descriptionColor: "text-white",
-  deliverableTitleColor: "text-[#5ae0f6]",
-  deliverableTextColor: "text-white",
+  backgroundColor: "bg-[#cce1f4]",
+  titleColor: "text-[#0c2080]",
+  accentColor: "text-[#006cc9]",
 };
 
 const CASE_STUDY_CTA_DATA: CTASectionData = {
   imageSrc: "/images/placeholder/placeholder16.jpg",
-  title: "Get in Touch with Us",
-  description: "Reach out today to discover how we can help accelerate your digital transformation journey.",
+  title: "Let's Discuss Your Project",
+  description: "Contact us today to explore how we can help you achieve your goals effectively.",
   primaryButtonText: "Contact",
   secondaryButtonText: "Learn More",
 };
@@ -210,9 +251,11 @@ const CASE_STUDY_CTA_DATA: CTASectionData = {
 const CASE_STUDY_PAGE_DATA: CaseStudyArticleData = {
   hero: CASE_STUDY_HERO_DATA,
   overview: CASE_STUDY_OVERVIEW_DATA,
+  sectionHeader: CASE_STUDY_SECTION_HEADER_DATA,
+  deliverablesGrid: CASE_STUDY_DELIVERABLES_GRID_DATA,
   customSection: CASE_STUDY_CUSTOM_SECTION_DATA,
-  whatWeDeliveredSection: CASE_STUDY_WHAT_WE_DELIVERED_DATA,
   outcome: CASE_STUDY_OUTCOME_DATA,
+  stats: CASE_STUDY_STATS_DATA,
   cta: CASE_STUDY_CTA_DATA,
 };
 

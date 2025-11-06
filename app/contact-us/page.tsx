@@ -8,14 +8,14 @@ import FAQSection from '@/app/components/FAQSection';
 const CONTACT_INFO_DATA = {
   contactItems: [
     {
-      iconSrc: "/images/icons/automation.svg",
+      iconSrc: "/images/icons/mail.svg",
       title: "Email",
       description: "Reach us anytime at our support email.",
       contactInfo: "info@softwareatscale.com",
       isLink: true
     },
     {
-      iconSrc: "/images/icons/automation.svg",
+      iconSrc: "/images/icons/location_on.svg",
       title: "Office",
       description: "Call us for direct support and inquiries.",
       contactInfo: "Level 57, 25 Martin Place, Sydney 2000 NSW Australia",
@@ -90,7 +90,7 @@ export default function ContactUsPage() {
       
       <main className="pt-[72px]">
         <HeroHeaderSection
-          imageSrc="/images/placeholder/placeholder28.jpg"
+          imageSrc="/images/placeholder/101.jpg"
           tagline="Connect"
           title="Get in"
           titleHighlight="Touch"

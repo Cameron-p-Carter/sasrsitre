@@ -72,7 +72,7 @@ export default function CareersOpenPositionsSection({
                       <div className="flex gap-3 items-center">
                         <div className="relative w-6 h-6 shrink-0">
                           <Image
-                            src="/images/icons/automation.svg"
+                            src="/images/icons/location_on.svg"
                             alt="Location"
                             fill
                             className="object-contain"
@@ -85,7 +85,7 @@ export default function CareersOpenPositionsSection({
                       <div className="flex gap-3 items-center">
                         <div className="relative w-6 h-6 shrink-0">
                           <Image
-                            src="/images/icons/automation.svg"
+                            src="/images/icons/schedule.svg"
                             alt="Schedule"
                             fill
                             className="object-contain"
