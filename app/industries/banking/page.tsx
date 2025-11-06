@@ -24,17 +24,17 @@ const BANKING_PORTFOLIO_DATA = {
     },
     {
       id: 2,
-      title: "Mine Super",
-      description: "Preparing a Superannuation Platform for Sale and Future Growth.",
-      image: "/images/placeholder/placeholder13.jpg",
-      aspectRatio: "aspect-[335/188]"
-    },
-    {
-      id: 3,
       title: "Coates Group",
       description: "Engineering Acceleration for Global Market Leadership.",
       image: "/images/placeholder/placeholder12.jpg",
       aspectRatio: "aspect-square"
+    },
+    {
+      id: 3,
+      title: "Mine Super",
+      description: "Preparing a Superannuation Platform for Sale and Future Growth.",
+      image: "/images/placeholder/placeholder13.jpg",
+      aspectRatio: "aspect-[335/188]"
     },
     {
       id: 4,
