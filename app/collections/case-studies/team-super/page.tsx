@@ -99,22 +99,22 @@ const CASE_STUDY_DELIVERABLES_DATA: CaseStudyDeliverablesData = {
   sectionSubtitle: "Data Migration & Assurance",
   deliverables: [
     {
-      iconSrc: "/images/icons/engineering.svg", // Placeholder for data_check
+      iconSrc: "/images/icons/data_check.svg",
       title: "Data Validation",
       description: "Conducted rigorous checks to verify the completeness and accuracy of member data before, during, and after migration.",
     },
     {
-      iconSrc: "/images/icons/cloud.svg", // Placeholder for deployed_code_account
+      iconSrc: "/images/icons/deployed_code_account.svg",
       title: "Onboarding Execution",
-      description: "Delivered a seamless onboarding of TWUSUPER members, aligning data integrity, compliance needs, and operational workflows within Mine Super’s platform.",
+      description: "Delivered a seamless onboarding of TWUSUPER members, aligning data integrity, compliance needs, and operational workflows within Mine Super's platform.",
     },
     {
-      iconSrc: "/images/icons/security.svg", // Placeholder for enhanced_encryption
+      iconSrc: "/images/icons/enhanced_encryption.svg",
       title: "Risk Mitigation",
       description: "Delivered a detailed assurance process that reduced data integrity risks and gave stakeholders confidence in the transition.",
     },
     {
-      iconSrc: "/images/icons/settings.svg", // Placeholder for interactive_space
+      iconSrc: "/images/icons/interactive_space.svg",
       title: "Collaboration",
       description: "Collaborated with technical teams and business leaders to ensure the platform could scale while maintaining service quality.",
     },
@@ -150,8 +150,8 @@ const CASE_STUDY_IMAGE_FEATURES_DATA: CaseStudyImageFeaturesData = {
 
 const CASE_STUDY_CTA_DATA: CTASectionData = {
   imageSrc: "/images/placeholder/placeholder16.jpg",
-  title: "Get in Touch with Us",
-  description: "Reach out today to discover how we can help accelerate your digital transformation journey.",
+  title: "Let's Discuss Your Project",
+  description: "Contact us today to explore how we can help you achieve your goals effectively.",
   primaryButtonText: "Contact",
   secondaryButtonText: "Learn More",
 };
@@ -165,17 +165,17 @@ const CASE_STUDY_PAGE_DATA = {
     sectionTitle: "The Outcome",
     outcomes: [
       {
-        iconSrc: "/images/icons/explore.svg", // Placeholder for transform
+        iconSrc: "/images/icons/transform.svg",
         title: "Smooth Transition",
-        description: "Member data was migrated accurately and securely, supporting a frictionless experience for Team Super’s members.",
+        description: "Member data was migrated accurately and securely, supporting a frictionless experience for Team Super's members.",
       },
       {
-        iconSrc: "/images/icons/file.svg", // Placeholder for book
+        iconSrc: "/images/icons/book.svg",
         title: "Regulatory Confidence",
         description: "Assurance activities met industry compliance expectations, reducing operational risk.",
       },
       {
-        iconSrc: "/images/icons/group_work.svg", // Placeholder for brick
+        iconSrc: "/images/icons/brick.svg",
         title: "Stronger Foundations",
         description: "The new platform is now positioned to drive future growth, foster innovation and unlock better insights through data.",
       },

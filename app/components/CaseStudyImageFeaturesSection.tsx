@@ -45,7 +45,7 @@ export default function CaseStudyImageFeaturesSection({
                   alt={feature.title}
                   width={48}
                   height={48}
-                  className="object-contain filter brightness-[2.5]" // Assuming icons need brightening on dark background
+                  className="object-contain"
                 />
               </div>
               
