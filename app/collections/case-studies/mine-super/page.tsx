@@ -86,10 +86,29 @@ interface SectionHeaderData {
   textColor?: string;
 }
 
+interface DeliverableGridItem {
+  iconSrc: string;
+  title: string;
+  description: string;
+}
+
+interface DeliverablesGridData {
+  sectionTitle: string;
+  sectionDescription: string;
+  deliverables: DeliverableGridItem[];
+  backgroundColor?: string;
+  titleColor?: string;
+  descriptionColor?: string;
+  deliverableTitleColor?: string;
+  deliverableTextColor?: string;
+}
+
 interface CaseStudyArticleData {
   hero: HeroSectionData;
   overview?: CaseStudyOverviewData;
   sectionHeader?: SectionHeaderData;
+  deliverablesGrid?: DeliverablesGridData;
+  deliverablesGrid2?: DeliverablesGridData;
   deliverables?: any;
   imageFeatures?: any;
   outcome?: CaseStudyOutcomeData;
@@ -182,6 +201,70 @@ const CASE_STUDY_SECTION_HEADER_DATA: SectionHeaderData = {
   textColor: "text-white",
 };
 
+const CASE_STUDY_DELIVERABLES_GRID_DATA: DeliverablesGridData = {
+  sectionTitle: "1. Platform Sale Readiness",
+  sectionDescription: "S@S helped transform the platform into a self-contained, cloud-ready asset:",
+  deliverables: [
+    {
+      iconSrc: "/images/icons/cloud_upload.svg",
+      title: "Platform migration",
+      description: "Migrated platform assets from a third-party provider with full auditability using AWS CloudTrail and encryption via AWS KMS."
+    },
+    {
+      iconSrc: "/images/icons/shield_lock.svg",
+      title: "Migrated assets securely",
+      description: "Demonstrated re-deployment of the portals in a new AWS environment using infrastructure-as-code (CloudFormation) to ensure easy setup and repeatability."
+    },
+    {
+      iconSrc: "/images/icons/cloud_sync.svg",
+      title: "Optimised",
+      description: "Ensured compliance with financial services standards and supported scalability through AWS EC2, S3, and EFS."
+    },
+    {
+      iconSrc: "/images/icons/readiness_score.svg",
+      title: "Ready for activation",
+      description: "Delivered a platform fully prepared for immediate activation, reducing onboarding friction for the future buyer."
+    }
+  ],
+  backgroundColor: "bg-[#006cc9]",
+  titleColor: "text-white",
+  descriptionColor: "text-white",
+  deliverableTitleColor: "text-[#5ae0f6]",
+  deliverableTextColor: "text-white",
+};
+
+const CASE_STUDY_DELIVERABLES_GRID_DATA_2: DeliverablesGridData = {
+  sectionTitle: "2. Technical Due Diligence",
+  sectionDescription: "As the sale progressed, S@S supported buyers with robust due diligence:",
+  deliverables: [
+    {
+      iconSrc: "/images/icons/planner_review.svg",
+      title: "Platform assessment",
+      description: "Reviewed the platform's architecture, code base, and integrations to assess readiness and risk."
+    },
+    {
+      iconSrc: "/images/icons/manage_accounts.svg",
+      title: "AWS audits",
+      description: "Conducted security and compliance audits using AWS-native tools."
+    },
+    {
+      iconSrc: "/images/icons/heap_snapshot_multiple.svg",
+      title: "Performance testing",
+      description: "Simulated high-volume scenarios to test performance and scalability."
+    },
+    {
+      iconSrc: "/images/icons/interactive_space.svg",
+      title: "Collaborated",
+      description: "Worked closely with business stakeholders to validate key portal functionality and ensure alignment with buyer expectations."
+    }
+  ],
+  backgroundColor: "bg-[#006cc9]",
+  titleColor: "text-white",
+  descriptionColor: "text-white",
+  deliverableTitleColor: "text-[#5ae0f6]",
+  deliverableTextColor: "text-white",
+};
+
 const CASE_STUDY_WHAT_WE_DELIVERED_DATA: WhatWeDeliveredSectionData = {
   sectionTitle: "What We Delivered",
   sectionDescription: "Our strategy precisely and strategically reshaped the digital landscape of Coates Group.",
@@ -226,6 +309,8 @@ const CASE_STUDY_PAGE_DATA: CaseStudyArticleData = {
   hero: CASE_STUDY_HERO_DATA,
   overview: CASE_STUDY_OVERVIEW_DATA,
   sectionHeader: CASE_STUDY_SECTION_HEADER_DATA,
+  deliverablesGrid: CASE_STUDY_DELIVERABLES_GRID_DATA,
+  deliverablesGrid2: CASE_STUDY_DELIVERABLES_GRID_DATA_2,
   customSection: CASE_STUDY_CUSTOM_SECTION_DATA,
   whatWeDeliveredSection: CASE_STUDY_WHAT_WE_DELIVERED_DATA,
   outcome: CASE_STUDY_OUTCOME_DATA,

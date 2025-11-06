@@ -12,6 +12,7 @@ import CaseStudyCustomSection from './CaseStudyCustomSection';
 import CaseStudySolutionSection from './CaseStudySolutionSection';
 import CaseStudyWhatWeDeliveredSection from './CaseStudyWhatWeDeliveredSection';
 import CaseStudySectionHeader from './CaseStudySectionHeader';
+import CaseStudyDeliverablesGrid from './CaseStudyDeliverablesGrid';
 
 // --- Shared Data Structures ---
 
@@ -158,12 +159,31 @@ interface SectionHeaderData {
   textColor?: string;
 }
 
+interface DeliverableGridItem {
+  iconSrc: string;
+  title: string;
+  description: string;
+}
+
+interface DeliverablesGridData {
+  sectionTitle: string;
+  sectionDescription: string;
+  deliverables: DeliverableGridItem[];
+  backgroundColor?: string;
+  titleColor?: string;
+  descriptionColor?: string;
+  deliverableTitleColor?: string;
+  deliverableTextColor?: string;
+}
+
 // --- Layout Data Structure ---
 
 interface CaseStudyArticleData {
   hero: HeroSectionData;
   overview?: CaseStudyOverviewData;
   sectionHeader?: SectionHeaderData;
+  deliverablesGrid?: DeliverablesGridData;
+  deliverablesGrid2?: DeliverablesGridData;
   deliverables?: CaseStudyDeliverablesData;
   imageFeatures?: CaseStudyImageFeaturesData;
   outcome?: CaseStudyOutcomeData;
@@ -212,6 +232,32 @@ const CaseStudyArticleLayout = ({ data }: CaseStudyArticleLayoutProps) => {
             description={data.sectionHeader.description}
             backgroundColor={data.sectionHeader.backgroundColor}
             textColor={data.sectionHeader.textColor}
+          />
+        )}
+
+        {data.deliverablesGrid && (
+          <CaseStudyDeliverablesGrid
+            sectionTitle={data.deliverablesGrid.sectionTitle}
+            sectionDescription={data.deliverablesGrid.sectionDescription}
+            deliverables={data.deliverablesGrid.deliverables}
+            backgroundColor={data.deliverablesGrid.backgroundColor}
+            titleColor={data.deliverablesGrid.titleColor}
+            descriptionColor={data.deliverablesGrid.descriptionColor}
+            deliverableTitleColor={data.deliverablesGrid.deliverableTitleColor}
+            deliverableTextColor={data.deliverablesGrid.deliverableTextColor}
+          />
+        )}
+
+        {data.deliverablesGrid2 && (
+          <CaseStudyDeliverablesGrid
+            sectionTitle={data.deliverablesGrid2.sectionTitle}
+            sectionDescription={data.deliverablesGrid2.sectionDescription}
+            deliverables={data.deliverablesGrid2.deliverables}
+            backgroundColor={data.deliverablesGrid2.backgroundColor}
+            titleColor={data.deliverablesGrid2.titleColor}
+            descriptionColor={data.deliverablesGrid2.descriptionColor}
+            deliverableTitleColor={data.deliverablesGrid2.deliverableTitleColor}
+            deliverableTextColor={data.deliverablesGrid2.deliverableTextColor}
           />
         )}
 
