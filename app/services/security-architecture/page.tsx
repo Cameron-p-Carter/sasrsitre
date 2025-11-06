@@ -12,14 +12,14 @@ const TEST_SERVICE_DATA = {
   },
   // Future sections will be added here
   imageTextContent: {
-    title: "Optimise your cloud-based services",
-    description: `In today's digital landscape, many businesses have already transitioned to cloud platforms. However, the journey doesn't end with migration. Maximising performance, reducing costs and building resilience is paramount to achieving operational excellence.
+    title: "Protecting your most critical assets with precision and foresight",
+    description: `In a world where cyber threats grow more complex every day, protecting your business requires more than reactive responses. Software@Scale designs security architecture that anticipates risks and builds resilience into your systems from the ground up. We focus on creating robust, compliant environments that safeguard sensitive data and maintain trust with your customers and partners.
 
-At Software@Scale, we specialise in enhancing and customising cloud environments across AWS, Azure and Google Cloud to align with your unique business needs. Whether you're looking to migrate, eliminate manual processes with infrastructure-as-code or fine-tune for efficiency, our cloud engineering approach delivers measurable gains in speed, performance and cost-effectiveness.
+Our expertise covers a full range of security services including vulnerability assessments, penetration testing and dark web monitoring. We specialise in high-stakes industries such as finance and insurance, where a single breach can have serious operational and reputational consequences. Our targeted threat simulations identify weaknesses before they can be exploited.
 
-Generic, out-of-the-box cloud configurations often fall short in meeting specific organisational requirements. We focus on tailoring architecture and automation to ensure it supports your objectives, enhances agility and provides a competitive edge.
+Security is not just about tools and technology but embedding best practices and processes that keep your teams alert and prepared. We work closely with your internal teams to build security awareness, strengthen governance and implement proactive strategies that reduce risk across your entire technology stack.
 
-Our approach involves a comprehensive assessment of your current setup, deep performance analysis, and implementation of best practices to ensure your cloud platform is not just functional but exceptional.`,
+From initial assessments to ongoing monitoring, our security architecture service is designed to evolve with your business needs. By balancing rigorous defence with practical implementation, we help you maintain compliance, reduce risk and operate confidently in a rapidly changing threat landscape.`,
     imageSrc: "/images/placeholder/placeholder42.jpg",
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
@@ -27,15 +27,15 @@ Our approach involves a comprehensive assessment of your current setup, deep per
     imageOnRight: true,
   },
   imageTextListContent: {
-    title: "Secure, compliant and resilient systems",
-    introDescription: "Software@Scale’s engineers focus on building and managing resilient cloud environments that reduce costs, support your growth, enhance agility and ensure operational excellence.",
-    listTitle: "How Cloud Engineering works:",
+    title: "Built-in security at every step",
+    introDescription: "Software@Scale designs security architecture to protect your critical systems from evolving threats. We identify risks early, implement robust controls and ensure ongoing compliance, helping you stay secure and resilient.",
+    listTitle: "How Security Architecture works:",
     listItems: [
-      "Consultation and assessment",
-      "Solution design",
-      "Automation setup",
-      "Performance tuning",
-      "Ongoing support",
+      "Assess vulnerabilities",
+      "Simulate threats",
+      "Design controls",
+      "Implement safeguards",
+      "Monitor continuously",
     ],
     imageSrc: "/images/placeholder/placeholder43.jpg",
     backgroundColor: "bg-[#cce1f4]",
@@ -52,21 +52,22 @@ Our approach involves a comprehensive assessment of your current setup, deep per
         iconSrc: "/images/icons/settings.svg", // Using existing icon path for settings placeholder
         title: "Capabilities",
         content: [
-          "Infrastructure modernisation",
-          "Cloud cost optimisation",
-          "Risk mitigation strategy",
-          "Transformation management",
-          "Internal team upskilling",
+          "Vulnerability assessments",
+          "Penetration testing",
+          "Threat simulation",
+          "Risk mitigation",
+          "Compliance audits",
         ],
       },
       {
         iconSrc: "/images/icons/cloud_done.svg", // Using existing icon path for cloud_done placeholder
         title: "Delivery",
         content: [
-          "Azure, Google and AWS engineering experience",
-          "Eliminate ClickOps with Infrastructure as Code (IaC)",
-          "Platform-neutral approach",
-          "No long-term commitments",
+          "Proactive monitoring",
+          "Incident response",
+          "Security architecture design",
+          "Custom control implementation",
+          "Expert consulting and coaching",
         ],
       },
       {

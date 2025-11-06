@@ -3,7 +3,7 @@ import ServicePageLayout from '@/app/components/ServicePageLayout';
 // Define the test content for the service page
 const TEST_SERVICE_DATA = {
   hero: {
-    imageSrc: "/images/placeholder/placeholder14.jpg", // Updated image placeholder
+    imageSrc: "/images/placeholder/placeholder43.jpg", // Updated image placeholder
     tagline: "Accelerate",
     title: "Transform Your",
     titleHighlight: "Platform",
@@ -12,32 +12,32 @@ const TEST_SERVICE_DATA = {
   },
   // Future sections will be added here
   imageTextContent: {
-    title: "Optimise your cloud-based services",
-    description: `In today's digital landscape, many businesses have already transitioned to cloud platforms. However, the journey doesn't end with migration. Maximising performance, reducing costs and building resilience is paramount to achieving operational excellence.
+    title: "Accelerate your delivery without slowing the business",
+    description: `When timelines start to slip or pressure builds from stakeholders, it is not always about headcount. It is about bringing in the right people fast who can assess, integrate and deliver with minimal ramp up.
 
-At Software@Scale, we specialise in enhancing and customising cloud environments across AWS, Azure and Google Cloud to align with your unique business needs. Whether you're looking to migrate, eliminate manual processes with infrastructure-as-code or fine-tune for efficiency, our cloud engineering approach delivers measurable gains in speed, performance and cost-effectiveness.
+Software@Scale’s Project Acceleration service helps you move quickly while maintaining control and quality. We deploy full squads of senior engineers, leads and architects within two weeks and they are typically fully embedded and contributing within four. These high-performing teams bring urgency, clarity and proven experience in steering complex projects back on track.
 
-Generic, out-of-the-box cloud configurations often fall short in meeting specific organisational requirements. We focus on tailoring architecture and automation to ensure it supports your objectives, enhances agility and provides a competitive edge.
+Alongside hands-on delivery, we also work across your environment to reduce blockers like technical debt, streamline delivery processes and upskill internal teams. The result is sustainable momentum and a more resilient, capable team once we transition off.
 
-Our approach involves a comprehensive assessment of your current setup, deep performance analysis, and implementation of best practices to ensure your cloud platform is not just functional but exceptional.`,
-    imageSrc: "/images/placeholder/placeholder35.jpg",
+Every engagement is shaped to your goals, resources and delivery model. Whether you are preparing for investment, hitting a market window or navigating delays, we help you move forward with speed and certainty.`,
+    imageSrc: "/images/placeholder/placeholder45.jpg",
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
     titleColor: "text-[#0c2080]",
     imageOnRight: true,
   },
   imageTextListContent: {
-    title: "Secure, compliant and resilient systems",
-    introDescription: "Software@Scale’s engineers focus on building and managing resilient cloud environments that reduce costs, support your growth, enhance agility and ensure operational excellence.",
-    listTitle: "How Cloud Engineering works:",
+    title: "High-impact teams, fast",
+    introDescription: "Software@Scale builds and embeds specialist engineering squads that hit the ground running; resolving tech debt, accelerating delivery and leaving your teams stronger than before.",
+    listTitle: "How Project Acceleration works:",
     listItems: [
-      "Consultation and assessment",
-      "Solution design",
-      "Automation setup",
-      "Performance tuning",
-      "Ongoing support",
+      "Assess goals",
+      "Assemble team",
+      "Integrate fast",
+      "Deliver outcomes",
+      "Strengthen capability",
     ],
-    imageSrc: "/images/placeholder/placeholder2.png",
+    imageSrc: "/images/placeholder/placeholder46.jpg",
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
     titleColor: "text-[#0c2080]",
@@ -52,25 +52,26 @@ Our approach involves a comprehensive assessment of your current setup, deep per
         iconSrc: "/images/icons/settings.svg", // Using existing icon path for settings placeholder
         title: "Capabilities",
         content: [
-          "Infrastructure modernisation",
-          "Cloud cost optimisation",
-          "Risk mitigation strategy",
-          "Transformation management",
-          "Internal team upskilling",
+          "Rapid squad deployment",
+          "Critical path delivery",
+          "Technical debt resolution",
+          "Process and workflow improvement",
+          "Team coaching and uplift",
         ],
       },
       {
-        iconSrc: "/images/icons/cloud.svg", // Using existing icon path for cloud_done placeholder
+        iconSrc: "/images/icons/cloud_done.svg", // Using existing icon path for cloud_done placeholder
         title: "Delivery",
         content: [
-          "Azure, Google and AWS engineering experience",
-          "Eliminate ClickOps with Infrastructure as Code (IaC)",
-          "Platform-neutral approach",
-          "No long-term commitments",
+          "Full team in 2 weeks",
+          "Fully productive in 4 weeks",
+          "Flexible engagement model",
+          "Specialists in finance & insurance",
+          "Focus on long-term capability, not dependency",
         ],
       },
       {
-        iconSrc: "/images/icons/security.svg", // Using existing icon path for devices placeholder
+        iconSrc: "/images/icons/devices.svg", // Using existing icon path for devices placeholder
         title: "Technologies",
         content: "• Next JS • Node JS • Angular • React • Vue.JS • Typescript • PHP • Python • C# .NET • Java • C++ • Docker • Kubernetes • Terraform • CloudFormation • AWS • Azure • GCP • Scala •",
       },
@@ -98,8 +99,8 @@ Our approach involves a comprehensive assessment of your current setup, deep per
   },
   ctaSection: {
     imageSrc: "/images/placeholder/placeholder16.jpg",
-    title: "Join Us on Our Journey",
-    description: "Contact us today to explore how our Cloud Engineering services can transform your business.",
+    title: "Accelerate Your Platform Today",
+    description: "Transform your digital landscape with our expert Platform Acceleration services tailored for your needs.",
     primaryButtonText: "Contact",
     secondaryButtonText: "Learn More",
   },
