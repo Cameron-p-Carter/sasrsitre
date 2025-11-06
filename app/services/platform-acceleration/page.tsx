@@ -41,7 +41,7 @@ Every engagement is shaped to your goals, resources and delivery model. Whether 
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
     titleColor: "text-[#0c2080]",
-    imageOnRight: false,
+    imageOnRight: true,
   },
   serviceFeatureColumns: {
     backgroundColor: "bg-[#cce1f4]",

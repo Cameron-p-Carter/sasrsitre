@@ -41,7 +41,7 @@ We combine technical rigour with commercial awareness, helping you make smarter 
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
     titleColor: "text-[#0c2080]",
-    imageOnRight: false,
+    imageOnRight: true,
   },
   serviceFeatureColumns: {
     backgroundColor: "bg-[#cce1f4]",
