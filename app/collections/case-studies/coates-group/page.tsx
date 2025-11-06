@@ -136,33 +136,33 @@ const CASE_STUDY_CUSTOM_SECTION_DATA: CustomSectionData = {
 };
 
 const CASE_STUDY_OUTCOME_DATA: CaseStudyOutcomeData = {
-  sectionTitle: "Results & Impact",
+  sectionTitle: "The Outcome",
   outcomes: [
     {
-      iconSrc: "/images/icons/automation.svg",
-      title: "70% Faster Environment Setup",
-      description: "Automated infrastructure provisioning with AWS CloudFormation dramatically reduced deployment times and improved consistency across environments."
+      iconSrc: "/images/icons/fastfood.svg",
+      title: "Secured Global Mandate",
+      description: "Coates successfully launched its US pilot, unlocking North American market share and winning McDonalds' global supplier status."
     },
     {
-      iconSrc: "/images/icons/security.svg",
-      title: "40% Reduction in Downtime",
-      description: "Enhanced observability and monitoring using AWS CloudWatch, CloudTrail, and X-Ray significantly improved system reliability and incident response."
+      iconSrc: "/images/icons/delivery_truck_speed.svg",
+      title: "Delivery at Pace",
+      description: "Strong teams, tighter governance and proactive issue management enabled a rapid rollout under tight deadlines"
     },
     {
-      iconSrc: "/images/icons/cloud_done.svg",
-      title: "ISO 27001 Certification Ready",
-      description: "DevSecOps implementation and security hardening prepared Coates Group for successful penetration testing and compliance certification."
+      iconSrc: "/images/icons/desktop_cloud_stack.svg",
+      title: "Enterprise-Grade Architecture",
+      description: "Delivered secure, scalable infrastructure powering operations across 30+ countries and 14,000 devices."
     },
     {
-      iconSrc: "/images/icons/explore.svg",
-      title: "30% Operational Overhead Reduction",
-      description: "Technology governance frameworks and proactive risk identification streamlined operations and improved delivery transparency."
+      iconSrc: "/images/icons/assured_workload.svg",
+      title: "Lasting Capability Uplift",
+      description: "Internal teams improved processes, accelerated delivery and created stronger engineering practices, in order to set Coates up for sustainable growth."
     }
   ],
   imageSrc: "/images/placeholder/placeholder96.png",
-  backgroundColor: "bg-white",
+  backgroundColor: "bg-[#cce1f4]",
   titleColor: "text-[#0c2080]",
-  featureTitleColor: "text-[#0c2080]",
+  featureTitleColor: "text-[#00050a]",
   featureTextColor: "text-[#00050a]",
   imageOnRight: false,
 };
@@ -172,22 +172,22 @@ const CASE_STUDY_WHAT_WE_DELIVERED_DATA: WhatWeDeliveredSectionData = {
   sectionDescription: "Our strategy precisely and strategically reshaped the digital landscape of Coates Group.",
   deliverables: [
     {
-      iconSrc: "/images/icons/group_work.svg",
+      iconSrc: "/images/icons/groups.svg",
       title: "Rapid Team Mobilisation",
       description: "Within just two weeks, Software@Scale deployed a 45-person blended team across onshore and offshore locations, including embedded Heads of Engineering, QA, and Delivery, to stabilise delivery and drive immediate impact."
     },
     {
-      iconSrc: "/images/icons/engineering.svg",
+      iconSrc: "/images/icons/handyman.svg",
       title: "Engineering Turnaround & Delivery Acceleration",
       description: "Critical technical blockers across the platform's backend (NodeJS) and frontend (ReactJS) were quickly resolved. Software@Scale introduced automated infrastructure provisioning with AWS CloudFormation, reducing environment setup times by 70%. Improved observability using AWS CloudWatch, CloudTrail, and X-Ray helped cut downtime by 40% and significantly strengthened system resilience."
     },
     {
-      iconSrc: "/images/icons/cloud.svg",
+      iconSrc: "/images/icons/grading.svg",
       title: "Scalable Cloud & Security Architecture",
       description: "The team re-architected platform components to optimise scalability and performance on AWS, embedding DevSecOps principles to harden security and prepare for a successful penetration test. This work also supported Coates Group's path toward ISO 27001 certification."
     },
     {
-      iconSrc: "/images/icons/settings.svg",
+      iconSrc: "/images/icons/enable.svg",
       title: "Governance & Capability Uplift",
       description: "Technology and delivery governance frameworks were introduced to improve transparency and consistency. A full-stack technical audit identified key engineering and performance risks, enabling proactive fixes and cutting operational overhead by 30%."
     }
@@ -197,6 +197,19 @@ const CASE_STUDY_WHAT_WE_DELIVERED_DATA: WhatWeDeliveredSectionData = {
   descriptionColor: "text-white",
   deliverableTitleColor: "text-[#5ae0f6]",
   deliverableTextColor: "text-white",
+};
+
+const CASE_STUDY_STATS_DATA = {
+  sectionTitle: "Transforming technical challenges into strategic opportunities",
+  keyTechnologies: "• Node.js • React.js • AWS CloudFormation • AWS CloudWatch • AWS CloudTrail • AWS X-Ray • DevSecOps practices • ISO 27001-aligned security architecture",
+  stats: [
+    { value: "50%", description: "Cost reduction" },
+    { value: "45", description: "Engineers" },
+    { value: "99.99%", description: "Up time" },
+  ],
+  backgroundColor: "bg-[#cce1f4]",
+  titleColor: "text-[#0c2080]",
+  accentColor: "text-[#006cc9]",
 };
 
 const CASE_STUDY_CTA_DATA: CTASectionData = {
@@ -213,6 +226,7 @@ const CASE_STUDY_PAGE_DATA: CaseStudyArticleData = {
   customSection: CASE_STUDY_CUSTOM_SECTION_DATA,
   whatWeDeliveredSection: CASE_STUDY_WHAT_WE_DELIVERED_DATA,
   outcome: CASE_STUDY_OUTCOME_DATA,
+  stats: CASE_STUDY_STATS_DATA,
   cta: CASE_STUDY_CTA_DATA,
 };
 
