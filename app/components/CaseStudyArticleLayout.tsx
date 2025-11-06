@@ -11,6 +11,7 @@ import CoreValuesTestimonialSection from './CoreValuesTestimonialSection';
 import CaseStudyCustomSection from './CaseStudyCustomSection';
 import CaseStudySolutionSection from './CaseStudySolutionSection';
 import CaseStudyWhatWeDeliveredSection from './CaseStudyWhatWeDeliveredSection';
+import CaseStudySectionHeader from './CaseStudySectionHeader';
 
 // --- Shared Data Structures ---
 
@@ -150,11 +151,19 @@ interface CTASectionData {
   secondaryButtonText: string;
 }
 
+interface SectionHeaderData {
+  title: string;
+  description: string;
+  backgroundColor?: string;
+  textColor?: string;
+}
+
 // --- Layout Data Structure ---
 
 interface CaseStudyArticleData {
   hero: HeroSectionData;
   overview?: CaseStudyOverviewData;
+  sectionHeader?: SectionHeaderData;
   deliverables?: CaseStudyDeliverablesData;
   imageFeatures?: CaseStudyImageFeaturesData;
   outcome?: CaseStudyOutcomeData;
@@ -194,6 +203,15 @@ const CaseStudyArticleLayout = ({ data }: CaseStudyArticleLayoutProps) => {
             backgroundColor={data.overview.backgroundColor}
             titleColor={data.overview.titleColor}
             textColor={data.overview.textColor}
+          />
+        )}
+
+        {data.sectionHeader && (
+          <CaseStudySectionHeader
+            title={data.sectionHeader.title}
+            description={data.sectionHeader.description}
+            backgroundColor={data.sectionHeader.backgroundColor}
+            textColor={data.sectionHeader.textColor}
           />
         )}
 

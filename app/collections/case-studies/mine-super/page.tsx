@@ -79,9 +79,17 @@ interface CTASectionData {
   secondaryButtonText: string;
 }
 
+interface SectionHeaderData {
+  title: string;
+  description: string;
+  backgroundColor?: string;
+  textColor?: string;
+}
+
 interface CaseStudyArticleData {
   hero: HeroSectionData;
   overview?: CaseStudyOverviewData;
+  sectionHeader?: SectionHeaderData;
   deliverables?: any;
   imageFeatures?: any;
   outcome?: CaseStudyOutcomeData;
@@ -105,14 +113,14 @@ const CASE_STUDY_HERO_DATA: HeroSectionData = {
 const CASE_STUDY_OVERVIEW_DATA: CaseStudyOverviewData = {
   overviewTitle: "Overview",
   details: [
-    { label: "Client:", value: "Coates Group" },
+    { label: "Client:", value: "Mine Super (now Team Super)" },
     { label: "Partner:", value: "Software@Scale" },
-    { label: "Industry:", value: "Retail/Media" },
-    { label: "Services:", value: "Engineering Performance" },
+    { label: "Industry:", value: "Superannuation" },
+    { label: "Services:", value: "Engineering as a Service | Cloud Engineering | Platform Due Diligence" },
   ],
-  richTextContent: `Coates Group, a global leader in digital signage and retail technology, sought to accelerate their engineering delivery across global teams to maintain market leadership. They faced challenges in scaling their infrastructure and resolving performance issues across their NodeJS and ReactJS stacks.
+  richTextContent: `As Mine Super prepared for the strategic sale of its superannuation platform, they needed to ensure their core digital assets, including the Admin and Member Portals, could operate independently, be securely transferred, and support future enterprise-scale use.
 
-Software@Scale was engaged to provide engineering acceleration services, focusing on uplifting internal capability, resolving critical production issues, and addressing infrastructure scalability and security gaps ahead of a major market launch.`,
+To support this, Software@Scale (S@S) was engaged to lead the technical readiness and due diligence program. Working alongside Mine Super's internal teams and prospective buyers, S@S helped safeguard operational continuity, maintain regulatory compliance, and build confidence in the platform's future viability.`,
   backgroundColor: "bg-[#cce1f4]",
   titleColor: "text-[#0c2080]",
   textColor: "text-[#00050a]",
@@ -167,6 +175,13 @@ const CASE_STUDY_OUTCOME_DATA: CaseStudyOutcomeData = {
   imageOnRight: false,
 };
 
+const CASE_STUDY_SECTION_HEADER_DATA: SectionHeaderData = {
+  title: "What We Delivered",
+  description: "Precision-driven data assurance strategies that transform complex migration challenges into seamless operational excellence.",
+  backgroundColor: "bg-[#006cc9]",
+  textColor: "text-white",
+};
+
 const CASE_STUDY_WHAT_WE_DELIVERED_DATA: WhatWeDeliveredSectionData = {
   sectionTitle: "What We Delivered",
   sectionDescription: "Our strategy precisely and strategically reshaped the digital landscape of Coates Group.",
@@ -210,6 +225,7 @@ const CASE_STUDY_CTA_DATA: CTASectionData = {
 const CASE_STUDY_PAGE_DATA: CaseStudyArticleData = {
   hero: CASE_STUDY_HERO_DATA,
   overview: CASE_STUDY_OVERVIEW_DATA,
+  sectionHeader: CASE_STUDY_SECTION_HEADER_DATA,
   customSection: CASE_STUDY_CUSTOM_SECTION_DATA,
   whatWeDeliveredSection: CASE_STUDY_WHAT_WE_DELIVERED_DATA,
   outcome: CASE_STUDY_OUTCOME_DATA,
