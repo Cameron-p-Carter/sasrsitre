@@ -36,37 +36,37 @@ const NEWS_GRID_DATA: NewsGridSectionData = {
   newsItems: [
     {
       id: 1,
-      imageSrc: "/images/placeholder/placeholder25.jpg", // Placeholder
+      imageSrc: "/images/placeholder/placeholder68.png", // Placeholder
       title: "Approved Supplier: Federal Government ICT Digital and Cloud Marketplace Panels",
       description: "Discover how cloud engineering is transforming businesses today.",
     },
     {
       id: 2,
-      imageSrc: "/images/placeholder/placeholder26.jpg", // Placeholder
+      imageSrc: "/images/placeholder/placeholder69.jpg", // Placeholder
       title: "The Importance of Security Architecture",
       description: "Learn why security architecture is crucial for modern enterprises.",
     },
     {
       id: 3,
-      imageSrc: "/images/placeholder/placeholder27.jpg", // Placeholder
+      imageSrc: "/images/placeholder/placeholder70.jpg", // Placeholder
       title: "Navigating Project Acceleration Strategies",
       description: "Explore effective strategies for accelerating your projects.",
     },
     {
       id: 4,
-      imageSrc: "/images/placeholder/placeholder28.jpg", // Placeholder
+      imageSrc: "/images/placeholder/placeholder71.jpg", // Placeholder
       title: "Understanding Platform Due Diligence",
       description: "Get insights into the importance of platform due diligence.",
     },
     {
       id: 5,
-      imageSrc: "/images/placeholder/placeholder29.jpg", // Placeholder
+      imageSrc: "/images/placeholder/placeholder72.jpg", // Placeholder
       title: "Enhancing Engineering Performance Metrics",
       description: "Learn how to improve your engineering performance metrics effectively.",
     },
     {
       id: 6,
-      imageSrc: "/images/placeholder/placeholder30.jpg", // Placeholder
+      imageSrc: "/images/placeholder/placeholder73.jpg", // Placeholder
       title: "Latest Trends in Cloud Technology",
       description: "Stay ahead with the latest trends in cloud technology.",
     },
