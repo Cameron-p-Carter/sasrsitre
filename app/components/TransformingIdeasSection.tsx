@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const TransformingIdeasSection = () => {
   const services = [
@@ -93,13 +94,13 @@ const TransformingIdeasSection = () => {
 
         {/* Action Buttons */}
         <div className="flex gap-6 items-center">
-          <button className="bg-[#5ae0f6] border border-[#5ae0f6] border-solid rounded-xl hover:bg-[#4dd0e6] transition-colors">
+          <Link href="/recognition" className="bg-[#5ae0f6] border border-[#5ae0f6] border-solid rounded-xl hover:bg-[#4dd0e6] transition-colors">
             <div className="flex items-center justify-center gap-2 px-6 py-2.5 rounded-inherit overflow-hidden">
               <span className="font-medium text-[#0c2080] text-base leading-[1.5] whitespace-nowrap">
                 Learn More
               </span>
             </div>
-          </button>
+          </Link>
           
           <button className="flex items-center justify-center gap-2 rounded-xl overflow-hidden hover:bg-[#e6f7ff] transition-colors px-4 py-2.5">
             <span className="font-medium text-[#0c2080] text-base leading-[1.5] whitespace-nowrap">

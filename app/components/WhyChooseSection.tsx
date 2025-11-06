@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const WhyChooseSection = () => {
   const features = [
     {
@@ -96,7 +98,7 @@ const WhyChooseSection = () => {
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 w-full">
-                  <button className="flex items-start gap-2 rounded-xl overflow-hidden">
+                  <Link href="/people" className="flex items-start gap-2 rounded-xl overflow-hidden hover:transform hover:translate-x-1 transition-transform">
                     <span className="font-medium text-[#14d3f3] text-base leading-[1.5] whitespace-nowrap">
                       Learn More
                     </span>
@@ -105,7 +107,7 @@ const WhyChooseSection = () => {
                         <path d="M9 18L15 12L9 6" stroke="#14d3f3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                     </div>
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -129,7 +131,7 @@ const WhyChooseSection = () => {
                     </p>
                   </div>
                   <div className="flex flex-col gap-2 w-full">
-                    <button className="flex items-start gap-2 rounded-xl overflow-hidden">
+                    <Link href="/people" className="flex items-start gap-2 rounded-xl overflow-hidden hover:transform hover:translate-x-1 transition-transform">
                       <span className="font-medium text-[#14d3f3] text-base leading-[1.5] whitespace-nowrap">
                         Learn More
                       </span>
@@ -138,7 +140,7 @@ const WhyChooseSection = () => {
                           <path d="M9 18L15 12L9 6" stroke="#14d3f3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
                       </div>
-                    </button>
+                    </Link>
                   </div>
                 </div>
               ))}
@@ -160,7 +162,7 @@ const WhyChooseSection = () => {
                     </p>
                   </div>
                   <div className="flex flex-col gap-2 w-full">
-                    <button className="flex items-start gap-2 rounded-xl overflow-hidden">
+                    <Link href="/people" className="flex items-start gap-2 rounded-xl overflow-hidden hover:transform hover:translate-x-1 transition-transform">
                       <span className="font-medium text-[#14d3f3] text-base leading-[1.5] whitespace-nowrap">
                         Learn More
                       </span>
@@ -169,7 +171,7 @@ const WhyChooseSection = () => {
                           <path d="M9 18L15 12L9 6" stroke="#14d3f3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
                       </div>
-                    </button>
+                    </Link>
                   </div>
                 </div>
               ))}

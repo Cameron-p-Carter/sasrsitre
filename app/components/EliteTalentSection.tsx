@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const EliteTalentSection = () => {
   const partnerLogos = [
@@ -70,15 +71,15 @@ const EliteTalentSection = () => {
             
             {/* Action Buttons */}
             <div className="flex gap-6 items-center">
-              <button className="bg-[#5ae0f6] border border-[#5ae0f6] border-solid rounded-xl">
+              <Link href="/core-values" className="bg-[#5ae0f6] border border-[#5ae0f6] border-solid rounded-xl hover:bg-[#4dd4e8] transition-colors">
                 <div className="flex items-center justify-center gap-2 px-6 py-2.5 rounded-inherit overflow-hidden">
                   <span className="font-medium text-[#0c2080] text-base leading-[1.5] whitespace-nowrap">
                     Learn More
                   </span>
                 </div>
-              </button>
+              </Link>
               
-              <button className="flex items-center justify-center gap-2 rounded-xl overflow-hidden">
+              <Link href="/contact-us" className="flex items-center justify-center gap-2 rounded-xl overflow-hidden hover:transform hover:translate-x-1 transition-transform px-2 py-1">
                 <span className="font-medium text-[#0c2080] text-base leading-[1.5] whitespace-nowrap">
                   Contact
                 </span>
@@ -87,7 +88,7 @@ const EliteTalentSection = () => {
                     <path d="M9 18L15 12L9 6" stroke="#0c2080" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-              </button>
+              </Link>
             </div>
           </div>
 
