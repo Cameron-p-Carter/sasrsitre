@@ -48,8 +48,8 @@ const BANKING_PORTFOLIO_DATA = {
 
 const INDUSTRY_CTA_DATA = {
   imageSrc: "/images/placeholder/placeholder16.jpg",
-  title: "Get in Touch with Us",
-  description: "Reach out today to discover how we can help accelerate your digital transformation journey.",
+  title: "Transform Your Superannuation Strategy",
+  description: "Unlock the potential of your superannuation firm with our tailored technology solutions.",
   primaryButtonText: "Contact",
   secondaryButtonText: "Learn More",
 };
@@ -59,10 +59,10 @@ const INDUSTRY_CTA_DATA = {
 const BANKING_INDUSTRY_DATA = {
   hero: {
     imageSrc: "/images/placeholder/placeholder24.jpg", // Placeholder for Banking
-    tagline: "Supperannuation",
-    title: "Empowering Banking",
-    titleHighlight: "Transformation",
-    description: "At Software at Scale, we understand the unique challenges faced by the banking industry. Our tailored solutions drive digital transformation, enhancing efficiency and security in financial services.",
+    tagline: "Empower",
+    title: "Superannuation",
+    titleHighlight: "Innovation",
+    description: "At Software at Scale, we harness cutting-edge technology to drive transformation in the superannuation sector. Our expertise ensures that your organization achieves engineering excellence and meets the demands of a rapidly evolving digital landscape.",
     overlayOpacity: 0.6,
   },
   portfolio: BANKING_PORTFOLIO_DATA,

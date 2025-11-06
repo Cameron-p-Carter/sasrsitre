@@ -48,8 +48,8 @@ const BANKING_PORTFOLIO_DATA = {
 
 const INDUSTRY_CTA_DATA = {
   imageSrc: "/images/placeholder/placeholder16.jpg",
-  title: "Get in Touch with Us",
-  description: "Reach out today to discover how we can help accelerate your digital transformation journey.",
+  title: "Transform Your Payments Business Today",
+  description: "Discover tailored solutions that drive success in your Payments operations with our expert guidance.",
   primaryButtonText: "Contact",
   secondaryButtonText: "Learn More",
 };
@@ -60,9 +60,9 @@ const BANKING_INDUSTRY_DATA = {
   hero: {
     imageSrc: "/images/placeholder/placeholder24.jpg", // Placeholder for Banking
     tagline: "Payments",
-    title: "Empowering Banking",
-    titleHighlight: "Transformation",
-    description: "At Software at Scale, we understand the unique challenges faced by the banking industry. Our tailored solutions drive digital transformation, enhancing efficiency and security in financial services.",
+    title: "Payments Industry",
+    titleHighlight: "Experts",
+    description: "At Software at Scale, we specialize in transforming the payments landscape through innovative technology solutions. Our deep industry knowledge and technical expertise empower businesses to navigate complexities and achieve operational excellence.",
     overlayOpacity: 0.6,
   },
   portfolio: BANKING_PORTFOLIO_DATA,

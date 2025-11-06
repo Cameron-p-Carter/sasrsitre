@@ -48,8 +48,8 @@ const BANKING_PORTFOLIO_DATA = {
 
 const INDUSTRY_CTA_DATA = {
   imageSrc: "/images/placeholder/placeholder16.jpg",
-  title: "Get in Touch with Us",
-  description: "Reach out today to discover how we can help accelerate your digital transformation journey.",
+  title: "Transform Your Media Experience",
+  description: "Discover customized solutions that elevate your media business to new heights. Let's connect today!",
   primaryButtonText: "Contact",
   secondaryButtonText: "Learn More",
 };
@@ -59,10 +59,10 @@ const INDUSTRY_CTA_DATA = {
 const BANKING_INDUSTRY_DATA = {
   hero: {
     imageSrc: "/images/placeholder/placeholder24.jpg", // Placeholder for Banking
-    tagline: "Banking",
-    title: "Empowering Banking",
-    titleHighlight: "Transformation",
-    description: "At Software at Scale, we understand the unique challenges faced by the banking industry. Our tailored solutions drive digital transformation, enhancing efficiency and security in financial services.",
+    tagline: "Empower",
+    title: "Media Solutions",
+    titleHighlight: "Redefined",
+    description: "At Software at Scale, we specialize in transforming media enterprises through cutting-edge digital solutions. Our commitment to engineering excellence ensures you stay ahead in a rapidly evolving landscape.",
     overlayOpacity: 0.6,
   },
   portfolio: BANKING_PORTFOLIO_DATA,

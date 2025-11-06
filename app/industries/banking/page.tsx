@@ -48,8 +48,8 @@ const BANKING_PORTFOLIO_DATA = {
 
 const INDUSTRY_CTA_DATA = {
   imageSrc: "/images/placeholder/placeholder16.jpg",
-  title: "Get in Touch with Us",
-  description: "Reach out today to discover how we can help accelerate your digital transformation journey.",
+  title: "Transform Your Banking Experience",
+  description: "Unlock tailored consulting solutions designed specifically for the banking sector's unique challenges.",
   primaryButtonText: "Contact",
   secondaryButtonText: "Learn More",
 };

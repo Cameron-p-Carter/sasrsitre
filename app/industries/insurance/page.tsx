@@ -48,8 +48,8 @@ const BANKING_PORTFOLIO_DATA = {
 
 const INDUSTRY_CTA_DATA = {
   imageSrc: "/images/placeholder/placeholder16.jpg",
-  title: "Get in Touch with Us",
-  description: "Reach out today to discover how we can help accelerate your digital transformation journey.",
+  title: "Transform Your Insurance Experience",
+  description: "Contact us today to explore how we can elevate your insurance operations with our expertise.",
   primaryButtonText: "Contact",
   secondaryButtonText: "Learn More",
 };
@@ -59,10 +59,10 @@ const INDUSTRY_CTA_DATA = {
 const BANKING_INDUSTRY_DATA = {
   hero: {
     imageSrc: "/images/placeholder/placeholder24.jpg", // Placeholder for Banking
-    tagline: "Banking",
-    title: "Empowering Banking",
-    titleHighlight: "Transformation",
-    description: "At Software at Scale, we understand the unique challenges faced by the banking industry. Our tailored solutions drive digital transformation, enhancing efficiency and security in financial services.",
+    tagline: "Innovative",
+    title: "Insurance Solutions",
+    titleHighlight: "Redefined",
+    description: "At Software at Scale, we provide cutting-edge solutions that empower the insurance industry. Our focus on cloud engineering and robust security architecture guarantees operational efficiency and safety.",
     overlayOpacity: 0.6,
   },
   portfolio: BANKING_PORTFOLIO_DATA,

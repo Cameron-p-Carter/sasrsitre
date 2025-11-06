@@ -48,8 +48,8 @@ const BANKING_PORTFOLIO_DATA = {
 
 const INDUSTRY_CTA_DATA = {
   imageSrc: "/images/placeholder/placeholder16.jpg",
-  title: "Get in Touch with Us",
-  description: "Reach out today to discover how we can help accelerate your digital transformation journey.",
+  title: "Elevate Your Retail Strategy",
+  description: "Connect with us to explore customized solutions that drive retail innovation and operational excellence.",
   primaryButtonText: "Contact",
   secondaryButtonText: "Learn More",
 };
@@ -59,10 +59,10 @@ const INDUSTRY_CTA_DATA = {
 const BANKING_INDUSTRY_DATA = {
   hero: {
     imageSrc: "/images/placeholder/placeholder24.jpg", // Placeholder for Banking
-    tagline: "Banking",
-    title: "Empowering Banking",
-    titleHighlight: "Transformation",
-    description: "At Software at Scale, we understand the unique challenges faced by the banking industry. Our tailored solutions drive digital transformation, enhancing efficiency and security in financial services.",
+    tagline: "Retail",
+    title: "Empowering Retail",
+    titleHighlight: "Excellence",
+    description: "At Software at Scale, we are dedicated to transforming the retail landscape through innovative technology solutions. Our expertise helps organizations navigate the complexities of compliance and operational efficiency.",
     overlayOpacity: 0.6,
   },
   portfolio: BANKING_PORTFOLIO_DATA,
