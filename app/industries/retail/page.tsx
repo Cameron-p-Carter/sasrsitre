@@ -58,7 +58,7 @@ const INDUSTRY_CTA_DATA = {
 
 const BANKING_INDUSTRY_DATA = {
   hero: {
-    imageSrc: "/images/placeholder/placeholder24.jpg", // Placeholder for Banking
+    imageSrc: "/images/placeholder/placeholder66.jpg", // Placeholder for Banking
     tagline: "Retail",
     title: "Empowering Retail",
     titleHighlight: "Excellence",
