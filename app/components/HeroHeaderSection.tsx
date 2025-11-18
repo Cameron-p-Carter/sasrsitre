@@ -37,7 +37,7 @@ export default function HeroHeaderSection({
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 box-border flex flex-col gap-12 md:gap-[80px] items-center px-5 md:px-16 py-16 md:py-28 w-full">
+      <div className="relative z-10 box-border flex flex-col gap-12 md:gap-[80px] items-center px-5 md:px-16 pt-24 pb-16 md:py-28 w-full">
         <div className="flex flex-col gap-5 md:gap-[80px] items-start max-w-[1280px] mx-auto w-full">
           {titleHighlight ? (
             // Horizontal layout when highlight exists
