@@ -28,7 +28,8 @@ export default function HeroHeaderSection({
             src={imageSrc}
             alt="Background"
             fill
-            className="object-cover object-center"
+            className="object-cover"
+            style={{ objectPosition: 'top' }}
             priority
           />
         </div>
