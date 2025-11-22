@@ -15,21 +15,21 @@ const OPEN_POSITIONS_DATA = {
       description: "Develop innovative solutions for our clients in a collaborative environment.",
       location: "Remote",
       schedule: "Full Time",
-      applyUrl: "#"
+      applyUrl: "https://www.seek.com.au/Software-at-Scale-jobs/at-this-company"
     },
     {
       title: "Project Manager",
       description: "Lead projects to success while ensuring client satisfaction and team collaboration.",
       location: "Hybrid",
       schedule: "Part Time",
-      applyUrl: "#"
+      applyUrl: "https://www.seek.com.au/Software-at-Scale-jobs/at-this-company"
     },
     {
       title: "Data Analyst",
       description: "Analyze data trends to drive strategic decisions and improve operational efficiency.",
       location: "Onsite",
       schedule: "Full Time",
-      applyUrl: "#"
+      applyUrl: "https://www.seek.com.au/Software-at-Scale-jobs/at-this-company"
     }
   ],
   backgroundColor: "bg-[#cce1f4]",
@@ -50,6 +50,8 @@ const DISCOVER_SECTION_DATA = {
   secondaryButtonText: "Apply",
   primaryButtonColor: "border-[#14d3f3]",
   secondaryButtonColor: "text-[#14d3f3]",
+  primaryButtonUrl: "/our-history",
+  secondaryButtonUrl: "https://www.seek.com.au/Software-at-Scale-jobs/at-this-company",
 };
 
 const BENEFITS_SECTION_DATA = {
@@ -80,7 +82,8 @@ const CTA_SECTION_DATA = {
   title: "Ready to Join Our Team?",
   description: "Take the next step in your career journey with Software@Scale. We're looking for talented individuals who are passionate about technology and innovation.",
   primaryButtonText: "Apply Now",
-  secondaryButtonText: "Learn More"
+  secondaryButtonText: "Learn More",
+  primaryButtonUrl: "https://www.seek.com.au/Software-at-Scale-jobs/at-this-company"
 };
 
 export default function CareersPage() {
@@ -122,6 +125,8 @@ export default function CareersPage() {
           secondaryButtonText={DISCOVER_SECTION_DATA.secondaryButtonText}
           primaryButtonColor={DISCOVER_SECTION_DATA.primaryButtonColor}
           secondaryButtonColor={DISCOVER_SECTION_DATA.secondaryButtonColor}
+          primaryButtonUrl={DISCOVER_SECTION_DATA.primaryButtonUrl}
+          secondaryButtonUrl={DISCOVER_SECTION_DATA.secondaryButtonUrl}
         />
         
         <CareersBenefitsSection
@@ -137,6 +142,7 @@ export default function CareersPage() {
           description={CTA_SECTION_DATA.description}
           primaryButtonText={CTA_SECTION_DATA.primaryButtonText}
           secondaryButtonText={CTA_SECTION_DATA.secondaryButtonText}
+          primaryButtonUrl={CTA_SECTION_DATA.primaryButtonUrl}
         />
       </main>
       

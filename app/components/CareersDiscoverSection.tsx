@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface CareersDiscoverSectionProps {
   sectionTitle: string;
@@ -13,6 +14,8 @@ interface CareersDiscoverSectionProps {
   secondaryButtonText: string;
   primaryButtonColor: string;
   secondaryButtonColor: string;
+  primaryButtonUrl?: string;
+  secondaryButtonUrl?: string;
   onPrimaryClick?: () => void;
   onSecondaryClick?: () => void;
 }
@@ -28,6 +31,8 @@ export default function CareersDiscoverSection({
   secondaryButtonText,
   primaryButtonColor,
   secondaryButtonColor,
+  primaryButtonUrl = "#",
+  secondaryButtonUrl = "#",
   onPrimaryClick,
   onSecondaryClick,
 }: CareersDiscoverSectionProps) {
@@ -53,18 +58,18 @@ export default function CareersDiscoverSection({
               
               {/* Actions */}
               <div className="flex gap-6 items-center">
-                <button
+                <Link
+                  href={primaryButtonUrl}
                   className={`border border-solid ${primaryButtonColor} flex gap-2 items-center justify-center px-6 py-2.5 rounded-xl`}
-                  onClick={onPrimaryClick}
                 >
                   <span className={`font-medium text-base leading-[1.5] ${primaryButtonColor.replace('border-', 'text-')}`}>
                     {primaryButtonText}
                   </span>
-                </button>
-                
-                <button
+                </Link>
+
+                <Link
+                  href={secondaryButtonUrl}
                   className="flex gap-2 items-center justify-center px-0 py-2.5 rounded-xl"
-                  onClick={onSecondaryClick}
                 >
                   <span className={`font-medium text-base leading-[1.5] ${secondaryButtonColor}`}>
                     {secondaryButtonText}
@@ -77,7 +82,7 @@ export default function CareersDiscoverSection({
                       className="object-contain"
                     />
                   </div>
-                </button>
+                </Link>
               </div>
             </div>
             

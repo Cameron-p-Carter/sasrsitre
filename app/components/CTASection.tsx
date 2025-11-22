@@ -7,6 +7,7 @@ interface CTASectionProps {
   description: string;
   primaryButtonText: string;
   secondaryButtonText: string;
+  primaryButtonUrl?: string;
 }
 
 export default function CTASection({
@@ -15,6 +16,7 @@ export default function CTASection({
   description,
   primaryButtonText,
   secondaryButtonText,
+  primaryButtonUrl = "/contact-us",
 }: CTASectionProps) {
   return (
     <section className="relative px-5 md:px-16 py-16 md:py-28">
@@ -45,7 +47,7 @@ export default function CTASection({
 
           {/* Action Buttons */}
           <div className="flex gap-4">
-            <Link href="/contact-us" className="bg-[#5ae0f6] border border-[#5ae0f6] border-solid flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl hover:bg-[#4dd0e6] transition-colors">
+            <Link href={primaryButtonUrl} className="bg-[#5ae0f6] border border-[#5ae0f6] border-solid flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl hover:bg-[#4dd0e6] transition-colors">
               <span className="font-medium text-[#0c2080] text-[16px] leading-[1.5] whitespace-nowrap">
                 {primaryButtonText}
               </span>
