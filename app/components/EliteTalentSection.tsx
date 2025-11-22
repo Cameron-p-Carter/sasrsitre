@@ -1,7 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-const EliteTalentSection = () => {
+interface EliteTalentSectionProps {
+  hideLearnMore?: boolean;
+}
+
+const EliteTalentSection = ({ hideLearnMore = false }: EliteTalentSectionProps) => {
   const partnerLogos = [
     {
       name: "AWS Partner",
@@ -71,22 +75,37 @@ const EliteTalentSection = () => {
             
             {/* Action Buttons */}
             <div className="flex gap-6 items-center">
-              <Link href="/core-values" className="bg-[#5ae0f6] border border-[#5ae0f6] border-solid rounded-xl hover:bg-[#4dd4e8] transition-colors">
-                <div className="flex items-center justify-center gap-2 px-6 py-2.5 rounded-inherit overflow-hidden">
-                  <span className="font-medium text-[#0c2080] text-base leading-[1.5] whitespace-nowrap">
-                    Learn More
-                  </span>
-                </div>
-              </Link>
+              {!hideLearnMore && (
+                <Link href="/recognition" className="bg-[#5ae0f6] border border-[#5ae0f6] border-solid rounded-xl hover:bg-[#4dd4e8] transition-colors">
+                  <div className="flex items-center justify-center gap-2 px-6 py-2.5 rounded-inherit overflow-hidden">
+                    <span className="font-medium text-[#0c2080] text-base leading-[1.5] whitespace-nowrap">
+                      Learn More
+                    </span>
+                  </div>
+                </Link>
+              )}
               
-              <Link href="/contact-us" className="flex items-center justify-center gap-2 rounded-xl overflow-hidden hover:transform hover:translate-x-1 transition-transform px-2 py-1">
-                <span className="font-medium text-[#0c2080] text-base leading-[1.5] whitespace-nowrap">
-                  Contact
-                </span>
-                <div className="w-6 h-6 flex items-center justify-center">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 18L15 12L9 6" stroke="#0c2080" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+              <Link
+                href="/contact-us"
+                className={hideLearnMore
+                  ? "bg-[#5ae0f6] border border-[#5ae0f6] border-solid rounded-xl hover:bg-[#4dd4e8] transition-colors"
+                  : "flex items-center justify-center gap-2 rounded-xl overflow-hidden hover:transform hover:translate-x-1 transition-transform px-2 py-1"
+                }
+              >
+                <div className={hideLearnMore
+                  ? "flex items-center justify-center gap-2 px-6 py-2.5 rounded-inherit overflow-hidden"
+                  : "flex items-center justify-center gap-2"
+                }>
+                  <span className="font-medium text-[#0c2080] text-base leading-[1.5] whitespace-nowrap">
+                    Contact
+                  </span>
+                  {!hideLearnMore && (
+                    <div className="w-6 h-6 flex items-center justify-center">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L15 12L9 6" stroke="#0c2080" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                  )}
                 </div>
               </Link>
             </div>

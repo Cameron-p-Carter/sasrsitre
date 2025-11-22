@@ -24,7 +24,7 @@ export default function RecognitionPage() {
           overlayOpacity={0.6}
         />
         <AwardsSection />
-        <EliteTalentSection />
+        <EliteTalentSection hideLearnMore={true} />
         <ImageTextContentSection
           title="Approved Supplier - Federal Government ICT Digital & Cloud Marketplace Panels"
           description="Software@Scale is an approved supplier on the Australian Government’s Digital and Cloud Marketplace Panels, allowing federal agencies to directly engage us for ICT and digital services. Approved across every service category we applied for - including software engineering, architecture, cybersecurity and cloud consulting - this accreditation demonstrates our national capability to deliver complex, high-impact digital projects for government."
