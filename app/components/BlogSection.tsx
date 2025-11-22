@@ -10,6 +10,7 @@ interface BlogCard {
   image: string;
   title: string;
   description: string;
+  link: string;
   category?: string;
   readTime?: string;
   hasCategory?: boolean;
@@ -23,49 +24,75 @@ const BlogSection = () => {
   const blogCards: BlogCard[] = [
     {
       id: 1,
-      image: '/images/placeholder/placeholder1.png',
-      title: 'Exploring the Future of Digital Transformation',
-      description: 'Discover how technology is reshaping industries and driving innovation.',
+      image: '/images/placeholder/placeholder101.jpg',
+      title: 'Celebrating Growth at the 2025 CUB Awards',
+      description: 'Recognised as Australia\'s Fastest Growing Business for quality, innovation and measurable impact.',
+      link: '/collections/news/cub-awards',
       hasCategory: false
     },
     {
       id: 2,
-      image: '/images/placeholder/placeholder2.png',
-      title: 'Navigating the Cloud Landscape Today',
-      description: 'Key trends and strategies for successful cloud adoption.',
+      image: '/images/placeholder/placeholder102.png',
+      title: 'Connecting with the Tech Community at BeerOps 2025',
+      description: 'Joined Australia\'s largest tech networking event to connect with peers and celebrate diversity.',
+      link: '/collections/news/beerops',
       hasCategory: false
     },
     {
       id: 3,
-      image: '/images/placeholder/placeholder3.jpg',
-      title: 'The Importance of Cybersecurity Today',
-      description: 'Understanding risks and safeguarding your digital assets.',
+      image: '/images/placeholder/placeholder103.jpg',
+      title: 'Louis Droguett Named Finalist in 2025 CEO of the Year Awards',
+      description: 'CEO recognised for leadership in scaling one of Australia\'s fastest-growing tech businesses.',
+      link: '/collections/news/2025-executive-of-the-year-awards',
       hasCategory: false
     },
     {
       id: 4,
-      image: '/images/placeholder/placeholder4.jpg',
-      title: 'News title heading will go here',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.',
+      image: '/images/placeholder/placeholder104.jpg',
+      title: 'Software@Scale Presents at AWS Community Day 2025',
+      description: 'Richard Ford delivered insights on innovation, embedded systems and cloud scalability.',
+      link: '/collections/news/aws-community-day',
       hasCategory: false
     },
     {
       id: 5,
-      image: '/images/placeholder/placeholder4.jpg',
-      title: 'Blog title heading will go here',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.',
-      category: 'Category',
-      readTime: '5 min read',
-      hasCategory: true
+      image: '/images/placeholder/placeholder105.jpg',
+      title: 'Software@Scale at the 2025 Iress WealthTech Summit',
+      description: 'CEO shared insights on cybersecurity and digital protection in financial advice.',
+      link: '/collections/news/iress-wealthtech-summit',
+      hasCategory: false
     },
     {
       id: 6,
-      image: '/images/placeholder/placeholder4.jpg',
-      title: 'Blog title heading will go here',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.',
-      category: 'Category',
-      readTime: '5 min read',
-      hasCategory: true
+      image: '/images/placeholder/placeholder106jpg.jpg',
+      title: 'Patricia Droguett Recognised at Women Leading Tech Awards 2025',
+      description: 'Director of Operations recognised as finalist celebrating women driving innovation.',
+      link: '/collections/news/women-leading-tech-awards',
+      hasCategory: false
+    },
+    {
+      id: 7,
+      image: '/images/placeholder/placeholder107.jpg',
+      title: 'Software@Scale Named Rising Star in Deloitte Technology Fast 50',
+      description: 'Recognised for exceptional growth and innovation in the technology sector.',
+      link: '/collections/news/deloitte-tech-fast-50',
+      hasCategory: false
+    },
+    {
+      id: 8,
+      image: '/images/placeholder/placeholder108.png',
+      title: 'Approved Supplier: Federal Government ICT Digital and Cloud Marketplace Panels',
+      description: 'Approved for direct engagement with government agencies for digital transformation.',
+      link: '/collections/news/ict-supplier',
+      hasCategory: false
+    },
+    {
+      id: 9,
+      image: '/images/placeholder/placeholder109.jpg',
+      title: 'Software@Scale Joins Government Digital Marketplace Panels',
+      description: 'Expanding capability to support public sector digital transformation across Australia.',
+      link: '/collections/news/panels',
+      hasCategory: false
     }
   ];
 
@@ -203,7 +230,7 @@ const BlogSection = () => {
                   </div>
 
                   {/* Read More Button */}
-                  <div className="flex gap-2 items-center rounded-xl cursor-pointer group">
+                  <Link href={card.link} className="flex gap-2 items-center rounded-xl cursor-pointer group">
                     <span className="font-normal text-[#00050a] text-base leading-[1.5] whitespace-nowrap group-hover:text-[#0c2080] transition-colors">
                       Read more
                     </span>
@@ -212,7 +239,7 @@ const BlogSection = () => {
                         <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                     </div>
-                  </div>
+                  </Link>
                 </motion.div>
               ))}
             </div>
@@ -266,7 +293,7 @@ const BlogSection = () => {
                   </div>
 
                   {/* Read More Button */}
-                  <div className="flex gap-2 items-center rounded-xl cursor-pointer group">
+                  <Link href={card.link} className="flex gap-2 items-center rounded-xl cursor-pointer group">
                     <span className="font-normal text-[#00050a] text-base leading-[1.5] whitespace-nowrap group-hover:text-[#0c2080] transition-colors">
                       Read more
                     </span>
@@ -275,7 +302,7 @@ const BlogSection = () => {
                         <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                     </div>
-                  </div>
+                  </Link>
                 </motion.div>
               ))}
             </AnimatePresence>

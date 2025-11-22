@@ -102,7 +102,7 @@ const TransformingIdeasSection = () => {
             </div>
           </Link>
           
-          <button className="flex items-center justify-center gap-2 rounded-xl overflow-hidden hover:bg-[#e6f7ff] transition-colors px-4 py-2.5">
+          <Link href="/contact-us" className="flex items-center justify-center gap-2 rounded-xl overflow-hidden hover:bg-[#e6f7ff] transition-colors px-4 py-2.5">
             <span className="font-medium text-[#0c2080] text-base leading-[1.5] whitespace-nowrap">
               Get Started
             </span>
@@ -111,7 +111,7 @@ const TransformingIdeasSection = () => {
                 <path d="M9 18L15 12L9 6" stroke="#0c2080" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-          </button>
+          </Link>
         </div>
       </div>
     </section>
