@@ -1,3 +1,5 @@
+'use client';
+
 interface FAQItem {
   question: string;
   answer: string;
@@ -79,7 +81,13 @@ export default function FAQSection({
             
             {/* Actions */}
             <div className="flex gap-6 items-center">
-              <button className={`border ${buttonBorderColor} border-solid rounded-xl px-6 py-2.5 font-medium text-base leading-[1.5] ${buttonTextColor} hover:opacity-80 transition-opacity`}>
+              <button
+                onClick={() => {
+                  const contactForm = document.getElementById('contact-form');
+                  contactForm?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }}
+                className={`border ${buttonBorderColor} border-solid rounded-xl px-6 py-2.5 font-medium text-base leading-[1.5] ${buttonTextColor} hover:opacity-80 transition-opacity`}
+              >
                 {ctaButtonText}
               </button>
             </div>
