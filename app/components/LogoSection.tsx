@@ -65,23 +65,43 @@ const LogoSection = () => {
           </div>
         </div>
 
-        {/* Desktop: Text on left, logos on right */}
+        {/* Desktop: Text on left, logos marquee on right */}
         <div className="hidden lg:flex gap-8 xl:gap-12 2xl:gap-[26px] items-center w-full">
           {/* Left: Text */}
           <p className="font-bold text-[#5ae0f6] text-[18px] leading-[1.5] w-[260px] xl:w-[280px] 2xl:w-[320px] flex-shrink-0">
             Trusted by top companies worldwide
           </p>
-          
-          {/* Right: Logos */}
-          <div className="flex-1 flex items-center justify-end gap-4 xl:gap-8 2xl:gap-[45px] h-[100px] min-w-0">
-            {logos.slice(0, 5).map((logo, index) => {
-              return (
+
+          {/* Right: Marquee Logos */}
+          <div className="flex-1 relative overflow-hidden h-[100px]">
+            {/* Left fade gradient */}
+            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#006cc9] to-transparent z-10 pointer-events-none"></div>
+
+            {/* Right fade gradient */}
+            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#006cc9] to-transparent z-10 pointer-events-none"></div>
+
+            <motion.div
+              className="flex gap-8 xl:gap-10 2xl:gap-12 items-center h-full"
+              animate={{
+                x: [0, -150 * logos.length]
+              }}
+              transition={{
+                x: {
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  duration: 30,
+                  ease: "linear",
+                },
+              }}
+            >
+              {duplicatedLogos.map((logo, index) => (
                 <div
-                  key={logo.name}
+                  key={`${logo.name}-${index}`}
                   className="flex items-center justify-center flex-shrink-0"
                   style={{
                     width: `${logo.width}px`,
-                    height: `${logo.height}px`
+                    height: `${logo.height}px`,
+                    minWidth: `${logo.width}px`
                   }}
                 >
                   <Image
@@ -92,8 +112,8 @@ const LogoSection = () => {
                     className="object-contain filter brightness-0 invert w-full h-full"
                   />
                 </div>
-              );
-            })}
+              ))}
+            </motion.div>
           </div>
         </div>
 
