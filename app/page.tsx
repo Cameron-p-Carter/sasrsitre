@@ -63,12 +63,10 @@ const HOME_PORTFOLIO_DATA = {
 export default function Home() {
   return (
     <div>
-      <div className="absolute top-0 left-0 right-0 z-20">
-        <Header />
-      </div>
-      
+      <Header />
+
       {/* Hero Section */}
-      <main className="relative h-screen flex items-center justify-center px-5 md:px-8 lg:px-16 py-0 pt-[72px]">
+      <main className="relative h-screen flex items-center justify-center px-5 md:px-8 lg:px-16 py-0 -mt-[72px] pt-[72px]">
         {/* Video Background */}
         <video
           autoPlay

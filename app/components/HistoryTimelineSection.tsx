@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 
 const TIMELINE_DATA = [
@@ -48,6 +50,13 @@ const HistoryTimelineSection = () => {
 
   const TimelineItem = ({ item, isLast, rowIndex }: TimelineItemProps) => {
     const isLeftAligned = item.alignment === 'left';
+
+    const handleNextClick = () => {
+      if (!isLast) {
+        const nextItem = document.getElementById(`timeline-item-${rowIndex + 1}`);
+        nextItem?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    };
     
     const imageBlock = (
       <div className={`w-full md:w-1/2 flex ${isLeftAligned ? 'justify-end' : 'justify-start'} pb-12 md:pb-0 md:pt-8 px-0 md:px-0`}>
@@ -75,13 +84,18 @@ const HistoryTimelineSection = () => {
         <p className="font-normal text-base md:text-lg leading-[1.5] text-[#00050a] w-full">
           {item.description}
         </p>
-        <div className={`flex gap-6 items-center ${isLeftAligned ? 'justify-start' : 'justify-end'}`}>
-          <button className="border border-[#0c2080] border-solid flex items-center justify-center px-6 py-2.5 rounded-xl">
-            <span className="font-medium text-[#0c2080] text-base leading-[1.5] whitespace-nowrap">
-              Next
-            </span>
-          </button>
-        </div>
+        {!isLast && (
+          <div className={`flex gap-6 items-center ${isLeftAligned ? 'justify-start' : 'justify-end'}`}>
+            <button
+              onClick={handleNextClick}
+              className="border border-[#0c2080] border-solid flex items-center justify-center px-6 py-2.5 rounded-xl hover:bg-[#0c2080] hover:text-white transition-colors"
+            >
+              <span className="font-medium text-[#0c2080] hover:text-white text-base leading-[1.5] whitespace-nowrap">
+                Next
+              </span>
+            </button>
+          </div>
+        )}
       </div>
     );
 
@@ -98,7 +112,7 @@ const HistoryTimelineSection = () => {
     );
 
     return (
-      <div className="flex w-full items-start">
+      <div id={`timeline-item-${rowIndex}`} className="flex w-full items-start scroll-mt-24">
         {/* Mobile Timeline Divider (Always visible on left) */}
         <div className="relative w-5 shrink-0 flex flex-col items-center self-stretch md:hidden">
           <div className={`w-[3px] bg-[#00050a] ${rowIndex === 0 ? 'h-6' : 'h-8'}`} />

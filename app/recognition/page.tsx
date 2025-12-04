@@ -9,12 +9,10 @@ import Footer from '@/app/components/Footer';
 export default function RecognitionPage() {
   return (
     <div className="min-h-screen bg-white">
-      <div className="absolute top-0 left-0 right-0 z-20">
         <Header />
-      </div>
       
       {/* Recognition Page Hero Section */}
-      <main className="pt-[72px]">
+      <main>
         <HeroHeaderSection
           imageSrc="/images/placeholder/placeholder20.jpg"
           tagline="Excellence"

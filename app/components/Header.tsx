@@ -18,7 +18,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-[#0c2080] w-full relative z-20">
+    <header className="bg-[#0c2080] w-full sticky top-0 z-50">
       {/* Desktop Header */}
       <div className="hidden lg:flex items-center h-[72px] px-12 max-w-full">
         <div className="flex items-center justify-between w-full">

@@ -8,12 +8,10 @@ import Footer from '@/app/components/Footer';
 export default function OurHistoryPage() {
   return (
     <div className="min-h-screen bg-white">
-      <div className="absolute top-0 left-0 right-0 z-20">
         <Header />
-      </div>
       
       {/* Our History Page Hero Section */}
-      <main className="pt-[72px]">
+      <main>
         <HeroHeaderSection
           imageSrc="/images/placeholder/placeholder27.jpg"
           tagline="Heritage"

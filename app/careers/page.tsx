@@ -89,11 +89,9 @@ const CTA_SECTION_DATA = {
 export default function CareersPage() {
   return (
     <div className="min-h-screen bg-white">
-      <div className="absolute top-0 left-0 right-0 z-20">
         <Header />
-      </div>
       
-      <main className="pt-[72px]">
+      <main>
         <HeroHeaderSection
           imageSrc="/images/placeholder/91.jpg"
           tagline="Careers"

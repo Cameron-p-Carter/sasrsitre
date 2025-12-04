@@ -112,11 +112,9 @@ const NEWS_CTA_DATA: CTASectionData = {
 export default function NewsPage() {
   return (
     <div className="min-h-screen bg-white">
-      <div className="absolute top-0 left-0 right-0 z-20">
         <Header />
-      </div>
       
-      <main className="pt-[72px]">
+      <main>
         <NewsGridSection
           sectionTitle={NEWS_GRID_DATA.sectionTitle}
           sectionDescription={NEWS_GRID_DATA.sectionDescription}

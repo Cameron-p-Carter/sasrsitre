@@ -9,12 +9,10 @@ import Footer from '@/app/components/Footer';
 export default function CoreValuesPage() {
   return (
     <div className="min-h-screen bg-white">
-      <div className="absolute top-0 left-0 right-0 z-20">
         <Header />
-      </div>
       
       {/* Core Values Content */}
-      <main className="pt-[72px]">
+      <main>
         <HeroHeaderSection
           imageSrc="/images/placeholder/placeholder17.jpg"
           tagline="Empower"
