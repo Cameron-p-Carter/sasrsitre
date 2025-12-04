@@ -36,13 +36,13 @@ const Header = () => {
           </div>
 
           {/* Decorative S Element */}
-          <div className="flex-1 h-[72px] relative max-w-[300px]">
-            <div className="absolute h-[72px] left-0 top-0 w-full overflow-hidden">
+          <div className="flex-1 h-[72px] relative overflow-hidden">
+            <div className="absolute h-[72px] left-0 top-0 w-full">
               <Image
                 src="/images/logos/Desktop Menu_S_Element.svg"
                 alt="Decorative S Element"
                 fill
-                className="object-contain object-left"
+                className="object-cover object-left"
               />
             </div>
           </div>
