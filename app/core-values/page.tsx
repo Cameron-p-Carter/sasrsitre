@@ -1,10 +1,10 @@
-import Header from '@/app/components/Header';
-import HeroHeaderSection from '@/app/components/HeroHeaderSection';
-import CoreValuesMissionSection from '@/app/components/CoreValuesMissionSection';
-import CoreValuesTestimonialSection from '@/app/components/CoreValuesTestimonialSection';
-import CoreValuesGridSection from '@/app/components/CoreValuesGridSection';
-import CTASection from '@/app/components/CTASection';
-import Footer from '@/app/components/Footer';
+import Header from '@/app/components/layout/Header';
+import HeroHeaderSection from '@/app/components/sections/hero/HeroHeaderSection';
+import CoreValuesMissionSection from '@/app/components/sections/values/CoreValuesMissionSection';
+import CoreValuesTestimonialSection from '@/app/components/sections/values/CoreValuesTestimonialSection';
+import CoreValuesGridSection from '@/app/components/sections/features/CoreValuesGridSection';
+import CTASection from '@/app/components/sections/cta/CTASection';
+import Footer from '@/app/components/layout/Footer';
 
 export default function CoreValuesPage() {
   return (

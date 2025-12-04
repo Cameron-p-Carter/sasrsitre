@@ -1,4 +1,4 @@
-import CaseStudiesPageLayout from '@/app/components/CaseStudiesPageLayout';
+import CaseStudiesPageLayout from '@/app/components/templates/CaseStudiesPageLayout';
 
 // --- Data Structures copied from CaseStudiesPageLayout.tsx and app/page.tsx ---
 

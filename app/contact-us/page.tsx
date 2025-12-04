@@ -1,9 +1,9 @@
-import Header from '@/app/components/Header';
-import Footer from '@/app/components/Footer';
-import HeroHeaderSection from '@/app/components/HeroHeaderSection';
-import ContactInfoSection from '@/app/components/ContactInfoSection';
-import ContactFormSection from '@/app/components/ContactFormSection';
-import FAQSection from '@/app/components/FAQSection';
+import Header from '@/app/components/layout/Header';
+import Footer from '@/app/components/layout/Footer';
+import HeroHeaderSection from '@/app/components/sections/hero/HeroHeaderSection';
+import ContactInfoSection from '@/app/components/sections/contact/ContactInfoSection';
+import ContactFormSection from '@/app/components/sections/contact/ContactFormSection';
+import FAQSection from '@/app/components/sections/contact/FAQSection';
 
 const CONTACT_INFO_DATA = {
   contactItems: [

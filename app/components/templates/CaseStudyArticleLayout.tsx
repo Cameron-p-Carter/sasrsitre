@@ -1,18 +1,18 @@
-import Header from '@/app/components/Header';
-import Footer from '@/app/components/Footer';
-import CTASection from '@/app/components/CTASection';
-import HeroHeaderSection from '@/app/components/HeroHeaderSection';
-import CaseStudyOverviewSection from '@/app/components/CaseStudyOverviewSection';
-import CaseStudyDeliverablesSection from '@/app/components/CaseStudyDeliverablesSection';
-import CaseStudyImageFeaturesSection from '@/app/components/CaseStudyImageFeaturesSection';
-import CaseStudyOutcomeSection from '@/app/components/CaseStudyOutcomeSection';
-import CaseStudyStatsSection from '@/app/components/CaseStudyStatsSection';
-import CoreValuesTestimonialSection from './CoreValuesTestimonialSection';
-import CaseStudyCustomSection from './CaseStudyCustomSection';
-import CaseStudySolutionSection from './CaseStudySolutionSection';
-import CaseStudyWhatWeDeliveredSection from './CaseStudyWhatWeDeliveredSection';
-import CaseStudySectionHeader from './CaseStudySectionHeader';
-import CaseStudyDeliverablesGrid from './CaseStudyDeliverablesGrid';
+import Header from '@/app/components/layout/Header';
+import Footer from '@/app/components/layout/Footer';
+import CTASection from '@/app/components/sections/cta/CTASection';
+import HeroHeaderSection from '@/app/components/sections/hero/HeroHeaderSection';
+import CaseStudyOverviewSection from '@/app/components/sections/case-study/CaseStudyOverviewSection';
+import CaseStudyDeliverablesSection from '@/app/components/sections/case-study/CaseStudyDeliverablesSection';
+import CaseStudyImageFeaturesSection from '@/app/components/sections/case-study/CaseStudyImageFeaturesSection';
+import CaseStudyOutcomeSection from '@/app/components/sections/case-study/CaseStudyOutcomeSection';
+import CaseStudyStatsSection from '@/app/components/sections/stats/CaseStudyStatsSection';
+import CoreValuesTestimonialSection from '@/app/components/sections/values/CoreValuesTestimonialSection';
+import CaseStudyCustomSection from '@/app/components/sections/case-study/CaseStudyCustomSection';
+import CaseStudySolutionSection from '@/app/components/sections/case-study/CaseStudySolutionSection';
+import CaseStudyWhatWeDeliveredSection from '@/app/components/sections/case-study/CaseStudyWhatWeDeliveredSection';
+import CaseStudySectionHeader from '@/app/components/sections/case-study/CaseStudySectionHeader';
+import CaseStudyDeliverablesGrid from '@/app/components/sections/case-study/CaseStudyDeliverablesGrid';
 
 // --- Shared Data Structures ---
 

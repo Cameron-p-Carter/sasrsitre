@@ -1,10 +1,10 @@
-import Header from '@/app/components/Header';
-import HeroHeaderSection from '@/app/components/HeroHeaderSection';
-import AwardsSection from '@/app/components/AwardsSection';
-import EliteTalentSection from '@/app/components/EliteTalentSection';
-import ImageTextContentSection from '@/app/components/ImageTextContentSection';
-import CoreValuesTestimonialSection from '@/app/components/CoreValuesTestimonialSection';
-import Footer from '@/app/components/Footer';
+import Header from '@/app/components/layout/Header';
+import HeroHeaderSection from '@/app/components/sections/hero/HeroHeaderSection';
+import AwardsSection from '@/app/components/sections/stats/AwardsSection';
+import EliteTalentSection from '@/app/components/sections/info/EliteTalentSection';
+import ImageTextContentSection from '@/app/components/sections/content/ImageTextContentSection';
+import CoreValuesTestimonialSection from '@/app/components/sections/values/CoreValuesTestimonialSection';
+import Footer from '@/app/components/layout/Footer';
 
 export default function RecognitionPage() {
   return (

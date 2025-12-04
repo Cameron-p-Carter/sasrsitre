@@ -1,10 +1,10 @@
-import Header from '@/app/components/Header';
-import Footer from '@/app/components/Footer';
-import HeroHeaderSection from '@/app/components/HeroHeaderSection';
-import CareersOpenPositionsSection from '@/app/components/CareersOpenPositionsSection';
-import CareersDiscoverSection from '@/app/components/CareersDiscoverSection';
-import CareersBenefitsSection from '@/app/components/CareersBenefitsSection';
-import CTASection from '@/app/components/CTASection';
+import Header from '@/app/components/layout/Header';
+import Footer from '@/app/components/layout/Footer';
+import HeroHeaderSection from '@/app/components/sections/hero/HeroHeaderSection';
+import CareersOpenPositionsSection from '@/app/components/sections/careers/CareersOpenPositionsSection';
+import CareersDiscoverSection from '@/app/components/sections/careers/CareersDiscoverSection';
+import CareersBenefitsSection from '@/app/components/sections/careers/CareersBenefitsSection';
+import CTASection from '@/app/components/sections/cta/CTASection';
 
 const OPEN_POSITIONS_DATA = {
   sectionTitle: "Open Positions",

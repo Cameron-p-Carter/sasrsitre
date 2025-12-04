@@ -1,11 +1,11 @@
-import Header from '@/app/components/Header';
-import HeroHeaderSection from '@/app/components/HeroHeaderSection';
-import ImageOverlapSection from '@/app/components/ImageOverlapSection';
-import PeopleFeaturesSection from '@/app/components/PeopleFeaturesSection';
-import PeopleTeamSection from '@/app/components/PeopleTeamSection';
-import CoreValuesTestimonialSection from '@/app/components/CoreValuesTestimonialSection';
-import CTASection from '@/app/components/CTASection';
-import Footer from '@/app/components/Footer';
+import Header from '@/app/components/layout/Header';
+import HeroHeaderSection from '@/app/components/sections/hero/HeroHeaderSection';
+import ImageOverlapSection from '@/app/components/sections/content/ImageOverlapSection';
+import PeopleFeaturesSection from '@/app/components/sections/features/PeopleFeaturesSection';
+import PeopleTeamSection from '@/app/components/sections/info/PeopleTeamSection';
+import CoreValuesTestimonialSection from '@/app/components/sections/values/CoreValuesTestimonialSection';
+import CTASection from '@/app/components/sections/cta/CTASection';
+import Footer from '@/app/components/layout/Footer';
 
 export default function PeoplePage() {
   return (

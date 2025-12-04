@@ -1,4 +1,4 @@
-import CaseStudyArticleLayout from '@/app/components/CaseStudyArticleLayout';
+import CaseStudyArticleLayout from '@/app/components/templates/CaseStudyArticleLayout';
 
 // --- Data Structures copied from CaseStudyArticleLayout.tsx ---
 

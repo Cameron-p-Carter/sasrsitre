@@ -1,6 +1,6 @@
-import Header from '@/app/components/Header';
-import Footer from '@/app/components/Footer';
-import HeroHeaderSection from '@/app/components/HeroHeaderSection';
+import Header from '@/app/components/layout/Header';
+import Footer from '@/app/components/layout/Footer';
+import HeroHeaderSection from '@/app/components/sections/hero/HeroHeaderSection';
 
 export default function ReferralProgramPage() {
   return (

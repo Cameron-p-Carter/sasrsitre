@@ -1,7 +1,7 @@
-import Header from '@/app/components/Header';
-import Footer from '@/app/components/Footer';
-import CTASection from '@/app/components/CTASection';
-import NewsGridSection from '@/app/components/NewsGridSection';
+import Header from '@/app/components/layout/Header';
+import Footer from '@/app/components/layout/Footer';
+import CTASection from '@/app/components/sections/cta/CTASection';
+import NewsGridSection from '@/app/components/sections/showcase/NewsGridSection';
 
 // --- Data Structures ---
 

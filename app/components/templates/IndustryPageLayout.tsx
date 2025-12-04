@@ -1,10 +1,10 @@
-import Header from '@/app/components/Header';
-import HeroHeaderSection from '@/app/components/HeroHeaderSection';
-import PortfolioSection from '@/app/components/PortfolioSection';
-import CoreValuesTestimonialSection from '@/app/components/CoreValuesTestimonialSection';
-import BlogSection from '@/app/components/BlogSection';
-import CTASection from '@/app/components/CTASection';
-import Footer from '@/app/components/Footer';
+import Header from '@/app/components/layout/Header';
+import HeroHeaderSection from '@/app/components/sections/hero/HeroHeaderSection';
+import PortfolioSection from '@/app/components/sections/showcase/PortfolioSection';
+import CoreValuesTestimonialSection from '@/app/components/sections/values/CoreValuesTestimonialSection';
+import BlogSection from '@/app/components/sections/showcase/BlogSection';
+import CTASection from '@/app/components/sections/cta/CTASection';
+import Footer from '@/app/components/layout/Footer';
 
 // --- Shared Data Structures ---
 

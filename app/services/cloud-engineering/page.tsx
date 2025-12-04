@@ -1,4 +1,4 @@
-import ServicePageLayout from '@/app/components/ServicePageLayout';
+import ServicePageLayout from '@/app/components/templates/ServicePageLayout';
 
 // Define the test content for the service page
 const TEST_SERVICE_DATA = {

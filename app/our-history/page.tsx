@@ -1,9 +1,9 @@
-import Header from '@/app/components/Header';
-import HeroHeaderSection from '@/app/components/HeroHeaderSection';
-import HistoryTimelineSection from '@/app/components/HistoryTimelineSection';
-import HistoryFeaturesSection from '@/app/components/HistoryFeaturesSection';
-import CTASection from '@/app/components/CTASection';
-import Footer from '@/app/components/Footer';
+import Header from '@/app/components/layout/Header';
+import HeroHeaderSection from '@/app/components/sections/hero/HeroHeaderSection';
+import HistoryTimelineSection from '@/app/components/sections/timeline/HistoryTimelineSection';
+import HistoryFeaturesSection from '@/app/components/sections/features/HistoryFeaturesSection';
+import CTASection from '@/app/components/sections/cta/CTASection';
+import Footer from '@/app/components/layout/Footer';
 
 export default function OurHistoryPage() {
   return (

@@ -1,4 +1,4 @@
-import IndustryPageLayout from '@/app/components/IndustryPageLayout';
+import IndustryPageLayout from '@/app/components/templates/IndustryPageLayout';
 
 // --- Data Structures copied from app/page.tsx and PortfolioSection.tsx ---
 

@@ -1,4 +1,4 @@
-import ArticlePageLayout from '@/app/components/ArticlePageLayout';
+import ArticlePageLayout from '@/app/components/templates/ArticlePageLayout';
 
 // --- Data Structures copied from ArticlePageLayout.tsx ---
 

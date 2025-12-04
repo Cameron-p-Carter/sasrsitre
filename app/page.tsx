@@ -1,16 +1,16 @@
 import Link from 'next/link';
-import Header from './components/Header';
-import BlogSection from './components/BlogSection';
-import LogoSection from './components/LogoSection';
-import ImageOverlapSection from './components/ImageOverlapSection';
-import AwardsSection from './components/AwardsSection';
-import EliteTalentSection from './components/EliteTalentSection';
-import WhyChooseSection from './components/WhyChooseSection';
-import TransformingIdeasSection from './components/TransformingIdeasSection';
-import ProvenApproachSection from './components/ProvenApproachSection';
-import PortfolioSection from './components/PortfolioSection';
-import CTASection from './components/CTASection';
-import Footer from './components/Footer';
+import Header from '@/app/components/layout/Header';
+import BlogSection from '@/app/components/sections/showcase/BlogSection';
+import LogoSection from '@/app/components/sections/showcase/LogoSection';
+import ImageOverlapSection from '@/app/components/sections/content/ImageOverlapSection';
+import AwardsSection from '@/app/components/sections/stats/AwardsSection';
+import EliteTalentSection from '@/app/components/sections/info/EliteTalentSection';
+import WhyChooseSection from '@/app/components/sections/info/WhyChooseSection';
+import TransformingIdeasSection from '@/app/components/sections/info/TransformingIdeasSection';
+import ProvenApproachSection from '@/app/components/sections/info/ProvenApproachSection';
+import PortfolioSection from '@/app/components/sections/showcase/PortfolioSection';
+import CTASection from '@/app/components/sections/cta/CTASection';
+import Footer from '@/app/components/layout/Footer';
 
 interface Project {
   id: number;

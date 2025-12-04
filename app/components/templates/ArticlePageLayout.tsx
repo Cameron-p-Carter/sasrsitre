@@ -1,9 +1,9 @@
-import Header from '@/app/components/Header';
-import Footer from '@/app/components/Footer';
-import CTASection from '@/app/components/CTASection';
-import BlogSection from '@/app/components/BlogSection';
-import ArticleHeaderSection from '@/app/components/ArticleHeaderSection';
-import ArticleContentSection from '@/app/components/ArticleContentSection';
+import Header from '@/app/components/layout/Header';
+import Footer from '@/app/components/layout/Footer';
+import CTASection from '@/app/components/sections/cta/CTASection';
+import BlogSection from '@/app/components/sections/showcase/BlogSection';
+import ArticleHeaderSection from '@/app/components/sections/article/ArticleHeaderSection';
+import ArticleContentSection from '@/app/components/sections/content/ArticleContentSection';
 
 // --- Data Structures copied from ArticleHeaderSection.tsx and ArticleContentSection.tsx ---
 

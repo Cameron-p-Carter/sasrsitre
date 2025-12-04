@@ -1,15 +1,15 @@
-import Header from '@/app/components/Header';
-import HeroHeaderSection from '@/app/components/HeroHeaderSection';
-import Footer from '@/app/components/Footer';
-import ImageTextContentSection from '@/app/components/ImageTextContentSection';
-import CoreValuesTestimonialSection from '@/app/components/CoreValuesTestimonialSection';
-import ImageTextListSection from '@/app/components/ImageTextListSection';
-import ServiceFeatureColumns from '@/app/components/ServiceFeatureColumns';
-import AwardsSection from '@/app/components/AwardsSection';
-import ServiceStatsSection from '@/app/components/ServiceStatsSection';
-import CaseStudySection from '@/app/components/CaseStudySection';
-import BlogSection from '@/app/components/BlogSection';
-import CTASection from '@/app/components/CTASection';
+import Header from '@/app/components/layout/Header';
+import HeroHeaderSection from '@/app/components/sections/hero/HeroHeaderSection';
+import Footer from '@/app/components/layout/Footer';
+import ImageTextContentSection from '@/app/components/sections/content/ImageTextContentSection';
+import CoreValuesTestimonialSection from '@/app/components/sections/values/CoreValuesTestimonialSection';
+import ImageTextListSection from '@/app/components/sections/content/ImageTextListSection';
+import ServiceFeatureColumns from '@/app/components/sections/features/ServiceFeatureColumns';
+import AwardsSection from '@/app/components/sections/stats/AwardsSection';
+import ServiceStatsSection from '@/app/components/sections/stats/ServiceStatsSection';
+import CaseStudySection from '@/app/components/sections/showcase/CaseStudySection';
+import BlogSection from '@/app/components/sections/showcase/BlogSection';
+import CTASection from '@/app/components/sections/cta/CTASection';
 
 // Define the structure for the Hero section data
 interface HeroSectionData {
