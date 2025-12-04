@@ -82,8 +82,9 @@ const LogoSection = () => {
 
             <motion.div
               className="flex gap-8 xl:gap-10 2xl:gap-12 items-center h-full"
+              style={{ width: 'max-content' }}
               animate={{
-                x: [0, -150 * logos.length]
+                x: ['0%', '-50%']
               }}
               transition={{
                 x: {
