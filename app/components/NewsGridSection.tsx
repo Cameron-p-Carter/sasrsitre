@@ -66,18 +66,14 @@ const NewsGridSection = ({
                   </div>
                   
                   {/* Action Button */}
-                  <Link href={item.link || "/collections/news/first-article"} className="flex items-center gap-2 cursor-pointer hover:opacity-70 transition-opacity">
-                    <span className="font-medium text-[#00050a] text-base leading-[1.5] whitespace-nowrap">
+                  <Link href={item.link || "/collections/news/first-article"} className="flex items-center gap-2 cursor-pointer group">
+                    <span className="font-medium text-[#00050a] text-base leading-[1.5] whitespace-nowrap group-hover:text-[#0c2080] transition-colors">
                       Read more
                     </span>
-                    <div className="w-6 h-6 flex items-center justify-center">
-                      <Image
-                        src={ICON_CHEVRON_RIGHT}
-                        alt="Arrow"
-                        width={24}
-                        height={24}
-                        className="object-contain"
-                      />
+                    <div className="w-6 h-6 flex items-center justify-center text-[#00050a] group-hover:text-[#0c2080] transition-colors">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
                     </div>
                   </Link>
                 </div>
