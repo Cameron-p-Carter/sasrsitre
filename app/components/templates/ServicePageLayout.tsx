@@ -1,9 +1,8 @@
 import Header from '@/app/components/layout/Header';
 import HeroHeaderSection from '@/app/components/sections/hero/HeroHeaderSection';
 import Footer from '@/app/components/layout/Footer';
-import ImageTextContentSection from '@/app/components/sections/content/ImageTextContentSection';
+import ImageTextSection from '@/app/components/shared/ImageTextSection';
 import CoreValuesTestimonialSection from '@/app/components/sections/values/CoreValuesTestimonialSection';
-import ImageTextListSection from '@/app/components/sections/content/ImageTextListSection';
 import ServiceFeatureColumns from '@/app/components/sections/features/ServiceFeatureColumns';
 import AwardsSection from '@/app/components/sections/stats/AwardsSection';
 import ServiceStatsSection from '@/app/components/sections/stats/ServiceStatsSection';
@@ -114,7 +113,8 @@ const ServicePageLayout = ({ data }: ServicePageLayoutProps) => {
           overlayOpacity={data.hero.overlayOpacity}
         />
         {data.imageTextContent && (
-          <ImageTextContentSection
+          <ImageTextSection
+            variant="simple"
             title={data.imageTextContent.title}
             description={data.imageTextContent.description}
             imageSrc={data.imageTextContent.imageSrc}
@@ -126,7 +126,8 @@ const ServicePageLayout = ({ data }: ServicePageLayoutProps) => {
         )}
         {data.showTestimonial && <CoreValuesTestimonialSection />}
         {data.imageTextListContent && (
-          <ImageTextListSection
+          <ImageTextSection
+            variant="list"
             title={data.imageTextListContent.title}
             introDescription={data.imageTextListContent.introDescription}
             listTitle={data.imageTextListContent.listTitle}

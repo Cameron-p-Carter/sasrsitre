@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import SectionWrapper from '@/app/components/shared/SectionWrapper';
 
 interface ContactInfoItem {
   iconSrc: string;
@@ -24,9 +25,8 @@ export default function ContactInfoSection({
   linkColor,
 }: ContactInfoSectionProps) {
   return (
-    <section className={`${backgroundColor} w-full`}>
-      <div className="max-w-[1280px] mx-auto px-5 md:px-16 py-16 md:py-28">
-        <div className="flex flex-col gap-12 md:gap-20 items-start w-full">
+    <SectionWrapper backgroundColor={backgroundColor}>
+      <div className="flex flex-col gap-12 md:gap-20 items-start w-full">
           {/* Mobile: Single column with 48px gaps, Desktop: 2-column row with 48px gap */}
           <div className="flex flex-col gap-12 md:flex-row md:gap-12 items-center w-full">
             {contactItems.map((item, index) => (
@@ -69,7 +69,6 @@ export default function ContactInfoSection({
             ))}
           </div>
         </div>
-      </div>
-    </section>
+    </SectionWrapper>
   );
 }
