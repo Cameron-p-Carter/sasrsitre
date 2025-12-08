@@ -35,10 +35,10 @@ const CaseStudyDeliverablesGrid = ({
           <div className="flex flex-col gap-6 md:gap-8 items-start shrink-0 w-full md:w-[380px]">
             <div className="flex flex-col gap-3 md:gap-4 items-start w-full">
               <div className={`flex flex-col gap-5 md:gap-6 items-start ${titleColor} w-full`}>
-                <h2 className="font-['Montserrat',sans-serif] font-bold leading-[1.2] text-[36px] md:text-[48px] tracking-[-0.36px] md:tracking-[-0.48px] w-full">
+                <h2 className="font-sans font-bold leading-[1.2] text-[36px] md:text-[48px] tracking-[-0.36px] md:tracking-[-0.48px] w-full">
                   {sectionTitle}
                 </h2>
-                <p className={`font-['Montserrat',sans-serif] font-normal leading-[1.5] text-[16px] md:text-[18px] ${descriptionColor} w-full`}>
+                <p className={`font-sans font-normal leading-[1.5] text-[16px] md:text-[18px] ${descriptionColor} w-full`}>
                   {sectionDescription}
                 </p>
               </div>
@@ -52,10 +52,10 @@ const CaseStudyDeliverablesGrid = ({
               {deliverables.map((item, index) => (
                 <div key={index} className="flex flex-col gap-3 items-start w-full">
                   <Image src={item.iconSrc} alt="" width={48} height={48} className="w-12 h-12" aria-hidden="true" />
-                  <h3 className={`font-['Montserrat',sans-serif] font-bold leading-[1.4] text-[20px] tracking-[-0.2px] ${deliverableTitleColor} w-full`}>
+                  <h3 className={`font-sans font-bold leading-[1.4] text-[20px] tracking-[-0.2px] ${deliverableTitleColor} w-full`}>
                     {item.title}
                   </h3>
-                  <p className={`font-['Montserrat',sans-serif] font-normal leading-[1.5] text-[16px] ${deliverableTextColor} w-full`}>
+                  <p className={`font-sans font-normal leading-[1.5] text-[16px] ${deliverableTextColor} w-full`}>
                     {item.description}
                   </p>
                 </div>
@@ -69,10 +69,10 @@ const CaseStudyDeliverablesGrid = ({
                 {deliverables.slice(0, 2).map((item, index) => (
                   <div key={index} className="flex-1 flex flex-col gap-6 items-start">
                     <Image src={item.iconSrc} alt="" width={48} height={48} className="w-12 h-12" aria-hidden="true" />
-                    <h3 className={`font-['Montserrat',sans-serif] font-bold leading-[1.4] text-[24px] tracking-[-0.24px] ${deliverableTitleColor} w-full`}>
+                    <h3 className={`font-sans font-bold leading-[1.4] text-[24px] tracking-[-0.24px] ${deliverableTitleColor} w-full`}>
                       {item.title}
                     </h3>
-                    <p className={`font-['Montserrat',sans-serif] font-normal leading-[1.5] text-[16px] ${deliverableTextColor} w-full`}>
+                    <p className={`font-sans font-normal leading-[1.5] text-[16px] ${deliverableTextColor} w-full`}>
                       {item.description}
                     </p>
                   </div>
@@ -85,10 +85,10 @@ const CaseStudyDeliverablesGrid = ({
                   {deliverables.slice(2, 4).map((item, index) => (
                     <div key={index} className="flex-1 flex flex-col gap-6 items-start">
                       <Image src={item.iconSrc} alt="" width={48} height={48} className="w-12 h-12" aria-hidden="true" />
-                      <h3 className={`font-['Montserrat',sans-serif] font-bold leading-[1.4] text-[24px] tracking-[-0.24px] ${deliverableTitleColor} w-full`}>
+                      <h3 className={`font-sans font-bold leading-[1.4] text-[24px] tracking-[-0.24px] ${deliverableTitleColor} w-full`}>
                         {item.title}
                       </h3>
-                      <p className={`font-['Montserrat',sans-serif] font-normal leading-[1.5] text-[16px] ${deliverableTextColor} w-full`}>
+                      <p className={`font-sans font-normal leading-[1.5] text-[16px] ${deliverableTextColor} w-full`}>
                         {item.description}
                       </p>
                     </div>
