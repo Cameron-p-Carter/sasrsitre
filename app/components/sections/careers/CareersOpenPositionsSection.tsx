@@ -99,7 +99,8 @@ export default function CareersOpenPositionsSection({
                   <div className="flex flex-col gap-4 items-start">
                     <Button
                       variant="secondary"
-                      onClick={() => position.applyUrl && window.open(position.applyUrl, '_blank')}
+                      href={position.applyUrl}
+                      target="_blank"
                     >
                       Apply Now
                     </Button>

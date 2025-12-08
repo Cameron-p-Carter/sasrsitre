@@ -13,6 +13,7 @@ interface ButtonProps {
   className?: string;
   fullWidth?: boolean;
   type?: 'button' | 'submit' | 'reset';
+  target?: '_blank' | '_self';
 }
 
 /**
@@ -38,6 +39,7 @@ export default function Button({
   className = '',
   fullWidth = false,
   type = 'button',
+  target,
 }: ButtonProps) {
 
   // Base styles (common to all buttons)
@@ -76,6 +78,15 @@ export default function Button({
     );
 
     if (href) {
+      // External link - use <a> tag with security attributes
+      if (target === '_blank') {
+        return (
+          <a href={href} className={buttonClasses} target="_blank" rel="noopener noreferrer">
+            {content}
+          </a>
+        );
+      }
+      // Internal link - use Next.js Link
       return (
         <Link href={href} className={buttonClasses}>
           {content}
@@ -92,6 +103,15 @@ export default function Button({
 
   // Render as Link if href is provided
   if (href) {
+    // External link - use <a> tag with security attributes
+    if (target === '_blank') {
+      return (
+        <a href={href} className={buttonClasses} target="_blank" rel="noopener noreferrer">
+          {children}
+        </a>
+      );
+    }
+    // Internal link - use Next.js Link
     return (
       <Link href={href} className={buttonClasses}>
         {children}
