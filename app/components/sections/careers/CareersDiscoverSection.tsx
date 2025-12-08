@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
+import Button from '@/app/components/shared/Button';
 
 interface CareersDiscoverSectionProps {
   sectionTitle: string;
@@ -12,12 +12,8 @@ interface CareersDiscoverSectionProps {
   textColor: string;
   primaryButtonText: string;
   secondaryButtonText: string;
-  primaryButtonColor: string;
-  secondaryButtonColor: string;
   primaryButtonUrl?: string;
   secondaryButtonUrl?: string;
-  onPrimaryClick?: () => void;
-  onSecondaryClick?: () => void;
 }
 
 export default function CareersDiscoverSection({
@@ -29,12 +25,8 @@ export default function CareersDiscoverSection({
   textColor,
   primaryButtonText,
   secondaryButtonText,
-  primaryButtonColor,
-  secondaryButtonColor,
   primaryButtonUrl = "#",
   secondaryButtonUrl = "#",
-  onPrimaryClick,
-  onSecondaryClick,
 }: CareersDiscoverSectionProps) {
   return (
     <section className={`${backgroundColor} w-full`}>
@@ -58,31 +50,12 @@ export default function CareersDiscoverSection({
               
               {/* Actions */}
               <div className="flex gap-6 items-center">
-                <Link
-                  href={primaryButtonUrl}
-                  className={`border border-solid ${primaryButtonColor} flex gap-2 items-center justify-center px-6 py-2.5 rounded-xl`}
-                >
-                  <span className={`font-medium text-base leading-[1.5] ${primaryButtonColor.replace('border-', 'text-')}`}>
-                    {primaryButtonText}
-                  </span>
-                </Link>
-
-                <Link
-                  href={secondaryButtonUrl}
-                  className="flex gap-2 items-center justify-center px-0 py-2.5 rounded-xl"
-                >
-                  <span className={`font-medium text-base leading-[1.5] ${secondaryButtonColor}`}>
-                    {secondaryButtonText}
-                  </span>
-                  <div className="relative w-6 h-6 shrink-0">
-                    <Image
-                      src="/images/icons/chevron_right.svg"
-                      alt="Arrow"
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-                </Link>
+                <Button variant="outline" href={primaryButtonUrl}>
+                  {primaryButtonText}
+                </Button>
+                <Button variant="link" href={secondaryButtonUrl} className="!text-[#5ae0f6]">
+                  {secondaryButtonText}
+                </Button>
               </div>
             </div>
             

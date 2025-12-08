@@ -98,7 +98,7 @@ const WhyChooseSection = () => {
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 w-full">
-                  <Link href="/people" className="flex items-start gap-2 rounded-xl overflow-hidden hover:transform hover:translate-x-1 transition-transform">
+                  <Link href="/people" className="flex items-start gap-2 rounded-xl overflow-hidden transition-opacity hover:opacity-70">
                     <span className="font-medium text-[#14d3f3] text-base leading-[1.5] whitespace-nowrap">
                       Learn More
                     </span>
@@ -131,7 +131,7 @@ const WhyChooseSection = () => {
                     </p>
                   </div>
                   <div className="flex flex-col gap-2 w-full">
-                    <Link href="/people" className="flex items-start gap-2 rounded-xl overflow-hidden hover:transform hover:translate-x-1 transition-transform">
+                    <Link href="/people" className="flex items-start gap-2 rounded-xl overflow-hidden transition-opacity hover:opacity-70">
                       <span className="font-medium text-[#14d3f3] text-base leading-[1.5] whitespace-nowrap">
                         Learn More
                       </span>
@@ -162,7 +162,7 @@ const WhyChooseSection = () => {
                     </p>
                   </div>
                   <div className="flex flex-col gap-2 w-full">
-                    <Link href="/people" className="flex items-start gap-2 rounded-xl overflow-hidden hover:transform hover:translate-x-1 transition-transform">
+                    <Link href="/people" className="flex items-start gap-2 rounded-xl overflow-hidden transition-opacity hover:opacity-70">
                       <span className="font-medium text-[#14d3f3] text-base leading-[1.5] whitespace-nowrap">
                         Learn More
                       </span>

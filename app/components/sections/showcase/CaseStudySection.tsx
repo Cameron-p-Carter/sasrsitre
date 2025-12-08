@@ -60,7 +60,7 @@ const CaseStudySection = () => {
         {/* Case Study Cards Grid */}
         <div className="flex flex-col md:flex-row gap-8 w-full">
           {CASE_STUDIES.map((study, index) => (
-            <Link key={index} href={study.url} className="flex flex-col gap-6 w-full md:w-1/3 items-start group hover:transform hover:scale-[1.02] transition-all duration-300">
+            <Link key={index} href={study.url} className="flex flex-col gap-6 w-full md:w-1/3 items-start group">
               {/* Image */}
               <div className="relative aspect-[405.333/270] rounded-2xl w-full overflow-hidden">
                 <Image
@@ -87,7 +87,7 @@ const CaseStudySection = () => {
                   <span className="font-normal text-[#14d3f3] text-base leading-[1.5] whitespace-nowrap">
                     View project
                   </span>
-                  <div className="w-6 h-6 flex items-center justify-center group-hover:translate-x-1 transition-transform">
+                  <div className="w-6 h-6 flex items-center justify-center">
                     <Image
                       src={ICON_CHEVRON_RIGHT}
                       alt="Arrow"

@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Button from '@/app/components/shared/Button';
 
 interface JobPosition {
   title: string;
@@ -17,8 +18,6 @@ interface CareersOpenPositionsSectionProps {
   backgroundColor: string;
   titleColor: string;
   textColor: string;
-  buttonColor: string;
-  buttonTextColor: string;
 }
 
 export default function CareersOpenPositionsSection({
@@ -28,8 +27,6 @@ export default function CareersOpenPositionsSection({
   backgroundColor,
   titleColor,
   textColor,
-  buttonColor,
-  buttonTextColor,
 }: CareersOpenPositionsSectionProps) {
   return (
     <section className={`${backgroundColor} w-full`}>
@@ -100,14 +97,12 @@ export default function CareersOpenPositionsSection({
                   
                   {/* Apply Button */}
                   <div className="flex flex-col gap-4 items-start">
-                    <button
-                      className={`border border-solid ${buttonColor} flex gap-2 items-center justify-center px-6 py-2.5 rounded-xl`}
+                    <Button
+                      variant="secondary"
                       onClick={() => position.applyUrl && window.open(position.applyUrl, '_blank')}
                     >
-                      <span className={`font-medium text-base leading-[1.5] ${buttonTextColor}`}>
-                        Apply Now
-                      </span>
-                    </button>
+                      Apply Now
+                    </Button>
                   </div>
                 </div>
               ))}

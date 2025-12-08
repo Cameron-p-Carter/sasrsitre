@@ -34,9 +34,7 @@ const OPEN_POSITIONS_DATA = {
   ],
   backgroundColor: "bg-[#cce1f4]",
   titleColor: "text-[#0c2080]",
-  textColor: "text-[#00050a]",
-  buttonColor: "border-[#0c2080]",
-  buttonTextColor: "text-[#0c2080]"
+  textColor: "text-[#00050a]"
 };
 
 const DISCOVER_SECTION_DATA = {
@@ -48,8 +46,6 @@ const DISCOVER_SECTION_DATA = {
   textColor: "text-white",
   primaryButtonText: "Explore",
   secondaryButtonText: "Apply",
-  primaryButtonColor: "border-[#14d3f3]",
-  secondaryButtonColor: "text-[#14d3f3]",
   primaryButtonUrl: "/our-history",
   secondaryButtonUrl: "https://www.seek.com.au/Software-at-Scale-jobs/at-this-company",
 };
@@ -108,10 +104,8 @@ export default function CareersPage() {
           backgroundColor={OPEN_POSITIONS_DATA.backgroundColor}
           titleColor={OPEN_POSITIONS_DATA.titleColor}
           textColor={OPEN_POSITIONS_DATA.textColor}
-          buttonColor={OPEN_POSITIONS_DATA.buttonColor}
-          buttonTextColor={OPEN_POSITIONS_DATA.buttonTextColor}
         />
-        
+
         <CareersDiscoverSection
           sectionTitle={DISCOVER_SECTION_DATA.sectionTitle}
           sectionDescription={DISCOVER_SECTION_DATA.sectionDescription}
@@ -121,8 +115,6 @@ export default function CareersPage() {
           textColor={DISCOVER_SECTION_DATA.textColor}
           primaryButtonText={DISCOVER_SECTION_DATA.primaryButtonText}
           secondaryButtonText={DISCOVER_SECTION_DATA.secondaryButtonText}
-          primaryButtonColor={DISCOVER_SECTION_DATA.primaryButtonColor}
-          secondaryButtonColor={DISCOVER_SECTION_DATA.secondaryButtonColor}
           primaryButtonUrl={DISCOVER_SECTION_DATA.primaryButtonUrl}
           secondaryButtonUrl={DISCOVER_SECTION_DATA.secondaryButtonUrl}
         />

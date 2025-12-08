@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Button from '@/app/components/shared/Button';
 import Header from '@/app/components/layout/Header';
 import BlogSection from '@/app/components/sections/showcase/BlogSection';
 import LogoSection from '@/app/components/sections/showcase/LogoSection';
@@ -174,16 +175,12 @@ export default function Home() {
             
             {/* Action Buttons - Fixed positioning */}
             <div className="flex gap-4 pt-2 md:pt-0">
-              <Link href="/core-values" className="bg-[#5ae0f6] border border-[#5ae0f6] border-solid flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl hover:bg-[#4dd0e6] transition-colors">
-                <span className="font-medium text-[#00050a] text-base leading-[1.5] whitespace-nowrap">
-                  Learn More
-                </span>
-              </Link>
-              <Link href="/contact-us" className="border border-[#5ae0f6] border-solid flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl hover:bg-[#5ae0f6] hover:text-[#00050a] transition-colors">
-                <span className="font-medium text-[#5ae0f6] text-base leading-[1.5] whitespace-nowrap">
-                  Scale Now
-                </span>
-              </Link>
+              <Button variant="primary" href="/core-values">
+                Learn More
+              </Button>
+              <Button variant="outline" href="/contact-us">
+                Scale Now
+              </Button>
             </div>
           </div>
         </div>

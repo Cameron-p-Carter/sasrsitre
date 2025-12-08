@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import Button from '@/app/components/shared/Button';
 
 interface BlogCard {
   id: number;
@@ -161,11 +162,9 @@ const BlogSection = () => {
             </div>
           </div>
           <div className="flex flex-col gap-4">
-            <Link href="/collections/news" className="border border-[#0c2080] border-solid flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl hover:bg-[#0c2080] hover:text-white transition-colors">
-              <span className="font-medium text-[#0c2080] hover:text-white text-base leading-[1.5] whitespace-nowrap">
-                View all
-              </span>
-            </Link>
+            <Button variant="secondary" href="/collections/news">
+              View all
+            </Button>
           </div>
         </div>
 
@@ -351,11 +350,9 @@ const BlogSection = () => {
 
         {/* Mobile View All Button */}
         <div className="flex md:hidden justify-start">
-          <Link href="/collections/news" className="border border-[#0c2080] border-solid flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl hover:bg-[#0c2080] hover:text-white transition-colors">
-            <span className="font-medium text-[#0c2080] hover:text-white text-base leading-[1.5] whitespace-nowrap">
-              View all
-            </span>
-          </Link>
+          <Button variant="secondary" href="/collections/news">
+            View all
+          </Button>
         </div>
       </div>
     </section>

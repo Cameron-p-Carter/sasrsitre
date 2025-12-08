@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Link from 'next/link';
+import Button from '@/app/components/shared/Button';
 
 const ProvenApproachSection = () => {
   const approaches = [
@@ -210,16 +210,12 @@ const ProvenApproachSection = () => {
 
         {/* Action Buttons */}
         <div className="flex gap-4 items-center">
-          <Link href="/our-history" className="bg-[#5ae0f6] border border-[#5ae0f6] border-solid flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl hover:bg-[#4dd0e6] transition-colors">
-            <span className="font-medium text-[#0c2080] text-base leading-[1.5] whitespace-nowrap">
-              Learn More
-            </span>
-          </Link>
-          <Link href="/contact-us" className="border border-[#14d3f3] border-solid flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl hover:bg-[#14d3f3] hover:text-[#0c2080] transition-colors">
-            <span className="font-medium text-[#14d3f3] text-base leading-[1.5] whitespace-nowrap">
-              Scale Now
-            </span>
-          </Link>
+          <Button variant="primary" href="/our-history">
+            Learn More
+          </Button>
+          <Button variant="outline" href="/contact-us">
+            Scale Now
+          </Button>
         </div>
       </div>
     </section>

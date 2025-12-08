@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import Button from '@/app/components/shared/Button';
 
 interface Project {
   id: number;
@@ -57,14 +58,9 @@ export default function PortfolioSection({
                     {project.description}
                   </p>
                 </div>
-                <Link href={project.link || "/collections/case-studies"} className="flex items-center gap-2 cursor-pointer hover:opacity-70 transition-opacity">
-                  <span className="text-base font-medium leading-[1.5] text-[#00050a]">
-                    View project
-                  </span>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </Link>
+                <Button variant="link" href={project.link || "/collections/case-studies"}>
+                  View project
+                </Button>
               </div>
             </div>
           ))}
@@ -149,9 +145,9 @@ export default function PortfolioSection({
 
         {/* View All Button */}
         <div className="flex justify-center">
-          <Link href="/collections/case-studies" className="border border-[#0c2080] text-[#0c2080] px-6 py-2.5 rounded-xl text-base font-medium leading-[1.5] hover:bg-[#0c2080] hover:text-white transition-colors">
+          <Button variant="secondary" href="/collections/case-studies">
             {viewAllButtonText}
-          </Link>
+          </Button>
         </div>
       </div>
     </section>

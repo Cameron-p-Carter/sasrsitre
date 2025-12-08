@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import Button from '@/app/components/shared/Button';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -230,11 +231,9 @@ const Header = () => {
             </nav>
 
             {/* Contact Button */}
-            <Link href="/contact-us" className="bg-[#5ae0f6] flex items-center justify-center gap-2 px-4 py-2 rounded-xl">
-              <span className="font-medium text-[#002b50] text-sm leading-5 whitespace-nowrap">
-                Contact
-              </span>
-            </Link>
+            <Button variant="primary" size="sm" href="/contact-us" className="text-sm text-[#002b50]">
+              Contact
+            </Button>
           </div>
         </div>
       </div>
@@ -268,11 +267,9 @@ const Header = () => {
 
         {/* Simplified Navigation */}
         <div className="flex items-center gap-3">
-          <Link href="/contact-us" className="bg-[#5ae0f6] flex items-center justify-center gap-2 px-3 py-1.5 rounded-xl">
-            <span className="font-medium text-[#002b50] text-sm leading-5 whitespace-nowrap">
-              Contact
-            </span>
-          </Link>
+          <Button variant="primary" size="sm" href="/contact-us" className="text-sm text-[#002b50] px-3 py-1.5">
+            Contact
+          </Button>
           <button
             onClick={toggleMobileMenu}
             className="flex items-center justify-center w-10 h-10"

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Link from 'next/link';
+import Button from '@/app/components/shared/Button';
 
 interface NewsItem {
   id: number;
@@ -66,16 +66,9 @@ const NewsGridSection = ({
                   </div>
                   
                   {/* Action Button */}
-                  <Link href={item.link || "/collections/news/first-article"} className="flex items-center gap-2 cursor-pointer group">
-                    <span className="font-medium text-[#00050a] text-base leading-[1.5] whitespace-nowrap group-hover:text-[#0c2080] transition-colors">
-                      Read more
-                    </span>
-                    <div className="w-6 h-6 flex items-center justify-center text-[#00050a] group-hover:text-[#0c2080] transition-colors">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </div>
-                  </Link>
+                  <Button variant="link" href={item.link || "/collections/news/first-article"}>
+                    Read more
+                  </Button>
                 </div>
               </div>
             ))}
@@ -84,9 +77,9 @@ const NewsGridSection = ({
 
         {/* View More Button */}
         <div className="flex justify-center">
-          <button className="border border-[#0c2080] text-[#0c2080] px-6 py-2.5 rounded-xl text-base font-medium leading-[1.5] hover:bg-[#0c2080] hover:text-white transition-colors">
+          <Button variant="secondary">
             {viewMoreButtonText}
-          </button>
+          </Button>
         </div>
       </div>
     </section>

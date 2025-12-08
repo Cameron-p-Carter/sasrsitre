@@ -89,7 +89,7 @@ const EliteTalentSection = ({ hideLearnMore = false }: EliteTalentSectionProps) 
                 href="/contact-us"
                 className={hideLearnMore
                   ? "bg-[#5ae0f6] border border-[#5ae0f6] border-solid rounded-xl hover:bg-[#4dd4e8] transition-colors"
-                  : "flex items-center justify-center gap-2 rounded-xl overflow-hidden hover:transform hover:translate-x-1 transition-transform px-2 py-1"
+                  : "flex items-center justify-center gap-2 rounded-xl overflow-hidden transition-opacity hover:opacity-70 px-2 py-1"
                 }
               >
                 <div className={hideLearnMore
