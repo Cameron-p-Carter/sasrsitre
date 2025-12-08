@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import Button from '@/app/components/shared/Button';
 import Header from '@/app/components/layout/Header';
 import BlogSection from '@/app/components/sections/showcase/BlogSection';
@@ -107,33 +108,37 @@ export default function Home() {
                 <div className="flex flex-col gap-4 md:hidden w-fit">
                   <div className="flex gap-4">
                     <div className="relative w-[100px] h-[100px]">
-                      <img
+                      <Image
                         src="/images/awards/Awards Badges_S@S_ATLASSIAN TECH LEADERSHIP FINALIST 2025.png"
                         alt="Atlassian Tech Leadership Finalist 2025"
-                        className="absolute inset-0 w-full h-full object-cover"
+                        fill
+                        className="object-cover"
                       />
                     </div>
                     <div className="relative w-[100px] h-[100px]">
-                      <img
+                      <Image
                         src="/images/awards/Awards-Badges_S@S_CUB-AWARDS-WINNER-2025.png"
                         alt="CUB Awards Winner 2025"
-                        className="absolute inset-0 w-full h-full object-cover"
+                        fill
+                        className="object-cover"
                       />
                     </div>
                   </div>
                   <div className="flex gap-4">
                     <div className="relative w-[100px] h-[100px]">
-                      <img
+                      <Image
                         src="/images/awards/Awards Badges_S@S_DELOITTE TECHNOLOGY FAST 50 AUSTRALIA RISING STAR WINNER 2024.png"
                         alt="Deloitte Technology Fast 50 Australia Rising Star Winner 2024"
-                        className="absolute inset-0 w-full h-full object-cover"
+                        fill
+                        className="object-cover"
                       />
                     </div>
                     <div className="relative w-[100px] h-[100px]">
-                      <img
+                      <Image
                         src="/images/awards/Awards Badges_S@S_CEO MAGAZINE EXECUTIVE OF THE YEAR AWARDS FINALIST 2025_Blue.png"
                         alt="CEO Magazine Executive of the Year Awards Finalist 2025"
-                        className="absolute inset-0 w-full h-full object-cover"
+                        fill
+                        className="object-cover"
                       />
                     </div>
                   </div>
@@ -142,31 +147,35 @@ export default function Home() {
                 {/* Tablet & Desktop: Horizontal Layout */}
                 <div className="hidden md:flex gap-6 lg:gap-[33px] h-[107px]">
                   <div className="relative w-[100px] h-[100px]">
-                    <img
+                    <Image
                       src="/images/awards/Awards Badges_S@S_ATLASSIAN TECH LEADERSHIP FINALIST 2025.png"
                       alt="Atlassian Tech Leadership Finalist 2025"
-                      className="absolute inset-0 w-full h-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                   </div>
                   <div className="relative w-[100px] h-[100px]">
-                    <img
+                    <Image
                       src="/images/awards/Awards-Badges_S@S_CUB-AWARDS-WINNER-2025.png"
                       alt="CUB Awards Winner 2025"
-                      className="absolute inset-0 w-full h-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                   </div>
                   <div className="relative w-[100px] h-[100px]">
-                    <img
+                    <Image
                       src="/images/awards/Awards Badges_S@S_DELOITTE TECHNOLOGY FAST 50 AUSTRALIA RISING STAR WINNER 2024.png"
                       alt="Deloitte Technology Fast 50 Australia Rising Star Winner 2024"
-                      className="absolute inset-0 w-full h-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                   </div>
                   <div className="relative w-[100px] h-[100px]">
-                    <img
+                    <Image
                       src="/images/awards/Awards Badges_S@S_CEO MAGAZINE EXECUTIVE OF THE YEAR AWARDS FINALIST 2025_Blue.png"
                       alt="CEO Magazine Executive of the Year Awards Finalist 2025"
-                      className="absolute inset-0 w-full h-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                   </div>
                 </div>

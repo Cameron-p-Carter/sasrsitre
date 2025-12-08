@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 interface DeliverableItem {
   iconSrc: string;
   title: string;
@@ -49,7 +51,7 @@ const CaseStudyDeliverablesGrid = ({
             <div className="flex flex-col gap-8 md:hidden w-full">
               {deliverables.map((item, index) => (
                 <div key={index} className="flex flex-col gap-3 items-start w-full">
-                  <img src={item.iconSrc} alt="" className="w-12 h-12" />
+                  <Image src={item.iconSrc} alt="" width={48} height={48} className="w-12 h-12" aria-hidden="true" />
                   <h3 className={`font-['Montserrat',sans-serif] font-bold leading-[1.4] text-[20px] tracking-[-0.2px] ${deliverableTitleColor} w-full`}>
                     {item.title}
                   </h3>
@@ -66,7 +68,7 @@ const CaseStudyDeliverablesGrid = ({
               <div className="flex gap-12 items-start w-full">
                 {deliverables.slice(0, 2).map((item, index) => (
                   <div key={index} className="flex-1 flex flex-col gap-6 items-start">
-                    <img src={item.iconSrc} alt="" className="w-12 h-12" />
+                    <Image src={item.iconSrc} alt="" width={48} height={48} className="w-12 h-12" aria-hidden="true" />
                     <h3 className={`font-['Montserrat',sans-serif] font-bold leading-[1.4] text-[24px] tracking-[-0.24px] ${deliverableTitleColor} w-full`}>
                       {item.title}
                     </h3>
@@ -82,7 +84,7 @@ const CaseStudyDeliverablesGrid = ({
                 <div className="flex gap-12 items-start w-full">
                   {deliverables.slice(2, 4).map((item, index) => (
                     <div key={index} className="flex-1 flex flex-col gap-6 items-start">
-                      <img src={item.iconSrc} alt="" className="w-12 h-12" />
+                      <Image src={item.iconSrc} alt="" width={48} height={48} className="w-12 h-12" aria-hidden="true" />
                       <h3 className={`font-['Montserrat',sans-serif] font-bold leading-[1.4] text-[24px] tracking-[-0.24px] ${deliverableTitleColor} w-full`}>
                         {item.title}
                       </h3>
