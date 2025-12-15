@@ -105,7 +105,7 @@ export default function ImageTextSection({
   };
 
   const content = (
-    <div className="content-stretch flex flex-col gap-6 md:gap-8 grow md:basis-0 items-start relative shrink-0 w-full md:w-1/2 order-1 md:order-1">
+    <div className={`content-stretch flex flex-col gap-6 md:gap-8 grow md:basis-0 items-start relative shrink-0 w-full md:w-1/2 order-1 ${imageOnRight ? 'md:order-1' : 'md:order-2'}`}>
       <h2 className={`font-bold text-[36px] md:text-[48px] leading-[1.2] tracking-[-0.36px] md:tracking-[-0.48px] w-full ${titleColor}`}>
         {title}
       </h2>
@@ -114,7 +114,7 @@ export default function ImageTextSection({
   );
 
   const image = (
-    <div className={`relative rounded-2xl shrink-0 w-full ${imageHeight} md:w-1/2 order-2 md:order-2`}>
+    <div className={`relative rounded-2xl shrink-0 w-full ${imageHeight} md:w-1/2 order-2 ${imageOnRight ? 'md:order-2' : 'md:order-1'}`}>
       <Image
         src={imageSrc}
         alt={imageAlt || title}
