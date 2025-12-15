@@ -50,12 +50,12 @@ const AwardsSection = () => {
         {/* Desktop: Text on left, awards on right */}
         <div className="hidden lg:flex gap-8 xl:gap-[42px] items-center w-full">
           {/* Left: Text */}
-          <p className="font-bold text-[#14d3f3] text-[18px] leading-[1.5] w-[400px] xl:w-[450px] flex-shrink-0">
+          <p className="font-bold text-[#14d3f3] text-[18px] leading-[1.5] flex-shrink-0 whitespace-nowrap">
             We are the preferred ICT supplier for NSW and Australian Government Agencies.
           </p>
 
           {/* Right: Awards */}
-          <div className="flex-1 flex items-center min-w-0">
+          <div className="flex-1 flex items-center justify-end min-w-0">
             <div className="flex gap-4 xl:gap-[35px] items-center">
               {awards.map((award, index) => (
                 <div
