@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 
 interface ContactFormSectionProps {
@@ -138,7 +139,7 @@ export default function ContactFormSection({
                     required
                   />
                   <label className={`font-normal text-[14px] leading-[1.5] ${checkboxTextColor}`}>
-                    I accept the <span className="underline">Terms</span>
+                    I accept the <Link href="/terms-and-conditions" className="underline hover:opacity-80 transition-opacity">Terms</Link>
                   </label>
                 </div>
                 

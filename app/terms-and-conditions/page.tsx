@@ -1,0 +1,20 @@
+import LegalPageTemplate from "@/app/components/templates/LegalPageTemplate";
+import LegalContentBlock from "@/app/components/shared/LegalContentBlock";
+
+const TERMS_CONTENT = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet dui ut erat rutrum vestibulum quis eget sapien. Donec massa est, placerat ac scelerisque sit amet, commodo et felis. Curabitur non lobortis nunc. Aenean a nibh ipsum. Vivamus quis mattis erat, at porttitor massa. Nam scelerisque nunc at neque gravida sollicitudin. Nam luctus in orci eget consectetur. Maecenas vehicula efficitur neque, at rutrum tellus tincidunt pellentesque. Aenean sollicitudin at justo nec vulputate. Phasellus orci arcu, tristique a fermentum vitae, pellentesque mollis urna. Suspendisse mollis volutpat mi, ut bibendum sem euismod ut. Quisque metus metus, luctus a lacus vel, dapibus suscipit justo. Maecenas pulvinar velit ex, ut condimentum dolor efficitur at.
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut lectus purus, faucibus vel orci nec, lacinia placerat arcu. Quisque vel quam sit amet metus vulputate scelerisque. Quisque in nisi laoreet, bibendum metus at, tempor diam. Ut rhoncus bibendum est, a pharetra elit hendrerit non. Nullam egestas enim ac odio aliquet, eu volutpat metus dictum. Pellentesque lorem lacus, dapibus eu est quis, egestas malesuada lectus. Proin malesuada, arcu vel ullamcorper ornare, libero neque convallis odio, et iaculis lorem massa et lacus. Proin nec maximus lectus.
+
+Vestibulum at nisl a felis maximus mollis malesuada id lorem. Aenean aliquam, ipsum nec maximus fermentum, eros mauris euismod mauris, sed sodales turpis libero nec dui. Aenean venenatis sapien ut ante scelerisque fringilla. Vivamus ornare dolor eu erat iaculis, a pellentesque libero luctus. Nulla ut suscipit dolor. Suspendisse quis maximus ex, non pulvinar purus. Duis at suscipit nibh, id semper tellus. Cras vel hendrerit nisl, eget aliquam libero. Morbi efficitur sem in justo sodales, nec sagittis felis maximus. Donec rutrum ipsum sed nunc interdum pretium. Pellentesque tincidunt vestibulum diam vitae mattis. Phasellus malesuada pretium laoreet. Duis eget sem elementum, varius dui vitae, bibendum nunc. Sed pretium ex vel consequat consectetur. In dictum arcu non purus convallis, vel lobortis neque ornare.
+
+Aliquam eu convallis sem, vel posuere risus. Vivamus elit mi, iaculis vitae finibus vitae, facilisis eu urna. Praesent semper ligula tortor, at semper metus hendrerie scelerisque. Donec sed mattis sem. Curabitur lacus nunc, gravida nec lacus nec, auctor porta sapien. Ut lacinia risus eu ornare finibus. Maecenas fermentum sodales tortor, vel laoreet dolor porttitor eget. Suspendisse a arcu quis libero ornare interdum ut sit amet risus. Suspendisse volutpat maximus libero quis egestas. Vivamus aliquam sapien in iaculis iaculis. Proin id sapien metus. Fusce gravida ante quis elit tincidunt, et cursus purus consequat. Praesent vel ex ut lacus sagittis mollis a eget elit. Aliquam erat volutpat. Fusce est arcu, consequat non eleifend eget, consequat non lacus. Fusce ornare enim sit amet fermentum suscipit.
+
+Morbi sit amet ligula nisi. Ut maximus vel libero non feugiat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam nisl ex, pharetra non arcu non, lacinia auctor lorem. Aenean nisl tellus, laoreet sed dolor ut, volutpat euismod diam. Proin ut turpis efficitur, pharetra lectus sit amet, elementum metus. Vestibulum turpis erat, commodo vel tempor nec, pellentesque non dui. Aliquam ac magna id enim luctus feugiat ac et nunc. Nulla eleifend eros eget turpis posuere, sit amet egestas elit gravida. Quisque ligula quam, maximus et dui id, dictum ullamcorper augue. Nam tincidunt ipsum id augue rutrum, vitae convallis libero faucibus. Nunc sit amet nunc vitae sapien iaculis congue et at nisl.`;
+
+export default function TermsAndConditionsPage() {
+  return (
+    <LegalPageTemplate title="Terms and Conditions">
+      <LegalContentBlock content={TERMS_CONTENT} />
+    </LegalPageTemplate>
+  );
+}

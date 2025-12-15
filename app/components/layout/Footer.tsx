@@ -174,8 +174,8 @@ export default function Footer() {
             {/* Copyright and Legal Links */}
             <div className="flex flex-col gap-4 text-white text-sm font-normal leading-[1.5]">
               <div className="flex flex-col gap-4">
-                <FooterLink href="#" className="underline">Privacy Policy</FooterLink>
-                <FooterLink href="#" className="underline">Terms of Service</FooterLink>
+                <FooterLink href="/privacy-policy" className="underline">Privacy Policy</FooterLink>
+                <FooterLink href="/terms-and-conditions" className="underline">Terms of Service</FooterLink>
                 <FooterLink href="#" className="underline">Cookies Settings</FooterLink>
               </div>
               <span className="shrink-0">
