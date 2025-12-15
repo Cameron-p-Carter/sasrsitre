@@ -49,7 +49,7 @@ const BANKING_PORTFOLIO_DATA = {
 const INDUSTRY_CTA_DATA = {
   imageSrc: "/images/placeholder/placeholder16.jpg",
   title: "Transform Your Media Experience",
-  description: "Discover customized solutions that elevate your media business to new heights. Let's connect today!",
+  description: "Discover customised solutions that elevate your media business to new heights. Let's connect today!",
   primaryButtonText: "Contact",
   secondaryButtonText: "Learn More",
 };
@@ -62,7 +62,7 @@ const BANKING_INDUSTRY_DATA = {
     tagline: "Empower",
     title: "Media Solutions",
     titleHighlight: "Redefined",
-    description: "At Software at Scale, we specialize in transforming media enterprises through cutting-edge digital solutions. Our commitment to engineering excellence ensures you stay ahead in a rapidly evolving landscape.",
+    description: "At Software at Scale, we specialise in transforming media enterprises through cutting-edge digital solutions. Our commitment to engineering excellence ensures you stay ahead in a rapidly evolving landscape.",
     overlayOpacity: 0.6,
   },
   portfolio: BANKING_PORTFOLIO_DATA,

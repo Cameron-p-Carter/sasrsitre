@@ -4,10 +4,10 @@ import ServicePageLayout from '@/app/components/templates/ServicePageLayout';
 const TEST_SERVICE_DATA = {
   hero: {
     imageSrc: "/images/placeholder/placeholder50.jpg", // Updated image placeholder
-    tagline: "Optimize",
+    tagline: "Optimise",
     title: "Elevate Engineering",
     titleHighlight: "Performance",
-    description: "Engineering Performance is crucial for enterprises aiming to enhance their software delivery capabilities. By focusing on efficiency and quality, we empower organizations to achieve faster time-to-market while minimizing risks.",
+    description: "Engineering Performance is crucial for enterprises aiming to enhance their software delivery capabilities. By focusing on efficiency and quality, we empower organisations to achieve faster time-to-market while minimizing risks.",
     overlayOpacity: 0.6, // Updated opacity
   },
   // Future sections will be added here

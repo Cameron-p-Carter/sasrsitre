@@ -48,7 +48,7 @@ const FAQ_DATA = {
   faqItems: [
     {
       question: "What services do you offer?",
-      answer: "We offer a range of services including cloud engineering, security architecture, and project acceleration. Our goal is to help businesses modernize their technology stack effectively. Each service is tailored to meet the unique needs of our clients."
+      answer: "We offer a range of services including cloud engineering, security architecture, and project acceleration. Our goal is to help businesses modernise their technology stack effectively. Each service is tailored to meet the unique needs of our clients."
     },
     {
       question: "How can I get started?",

@@ -7,7 +7,7 @@ const TEST_SERVICE_DATA = {
     tagline: "Accelerate",
     title: "Transform Your",
     titleHighlight: "Platform",
-    description: "Our Platform Acceleration service empowers organizations to modernize their software delivery processes. Experience faster deployment and enhanced performance with tailored solutions designed for your unique needs.",
+    description: "Our Platform Acceleration service empowers organisations to modernise their software delivery processes. Experience faster deployment and enhanced performance with tailored solutions designed for your unique needs.",
     overlayOpacity: 0.6, // Updated opacity
   },
   // Future sections will be added here

@@ -73,7 +73,7 @@ export default function Home() {
       {/* Expertise Section */}
       <ImageOverlapSection
         title="Specialised Engineering and Delivery Expertise"
-        description="At Software at Scale, we are dedicated to driving digital acceleration for enterprises through innovative technology solutions. Our mission is to enhance engineering performance and modernize legacy systems while minimizing risk."
+        description="At Software at Scale, we are dedicated to driving digital acceleration for enterprises through innovative technology solutions. Our mission is to enhance engineering performance and modernise legacy systems while minimizing risk."
         underImageSrc="/images/placeholder/placeholder5under.jpg"
         overImageSrc="/images/placeholder/placeholder6ontop.jpg"
         primaryButtonText="Learn More"

@@ -17,7 +17,7 @@ interface ButtonProps {
 }
 
 /**
- * Standardized Button component for the entire site.
+ * Standardised Button component for the entire site.
  *
  * Variants:
  * - primary: Cyan filled button (bg-[#5ae0f6])

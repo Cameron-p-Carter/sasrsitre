@@ -13,7 +13,7 @@ const ProvenApproachSection = () => {
         </svg>
       ),
       title: "Agile Development Process",
-      description: "We utilize agile methodologies to enhance flexibility and responsiveness throughout the project lifecycle."
+      description: "We utilise agile methodologies to enhance flexibility and responsiveness throughout the project lifecycle."
     },
     {
       icon: (
@@ -24,7 +24,7 @@ const ProvenApproachSection = () => {
         </svg>
       ),
       title: "Data-Driven Decisions",
-      description: "We leverage data analytics to inform strategies and optimize outcomes for our clients."
+      description: "We leverage data analytics to inform strategies and optimise outcomes for our clients."
     },
     {
       icon: (

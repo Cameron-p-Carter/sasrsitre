@@ -62,7 +62,7 @@ const BANKING_INDUSTRY_DATA = {
     tagline: "Empower",
     title: "Superannuation",
     titleHighlight: "Innovation",
-    description: "At Software at Scale, we harness cutting-edge technology to drive transformation in the superannuation sector. Our expertise ensures that your organization achieves engineering excellence and meets the demands of a rapidly evolving digital landscape.",
+    description: "At Software at Scale, we harness cutting-edge technology to drive transformation in the superannuation sector. Our expertise ensures that your organisation achieves engineering excellence and meets the demands of a rapidly evolving digital landscape.",
     overlayOpacity: 0.6,
   },
   portfolio: BANKING_PORTFOLIO_DATA,

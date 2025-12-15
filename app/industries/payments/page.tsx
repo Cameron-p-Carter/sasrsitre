@@ -62,7 +62,7 @@ const BANKING_INDUSTRY_DATA = {
     tagline: "Payments",
     title: "Payments Industry",
     titleHighlight: "Experts",
-    description: "At Software at Scale, we specialize in transforming the payments landscape through innovative technology solutions. Our deep industry knowledge and technical expertise empower businesses to navigate complexities and achieve operational excellence.",
+    description: "At Software at Scale, we specialise in transforming the payments landscape through innovative technology solutions. Our deep industry knowledge and technical expertise empower businesses to navigate complexities and achieve operational excellence.",
     overlayOpacity: 0.6,
   },
   portfolio: BANKING_PORTFOLIO_DATA,

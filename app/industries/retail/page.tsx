@@ -49,7 +49,7 @@ const BANKING_PORTFOLIO_DATA = {
 const INDUSTRY_CTA_DATA = {
   imageSrc: "/images/placeholder/placeholder16.jpg",
   title: "Elevate Your Retail Strategy",
-  description: "Connect with us to explore customized solutions that drive retail innovation and operational excellence.",
+  description: "Connect with us to explore customised solutions that drive retail innovation and operational excellence.",
   primaryButtonText: "Contact",
   secondaryButtonText: "Learn More",
 };
@@ -62,7 +62,7 @@ const BANKING_INDUSTRY_DATA = {
     tagline: "Retail",
     title: "Empowering Retail",
     titleHighlight: "Excellence",
-    description: "At Software at Scale, we are dedicated to transforming the retail landscape through innovative technology solutions. Our expertise helps organizations navigate the complexities of compliance and operational efficiency.",
+    description: "At Software at Scale, we are dedicated to transforming the retail landscape through innovative technology solutions. Our expertise helps organisations navigate the complexities of compliance and operational efficiency.",
     overlayOpacity: 0.6,
   },
   portfolio: BANKING_PORTFOLIO_DATA,

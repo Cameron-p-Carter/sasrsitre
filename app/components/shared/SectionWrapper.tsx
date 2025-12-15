@@ -11,7 +11,7 @@ interface SectionWrapperProps {
 
 /**
  * Shared wrapper component for sections across the site.
- * Provides consistent padding, max-width, and background color handling.
+ * Provides consistent padding, max-width, and background colour handling.
  */
 export default function SectionWrapper({
   backgroundColor = 'bg-white',

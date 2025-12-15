@@ -28,7 +28,7 @@ const CoreValuesMissionSection = () => {
                     Our Mission
                   </h3>
                   <p className="font-normal text-base leading-[1.5] w-full">
-                    To enable businesses to scale confidently and modernize their platforms with minimal risk.
+                    To enable businesses to scale confidently and modernise their platforms with minimal risk.
                   </p>
                 </div>
                 

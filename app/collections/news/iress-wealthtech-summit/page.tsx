@@ -96,7 +96,7 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
 const ARTICLE_CTA_DATA: CTASectionData = {
   imageSrc: "/images/placeholder/placeholder16.jpg",
   title: "Secure Your Financial Future",
-  description: "Discover how Software@Scale's cybersecurity and financial technology expertise can strengthen your organization's resilience and performance.",
+  description: "Discover how Software@Scale's cybersecurity and financial technology expertise can strengthen your organisation's resilience and performance.",
   primaryButtonText: "Contact",
   secondaryButtonText: "Learn More",
 };

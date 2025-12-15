@@ -7,7 +7,7 @@ const TEST_SERVICE_DATA = {
     tagline: "Empower",
     title: "Technology Advisory and Fractional",
     titleHighlight: "Resources",
-    description: "Our Technology Advisory and Fractional Services offer tailored strategies to guide your organization through the challenges of digital transformation. With our expert insights and customized solutions, we help you achieve your business objectives effectively.",
+    description: "Our Technology Advisory and Fractional Services offer tailored strategies to guide your organisation through the challenges of digital transformation. With our expert insights and customised solutions, we help you achieve your business objectives effectively.",
     overlayOpacity: 0.6, // Updated opacity
   },
   // Future sections will be added here

@@ -22,7 +22,7 @@ export default function LegalPageTemplate({ title, children }: LegalPageTemplate
           textColor="text-[#00050a]"
         />
 
-        {/* Content Section wrapper to center text content */}
+        {/* Content Section wrapper to centre text content */}
         <section className="bg-[#cce1f4] px-5 md:px-16 py-12 md:py-20 w-full">
           <div className="max-w-[1280px] mx-auto">
             <div className="max-w-[768px] mx-auto w-full">

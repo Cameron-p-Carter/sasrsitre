@@ -12,7 +12,7 @@ const WhyChooseSection = () => {
         </svg>
       ),
       title: "Experience the Difference with Our Tailored Solutions and Expertise",
-      description: "We prioritize your business objectives to deliver impactful results."
+      description: "We prioritise your business objectives to deliver impactful results."
     },
     {
       icon: (

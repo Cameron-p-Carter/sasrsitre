@@ -26,7 +26,7 @@ const OPEN_POSITIONS_DATA = {
     },
     {
       title: "Data Analyst",
-      description: "Analyze data trends to drive strategic decisions and improve operational efficiency.",
+      description: "Analyse data trends to drive strategic decisions and improve operational efficiency.",
       location: "Onsite",
       schedule: "Full Time",
       applyUrl: "https://www.seek.com.au/Software-at-Scale-jobs/at-this-company"

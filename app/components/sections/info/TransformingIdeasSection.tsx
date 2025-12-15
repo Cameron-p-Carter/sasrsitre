@@ -30,7 +30,7 @@ const TransformingIdeasSection = () => {
               Transforming Ideas into Digital Solutions
             </h2>
             <p className="font-normal text-[#00050a] text-base md:text-[17px] lg:text-[18px] leading-[1.5] w-full">
-              At Software at Scale, we specialize in delivering tailored software solutions that meet the unique needs of our clients. Our expertise spans web, mobile, and custom software development, ensuring your digital transformation is seamless and effective.
+              At Software at Scale, we specialise in delivering tailored software solutions that meet the unique needs of our clients. Our expertise spans web, mobile, and custom software development, ensuring your digital transformation is seamless and effective.
             </p>
           </div>
         </div>

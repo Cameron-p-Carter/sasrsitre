@@ -131,7 +131,7 @@ const CASE_STUDY_IMAGE_FEATURES_DATA: CaseStudyImageFeaturesData = {
   features: [
     {
       iconSrc: "/images/icons/automation.svg", // Placeholder for automation
-      title: "Optimized onboarding",
+      title: "Optimised onboarding",
       description: "Applied best practices across data handling and automation to streamline onboarding, while strengthening reporting capabilities.",
     },
     {
