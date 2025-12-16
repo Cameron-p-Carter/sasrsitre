@@ -66,11 +66,12 @@ const ArticleContentSection = ({ contentBlocks, author, backgroundColor, textCol
   const renderBlock = (block: ContentBlock, index: number) => {
     switch (block.type) {
       case 'richText':
-        // Parse content to handle bold text, numbered lists, and paragraphs
+        // Parse content to handle bold text, numbered lists, bullet lists, and paragraphs
         const parseContent = (content: string) => {
           const lines = content.split('\n');
           const elements: React.ReactElement[] = [];
           let currentList: string[] = [];
+          let currentListType: 'ordered' | 'unordered' | null = null;
           let listIndex = 0;
 
           const parseBoldText = (text: string) => {
@@ -83,17 +84,30 @@ const ArticleContentSection = ({ contentBlocks, author, backgroundColor, textCol
           };
 
           const flushList = () => {
-            if (currentList.length > 0) {
-              elements.push(
-                <ol key={`list-${listIndex++}`} className="list-decimal list-inside space-y-4 ml-4">
-                  {currentList.map((item, idx) => (
-                    <li key={idx} className={`font-normal text-base leading-[1.5] ${textColor}`}>
-                      {parseBoldText(item)}
-                    </li>
-                  ))}
-                </ol>
-              );
+            if (currentList.length > 0 && currentListType) {
+              if (currentListType === 'ordered') {
+                elements.push(
+                  <ol key={`list-${listIndex++}`} className="list-decimal list-inside space-y-4 ml-4">
+                    {currentList.map((item, idx) => (
+                      <li key={idx} className={`font-normal text-base leading-[1.5] ${textColor}`}>
+                        {parseBoldText(item)}
+                      </li>
+                    ))}
+                  </ol>
+                );
+              } else {
+                elements.push(
+                  <ul key={`list-${listIndex++}`} className="list-disc list-outside pl-5 space-y-4">
+                    {currentList.map((item, idx) => (
+                      <li key={idx} className={`font-normal text-base leading-[1.5] ${textColor}`}>
+                        {parseBoldText(item)}
+                      </li>
+                    ))}
+                  </ul>
+                );
+              }
               currentList = [];
+              currentListType = null;
             }
           };
 
@@ -104,9 +118,24 @@ const ArticleContentSection = ({ contentBlocks, author, backgroundColor, textCol
             }
 
             // Handle numbered list items
-            const listMatch = line.match(/^\d+\.\s*(.+)/);
-            if (listMatch) {
-              currentList.push(listMatch[1]);
+            const numberedListMatch = line.match(/^\d+\.\s*(.+)/);
+            if (numberedListMatch) {
+              if (currentListType !== 'ordered') {
+                flushList();
+                currentListType = 'ordered';
+              }
+              currentList.push(numberedListMatch[1]);
+              return;
+            }
+
+            // Handle bullet list items (asterisk)
+            const bulletListMatch = line.match(/^\*\s+(.+)/);
+            if (bulletListMatch) {
+              if (currentListType !== 'unordered') {
+                flushList();
+                currentListType = 'unordered';
+              }
+              currentList.push(bulletListMatch[1]);
               return;
             }
 
