@@ -114,7 +114,7 @@ export default function ImageTextSection({
   );
 
   const image = (
-    <div className={`relative rounded-2xl shrink-0 w-full ${imageHeight} md:w-1/2 order-2 ${imageOnRight ? 'md:order-2' : 'md:order-1'}`}>
+    <div className={`relative rounded-2xl shrink-0 w-full h-[335px] md:h-auto md:w-1/2 order-2 ${imageOnRight ? 'md:order-2' : 'md:order-1'}`}>
       <Image
         src={imageSrc}
         alt={imageAlt || title}
@@ -126,7 +126,7 @@ export default function ImageTextSection({
 
   return (
     <SectionWrapper backgroundColor={backgroundColor} id={id}>
-      <div className="flex flex-col md:flex-row gap-12 md:gap-20 items-start">
+      <div className="flex flex-col md:flex-row gap-12 md:gap-20 items-start md:items-stretch">
         {imageOnRight ? (
           <>
             {content}

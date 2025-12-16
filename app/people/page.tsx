@@ -21,6 +21,7 @@ export default function PeoplePage() {
           titleHighlight="Experts"
           description="At Software at Scale, our team comprises seasoned professionals with extensive backgrounds in technology consultancy. We are committed to providing cutting-edge solutions that empower our clients to thrive in a digital-first world."
           overlayOpacity={0.5}
+          objectPosition="center"
         />
         <ImageOverlapSection
           title="Company Overview"
@@ -42,6 +43,7 @@ Our multi-disciplinary teams are industry experts in their fields, with speciali
           title="Join Our Talented Team"
           description="Transform your career with a team that pushes the boundaries of technology and innovation."
           primaryButtonText="Careers"
+          primaryButtonUrl="/careers"
           secondaryButtonText="Contact"
         />
       </main>

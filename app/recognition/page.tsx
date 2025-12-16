@@ -4,6 +4,7 @@ import AwardsSection from '@/app/components/sections/stats/AwardsSection';
 import EliteTalentSection from '@/app/components/sections/info/EliteTalentSection';
 import ImageTextSection from '@/app/components/shared/ImageTextSection';
 import CoreValuesTestimonialSection from '@/app/components/sections/values/CoreValuesTestimonialSection';
+import CTASection from '@/app/components/sections/cta/CTASection';
 import Footer from '@/app/components/layout/Footer';
 
 export default function RecognitionPage() {
@@ -20,6 +21,7 @@ export default function RecognitionPage() {
           titleHighlight="Achievements"
           description="At Software at Scale, we take pride in our accolades that reflect our commitment to innovation and quality. Awards and recognitions not only validate our efforts but also inspire us to continue delivering exceptional solutions."
           overlayOpacity={0.6}
+          objectPosition="center"
         />
         <AwardsSection />
         <EliteTalentSection hideLearnMore={true} />
@@ -84,6 +86,13 @@ export default function RecognitionPage() {
           imageOnRight={false}
         />
         <CoreValuesTestimonialSection/>
+        <CTASection
+          imageSrc="/images/placeholder/placeholder16.jpg"
+          title="Connect with Our Experts"
+          description="Explore how our award-winning services can elevate your business to the next level."
+          primaryButtonText="Contact"
+          secondaryButtonText="Learn More"
+        />
       </main>
       <Footer />
     </div>

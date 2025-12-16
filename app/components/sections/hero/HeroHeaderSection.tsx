@@ -7,6 +7,7 @@ interface HeroHeaderSectionProps {
   titleHighlight: string;
   description: string;
   overlayOpacity: number; // 0.5 for People, 0.6 for Core Values
+  objectPosition?: string; // Optional image positioning (default: 'top')
 }
 
 export default function HeroHeaderSection({
@@ -16,6 +17,7 @@ export default function HeroHeaderSection({
   titleHighlight,
   description,
   overlayOpacity,
+  objectPosition = 'top',
 }: HeroHeaderSectionProps) {
   const overlayColor = `rgba(12, 32, 128, ${overlayOpacity})`;
 
@@ -29,7 +31,7 @@ export default function HeroHeaderSection({
             alt="Background"
             fill
             className="object-cover"
-            style={{ objectPosition: 'top' }}
+            style={{ objectPosition }}
             priority
           />
         </div>

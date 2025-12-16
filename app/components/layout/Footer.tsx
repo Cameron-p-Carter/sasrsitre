@@ -82,7 +82,6 @@ export default function Footer() {
                 <FooterLink href="/collections/case-studies">Case Studies</FooterLink>
                 <FooterLink href="/collections/news">News</FooterLink>
                 <FooterLink href="/collections/perspectives">Perspectives</FooterLink>
-                <FooterLink href="/careers/referral-program">Referral Program</FooterLink>
               </div>
             </div>
             
