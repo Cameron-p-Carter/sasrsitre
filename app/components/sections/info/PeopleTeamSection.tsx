@@ -59,7 +59,7 @@ const PeopleTeamSection = () => {
           {[TEAM_MEMBERS.slice(0, 3), TEAM_MEMBERS.slice(3, 6)].map((row, rowIndex) => (
             <div key={rowIndex} className="flex flex-col md:flex-row gap-12 md:gap-12 w-full">
               {row.map((member) => (
-                <div key={member.name} className="flex flex-col gap-5 md:gap-6 w-full items-start md:w-1/3 md:text-center">
+                <div key={member.name} className="flex flex-col gap-5 md:gap-6 w-full items-start md:w-1/3">
                   {/* Image */}
                   <div className="relative aspect-square rounded-2xl w-full">
                     <Image
@@ -69,10 +69,10 @@ const PeopleTeamSection = () => {
                       className="object-cover rounded-2xl"
                     />
                   </div>
-                  
+
                   {/* Content */}
-                  <div className="flex flex-col gap-3 md:gap-4 w-full items-start md:items-center">
-                    <div className="flex flex-col gap-0 items-start md:items-center w-full">
+                  <div className="flex flex-col gap-3 md:gap-4 w-full items-start">
+                    <div className="flex flex-col gap-0 items-start w-full">
                       <p className="font-semibold text-[#00050a] text-base md:text-[20px] leading-[1.5] w-full">
                         {member.name}
                       </p>
