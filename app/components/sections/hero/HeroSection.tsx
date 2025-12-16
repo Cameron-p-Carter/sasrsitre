@@ -3,7 +3,7 @@ import Button from '@/app/components/shared/Button';
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen flex items-center justify-center px-5 md:px-8 lg:px-16 py-0 pt-[72px] overflow-hidden">
       {/* Video Background */}
       <video
         autoPlay
