@@ -73,8 +73,8 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
     } as RichTextBlock,
     {
       type: 'image',
-      src: '/images/perspectives/placeholder163.jpg',
-      caption: 'Building trust requires transparency and alignment between business and technology teams',
+      src: '/images/perspectives/placholder154.jpg',
+      caption: '',
     } as ImageBlock,
     {
       type: 'richText',
