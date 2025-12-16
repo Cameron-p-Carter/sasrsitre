@@ -42,7 +42,7 @@ const ServiceFeatureColumns = ({ columns, backgroundColor, textColor, titleColor
                 {/* Dynamic Content: List or Paragraph */}
                 <div className={`font-normal text-base leading-[1.5] w-full ${textColor}`}>
                   {Array.isArray(column.content) ? (
-                    <ul className="list-disc list-inside space-y-2">
+                    <ul className="list-disc list-outside pl-5 space-y-2">
                       {column.content.map((item, i) => (
                         <li key={i}>{item}</li>
                       ))}
