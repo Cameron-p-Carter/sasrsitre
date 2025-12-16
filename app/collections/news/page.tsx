@@ -89,14 +89,14 @@ const NEWS_GRID_DATA: NewsGridSectionData = {
       imageSrc: "/images/placeholder/placeholder108.png", // Placeholder
       title: "Approved Supplier: Federal Government ICT Digital and Cloud Marketplace Panels",
       description: "Software@Scale has been approved as a supplier on the Federal Government's ICT Digital and Cloud Marketplace Panels, enabling direct engagement with government agencies for digital transformation initiatives.",
-      link: "/collections/news/ict-supplier",
+      link: "/collections/news/panels",
     },
     {
       id: 9,
       imageSrc: "/images/placeholder/placeholder109.jpg", // Placeholder
       title: "Software@Scale Joins Government Digital Marketplace Panels",
       description: "Software@Scale has been successfully onboarded to multiple government digital marketplace panels, expanding our capability to support public sector digital transformation across Australia.",
-      link: "/collections/news/panels",
+      link: "/collections/news/ict-supplier",
     },
   ],
 };

@@ -72,7 +72,7 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
     } as RichTextBlock,
     {
       type: 'image',
-      src: '/images/placeholder/placeholder108.png',
+      src: '/images/placeholder/placeholder109.jpg',
       caption: 'Software@Scale approved as an ICT supplier under the NSW Government ICT Services Scheme, supporting digital transformation across state agencies.',
     } as ImageBlock,
     {

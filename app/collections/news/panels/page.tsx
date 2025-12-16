@@ -72,7 +72,7 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
     } as RichTextBlock,
     {
       type: 'image',
-      src: '/images/placeholder/placeholder109.jpg',
+      src: '/images/placeholder/placeholder108.png',
       caption: 'Software@Scale approved as a trusted supplier on the Australian Government\'s Digital and Cloud Marketplace Panels, supporting national ICT and digital transformation initiatives.',
     } as ImageBlock,
     {
