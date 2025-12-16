@@ -55,7 +55,7 @@ interface ArticlePageData {
   cta: CTASectionData;
 }
 
-// --- Placeholder Data ---
+// --- Article Data ---
 
 const ARTICLE_HEADER_DATA: ArticleHeaderData = {
   title: "The Best Optimisation Is the One You Do Not Write",
@@ -69,34 +69,22 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
   contentBlocks: [
     {
       type: 'richText',
-      content: `### Introduction\n\nMi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam suspendisse morbi eleifend faucibus eget vestibulum felis. Dictum quis montes, sit sit. Tellus aliquam enim urna, etiam. Mauris posuere vulputate arcu amet, vitae nisi, tellus tincidunt. At feugiat sapien varius id.\n\nEget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat mollis at volutpat lectus velit, sed auctor. Porttitor fames arcu quis fusce augue enim. Quis at habitant diam at. Suscipit tristique risus, at donec. In turpis vel et quam imperdiet. Ipsum molestie aliquet sodales id est ac volutpat.`,
+      content: `As engineers, we thrive on solving hard problems, and it is tempting to dive straight into fix mode. Whether it is adding a cache, tweaking a setting, or minifying code, without solid data these fixes are often educated guesses. In performance engineering, the simplest win is often hiding in plain sight, and it is usually the one that delivers the most business value.\n\n**Measure -> Locate -> Ask and Eliminate -> Optimise and Re measure**`,
     } as RichTextBlock,
     {
       type: 'image',
-      src: '/images/perspectives/placholder159.jpg', // Placeholder image
-      caption: 'Image caption goes here',
+      src: '/images/perspectives/placholder159.jpg',
+      caption: '',
     } as ImageBlock,
     {
       type: 'richText',
-      content: `## Dolor enim eu tortor urna sed duis nulla. Aliquam vestibulum, nulla odio nisl vitae. In aliquet pellentesque aenean hac vestibulum turpis mi bibendum diam. Tempor integer aliquam in vitae malesuada fringilla.\n\nElit nisi in eleifend sed nisi. Pulvinar at orci, proin imperdiet commodo consectetur convallis risus. Sed condimentum enim dignissim adipiscing faucibus consequat, urna. Viverra purus et erat auctor aliquam. Risus, volutpat vulputate posuere purus sit congue convallis aliquet. Arcu id augue ut feugiat donec porttitor neque. Mauris, neque ultricies eu vestibulum, bibendum quam lorem id. Dolor lacus, eget nunc lectus in tellus, pharetra, porttitor.`,
-    } as RichTextBlock,
-    {
-      type: 'quote',
-      text: 'Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque congue eget consectetur turpis. Sapien, dictum molestie sem tempor. Diam elit, orci, tincidunt aenean tempus.',
-    } as QuoteBlock,
-    {
-      type: 'richText',
-      content: `Tristique odio senectus nam posuere ornare leo metus, ultricies. Blandit duis ultricies vulputate morbi feugiat cras placerat elit. Aliquam tellus lorem sed ac. Montes, sed mattis pellentesque suscipit accumsan. Cursus viverra aenean magna risus elementum faucibus molestie pellentesque. Arcu ultricies sed mauris vestibulum.`,
-    } as RichTextBlock,
-    {
-      type: 'richText',
-      content: `## Conclusion\n\nMorbi sed imperdiet in ipsum, adipiscing elit dui lectus. Tellus id scelerisque est ultricies ultricies. Duis est sit sed leo nisl, blandit elit sagittis. Quisque tristique consequat quam sed. Nisl at scelerisque amet nulla purus habitasse.\n\nNunc sed faucibus bibendum feugiat sed interdum. Ipsum egestas condimentum mi massa. In tincidunt pharetra consectetur sed duis facilisis metus. Etiam egestas in nec sed et. Quis lobortis at sit dictum eget nibh tortor commodo cursus.\n\nOdio felis sagittis, morbi feugiat tortor vitae feugiat fusce aliquet. Nam elementum urna nisi aliquet erat dolor enim. Ornare id morbi eget ipsum. Aliquam senectus neque ut id eget consectetur dictum. Donec posuere pharetra odio consequat scelerisque et, nunc tortor.Nulla adipiscing erat a erat. Condimentum lorem posuere gravida enim posuere cursus diam.`,
+      content: `**Measure Every Layer**\nBrowser: Chrome DevTools, Lighthouse, WebPageTest\nNetwork: DevTools Network panel, Charles Proxy, p99 latencies (HTTP Archive)\nAPI: APM traces such as New Relic, Datadog, AppDynamics\nStorage: Slow query logs, EXPLAIN ANALYSE (Postgres) or EXPLAIN (MySQL), PgHero, Percona\n\n**Monitoring: Locate the Hotspot**\nIs your multipurpose API computing extra real time fields on every request, slowing all flows?\nIs the UI re rendering too often because it expects a full payload?\n\n**Ask and Eliminate**\nBefore diving into complex fixes, look for small, high value wins:\nWas this work added for a rare edge case?\nWhich user journeys truly need that JOIN or real time field?\nCould precomputed data serve most users?\nPause to challenge assumptions. Do not remove everything every time, but seize opportunities to strip out low impact logic before tackling bigger problems.\n\n**Optimise and Re measure**\nWith the dead weight gone:\n- Refine queries and algorithms\n- Tackle UX rendering or transformation hotspots\n- Batch calls and memoise heavy computations\n- Apply caching last, with a clear invalidation strategy\n\nThen always measure again to validate improvements, uncover the next hotspot, and repeat.\n\n**Real world win**\nBy questioning two computed fields that were unused for over a year, we removed them and achieved a tenfold speed up for everyday workflows. This impacted only a rare edge case and paved the way for cleaner future releases.\n\n**Try this today**\nPick a sluggish endpoint.\nMeasure across browser, network, API, and storage.\nAsk “Do we really need this?” and “What business value does it deliver?”\nOptimise, re measure, and repeat. Watch performance improve.`,
     } as RichTextBlock,
   ],
   author: {
     name: "Ravi Chotalia",
     title: "Head of Platform Engineering",
-    avatarSrc: "/images/profiles/ravipfp.svg", // Placeholder avatar
+    avatarSrc: "/images/profiles/ravipfp.svg",
   },
   backgroundColor: "bg-[#cce1f4]",
   textColor: "text-[#00050a]",
@@ -104,8 +92,8 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
 
 const ARTICLE_CTA_DATA: CTASectionData = {
   imageSrc: "/images/placeholder/placeholder16.jpg",
-  title: "Join Us on Our Journey",
-  description: "Contact us today to explore how our Cloud Engineering services can transform your business.",
+  title: "Optimise for Value",
+  description: "Contact us to implement performance practices that cut complexity and deliver measurable business speed improvements.",
   primaryButtonText: "Contact",
   secondaryButtonText: "Learn More",
 };
@@ -116,7 +104,7 @@ const ARTICLE_PAGE_DATA: ArticlePageData = {
   cta: ARTICLE_CTA_DATA,
 };
 
-export default function FirstArticlePage() {
+export default function OptimisationPage() {
   return (
     <ArticlePageLayout data={ARTICLE_PAGE_DATA} />
   );

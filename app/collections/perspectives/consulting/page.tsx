@@ -55,7 +55,7 @@ interface ArticlePageData {
   cta: CTASectionData;
 }
 
-// --- Placeholder Data ---
+// --- Article Data ---
 
 const ARTICLE_HEADER_DATA: ArticleHeaderData = {
   title: "Care. Delivery. Honesty. The Consultant Trifecta",
@@ -69,34 +69,22 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
   contentBlocks: [
     {
       type: 'richText',
-      content: `### Introduction\n\nMi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam suspendisse morbi eleifend faucibus eget vestibulum felis. Dictum quis montes, sit sit. Tellus aliquam enim urna, etiam. Mauris posuere vulputate arcu amet, vitae nisi, tellus tincidunt. At feugiat sapien varius id.\n\nEget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat mollis at volutpat lectus velit, sed auctor. Porttitor fames arcu quis fusce augue enim. Quis at habitant diam at. Suscipit tristique risus, at donec. In turpis vel et quam imperdiet. Ipsum molestie aliquet sodales id est ac volutpat.`,
+      content: `I have worked with dozens of software engineering consultants. What actually makes them worth your time and money?\n\nAfter more than twenty years in engineering across finance and technology, these are the patterns I keep seeing. I am curious how this lines up with your experience.\n\n**Most are brilliant. But brilliance is not the same as being useful.**`,
     } as RichTextBlock,
     {
       type: 'image',
-      src: '/images/perspectives/placholder161.jpg', // Placeholder image
-      caption: 'Image caption goes here',
+      src: '/images/perspectives/placholder161.jpg',
+      caption: '',
     } as ImageBlock,
     {
       type: 'richText',
-      content: `## Dolor enim eu tortor urna sed duis nulla. Aliquam vestibulum, nulla odio nisl vitae. In aliquet pellentesque aenean hac vestibulum turpis mi bibendum diam. Tempor integer aliquam in vitae malesuada fringilla.\n\nElit nisi in eleifend sed nisi. Pulvinar at orci, proin imperdiet commodo consectetur convallis risus. Sed condimentum enim dignissim adipiscing faucibus consequat, urna. Viverra purus et erat auctor aliquam. Risus, volutpat vulputate posuere purus sit congue convallis aliquet. Arcu id augue ut feugiat donec porttitor neque. Mauris, neque ultricies eu vestibulum, bibendum quam lorem id. Dolor lacus, eget nunc lectus in tellus, pharetra, porttitor.`,
-    } as RichTextBlock,
-    {
-      type: 'quote',
-      text: 'Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque congue eget consectetur turpis. Sapien, dictum molestie sem tempor. Diam elit, orci, tincidunt aenean tempus.',
-    } as QuoteBlock,
-    {
-      type: 'richText',
-      content: `Tristique odio senectus nam posuere ornare leo metus, ultricies. Blandit duis ultricies vulputate morbi feugiat cras placerat elit. Aliquam tellus lorem sed ac. Montes, sed mattis pellentesque suscipit accumsan. Cursus viverra aenean magna risus elementum faucibus molestie pellentesque. Arcu ultricies sed mauris vestibulum.`,
-    } as RichTextBlock,
-    {
-      type: 'richText',
-      content: `## Conclusion\n\nMorbi sed imperdiet in ipsum, adipiscing elit dui lectus. Tellus id scelerisque est ultricies ultricies. Duis est sit sed leo nisl, blandit elit sagittis. Quisque tristique consequat quam sed. Nisl at scelerisque amet nulla purus habitasse.\n\nNunc sed faucibus bibendum feugiat sed interdum. Ipsum egestas condimentum mi massa. In tincidunt pharetra consectetur sed duis facilisis metus. Etiam egestas in nec sed et. Quis lobortis at sit dictum eget nibh tortor commodo cursus.\n\nOdio felis sagittis, morbi feugiat tortor vitae feugiat fusce aliquet. Nam elementum urna nisi aliquet erat dolor enim. Ornare id morbi eget ipsum. Aliquam senectus neque ut id eget consectetur dictum. Donec posuere pharetra odio consequat scelerisque et, nunc tortor.Nulla adipiscing erat a erat. Condimentum lorem posuere gravida enim posuere cursus diam.`,
+      content: `**The best ones care.** You can feel it. They ask about your constraints, team dynamics, and budget, and they do not push the perfect answer then vanish when reality bites.\n\n**Caring is draining**, so the keepers set boundaries. They stay invested without torching their energy.\n\n**They ship.** They do not overpromise. They set a realistic timeline, flag risks early, and show up when it gets hard.\n\n**They are open about constraints.** They explain what fits in four weeks, what needs more time, and why.\n\n**They explain the real trade offs:**\n* “Yes, this scales. You probably will not need it for two years.”\n* “That framework is fast, but your team will spend months learning it. Is it worth it for a 15 percent improvement?”\n* “We can build it, or you can buy off the shelf for a fifth of the cost and be live next week.”\n\n**The best ones I have worked with will tell you**:\n“I do not think I am the right fit for this,” or “This project is not set up for success and I do not want to waste your money.”\nIt costs them revenue in the short term, but it builds trust that pays dividends.\n\n**They are candid about what they do not know.**\n“I will dig in and get back to you,” then they actually do the work and collaborate with your engineers, who know the system best.\n\n**And the differentiator: they make your team better.**\nThey document decisions, explain the why, share playbooks, and mentor.\nThey aim to be replaceable because if you do not need them anymore, the engagement worked.\n\n**Hiring?** Look for care, delivery, and candour about trade offs.\n**Consulting?** Technical ability opens the door. Character keeps you in the room.`,
     } as RichTextBlock,
   ],
   author: {
     name: "Ravi Chotalia",
     title: "Head of Platform Engineering",
-    avatarSrc: "/images/profiles/ravipfp.svg", // Placeholder avatar
+    avatarSrc: "/images/profiles/ravipfp.svg",
   },
   backgroundColor: "bg-[#cce1f4]",
   textColor: "text-[#00050a]",
@@ -104,8 +92,8 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
 
 const ARTICLE_CTA_DATA: CTASectionData = {
   imageSrc: "/images/placeholder/placeholder16.jpg",
-  title: "Join Us on Our Journey",
-  description: "Contact us today to explore how our Cloud Engineering services can transform your business.",
+  title: "Find Your Trusted Partner",
+  description: "Contact us to engage engineering consultants who deliver technical excellence alongside genuine partnership and candour.",
   primaryButtonText: "Contact",
   secondaryButtonText: "Learn More",
 };
@@ -116,7 +104,7 @@ const ARTICLE_PAGE_DATA: ArticlePageData = {
   cta: ARTICLE_CTA_DATA,
 };
 
-export default function FirstArticlePage() {
+export default function ConsultingPage() {
   return (
     <ArticlePageLayout data={ARTICLE_PAGE_DATA} />
   );

@@ -55,7 +55,7 @@ interface ArticlePageData {
   cta: CTASectionData;
 }
 
-// --- Placeholder Data ---
+// --- Article Data ---
 
 const ARTICLE_HEADER_DATA: ArticleHeaderData = {
   title: "When RACI Goes Wrong",
@@ -69,34 +69,22 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
   contentBlocks: [
     {
       type: 'richText',
-      content: `### Introduction\n\nMi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam suspendisse morbi eleifend faucibus eget vestibulum felis. Dictum quis montes, sit sit. Tellus aliquam enim urna, etiam. Mauris posuere vulputate arcu amet, vitae nisi, tellus tincidunt. At feugiat sapien varius id.\n\nEget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat mollis at volutpat lectus velit, sed auctor. Porttitor fames arcu quis fusce augue enim. Quis at habitant diam at. Suscipit tristique risus, at donec. In turpis vel et quam imperdiet. Ipsum molestie aliquet sodales id est ac volutpat.`,
+      content: `RACI (Responsible, Accountable, Consulted, Informed) has been used by project managers for decades as a way to define the roles of individuals and teams. It has become widely adopted across many organisations. But it is important to watch out for those who appear to be following this framework while actually working around it. I call these toxic behaviours Negotiated and Deflected, and conveniently these extend the acronym to spell RANCID.`,
     } as RichTextBlock,
     {
       type: 'image',
-      src: '/images/perspectives/placholder162.jpg', // Placeholder image
-      caption: 'Image caption goes here',
+      src: '/images/perspectives/placholder162.jpg',
+      caption: '',
     } as ImageBlock,
     {
       type: 'richText',
-      content: `## Dolor enim eu tortor urna sed duis nulla. Aliquam vestibulum, nulla odio nisl vitae. In aliquet pellentesque aenean hac vestibulum turpis mi bibendum diam. Tempor integer aliquam in vitae malesuada fringilla.\n\nElit nisi in eleifend sed nisi. Pulvinar at orci, proin imperdiet commodo consectetur convallis risus. Sed condimentum enim dignissim adipiscing faucibus consequat, urna. Viverra purus et erat auctor aliquam. Risus, volutpat vulputate posuere purus sit congue convallis aliquet. Arcu id augue ut feugiat donec porttitor neque. Mauris, neque ultricies eu vestibulum, bibendum quam lorem id. Dolor lacus, eget nunc lectus in tellus, pharetra, porttitor.`,
-    } as RichTextBlock,
-    {
-      type: 'quote',
-      text: 'Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque congue eget consectetur turpis. Sapien, dictum molestie sem tempor. Diam elit, orci, tincidunt aenean tempus.',
-    } as QuoteBlock,
-    {
-      type: 'richText',
-      content: `Tristique odio senectus nam posuere ornare leo metus, ultricies. Blandit duis ultricies vulputate morbi feugiat cras placerat elit. Aliquam tellus lorem sed ac. Montes, sed mattis pellentesque suscipit accumsan. Cursus viverra aenean magna risus elementum faucibus molestie pellentesque. Arcu ultricies sed mauris vestibulum.`,
-    } as RichTextBlock,
-    {
-      type: 'richText',
-      content: `## Conclusion\n\nMorbi sed imperdiet in ipsum, adipiscing elit dui lectus. Tellus id scelerisque est ultricies ultricies. Duis est sit sed leo nisl, blandit elit sagittis. Quisque tristique consequat quam sed. Nisl at scelerisque amet nulla purus habitasse.\n\nNunc sed faucibus bibendum feugiat sed interdum. Ipsum egestas condimentum mi massa. In tincidunt pharetra consectetur sed duis facilisis metus. Etiam egestas in nec sed et. Quis lobortis at sit dictum eget nibh tortor commodo cursus.\n\nOdio felis sagittis, morbi feugiat tortor vitae feugiat fusce aliquet. Nam elementum urna nisi aliquet erat dolor enim. Ornare id morbi eget ipsum. Aliquam senectus neque ut id eget consectetur dictum. Donec posuere pharetra odio consequat scelerisque et, nunc tortor.Nulla adipiscing erat a erat. Condimentum lorem posuere gravida enim posuere cursus diam.`,
+      content: `**Negotiated**\nTheir role changes on a seemingly arbitrary basis. Sometimes they take full responsibility, and other times they say “it is not my problem”. Their claim is usually that there is a lack of clarity in the distribution of roles, but it is more likely an exercise in looking for gaps and technicalities in how roles are split rather than trying to help achieve the overall intent and outcome. A common sign is the person who says: “this situation is different due to” followed by a very specific detail.\n\n**Deflected**\nThey consistently find a way to divert work to other individuals or teams rather than themselves. They often appear to be helpful, but in reality they are shifting the majority of the mental load to others. A typical pattern is someone saying: “you can come back to me when you have a question” rather than taking ownership of the problem itself.\n\nThese behaviours can fly under the radar because they are not overtly confrontational. But if they are not identified and addressed, they can significantly hinder how a team or a collection of teams works towards its goals.`,
     } as RichTextBlock,
   ],
   author: {
     name: "Li-Shuai Soh",
     title: "CTO | Head of Engineering",
-    avatarSrc: "/images/profiles/lipfp.svg", // Placeholder avatar
+    avatarSrc: "/images/profiles/lipfp.svg",
   },
   backgroundColor: "bg-[#cce1f4]",
   textColor: "text-[#00050a]",
@@ -104,8 +92,8 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
 
 const ARTICLE_CTA_DATA: CTASectionData = {
   imageSrc: "/images/placeholder/placeholder16.jpg",
-  title: "Join Us on Our Journey",
-  description: "Contact us today to explore how our Cloud Engineering services can transform your business.",
+  title: "Define Accountability",
+  description: "Contact us to help implement robust governance models and frameworks that drive clear accountability and efficient delivery.",
   primaryButtonText: "Contact",
   secondaryButtonText: "Learn More",
 };
@@ -116,7 +104,7 @@ const ARTICLE_PAGE_DATA: ArticlePageData = {
   cta: ARTICLE_CTA_DATA,
 };
 
-export default function FirstArticlePage() {
+export default function RaciPage() {
   return (
     <ArticlePageLayout data={ARTICLE_PAGE_DATA} />
   );

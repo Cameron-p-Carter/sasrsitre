@@ -55,7 +55,7 @@ interface ArticlePageData {
   cta: CTASectionData;
 }
 
-// --- Placeholder Data ---
+// --- Article Data ---
 
 const ARTICLE_HEADER_DATA: ArticleHeaderData = {
   title: "Great Delivery Starts With Strong Partnerships",
@@ -69,34 +69,30 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
   contentBlocks: [
     {
       type: 'richText',
-      content: `### Introduction\n\nMi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam suspendisse morbi eleifend faucibus eget vestibulum felis. Dictum quis montes, sit sit. Tellus aliquam enim urna, etiam. Mauris posuere vulputate arcu amet, vitae nisi, tellus tincidunt. At feugiat sapien varius id.\n\nEget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat mollis at volutpat lectus velit, sed auctor. Porttitor fames arcu quis fusce augue enim. Quis at habitant diam at. Suscipit tristique risus, at donec. In turpis vel et quam imperdiet. Ipsum molestie aliquet sodales id est ac volutpat.`,
+      content: `**Great delivery is not just about meeting deadlines. It is about empowering teams to succeed.**\n\nFrom experience, the strongest teams share one essential dynamic: a true partnership between the Engineering Lead and the Delivery or Program Manager.\n\nHere is why this relationship makes all the difference:`,
+    } as RichTextBlock,
+    {
+      type: 'richText',
+      content: `**A strong Delivery or Program Manager keeps low level deadlines on track.**\nThey go deeply under the reasons behind delays or obstacles, ask the hard questions, communicate transparently, manage challenging discussions proactively, and shield the team so they can focus on quality.\n\n**A strong Engineering Lead brings clarity, actionable insights, and solutions, not just problems.**\nThey arm the Delivery Manager with clear risks and reasoning to confidently set expectations with customers and stakeholders. They help everyone understand technical risks and trade offs, enabling the team to navigate complexities effectively.`,
+    } as RichTextBlock,
+    {
+      type: 'richText',
+      content: `**When this partnership clicks:**\n* Deadlines become realistic and meaningful\n* Risks are identified early and addressed\n* Trust and confidence grow across the whole team\n\n**When this partnership is not there:**\n* Teams face unnecessary pressure to meet unrealistic client expectations\n* Shortcuts become tempting\n* Quality drops and hidden risks increase`,
     } as RichTextBlock,
     {
       type: 'image',
-      src: '/images/perspectives/placholder155.jpg', // Placeholder image
-      caption: 'Image caption goes here',
+      src: '/images/perspectives/placholder155.jpg',
+      caption: '',
     } as ImageBlock,
     {
       type: 'richText',
-      content: `## Dolor enim eu tortor urna sed duis nulla. Aliquam vestibulum, nulla odio nisl vitae. In aliquet pellentesque aenean hac vestibulum turpis mi bibendum diam. Tempor integer aliquam in vitae malesuada fringilla.\n\nElit nisi in eleifend sed nisi. Pulvinar at orci, proin imperdiet commodo consectetur convallis risus. Sed condimentum enim dignissim adipiscing faucibus consequat, urna. Viverra purus et erat auctor aliquam. Risus, volutpat vulputate posuere purus sit congue convallis aliquet. Arcu id augue ut feugiat donec porttitor neque. Mauris, neque ultricies eu vestibulum, bibendum quam lorem id. Dolor lacus, eget nunc lectus in tellus, pharetra, porttitor.`,
-    } as RichTextBlock,
-    {
-      type: 'quote',
-      text: 'Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque congue eget consectetur turpis. Sapien, dictum molestie sem tempor. Diam elit, orci, tincidunt aenean tempus.',
-    } as QuoteBlock,
-    {
-      type: 'richText',
-      content: `Tristique odio senectus nam posuere ornare leo metus, ultricies. Blandit duis ultricies vulputate morbi feugiat cras placerat elit. Aliquam tellus lorem sed ac. Montes, sed mattis pellentesque suscipit accumsan. Cursus viverra aenean magna risus elementum faucibus molestie pellentesque. Arcu ultricies sed mauris vestibulum.`,
-    } as RichTextBlock,
-    {
-      type: 'richText',
-      content: `## Conclusion\n\nMorbi sed imperdiet in ipsum, adipiscing elit dui lectus. Tellus id scelerisque est ultricies ultricies. Duis est sit sed leo nisl, blandit elit sagittis. Quisque tristique consequat quam sed. Nisl at scelerisque amet nulla purus habitasse.\n\nNunc sed faucibus bibendum feugiat sed interdum. Ipsum egestas condimentum mi massa. In tincidunt pharetra consectetur sed duis facilisis metus. Etiam egestas in nec sed et. Quis lobortis at sit dictum eget nibh tortor commodo cursus.\n\nOdio felis sagittis, morbi feugiat tortor vitae feugiat fusce aliquet. Nam elementum urna nisi aliquet erat dolor enim. Ornare id morbi eget ipsum. Aliquam senectus neque ut id eget consectetur dictum. Donec posuere pharetra odio consequat scelerisque et, nunc tortor.Nulla adipiscing erat a erat. Condimentum lorem posuere gravida enim posuere cursus diam.`,
+      content: `Over the years, I have had the privilege of working with some of the highly respected Heads of Delivery and Program Managers, including Alexey Greyze, Garry Labana, Christian Colmenar, Wendy Khoo, Zina, Darren Vorster, Karen Anderson, Bao Pham, Arun Korri, Timothy Nelson, Hasan Husain, Patricia Droguett. Several of them are now executive leaders and founders, yet they continue to embody this partnership every single day.\n\nThis concept echoes my recent post on the power of “going deeper” in every role by asking better questions and seeking the truth to drive results.\n\nGreat delivery is not driven by pressure. It is fuelled by strong relationships, trust, and genuine curiosity.`,
     } as RichTextBlock,
   ],
   author: {
     name: "Ravi Chotalia",
     title: "Head of Platform Engineering",
-    avatarSrc: "/images/profiles/ravipfp.svg", // Placeholder avatar
+    avatarSrc: "/images/profiles/ravipfp.svg",
   },
   backgroundColor: "bg-[#cce1f4]",
   textColor: "text-[#00050a]",
@@ -104,8 +100,8 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
 
 const ARTICLE_CTA_DATA: CTASectionData = {
   imageSrc: "/images/placeholder/placeholder16.jpg",
-  title: "Join Us on Our Journey",
-  description: "Contact us today to explore how our Cloud Engineering services can transform your business.",
+  title: "Strengthen Your Delivery Partnerships",
+  description: "Contact us to explore how we can help you align your engineering and delivery functions for superior results.",
   primaryButtonText: "Contact",
   secondaryButtonText: "Learn More",
 };
@@ -116,7 +112,7 @@ const ARTICLE_PAGE_DATA: ArticlePageData = {
   cta: ARTICLE_CTA_DATA,
 };
 
-export default function FirstArticlePage() {
+export default function PartnershipsPage() {
   return (
     <ArticlePageLayout data={ARTICLE_PAGE_DATA} />
   );

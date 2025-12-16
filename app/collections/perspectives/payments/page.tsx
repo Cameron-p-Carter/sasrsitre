@@ -55,7 +55,7 @@ interface ArticlePageData {
   cta: CTASectionData;
 }
 
-// --- Placeholder Data ---
+// --- Article Data ---
 
 const ARTICLE_HEADER_DATA: ArticleHeaderData = {
   title: "Australia's Payment Infrastructure: A Decade Ahead",
@@ -69,34 +69,22 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
   contentBlocks: [
     {
       type: 'richText',
-      content: `### Introduction\n\nMi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam suspendisse morbi eleifend faucibus eget vestibulum felis. Dictum quis montes, sit sit. Tellus aliquam enim urna, etiam. Mauris posuere vulputate arcu amet, vitae nisi, tellus tincidunt. At feugiat sapien varius id.\n\nEget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat mollis at volutpat lectus velit, sed auctor. Porttitor fames arcu quis fusce augue enim. Quis at habitant diam at. Suscipit tristique risus, at donec. In turpis vel et quam imperdiet. Ipsum molestie aliquet sodales id est ac volutpat.`,
+      content: `We often look overseas for best practices, yet here in Australia we have quietly built one of the most sophisticated real time payment ecosystems in the world. It is engineered for speed, security, and seamless interoperability.\n\nWhat sets us apart:`,
     } as RichTextBlock,
     {
       type: 'image',
-      src: '/images/perspectives/placholder153.jpg', // Placeholder image
-      caption: 'Image caption goes here',
+      src: '/images/perspectives/placholder153.jpg',
+      caption: '',
     } as ImageBlock,
     {
       type: 'richText',
-      content: `## Dolor enim eu tortor urna sed duis nulla. Aliquam vestibulum, nulla odio nisl vitae. In aliquet pellentesque aenean hac vestibulum turpis mi bibendum diam. Tempor integer aliquam in vitae malesuada fringilla.\n\nElit nisi in eleifend sed nisi. Pulvinar at orci, proin imperdiet commodo consectetur convallis risus. Sed condimentum enim dignissim adipiscing faucibus consequat, urna. Viverra purus et erat auctor aliquam. Risus, volutpat vulputate posuere purus sit congue convallis aliquet. Arcu id augue ut feugiat donec porttitor neque. Mauris, neque ultricies eu vestibulum, bibendum quam lorem id. Dolor lacus, eget nunc lectus in tellus, pharetra, porttitor.`,
-    } as RichTextBlock,
-    {
-      type: 'quote',
-      text: 'Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque congue eget consectetur turpis. Sapien, dictum molestie sem tempor. Diam elit, orci, tincidunt aenean tempus.',
-    } as QuoteBlock,
-    {
-      type: 'richText',
-      content: `Tristique odio senectus nam posuere ornare leo metus, ultricies. Blandit duis ultricies vulputate morbi feugiat cras placerat elit. Aliquam tellus lorem sed ac. Montes, sed mattis pellentesque suscipit accumsan. Cursus viverra aenean magna risus elementum faucibus molestie pellentesque. Arcu ultricies sed mauris vestibulum.`,
-    } as RichTextBlock,
-    {
-      type: 'richText',
-      content: `## Conclusion\n\nMorbi sed imperdiet in ipsum, adipiscing elit dui lectus. Tellus id scelerisque est ultricies ultricies. Duis est sit sed leo nisl, blandit elit sagittis. Quisque tristique consequat quam sed. Nisl at scelerisque amet nulla purus habitasse.\n\nNunc sed faucibus bibendum feugiat sed interdum. Ipsum egestas condimentum mi massa. In tincidunt pharetra consectetur sed duis facilisis metus. Etiam egestas in nec sed et. Quis lobortis at sit dictum eget nibh tortor commodo cursus.\n\nOdio felis sagittis, morbi feugiat tortor vitae feugiat fusce aliquet. Nam elementum urna nisi aliquet erat dolor enim. Ornare id morbi eget ipsum. Aliquam senectus neque ut id eget consectetur dictum. Donec posuere pharetra odio consequat scelerisque et, nunc tortor.Nulla adipiscing erat a erat. Condimentum lorem posuere gravida enim posuere cursus diam.`,
+      content: `**New Payments Platform (NPP)**\nInstant settlement, available 24 hours a day, 7 days a week, including weekends and public holidays. Payments typically clear in under 60 seconds.\n\n**PayID**\nSay goodbye to BSBs and account numbers. Link payments to a mobile number, email address, or ABN for a streamlined experience and lower fraud risk.\n\n**PayTo**\nA consent driven, pull based framework for recurring or one off payments. Customers can authorise and revoke agreements directly in their banking app.\n\n**Osko**\nPeer to peer payments over NPP, complete with real time confirmation and rich metadata.\n\n**ISO 20022**\nA structured, extensible messaging standard that delivers richer data for reconciliation, compliance, and automation.\n\nFrom a systems design perspective, this translates into:\n\n*   Real time APIs replacing nightly batch jobs\n*   Event driven workflows across institutional boundaries\n*   Verified payee addressing to strengthen trust and reduce fraud\n*   Native consent flows built into the protocol\n*   Data rich payloads that reduce operational overhead and fuel automation\n\nThe real magic is not just the technology. It is the alignment of technical architecture, regulatory strategy, and industry adoption. That combination is rare and powerful.`,
     } as RichTextBlock,
   ],
   author: {
     name: "Ravi Chotalia",
     title: "Head of Platform Engineering",
-    avatarSrc: "/images/profiles/ravipfp.svg", // Placeholder avatar
+    avatarSrc: "/images/profiles/ravipfp.svg",
   },
   backgroundColor: "bg-[#cce1f4]",
   textColor: "text-[#00050a]",
@@ -104,8 +92,8 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
 
 const ARTICLE_CTA_DATA: CTASectionData = {
   imageSrc: "/images/placeholder/placeholder16.jpg",
-  title: "Join Us on Our Journey",
-  description: "Contact us today to explore how our Cloud Engineering services can transform your business.",
+  title: "Build Next Generation Payment Systems",
+  description: "Contact us to leverage our expertise in Australia's real-time payment ecosystem for your business advantage.",
   primaryButtonText: "Contact",
   secondaryButtonText: "Learn More",
 };
@@ -116,7 +104,7 @@ const ARTICLE_PAGE_DATA: ArticlePageData = {
   cta: ARTICLE_CTA_DATA,
 };
 
-export default function FirstArticlePage() {
+export default function PaymentsPage() {
   return (
     <ArticlePageLayout data={ARTICLE_PAGE_DATA} />
   );

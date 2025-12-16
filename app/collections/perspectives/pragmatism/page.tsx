@@ -55,7 +55,7 @@ interface ArticlePageData {
   cta: CTASectionData;
 }
 
-// --- Placeholder Data ---
+// --- Article Data ---
 
 const ARTICLE_HEADER_DATA: ArticleHeaderData = {
   title: "From Hype to Engineered Success: Be the Pragmatist",
@@ -69,34 +69,22 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
   contentBlocks: [
     {
       type: 'richText',
-      content: `### Introduction\n\nMi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam suspendisse morbi eleifend faucibus eget vestibulum felis. Dictum quis montes, sit sit. Tellus aliquam enim urna, etiam. Mauris posuere vulputate arcu amet, vitae nisi, tellus tincidunt. At feugiat sapien varius id.\n\nEget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat mollis at volutpat lectus velit, sed auctor. Porttitor fames arcu quis fusce augue enim. Quis at habitant diam at. Suscipit tristique risus, at donec. In turpis vel et quam imperdiet. Ipsum molestie aliquet sodales id est ac volutpat.`,
+      content: `**The Believers treat AI as an oracle. The Skeptics treat it as a risk.**\n\nThe Pragmatists treat AI as an unreliable component in a reliable system. AI is nondeterministic and probabilistic, so they build determinism around it.\n\nI have been in many conversations from meetups and BeerOps to deep dive sessions with teams at some of the largest banks in Australia. AI is everywhere, but I see only three approaches and only one consistently delivers.`,
     } as RichTextBlock,
     {
       type: 'image',
-      src: '/images/perspectives/placeholder163.jpg', // Placeholder image
-      caption: 'Image caption goes here',
+      src: '/images/perspectives/placeholder163.jpg',
+      caption: '',
     } as ImageBlock,
     {
       type: 'richText',
-      content: `## Dolor enim eu tortor urna sed duis nulla. Aliquam vestibulum, nulla odio nisl vitae. In aliquet pellentesque aenean hac vestibulum turpis mi bibendum diam. Tempor integer aliquam in vitae malesuada fringilla.\n\nElit nisi in eleifend sed nisi. Pulvinar at orci, proin imperdiet commodo consectetur convallis risus. Sed condimentum enim dignissim adipiscing faucibus consequat, urna. Viverra purus et erat auctor aliquam. Risus, volutpat vulputate posuere purus sit congue convallis aliquet. Arcu id augue ut feugiat donec porttitor neque. Mauris, neque ultricies eu vestibulum, bibendum quam lorem id. Dolor lacus, eget nunc lectus in tellus, pharetra, porttitor.`,
-    } as RichTextBlock,
-    {
-      type: 'quote',
-      text: 'Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque congue eget consectetur turpis. Sapien, dictum molestie sem tempor. Diam elit, orci, tincidunt aenean tempus.',
-    } as QuoteBlock,
-    {
-      type: 'richText',
-      content: `Tristique odio senectus nam posuere ornare leo metus, ultricies. Blandit duis ultricies vulputate morbi feugiat cras placerat elit. Aliquam tellus lorem sed ac. Montes, sed mattis pellentesque suscipit accumsan. Cursus viverra aenean magna risus elementum faucibus molestie pellentesque. Arcu ultricies sed mauris vestibulum.`,
-    } as RichTextBlock,
-    {
-      type: 'richText',
-      content: `## Conclusion\n\nMorbi sed imperdiet in ipsum, adipiscing elit dui lectus. Tellus id scelerisque est ultricies ultricies. Duis est sit sed leo nisl, blandit elit sagittis. Quisque tristique consequat quam sed. Nisl at scelerisque amet nulla purus habitasse.\n\nNunc sed faucibus bibendum feugiat sed interdum. Ipsum egestas condimentum mi massa. In tincidunt pharetra consectetur sed duis facilisis metus. Etiam egestas in nec sed et. Quis lobortis at sit dictum eget nibh tortor commodo cursus.\n\nOdio felis sagittis, morbi feugiat tortor vitae feugiat fusce aliquet. Nam elementum urna nisi aliquet erat dolor enim. Ornare id morbi eget ipsum. Aliquam senectus neque ut id eget consectetur dictum. Donec posuere pharetra odio consequat scelerisque et, nunc tortor.Nulla adipiscing erat a erat. Condimentum lorem posuere gravida enim posuere cursus diam.`,
+      content: `**The Three Camps**\n\n**The Skeptics** (Trial and Abandon)\nI watched a senior engineer try Copilot for a week. He asked it to scaffold an API controller. Or he tried to build a Docusign clone in a single prompt. He got back code with fake imports and subtle bugs.\n“See? It is garbage. I will just write it myself.”\n\nThey tried AI a few times, expected it to work like a senior dev, got burned by hallucinations, and gave up.\n\n**The Believers** (Magic and Chaos)\nOne team pushed auto generated API docs straight to production without review. It looked great until customers realised half the endpoints did not exist. They move fast, break things, and spend weeks fixing the mess.\n\n**The Pragmatic Operators**\nThese teams accept that AI is probabilistic. So they wrap it in processes that are deterministic. They use AI to accelerate the work but never to authorise it. They keep humans in the loop and verify everything.\n\nI am working **with a team using AI to analyse current state by scanning thousands of lines of legacy code. It turns months of manual discovery into days of validated insight.**\n\nOur team uses **AI for initial code review**, treating it like a junior engineer's feedback. It catches trivial issues so engineers save hours and can focus on what matters.\n\nWe use Figma MCP with Claude to scaffold initial UI code. Engineers still own the final quality check. We also use AI to act as a red team, finding security gaps in seconds that used to take weeks.\n\n**What Separates Them**\n**Pragmatists assume hallucinations and bugs**, so they build guardrails first. Automated tests, review gates, and **strict validation. They do not trust the AI blindly. They trust the process around it.**\n\n**You can still do it right.**\n\n1. **Define failure modes first**, not success metrics\n2. **Build guardrails that block**, not just warn\n3. **Value shipped and verified** over perfect on paper\n\nPragmatists are engineering reliability out of an unreliable tool. Choose to be one today.`,
     } as RichTextBlock,
   ],
   author: {
     name: "Ravi Chotalia",
     title: "Head of Platform Engineering",
-    avatarSrc: "/images/profiles/ravipfp.svg", // Placeholder avatar
+    avatarSrc: "/images/profiles/ravipfp.svg",
   },
   backgroundColor: "bg-[#cce1f4]",
   textColor: "text-[#00050a]",
@@ -104,8 +92,8 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
 
 const ARTICLE_CTA_DATA: CTASectionData = {
   imageSrc: "/images/placeholder/placeholder16.jpg",
-  title: "Join Us on Our Journey",
-  description: "Contact us today to explore how our Cloud Engineering services can transform your business.",
+  title: "Engineer Reliability into AI",
+  description: "Contact us to deploy AI tools with the guardrails and engineering practices needed to ensure reliable business outcomes.",
   primaryButtonText: "Contact",
   secondaryButtonText: "Learn More",
 };
@@ -116,7 +104,7 @@ const ARTICLE_PAGE_DATA: ArticlePageData = {
   cta: ARTICLE_CTA_DATA,
 };
 
-export default function FirstArticlePage() {
+export default function PragmatismPage() {
   return (
     <ArticlePageLayout data={ARTICLE_PAGE_DATA} />
   );
