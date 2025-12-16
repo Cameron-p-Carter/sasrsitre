@@ -13,6 +13,7 @@ interface ImageBlock {
   type: 'image';
   src: string;
   caption: string;
+  objectPosition?: string;
 }
 
 interface QuoteBlock {
@@ -186,6 +187,7 @@ const ArticleContentSection = ({ contentBlocks, author, backgroundColor, textCol
                 alt={block.caption}
                 fill
                 className="object-cover rounded-2xl"
+                style={block.objectPosition ? { objectPosition: block.objectPosition } : undefined}
               />
             </div>
             <div className="flex gap-2 items-start w-full">

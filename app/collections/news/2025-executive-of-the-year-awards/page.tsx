@@ -20,6 +20,7 @@ interface ImageBlock {
   type: 'image';
   src: string;
   caption: string;
+  objectPosition?: string;
 }
 
 interface QuoteBlock {
@@ -83,6 +84,7 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
       type: 'image',
       src: '/images/placeholder/placeholder114.jpg',
       caption: 'CEO, Louis Droguett recognised for his leadership on scaling one of Australia\'s fastest-growing technology businesses.',
+      objectPosition: 'top',
     } as ImageBlock,
     {
       type: 'richText',
