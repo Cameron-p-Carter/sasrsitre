@@ -40,7 +40,7 @@ export default function PortfolioSection({
         {/* Mobile Layout: Single Column */}
         <div className="flex flex-col gap-12 md:hidden mb-12">
           {projects.map((project) => (
-            <div key={project.id} className="flex flex-col gap-5">
+            <Link key={project.id} href={project.link || "/collections/case-studies"} className="flex flex-col gap-5 group cursor-pointer">
               <div className={`relative w-full ${project.aspectRatio} rounded-2xl overflow-hidden`}>
                 <Image
                   src={project.image}
@@ -51,18 +51,23 @@ export default function PortfolioSection({
               </div>
               <div className="flex flex-col gap-5">
                 <div className="flex flex-col gap-2">
-                  <h3 className="text-[20px] font-bold leading-[1.4] text-[#00050a] tracking-[-0.2px]">
+                  <h3 className="text-[20px] font-bold leading-[1.4] text-[#00050a] tracking-[-0.2px] group-hover:text-[#006cc9] transition-colors">
                     {project.title}
                   </h3>
                   <p className="text-base font-normal leading-[1.5] text-[#00050a]">
                     {project.description}
                   </p>
                 </div>
-                <Button variant="link" href={project.link || "/collections/case-studies"}>
-                  View project
-                </Button>
+                <div className="flex items-center gap-2">
+                  <span className="text-base font-medium leading-[1.5] text-[#00050a]">
+                    View project
+                  </span>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
@@ -72,7 +77,7 @@ export default function PortfolioSection({
           <div className="flex flex-col gap-16 flex-1 max-w-[634px]">
             {/* Project Cards (Left Column) */}
             {projects.filter((_, i) => i % 2 === 0).map((project) => (
-              <div key={project.id} className="flex flex-col gap-6">
+              <Link key={project.id} href={project.link || "/collections/case-studies"} className="flex flex-col gap-6 group cursor-pointer">
                 <div className={`relative w-full ${project.aspectRatio === 'aspect-square' ? 'aspect-square' : 'aspect-[632/346.5]'} rounded-2xl overflow-hidden`}>
                   <Image
                     src={project.image}
@@ -84,7 +89,7 @@ export default function PortfolioSection({
                 <div className="flex flex-col gap-6">
                   <div className="flex flex-col gap-4">
                     <div className="flex flex-col gap-2">
-                      <h3 className="text-[20px] lg:text-[24px] font-bold leading-[1.4] text-[#00050a] tracking-[-0.2px] lg:tracking-[-0.24px]">
+                      <h3 className="text-[20px] lg:text-[24px] font-bold leading-[1.4] text-[#00050a] tracking-[-0.2px] lg:tracking-[-0.24px] group-hover:text-[#006cc9] transition-colors">
                         {project.title}
                       </h3>
                       <p className="text-base font-normal leading-[1.5] text-[#00050a]">
@@ -92,16 +97,16 @@ export default function PortfolioSection({
                       </p>
                     </div>
                   </div>
-                  <Link href={project.link || "/collections/case-studies"} className="flex items-center gap-2 cursor-pointer hover:opacity-70 transition-opacity">
+                  <div className="flex items-center gap-2">
                     <span className="text-base font-medium leading-[1.5] text-[#00050a]">
                       View project
                     </span>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                       <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
-                  </Link>
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 
@@ -109,7 +114,7 @@ export default function PortfolioSection({
           <div className="flex flex-col gap-16 flex-1">
             {/* Project Cards (Right Column) */}
             {projects.filter((_, i) => i % 2 !== 0).map((project) => (
-              <div key={project.id} className="flex flex-col gap-6">
+              <Link key={project.id} href={project.link || "/collections/case-studies"} className="flex flex-col gap-6 group cursor-pointer">
                 <div className={`relative w-full ${project.aspectRatio === 'aspect-square' ? 'aspect-square' : 'aspect-[632/346.5]'} rounded-2xl overflow-hidden`}>
                   <Image
                     src={project.image}
@@ -121,7 +126,7 @@ export default function PortfolioSection({
                 <div className="flex flex-col gap-6">
                   <div className="flex flex-col gap-4">
                     <div className="flex flex-col gap-2">
-                      <h3 className="text-[20px] lg:text-[24px] font-bold leading-[1.4] text-[#00050a] tracking-[-0.2px] lg:tracking-[-0.24px]">
+                      <h3 className="text-[20px] lg:text-[24px] font-bold leading-[1.4] text-[#00050a] tracking-[-0.2px] lg:tracking-[-0.24px] group-hover:text-[#006cc9] transition-colors">
                         {project.title}
                       </h3>
                       <p className="text-base font-normal leading-[1.5] text-[#00050a]">
@@ -129,16 +134,16 @@ export default function PortfolioSection({
                       </p>
                     </div>
                   </div>
-                  <Link href={project.link || "/collections/case-studies"} className="flex items-center gap-2 cursor-pointer hover:opacity-70 transition-opacity">
+                  <div className="flex items-center gap-2">
                     <span className="text-base font-medium leading-[1.5] text-[#00050a]">
                       View project
                     </span>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                       <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
-                  </Link>
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
