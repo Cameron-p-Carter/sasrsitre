@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const WhyChooseSection = () => {
   const features = [
@@ -62,10 +63,12 @@ const WhyChooseSection = () => {
     },
     {
       icon: (
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9 12L11 10L16 15L33 6L35 8L16 19L9 12Z" stroke="#5ae0f6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M21 21L23 23L28 18L45 9L47 11L28 22L21 21Z" stroke="#5ae0f6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
+        <Image
+          src="/images/icons/handyman.svg"
+          alt="Handyman icon"
+          width={48}
+          height={48}
+        />
       ),
       title: "Engineering Excellence at the Core of Everything We Do",
       description: "Our commitment to quality drives every aspect of our engineering processes."
