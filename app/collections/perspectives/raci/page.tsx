@@ -94,9 +94,9 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
     } as RichTextBlock,
   ],
   author: {
-    name: "Jane Doe",
-    title: "Senior Analyst, Tech Co.",
-    avatarSrc: "/images/people/patricia.jpg", // Placeholder avatar
+    name: "Li-Shuai Soh",
+    title: "CTO | Head of Engineering",
+    avatarSrc: "/images/profiles/lipfp.svg", // Placeholder avatar
   },
   backgroundColor: "bg-[#cce1f4]",
   textColor: "text-[#00050a]",
