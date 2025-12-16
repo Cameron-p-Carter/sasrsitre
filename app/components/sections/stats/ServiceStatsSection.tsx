@@ -33,7 +33,7 @@ const ServiceStatsSection = ({
               <h2 className={`font-bold text-[36px] md:text-[48px] leading-[1.2] tracking-[-0.36px] md:tracking-[-0.48px] w-full ${titleColor}`}>
                 {title}
               </h2>
-              <ul className={`list-disc list-inside space-y-4 font-normal text-base md:text-lg leading-[1.5] w-full ${textColor}`}>
+              <ul className={`list-disc list-outside pl-5 space-y-4 font-normal text-base md:text-lg leading-[1.5] w-full ${textColor}`}>
                 {listItems.map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
