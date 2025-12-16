@@ -58,8 +58,8 @@ interface ArticlePageData {
 // --- Placeholder Data ---
 
 const ARTICLE_HEADER_DATA: ArticleHeaderData = {
-  title: "Short news article heading here",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+  title: "When RACI Goes Wrong",
+  description: "How seemingly subtle behaviours can distort the RACI model and quietly undermine team accountability.",
   backgroundColor: "bg-[#cce1f4]",
   titleColor: "text-[#0c2080]",
   textColor: "text-[#00050a]",

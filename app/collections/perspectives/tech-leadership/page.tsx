@@ -58,8 +58,8 @@ interface ArticlePageData {
 // --- Placeholder Data ---
 
 const ARTICLE_HEADER_DATA: ArticleHeaderData = {
-  title: "Short news article heading here",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+  title: "What Makes a Great Tech Leader?",
+  description: "A practical look at the three intangible qualities that distinguish strong technical managers from exceptional tech leaders.",
   backgroundColor: "bg-[#cce1f4]",
   titleColor: "text-[#0c2080]",
   textColor: "text-[#00050a]",

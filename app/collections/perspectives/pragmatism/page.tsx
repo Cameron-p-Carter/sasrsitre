@@ -58,8 +58,8 @@ interface ArticlePageData {
 // --- Placeholder Data ---
 
 const ARTICLE_HEADER_DATA: ArticleHeaderData = {
-  title: "Short news article heading here",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+  title: "From Hype to Engineered Success: Be the Pragmatist",
+  description: "Three approaches dominate how teams use AI today, but only one consistently ships reliable outcomes.",
   backgroundColor: "bg-[#cce1f4]",
   titleColor: "text-[#0c2080]",
   textColor: "text-[#00050a]",

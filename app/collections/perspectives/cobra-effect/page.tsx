@@ -58,8 +58,8 @@ interface ArticlePageData {
 // --- Placeholder Data ---
 
 const ARTICLE_HEADER_DATA: ArticleHeaderData = {
-  title: "Short news article heading here",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+  title: "The Cobra Effect in Software",
+  description: "How well-intended metrics can create perverse incentives and lead teams further from the outcomes they are trying to achieve.",
   backgroundColor: "bg-[#cce1f4]",
   titleColor: "text-[#0c2080]",
   textColor: "text-[#00050a]",

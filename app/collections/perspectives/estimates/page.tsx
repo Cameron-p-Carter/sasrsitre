@@ -58,8 +58,8 @@ interface ArticlePageData {
 // --- Placeholder Data ---
 
 const ARTICLE_HEADER_DATA: ArticleHeaderData = {
-  title: "Short news article heading here",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+  title: "Why Everyone Hates Estimates",
+  description: "Estimates frustrate everyone, but understanding the purpose behind them can make the process faster, clearer, and far more useful.",
   backgroundColor: "bg-[#cce1f4]",
   titleColor: "text-[#0c2080]",
   textColor: "text-[#00050a]",
