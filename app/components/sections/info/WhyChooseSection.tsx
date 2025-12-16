@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import Button from '@/app/components/shared/Button';
 
 const WhyChooseSection = () => {
   const features = [
@@ -102,18 +103,6 @@ const WhyChooseSection = () => {
                     {feature.description}
                   </p>
                 </div>
-                <div className="flex flex-col gap-2 w-full">
-                  <Link href="/people" className="flex items-start gap-2 rounded-xl overflow-hidden transition-opacity hover:opacity-70">
-                    <span className="font-medium text-[#14d3f3] text-base leading-[1.5] whitespace-nowrap">
-                      Learn More
-                    </span>
-                    <div className="w-6 h-6 flex items-center justify-center">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 18L15 12L9 6" stroke="#14d3f3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </div>
-                  </Link>
-                </div>
               </div>
             ))}
           </div>
@@ -135,18 +124,6 @@ const WhyChooseSection = () => {
                       {feature.description}
                     </p>
                   </div>
-                  <div className="flex flex-col gap-2 w-full">
-                    <Link href="/people" className="flex items-start gap-2 rounded-xl overflow-hidden transition-opacity hover:opacity-70">
-                      <span className="font-medium text-[#14d3f3] text-base leading-[1.5] whitespace-nowrap">
-                        Learn More
-                      </span>
-                      <div className="w-6 h-6 flex items-center justify-center">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M9 18L15 12L9 6" stroke="#14d3f3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                      </div>
-                    </Link>
-                  </div>
                 </div>
               ))}
             </div>
@@ -166,22 +143,20 @@ const WhyChooseSection = () => {
                       {feature.description}
                     </p>
                   </div>
-                  <div className="flex flex-col gap-2 w-full">
-                    <Link href="/people" className="flex items-start gap-2 rounded-xl overflow-hidden transition-opacity hover:opacity-70">
-                      <span className="font-medium text-[#14d3f3] text-base leading-[1.5] whitespace-nowrap">
-                        Learn More
-                      </span>
-                      <div className="w-6 h-6 flex items-center justify-center">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M9 18L15 12L9 6" stroke="#14d3f3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                      </div>
-                    </Link>
-                  </div>
                 </div>
               ))}
             </div>
           </div>
+        </div>
+
+        {/* Action Buttons (New) */}
+        <div className="flex gap-4">
+          <Button variant="outline" href="/people">
+            Learn More
+          </Button>
+          <Button variant="primary" href="/contact-us">
+            Scale Now
+          </Button>
         </div>
       </div>
     </section>
