@@ -11,24 +11,52 @@ const OPEN_POSITIONS_DATA = {
   sectionDescription: "Join our dynamic team and help shape the future of technology consultancy.",
   positions: [
     {
-      title: "Software Engineer",
-      description: "Develop innovative solutions for our clients in a collaborative environment.",
-      location: "Remote",
+      title: "AI Solutions Architect - Product Strategy & Implementation",
+      description: "Accelerate your AI experience with an amazing opportunity.",
+      location: "Sydney NSW (Hybrid)",
       schedule: "Full Time",
       applyUrl: "https://www.seek.com.au/Software-at-Scale-jobs/at-this-company"
     },
     {
-      title: "Project Manager",
-      description: "Lead projects to success while ensuring client satisfaction and team collaboration.",
-      location: "Hybrid",
-      schedule: "Part Time",
+      title: "Principal Engineer (.NET) - Perm or Contract",
+      description: "Join a high performing team of digital and engineering leaders solving complex problems at scale with cutting edge tech and global impact.",
+      location: "Sydney NSW (Hybrid)",
+      schedule: "Full Time",
       applyUrl: "https://www.seek.com.au/Software-at-Scale-jobs/at-this-company"
     },
     {
-      title: "Data Analyst",
-      description: "Analyse data trends to drive strategic decisions and improve operational efficiency.",
-      location: "Onsite",
+      title: "Principal Site Reliability and Software Engineer - Perm or Contract",
+      description: "Join a high performing team of digital and engineering leaders solving complex problems at scale with cutting edge tech and global impact.",
+      location: "Sydney NSW (Hybrid)",
       schedule: "Full Time",
+      applyUrl: "https://www.seek.com.au/Software-at-Scale-jobs/at-this-company"
+    },
+    {
+      title: "Senior Android Engineer (Kotlin) - Perm or Contract",
+      description: "Senior Android Engineer (Kotlin). Collaborate to deliver enterprise-wide solutions creating significant value at scale.",
+      location: "Sydney NSW (Hybrid)",
+      schedule: "Full Time",
+      applyUrl: "https://www.seek.com.au/Software-at-Scale-jobs/at-this-company"
+    },
+    {
+      title: "Principal Engineer (AI)",
+      description: "Principal Engineer (AI) – Lead architecture & hands-on delivery of AI systems, LLM integrations, and scalable platform capabilities.",
+      location: "Sydney NSW (Hybrid)",
+      schedule: "Contract",
+      applyUrl: "https://www.seek.com.au/Software-at-Scale-jobs/at-this-company"
+    },
+    {
+      title: "Principal Engineer (React/TypeScript/Node) - Perm or Contract",
+      description: "Join a high performing team of digital and engineering leaders solving complex problems at scale with cutting edge tech and global impact.",
+      location: "Sydney NSW (Hybrid)",
+      schedule: "Full Time",
+      applyUrl: "https://www.seek.com.au/Software-at-Scale-jobs/at-this-company"
+    },
+    {
+      title: "Senior Business Analyst - Digital",
+      description: "Join our dynamic team as a Senior Digital Business Analyst to deliver digital products that enhance customer experiences and drive business success.",
+      location: "Sydney NSW (Hybrid)",
+      schedule: "Contract",
       applyUrl: "https://www.seek.com.au/Software-at-Scale-jobs/at-this-company"
     }
   ],
