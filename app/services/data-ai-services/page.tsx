@@ -40,7 +40,7 @@ Our focus is on practical, tailored solutions that distinguish genuine AI capabi
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
     titleColor: "text-[#0c2080]",
-    imageOnRight: true,
+    imageOnRight: false,
   },
   serviceFeatureColumns: {
     backgroundColor: "bg-[#cce1f4]",

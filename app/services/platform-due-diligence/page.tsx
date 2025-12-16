@@ -21,7 +21,7 @@ At Software@Scale, we conduct in-depth assessments across architecture, scalabil
 Every engagement results in a clear, prioritised roadmap that aligns with your goals, whether that's improving system resilience, planning for scale or navigating compliance requirements.
 
 We combine technical rigour with commercial awareness, helping you make smarter technology decisions and avoid unnecessary costs.`,
-    imageSrc: "/images/placeholder/placeholder48.jpg",
+    imageSrc: "/images/placeholder/placeholder165.jpg",
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
     titleColor: "text-[#0c2080]",
@@ -42,7 +42,7 @@ We combine technical rigour with commercial awareness, helping you make smarter 
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
     titleColor: "text-[#0c2080]",
-    imageOnRight: true,
+    imageOnRight: false,
   },
   serviceFeatureColumns: {
     backgroundColor: "bg-[#cce1f4]",

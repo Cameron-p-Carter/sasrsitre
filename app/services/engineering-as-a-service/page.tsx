@@ -42,7 +42,7 @@ It’s engineering support that fits around your needs, accelerates your roadmap
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
     titleColor: "text-[#0c2080]",
-    imageOnRight: true,
+    imageOnRight: false,
   },
   serviceFeatureColumns: {
     backgroundColor: "bg-[#cce1f4]",

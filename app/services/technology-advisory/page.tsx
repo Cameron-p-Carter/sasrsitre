@@ -42,7 +42,7 @@ Our approach involves a comprehensive assessment of your current setup, deep per
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
     titleColor: "text-[#0c2080]",
-    imageOnRight: true,
+    imageOnRight: false,
   },
   serviceFeatureColumns: {
     backgroundColor: "bg-[#cce1f4]",
