@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import Button from '@/app/components/shared/Button';
 
 interface NewsItem {
@@ -38,41 +39,79 @@ const NewsGridSection = ({
           </p>
         </div>
 
-        {/* News Grid (Mobile: Stacked, Desktop: 3 Columns) */}
-        <div className="flex flex-col gap-12 md:gap-8 w-full">
-          {/* We will render rows of 3 items, but since this is the main page, we will just map all items for now */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
-            {newsItems.map((item) => (
-              <div key={item.id} className="flex flex-col gap-6 items-start">
-                {/* Image */}
-                <div className="relative aspect-[405.333/270] rounded-2xl w-full overflow-hidden">
-                  <Image
-                    src={item.imageSrc}
-                    alt={item.title}
-                    fill
-                    className="object-cover rounded-2xl"
-                  />
+        {/* Mobile Layout */}
+        <div className="flex flex-col gap-12 md:hidden w-full">
+          {newsItems.map((item) => (
+            <div key={item.id} className="flex flex-col gap-5">
+              {/* Image */}
+              <div className="relative aspect-[405.333/270] rounded-2xl w-full overflow-hidden">
+                <Image
+                  src={item.imageSrc}
+                  alt={item.title}
+                  fill
+                  className="object-cover rounded-2xl"
+                />
+              </div>
+
+              {/* Content */}
+              <div className="flex flex-col gap-5">
+                <div className="flex flex-col gap-2">
+                  <h3 className="font-bold text-[20px] leading-[1.4] tracking-[-0.2px] text-[#00050a]">
+                    {item.title}
+                  </h3>
+                  <p className="font-normal text-base leading-[1.5] text-[#00050a]">
+                    {item.description}
+                  </p>
                 </div>
-                
-                {/* Content */}
-                <div className="flex flex-col gap-4 w-full items-start">
-                  <div className="flex flex-col gap-2 items-start text-[#00050a] w-full">
-                    <h3 className="font-bold text-[20px] md:text-[24px] leading-[1.4] tracking-[-0.2px] md:tracking-[-0.24px] w-full">
+
+                {/* Action Button */}
+                <Button variant="link" href={item.link || "/collections/news/first-article"}>
+                  Read more
+                </Button>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop Layout: 3 Columns */}
+        <div className="hidden md:grid grid-cols-3 gap-8 w-full">
+          {newsItems.map((item) => (
+            <div key={item.id} className="flex flex-col gap-6">
+              {/* Image */}
+              <div className="relative aspect-[405.333/270] rounded-2xl w-full overflow-hidden">
+                <Image
+                  src={item.imageSrc}
+                  alt={item.title}
+                  fill
+                  className="object-cover rounded-2xl"
+                />
+              </div>
+
+              {/* Content */}
+              <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-4">
+                  <div className="flex flex-col gap-2">
+                    <h3 className="font-bold text-[24px] leading-[1.4] tracking-[-0.24px] text-[#00050a]">
                       {item.title}
                     </h3>
-                    <p className="font-normal text-base leading-[1.5] w-full">
+                    <p className="font-normal text-base leading-[1.5] text-[#00050a]">
                       {item.description}
                     </p>
                   </div>
-                  
-                  {/* Action Button */}
-                  <Button variant="link" href={item.link || "/collections/news/first-article"}>
-                    Read more
-                  </Button>
                 </div>
+
+                {/* Action Link */}
+                <Link href={item.link || "/collections/news/first-article"} className="flex items-center gap-2 cursor-pointer hover:opacity-70 transition-opacity">
+                  <span className="text-base font-medium leading-[1.5] text-[#00050a]">
+                    Read more
+                  </span>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </Link>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
 
         {/* View More Button */}
