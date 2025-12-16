@@ -73,7 +73,7 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
     } as RichTextBlock,
     {
       type: 'image',
-      src: '/images/placeholder/placeholder80.png', // Placeholder image
+      src: '/images/perspectives/placholder156.jpg', // Placeholder image
       caption: 'Image caption goes here',
     } as ImageBlock,
     {
