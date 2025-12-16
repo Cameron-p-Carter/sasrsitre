@@ -55,7 +55,7 @@ interface ArticlePageData {
   cta: CTASectionData;
 }
 
-// --- Placeholder Data ---
+// --- Article Data ---
 
 const ARTICLE_HEADER_DATA: ArticleHeaderData = {
   title: "Bridging the Trust Gap Between Business and Technology",
@@ -69,34 +69,22 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
   contentBlocks: [
     {
       type: 'richText',
-      content: `### Introduction\n\nMi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam suspendisse morbi eleifend faucibus eget vestibulum felis. Dictum quis montes, sit sit. Tellus aliquam enim urna, etiam. Mauris posuere vulputate arcu amet, vitae nisi, tellus tincidunt. At feugiat sapien varius id.\n\nEget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat mollis at volutpat lectus velit, sed auctor. Porttitor fames arcu quis fusce augue enim. Quis at habitant diam at. Suscipit tristique risus, at donec. In turpis vel et quam imperdiet. Ipsum molestie aliquet sodales id est ac volutpat.`,
+      content: `"I don't trust my tech team."\n\nNo statement indicates a bigger breakdown in the relationship between business and technology than this one. If this is not a prompt to take action and fix things, it is hard to know what is.\n\nThere are some obvious pitfalls on the technology side that can lead to such a broken relationship:\n\n**Lack of transparency** – The team operates as a black box, making it impossible for the business to understand why things take so long or what trade offs are being made.\n\n**Misaligned goals** – Technology initiatives that do not clearly connect to business objectives, as the team is not aligned with the broader strategy.\n\n**Not outcome focused** – A fixation on technology for its own sake rather than delivering measurable business value and solving real problems.`,
     } as RichTextBlock,
     {
       type: 'image',
-      src: '/images/perspectives/placholder154.jpg', // Placeholder image
-      caption: 'Image caption goes here',
+      src: '/images/perspectives/placeholder163.jpg',
+      caption: 'Building trust requires transparency and alignment between business and technology teams',
     } as ImageBlock,
     {
       type: 'richText',
-      content: `## Dolor enim eu tortor urna sed duis nulla. Aliquam vestibulum, nulla odio nisl vitae. In aliquet pellentesque aenean hac vestibulum turpis mi bibendum diam. Tempor integer aliquam in vitae malesuada fringilla.\n\nElit nisi in eleifend sed nisi. Pulvinar at orci, proin imperdiet commodo consectetur convallis risus. Sed condimentum enim dignissim adipiscing faucibus consequat, urna. Viverra purus et erat auctor aliquam. Risus, volutpat vulputate posuere purus sit congue convallis aliquet. Arcu id augue ut feugiat donec porttitor neque. Mauris, neque ultricies eu vestibulum, bibendum quam lorem id. Dolor lacus, eget nunc lectus in tellus, pharetra, porttitor.`,
-    } as RichTextBlock,
-    {
-      type: 'quote',
-      text: 'Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque congue eget consectetur turpis. Sapien, dictum molestie sem tempor. Diam elit, orci, tincidunt aenean tempus.',
-    } as QuoteBlock,
-    {
-      type: 'richText',
-      content: `Tristique odio senectus nam posuere ornare leo metus, ultricies. Blandit duis ultricies vulputate morbi feugiat cras placerat elit. Aliquam tellus lorem sed ac. Montes, sed mattis pellentesque suscipit accumsan. Cursus viverra aenean magna risus elementum faucibus molestie pellentesque. Arcu ultricies sed mauris vestibulum.`,
-    } as RichTextBlock,
-    {
-      type: 'richText',
-      content: `## Conclusion\n\nMorbi sed imperdiet in ipsum, adipiscing elit dui lectus. Tellus id scelerisque est ultricies ultricies. Duis est sit sed leo nisl, blandit elit sagittis. Quisque tristique consequat quam sed. Nisl at scelerisque amet nulla purus habitasse.\n\nNunc sed faucibus bibendum feugiat sed interdum. Ipsum egestas condimentum mi massa. In tincidunt pharetra consectetur sed duis facilisis metus. Etiam egestas in nec sed et. Quis lobortis at sit dictum eget nibh tortor commodo cursus.\n\nOdio felis sagittis, morbi feugiat tortor vitae feugiat fusce aliquet. Nam elementum urna nisi aliquet erat dolor enim. Ornare id morbi eget ipsum. Aliquam senectus neque ut id eget consectetur dictum. Donec posuere pharetra odio consequat scelerisque et, nunc tortor.Nulla adipiscing erat a erat. Condimentum lorem posuere gravida enim posuere cursus diam.`,
+      content: `But trust is a two way street. The business side often contributes to this breakdown:\n\n**Unrealistic expectations** – Demanding results that ignore the constraints of time, resources, and technical reality, then blaming the tech team when miracles do not happen.\n\n**Not sharing the why** – Treating the tech team as order takers rather than partners, withholding the context and reasoning that would help them make better decisions.\n\n**Not seeing tech as an enabler** – Viewing technology as a cost centre or a necessary evil rather than a strategic capability that can drive business outcomes.\n\nThe path forward requires intentional effort from both sides. Trust is not built overnight, but recognising these patterns is the first step toward rebuilding it.`,
     } as RichTextBlock,
   ],
   author: {
     name: "Li-Shuai Soh",
     title: "CTO | Head of Engineering",
-    avatarSrc: "/images/profiles/lipfp.svg", // Placeholder avatar
+    avatarSrc: "/images/profiles/lipfp.svg",
   },
   backgroundColor: "bg-[#cce1f4]",
   textColor: "text-[#00050a]",
@@ -104,8 +92,8 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
 
 const ARTICLE_CTA_DATA: CTASectionData = {
   imageSrc: "/images/placeholder/placeholder16.jpg",
-  title: "Join Us on Our Journey",
-  description: "Contact us today to explore how our Cloud Engineering services can transform your business.",
+  title: "Build Trust Through Partnership",
+  description: "Contact us to learn how we can help bridge the gap between your business and technology teams through transparent, outcome-focused collaboration.",
   primaryButtonText: "Contact",
   secondaryButtonText: "Learn More",
 };
@@ -116,7 +104,7 @@ const ARTICLE_PAGE_DATA: ArticlePageData = {
   cta: ARTICLE_CTA_DATA,
 };
 
-export default function FirstArticlePage() {
+export default function TrustGapPage() {
   return (
     <ArticlePageLayout data={ARTICLE_PAGE_DATA} />
   );
