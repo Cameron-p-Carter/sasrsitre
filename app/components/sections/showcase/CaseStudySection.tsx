@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import Button from '@/app/components/shared/Button';
 
 interface CaseStudy {
   imageSrc: string;
@@ -49,11 +50,9 @@ const CaseStudySection = () => {
           
           {/* CTA Button */}
           <div className="flex flex-col gap-4 w-[155px] md:w-auto">
-            <Link href="/collections/case-studies" className="border border-[#14d3f3] border-solid flex items-center justify-center px-6 py-2.5 rounded-xl w-full hover:bg-[#14d3f3] hover:bg-opacity-10 transition-colors">
-              <span className="font-medium text-[#14d3f3] text-base leading-[1.5] whitespace-nowrap">
-                View all
-              </span>
-            </Link>
+            <Button variant="outline" href="/collections/case-studies">
+              View all
+            </Button>
           </div>
         </div>
 
