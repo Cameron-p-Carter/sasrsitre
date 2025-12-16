@@ -12,6 +12,9 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Software@Scale",
   description: "Building elite solutions for elite businesses",
+  icons: {
+    icon: '/images/logos/S@S_Logo_Mark_RGB.svg',
+  },
 };
 
 export default function RootLayout({
