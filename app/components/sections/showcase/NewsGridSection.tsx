@@ -42,7 +42,11 @@ const NewsGridSection = ({
         {/* Mobile Layout */}
         <div className="flex flex-col gap-12 md:hidden w-full">
           {newsItems.map((item) => (
-            <div key={item.id} className="flex flex-col gap-5">
+            <Link
+              key={item.id}
+              href={item.link || "/collections/news/first-article"}
+              className="flex flex-col gap-5 cursor-pointer group"
+            >
               {/* Image */}
               <div className="relative aspect-[405.333/270] rounded-2xl w-full overflow-hidden">
                 <Image
@@ -56,7 +60,7 @@ const NewsGridSection = ({
               {/* Content */}
               <div className="flex flex-col gap-5">
                 <div className="flex flex-col gap-2">
-                  <h3 className="font-bold text-[20px] leading-[1.4] tracking-[-0.2px] text-[#00050a]">
+                  <h3 className="font-bold text-[20px] leading-[1.4] tracking-[-0.2px] text-[#00050a] group-hover:text-[#006cc9] transition-colors">
                     {item.title}
                   </h3>
                   <p className="font-normal text-base leading-[1.5] text-[#00050a]">
@@ -64,19 +68,28 @@ const NewsGridSection = ({
                   </p>
                 </div>
 
-                {/* Action Button */}
-                <Button variant="link" href={item.link || "/collections/news/first-article"}>
-                  Read more
-                </Button>
+                {/* Action Text */}
+                <div className="flex items-center gap-2">
+                  <span className="text-base font-medium leading-[1.5] text-[#00050a]">
+                    Read more
+                  </span>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
         {/* Desktop Layout: 3 Columns */}
         <div className="hidden md:grid grid-cols-3 gap-8 w-full">
           {newsItems.map((item) => (
-            <div key={item.id} className="flex flex-col gap-6">
+            <Link
+              key={item.id}
+              href={item.link || "/collections/news/first-article"}
+              className="flex flex-col gap-6 cursor-pointer group"
+            >
               {/* Image */}
               <div className="relative aspect-[405.333/270] rounded-2xl w-full overflow-hidden">
                 <Image
@@ -91,7 +104,7 @@ const NewsGridSection = ({
               <div className="flex flex-col gap-6">
                 <div className="flex flex-col gap-4">
                   <div className="flex flex-col gap-2">
-                    <h3 className="font-bold text-[24px] leading-[1.4] tracking-[-0.24px] text-[#00050a]">
+                    <h3 className="font-bold text-[24px] leading-[1.4] tracking-[-0.24px] text-[#00050a] group-hover:text-[#006cc9] transition-colors">
                       {item.title}
                     </h3>
                     <p className="font-normal text-base leading-[1.5] text-[#00050a]">
@@ -100,17 +113,17 @@ const NewsGridSection = ({
                   </div>
                 </div>
 
-                {/* Action Link */}
-                <Link href={item.link || "/collections/news/first-article"} className="flex items-center gap-2 cursor-pointer hover:opacity-70 transition-opacity">
+                {/* Action Text */}
+                <div className="flex items-center gap-2">
                   <span className="text-base font-medium leading-[1.5] text-[#00050a]">
                     Read more
                   </span>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
-                </Link>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
