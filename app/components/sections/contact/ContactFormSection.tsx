@@ -35,7 +35,6 @@ export default function ContactFormSection({
     name: '',
     email: '',
     message: '',
-    acceptTerms: false,
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -127,22 +126,7 @@ export default function ContactFormSection({
                     required
                   />
                 </div>
-                
-                {/* Checkbox */}
-                <div className="flex gap-2 items-center pb-4">
-                  <input
-                    type="checkbox"
-                    name="acceptTerms"
-                    checked={formData.acceptTerms}
-                    onChange={handleInputChange}
-                    className="bg-black/5 border border-black/15 rounded w-[18px] h-[18px] accent-[#14d3f3]"
-                    required
-                  />
-                  <label className={`font-normal text-[14px] leading-[1.5] ${checkboxTextColor}`}>
-                    I accept the <Link href="/terms-and-conditions" className="underline hover:opacity-80 transition-opacity">Terms</Link>
-                  </label>
-                </div>
-                
+
                 {/* Submit Button */}
                 <button
                   type="submit"
