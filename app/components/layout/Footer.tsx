@@ -137,16 +137,11 @@ export default function Footer() {
           {/* Bottom Row - Desktop/Tablet/Mobile */}
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
             
-            {/* Copyright and Legal Links (Copyright first, then Legal Links on mobile, horizontal/spaced on LG+) */}
+            {/* Copyright */}
             <div className="flex flex-col gap-4 lg:flex-row lg:gap-6 lg:items-center text-white text-sm font-normal leading-[1.5]">
-              <span className="shrink-0 order-1 lg:order-1">
+              <span className="shrink-0">
                 © 2025 Software@Scale. All rights reserved.
               </span>
-              <div className="flex flex-col gap-4 lg:flex-row lg:gap-6 order-2 lg:order-2">
-                <FooterLink href="/privacy-policy" className="underline">Privacy Policy</FooterLink>
-                <FooterLink href="/terms-and-conditions" className="underline">Terms of Service</FooterLink>
-                <FooterLink href="#" className="underline">Cookies Settings</FooterLink>
-              </div>
             </div>
           </div>
         </div>
