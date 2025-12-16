@@ -142,13 +142,6 @@ export default function PortfolioSection({
             ))}
           </div>
         </div>
-
-        {/* View All Button */}
-        <div className="flex justify-center">
-          <Button variant="secondary" href="/collections/case-studies">
-            {viewAllButtonText}
-          </Button>
-        </div>
       </div>
     </section>
   );
