@@ -69,34 +69,22 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
   contentBlocks: [
     {
       type: 'richText',
-      content: `### Introduction\n\nMi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam suspendisse morbi eleifend faucibus eget vestibulum felis. Dictum quis montes, sit sit. Tellus aliquam enim urna, etiam. Mauris posuere vulputate arcu amet, vitae nisi, tellus tincidunt. At feugiat sapien varius id.\n\nEget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat mollis at volutpat lectus velit, sed auctor. Porttitor fames arcu quis fusce augue enim. Quis at habitant diam at. Suscipit tristique risus, at donec. In turpis vel et quam imperdiet. Ipsum molestie aliquet sodales id est ac volutpat.`,
+      content: `**Hiring good tech leaders is hard.**\n\nTechnical ability is table stakes - but what really separates a good tech leader from a great one are the less tangible skills that are much harder to assess in an interview. How do you find the right balance between both? And how do you do it efficiently when hiring can consume so much time?`,
     } as RichTextBlock,
     {
       type: 'image',
-      src: '/images/perspectives/placeholder152.jpg', // Placeholder image
-      caption: 'Image caption goes here',
+      src: '/images/perspectives/placeholder152.jpg',
+      caption: 'Tech leadership requires balancing technical skills with people management',
     } as ImageBlock,
     {
       type: 'richText',
-      content: `## Dolor enim eu tortor urna sed duis nulla. Aliquam vestibulum, nulla odio nisl vitae. In aliquet pellentesque aenean hac vestibulum turpis mi bibendum diam. Tempor integer aliquam in vitae malesuada fringilla.\n\nElit nisi in eleifend sed nisi. Pulvinar at orci, proin imperdiet commodo consectetur convallis risus. Sed condimentum enim dignissim adipiscing faucibus consequat, urna. Viverra purus et erat auctor aliquam. Risus, volutpat vulputate posuere purus sit congue convallis aliquet. Arcu id augue ut feugiat donec porttitor neque. Mauris, neque ultricies eu vestibulum, bibendum quam lorem id. Dolor lacus, eget nunc lectus in tellus, pharetra, porttitor.`,
-    } as RichTextBlock,
-    {
-      type: 'quote',
-      text: 'Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque congue eget consectetur turpis. Sapien, dictum molestie sem tempor. Diam elit, orci, tincidunt aenean tempus.',
-    } as QuoteBlock,
-    {
-      type: 'richText',
-      content: `Tristique odio senectus nam posuere ornare leo metus, ultricies. Blandit duis ultricies vulputate morbi feugiat cras placerat elit. Aliquam tellus lorem sed ac. Montes, sed mattis pellentesque suscipit accumsan. Cursus viverra aenean magna risus elementum faucibus molestie pellentesque. Arcu ultricies sed mauris vestibulum.`,
-    } as RichTextBlock,
-    {
-      type: 'richText',
-      content: `## Conclusion\n\nMorbi sed imperdiet in ipsum, adipiscing elit dui lectus. Tellus id scelerisque est ultricies ultricies. Duis est sit sed leo nisl, blandit elit sagittis. Quisque tristique consequat quam sed. Nisl at scelerisque amet nulla purus habitasse.\n\nNunc sed faucibus bibendum feugiat sed interdum. Ipsum egestas condimentum mi massa. In tincidunt pharetra consectetur sed duis facilisis metus. Etiam egestas in nec sed et. Quis lobortis at sit dictum eget nibh tortor commodo cursus.\n\nOdio felis sagittis, morbi feugiat tortor vitae feugiat fusce aliquet. Nam elementum urna nisi aliquet erat dolor enim. Ornare id morbi eget ipsum. Aliquam senectus neque ut id eget consectetur dictum. Donec posuere pharetra odio consequat scelerisque et, nunc tortor.Nulla adipiscing erat a erat. Condimentum lorem posuere gravida enim posuere cursus diam.`,
+      content: `After far too much time spent interviewing and hiring, here are the top three things I focus on beyond pure technical competence:\n\n1. **Fit for company size and scale of the work**\n   Do they have experience with the level of structure and rigour needed for bigger companies? Can they take the initiative required in smaller companies? Are they aligned to the scale of technology and systems you're working with?\n\n2. **Analytical thinking and problem solving**\n   Can they demonstrate critical thinking? Do they get into the details by breaking down problems and working through them methodically - without getting lost in the detail?\n\n3. **Engagement with people**\n   Beyond basic communication - do they know how to work with, and influence, their stakeholders? Can they work constructively through difficult conversations?\n\nThe technical skills in potential hires are important and need to be assessed, but it's these intangible qualities that determine whether someone will truly excel in a tech leadership role.`,
     } as RichTextBlock,
   ],
   author: {
-    name: "Jane Doe",
-    title: "Senior Analyst, Tech Co.",
-    avatarSrc: "/images/people/patricia.jpg", // Placeholder avatar
+    name: "Li-Shuai Soh",
+    title: "CTO | Head of Engineering",
+    avatarSrc: "/images/profiles/lipfp.svg",
   },
   backgroundColor: "bg-[#cce1f4]",
   textColor: "text-[#00050a]",

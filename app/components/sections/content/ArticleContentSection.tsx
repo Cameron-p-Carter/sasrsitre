@@ -1,3 +1,4 @@
+import React from 'react';
 import Image from 'next/image';
 
 interface AuthorData {
@@ -26,42 +27,95 @@ type ContentBlock = ImageBlock | QuoteBlock | RichTextBlock;
 
 interface ArticleContentSectionProps {
   contentBlocks: ContentBlock[];
+  author?: AuthorData;
   backgroundColor: string;
   textColor: string;
 }
 
-const ArticleContentSection = ({ contentBlocks, backgroundColor, textColor }: ArticleContentSectionProps) => {
+const ArticleContentSection = ({ contentBlocks, author, backgroundColor, textColor }: ArticleContentSectionProps) => {
   
   const renderBlock = (block: ContentBlock, index: number) => {
     switch (block.type) {
       case 'richText':
-        // Assuming content is pre-formatted with paragraphs/headings, or we handle simple paragraphs
-        // For simplicity, we'll split by double newline to simulate paragraphs.
-        const paragraphs = block.content.split('\n\n');
+        // Parse content to handle bold text, numbered lists, and paragraphs
+        const parseContent = (content: string) => {
+          const lines = content.split('\n');
+          const elements: React.ReactElement[] = [];
+          let currentList: string[] = [];
+          let listIndex = 0;
+
+          const parseBoldText = (text: string) => {
+            const parts = text.split('**');
+            return parts.map((part, partIdx) =>
+              partIdx % 2 === 1 ?
+                <strong key={partIdx} className="font-bold">{part}</strong> :
+                part
+            );
+          };
+
+          const flushList = () => {
+            if (currentList.length > 0) {
+              elements.push(
+                <ol key={`list-${listIndex++}`} className="list-decimal list-inside space-y-4 ml-4">
+                  {currentList.map((item, idx) => (
+                    <li key={idx} className={`font-normal text-base leading-[1.5] ${textColor}`}>
+                      {parseBoldText(item)}
+                    </li>
+                  ))}
+                </ol>
+              );
+              currentList = [];
+            }
+          };
+
+          lines.forEach((line, lineIdx) => {
+            if (line.trim() === '') {
+              flushList();
+              return;
+            }
+
+            // Handle numbered list items
+            const listMatch = line.match(/^\d+\.\s*(.+)/);
+            if (listMatch) {
+              currentList.push(listMatch[1]);
+              return;
+            }
+
+            // Flush any pending list before processing other content
+            flushList();
+
+            // Handle headings
+            if (line.startsWith('### ')) {
+              const headingText = line.substring(4);
+              elements.push(
+                <h3 key={lineIdx} className={`font-bold text-[32px] leading-[1.3] tracking-[-0.32px] pt-6 ${textColor}`}>
+                  {parseBoldText(headingText)}
+                </h3>
+              );
+            } else if (line.startsWith('## ')) {
+              const headingText = line.substring(3);
+              elements.push(
+                <h4 key={lineIdx} className={`font-bold text-[20px] leading-[1.4] tracking-[-0.2px] pt-5 ${textColor}`}>
+                  {parseBoldText(headingText)}
+                </h4>
+              );
+            } else if (line.trim()) {
+              // Handle bold text within paragraphs
+              elements.push(
+                <p key={lineIdx} className={`font-normal text-base leading-[1.5] ${textColor}`}>
+                  {parseBoldText(line)}
+                </p>
+              );
+            }
+          });
+
+          flushList(); // Flush any remaining list items
+          return elements;
+        };
+
         return (
           <div key={index} className="flex flex-col gap-4">
-            {paragraphs.map((p, i) => {
-              // Simple heuristic to detect headings based on Figma structure (H3, H6)
-              if (p.startsWith('### ')) {
-                return (
-                  <h3 key={i} className={`font-bold text-[32px] leading-[1.3] tracking-[-0.32px] pt-6 ${textColor}`}>
-                    {p.substring(4)}
-                  </h3>
-                );
-              } else if (p.startsWith('## ')) {
-                return (
-                  <h4 key={i} className={`font-bold text-[20px] leading-[1.4] tracking-[-0.2px] pt-5 ${textColor}`}>
-                    {p.substring(3)}
-                  </h4>
-                );
-              } else {
-                return (
-                  <p key={i} className={`font-normal text-base leading-[1.5] ${textColor}`}>
-                    {p}
-                  </p>
-                );
-              }
-            })}
+            {parseContent(block.content)}
           </div>
         );
 
@@ -109,39 +163,76 @@ const ArticleContentSection = ({ contentBlocks, backgroundColor, textColor }: Ar
             {contentBlocks.map(renderBlock)}
 
             {/* Share Section - Centered */}
-            <div className="flex flex-col gap-8 pt-12 border-t border-gray-300">
-              {/* Share Buttons - Centered */}
+            <div className="flex flex-col gap-8 pt-12">
               <div className="flex flex-col gap-4 items-center w-full">
-                <p className={`font-semibold text-lg leading-[1.5] ${textColor} text-center`}>
-                  Share this article
+                <p className={`font-semibold text-lg leading-[1.5] ${textColor}`}>
+                  Share this post
                 </p>
                 <div className="flex gap-2">
                   {/* Link */}
                   <div className="bg-[#e5f0f9] p-1 rounded-full w-8 h-8 flex items-center justify-center">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M13.172 12L8.222 7.05L9.636 5.636L17 13L9.636 20.364L8.222 18.95L13.172 14H5V12H13.172Z" fill="#00050A"/>
-                    </svg>
+                    <Image
+                      src="/images/socials/link-alt.svg"
+                      alt="Share link"
+                      width={24}
+                      height={24}
+                    />
                   </div>
                   {/* LinkedIn */}
                   <div className="bg-[#e5f0f9] p-1 rounded-full w-8 h-8 flex items-center justify-center">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M16 8C17.1046 8 18 8.89543 18 10V19H15V10C15 9.44772 14.5523 9 14 9C13.4477 9 13 9.44772 13 10V19H10V10C10 9.44772 9.55228 9 9 9C8.44772 9 8 9.44772 8 10V19H5V8H8V9.5C8.66667 8.5 9.66667 8 11 8C12.3333 8 13.3333 8.5 14 9.5V8H16ZM6.5 5C7.32843 5 8 4.32843 8 3.5C8 2.67157 7.32843 2 6.5 2C5.67157 2 5 2.67157 5 3.5C5 4.32843 5.67157 5 6.5 5Z" fill="#00050A"/>
-                    </svg>
+                    <Image
+                      src="/images/socials/LinkedIn.svg"
+                      alt="Share on LinkedIn"
+                      width={24}
+                      height={24}
+                    />
                   </div>
                   {/* X/Twitter */}
                   <div className="bg-[#e5f0f9] p-1 rounded-full w-8 h-8 flex items-center justify-center">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M18.244 2.25H21.556L14.949 10.391L22.772 21.75H16.133L10.913 14.95L4.228 21.75H1L8.596 12.45L1.5 2.25H8.038L12.123 7.81L18.244 2.25ZM17.007 19.75H18.93L7.08 4.25H5.07L17.007 19.75Z" fill="#00050A"/>
-                    </svg>
+                    <Image
+                      src="/images/socials/X.svg"
+                      alt="Share on X"
+                      width={24}
+                      height={24}
+                    />
                   </div>
                   {/* Facebook */}
                   <div className="bg-[#e5f0f9] p-1 rounded-full w-8 h-8 flex items-center justify-center">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2ZM14.5 12.5H12.5V19H9.5V12.5H7.5V9.5H9.5V7.5C9.5 5.5 10.5 4.5 13 4.5H15V7.5H13C12.5 7.5 12.5 8 12.5 8V9.5H14.5L14 12.5Z" fill="#00050A"/>
-                    </svg>
+                    <Image
+                      src="/images/socials/Facebook.svg"
+                      alt="Share on Facebook"
+                      width={24}
+                      height={24}
+                    />
                   </div>
                 </div>
               </div>
+              
+              {/* Divider */}
+              <div className="h-px bg-[#00050a] w-full"></div>
+              
+              {/* Author Section - Centered - Only show if author is provided */}
+              {author && (
+                <div className="flex gap-4 items-center justify-center">
+                  <div className="relative w-14 h-14 shrink-0">
+                    <Image
+                      src={author.avatarSrc}
+                      alt={author.name}
+                      width={56}
+                      height={56}
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="flex flex-col leading-[1.5] text-base">
+                    <p className={`font-semibold ${textColor}`}>
+                      {author.name}
+                    </p>
+                    <p className={`font-normal ${textColor}`}>
+                      {author.title}
+                    </p>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>

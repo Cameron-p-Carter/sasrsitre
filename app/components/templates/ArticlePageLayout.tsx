@@ -41,6 +41,7 @@ type ContentBlock = ImageBlock | QuoteBlock | RichTextBlock;
 
 interface ArticleContentData {
   contentBlocks: ContentBlock[];
+  author?: AuthorData;
   backgroundColor: string;
   textColor: string;
 }
@@ -81,6 +82,7 @@ const ArticlePageLayout = ({ data }: ArticlePageLayoutProps) => {
         
         <ArticleContentSection
           contentBlocks={data.content.contentBlocks}
+          author={data.content.author}
           backgroundColor={data.content.backgroundColor}
           textColor={data.content.textColor}
         />
