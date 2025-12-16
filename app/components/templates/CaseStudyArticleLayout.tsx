@@ -152,6 +152,12 @@ interface CTASectionData {
   secondaryButtonText: string;
 }
 
+interface TestimonialData {
+  quote: string;
+  name: string;
+  title: string;
+}
+
 interface SectionHeaderData {
   title: string;
   description: string;
@@ -191,6 +197,7 @@ interface CaseStudyArticleData {
   customSection?: CustomSectionData;
   solutionSection?: SolutionSectionData;
   whatWeDeliveredSection?: WhatWeDeliveredSectionData;
+  testimonial?: TestimonialData;
   cta: CTASectionData;
 }
 
@@ -339,8 +346,13 @@ const CaseStudyArticleLayout = ({ data }: CaseStudyArticleLayoutProps) => {
           />
         )}
 
-        <CoreValuesTestimonialSection
-        />
+        {data.testimonial && (
+          <CoreValuesTestimonialSection
+            quote={data.testimonial.quote}
+            name={data.testimonial.name}
+            title={data.testimonial.title}
+          />
+        )}
 
         {data.stats && (
           <CaseStudyStatsSection

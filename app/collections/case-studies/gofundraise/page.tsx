@@ -103,6 +103,12 @@ interface CTASectionData {
   secondaryButtonText: string;
 }
 
+interface TestimonialData {
+  quote: string;
+  name: string;
+  title: string;
+}
+
 interface CaseStudyArticleData {
   hero: HeroSectionData;
   overview?: CaseStudyOverviewData;
@@ -114,6 +120,7 @@ interface CaseStudyArticleData {
   stats?: any;
   customSection?: CustomSectionData;
   whatWeDeliveredSection?: WhatWeDeliveredSectionData;
+  testimonial?: TestimonialData;
   cta: CTASectionData;
 }
 
@@ -255,6 +262,11 @@ const CASE_STUDY_PAGE_DATA: CaseStudyArticleData = {
   deliverablesGrid: CASE_STUDY_DELIVERABLES_GRID_DATA,
   customSection: CASE_STUDY_CUSTOM_SECTION_DATA,
   outcome: CASE_STUDY_OUTCOME_DATA,
+  testimonial: {
+    quote: "Software at Scale continues to impress us with their speed and quality of work. We always look forward to having the team onsite so that our teams can learn from them.",
+    name: "Stuart Finlayson",
+    title: "CEO, GoFundraise",
+  },
   stats: CASE_STUDY_STATS_DATA,
   cta: CASE_STUDY_CTA_DATA,
 };

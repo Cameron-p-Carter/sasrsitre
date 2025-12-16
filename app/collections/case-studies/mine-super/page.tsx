@@ -103,6 +103,12 @@ interface DeliverablesGridData {
   deliverableTextColor?: string;
 }
 
+interface TestimonialData {
+  quote: string;
+  name: string;
+  title: string;
+}
+
 interface CaseStudyArticleData {
   hero: HeroSectionData;
   overview?: CaseStudyOverviewData;
@@ -115,6 +121,7 @@ interface CaseStudyArticleData {
   stats?: any;
   customSection?: CustomSectionData;
   whatWeDeliveredSection?: WhatWeDeliveredSectionData;
+  testimonial?: TestimonialData;
   cta: CTASectionData;
 }
 
@@ -275,6 +282,11 @@ const CASE_STUDY_PAGE_DATA: CaseStudyArticleData = {
   deliverablesGrid: CASE_STUDY_DELIVERABLES_GRID_DATA,
   deliverablesGrid2: CASE_STUDY_DELIVERABLES_GRID_DATA_2,
   outcome: CASE_STUDY_OUTCOME_DATA,
+  testimonial: {
+    quote: "Software@Scale bring a rare combination of deep financial services knowledge and engineering excellence. Their ability to deliver secure, scalable solutions under pressure gave us the confidence we needed to move forward with our platform transition.",
+    name: "Callum Masson",
+    title: "Chief Information Officer, Mine Super",
+  },
   stats: CASE_STUDY_STATS_DATA,
   cta: CASE_STUDY_CTA_DATA,
 };

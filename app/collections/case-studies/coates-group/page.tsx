@@ -79,6 +79,12 @@ interface CTASectionData {
   secondaryButtonText: string;
 }
 
+interface TestimonialData {
+  quote: string;
+  name: string;
+  title: string;
+}
+
 interface CaseStudyArticleData {
   hero: HeroSectionData;
   overview?: CaseStudyOverviewData;
@@ -88,6 +94,7 @@ interface CaseStudyArticleData {
   stats?: any;
   customSection?: CustomSectionData;
   whatWeDeliveredSection?: WhatWeDeliveredSectionData;
+  testimonial?: TestimonialData;
   cta: CTASectionData;
 }
 
@@ -226,6 +233,11 @@ const CASE_STUDY_PAGE_DATA: CaseStudyArticleData = {
   customSection: CASE_STUDY_CUSTOM_SECTION_DATA,
   whatWeDeliveredSection: CASE_STUDY_WHAT_WE_DELIVERED_DATA,
   outcome: CASE_STUDY_OUTCOME_DATA,
+  testimonial: {
+    quote: "Software@Scale is my go-to partner when I need immediate, high-calibre engineering talent to confidently solve the most difficult problems we have",
+    name: "Tim Knoblance",
+    title: "CTO, Coates Group",
+  },
   stats: CASE_STUDY_STATS_DATA,
   cta: CASE_STUDY_CTA_DATA,
 };

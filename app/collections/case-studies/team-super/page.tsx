@@ -187,6 +187,11 @@ const CASE_STUDY_PAGE_DATA = {
     featureTextColor: "text-[#00050a]",
     imageOnRight: false,
   },
+  testimonial: {
+    quote: "Merging two funds was a major undertaking, and having Software@Scale involved made a real difference. Their expertise in data assurance and migration gave us confidence through every stage. Thanks to their support, we delivered a seamless experience for our members and set Team Super up with a strong platform for the future.",
+    name: "Vasyl Nair",
+    title: "CEO, Team Super",
+  },
   stats: {
     sectionTitle: "Transforming technical challenges into strategic opportunities",
     stats: [
