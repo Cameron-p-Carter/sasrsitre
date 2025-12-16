@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Button from '@/app/components/shared/Button';
 
 const TIMELINE_DATA = [
   {
@@ -72,7 +73,7 @@ const HistoryTimelineSection = () => {
     );
 
     const contentBlock = (
-      <div className={`w-full md:w-1/2 flex flex-col gap-8 md:gap-12 px-0 md:px-0 pt-4 md:pt-8 ${isLeftAligned ? 'items-start md:text-left' : 'items-start md:items-end md:text-right'}`}>
+      <div className={`w-full md:w-1/2 flex flex-col gap-8 md:gap-12 px-0 md:px-0 pt-4 md:pt-8 ${isLeftAligned ? 'items-start md:items-end md:text-right' : 'items-start md:text-left'}`}>
         <div className="flex flex-col gap-6 w-full">
           <h3 className="font-bold text-[#006cc9] text-[32px] md:text-[40px] leading-[1.2] tracking-[-0.4px] w-full">
             {item.year}
@@ -85,15 +86,10 @@ const HistoryTimelineSection = () => {
           {item.description}
         </p>
         {!isLast && (
-          <div className={`flex gap-6 items-center ${isLeftAligned ? 'justify-start' : 'justify-end'}`}>
-            <button
-              onClick={handleNextClick}
-              className="border border-[#0c2080] border-solid flex items-center justify-center px-6 py-2.5 rounded-xl hover:bg-[#0c2080] hover:text-white transition-colors"
-            >
-              <span className="font-medium text-[#0c2080] hover:text-white text-base leading-[1.5] whitespace-nowrap">
-                Next
-              </span>
-            </button>
+          <div className={`flex gap-6 items-center ${isLeftAligned ? 'justify-end' : 'justify-start'}`}>
+            <Button variant="secondary" onClick={handleNextClick}>
+              Next
+            </Button>
           </div>
         )}
       </div>
