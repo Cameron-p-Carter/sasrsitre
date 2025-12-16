@@ -75,6 +75,13 @@ interface ServiceStatsSectionData {
   accentColor: string;
 }
 
+// Define the structure for testimonial data
+interface TestimonialData {
+  quote: string;
+  name: string;
+  title: string;
+}
+
 // Define the overall page data structure (starting simple)
 interface ServicePageData {
   hero: HeroSectionData;
@@ -84,6 +91,7 @@ interface ServicePageData {
   serviceStatsContent?: ServiceStatsSectionData;
   ctaSection?: CTASectionData;
   showTestimonial?: boolean;
+  testimonialData?: TestimonialData;
 }
 
 // Define the structure for the CTA section data
@@ -126,7 +134,11 @@ const ServicePageLayout = ({ data }: ServicePageLayoutProps) => {
             imageOnRight={data.imageTextContent.imageOnRight}
           />
         )}
-        {data.showTestimonial && <CoreValuesTestimonialSection />}
+        {data.showTestimonial && <CoreValuesTestimonialSection
+          quote={data.testimonialData?.quote}
+          name={data.testimonialData?.name}
+          title={data.testimonialData?.title}
+        />}
         {data.imageTextListContent && (
           <ImageTextSection
             variant="list"
