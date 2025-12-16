@@ -66,20 +66,22 @@ export default function CaseStudyOutcomeSection({
   );
 
   const image = (
-    <div className={`relative w-full md:w-1/2 min-h-[335px] md:min-h-[720px] order-2 ${imageOnRight ? 'md:order-2' : 'md:order-1'}`}>
-      <Image
-        src={imageSrc}
-        alt={sectionTitle}
-        fill
-        className="object-cover"
-      />
+    <div className={`relative w-full md:w-1/2 h-[335px] md:h-auto pt-16 md:pt-28 pb-16 md:pb-28 order-2 ${imageOnRight ? 'md:order-2' : 'md:order-1'}`}>
+      <div className="relative w-full h-full rounded-2xl overflow-hidden">
+        <Image
+          src={imageSrc}
+          alt={sectionTitle}
+          fill
+          className="object-cover rounded-2xl"
+        />
+      </div>
     </div>
   );
 
   return (
     <section className={`${backgroundColor} w-full`}>
       <div className="max-w-[1280px] mx-auto">
-        <div className="flex flex-col md:flex-row gap-0 items-start w-full">
+        <div className="flex flex-col md:flex-row gap-12 md:gap-20 items-start md:items-stretch w-full">
           {content}
           {image}
         </div>

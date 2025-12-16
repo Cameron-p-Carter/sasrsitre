@@ -47,24 +47,20 @@ export default function CaseStudyCustomSection({
           </div>
           
           {/* List */}
-          <div className="flex flex-col gap-4 items-start w-full">
+          <ul className="flex flex-col gap-4 items-start w-full list-disc pl-5 font-normal text-base leading-[1.5] text-[#00050a]">
             {listItems.map((item, index) => (
-              <div key={index} className="flex gap-4 items-center w-full">
-                <ul className="grow font-normal text-base leading-[0] min-w-0 text-[#00050a]">
-                  <li className="ms-[24px]">
-                    <span className="leading-[1.5]">{item}</span>
-                  </li>
-                </ul>
-              </div>
+              <li key={index} className="pl-2">
+                {item}
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </div>
   );
 
   const image = (
-    <div className={`relative w-full md:w-1/2 h-[375px] md:min-h-[720px] order-2 ${imageOnRight ? 'md:order-2' : 'md:order-1'}`}>
+    <div className={`relative w-full md:w-1/2 h-[375px] md:h-auto order-2 ${imageOnRight ? 'md:order-2' : 'md:order-1'}`}>
       <Image
         src={imageSrc}
         alt={sectionTitle}
@@ -77,7 +73,7 @@ export default function CaseStudyCustomSection({
   return (
     <section className={`${backgroundColor} w-full`}>
       <div className="max-w-[1280px] mx-auto">
-        <div className="flex flex-col md:flex-row gap-0 items-start w-full">
+        <div className="flex flex-col md:flex-row gap-0 items-start md:items-stretch w-full">
           {/* Render content and image sequentially, relying on order classes for positioning */}
           {content}
           {image}
