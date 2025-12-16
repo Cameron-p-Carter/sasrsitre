@@ -20,6 +20,7 @@ interface ImageBlock {
   type: 'image';
   src: string;
   caption: string;
+  objectPosition?: string;
 }
 
 interface QuoteBlock {
@@ -83,6 +84,7 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
       type: 'image',
       src: '/images/placeholder/placeholder118.jpg',
       caption: 'Louis Droguett participating in the cybersecurity panel discussion at the summit',
+      objectPosition: 'top',
     } as ImageBlock,
     {
       type: 'richText',
