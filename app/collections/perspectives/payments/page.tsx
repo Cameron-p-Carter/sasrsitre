@@ -69,7 +69,7 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
   contentBlocks: [
     {
       type: 'richText',
-      content: `We often look overseas for best practices, yet here in Australia we have quietly built one of the most sophisticated real time payment ecosystems in the world. It is engineered for speed, security, and seamless interoperability.\n\nWhat sets us apart:`,
+      content: `We often look overseas for best practices, yet here in Australia we have quietly built one of the most sophisticated real time payment ecosystems in the world. It is engineered for speed, security, and seamless interoperability.`,
     } as RichTextBlock,
     {
       type: 'image',
@@ -78,7 +78,7 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
     } as ImageBlock,
     {
       type: 'richText',
-      content: `**New Payments Platform (NPP)**\nInstant settlement, available 24 hours a day, 7 days a week, including weekends and public holidays. Payments typically clear in under 60 seconds.\n\n**PayID**\nSay goodbye to BSBs and account numbers. Link payments to a mobile number, email address, or ABN for a streamlined experience and lower fraud risk.\n\n**PayTo**\nA consent driven, pull based framework for recurring or one off payments. Customers can authorise and revoke agreements directly in their banking app.\n\n**Osko**\nPeer to peer payments over NPP, complete with real time confirmation and rich metadata.\n\n**ISO 20022**\nA structured, extensible messaging standard that delivers richer data for reconciliation, compliance, and automation.\n\nFrom a systems design perspective, this translates into:\n\n*   Real time APIs replacing nightly batch jobs\n*   Event driven workflows across institutional boundaries\n*   Verified payee addressing to strengthen trust and reduce fraud\n*   Native consent flows built into the protocol\n*   Data rich payloads that reduce operational overhead and fuel automation\n\nThe real magic is not just the technology. It is the alignment of technical architecture, regulatory strategy, and industry adoption. That combination is rare and powerful.`,
+      content: `What sets us apart:\n\n**New Payments Platform (NPP)**\nInstant settlement, available 24 hours a day, 7 days a week, including weekends and public holidays. Payments typically clear in under 60 seconds.\n\n**PayID**\nSay goodbye to BSBs and account numbers. Link payments to a mobile number, email address, or ABN for a streamlined experience and lower fraud risk.\n\n**PayTo**\nA consent driven, pull based framework for recurring or one off payments. Customers can authorise and revoke agreements directly in their banking app.\n\n**Osko**\nPeer to peer payments over NPP, complete with real time confirmation and rich metadata.\n\n**ISO 20022**\nA structured, extensible messaging standard that delivers richer data for reconciliation, compliance, and automation.\n\nFrom a systems design perspective, this translates into:\n\n*   Real time APIs replacing nightly batch jobs\n*   Event driven workflows across institutional boundaries\n*   Verified payee addressing to strengthen trust and reduce fraud\n*   Native consent flows built into the protocol\n*   Data rich payloads that reduce operational overhead and fuel automation\n\nThe real magic is not just the technology. It is the alignment of technical architecture, regulatory strategy, and industry adoption. That combination is rare and powerful.`,
     } as RichTextBlock,
   ],
   author: {
