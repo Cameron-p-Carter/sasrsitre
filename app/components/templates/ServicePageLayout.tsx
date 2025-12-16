@@ -18,6 +18,7 @@ interface HeroSectionData {
   titleHighlight: string;
   description: string;
   overlayOpacity: number;
+  objectPosition?: string;
 }
 
 // Define the structure for the ImageTextContent section data
@@ -111,6 +112,7 @@ const ServicePageLayout = ({ data }: ServicePageLayoutProps) => {
           titleHighlight={data.hero.titleHighlight}
           description={data.hero.description}
           overlayOpacity={data.hero.overlayOpacity}
+          objectPosition={data.hero.objectPosition}
         />
         {data.imageTextContent && (
           <ImageTextSection

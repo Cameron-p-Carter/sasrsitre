@@ -9,6 +9,7 @@ const TEST_SERVICE_DATA = {
     titleHighlight: "Platform",
     description: "Our Platform Acceleration service empowers organisations to modernise their software delivery processes. Experience faster deployment and enhanced performance with tailored solutions designed for your unique needs.",
     overlayOpacity: 0.6, // Updated opacity
+    objectPosition: "center 25%",
   },
   // Future sections will be added here
   imageTextContent: {

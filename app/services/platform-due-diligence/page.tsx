@@ -9,6 +9,7 @@ const TEST_SERVICE_DATA = {
     titleHighlight: "Matters",
     description: "Our Platform Due Diligence service is designed to provide a comprehensive assessment of your technology landscape. By identifying risks and opportunities, we empower organisations to make informed decisions that drive success.",
     overlayOpacity: 0.6, // Updated opacity
+    objectPosition: "center 25%",
   },
   // Future sections will be added here
   imageTextContent: {

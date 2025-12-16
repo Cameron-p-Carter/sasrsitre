@@ -9,6 +9,7 @@ const TEST_SERVICE_DATA = {
     titleHighlight: "Performance",
     description: "Engineering Performance is crucial for enterprises aiming to enhance their software delivery capabilities. By focusing on efficiency and quality, we empower organisations to achieve faster time-to-market while minimizing risks.",
     overlayOpacity: 0.6, // Updated opacity
+    objectPosition: "center 25%",
   },
   // Future sections will be added here
   imageTextContent: {

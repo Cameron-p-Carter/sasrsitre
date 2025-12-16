@@ -9,6 +9,7 @@ const TEST_SERVICE_DATA = {
     titleHighlight: "Architecture",
     description: "Our Security Architecture service equips enterprises with the tools to defend against modern threats. Tailored solutions ensure your infrastructure is resilient, compliant, and future-ready.",
     overlayOpacity: 0.6, // Updated opacity
+    objectPosition: "center 25%",
   },
   // Future sections will be added here
   imageTextContent: {

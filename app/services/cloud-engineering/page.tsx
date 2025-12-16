@@ -9,6 +9,7 @@ const TEST_SERVICE_DATA = {
     titleHighlight: "Excellence",
     description: "Cloud Engineering is vital for modern enterprises seeking agility and scalability. Our services ensure robust cloud infrastructure that supports your business goals.",
     overlayOpacity: 0.5,
+    objectPosition: "center 25%",
   },
   // Future sections will be added here
   imageTextContent: {
