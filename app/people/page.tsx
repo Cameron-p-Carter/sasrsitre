@@ -29,7 +29,7 @@ export default function PeoplePage() {
 We work with large scale financial and commercial institutions to bolster their teams and provide critical expertise to turn around struggling projects and unblock complex technical challenges.
 
 Our multi-disciplinary teams are industry experts in their fields, with specialised skills in all aspects of Software Engineering, Architecture, DevOps and Cybersecurity. They hit the ground running and do whatever it takes to achieve the outcomes."
-          underImageSrc="/images/placeholder/placeholder19.jpg"
+          underImageSrc="/images/placeholder/placeholder161.jpg"
           overImageSrc="/images/placeholder/placeholder6ontop.jpg"
           primaryButtonText="Learn More"
           secondaryButtonText="Contact"
