@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Image from 'next/image';
 
 interface AuthorData {
@@ -33,7 +35,34 @@ interface ArticleContentSectionProps {
 }
 
 const ArticleContentSection = ({ contentBlocks, author, backgroundColor, textColor }: ArticleContentSectionProps) => {
-  
+  const [copySuccess, setCopySuccess] = useState(false);
+
+  const handleCopyLink = async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      setCopySuccess(true);
+      setTimeout(() => setCopySuccess(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy:', err);
+    }
+  };
+
+  const handleLinkedInShare = () => {
+    const url = encodeURIComponent(window.location.href);
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+  };
+
+  const handleTwitterShare = () => {
+    const url = encodeURIComponent(window.location.href);
+    const text = encodeURIComponent(document.title);
+    window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+  };
+
+  const handleFacebookShare = () => {
+    const url = encodeURIComponent(window.location.href);
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+  };
+
   const renderBlock = (block: ContentBlock, index: number) => {
     switch (block.type) {
       case 'richText':
@@ -168,43 +197,64 @@ const ArticleContentSection = ({ contentBlocks, author, backgroundColor, textCol
                 <p className={`font-semibold text-lg leading-[1.5] ${textColor}`}>
                   Share this post
                 </p>
-                <div className="flex gap-2">
+                <div className="flex gap-2 relative">
                   {/* Link */}
-                  <div className="bg-[#e5f0f9] p-1 rounded-full w-8 h-8 flex items-center justify-center">
+                  <button
+                    onClick={handleCopyLink}
+                    className="bg-[#e5f0f9] p-1 rounded-full w-8 h-8 flex items-center justify-center hover:bg-[#cce1f4] transition-colors cursor-pointer"
+                    aria-label="Copy link to clipboard"
+                  >
                     <Image
                       src="/images/socials/link-alt.svg"
                       alt="Share link"
                       width={24}
                       height={24}
                     />
-                  </div>
+                  </button>
+                  {copySuccess && (
+                    <div className="absolute -top-10 left-0 bg-[#00050a] text-white px-3 py-1 rounded text-sm">
+                      Copied!
+                    </div>
+                  )}
                   {/* LinkedIn */}
-                  <div className="bg-[#e5f0f9] p-1 rounded-full w-8 h-8 flex items-center justify-center">
+                  <button
+                    onClick={handleLinkedInShare}
+                    className="bg-[#e5f0f9] p-1 rounded-full w-8 h-8 flex items-center justify-center hover:bg-[#cce1f4] transition-colors cursor-pointer"
+                    aria-label="Share on LinkedIn"
+                  >
                     <Image
                       src="/images/socials/LinkedIn.svg"
                       alt="Share on LinkedIn"
                       width={24}
                       height={24}
                     />
-                  </div>
+                  </button>
                   {/* X/Twitter */}
-                  <div className="bg-[#e5f0f9] p-1 rounded-full w-8 h-8 flex items-center justify-center">
+                  <button
+                    onClick={handleTwitterShare}
+                    className="bg-[#e5f0f9] p-1 rounded-full w-8 h-8 flex items-center justify-center hover:bg-[#cce1f4] transition-colors cursor-pointer"
+                    aria-label="Share on X"
+                  >
                     <Image
                       src="/images/socials/X.svg"
                       alt="Share on X"
                       width={24}
                       height={24}
                     />
-                  </div>
+                  </button>
                   {/* Facebook */}
-                  <div className="bg-[#e5f0f9] p-1 rounded-full w-8 h-8 flex items-center justify-center">
+                  <button
+                    onClick={handleFacebookShare}
+                    className="bg-[#e5f0f9] p-1 rounded-full w-8 h-8 flex items-center justify-center hover:bg-[#cce1f4] transition-colors cursor-pointer"
+                    aria-label="Share on Facebook"
+                  >
                     <Image
                       src="/images/socials/Facebook.svg"
                       alt="Share on Facebook"
                       width={24}
                       height={24}
                     />
-                  </div>
+                  </button>
                 </div>
               </div>
               
