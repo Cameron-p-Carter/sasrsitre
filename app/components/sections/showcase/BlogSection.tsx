@@ -15,6 +15,7 @@ interface BlogCard {
   category?: string;
   readTime?: string;
   hasCategory?: boolean;
+  objectPosition?: string;
 }
 
 const BlogSection = () => {
@@ -45,7 +46,8 @@ const BlogSection = () => {
       title: 'Louis Droguett Named Finalist in 2025 CEO of the Year Awards',
       description: 'CEO recognised for leadership in scaling one of Australia\'s fastest-growing tech businesses.',
       link: '/collections/news/2025-executive-of-the-year-awards',
-      hasCategory: false
+      hasCategory: false,
+      objectPosition: 'top'
     },
     {
       id: 4,
@@ -84,7 +86,7 @@ const BlogSection = () => {
       image: '/images/placeholder/placeholder108.png',
       title: 'Approved Supplier: Federal Government ICT Digital and Cloud Marketplace Panels',
       description: 'Approved for direct engagement with government agencies for digital transformation.',
-      link: '/collections/news/ict-supplier',
+      link: '/collections/news/panels',
       hasCategory: false
     },
     {
@@ -92,7 +94,7 @@ const BlogSection = () => {
       image: '/images/placeholder/placeholder109.jpg',
       title: 'Software@Scale Joins Government Digital Marketplace Panels',
       description: 'Expanding capability to support public sector digital transformation across Australia.',
-      link: '/collections/news/panels',
+      link: '/collections/news/ict-supplier',
       hasCategory: false
     }
   ];
@@ -185,58 +187,61 @@ const BlogSection = () => {
               style={{ scrollSnapType: 'x mandatory' }}
             >
               {blogCards.map((card) => (
-                <motion.div 
-                  key={card.id} 
-                  className="flex flex-col gap-6 w-[300px] flex-shrink-0" 
+                <motion.div
+                  key={card.id}
+                  className="w-[300px] flex-shrink-0"
                   style={{ scrollSnapAlign: 'start' }}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3 }}
                 >
-                  {/* Image */}
-                  <div className="relative w-full aspect-[300/198] rounded-2xl overflow-hidden">
-                    <Image
-                      src={card.image}
-                      alt={card.title}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
+                  <Link href={card.link} className="flex flex-col gap-6 group cursor-pointer">
+                    {/* Image */}
+                    <div className="relative w-full aspect-[300/198] rounded-2xl overflow-hidden">
+                      <Image
+                        src={card.image}
+                        alt={card.title}
+                        fill
+                        className="object-cover"
+                        style={card.objectPosition ? { objectPosition: card.objectPosition } : undefined}
+                      />
+                    </div>
 
-                  {/* Content */}
-                  <div className="flex flex-col gap-4 w-full">
-                    {card.hasCategory && (
-                      <div className="flex gap-4 items-center">
-                        <div className="bg-[rgba(0,5,10,0.05)] border border-[rgba(0,5,10,0.15)] border-solid flex items-start px-2.5 py-1 rounded-md">
+                    {/* Content */}
+                    <div className="flex flex-col gap-4 w-full">
+                      {card.hasCategory && (
+                        <div className="flex gap-4 items-center">
+                          <div className="bg-[rgba(0,5,10,0.05)] border border-[rgba(0,5,10,0.15)] border-solid flex items-start px-2.5 py-1 rounded-md">
+                            <span className="font-semibold text-[#00050a] text-sm leading-[1.5] whitespace-nowrap">
+                              {card.category}
+                            </span>
+                          </div>
                           <span className="font-semibold text-[#00050a] text-sm leading-[1.5] whitespace-nowrap">
-                            {card.category}
+                            {card.readTime}
                           </span>
                         </div>
-                        <span className="font-semibold text-[#00050a] text-sm leading-[1.5] whitespace-nowrap">
-                          {card.readTime}
-                        </span>
+                      )}
+
+                      <div className="flex flex-col gap-2 text-[#00050a] w-full">
+                        <h3 className="font-bold text-[20px] leading-[1.4] tracking-[-0.2px] w-full group-hover:text-[#006cc9] transition-colors">
+                          {card.title}
+                        </h3>
+                        <p className="font-normal text-base leading-[1.5] w-full">
+                          {card.description}
+                        </p>
                       </div>
-                    )}
-
-                    <div className="flex flex-col gap-2 text-[#00050a] w-full">
-                      <h3 className="font-bold text-[20px] leading-[1.4] tracking-[-0.2px] w-full">
-                        {card.title}
-                      </h3>
-                      <p className="font-normal text-base leading-[1.5] w-full">
-                        {card.description}
-                      </p>
                     </div>
-                  </div>
 
-                  {/* Read More Button */}
-                  <Link href={card.link} className="flex gap-2 items-center rounded-xl cursor-pointer group">
-                    <span className="font-normal text-[#00050a] text-base leading-[1.5] whitespace-nowrap group-hover:text-[#0c2080] transition-colors">
-                      Read more
-                    </span>
-                    <div className="w-6 h-6 flex items-center justify-center">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
+                    {/* Read More Text */}
+                    <div className="flex gap-2 items-center">
+                      <span className="font-normal text-[#00050a] text-base leading-[1.5] whitespace-nowrap">
+                        Read more
+                      </span>
+                      <div className="w-6 h-6 flex items-center justify-center">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </div>
                     </div>
                   </Link>
                 </motion.div>
@@ -248,58 +253,61 @@ const BlogSection = () => {
           <div className="hidden md:flex gap-6 lg:gap-8 w-full overflow-hidden">
             <AnimatePresence mode="wait">
               {getVisibleCards().map((card, index) => (
-                <motion.div 
+                <motion.div
                   key={`${card.id}-${currentSlide}`}
-                  className="flex flex-col gap-6 flex-1 max-w-[394px]"
+                  className="flex-1 max-w-[394px]"
                   initial={{ opacity: 0, x: 50 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -50 }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                 >
-                  {/* Image */}
-                  <div className="relative w-full aspect-[394/262.6] rounded-2xl overflow-hidden">
-                    <Image
-                      src={card.image}
-                      alt={card.title}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
+                  <Link href={card.link} className="flex flex-col gap-6 group cursor-pointer">
+                    {/* Image */}
+                    <div className="relative w-full aspect-[394/262.6] rounded-2xl overflow-hidden">
+                      <Image
+                        src={card.image}
+                        alt={card.title}
+                        fill
+                        className="object-cover"
+                        style={card.objectPosition ? { objectPosition: card.objectPosition } : undefined}
+                      />
+                    </div>
 
-                  {/* Content */}
-                  <div className="flex flex-col gap-4 w-full">
-                    {card.hasCategory && (
-                      <div className="flex gap-4 items-center">
-                        <div className="bg-[rgba(0,5,10,0.05)] border border-[rgba(0,5,10,0.15)] border-solid flex items-start px-2.5 py-1 rounded-md">
+                    {/* Content */}
+                    <div className="flex flex-col gap-4 w-full">
+                      {card.hasCategory && (
+                        <div className="flex gap-4 items-center">
+                          <div className="bg-[rgba(0,5,10,0.05)] border border-[rgba(0,5,10,0.15)] border-solid flex items-start px-2.5 py-1 rounded-md">
+                            <span className="font-semibold text-[#00050a] text-sm leading-[1.5] whitespace-nowrap">
+                              {card.category}
+                            </span>
+                          </div>
                           <span className="font-semibold text-[#00050a] text-sm leading-[1.5] whitespace-nowrap">
-                            {card.category}
+                            {card.readTime}
                           </span>
                         </div>
-                        <span className="font-semibold text-[#00050a] text-sm leading-[1.5] whitespace-nowrap">
-                          {card.readTime}
-                        </span>
+                      )}
+
+                      <div className="flex flex-col gap-2 text-[#00050a] w-full">
+                        <h3 className="font-bold text-[20px] md:text-[22px] lg:text-[24px] leading-[1.4] tracking-[-0.2px] md:tracking-[-0.22px] lg:tracking-[-0.24px] w-full group-hover:text-[#006cc9] transition-colors">
+                          {card.title}
+                        </h3>
+                        <p className="font-normal text-base leading-[1.5] w-full">
+                          {card.description}
+                        </p>
                       </div>
-                    )}
-
-                    <div className="flex flex-col gap-2 text-[#00050a] w-full">
-                      <h3 className="font-bold text-[20px] md:text-[22px] lg:text-[24px] leading-[1.4] tracking-[-0.2px] md:tracking-[-0.22px] lg:tracking-[-0.24px] w-full">
-                        {card.title}
-                      </h3>
-                      <p className="font-normal text-base leading-[1.5] w-full">
-                        {card.description}
-                      </p>
                     </div>
-                  </div>
 
-                  {/* Read More Button */}
-                  <Link href={card.link} className="flex gap-2 items-center rounded-xl cursor-pointer group">
-                    <span className="font-normal text-[#00050a] text-base leading-[1.5] whitespace-nowrap group-hover:text-[#0c2080] transition-colors">
-                      Read more
-                    </span>
-                    <div className="w-6 h-6 flex items-center justify-center">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
+                    {/* Read More Text */}
+                    <div className="flex gap-2 items-center">
+                      <span className="font-normal text-[#00050a] text-base leading-[1.5] whitespace-nowrap">
+                        Read more
+                      </span>
+                      <div className="w-6 h-6 flex items-center justify-center">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </div>
                     </div>
                   </Link>
                 </motion.div>
