@@ -114,7 +114,7 @@ const NEWS_GRID_DATA: NewsGridSectionData = {
     },
     {
       id: 12,
-      imageSrc: "/images/perspectives/placeholder152.jpg",
+      imageSrc: "/images/perspectives/placeholder163.jpg",
       title: "From Hype to Engineered Success: Be the Pragmatist",
       description: "Three approaches dominate how teams use AI today, but only one consistently ships reliable outcomes.",
       link: "/collections/perspectives/pragmatism",
