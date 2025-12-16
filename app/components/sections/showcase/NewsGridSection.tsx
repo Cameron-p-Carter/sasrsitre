@@ -113,13 +113,6 @@ const NewsGridSection = ({
             </div>
           ))}
         </div>
-
-        {/* View More Button */}
-        <div className="flex justify-center">
-          <Button variant="secondary">
-            {viewMoreButtonText}
-          </Button>
-        </div>
       </div>
     </section>
   );
