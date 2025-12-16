@@ -95,6 +95,7 @@ export default function CareersPage() {
           titleHighlight=""
           description="Become part of an innovative community focused on digital transformation and engineering excellence."
           overlayOpacity={0.6}
+          objectPosition="top"
         />
 
         <CareersOpenPositionsSection

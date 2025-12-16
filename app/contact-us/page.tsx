@@ -94,6 +94,8 @@ export default function ContactUsPage() {
           titleHighlight="Touch"
           description="We're here to assist you with any inquiries or support you may need."
           overlayOpacity={0.6}
+          objectPosition="center 25%"
+          descriptionBelow={true}
         />
         
         <ContactInfoSection
