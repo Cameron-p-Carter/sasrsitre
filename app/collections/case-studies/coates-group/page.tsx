@@ -9,6 +9,7 @@ interface HeroSectionData {
   titleHighlight: string;
   description: string;
   overlayOpacity: number;
+    descriptionBelow: true,
 }
 
 interface DetailItem {
@@ -107,6 +108,7 @@ const CASE_STUDY_HERO_DATA: HeroSectionData = {
   titleHighlight: "",
   description: "Engineering Acceleration for Global Market Leadership",
   overlayOpacity: 0.6,
+    descriptionBelow: true,
 };
 
 const CASE_STUDY_OVERVIEW_DATA: CaseStudyOverviewData = {

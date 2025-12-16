@@ -23,6 +23,8 @@ interface HeroSectionData {
   titleHighlight: string;
   description: string;
   overlayOpacity: number;
+  descriptionBelow?: boolean;
+  objectPosition?: string;
 }
 
 interface DetailItem {
@@ -218,6 +220,8 @@ const CaseStudyArticleLayout = ({ data }: CaseStudyArticleLayoutProps) => {
           titleHighlight={data.hero.titleHighlight}
           description={data.hero.description}
           overlayOpacity={data.hero.overlayOpacity}
+          descriptionBelow={data.hero.descriptionBelow}
+          objectPosition={data.hero.objectPosition}
         />
         
         {data.overview && (

@@ -9,6 +9,7 @@ interface HeroSectionData {
   titleHighlight: string;
   description: string;
   overlayOpacity: number;
+    descriptionBelow: true,
 }
 
 interface DetailItem {
@@ -72,10 +73,11 @@ interface CTASectionData {
 const CASE_STUDY_HERO_DATA: HeroSectionData = {
   imageSrc: "/images/placeholder/80.jpg",
   tagline: "Case Study",
-  title: "Team Super: Seamless Data",
-  titleHighlight: "Migration",
-  description: "Following a major merger, Software@Scale ensured the secure and seamless migration of member data, laying the technical foundation for a smooth transition and future growth.",
+  title: "Team Super",
+  titleHighlight: "",
+  description: "Seamless Data Migration Underpins a Major Superannuation Merger",
   overlayOpacity: 0.5,
+    descriptionBelow: true,
 };
 
 const CASE_STUDY_OVERVIEW_DATA: CaseStudyOverviewData = {

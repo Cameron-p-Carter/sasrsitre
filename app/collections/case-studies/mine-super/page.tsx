@@ -9,6 +9,8 @@ interface HeroSectionData {
   titleHighlight: string;
   description: string;
   overlayOpacity: number;
+    objectPosition: "center 35%",
+    descriptionBelow: true,
 }
 
 interface DetailItem {
@@ -134,6 +136,8 @@ const CASE_STUDY_HERO_DATA: HeroSectionData = {
   titleHighlight: "",
   description: "Preparing a Superannuation Platform for Sale and Future Growth",
   overlayOpacity: 0.6,
+    objectPosition: "center 35%",
+    descriptionBelow: true,
 };
 
 const CASE_STUDY_OVERVIEW_DATA: CaseStudyOverviewData = {

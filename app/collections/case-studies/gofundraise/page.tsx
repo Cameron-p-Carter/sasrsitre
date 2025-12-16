@@ -9,6 +9,7 @@ interface HeroSectionData {
   titleHighlight: string;
   description: string;
   overlayOpacity: number;
+    descriptionBelow: true,
 }
 
 interface DetailItem {
@@ -133,6 +134,7 @@ const CASE_STUDY_HERO_DATA: HeroSectionData = {
   titleHighlight: "",
   description: "Software@Scale delivers a world-class platform to support GoFundraise’s global growth",
   overlayOpacity: 0.6,
+    descriptionBelow: true,
 };
 
 const CASE_STUDY_OVERVIEW_DATA: CaseStudyOverviewData = {
