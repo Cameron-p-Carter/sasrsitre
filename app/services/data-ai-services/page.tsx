@@ -9,6 +9,7 @@ const TEST_SERVICE_DATA = {
     titleHighlight: "Services",
     description: "In today's fast-paced digital landscape, harnessing the power of data and artificial intelligence is crucial for business success. Our Data / AI Services are designed to equip enterprises with the tools and insights needed to thrive.",
     overlayOpacity: 0.6, // Updated opacity
+    objectPosition: "top",
   },
   // Future sections will be added here
   imageTextContent: {

@@ -64,6 +64,7 @@ const BANKING_INDUSTRY_DATA = {
     titleHighlight: "Redefined",
     description: "At Software at Scale, we specialise in transforming media enterprises through cutting-edge digital solutions. Our commitment to engineering excellence ensures you stay ahead in a rapidly evolving landscape.",
     overlayOpacity: 0.6,
+    objectPosition: "center 25%",
   },
   portfolio: BANKING_PORTFOLIO_DATA,
   cta: INDUSTRY_CTA_DATA,

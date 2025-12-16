@@ -9,6 +9,7 @@ const TEST_SERVICE_DATA = {
     titleHighlight: "(EaaS)",
     description: "EAAS (Engineering as a Service) redefines operational efficiency by providing bespoke, on-demand engineering solutions. Focus on your core business while we ensure your operations are agile and responsive to change.",
     overlayOpacity: 0.6, // Updated opacity
+    objectPosition: "top",
   },
   // Future sections will be added here
   imageTextContent: {

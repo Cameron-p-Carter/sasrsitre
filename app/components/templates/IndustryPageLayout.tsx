@@ -30,6 +30,7 @@ interface HeroSectionData {
   titleHighlight: string;
   description: string;
   overlayOpacity: number;
+  objectPosition?: string;
 }
 
 interface CTASectionData {
@@ -66,6 +67,7 @@ const IndustryPageLayout = ({ data }: IndustryPageLayoutProps) => {
           titleHighlight={data.hero.titleHighlight}
           description={data.hero.description}
           overlayOpacity={data.hero.overlayOpacity}
+          objectPosition={data.hero.objectPosition}
         />
         
         <PortfolioSection

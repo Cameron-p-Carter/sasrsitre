@@ -17,7 +17,7 @@ export default function HeroHeaderSection({
   titleHighlight,
   description,
   overlayOpacity,
-  objectPosition = 'top',
+  objectPosition = 'center',
 }: HeroHeaderSectionProps) {
   const overlayColor = `rgba(12, 32, 128, ${overlayOpacity})`;
 
