@@ -38,7 +38,7 @@ const Header = () => {
 
           {/* Decorative S Element */}
           <div className="flex-1 h-[72px] relative overflow-hidden">
-            <div className="absolute h-[72px] left-12 top-0 right-12">
+            <div className="absolute h-[72px] left-0 top-0 w-full">
               <Image
                 src="/images/logos/Desktop Menu_S_Element.svg"
                 alt="Decorative S Element"
