@@ -14,7 +14,7 @@ const TransformingIdeasSection = () => {
       description: "Our cybersecurity services protect your business from evolving threats."
     },
     {
-      image: "/images/placeholder/placeholder9.jpg",
+      image: "/images/placeholder/placeholder164.jpg",
       title: "Comprehensive Cloud and Platform Monitoring Services",
       description: "We ensure your cloud infrastructure operates at peak performance."
     }
