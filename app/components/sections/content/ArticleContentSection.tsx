@@ -76,24 +76,57 @@ const ArticleContentSection = ({ contentBlocks, author, backgroundColor, textCol
           let listIndex = 0;
 
           const parseBoldText = (text: string) => {
-            const parts = text.split('**');
-            return parts.map((part, partIdx) =>
-              partIdx % 2 === 1 ?
-                <strong key={partIdx} className="font-bold">{part}</strong> :
-                part
-            );
+            const elements: (string | React.ReactElement)[] = [];
+            let remaining = text;
+            let key = 0;
+
+            while (remaining.length > 0) {
+              // Check for bold (**text**)
+              const boldMatch = remaining.match(/^(.*?)\*\*(.*?)\*\*(.*)/);
+              if (boldMatch) {
+                if (boldMatch[1]) elements.push(boldMatch[1]);
+                elements.push(<strong key={key++} className="font-bold">{boldMatch[2]}</strong>);
+                remaining = boldMatch[3];
+                continue;
+              }
+
+              // Check for italic (*text*)
+              const italicMatch = remaining.match(/^(.*?)\*(.*?)\*(.*)/);
+              if (italicMatch) {
+                if (italicMatch[1]) elements.push(italicMatch[1]);
+                elements.push(<em key={key++} className="italic">{italicMatch[2]}</em>);
+                remaining = italicMatch[3];
+                continue;
+              }
+
+              // No more formatting found
+              elements.push(remaining);
+              break;
+            }
+
+            return elements;
           };
 
           const flushList = () => {
             if (currentList.length > 0 && currentListType) {
               if (currentListType === 'ordered') {
                 elements.push(
-                  <ol key={`list-${listIndex++}`} className="list-decimal list-inside space-y-4 ml-4">
-                    {currentList.map((item, idx) => (
-                      <li key={idx} className={`font-normal text-base leading-[1.5] ${textColor}`}>
-                        {parseBoldText(item)}
-                      </li>
-                    ))}
+                  <ol key={`list-${listIndex++}`} className="space-y-4">
+                    {currentList.map((item, idx) => {
+                      const lines = item.split('\n');
+                      return (
+                        <li key={idx} className="flex gap-2">
+                          <span className={`font-bold ${textColor} shrink-0`}>{idx + 1}.</span>
+                          <div className="flex flex-col gap-2">
+                            {lines.map((line, lineIdx) => (
+                              <span key={lineIdx} className={`font-normal text-base leading-[1.5] ${textColor}`}>
+                                {parseBoldText(line)}
+                              </span>
+                            ))}
+                          </div>
+                        </li>
+                      );
+                    })}
                   </ol>
                 );
               } else {
@@ -113,11 +146,6 @@ const ArticleContentSection = ({ contentBlocks, author, backgroundColor, textCol
           };
 
           lines.forEach((line, lineIdx) => {
-            if (line.trim() === '') {
-              flushList();
-              return;
-            }
-
             // Handle numbered list items
             const numberedListMatch = line.match(/^\d+\.\s*(.+)/);
             if (numberedListMatch) {
@@ -129,6 +157,15 @@ const ArticleContentSection = ({ contentBlocks, author, backgroundColor, textCol
               return;
             }
 
+            // Handle indented continuation lines for lists
+            if (currentListType && line.match(/^\s+(.+)/)) {
+              if (currentList.length > 0) {
+                // Append to the last list item with a line break
+                currentList[currentList.length - 1] += '\n' + line.trim();
+              }
+              return;
+            }
+
             // Handle bullet list items (asterisk)
             const bulletListMatch = line.match(/^\*\s+(.+)/);
             if (bulletListMatch) {
@@ -137,6 +174,17 @@ const ArticleContentSection = ({ contentBlocks, author, backgroundColor, textCol
                 currentListType = 'unordered';
               }
               currentList.push(bulletListMatch[1]);
+              return;
+            }
+
+            // Handle empty lines within lists
+            if (line.trim() === '') {
+              if (currentListType) {
+                // Don't flush list on empty lines within a list
+                return;
+              }
+              // Flush list if we're not in a list and encounter empty line
+              flushList();
               return;
             }
 
