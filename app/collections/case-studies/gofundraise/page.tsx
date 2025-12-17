@@ -237,8 +237,8 @@ const CASE_STUDY_OUTCOME_DATA: CaseStudyOutcomeData = {
 
 
 const CASE_STUDY_STATS_DATA = {
-  sectionTitle: "Transforming technical challenges into strategic opportunities",
-  keyTechnologies: "• Vue.JS • .NET Core, .NET • Amazon EC2",
+  title: "Transforming technical challenges into strategic opportunities",
+  technologiesContent: "• Vue.JS • .NET Core, .NET • Amazon EC2",
   stats: [
     { value: "50%", description: "Cost reduction" },
     { value: "45", description: "Engineers" },

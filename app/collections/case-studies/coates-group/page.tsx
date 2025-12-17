@@ -211,8 +211,8 @@ const CASE_STUDY_WHAT_WE_DELIVERED_DATA: WhatWeDeliveredSectionData = {
 };
 
 const CASE_STUDY_STATS_DATA = {
-  sectionTitle: "Transforming technical challenges into strategic opportunities",
-  keyTechnologies: "• Node.js • React.js • AWS CloudFormation • AWS CloudWatch • AWS CloudTrail • AWS X-Ray • DevSecOps practices • ISO 27001-aligned security architecture",
+  title: "Transforming technical challenges into strategic opportunities",
+  technologiesContent: "• Node.js • React.js • AWS CloudFormation • AWS CloudWatch • AWS CloudTrail • AWS X-Ray • DevSecOps practices • ISO 27001-aligned security architecture",
   stats: [
     { value: "50%", description: "Cost reduction" },
     { value: "45", description: "Engineers" },
