@@ -8,6 +8,7 @@ interface NewsItem {
   title: string;
   description: string;
   link?: string;
+  objectPosition?: string;
 }
 
 interface NewsGridSectionProps {
@@ -53,7 +54,7 @@ const NewsGridSection = ({
                   src={item.imageSrc}
                   alt={item.title}
                   fill
-                  className="object-cover rounded-2xl"
+                  className={`object-cover rounded-2xl ${item.objectPosition || ''}`}
                 />
               </div>
 
@@ -96,7 +97,7 @@ const NewsGridSection = ({
                   src={item.imageSrc}
                   alt={item.title}
                   fill
-                  className="object-cover rounded-2xl"
+                  className={`object-cover rounded-2xl ${item.objectPosition || ''}`}
                 />
               </div>
 

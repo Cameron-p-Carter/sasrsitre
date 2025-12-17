@@ -11,6 +11,7 @@ interface NewsItem {
   title: string;
   description: string;
   link?: string;
+  objectPosition?: string;
 }
 
 interface NewsGridSectionData {
@@ -55,6 +56,7 @@ const NEWS_GRID_DATA: NewsGridSectionData = {
       title: "Louis Droguett Named Finalist in 2025 CEO of the Year Awards",
       description: "Software@Scale's CEO and co-founder, Louis Droguett, has been named a finalist in The CEO Magazine's 2025 Executive of the Year Awards, recognised for his leadership in scaling one of Australia's fastest-growing technology businesses.",
       link: "/collections/news/2025-executive-of-the-year-awards",
+      objectPosition: "object-top",
     },
     {
       id: 4,
