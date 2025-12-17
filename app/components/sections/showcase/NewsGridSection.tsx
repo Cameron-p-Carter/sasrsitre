@@ -1,3 +1,6 @@
+'use client';
+
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Button from '@/app/components/shared/Button';
@@ -26,6 +29,10 @@ const NewsGridSection = ({
   newsItems,
   viewMoreButtonText,
 }: NewsGridSectionProps) => {
+  const [showAll, setShowAll] = useState(false);
+  const displayedItems = showAll ? newsItems : newsItems.slice(0, 6);
+  const hasMore = newsItems.length > 6;
+
   return (
     <section className="bg-[#cce1f4] px-5 md:px-16 py-16 md:py-28 w-full">
       <div className="max-w-[1280px] mx-auto flex flex-col gap-12 md:gap-[80px] items-center">
@@ -42,7 +49,7 @@ const NewsGridSection = ({
 
         {/* Mobile Layout */}
         <div className="flex flex-col gap-12 md:hidden w-full">
-          {newsItems.map((item) => (
+          {displayedItems.map((item) => (
             <Link
               key={item.id}
               href={item.link || "/collections/news/first-article"}
@@ -85,7 +92,7 @@ const NewsGridSection = ({
 
         {/* Desktop Layout: 3 Columns */}
         <div className="hidden md:grid grid-cols-3 gap-8 w-full">
-          {newsItems.map((item) => (
+          {displayedItems.map((item) => (
             <Link
               key={item.id}
               href={item.link || "/collections/news/first-article"}
@@ -127,6 +134,18 @@ const NewsGridSection = ({
             </Link>
           ))}
         </div>
+
+        {/* View More Button */}
+        {hasMore && (
+          <div className="flex justify-center w-full">
+            <Button
+              variant="secondary"
+              onClick={() => setShowAll(!showAll)}
+            >
+              {showAll ? 'Show Less' : viewMoreButtonText}
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );
