@@ -259,8 +259,8 @@ const CASE_STUDY_DELIVERABLES_GRID_DATA_2: DeliverablesGridData = {
 
 
 const CASE_STUDY_STATS_DATA = {
-  sectionTitle: "Transforming technical challenges into strategic opportunities",
-  keyTechnologies: "• AWS Cloud Infrastructure • AWS CloudFormation • AWS CloudTrail & KMS • AWS IAM & Auto Scaling • .NET & Angular • Vue.js & Node.js • JMeter",
+  title: "Transforming technical challenges into strategic opportunities",
+  technologiesContent: "• AWS Cloud Infrastructure • AWS CloudFormation • AWS CloudTrail & KMS • AWS IAM & Auto Scaling • .NET & Angular • Vue.js & Node.js • JMeter",
   stats: [
     { value: "50%", description: "Cost reduction" },
     { value: "45", description: "Engineers" },

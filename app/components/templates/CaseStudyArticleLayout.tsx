@@ -81,7 +81,8 @@ interface Stat {
 }
 
 interface CaseStudyStatsData {
-  sectionTitle: string;
+  title: string;
+  technologiesContent?: string;
   stats: Stat[];
   backgroundColor: string;
   titleColor: string;
@@ -360,7 +361,8 @@ const CaseStudyArticleLayout = ({ data }: CaseStudyArticleLayoutProps) => {
 
         {data.stats && (
           <CaseStudyStatsSection
-            sectionTitle={data.stats.sectionTitle}
+            title={data.stats.title}
+            technologiesContent={data.stats.technologiesContent}
             stats={data.stats.stats}
             backgroundColor={data.stats.backgroundColor}
             titleColor={data.stats.titleColor}
