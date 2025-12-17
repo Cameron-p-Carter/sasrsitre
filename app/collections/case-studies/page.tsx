@@ -18,13 +18,6 @@ interface PortfolioSectionData {
   viewAllButtonText: string;
 }
 
-interface ArticleHeaderData {
-  title: string;
-  description: string;
-  backgroundColor: string;
-  titleColor: string;
-  textColor: string;
-}
 
 interface CTASectionData {
   imageSrc: string;
@@ -76,13 +69,6 @@ const CASE_STUDIES_PORTFOLIO_DATA: PortfolioSectionData = {
   ]
 };
 
-const CASE_STUDIES_SECONDARY_HEADER: ArticleHeaderData = {
-  title: "Ready to transform your business?",
-  description: "We partner with elite businesses to deliver scalable, secure, and high-performing technology solutions.",
-  backgroundColor: "bg-[#cce1f4]",
-  titleColor: "text-[#0c2080]",
-  textColor: "text-[#00050a]",
-};
 
 const CASE_STUDIES_CTA_DATA: CTASectionData = {
   imageSrc: "/images/placeholder/placeholder16.jpg",
@@ -94,7 +80,6 @@ const CASE_STUDIES_CTA_DATA: CTASectionData = {
 
 const CASE_STUDIES_PAGE_DATA = {
   portfolio: CASE_STUDIES_PORTFOLIO_DATA,
-  secondaryHeader: CASE_STUDIES_SECONDARY_HEADER,
   cta: CASE_STUDIES_CTA_DATA,
 };
 

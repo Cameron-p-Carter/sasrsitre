@@ -2,7 +2,6 @@ import Header from '@/app/components/layout/Header';
 import Footer from '@/app/components/layout/Footer';
 import CTASection from '@/app/components/sections/cta/CTASection';
 import PortfolioSection from '@/app/components/sections/showcase/PortfolioSection';
-import ArticleHeaderSection from '@/app/components/sections/article/ArticleHeaderSection';
 
 // --- Shared Data Structures ---
 
@@ -22,14 +21,6 @@ interface PortfolioSectionData {
   viewAllButtonText: string;
 }
 
-interface ArticleHeaderData {
-  title: string;
-  description: string;
-  backgroundColor: string;
-  titleColor: string;
-  textColor: string;
-}
-
 interface CTASectionData {
   imageSrc: string;
   title: string;
@@ -42,7 +33,6 @@ interface CTASectionData {
 
 interface CaseStudiesPageData {
   portfolio: PortfolioSectionData;
-  secondaryHeader: ArticleHeaderData;
   cta: CTASectionData;
 }
 
@@ -64,14 +54,7 @@ const CaseStudiesPageLayout = ({ data }: CaseStudiesPageLayoutProps) => {
           viewAllButtonText={data.portfolio.viewAllButtonText}
         />
         
-        {/* Article Header Section (Secondary Title/Description) */}
-        <ArticleHeaderSection
-          title={data.secondaryHeader.title}
-          description={data.secondaryHeader.description}
-          backgroundColor={data.secondaryHeader.backgroundColor}
-          titleColor={data.secondaryHeader.titleColor}
-          textColor={data.secondaryHeader.textColor}
-        />
+
         
         {/* CTA Section */}
         <CTASection
