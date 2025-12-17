@@ -15,7 +15,7 @@ interface ServiceFeatureColumnsProps {
 
 const ServiceFeatureColumns = ({ columns, backgroundColor, textColor, titleColor }: ServiceFeatureColumnsProps) => {
   return (
-    <section className={`${backgroundColor} px-5 md:px-16 py-16 md:py-28 w-full`}>
+    <section className={`${backgroundColor} px-5 md:px-16 pb-16 md:pb-28 w-full`}>
       <div className="max-w-[1280px] mx-auto">
         {/* Features Grid (Mobile: Stacked, Desktop: 3 Columns) */}
         <div className="flex flex-col md:flex-row gap-12 md:gap-12 w-full">
