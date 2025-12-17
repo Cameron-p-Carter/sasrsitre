@@ -100,8 +100,8 @@ From initial assessments to ongoing monitoring, our security architecture servic
   },
   ctaSection: {
     imageSrc: "/images/placeholder/placeholder16.jpg",
-    title: "Join Us on Our Journey",
-    description: "Contact us today to explore how our Cloud Engineering services can transform your business.",
+    title: "Secure Your Digital Future",
+    description: "Contact us today for expert insights on enhancing your security architecture and safeguarding your assets.",
     primaryButtonText: "Contact",
     secondaryButtonText: "Learn More",
   },

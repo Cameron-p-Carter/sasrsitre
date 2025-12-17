@@ -98,8 +98,8 @@ Our focus is on practical, tailored solutions that distinguish genuine AI capabi
   },
   ctaSection: {
     imageSrc: "/images/placeholder/placeholder16.jpg",
-    title: "Join Us on Our Journey",
-    description: "Contact us today to explore how our Cloud Engineering services can transform your business.",
+    title: "Unlock Your Business Potential",
+    description: "Discover how our expertise can drive your business forward and achieve your strategic objectives.",
     primaryButtonText: "Contact",
     secondaryButtonText: "Learn More",
   },

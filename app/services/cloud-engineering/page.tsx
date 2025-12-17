@@ -99,7 +99,7 @@ Our approach involves a comprehensive assessment of your current setup, deep per
   },
   ctaSection: {
     imageSrc: "/images/placeholder/placeholder16.jpg",
-    title: "Join Us on Our Journey",
+    title: "Set up your secure Cloud Platform today",
     description: "Contact us today to explore how our Cloud Engineering services can transform your business.",
     primaryButtonText: "Contact",
     secondaryButtonText: "Learn More",
