@@ -54,7 +54,15 @@ export default function ContactInfoSection({
                   
                   {item.isLink ? (
                     <a
-                      href={item.title === 'Email' ? `mailto:${item.contactInfo}` : '#'}
+                      href={
+                        item.title === 'Email'
+                          ? `mailto:${item.contactInfo}`
+                          : item.title === 'Office'
+                          ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.contactInfo)}`
+                          : '#'
+                      }
+                      target={item.title === 'Office' ? '_blank' : undefined}
+                      rel={item.title === 'Office' ? 'noopener noreferrer' : undefined}
                       className={`font-normal text-base leading-[1.5] underline w-full ${linkColor}`}
                     >
                       {item.contactInfo}

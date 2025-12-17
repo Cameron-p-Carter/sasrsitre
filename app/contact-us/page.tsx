@@ -19,7 +19,7 @@ const CONTACT_INFO_DATA = {
       title: "Office",
       description: "Call us for direct support and inquiries.",
       contactInfo: "Level 57, 25 Martin Place, Sydney 2000 NSW Australia",
-      isLink: false
+      isLink: true
     }
   ],
   backgroundColor: "bg-[#cce1f4]",

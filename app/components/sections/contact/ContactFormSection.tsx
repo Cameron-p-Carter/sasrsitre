@@ -55,14 +55,14 @@ export default function ContactFormSection({
     <section id="contact-form" className={`${backgroundColor} w-full`}>
       <div className="max-w-[1280px] mx-auto px-5 md:px-16 py-16 md:py-28">
         <div className="flex flex-col gap-12 md:gap-20 items-start w-full">
-          <div className="flex flex-col md:flex-row gap-12 md:gap-20 items-start w-full">
+          <div className="flex flex-col md:flex-row gap-12 md:gap-20 items-stretch w-full">
             {/* Image */}
-            <div className="relative w-full md:w-1/2 h-[335px] md:h-[734px] rounded-2xl overflow-hidden">
+            <div className="relative w-full md:w-1/2 h-[335px] md:h-auto rounded-2xl overflow-hidden">
               <Image
                 src={imageSrc}
                 alt={title}
                 fill
-                className="object-cover"
+                className="object-cover scale-225"
               />
             </div>
             
