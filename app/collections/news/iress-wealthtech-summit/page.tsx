@@ -83,7 +83,7 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
     {
       type: 'image',
       src: '/images/placeholder/placeholder118.jpg',
-      caption: 'Louis Droguett participating in the cybersecurity panel discussion at the summit',
+      caption: 'Hasan Husain, Chief Delivery Officer and  Richard Ford, Head of Cloud and Infrastructure at the 2025 Iress WealthTech Summit',
       objectPosition: 'top',
     } as ImageBlock,
     {
