@@ -21,7 +21,7 @@ const AwardsSection = () => {
       <div className="flex flex-col gap-12 md:gap-16 lg:gap-20 max-w-[1280px] w-full">
         {/* Mobile & Tablet: Text above awards */}
         <div className="lg:hidden flex flex-col gap-8 w-full">
-          <p className="font-bold text-[#14d3f3] text-[16px] md:text-[17px] leading-[1.5] md:text-center w-full">
+          <p className="font-bold text-[#14d3f3] text-[16px] md:text-[17px] leading-[1.5] text-center w-full">
             We are the preferred ICT supplier for NSW and Australian Government Agencies.
           </p>
 
