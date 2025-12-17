@@ -253,6 +253,18 @@ const Header = () => {
           </Link>
         </div>
 
+        {/* Decorative S Element - Tablet */}
+        <div className="flex-1 h-[72px] relative max-w-[300px] overflow-hidden">
+          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-12 w-[280px] h-[280px]">
+            <Image
+              src="/images/logos/S@S_Logo_Mark_RGB.svg"
+              alt="Software@Scale Logo Mark"
+              fill
+              className="object-contain"
+            />
+          </div>
+        </div>
+
         {/* Simplified Navigation */}
         <div className="flex items-center gap-3">
           <Button variant="primary" size="sm" href="/contact-us" className="text-sm text-[#002b50] px-3 py-1.5">
