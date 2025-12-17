@@ -233,8 +233,8 @@ const BlogSection = () => {
                     </div>
 
                     {/* Read More Text */}
-                    <div className="flex gap-2 items-center">
-                      <span className="font-normal text-[#00050a] text-base leading-[1.5] whitespace-nowrap">
+                    <div className="flex gap-2 items-center text-[#00050a]">
+                      <span className="font-normal text-base leading-[1.5] whitespace-nowrap">
                         Read more
                       </span>
                       <div className="w-6 h-6 flex items-center justify-center">
@@ -299,8 +299,8 @@ const BlogSection = () => {
                     </div>
 
                     {/* Read More Text */}
-                    <div className="flex gap-2 items-center">
-                      <span className="font-normal text-[#00050a] text-base leading-[1.5] whitespace-nowrap">
+                    <div className="flex gap-2 items-center text-[#00050a]">
+                      <span className="font-normal text-base leading-[1.5] whitespace-nowrap">
                         Read more
                       </span>
                       <div className="w-6 h-6 flex items-center justify-center">

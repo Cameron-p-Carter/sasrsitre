@@ -58,8 +58,8 @@ export default function PortfolioSection({
                     {project.description}
                   </p>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-base font-medium leading-[1.5] text-[#00050a]">
+                <div className="flex items-center gap-2 text-[#00050a]">
+                  <span className="text-base font-medium leading-[1.5]">
                     View project
                   </span>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
