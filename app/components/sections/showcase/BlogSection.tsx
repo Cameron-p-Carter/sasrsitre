@@ -357,7 +357,7 @@ const BlogSection = () => {
         </div>
 
         {/* Mobile View All Button */}
-        <div className="flex md:hidden justify-start">
+        <div className="flex md:hidden justify-end">
           <Button variant="secondary" href="/collections/news">
             View all
           </Button>
