@@ -47,9 +47,9 @@ const CaseStudySection = () => {
               Explore our impactful case studies and client success stories.
             </p>
           </div>
-          
-          {/* CTA Button */}
-          <div className="flex flex-col gap-4 w-[155px] md:w-auto">
+
+          {/* CTA Button - Desktop Only */}
+          <div className="hidden md:flex flex-col gap-4 w-auto">
             <Button variant="outline" href="/collections/case-studies">
               View all
             </Button>
@@ -99,6 +99,13 @@ const CaseStudySection = () => {
               </div>
             </Link>
           ))}
+        </div>
+
+        {/* View All Button - Mobile Only */}
+        <div className="flex md:hidden justify-end w-full">
+          <Button variant="outline" href="/collections/case-studies">
+            View all
+          </Button>
         </div>
       </div>
     </section>
