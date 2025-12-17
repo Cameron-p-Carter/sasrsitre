@@ -195,7 +195,7 @@ const CASE_STUDY_PAGE_DATA = {
     title: "CEO, Team Super",
   },
   stats: {
-    sectionTitle: "Transforming technical challenges into strategic opportunities",
+    title: "Transforming technical challenges into strategic opportunities",
     stats: [
       { value: "50%", description: "Cost reduction" },
       { value: "45", description: "Engineers" },
