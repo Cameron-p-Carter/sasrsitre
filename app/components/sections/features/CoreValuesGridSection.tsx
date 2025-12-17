@@ -54,7 +54,7 @@ const CoreValuesGridSection = () => {
               {/* Content */}
               <div className="flex flex-col gap-6 items-center text-[#00050a] w-full">
                 <h3 className="font-bold text-[28px] md:text-[32px] leading-[1.3] tracking-[-0.28px] md:tracking-[-0.32px] w-full">
-                  {value.title.split(': ')[0]}:<br className="md:hidden" /> {value.title.split(': ')[1]}
+                  {value.title.split(': ')[0]}:<br /> {value.title.split(': ')[1]}
                 </h3>
                 <p className="font-normal text-base leading-[1.5] w-full">
                   {value.description}
