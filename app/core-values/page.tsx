@@ -42,6 +42,7 @@ export default function CoreValuesPage() {
           titleHighlight="Values"
           description="At Software at Scale, we are committed to driving innovation and excellence in every project. Our core values of integrity, collaboration, and customer focus guide our mission to empower businesses through technology."
           overlayOpacity={0.6}
+          objectPosition="top"
         />
         <CoreValuesMissionSection />
         <CoreValuesTestimonialSection />
