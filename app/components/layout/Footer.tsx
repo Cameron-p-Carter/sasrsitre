@@ -58,9 +58,9 @@ export default function Footer() {
           
           {/* COLUMNS 2-6: Navigation Links (Right Side) */}
           {/* Wrap 5 columns into a flexible container */}
-          {/* Default to stacked columns on mobile, switch to 5-column grid on desktop */}
-          <div className="flex flex-col gap-12 w-full min-w-0 lg:grid lg:grid-cols-5 lg:gap-x-4 xl:gap-x-8 2xl:gap-x-16 lg:flex-1">
-            
+          {/* Default to stacked columns on mobile, switch to flexbox on desktop */}
+          <div className="flex flex-col gap-12 w-full lg:flex lg:flex-row lg:gap-8 xl:gap-12 2xl:gap-16">
+
             {/* 2. Company Info Column */}
             <div className="flex flex-col gap-4">
               <h3 className="text-white text-base font-semibold leading-[1.5]">
@@ -72,7 +72,7 @@ export default function Footer() {
                 <FooterLink href="/contact-us">Contact Us</FooterLink>
               </div>
             </div>
-            
+
             {/* 3. Resources Column */}
             <div className="flex flex-col gap-4">
               <h3 className="text-white text-base font-semibold leading-[1.5]">
@@ -84,7 +84,7 @@ export default function Footer() {
                 <FooterLink href="/collections/perspectives">Perspectives</FooterLink>
               </div>
             </div>
-            
+
             {/* 4. Service Products Column */}
             <div className="flex flex-col gap-4">
               <h3 className="text-white text-base font-semibold leading-[1.5]">
@@ -94,8 +94,8 @@ export default function Footer() {
                 <FooterLink href="/services/cloud-engineering">Cloud Engineering</FooterLink>
                 <FooterLink href="/services/security-architecture">Security Architecture</FooterLink>
                 <FooterLink href="/services/platform-acceleration">Project Acceleration</FooterLink>
-                <FooterLink href="/services/platform-due-diligence">Platform Due Diligence</FooterLink>
-                <FooterLink href="/services/engineering-performance">Engineering Performance</FooterLink>
+                <FooterLink href="/services/platform-due-diligence" className="whitespace-nowrap">Platform Due Diligence</FooterLink>
+                <FooterLink href="/services/engineering-performance" className="whitespace-nowrap">Engineering Performance</FooterLink>
                 <FooterLink href="/services/data-ai-services">Digital Services</FooterLink>
               </div>
             </div>
@@ -107,10 +107,12 @@ export default function Footer() {
               </h3>
               <div className="flex flex-col">
                 <FooterLink href="/services/engineering-as-a-service">EAAS</FooterLink>
-                <FooterLink href="/services/technology-advisory">Technology Advisory / Fractional Services</FooterLink>
+                <FooterLink href="/services/technology-advisory">
+                  Technology Advisory /<br />Fractional Services
+                </FooterLink>
               </div>
             </div>
-            
+
             {/* 6. Industries Column */}
             <div className="flex flex-col gap-4">
               <h3 className="text-white text-base font-semibold leading-[1.5]">
