@@ -93,10 +93,10 @@ export default function Footer() {
               <div className="flex flex-col">
                 <FooterLink href="/services/cloud-engineering">Cloud Engineering</FooterLink>
                 <FooterLink href="/services/security-architecture">Security Architecture</FooterLink>
-                <FooterLink href="/services/platform-acceleration">Project Acceleration</FooterLink>
+                <FooterLink href="/services/platform-acceleration">Platform Acceleration</FooterLink>
                 <FooterLink href="/services/platform-due-diligence" className="whitespace-nowrap">Platform Due Diligence</FooterLink>
                 <FooterLink href="/services/engineering-performance" className="whitespace-nowrap">Engineering Performance</FooterLink>
-                <FooterLink href="/services/data-ai-services">Digital Services</FooterLink>
+                <FooterLink href="/services/data-ai-services">Data & AI Services</FooterLink>
               </div>
             </div>
 
