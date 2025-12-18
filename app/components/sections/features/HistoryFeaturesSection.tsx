@@ -1,7 +1,5 @@
 import Image from 'next/image';
-
-// SVG assets from Figma context
-const ICON_CHEVRON_RIGHT = "/images/icons/chevron_right.svg"; // Placeholder path
+import Button from '@/app/components/shared/Button';
 
 const FEATURES_DATA = [
   {
@@ -9,18 +7,21 @@ const FEATURES_DATA = [
     title: 'Innovations That Have Transformed Our Approach to Client Solutions',
     description: 'Since our inception, we have embraced cutting-edge technologies to drive success.',
     buttonText: 'Learn More',
+    link: '/core-values',
   },
   {
     imageSrc: '/images/placeholder/placeholder33.jpg', // Placeholder image path
     title: 'Key Partnerships That Enhance Our Service Offerings',
     description: 'Collaborations with industry leaders have strengthened our capabilities and reach.',
     buttonText: 'Join Us',
+    link: '/careers',
   },
   {
     imageSrc: '/images/placeholder/placeholder34.jpg', // Placeholder image path
     title: 'Our Commitment to Continuous Improvement and Innovation',
     description: 'We continually refine our processes to deliver exceptional results for clients.',
     buttonText: 'Contact',
+    link: '/contact-us',
   },
 ];
 
@@ -60,20 +61,9 @@ const HistoryFeaturesSection = () => {
 
                 {/* Action Button */}
                 <div className="flex flex-col gap-2 w-full items-center">
-                  <button className="flex items-center justify-center gap-2 rounded-xl overflow-hidden">
-                    <span className="font-medium text-[#14d3f3] text-base leading-[1.5] whitespace-nowrap">
-                      {feature.buttonText}
-                    </span>
-                    <div className="w-6 h-6 flex items-center justify-center">
-                      <Image
-                        src={ICON_CHEVRON_RIGHT}
-                        alt="Arrow"
-                        width={24}
-                        height={24}
-                        className="object-contain filter brightness-[2.5]"
-                      />
-                    </div>
-                  </button>
+                  <Button variant="link" href={feature.link} className="!text-[#14d3f3] hover:!text-[#5ae0f6]">
+                    {feature.buttonText}
+                  </Button>
                 </div>
               </div>
             </div>
