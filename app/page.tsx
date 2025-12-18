@@ -63,9 +63,7 @@ const HOME_PORTFOLIO_DATA = {
 export default function Home() {
   return (
     <div>
-      <div className="absolute top-0 left-0 right-0 z-20">
-        <Header />
-      </div>
+      <Header />
       <HeroSection />
       <BlogSection />
       
