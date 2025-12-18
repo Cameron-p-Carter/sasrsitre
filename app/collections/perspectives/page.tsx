@@ -32,7 +32,7 @@ interface CTASectionData {
 
 const NEWS_GRID_DATA: NewsGridSectionData = {
   sectionTitle: "Expert Insights Await You",
-  sectionDescription: "Discover the latest industry trends and analyses.",
+  sectionDescription: "Discover the latest industry trends and perspectives.",
   viewMoreButtonText: "View More",
   newsItems: [
     {
