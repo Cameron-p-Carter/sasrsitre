@@ -47,6 +47,17 @@ const ServiceFeatureColumns = ({ columns, backgroundColor, textColor, titleColor
                         <li key={i}>{item}</li>
                       ))}
                     </ul>
+                  ) : index === 2 && typeof column.content === 'string' && column.content.includes('•') ? (
+                    // Third column: split by bullets and display in 2 columns using CSS columns
+                    <ul className="list-disc list-outside pl-5 space-y-2 md:columns-2" style={{ columnGap: '0px' }}>
+                      {column.content
+                        .split('•')
+                        .map(item => item.trim())
+                        .filter(item => item.length > 0)
+                        .map((item, i) => (
+                          <li key={i} className="break-inside-avoid">{item}</li>
+                        ))}
+                    </ul>
                   ) : (
                     <p>{column.content}</p>
                   )}
