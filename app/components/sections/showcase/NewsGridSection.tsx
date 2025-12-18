@@ -10,6 +10,8 @@ interface NewsItem {
   imageSrc: string;
   title: string;
   description: string;
+  author?: string;
+  role?: string;
   link?: string;
   objectPosition?: string;
 }
@@ -74,6 +76,13 @@ const NewsGridSection = ({
                   <p className="font-normal text-base leading-[1.5] text-[#00050a]">
                     {item.description}
                   </p>
+                  {(item.author || item.role) && (
+                    <p className="text-sm leading-[1.5] text-[#00050a]">
+                      {item.author && <span className="font-semibold">{item.author}</span>}
+                      {item.author && item.role && <span className="font-normal"> | </span>}
+                      {item.role && <span className="font-normal">{item.role}</span>}
+                    </p>
+                  )}
                 </div>
 
                 {/* Action Text */}
@@ -118,6 +127,13 @@ const NewsGridSection = ({
                     <p className="font-normal text-base leading-[1.5] text-[#00050a]">
                       {item.description}
                     </p>
+                    {(item.author || item.role) && (
+                      <p className="text-sm leading-[1.5] text-[#00050a]">
+                        {item.author && <span className="font-semibold">{item.author}</span>}
+                        {item.author && item.role && <span className="font-normal"> | </span>}
+                        {item.role && <span className="font-normal">{item.role}</span>}
+                      </p>
+                    )}
                   </div>
                 </div>
 

@@ -10,6 +10,8 @@ interface NewsItem {
   imageSrc: string;
   title: string;
   description: string;
+  author?: string;
+  role?: string;
   link?: string;
 }
 
@@ -40,6 +42,8 @@ const NEWS_GRID_DATA: NewsGridSectionData = {
       imageSrc: "/images/perspectives/placeholder152.jpg",
       title: "What Makes a Great Tech Leader?",
       description: "A practical look at the three intangible qualities that distinguish strong technical managers from exceptional tech leaders.",
+      author: "Li-Shuai Soh",
+      role: "CTO",
       link: "/collections/perspectives/tech-leadership",
     },
     {
@@ -47,6 +51,8 @@ const NEWS_GRID_DATA: NewsGridSectionData = {
       imageSrc: "/images/perspectives/placholder153.jpg",
       title: "Australia's Payment Infrastructure: A Decade Ahead",
       description: "A look at Australia's real-time payment ecosystem is considered world leading, and how its technical foundations continue to set it apart.",
+      author: "Ravi Chotalia",
+      role: "Head of Platform Engineering",
       link: "/collections/perspectives/payments",
     },
     {
@@ -54,6 +60,8 @@ const NEWS_GRID_DATA: NewsGridSectionData = {
       imageSrc: "/images/perspectives/placholder154.jpg",
       title: "Bridging the Trust Gap Between Business and Technology",
       description: "A clear breakdown of why trust fails between business and tech teams, and what both sides must change to rebuild it.",
+      author: "Li-Shuai Soh",
+      role: "CTO",
       link: "/collections/perspectives/trust-gap",
     },
     {
@@ -61,6 +69,8 @@ const NEWS_GRID_DATA: NewsGridSectionData = {
       imageSrc: "/images/perspectives/placholder155.jpg",
       title: "Great Delivery Starts With Strong Partnerships",
       description: "The strongest delivery outcomes come from true partnerships between Engineering Leads and Delivery or Program Managers working as one.",
+      author: "Ravi Chotalia",
+      role: "Head of Platform Engineering",
       link: "/collections/perspectives/partnerships",
     },
     {
@@ -68,6 +78,8 @@ const NEWS_GRID_DATA: NewsGridSectionData = {
       imageSrc: "/images/perspectives/placholder156.jpg",
       title: "Small Decisions, Big Consequences",
       description: "How seemingly minor choices in technology and business can create long-term impacts, and what leaders can do to avoid preventable outcomes.",
+      author: "Li-Shuai Soh",
+      role: "CTO",
       link: "/collections/perspectives/decision-making",
     },
     {
@@ -75,6 +87,8 @@ const NEWS_GRID_DATA: NewsGridSectionData = {
       imageSrc: "/images/perspectives/placholder157.jpg",
       title: "The Cobra Effect in Software",
       description: "How well-intended metrics can create perverse incentives and lead teams further from the outcomes they are trying to achieve.",
+      author: "Ravi Chotalia",
+      role: "Head of Platform Engineering",
       link: "/collections/perspectives/cobra-effect",
     },
     {
@@ -82,6 +96,8 @@ const NEWS_GRID_DATA: NewsGridSectionData = {
       imageSrc: "/images/perspectives/placholder158.jpg",
       title: "What Good Leadership Really Looks Like",
       description: "A clearer definition of effective leadership based on problem solving, forward planning, and empowering teams rather than simply directing them.",
+      author: "Li-Shuai Soh",
+      role: "CTO",
       link: "/collections/perspectives/good-leadership",
     },
     {
@@ -89,6 +105,8 @@ const NEWS_GRID_DATA: NewsGridSectionData = {
       imageSrc: "/images/perspectives/placholder159.jpg",
       title: "The Best Optimisation Is the One You Do Not Write",
       description: "A practical approach to performance engineering where measurement, clarity, and value-driven decisions outperform quick fixes.",
+      author: "Ravi Chotalia",
+      role: "Head of Platform Engineering",
       link: "/collections/perspectives/optimisation",
     },
     {
@@ -96,6 +114,8 @@ const NEWS_GRID_DATA: NewsGridSectionData = {
       imageSrc: "/images/perspectives/placholder160.jpg",
       title: "Why Everyone Hates Estimates",
       description: "Estimates frustrate everyone, but understanding the purpose behind them can make the process faster, clearer, and far more useful.",
+      author: "Li-Shuai Soh",
+      role: "CTO",
       link: "/collections/perspectives/estimates",
     },
     {
@@ -103,6 +123,8 @@ const NEWS_GRID_DATA: NewsGridSectionData = {
       imageSrc: "/images/perspectives/placholder161.jpg",
       title: "Care. Delivery. Honesty. The Consultant Trifecta",
       description: "What separates brilliant consultants from genuinely valuable ones is not skill alone, but the right mix of care, delivery, and candour.",
+      author: "Ravi Chotalia",
+      role: "Head of Platform Engineering",
       link: "/collections/perspectives/consulting",
     },
     {
@@ -110,6 +132,8 @@ const NEWS_GRID_DATA: NewsGridSectionData = {
       imageSrc: "/images/perspectives/placholder162.jpg",
       title: "When RACI Goes Wrong",
       description: "How seemingly subtle behaviours can distort the RACI model and quietly undermine team accountability.",
+      author: "Li-Shuai Soh",
+      role: "CTO",
       link: "/collections/perspectives/raci",
     },
     {
@@ -117,6 +141,8 @@ const NEWS_GRID_DATA: NewsGridSectionData = {
       imageSrc: "/images/perspectives/placeholder163.jpg",
       title: "From Hype to Engineered Success: Be the Pragmatist",
       description: "Three approaches dominate how teams use AI today, but only one consistently ships reliable outcomes.",
+      author: "Ravi Chotalia",
+      role: "Head of Platform Engineering",
       link: "/collections/perspectives/pragmatism",
     },
   ],
