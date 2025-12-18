@@ -24,8 +24,8 @@ const Header = () => {
       <div className="hidden lg:flex items-center h-[72px] px-12 max-w-full">
         <div className="flex items-center justify-between w-full">
           {/* Logo Section */}
-          <div className="flex items-center w-[120px]">
-            <Link href="/" className="relative h-[40px] w-[110px]">
+          <div className="flex items-center w-[180px]">
+            <Link href="/" className="relative h-[50px] w-[165px]">
               <Image
                 src="/images/logos/S@S_Logo_WHITE_RGB.png"
                 alt="Software@Scale Logo"
@@ -38,7 +38,7 @@ const Header = () => {
 
           {/* Decorative S Element */}
           <div className="flex-1 h-[72px] relative overflow-hidden">
-            <div className="absolute h-[72px] left-1/2 -translate-x-1/2 top-0 w-[75%]">
+            <div className="absolute h-[72px] left-1/2 -translate-x-1/2 top-0 w-[100%]">
               <Image
                 src="/images/logos/Desktop Menu_S_Element.svg"
                 alt="Decorative S Element"
