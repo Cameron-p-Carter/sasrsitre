@@ -3,6 +3,7 @@ import HeroHeaderSection from '@/app/components/sections/hero/HeroHeaderSection'
 import CoreValuesMissionSection from '@/app/components/sections/values/CoreValuesMissionSection';
 import CoreValuesTestimonialSection from '@/app/components/sections/values/CoreValuesTestimonialSection';
 import CoreValuesGridSection, { defaultCoreValues } from '@/app/components/sections/features/CoreValuesGridSection';
+import ValuesSection from '@/app/components/sections/values/ValuesSection';
 import CTASection from '@/app/components/sections/cta/CTASection';
 import Footer from '@/app/components/layout/Footer';
 
@@ -48,16 +49,17 @@ export default function CoreValuesPage() {
         <CoreValuesTestimonialSection />
         <CoreValuesGridSection
           title="Our Core Values Shape Our Success"
-          description="At Software@Scale, we don’t just deliver projects - we empower people. Our values shape how we show up for our clients, our teams, and each other every single day."
+          description="At Software@Scale, we don't just deliver projects - we empower people. Our values shape how we show up for our clients, our teams, and each other every single day."
           values={defaultCoreValues}
         />
-        
+
+        <ValuesSection />
+
         {/* Second Core Values Grid Section - Content to be fetched from Figma */}
         <CoreValuesGridSection
           title={SECOND_CORE_VALUES_DATA.title}
           description={SECOND_CORE_VALUES_DATA.description}
           values={SECOND_CORE_VALUES_DATA.values}
-          variant="dark"
         />
 
         <CTASection
