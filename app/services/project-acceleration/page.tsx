@@ -6,8 +6,8 @@ const TEST_SERVICE_DATA = {
     imageSrc: "/images/placeholder/placeholder43.jpg", // Updated image placeholder
     tagline: "Accelerate",
     title: "Transform Your",
-    titleHighlight: "Platform",
-    description: "Our Platform Acceleration service empowers organisations to modernise their software delivery processes. Experience faster deployment and enhanced performance with tailored solutions designed for your unique needs.",
+    titleHighlight: "Project",
+    description: "Our Project Acceleration service empowers organisations to modernise their software delivery processes. Experience faster deployment and enhanced performance with tailored solutions designed for your unique needs.",
     overlayOpacity: 0.6, // Updated opacity
     objectPosition: "center 25%",
   },
@@ -101,7 +101,7 @@ Every engagement is shaped to your goals, resources and delivery model. Whether 
   ctaSection: {
     imageSrc: "/images/placeholder/placeholder16.jpg",
     title: "Accelerate Your Platform Today",
-    description: "Transform your digital landscape with our expert Platform Acceleration services tailored for your needs.",
+    description: "Transform your digital landscape with our expert Project Acceleration services tailored for your needs.",
     primaryButtonText: "Contact",
     secondaryButtonText: "Learn More",
   },

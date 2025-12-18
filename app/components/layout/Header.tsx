@@ -116,8 +116,8 @@ const Header = () => {
                         <Link href="/services/security-architecture" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity">
                           Security Architecture
                         </Link>
-                        <Link href="/services/platform-acceleration" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity">
-                          Platform Acceleration
+                        <Link href="/services/project-acceleration" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity">
+                          Project Acceleration
                         </Link>
                         <Link href="/services/platform-due-diligence" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity">
                           Platform Due Diligence
@@ -396,8 +396,8 @@ const Header = () => {
                           <Link href="/services/security-architecture" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
                             Security Architecture
                           </Link>
-                          <Link href="/services/platform-acceleration" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
-                            Platform Acceleration
+                          <Link href="/services/project-acceleration" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
+                            Project Acceleration
                           </Link>
                           <Link href="/services/platform-due-diligence" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
                             Platform Due Diligence
