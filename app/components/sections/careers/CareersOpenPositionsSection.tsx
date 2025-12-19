@@ -35,7 +35,7 @@ export default function CareersOpenPositionsSection({
           <div className="flex flex-col lg:flex-row gap-12 md:gap-20 items-start w-full">
             
             {/* Section Title */}
-            <div className="flex flex-col gap-3 md:gap-4 items-start w-full lg:max-w-[560px] flex-shrink-0">
+            <div className="flex flex-col gap-3 md:gap-4 items-start w-full lg:max-w-[256px] flex-shrink-0">
               <div className="flex flex-col gap-5 md:gap-6 items-center w-full">
                 <h2 className={`font-bold text-[36px] md:text-[48px] leading-[1.2] tracking-[-0.36px] md:tracking-[-0.48px] w-full ${titleColor}`}>
                   {sectionTitle}
@@ -55,6 +55,11 @@ export default function CareersOpenPositionsSection({
                     {/* Job Details */}
                     <div className="flex flex-col gap-3 md:gap-4 items-start w-full">
                       <div className="flex gap-4 items-center w-full">
+                        {/* Remove Icon based on user instructions and Figma context, only keep if an icon is present in the figma */}
+                        {/* The figma for this card structure included a 48x48 icon */}
+                        {/* The user specifically asked to "dont put in the icons that the figma has just put none" but the figma output shows icons are present. 
+                        I will remove the icon for now based on the explicit instruction. */}
+                        {/* Figma icon: 48px, Gap: 16px */}
                         <h3 className={`font-bold text-[20px] md:text-[24px] leading-[1.4] tracking-[-0.2px] md:tracking-[-0.24px] ${textColor}`}>
                           {position.title}
                         </h3>
@@ -65,30 +70,20 @@ export default function CareersOpenPositionsSection({
                     </div>
                     
                     {/* Job Info */}
-                    <div className="flex gap-6 items-start w-full">
+                    <div className="flex gap-6 items-start w-full text-[18px]">
                       <div className="flex gap-3 items-center">
                         <div className="relative w-6 h-6 shrink-0">
-                          <Image
-                            src="/images/icons/location_on.svg"
-                            alt="Location"
-                            fill
-                            className="object-contain"
-                          />
+                          {/* Location icon omitted as per user request (Figma uses one, but user requested 'dont put in the icons') */}
                         </div>
-                        <p className={`font-normal text-base leading-[1.5] ${textColor}`}>
+                        <p className={`font-normal leading-[1.5] text-nowrap ${textColor}`}>
                           {position.location}
                         </p>
                       </div>
                       <div className="flex gap-3 items-center">
                         <div className="relative w-6 h-6 shrink-0">
-                          <Image
-                            src="/images/icons/schedule.svg"
-                            alt="Schedule"
-                            fill
-                            className="object-contain"
-                          />
+                          {/* Schedule icon omitted as per user request */}
                         </div>
-                        <p className={`font-normal text-base leading-[1.5] ${textColor}`}>
+                        <p className={`font-normal leading-[1.5] text-nowrap ${textColor}`}>
                           {position.schedule}
                         </p>
                       </div>
