@@ -73,7 +73,13 @@ export default function CareersOpenPositionsSection({
                     <div className="flex gap-6 items-start w-full text-[18px]">
                       <div className="flex gap-3 items-center">
                         <div className="relative w-6 h-6 shrink-0">
-                          {/* Location icon omitted as per user request (Figma uses one, but user requested 'dont put in the icons') */}
+                          <Image
+                            src="/images/icons/location_on.svg"
+                            alt="Location"
+                            width={24}
+                            height={24}
+                            className="object-contain"
+                          />
                         </div>
                         <p className={`font-normal leading-[1.5] text-nowrap ${textColor}`}>
                           {position.location}
@@ -81,7 +87,13 @@ export default function CareersOpenPositionsSection({
                       </div>
                       <div className="flex gap-3 items-center">
                         <div className="relative w-6 h-6 shrink-0">
-                          {/* Schedule icon omitted as per user request */}
+                          <Image
+                            src="/images/icons/schedule.svg"
+                            alt="Schedule"
+                            width={24}
+                            height={24}
+                            className="object-contain"
+                          />
                         </div>
                         <p className={`font-normal leading-[1.5] text-nowrap ${textColor}`}>
                           {position.schedule}
