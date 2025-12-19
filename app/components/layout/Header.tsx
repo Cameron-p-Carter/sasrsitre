@@ -102,7 +102,7 @@ const Header = () => {
               
               {/* Our Services Dropdown Menu */}
               <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible z-50">
-                <div className="bg-[#0c2080] border border-[#14d3f3] rounded-2xl p-6 min-w-[480px]">
+                <div className="bg-[#0c2080] border border-[#14d3f3] rounded-2xl p-6 min-w-[520px]">
                   <div className="flex gap-8">
                     {/* Service Products Column */}
                     <div className="flex flex-col gap-4 flex-1">
@@ -122,7 +122,7 @@ const Header = () => {
                         <Link href="/services/platform-due-diligence" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity">
                           Platform Due Diligence
                         </Link>
-                        <Link href="/services/engineering-performance" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity">
+                        <Link href="/services/engineering-performance" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity whitespace-nowrap">
                           Engineering Performance
                         </Link>
                         <Link href="/services/data-ai-services" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity">
