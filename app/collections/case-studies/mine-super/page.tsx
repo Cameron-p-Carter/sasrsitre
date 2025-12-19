@@ -162,7 +162,7 @@ const CASE_STUDY_OUTCOME_DATA: CaseStudyOutcomeData = {
   sectionTitle: "The Outcome",
   outcomes: [
     {
-      iconSrc: "/images/icons/cloud_upload.svg",
+      iconSrc: "/images/icons/cloud_upload_dark.svg",
       title: "Future-Proofed Infrastructure",
       description: "The platform was restructured for standalone use, simplifying the transition for new ownership."
     },
