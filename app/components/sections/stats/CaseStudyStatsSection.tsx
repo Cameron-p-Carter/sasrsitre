@@ -40,10 +40,15 @@ export default function CaseStudyStatsSection({
               <p className={`font-bold text-[18px] md:text-[20px] leading-[1.4] tracking-[-0.2px] w-full ${titleColor}`}>
                 Key Technologies
               </p>
-              <div className={`leading-[1.5] text-[16px] md:text-[18px] text-[#00050a]`}>
-                {/* Replaces bullet points with a space for inline display of technologies */}
-                <div dangerouslySetInnerHTML={{ __html: technologiesContent.replace(/\s*•\s*/g, ' • ') }} />
-              </div>
+              <ul className="list-disc list-outside pl-5 space-y-2 md:columns-2 text-[16px] md:text-[18px] text-[#00050a]" style={{ columnGap: '3rem' }}>
+                {technologiesContent
+                  .split('•')
+                  .map(item => item.trim())
+                  .filter(item => item.length > 0)
+                  .map((item, i) => (
+                    <li key={i} className="break-inside-avoid">{item}</li>
+                  ))}
+              </ul>
             </div>
           </div>
         ) : (
