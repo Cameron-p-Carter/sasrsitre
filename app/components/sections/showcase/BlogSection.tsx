@@ -96,6 +96,38 @@ const BlogSection = () => {
       description: 'Expanding capability to support public sector digital transformation across Australia.',
       link: '/collections/news/ict-supplier',
       hasCategory: false
+    },
+    {
+      id: 10,
+      image: '/images/articles/art1.jpg',
+      title: 'Software@Scale Sponsors CISO Masterclass with Joe Sullivan',
+      description: 'Software@Scale sponsored an exclusive one-day cybersecurity masterclass led by Joe Sullivan, former Chief Security Officer at Facebook, Uber and Cloudflare, convening senior CISOs from across Australia.',
+      link: '/collections/news/ciso',
+      hasCategory: false
+    },
+    {
+      id: 11,
+      image: '/images/articles/art3.jpg',
+      title: 'Software@Scale Wins Deloitte Rising Star Award for Second Year',
+      description: 'Software@Scale has been named the winner of Deloitte\'s 2025 Tech Fast 50 Rising Star Award, becoming the first company to receive the honour in consecutive years.',
+      link: '/collections/news/deloitte-tech-fast-50-2025',
+      hasCategory: false
+    },
+    {
+      id: 12,
+      image: '/images/articles/art5.jpg',
+      title: 'Software@Scale at BeerOps 2025',
+      description: 'Software@Scale joined Australia\'s largest tech networking event, BeerOps 2025, connecting with the engineering community and supporting an industry-led platform for collaboration and giving.',
+      link: '/collections/news/beerops-2025',
+      hasCategory: false
+    },
+    {
+      id: 13,
+      image: '/images/articles/art7.jpg',
+      title: 'Software@Scale Supports Australian Tamil Chamber of Commerce Gala',
+      description: 'Software@Scale was proud to support the Australian Tamil Chamber of Commerce\'s 10th Anniversary Gala Dinner, recognising a decade of contribution to Australia\'s multicultural business community.',
+      link: '/collections/news/chamber-of-commerce-gala',
+      hasCategory: false
     }
   ];
 
