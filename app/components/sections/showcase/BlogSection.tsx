@@ -180,7 +180,7 @@ const BlogSection = () => {
 
   const getVisibleCards = () => {
     const startIndex = currentSlide * cardsPerView;
-    return blogCards.slice(startIndex, startIndex + cardsPerView);
+    return [...blogCards].reverse().slice(startIndex, startIndex + cardsPerView);
   };
 
   return (
@@ -218,7 +218,7 @@ const BlogSection = () => {
               className="flex gap-6 overflow-x-auto scrollbar-hide pb-4" 
               style={{ scrollSnapType: 'x mandatory' }}
             >
-              {blogCards.map((card) => (
+              {[...blogCards].reverse().map((card) => (
                 <motion.div
                   key={card.id}
                   className="w-[300px] flex-shrink-0"

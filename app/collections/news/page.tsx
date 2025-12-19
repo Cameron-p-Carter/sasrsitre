@@ -148,7 +148,7 @@ export default function NewsPage() {
         <NewsGridSection
           sectionTitle={NEWS_GRID_DATA.sectionTitle}
           sectionDescription={NEWS_GRID_DATA.sectionDescription}
-          newsItems={NEWS_GRID_DATA.newsItems}
+          newsItems={[...NEWS_GRID_DATA.newsItems].reverse()}
           viewMoreButtonText={NEWS_GRID_DATA.viewMoreButtonText}
         />
         
