@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import Button from '@/app/components/shared/Button';
 
 export default function HeroSection() {
@@ -43,93 +44,93 @@ export default function HeroSection() {
               {/* Mobile: 3 + 2 Grid */}
               <div className="flex flex-col gap-4 md:hidden">
                 <div className="flex gap-4">
-                  <div className="relative w-[100px] h-[100px] flex-shrink-0">
+                  <Link href="/recognition" className="relative w-[100px] h-[100px] flex-shrink-0 hover:opacity-80 transition-opacity">
                     <Image
                       src="/images/awards/Awards Badges_S@S_ATLASSIAN TECH LEADERSHIP FINALIST 2025.png"
                       alt="Atlassian Tech Leadership Finalist 2025"
                       fill
                       className="object-contain"
                     />
-                  </div>
-                  <div className="relative w-[100px] h-[100px] flex-shrink-0">
+                  </Link>
+                  <Link href="/recognition" className="relative w-[100px] h-[100px] flex-shrink-0 hover:opacity-80 transition-opacity">
                     <Image
                       src="/images/awards/Awards-Badges_S@S_CUB-AWARDS-WINNER-2025.png"
                       alt="CUB Awards Winner 2025"
                       fill
                       className="object-contain"
                     />
-                  </div>
-                  <div className="relative w-[100px] h-[100px] flex-shrink-0">
+                  </Link>
+                  <Link href="/recognition" className="relative w-[100px] h-[100px] flex-shrink-0 hover:opacity-80 transition-opacity">
                     <Image
                       src="/images/awards/Awards Badges_S@S_DELOITTE TECHNOLOGY FAST 50 AUSTRALIA RISING STAR WINNER 2024.png"
                       alt="Deloitte Technology Fast 50 Australia Rising Star Winner 2024"
                       fill
                       className="object-contain"
                     />
-                  </div>
+                  </Link>
                 </div>
                 <div className="flex gap-4">
-                  <div className="relative w-[100px] h-[100px] flex-shrink-0">
+                  <Link href="/recognition" className="relative w-[100px] h-[100px] flex-shrink-0 hover:opacity-80 transition-opacity">
                     <Image
                       src="/images/awards/Awards Badges_S@S_DELOITTE TECHNOLOGY FAST 50 AUSTRALIA RISING STAR WINNER 2024 3.png"
                       alt="Deloitte Technology Fast 50 Australia Rising Star Winner 2024 (2)"
                       fill
                       className="object-contain"
                     />
-                  </div>
-                  <div className="relative w-[100px] h-[100px] flex-shrink-0">
+                  </Link>
+                  <Link href="/recognition" className="relative w-[100px] h-[100px] flex-shrink-0 hover:opacity-80 transition-opacity">
                     <Image
                       src="/images/awards/Awards Badges_S@S_CEO MAGAZINE EXECUTIVE OF THE YEAR AWARDS FINALIST 2025_Blue.png"
                       alt="CEO Magazine Executive of the Year Awards Finalist 2025"
                       fill
                       className="object-contain"
                     />
-                  </div>
+                  </Link>
                 </div>
               </div>
 
               {/* Tablet & Desktop: Horizontal Layout */}
               <div className="hidden md:flex gap-6 lg:gap-[33px]">
-                <div className="relative w-[100px] h-[100px] flex-shrink-0">
+                <Link href="/recognition" className="relative w-[100px] h-[100px] flex-shrink-0 hover:opacity-80 transition-opacity">
                   <Image
                     src="/images/awards/Awards Badges_S@S_ATLASSIAN TECH LEADERSHIP FINALIST 2025.png"
                     alt="Atlassian Tech Leadership Finalist 2025"
                     fill
                     className="object-contain"
                   />
-                </div>
-                <div className="relative w-[100px] h-[100px] flex-shrink-0">
+                </Link>
+                <Link href="/recognition" className="relative w-[100px] h-[100px] flex-shrink-0 hover:opacity-80 transition-opacity">
                   <Image
                     src="/images/awards/Awards-Badges_S@S_CUB-AWARDS-WINNER-2025.png"
                     alt="CUB Awards Winner 2025"
                     fill
                     className="object-contain"
                   />
-                </div>
-                <div className="relative w-[100px] h-[100px] flex-shrink-0">
+                </Link>
+                <Link href="/recognition" className="relative w-[100px] h-[100px] flex-shrink-0 hover:opacity-80 transition-opacity">
                   <Image
                     src="/images/awards/Awards Badges_S@S_DELOITTE TECHNOLOGY FAST 50 AUSTRALIA RISING STAR WINNER 2024.png"
                     alt="Deloitte Technology Fast 50 Australia Rising Star Winner 2024"
                     fill
                     className="object-contain"
                   />
-                </div>
-                <div className="relative w-[100px] h-[100px] flex-shrink-0">
+                </Link>
+                <Link href="/recognition" className="relative w-[100px] h-[100px] flex-shrink-0 hover:opacity-80 transition-opacity">
                   <Image
                     src="/images/awards/Awards Badges_S@S_DELOITTE TECHNOLOGY FAST 50 AUSTRALIA RISING STAR WINNER 2024 3.png"
                     alt="Deloitte Technology Fast 50 Australia Rising Star Winner 2024 (2)"
                     fill
                     className="object-contain"
                   />
-                </div>
-                <div className="relative w-[100px] h-[100px] flex-shrink-0">
+                </Link>
+                <Link href="/recognition" className="relative w-[100px] h-[100px] flex-shrink-0 hover:opacity-80 transition-opacity">
                   <Image
                     src="/images/awards/Awards Badges_S@S_CEO MAGAZINE EXECUTIVE OF THE YEAR AWARDS FINALIST 2025_Blue.png"
                     alt="CEO Magazine Executive of the Year Awards Finalist 2025"
                     fill
                     className="object-contain"
                   />
-                </div>
+                </Link>
               </div>
             </div>
           </div>

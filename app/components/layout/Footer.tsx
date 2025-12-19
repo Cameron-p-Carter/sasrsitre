@@ -44,14 +44,14 @@ export default function Footer() {
             {/* Awards Badges (Responsive 2xN grid for mobile, inline for desktop) */}
             <div className="flex flex-wrap gap-4 w-full md:w-[235px]">
               {FOOTER_AWARDS_BADGES.map((award, index) => (
-                <div key={index} className="w-[100px] h-[100px] relative flex-shrink-0">
+                <Link key={index} href="/recognition" className="w-[100px] h-[100px] relative flex-shrink-0 hover:opacity-80 transition-opacity">
                   <Image
                     src={award.src}
                     alt={award.name}
                     fill
                     className="object-contain"
                   />
-                </div>
+                </Link>
               ))}
             </div>
           </div>
