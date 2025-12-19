@@ -67,18 +67,18 @@ const Header = () => {
               
               {/* About Dropdown Menu */}
               <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible z-50">
-                <div className="bg-[#0c2080] border border-[#14d3f3] rounded-2xl p-6 min-w-[200px]">
+                <div className="bg-[#0c2080] border border-[#14d3f3] rounded-2xl p-6 min-w-[260px]">
                   <div className="flex flex-col gap-4">
-                    <Link href="/core-values" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity">
+                    <Link href="/core-values" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity whitespace-nowrap">
                       Our Purpose and Values
                     </Link>
-                    <Link href="/people" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity">
+                    <Link href="/people" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity whitespace-nowrap">
                       Who We Are
                     </Link>
-                    <Link href="/recognition" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity">
+                    <Link href="/recognition" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity whitespace-nowrap">
                       Awards and Achievements
                     </Link>
-                    <Link href="/our-history" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity">
+                    <Link href="/our-history" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity whitespace-nowrap">
                       Our History
                     </Link>
                   </div>
