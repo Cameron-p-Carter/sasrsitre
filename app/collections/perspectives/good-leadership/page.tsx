@@ -83,7 +83,7 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
   ],
   author: {
     name: "Li-Shuai Soh",
-    title: "CTO | Head of Engineering",
+    title: "Head of Architecture and Solutions",
     avatarSrc: "/images/profiles/lipfp.svg",
   },
   backgroundColor: "bg-[#cce1f4]",

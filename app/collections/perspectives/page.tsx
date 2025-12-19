@@ -43,7 +43,7 @@ const NEWS_GRID_DATA: NewsGridSectionData = {
       title: "What Makes a Great Tech Leader?",
       description: "A practical look at the three intangible qualities that distinguish strong technical managers from exceptional tech leaders.",
       author: "Li-Shuai Soh",
-      role: "CTO",
+      role: "Head of Architecture and Solutions",
       link: "/collections/perspectives/tech-leadership",
     },
     {
@@ -61,7 +61,7 @@ const NEWS_GRID_DATA: NewsGridSectionData = {
       title: "Bridging the Trust Gap Between Business and Technology",
       description: "A clear breakdown of why trust fails between business and tech teams, and what both sides must change to rebuild it.",
       author: "Li-Shuai Soh",
-      role: "CTO",
+      role: "Head of Architecture and Solutions",
       link: "/collections/perspectives/trust-gap",
     },
     {
@@ -79,7 +79,7 @@ const NEWS_GRID_DATA: NewsGridSectionData = {
       title: "Small Decisions, Big Consequences",
       description: "How seemingly minor choices in technology and business can create long-term impacts, and what leaders can do to avoid preventable outcomes.",
       author: "Li-Shuai Soh",
-      role: "CTO",
+      role: "Head of Architecture and Solutions",
       link: "/collections/perspectives/decision-making",
     },
     {
@@ -97,7 +97,7 @@ const NEWS_GRID_DATA: NewsGridSectionData = {
       title: "What Good Leadership Really Looks Like",
       description: "A clearer definition of effective leadership based on problem solving, forward planning, and empowering teams rather than simply directing them.",
       author: "Li-Shuai Soh",
-      role: "CTO",
+      role: "Head of Architecture and Solutions",
       link: "/collections/perspectives/good-leadership",
     },
     {
@@ -115,7 +115,7 @@ const NEWS_GRID_DATA: NewsGridSectionData = {
       title: "Why Everyone Hates Estimates",
       description: "Estimates frustrate everyone, but understanding the purpose behind them can make the process faster, clearer, and far more useful.",
       author: "Li-Shuai Soh",
-      role: "CTO",
+      role: "Head of Architecture and Solutions",
       link: "/collections/perspectives/estimates",
     },
     {
@@ -133,7 +133,7 @@ const NEWS_GRID_DATA: NewsGridSectionData = {
       title: "When RACI Goes Wrong",
       description: "How seemingly subtle behaviours can distort the RACI model and quietly undermine team accountability.",
       author: "Li-Shuai Soh",
-      role: "CTO",
+      role: "Head of Architecture and Solutions",
       link: "/collections/perspectives/raci",
     },
     {
