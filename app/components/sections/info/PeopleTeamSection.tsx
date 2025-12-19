@@ -4,39 +4,57 @@ import Link from 'next/link';
 const TEAM_MEMBERS = [
   {
     name: "Louis Droguett",
-    title: "CEO",
-    description: "Technology and operations executive offering a progressive leadership, working collaboratively to align diverse stakeholders to a single vision. Builds engaged and high-performing teams in times of change to deliver measurable outcomes for the business.",
+    title: "Chief Executive Officer",
+    description: "Technology and operations executive offering progressive leadership, working collaboratively to align diverse stakeholders to a single vision. Builds engaged and high-performing teams in times of change to deliver measurable business outcomes.",
     imageSrc: "/images/people/louis.jpg",
   },
   {
     name: "Hasan Husain",
-    title: "Head of Delivery",
-    description: "Dynamic, experienced and results-driven technology leader. Expert at delivering large-scale technology programs and fostering a culture of collaboration and growth.",
+    title: "Chief Delivery Officer",
+    description: "Dynamic, experienced, and results-driven technology leader with deep expertise in delivering large-scale technology programs. Known for fostering a strong culture of collaboration, accountability, and growth.",
     imageSrc: "/images/people/hasan.jpg",
   },
   {
-    name: "Joel Estephan",
-    title: "Head of Engineering",
-    description: "Engineering leadership and technology specialist, she has led the modernisation of CBA’s critical online assets, disrupting Superannuation through the development of a new online experience, and launching Zip Money into international markets.",
-    imageSrc: "/images/people/joel.jpg",
-  },
-  {
-    name: "Ravi Chotalia",
-    title: "Head of DevOps",
-    description: "Leader of large devops and infrastructure teams, unblocking teams and maximising efficiency through the implementation of automation and continuous delivery pipelines.",
-    imageSrc: "/images/people/ravi.jpg",
+    name: "Li-Shuai Soh",
+    title: "Head of Architecture and Solutions",
+    description: "Engineering leader with diverse experience across startups and large corporations. Adept at creating and leading high-performing teams, aligning technology with business outcomes, and driving both stabilisation and innovation.",
+    imageSrc: "/images/people/Li.png",
   },
   {
     name: "Patricia Droguett",
-    title: "Head of Digital Transformation",
-    description: "Digital Transformation Executive with extensive experience in defining and driving the delivery of high-impact technology transformation programs in financial services.",
+    title: "Chief Operating Officer",
+    description: "Digital transformation executive with extensive experience defining and driving the delivery of high-impact technology transformation programs within financial services.",
     imageSrc: "/images/people/patricia.jpg",
   },
   {
-    name: "Christian Colmenar",
-    title: "Head of Business Design & Agility",
-    description: "Expert in innovation, business design and agile delivery, crafting business solutions for large financial services organisations and implementing through cross-functional teams.",
-    imageSrc: "/images/people/christian.jpg",
+    name: "Ravi Chotalia",
+    title: "Head of Platform Engineering",
+    description: "Leader of large DevOps and infrastructure teams, focused on unlocking teams and maximising efficiency through the implementation of automation and continuous delivery pipelines.",
+    imageSrc: "/images/people/ravi.jpg",
+  },
+  {
+    name: "Bashir Ansari",
+    title: "Head of Software Engineering",
+    description: "Brings extensive experience leading high-performance teams across fintech and major financial institutions. Focused on building and empowering strong engineering teams while fostering a collaborative, resilient, and continuously improving culture.",
+    imageSrc: "/images/people/bashir.png",
+  },
+  {
+    name: "John Halls",
+    title: "Chief Engineer",
+    description: "CTO-level leader driving cloud-based digital transformation, with a passion for building scalable products and high-performing teams. Experienced across AWS, Azure, Google Cloud, and technologies including Java, Python, and .NET, solving complex architectural challenges across fintech and commerce.",
+    imageSrc: "/images/people/john.png",
+  },
+  {
+    name: "Ribvar Shafeei",
+    title: "Chief Information Security Officer",
+    description: "Cybersecurity leader with over 20 years of experience across large financial organisations. Has spearheaded large-scale security programs and developed comprehensive strategies spanning identity management, threat intelligence, and secure operations across public and private sectors.",
+    imageSrc: "/images/people/ribvar.png",
+  },
+  {
+    name: "Richard Ford",
+    title: "Head of Cloud and Infrastructure",
+    description: "Career cloud and infrastructure leader helping organisations become smarter, safer, and stronger in the cloud. Experience spans resilient hosting platforms in emerging tech ecosystems through to leading cloud and infrastructure teams at AWS, Adobe, Versent, and Software@Scale.",
+    imageSrc: "/images/people/richard.png",
   },
 ];
 
@@ -56,7 +74,7 @@ const PeopleTeamSection = () => {
 
         {/* Team Grid (Mobile: Stacked, Desktop: 3 Columns per row) */}
         <div className="flex flex-col gap-12 md:gap-16 w-full">
-          {[TEAM_MEMBERS.slice(0, 3), TEAM_MEMBERS.slice(3, 6)].map((row, rowIndex) => (
+          {[TEAM_MEMBERS.slice(0, 3), TEAM_MEMBERS.slice(3, 6), TEAM_MEMBERS.slice(6, 9)].map((row, rowIndex) => (
             <div key={rowIndex} className="flex flex-col md:flex-row gap-12 md:gap-12 w-full">
               {row.map((member) => (
                 <div key={member.name} className="flex flex-col gap-5 md:gap-6 w-full items-start md:w-1/3">
