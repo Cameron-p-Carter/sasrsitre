@@ -1,12 +1,19 @@
 import Image from 'next/image';
 import SectionWrapper from '@/app/components/shared/SectionWrapper';
 
+interface Location {
+  city: string;
+  address: string;
+  link: string;
+}
+
 interface ContactInfoItem {
   iconSrc: string;
   title: string;
   description: string;
-  contactInfo: string;
+  contactInfo?: string;
   isLink?: boolean;
+  locations?: Location[];
 }
 
 interface ContactInfoSectionProps {
@@ -52,7 +59,7 @@ export default function ContactInfoSection({
                     </p>
                   </div>
                   
-                  {item.isLink ? (
+                  {item.isLink && item.contactInfo ? (
                     <a
                       href={
                         item.title === 'Email'
@@ -67,10 +74,42 @@ export default function ContactInfoSection({
                     >
                       {item.contactInfo}
                     </a>
-                  ) : (
+                  ) : item.contactInfo ? (
                     <p className={`font-normal text-base leading-[1.5] underline w-full ${linkColor}`}>
                       {item.contactInfo}
                     </p>
+                  ) : null}
+
+                  {item.locations && (
+                    <div className="flex flex-col gap-4 items-center w-full">
+                      {/* Group locations by city */}
+                      {Object.entries(
+                        item.locations.reduce((acc, location) => {
+                          if (!acc[location.city]) {
+                            acc[location.city] = [];
+                          }
+                          acc[location.city].push(location);
+                          return acc;
+                        }, {} as Record<string, Location[]>)
+                      ).map(([city, cityLocations], cityIndex) => (
+                        <div key={cityIndex} className="w-full flex flex-col gap-2">
+                          <p className={`font-bold text-base leading-[1.5] w-full ${textColor}`}>
+                            {city}
+                          </p>
+                          {cityLocations.map((location, locIndex) => (
+                            <a
+                              key={locIndex}
+                              href={location.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className={`font-normal text-base leading-[1.5] underline w-full ${textColor}`}
+                            >
+                              {location.address}
+                            </a>
+                          ))}
+                        </div>
+                      ))}
+                    </div>
                   )}
                 </div>
               </div>

@@ -16,10 +16,26 @@ const CONTACT_INFO_DATA = {
     },
     {
       iconSrc: "/images/icons/location_on.svg",
-      title: "Office",
-      description: "Call us for direct support and inquiries.",
-      contactInfo: "Level 57, 25 Martin Place, Sydney 2000 NSW Australia",
-      isLink: true
+      title: "Office locations",
+      description: "Explore our global office locations below.",
+      locations: [
+        {
+          city: "SYDNEY",
+          address: "Level 57, 25 Martin Place, Sydney CBD, NSW 2000",
+          link: "https://www.google.com/maps/search/?api=1&query=Level+57%2C+25+Martin+Place%2C+Sydney+CBD%2C+NSW+2000"
+        },
+        {
+          city: "SYDNEY",
+          address: "Level 26, 45 Macquarie Street, Parramatta, NSW 2150",
+          link: "https://www.google.com/maps/search/?api=1&query=Level+26%2C+45+Macquarie+Street%2C+Parramatta%2C+NSW+2150"
+        },
+        {
+          city: "MELBOURNE",
+          address: "Ground Floor, 161 Collins Street, Melbourne, VIC 3000",
+          link: "https://www.google.com/maps/search/?api=1&query=Ground+Floor%2C+161+Collins+Street%2C+Melbourne%2C+VIC+3000"
+        }
+      ],
+      isLink: false
     }
   ],
   backgroundColor: "bg-[#cce1f4]",
