@@ -68,6 +68,7 @@ export default function Footer() {
               </h3>
               <div className="flex flex-col">
                 <FooterLink href="/">Home</FooterLink>
+                <FooterLink href="/people">Who We Are</FooterLink>
                 <FooterLink href="/careers">Careers</FooterLink>
                 <FooterLink href="/contact-us">Contact Us</FooterLink>
               </div>
