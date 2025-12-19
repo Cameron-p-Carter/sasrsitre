@@ -138,13 +138,23 @@ export default function Footer() {
 
           {/* Bottom Row - Desktop/Tablet/Mobile */}
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-            
+
             {/* Copyright */}
             <div className="flex flex-col gap-4 lg:flex-row lg:gap-6 lg:items-center text-white text-sm font-normal leading-[1.5]">
               <span className="shrink-0">
-                © 2025 Software@Scale. All rights reserved.
+                © 2026 Software@Scale. All rights reserved.
               </span>
             </div>
+
+            {/* LinkedIn Logo */}
+            <Link href="https://www.linkedin.com/company/softwareatscale/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="w-[100px] h-[25px] relative hover:opacity-80 transition-opacity">
+              <Image
+                src="/images/Company Logos/LinkedIn_Logo_White 1.svg"
+                alt="LinkedIn"
+                fill
+                className="object-contain"
+              />
+            </Link>
           </div>
         </div>
       </div>
