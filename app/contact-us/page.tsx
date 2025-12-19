@@ -17,7 +17,7 @@ const CONTACT_INFO_DATA = {
     {
       iconSrc: "/images/icons/location_on.svg",
       title: "Office locations",
-      description: "Explore our global office locations below.",
+      description: "",
       locations: [
         {
           city: "SYDNEY",
@@ -46,7 +46,7 @@ const CONTACT_INFO_DATA = {
 
 const CONTACT_FORM_DATA = {
   title: "Contact us",
-  description: "Explore our global office locations below.",
+  description: "Connect with us to discuss your requirements.",
   imageSrc: "/images/placeholder/placeholder90.jpg",
   backgroundColor: "bg-[#006cc9]",
   titleColor: "text-white",
