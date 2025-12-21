@@ -73,7 +73,7 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
     {
       type: 'image',
       src: '/images/articles/art1.jpg',
-      caption: 'Patricia Droguett, Software@Scale Director of Operations and the team',
+      caption: 'Participants and organisers of the CISO masterclass come together following the event, marking funds raised in support of Ukraine Friends.',
     } as ImageBlock,
     {
       type: 'richText',
@@ -82,7 +82,7 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
     {
       type: 'image',
       src: '/images/articles/art2.jpg',
-      caption: 'Celebrating leadership and contribution to Australia\'s growing technology industry',
+      caption: 'Patricia Droguett, COO of Software@Scale, addressing attendees during the Strategic Focus Masterclass on leadership, crisis response and organisational resilience.',
     } as ImageBlock,
     {
       type: 'richText',

@@ -68,25 +68,27 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
   contentBlocks: [
     {
       type: 'richText',
-      content: `The Women Leading Tech Awards, presented by Atlassian, celebrate the women who are shaping the future of technology through innovation, leadership and community impact. The 2025 awards were held on 28 March in Sydney, bringing together hundreds of professionals from across Australia's technology landscape to honour those driving meaningful change.`,
+      content: `The Australian Tamil Chamber of Commerce (ATCC) marked its 10th anniversary with its Annual Business Gala Dinner in September 2025, bringing together business leaders, professionals and community representatives from across Australia. The event celebrated the achievements of Tamil professionals and businesses, while reinforcing the importance of cultural connection and enterprise within Australia’s broader economic landscape.`,
     } as RichTextBlock,
     {
       type: 'image',
       src: '/images/articles/art7.jpg',
-      caption: 'Patricia Droguett, Software@Scale Director of Operations and the team',
+      caption: `Louis Droguett (CEO, Software@Scale)  Patricia Droguett (COO, Software@Scale) Software@Scale with Dr Andrew Charlton at the Australian Tamil Chamber of Commerce 10th Anniversary Gala Dinner`,
     } as ImageBlock,
     {
       type: 'richText',
-      content: `Patricia was recognised in the Entrepreneur/Founder category for her work in advancing scalable software delivery and promoting greater representation in the technology sector. Her nomination highlights both her professional achievements and her role in fostering collaboration and growth within Software@Scale's expanding operations.`,
+      content: `Software@Scale supported the milestone event, joining members and guests for an evening that highlighted the role of innovation, entrepreneurship and collaboration in driving sustainable business growth. The gala also provided an opportunity to strengthen relationships across industries and communities, reflecting ATCC’s ongoing commitment to fostering meaningful commercial connections.
+
+A key highlight of the evening was an address by Dr Andrew Charlton, Assistant Minister for Science, Technology and the Digital Economy, Cabinet Secretary, and Special Envoy for Cyber Security and Digital Resilience. Dr Charlton shared insights into how technology, innovation and digital capability are shaping Australia’s future, reinforcing the importance of strong public–private collaboration in building a resilient digital economy.`,
     } as RichTextBlock,
     {
       type: 'image',
       src: '/images/articles/art8.jpg',
-      caption: 'Celebrating leadership and contribution to Australia\'s growing technology industry',
+      caption: `Guests gather at the Australian Tamil Chamber of Commerce 10th Anniversary Gala Dinner, celebrating a decade of community, culture and business leadership.`,
     } as ImageBlock,
     {
       type: 'richText',
-      content: `For the Software@Scale team, Patricia's recognition reflects the company's broader commitment to building an inclusive and high-performing workplace. The event was an opportunity to celebrate not only individual excellence but also the collective progress of women shaping the next generation of Australian tech.`,
+      content: `For Software@Scale, participation in the ATCC Gala aligned with its broader commitment to supporting inclusive business communities and engaging with organisations that champion innovation and opportunity. The event underscored the value of cross-cultural collaboration in strengthening Australia’s technology and business ecosystems.`,
     } as RichTextBlock,
   ],
   backgroundColor: "bg-[#cce1f4]",
