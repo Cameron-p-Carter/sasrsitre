@@ -6,8 +6,8 @@ const TEST_SERVICE_DATA = {
     imageSrc: "/images/placeholder/placeholder53.jpg", // Updated image placeholder
     tagline: "Empower",
     title: "Data and AI",
-    titleHighlight: "Services",
-    description: "In today's fast-paced digital landscape, harnessing the power of data and artificial intelligence is crucial for business success. Our Data / AI Services are designed to equip enterprises with the tools and insights needed to thrive.",
+    titleHighlight: "Engineering",
+    description: "In today's fast-paced digital landscape, harnessing the power of data and artificial intelligence is crucial for business success. Our Data & AI Engineering services are designed to equip enterprises with the tools and insights needed to thrive.",
     overlayOpacity: 0.6, // Updated opacity
     objectPosition: "top",
   },
