@@ -76,7 +76,7 @@ const NEWS_GRID_DATA: NewsGridSectionData = {
       id: 6,
       imageSrc: "/images/placeholder/placeholder106jpg.jpg", // Placeholder
       title: "Patricia Droguett Recognised at Women Leading Tech Awards 2025",
-      description: "Software@Scale's Director of Operations, Patricia Droguett, was recognised as a finalist in the 2025 Atlassian Women Leading Tech Awards, celebrating women driving innovation across Australia's technology sector.",
+      description: "Software@Scale's Chief Operating Officer, Patricia Droguett, was recognised as a finalist in the 2025 Atlassian Women Leading Tech Awards, celebrating women driving innovation across Australia's technology sector.",
       link: "/collections/news/women-leading-tech-awards",
     },
     {

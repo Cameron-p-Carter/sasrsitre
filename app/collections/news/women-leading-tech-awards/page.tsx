@@ -58,7 +58,7 @@ interface ArticlePageData {
 
 const ARTICLE_HEADER_DATA: ArticleHeaderData = {
   title: "Patricia Droguett Recognised at Women Leading Tech Awards 2025",
-  description: "Software@Scale's Director of Operations, Patricia Droguett, was named a finalist at the 2025 Atlassian Women Leading Tech Awards, recognising her leadership and contribution to Australia's growing technology industry.",
+  description: "Software@Scale's Chief Operating Officer, Patricia Droguett, was named a finalist at the 2025 Atlassian Women Leading Tech Awards, recognising her leadership and contribution to Australia's growing technology industry.",
   backgroundColor: "bg-[#cce1f4]",
   titleColor: "text-[#0c2080]",
   textColor: "text-[#00050a]",
@@ -73,7 +73,7 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
     {
       type: 'image',
       src: '/images/placeholder/placeholder119.jpg',
-      caption: 'Patricia Droguett, Software@Scale Director of Operations and the team',
+      caption: 'Patricia Droguett, Software@Scale Chief Operating Officer and the team',
     } as ImageBlock,
     {
       type: 'richText',
