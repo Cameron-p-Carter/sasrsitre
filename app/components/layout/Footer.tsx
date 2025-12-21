@@ -97,7 +97,7 @@ export default function Footer() {
                 <FooterLink href="/services/project-acceleration">Project Acceleration</FooterLink>
                 <FooterLink href="/services/platform-due-diligence" className="whitespace-nowrap">Platform Due Diligence</FooterLink>
                 <FooterLink href="/services/engineering-performance" className="whitespace-nowrap">Engineering Performance</FooterLink>
-                <FooterLink href="/services/data-ai-services">Data & AI Services</FooterLink>
+                <FooterLink href="/services/data-ai-engineering">Data & AI Engineering</FooterLink>
               </div>
             </div>
 

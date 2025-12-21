@@ -127,7 +127,7 @@ const CASE_STUDY_DELIVERABLES_DATA: CaseStudyDeliverablesData = {
 };
 
 const CASE_STUDY_IMAGE_FEATURES_DATA: CaseStudyImageFeaturesData = {
-  sectionTitle: "Data & AI Services",
+  sectionTitle: "Data & AI Engineering",
   features: [
     {
       iconSrc: "/images/icons/automation.svg", // Placeholder for automation

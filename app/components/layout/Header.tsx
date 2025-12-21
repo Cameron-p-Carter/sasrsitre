@@ -125,8 +125,8 @@ const Header = () => {
                         <Link href="/services/engineering-performance" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity whitespace-nowrap">
                           Engineering Performance
                         </Link>
-                        <Link href="/services/data-ai-services" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity">
-                          Data & AI Services
+                        <Link href="/services/data-ai-engineering" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity">
+                          Data & AI Engineering
                         </Link>
                       </div>
                     </div>
@@ -405,8 +405,8 @@ const Header = () => {
                           <Link href="/services/engineering-performance" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
                             Engineering Performance
                           </Link>
-                          <Link href="/services/data-ai-services" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
-                            Data & AI Services
+                          <Link href="/services/data-ai-engineering" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
+                            Data & AI Engineering
                           </Link>
                         </div>
                       </div>
