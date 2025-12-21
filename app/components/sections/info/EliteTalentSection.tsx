@@ -68,8 +68,7 @@ const EliteTalentSection = ({ hideLearnMore = false }: EliteTalentSectionProps) 
                 Elite Talent
               </h2>
               <div className="font-normal text-[#00050a] text-[16px] md:text-[17px] lg:text-[18px] leading-[1.5] w-full">
-                <p className="mb-0">As certified partners of AWS (Advanced), Vercel (Silver), 6pillars.ai</p>
-                <p>and New Relic, we're deeply embedded in the modern technology ecosystem trusted to deliver where security, scale and performance are non-negotiable.</p>
+                <p>As certified partners of AWS (Advanced), Vercel (Silver), 6pillars.ai and New Relic, we're deeply embedded in the modern technology ecosystem trusted to deliver where security, scale and performance are non-negotiable.</p>
               </div>
             </div>
             
