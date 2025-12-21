@@ -68,7 +68,7 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
   contentBlocks: [
     {
       type: 'richText',
-      content: `The Women Leading Tech Awards, presented by Atlassian, celebrate the women who are shaping the future of technology through innovation, leadership and community impact. The 2025 awards were held on 28 March in Sydney, bringing together hundreds of professionals from across Australia's technology landscape to honour those driving meaningful change.`,
+      content: `The masterclass brought together 20 of Australia’s leading Chief Information Security Officers for a focused, in-depth discussion on navigating complex cybersecurity incidents and strengthening organisational resilience. Designed as an executive forum, the session emphasised practical decision-making under pressure and the realities of leading through large-scale security events.`,
     } as RichTextBlock,
     {
       type: 'image',
@@ -77,7 +77,9 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
     } as ImageBlock,
     {
       type: 'richText',
-      content: `Patricia was recognised in the Entrepreneur/Founder category for her work in advancing scalable software delivery and promoting greater representation in the technology sector. Her nomination highlights both her professional achievements and her role in fostering collaboration and growth within Software@Scale's expanding operations.`,
+      content: `Joe Sullivan shared insights drawn from his experience managing some of the world’s most high-profile cybersecurity challenges. Topics included incident response readiness, the importance of trusted internal teams, foundational security architecture, and the operational considerations required to support recovery following a major breach. The discussion encouraged open dialogue among participants, grounded in real-world scenarios rather than theory.
+
+The session also supported a broader social cause, raising funds for Ukraine Friends, a charity supported by Joe Sullivan. This element reinforced the event’s focus on leadership responsibility beyond the technical domain, acknowledging the wider impact of global security and humanitarian challenges.`,
     } as RichTextBlock,
     {
       type: 'image',
@@ -86,7 +88,7 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
     } as ImageBlock,
     {
       type: 'richText',
-      content: `For the Software@Scale team, Patricia's recognition reflects the company's broader commitment to building an inclusive and high-performing workplace. The event was an opportunity to celebrate not only individual excellence but also the collective progress of women shaping the next generation of Australian tech.`,
+      content: `Software@Scale supported the masterclass as part of its ongoing engagement with Australia’s security leadership community. By enabling forums that prioritise shared learning and executive-level collaboration, the company continues to contribute to the advancement of cybersecurity capability across sectors.`,
     } as RichTextBlock,
   ],
   backgroundColor: "bg-[#cce1f4]",

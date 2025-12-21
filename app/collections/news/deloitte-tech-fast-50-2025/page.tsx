@@ -68,25 +68,29 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
   contentBlocks: [
     {
       type: 'richText',
-      content: `The Women Leading Tech Awards, presented by Atlassian, celebrate the women who are shaping the future of technology through innovation, leadership and community impact. The 2025 awards were held on 28 March in Sydney, bringing together hundreds of professionals from across Australia's technology landscape to honour those driving meaningful change.`,
+      content: `Deloitte’s Tech Fast 50 program has, for more than two decades, recognised Australia’s fastest-growing technology companies based on sustained revenue growth, operational discipline and long-term potential. The Rising Star category highlights emerging organisations demonstrating exceptional momentum in their early years of operation.`,
     } as RichTextBlock,
     {
       type: 'image',
       src: '/images/articles/art3.jpg',
-      caption: 'Patricia Droguett, Software@Scale Director of Operations and the team',
+      caption: 'Software@Scale recognised as the Deloitte Tech Fast 50 Rising Star winner in both 2024 and 2025.',
     } as ImageBlock,
     {
       type: 'richText',
-      content: `Patricia was recognised in the Entrepreneur/Founder category for her work in advancing scalable software delivery and promoting greater representation in the technology sector. Her nomination highlights both her professional achievements and her role in fostering collaboration and growth within Software@Scale's expanding operations.`,
+      content: `In 2025, Software@Scale was named the Rising Star winner for the second year in a row — an achievement unmatched in the program’s history. The recognition reflects consistent performance across delivery, growth and client outcomes in a competitive and evolving market.
+
+The award acknowledges Software@Scale’s ability to scale responsibly while maintaining high standards across engineering, architecture and delivery. Its continued growth has been driven by a focus on ownership, collaboration and technical excellence across complex, high-impact engagements.`,
     } as RichTextBlock,
     {
       type: 'image',
       src: '/images/articles/art4.jpg',
-      caption: 'Celebrating leadership and contribution to Australia\'s growing technology industry',
+      caption: 'The Software@Scale team celebrating their second consecutive Deloitte Tech Fast 50 Rising Star win.',
     } as ImageBlock,
     {
       type: 'richText',
-      content: `For the Software@Scale team, Patricia's recognition reflects the company's broader commitment to building an inclusive and high-performing workplace. The event was an opportunity to celebrate not only individual excellence but also the collective progress of women shaping the next generation of Australian tech.`,
+      content: `The 2025 Tech Fast 50 awards were supported by partners including ASX, Atlassian, Baker McKenzie, Amazon Web Services (AWS), SAP and Deloitte. Winners across the program represent a broad cross-section of Australia’s technology sector, spanning fintech, enterprise platforms, sustainability and emerging digital services.
+
+Software@Scale’s back-to-back recognition reinforces its position among Australia’s leading growth-stage technology consultancies, reflecting a sustained commitment to quality, trust and long-term value for clients.`,
     } as RichTextBlock,
   ],
   backgroundColor: "bg-[#cce1f4]",

@@ -68,25 +68,27 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
   contentBlocks: [
     {
       type: 'richText',
-      content: `The Women Leading Tech Awards, presented by Atlassian, celebrate the women who are shaping the future of technology through innovation, leadership and community impact. The 2025 awards were held on 28 March in Sydney, bringing together hundreds of professionals from across Australia's technology landscape to honour those driving meaningful change.`,
+      content: `BeerOps 2025 brought together thousands of professionals from across software engineering, cloud, data and security for one of Australia’s most established technology networking events. Known for its inclusive and community-driven approach, BeerOps continues to play a key role in fostering collaboration across the technology sector.`,
     } as RichTextBlock,
     {
       type: 'image',
       src: '/images/articles/art5.jpg',
-      caption: 'Patricia Droguett, Software@Scale Director of Operations and the team',
+      caption: 'Custom Software@Scale BeerOps 2025 mugs prepared for the event, reflecting the company’s presence and engagement within the engineering community.',
     } as ImageBlock,
     {
       type: 'richText',
-      content: `Patricia was recognised in the Entrepreneur/Founder category for her work in advancing scalable software delivery and promoting greater representation in the technology sector. Her nomination highlights both her professional achievements and her role in fostering collaboration and growth within Software@Scale's expanding operations.`,
+      content: `Software@Scale attended the event with a dedicated booth, providing an opportunity to reconnect with clients, partners and peers while engaging with new members of the tech community. The evening facilitated meaningful conversations around engineering practice, emerging technologies and the challenges facing modern software delivery.
+
+The event also highlighted BeerOps’ commitment to social impact, with proceeds supporting the Children’s Hospital. This philanthropic focus remains a defining element of BeerOps, reinforcing the role of the technology community in contributing beyond the industry itself.`,
     } as RichTextBlock,
     {
       type: 'image',
       src: '/images/articles/art6.jpg',
-      caption: 'Celebrating leadership and contribution to Australia\'s growing technology industry',
+      caption: 'The Software@Scale team and community members gathered at BeerOps 2025, connecting over shared conversations around technology, engineering and collaboration.',
     } as ImageBlock,
     {
       type: 'richText',
-      content: `For the Software@Scale team, Patricia's recognition reflects the company's broader commitment to building an inclusive and high-performing workplace. The event was an opportunity to celebrate not only individual excellence but also the collective progress of women shaping the next generation of Australian tech.`,
+      content: `For Software@Scale, participation in BeerOps 2025 aligned with its ongoing engagement in industry-led initiatives that prioritise knowledge sharing, professional connection and community contribution. The event provided a valuable forum to strengthen relationships and remain closely connected to the evolving Australian technology landscape.`,
     } as RichTextBlock,
   ],
   backgroundColor: "bg-[#cce1f4]",
