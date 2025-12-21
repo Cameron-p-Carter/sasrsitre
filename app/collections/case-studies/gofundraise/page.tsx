@@ -140,8 +140,6 @@ const CASE_STUDY_HERO_DATA: HeroSectionData = {
 const CASE_STUDY_OVERVIEW_DATA: CaseStudyOverviewData = {
   overviewTitle: "Overview",
   details: [
-    { label: "Client:", value: "GoFundraise" },
-    { label: "Partner:", value: "Software@Scale" },
     { label: "Industry:", value: "Technology" },
     { label: "Services:", value: "Engineering as a Service, Technology Advisory / Fractional Resources, Security Architecture, Engineering Performance" },
   ],

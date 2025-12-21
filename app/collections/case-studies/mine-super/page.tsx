@@ -143,8 +143,6 @@ const CASE_STUDY_HERO_DATA: HeroSectionData = {
 const CASE_STUDY_OVERVIEW_DATA: CaseStudyOverviewData = {
   overviewTitle: "Overview",
   details: [
-    { label: "Client:", value: "Mine Super (now Team Super)" },
-    { label: "Partner:", value: "Software@Scale" },
     { label: "Industry:", value: "Superannuation" },
     { label: "Services:", value: "Engineering as a Service | Cloud Engineering | Platform Due Diligence" },
   ],

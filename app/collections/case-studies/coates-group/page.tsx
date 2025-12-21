@@ -116,8 +116,6 @@ const CASE_STUDY_HERO_DATA: HeroSectionData = {
 const CASE_STUDY_OVERVIEW_DATA: CaseStudyOverviewData = {
   overviewTitle: "Overview",
   details: [
-    { label: "Client:", value: "Coates Group" },
-    { label: "Partner:", value: "Software@Scale" },
     { label: "Industry:", value: "Retail/Media" },
     { label: "Services:", value: "Engineering Performance" },
   ],
