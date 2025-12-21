@@ -5,31 +5,45 @@ import Button from '@/app/components/shared/Button';
 
 const TIMELINE_DATA = [
   {
-    year: '2015',
+    year: 'Early 2023',
     title: 'Company Founded',
-    description: 'Software at Scale was established to drive digital transformation. Our mission is to empower enterprises with cutting-edge technology solutions.',
-    imageSrc: '/images/placeholder/placeholder28.jpg',
+    description: 'Software@Scale was established to drive digital transformation and deliver complex software engineering. Our mission is to empower enterprises with cutting-edge technology solutions.',
+    imageSrc: '/images/history/history1.jpg',
     alignment: 'right' as const, // Content on left, Image on right
   },
   {
-    year: '2018',
-    title: 'First Major Client',
-    description: 'We secured our first major client in the financial services sector. This partnership marked a significant step in our growth journey.',
-    imageSrc: '/images/placeholder/placeholder29.jpg',
+    year: 'Mid 2024',
+    title: 'Trusted by Australia’s Leading Enterprises',
+    description: 'S@S partnered with major banks, superfunds and high-growth technology companies, delivering cloud and product engineering across regulated and mission-critical environments.',
+    imageSrc: '/images/history/history2.jpg',
     alignment: 'left' as const, // Content on right, Image on left
   },
   {
-    year: '2020',
-    title: 'Expanded Service Offerings',
-    description: 'We broadened our service offerings to include cloud engineering and security architecture. This expansion allowed us to better serve our clients\' evolving needs.',
-    imageSrc: '/images/placeholder/placeholder30.jpg',
+    year: 'Late 2024',
+    title: 'Powering Innovation',
+    description: 'Established enterprise AI and data engineering guilds, positioning clients at the forefront of emerging technologies while maintaining strong foundations in security, reliability, and delivery.',
+    imageSrc: '/images/history/history3.jpg',
     alignment: 'right' as const, // Content on left, Image on right
   },
   {
-    year: '2024 Onwards',
-    title: 'Achieved Industry Recognition',
-    description: 'Software at Scale received multiple awards for innovation and excellence. Our commitment to quality and client success continues to drive our achievements.',
-    imageSrc: '/images/placeholder/placeholder31.jpg',
+    year: 'Mid 2025',
+    title: 'Rapid National Growth',
+    description: 'Our team scaled to 100+ engineers and technologists supporting clients across Australia and internationally while maintaining a high performance delivery focused culture.',
+    imageSrc: '/images/history/history4.jpg',
+    alignment: 'left' as const, // Content on right, Image on left
+  },
+  {
+    year: 'Late 2025',
+    title: 'Award-Winning Performance',
+    description: 'S@S was recognised as one of Australia’s fastest-growing technology companies, winning the Deloitte Tech Fast 50 Rising Star award in consecutive years and achieving one of the highest growth rates in the program’s history, alongside multiple industry awards.',
+    imageSrc: '/images/history/history5.jpg',
+    alignment: 'right' as const, // Content on left, Image on right
+  },
+  {
+    year: '2026 Onwards',
+    title: 'Independent and Engineering-Led',
+    description: 'Proudly bootstrapped, S@S continues to grow exponentially by trusting our engineers to lead delivery, making decisions in the long term interests of our clients and embedding innovation into the way we design, build, and scale software.',
+    imageSrc: '/images/history/history6.jpg',
     alignment: 'left' as const, // Content on right, Image on left
   },
 ];
