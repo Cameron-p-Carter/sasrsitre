@@ -12,6 +12,8 @@ interface NewsItem {
   description: string;
   author?: string;
   role?: string;
+  date?: string; // e.g., "Month Year"
+  readTime?: string; // e.g., "6 min read"
   link?: string;
   objectPosition?: string;
 }
@@ -68,7 +70,14 @@ const NewsGridSection = ({
               </div>
 
               {/* Content */}
-              <div className="flex flex-col gap-5">
+              <div className="flex flex-col gap-4">
+                {(item.date || item.readTime) && (
+                  <p className="text-sm font-semibold leading-[1.5] text-[#00050a]">
+                    {item.date}
+                    {item.date && item.readTime && <span className="font-normal"> | </span>}
+                    {item.readTime}
+                  </p>
+                )}
                 <div className="flex flex-col gap-2">
                   <h3 className="font-bold text-[20px] leading-[1.4] tracking-[-0.2px] text-[#00050a] group-hover:text-[#006cc9] transition-colors">
                     {item.title}
@@ -119,22 +128,27 @@ const NewsGridSection = ({
 
               {/* Content */}
               <div className="flex flex-col gap-6">
-                <div className="flex flex-col gap-4">
-                  <div className="flex flex-col gap-2">
-                    <h3 className="font-bold text-[24px] leading-[1.4] tracking-[-0.24px] text-[#00050a] group-hover:text-[#006cc9] transition-colors">
-                      {item.title}
-                    </h3>
-                    <p className="font-normal text-base leading-[1.5] text-[#00050a]">
-                      {item.description}
+                {(item.date || item.readTime) && (
+                  <p className="text-sm font-semibold leading-[1.5] text-[#00050a]">
+                    {item.date}
+                    {item.date && item.readTime && <span className="font-normal"> | </span>}
+                    {item.readTime}
+                  </p>
+                )}
+                <div className="flex flex-col gap-2">
+                  <h3 className="font-bold text-[24px] leading-[1.4] tracking-[-0.24px] text-[#00050a] group-hover:text-[#006cc9] transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="font-normal text-base leading-[1.5] text-[#00050a]">
+                    {item.description}
+                  </p>
+                  {(item.author || item.role) && (
+                    <p className="text-sm leading-[1.5] text-[#00050a]">
+                      {item.author && <span className="font-semibold">{item.author}</span>}
+                      {item.author && item.role && <span className="font-normal"> | </span>}
+                      {item.role && <span className="font-normal">{item.role}</span>}
                     </p>
-                    {(item.author || item.role) && (
-                      <p className="text-sm leading-[1.5] text-[#00050a]">
-                        {item.author && <span className="font-semibold">{item.author}</span>}
-                        {item.author && item.role && <span className="font-normal"> | </span>}
-                        {item.role && <span className="font-normal">{item.role}</span>}
-                      </p>
-                    )}
-                  </div>
+                  )}
                 </div>
 
                 {/* Action Text */}
