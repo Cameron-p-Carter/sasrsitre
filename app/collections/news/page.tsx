@@ -123,7 +123,7 @@ const NEWS_GRID_DATA: NewsGridSectionData = {
     },
     {
       id: 13,
-      imageSrc: "/images/articles/art7.jpg",
+      imageSrc: "/images/articles/art8.jpg",
       title: "Software@Scale Supports Australian Tamil Chamber of Commerce Gala",
       description: "Software@Scale was proud to support the Australian Tamil Chamber of Commerce's 10th Anniversary Gala Dinner, recognising a decade of contribution to Australia's multicultural business community.",
       link: "/collections/news/chamber-of-commerce-gala",

@@ -72,7 +72,7 @@ const ARTICLE_CONTENT_DATA: ArticleContentData = {
     } as RichTextBlock,
     {
       type: 'image',
-      src: '/images/articles/art7.jpg',
+      src: '/images/articles/art8.jpg',
       caption: `Louis Droguett (CEO, Software@Scale)  Patricia Droguett (COO, Software@Scale) Software@Scale with Dr Andrew Charlton at the Australian Tamil Chamber of Commerce 10th Anniversary Gala Dinner`,
     } as ImageBlock,
     {
@@ -83,7 +83,7 @@ A key highlight of the evening was an address by Dr Andrew Charlton, Assistant M
     } as RichTextBlock,
     {
       type: 'image',
-      src: '/images/articles/art8.jpg',
+      src: '/images/articles/art7.jpg',
       caption: `Guests gather at the Australian Tamil Chamber of Commerce 10th Anniversary Gala Dinner, celebrating a decade of community, culture and business leadership.`,
     } as ImageBlock,
     {
