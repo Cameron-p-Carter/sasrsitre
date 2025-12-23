@@ -24,14 +24,14 @@ const FooterLink = ({ href = '#', children, className = '' }: { href?: string, c
 export default function Footer() {
   return (
     <footer className="bg-[#0c2080] px-5 md:px-8 lg:px-16 py-12 md:py-20 w-full">
-      <div className="max-w-[1280px] mx-auto flex flex-col gap-12 md:gap-20 lg:gap-32">
+      <div className="max-w-[1280px] mx-auto flex flex-col gap-12 md:gap-20 lg:gap-44">
         {/* TOP SECTION: Logo/Awards + Links */}
         <div className="flex flex-col gap-12 lg:flex-row lg:gap-16 2xl:gap-[61px] items-start w-full">
           
           {/* COLUMN 1: Logo & Awards (Left Side) */}
           <div className="flex flex-col gap-8 w-full md:w-auto lg:w-[235px] lg:flex-shrink-0">
             {/* Logo */}
-            <div className="w-[150px] h-8 relative">
+            <div className="w-[240px] h-[51px] relative">
               <Image
                 src="/images/logos/S@S_Logo_WHITE_RGB.png"
                 alt="Software@Scale Logo"
@@ -42,9 +42,9 @@ export default function Footer() {
             </div>
             
             {/* Awards Badges (Responsive 2xN grid for mobile, inline for desktop) */}
-            <div className="flex flex-wrap gap-4 w-full md:w-[235px]">
+            <div className="flex flex-wrap gap-4 md:gap-[15px] w-full md:w-[240px]">
               {FOOTER_AWARDS_BADGES.map((award, index) => (
-                <Link key={index} href="/recognition" className="w-[100px] h-[100px] relative flex-shrink-0 hover:opacity-80 transition-opacity">
+                <Link key={index} href="/recognition" className="w-[70px] h-[70px] relative flex-shrink-0 hover:opacity-80 transition-opacity">
                   <Image
                     src={award.src}
                     alt={award.name}
