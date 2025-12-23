@@ -21,7 +21,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-[rgba(12,32,128,0.6)]" aria-hidden="true"></div>
 
       {/* Content Container */}
-      <div className="relative z-10 w-full max-w-[1280px] mx-auto px-5 md:px-8 lg:px-16 py-4 md:py-6 lg:py-12">
+      <div className="relative z-10 w-full max-w-[1280px] mx-auto py-4 md:py-6 lg:py-12">
         <div className="flex flex-col gap-8 md:gap-10 lg:gap-12 max-w-[560px]">
           {/* Main Content */}
           <div className="flex flex-col gap-5 md:gap-6">
