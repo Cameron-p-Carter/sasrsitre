@@ -9,6 +9,7 @@ interface JobPosition {
   location: string;
   schedule: string;
   applyUrl?: string;
+  iconSrc?: string;
 }
 
 interface CareersOpenPositionsSectionProps {
@@ -49,68 +50,77 @@ export default function CareersOpenPositionsSection({
             {/* Job Positions */}
             <div className="flex flex-col items-center flex-grow w-full">
               {positions.map((position, index) => (
-                <div key={index} className="border-t border-[rgba(0,5,10,0.15)] flex flex-col gap-6 md:gap-8 items-start py-6 md:py-8 w-full">
-                  <div className="flex flex-col gap-5 md:gap-6 items-start w-full">
-                    
-                    {/* Job Details */}
-                    <div className="flex flex-col gap-3 md:gap-4 items-start w-full">
-                      <div className="flex gap-4 items-center w-full">
-                        {/* Remove Icon based on user instructions and Figma context, only keep if an icon is present in the figma */}
-                        {/* The figma for this card structure included a 48x48 icon */}
-                        {/* The user specifically asked to "dont put in the icons that the figma has just put none" but the figma output shows icons are present. 
-                        I will remove the icon for now based on the explicit instruction. */}
-                        {/* Figma icon: 48px, Gap: 16px */}
+                <div key={index} className="border-t border-[rgba(0,5,10,0.15)] flex gap-4 items-start py-6 md:py-8 w-full">
+                  {/* Icon */}
+                  {position.iconSrc && (
+                    <div className="relative w-12 h-12 shrink-0">
+                      <Image
+                        src={position.iconSrc}
+                        alt=""
+                        width={48}
+                        height={48}
+                        className="object-contain"
+                      />
+                    </div>
+                  )}
+
+                  {/* Job Content */}
+                  <div className="flex flex-col gap-6 md:gap-8 items-start flex-grow">
+                    <div className="flex flex-col gap-5 md:gap-6 items-start w-full">
+
+                      {/* Job Details */}
+                      <div className="flex flex-col gap-3 md:gap-4 items-start w-full">
                         <h3 className={`font-bold text-[20px] md:text-[24px] leading-[1.4] tracking-[-0.2px] md:tracking-[-0.24px] ${textColor}`}>
                           {position.title}
                         </h3>
-                      </div>
-                      <p className={`font-normal text-base leading-[1.5] w-full ${textColor}`}>
-                        {position.description}
-                      </p>
-                    </div>
-                    
-                    {/* Job Info */}
-                    <div className="flex gap-6 items-start w-full text-[18px]">
-                      <div className="flex gap-3 items-center">
-                        <div className="relative w-6 h-6 shrink-0">
-                          <Image
-                            src="/images/icons/location_on.svg"
-                            alt="Location"
-                            width={24}
-                            height={24}
-                            className="object-contain"
-                          />
-                        </div>
-                        <p className={`font-normal leading-[1.5] text-nowrap ${textColor}`}>
-                          {position.location}
+                        <p className={`font-normal text-base leading-[1.5] w-full ${textColor}`}>
+                          {position.description}
                         </p>
                       </div>
-                      <div className="flex gap-3 items-center">
-                        <div className="relative w-6 h-6 shrink-0">
-                          <Image
-                            src="/images/icons/schedule.svg"
-                            alt="Schedule"
-                            width={24}
-                            height={24}
-                            className="object-contain"
-                          />
+
+                      {/* Job Info */}
+                      <div className="flex gap-6 items-start w-full text-[18px]">
+                        <div className="flex gap-3 items-center">
+                          <div className="relative w-6 h-6 shrink-0">
+                            <Image
+                              src="/images/icons/location_on.svg"
+                              alt="Location"
+                              width={24}
+                              height={24}
+                              className="object-contain"
+                            />
+                          </div>
+                          <p className={`font-normal leading-[1.5] text-nowrap ${textColor}`}>
+                            {position.location}
+                          </p>
                         </div>
-                        <p className={`font-normal leading-[1.5] text-nowrap ${textColor}`}>
-                          {position.schedule}
-                        </p>
+                        <div className="flex gap-3 items-center">
+                          <div className="relative w-6 h-6 shrink-0">
+                            <Image
+                              src="/images/icons/schedule.svg"
+                              alt="Schedule"
+                              width={24}
+                              height={24}
+                              className="object-contain"
+                            />
+                          </div>
+                          <p className={`font-normal leading-[1.5] text-nowrap ${textColor}`}>
+                            {position.schedule}
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  
-                  {/* Apply Button */}
-                  <div className="flex flex-col gap-4 items-start">
-                    <Button
-                      variant="secondary"
-                      href={position.applyUrl}
-                      target="_blank"
-                    >
-                      Apply Now
-                    </Button>
+
+                    {/* Apply Button */}
+                    <div className="flex flex-col gap-4 items-start">
+                      <Button
+                        variant="secondary"
+                        href={position.applyUrl}
+                        target="_blank"
+                      >
+                        Apply Now
+                      </Button>
+                    </div>
                   </div>
                 </div>
               ))}

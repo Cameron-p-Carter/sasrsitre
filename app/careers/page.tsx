@@ -15,49 +15,56 @@ const OPEN_POSITIONS_DATA = {
       description: "Accelerate your AI experience with an amazing opportunity.",
       location: "Sydney NSW (Hybrid)",
       schedule: "Full Time",
-      applyUrl: "https://www.seek.com.au/job/89048284?type=standard&ref=search-standalone&origin=jobCard#sol=0aff79f67ba31abe4297c883eca5e73723ec1f6b"
+      applyUrl: "https://www.seek.com.au/job/89048284?type=standard&ref=search-standalone&origin=jobCard#sol=0aff79f67ba31abe4297c883eca5e73723ec1f6b",
+      iconSrc: "/images/careers/bolt_dark.svg"
     },
     {
       title: "Principal Engineer (.NET) - Perm or Contract",
       description: "Join a high performing team of digital and engineering leaders solving complex problems at scale with cutting edge tech and global impact.",
       location: "Sydney NSW (Hybrid)",
       schedule: "Full Time",
-      applyUrl: "https://www.seek.com.au/job/89131734?type=standard&ref=search-standalone&origin=cardTitle#sol=b386c66092747c0c7fd1e0562b5194f8cb7ccbab"
+      applyUrl: "https://www.seek.com.au/job/89131734?type=standard&ref=search-standalone&origin=cardTitle#sol=b386c66092747c0c7fd1e0562b5194f8cb7ccbab",
+      iconSrc: "/images/careers/handyman_dark.svg"
     },
     {
       title: "Principal Site Reliability and Software Engineer - Perm or Contract",
       description: "Join a high performing team of digital and engineering leaders solving complex problems at scale with cutting edge tech and global impact.",
       location: "Sydney NSW (Hybrid)",
       schedule: "Full Time",
-      applyUrl: "https://www.seek.com.au/job/89131726?type=standard&ref=search-standalone&origin=cardTitle#sol=de4ef1d19e54b79bf4afa625c27f9c4e38c2c5c0"
+      applyUrl: "https://www.seek.com.au/job/89131726?type=standard&ref=search-standalone&origin=cardTitle#sol=de4ef1d19e54b79bf4afa625c27f9c4e38c2c5c0",
+      iconSrc: "/images/careers/handyman_dark.svg"
     },
     {
       title: "Senior Android Engineer (Kotlin) - Perm or Contract",
       description: "Senior Android Engineer (Kotlin). Collaborate to deliver enterprise-wide solutions creating significant value at scale.",
       location: "Sydney NSW (Hybrid)",
       schedule: "Full Time",
-      applyUrl: "https://www.seek.com.au/job/88755231?type=standard&ref=search-standalone&origin=cardTitle#sol=ad30a8d48ea3162f3c9dce5be79fce6ac7922368"
+      applyUrl: "https://www.seek.com.au/job/88755231?type=standard&ref=search-standalone&origin=cardTitle#sol=ad30a8d48ea3162f3c9dce5be79fce6ac7922368",
+      iconSrc: "/images/careers/handyman_dark.svg"
     },
     {
       title: "Principal Engineer (AI)",
       description: "Principal Engineer (AI) – Lead architecture & hands-on delivery of AI systems, LLM integrations, and scalable platform capabilities.",
       location: "Sydney NSW (Hybrid)",
       schedule: "Contract",
-      applyUrl: "https://www.seek.com.au/job/88728280?type=standard&ref=search-standalone#sol=e3d57f21bbb3f7aa2ff5b3c2f9b6f8079260a2f3"
+      applyUrl: "https://www.seek.com.au/job/88728280?type=standard&ref=search-standalone#sol=e3d57f21bbb3f7aa2ff5b3c2f9b6f8079260a2f3",
+      iconSrc: "/images/careers/handyman_dark.svg"
     },
     {
       title: "Principal Engineer (React/TypeScript/Node) - Perm or Contract",
       description: "Join a high performing team of digital and engineering leaders solving complex problems at scale with cutting edge tech and global impact.",
       location: "Sydney NSW (Hybrid)",
       schedule: "Full Time",
-      applyUrl: "https://www.seek.com.au/job/88727877?type=standard&ref=search-standalone&origin=jobCard#sol=36f7c777a262737ce85476c07d9dfa184d157cf9"
+      applyUrl: "https://www.seek.com.au/job/88727877?type=standard&ref=search-standalone&origin=jobCard#sol=36f7c777a262737ce85476c07d9dfa184d157cf9",
+      iconSrc: "/images/careers/handyman_dark.svg"
     },
     {
       title: "Senior Business Analyst - Digital",
       description: "Join our dynamic team as a Senior Digital Business Analyst to deliver digital products that enhance customer experiences and drive business success.",
       location: "Sydney NSW (Hybrid)",
       schedule: "Contract",
-      applyUrl: "https://www.seek.com.au/job/88816203?type=standard&ref=search-standalone&origin=jobCard#sol=23be08ef9edf922e39f1662c44f50af942ea19d3"
+      applyUrl: "https://www.seek.com.au/job/88816203?type=standard&ref=search-standalone&origin=jobCard#sol=23be08ef9edf922e39f1662c44f50af942ea19d3",
+      iconSrc: "/images/careers/finance_mode_dark.svg"
     }
   ],
   backgroundColor: "bg-[#cce1f4]",
