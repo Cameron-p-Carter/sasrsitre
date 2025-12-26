@@ -2,7 +2,7 @@ import Image from 'next/image';
 import SectionWrapper from '@/app/components/shared/SectionWrapper';
 
 const images = {
-  top: '/images/core/top.jpg',
+  top: '/images/core/his34.png',
   right: '/images/core/right.jpg',
   bottom: '/images/core/bottom.jpg',
 };
