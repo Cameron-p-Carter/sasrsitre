@@ -13,6 +13,8 @@ interface ArticleHeaderData {
   backgroundColor: string;
   titleColor: string;
   textColor: string;
+  date?: string;
+  readTime?: string;
 }
 
 interface AuthorData {
@@ -78,6 +80,8 @@ const ArticlePageLayout = ({ data }: ArticlePageLayoutProps) => {
           backgroundColor={data.header.backgroundColor}
           titleColor={data.header.titleColor}
           textColor={data.header.textColor}
+          date={data.header.date}
+          readTime={data.header.readTime}
         />
         
         <ArticleContentSection

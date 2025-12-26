@@ -8,6 +8,8 @@ interface ArticleHeaderData {
   backgroundColor: string;
   titleColor: string;
   textColor: string;
+  date?: string;
+  readTime?: string;
 }
 
 interface AuthorData {
@@ -63,6 +65,8 @@ const ARTICLE_HEADER_DATA: ArticleHeaderData = {
   backgroundColor: "bg-[#cce1f4]",
   titleColor: "text-[#0c2080]",
   textColor: "text-[#00050a]",
+  date: "May 2025",
+  readTime: "3 min read"
 };
 
 const ARTICLE_CONTENT_DATA: ArticleContentData = {

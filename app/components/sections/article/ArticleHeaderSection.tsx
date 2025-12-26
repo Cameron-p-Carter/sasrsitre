@@ -4,6 +4,8 @@ interface ArticleHeaderSectionProps {
   backgroundColor: string;
   titleColor: string;
   textColor: string;
+  date?: string;
+  readTime?: string;
 }
 
 export default function ArticleHeaderSection({
@@ -12,6 +14,8 @@ export default function ArticleHeaderSection({
   backgroundColor,
   titleColor,
   textColor,
+  date,
+  readTime,
 }: ArticleHeaderSectionProps) {
   return (
     <section className={`${backgroundColor} px-5 md:px-16 py-16 md:py-28 w-full`}>
@@ -23,6 +27,13 @@ export default function ArticleHeaderSection({
           <p className={`font-normal text-base md:text-lg leading-[1.5] w-full ${textColor}`}>
             {description}
           </p>
+          {(date || readTime) && (
+            <p className={`text-sm font-semibold leading-[1.5] ${textColor}`}>
+              {date}
+              {date && readTime && <span className="font-normal"> | </span>}
+              {readTime}
+            </p>
+          )}
         </div>
       </div>
     </section>
