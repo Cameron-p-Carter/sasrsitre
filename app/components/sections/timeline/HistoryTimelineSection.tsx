@@ -15,7 +15,7 @@ const TIMELINE_DATA = [
     year: 'Mid 2024',
     title: 'Trusted by Australia’s Leading Enterprises',
     description: 'S@S partnered with major banks, superfunds and high-growth technology companies, delivering cloud and product engineering across regulated and mission-critical environments.',
-    imageSrc: '/images/history/history2.jpg',
+    imageSrc: '/images/history/his33.png',
     alignment: 'left' as const, // Content on right, Image on left
   },
   {
@@ -29,7 +29,7 @@ const TIMELINE_DATA = [
     year: 'Mid 2025',
     title: 'Rapid National Growth',
     description: 'Our team scaled to 100+ engineers and technologists supporting clients across Australia and internationally while maintaining a high performance delivery focused culture.',
-    imageSrc: '/images/history/history4.jpg',
+    imageSrc: '/images/history/his34.png',
     alignment: 'left' as const, // Content on right, Image on left
   },
   {
