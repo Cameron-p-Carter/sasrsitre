@@ -6,67 +6,65 @@ import CareersDiscoverSection from '@/app/components/sections/careers/CareersDis
 import CareersBenefitsSection from '@/app/components/sections/careers/CareersBenefitsSection';
 import CTASection from '@/app/components/sections/cta/CTASection';
 
-const OPEN_POSITIONS_DATA = {
-  sectionTitle: "Open Positions",
-  sectionDescription: "Join our dynamic team and help shape the future of technology consultancy.",
-  positions: [
+interface EmploymentHeroJob {
+  title: string;
+  description: string;
+  city: string;
+  country_name: string;
+  employment_type_name: string;
+  application_url: string;
+  department?: string;
+}
+
+interface EmploymentHeroResponse {
+  data: {
+    items: EmploymentHeroJob[];
+  };
+}
+
+async function getJobs() {
+  const res = await fetch(
+    'https://api.employmenthero.com/ats/api/v1/embedded/organisations/684d7a29-fa05-4662-b964-3fc2a6a70b0a/jobs',
     {
-      title: "AI Solutions Architect - Product Strategy & Implementation",
-      description: "Accelerate your AI experience with an amazing opportunity.",
-      location: "Sydney NSW (Hybrid)",
-      schedule: "Full Time",
-      applyUrl: "https://www.seek.com.au/job/89048284?type=standard&ref=search-standalone&origin=jobCard#sol=0aff79f67ba31abe4297c883eca5e73723ec1f6b",
-      iconSrc: "/images/careers/bolt_dark.svg"
-    },
-    {
-      title: "Principal Engineer (.NET) - Perm or Contract",
-      description: "Join a high performing team of digital and engineering leaders solving complex problems at scale with cutting edge tech and global impact.",
-      location: "Sydney NSW (Hybrid)",
-      schedule: "Full Time",
-      applyUrl: "https://www.seek.com.au/job/89131734?type=standard&ref=search-standalone&origin=cardTitle#sol=b386c66092747c0c7fd1e0562b5194f8cb7ccbab",
-      iconSrc: "/images/careers/handyman_dark.svg"
-    },
-    {
-      title: "Principal Site Reliability and Software Engineer - Perm or Contract",
-      description: "Join a high performing team of digital and engineering leaders solving complex problems at scale with cutting edge tech and global impact.",
-      location: "Sydney NSW (Hybrid)",
-      schedule: "Full Time",
-      applyUrl: "https://www.seek.com.au/job/89131726?type=standard&ref=search-standalone&origin=cardTitle#sol=de4ef1d19e54b79bf4afa625c27f9c4e38c2c5c0",
-      iconSrc: "/images/careers/handyman_dark.svg"
-    },
-    {
-      title: "Senior Android Engineer (Kotlin) - Perm or Contract",
-      description: "Senior Android Engineer (Kotlin). Collaborate to deliver enterprise-wide solutions creating significant value at scale.",
-      location: "Sydney NSW (Hybrid)",
-      schedule: "Full Time",
-      applyUrl: "https://www.seek.com.au/job/88755231?type=standard&ref=search-standalone&origin=cardTitle#sol=ad30a8d48ea3162f3c9dce5be79fce6ac7922368",
-      iconSrc: "/images/careers/handyman_dark.svg"
-    },
-    {
-      title: "Principal Engineer (AI)",
-      description: "Principal Engineer (AI) – Lead architecture & hands-on delivery of AI systems, LLM integrations, and scalable platform capabilities.",
-      location: "Sydney NSW (Hybrid)",
-      schedule: "Contract",
-      applyUrl: "https://www.seek.com.au/job/88728280?type=standard&ref=search-standalone#sol=e3d57f21bbb3f7aa2ff5b3c2f9b6f8079260a2f3",
-      iconSrc: "/images/careers/handyman_dark.svg"
-    },
-    {
-      title: "Principal Engineer (React/TypeScript/Node) - Perm or Contract",
-      description: "Join a high performing team of digital and engineering leaders solving complex problems at scale with cutting edge tech and global impact.",
-      location: "Sydney NSW (Hybrid)",
-      schedule: "Full Time",
-      applyUrl: "https://www.seek.com.au/job/88727877?type=standard&ref=search-standalone&origin=jobCard#sol=36f7c777a262737ce85476c07d9dfa184d157cf9",
-      iconSrc: "/images/careers/handyman_dark.svg"
-    },
-    {
-      title: "Senior Business Analyst - Digital",
-      description: "Join our dynamic team as a Senior Digital Business Analyst to deliver digital products that enhance customer experiences and drive business success.",
-      location: "Sydney NSW (Hybrid)",
-      schedule: "Contract",
-      applyUrl: "https://www.seek.com.au/job/88816203?type=standard&ref=search-standalone&origin=jobCard#sol=23be08ef9edf922e39f1662c44f50af942ea19d3",
-      iconSrc: "/images/careers/finance_mode_dark.svg"
+      headers: {
+        'X_ATS_TOKEN': 'fMh0BBvfgQy2wmPhKtybUw',
+      },
+      next: { revalidate: 3600 },
     }
-  ],
+  );
+
+  if (!res.ok) {
+    return [];
+  }
+
+  const data: EmploymentHeroResponse = await res.json();
+
+  return data.data.items.map((job) => {
+    // Strip HTML tags
+    const plainText = job.description?.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim() || '';
+
+    // First try: Extract between "Overview of the Role" and "Key Responsibilities"
+    const overviewMatch = plainText.match(/(?:Overview of the Role|Position Overview)[:\s]*(.+?)(?:Key Responsibilities|What You Bring)/i);
+    let description = overviewMatch?.[1]?.trim() || '';
+
+    // Fallback: Extract text after "Empower Your Career..." heading up to "Key Responsibilities"
+    if (!description) {
+      const empowerMatch = plainText.match(/Empower Your Career[^.]+(?:Level|Us)\s+(.+?)(?:Key Responsibilities|What You Bring)/i);
+      description = empowerMatch?.[1]?.trim() || '';
+    }
+
+    return {
+      title: job.title,
+      description,
+      location: job.city || job.country_name || 'Sydney NSW',
+      schedule: job.employment_type_name || 'Full Time',
+      applyUrl: job.application_url,
+      iconSrc: '/images/careers/handyman_dark.svg',
+    };
+  });
+}
+
+const OPEN_POSITIONS_STYLE = {
   backgroundColor: "bg-[#cce1f4]",
   titleColor: "text-[#0c2080]",
   textColor: "text-[#00050a]"
@@ -117,11 +115,13 @@ const CTA_SECTION_DATA = {
   primaryButtonUrl: "https://www.seek.com.au/Software-at-Scale-jobs/at-this-company"
 };
 
-export default function CareersPage() {
+export default async function CareersPage() {
+  const positions = await getJobs();
+
   return (
     <div className="min-h-screen bg-white">
         <Header />
-      
+
       <main>
         <HeroHeaderSection
           imageSrc="/images/placeholder/91.jpg"
@@ -134,12 +134,12 @@ export default function CareersPage() {
         />
 
         <CareersOpenPositionsSection
-          sectionTitle={OPEN_POSITIONS_DATA.sectionTitle}
-          sectionDescription={OPEN_POSITIONS_DATA.sectionDescription}
-          positions={OPEN_POSITIONS_DATA.positions}
-          backgroundColor={OPEN_POSITIONS_DATA.backgroundColor}
-          titleColor={OPEN_POSITIONS_DATA.titleColor}
-          textColor={OPEN_POSITIONS_DATA.textColor}
+          sectionTitle="Open Positions"
+          sectionDescription="Join our dynamic team and help shape the future of technology consultancy."
+          positions={positions}
+          backgroundColor={OPEN_POSITIONS_STYLE.backgroundColor}
+          titleColor={OPEN_POSITIONS_STYLE.titleColor}
+          textColor={OPEN_POSITIONS_STYLE.textColor}
         />
 
         <CareersDiscoverSection
