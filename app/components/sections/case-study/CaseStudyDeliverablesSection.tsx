@@ -15,6 +15,7 @@ interface CaseStudyDeliverablesSectionProps {
   subtitleColor: string;
   textColor: string;
   iconColor: string; // Not strictly needed if icons are SVGs that can be filtered, but good practice
+  rows?: number;
 }
 
 const CaseStudyDeliverablesSection = ({
@@ -25,11 +26,23 @@ const CaseStudyDeliverablesSection = ({
   titleColor,
   subtitleColor,
   textColor,
+  rows = 1,
 }: CaseStudyDeliverablesSectionProps) => {
+  const columnsPerRow = rows > 1 ? Math.ceil(deliverables.length / rows) : deliverables.length;
+  const gridColsClass: Record<number, string> = {
+    1: 'md:grid-cols-1',
+    2: 'md:grid-cols-2',
+    3: 'md:grid-cols-3',
+    4: 'md:grid-cols-4',
+    5: 'md:grid-cols-5',
+    6: 'md:grid-cols-6',
+  };
+  const mdCols = gridColsClass[columnsPerRow] || 'md:grid-cols-4';
+
   return (
     <section className={`${backgroundColor} px-5 md:px-16 py-16 md:py-28 w-full`}>
       <div className="max-w-[1280px] mx-auto flex flex-col gap-12 md:gap-[80px] items-center">
-        
+
         {/* Section Header */}
         <div className="flex flex-col gap-4 md:gap-6 items-center max-w-[768px] w-full text-center">
           <h2 className={`font-bold text-[36px] md:text-[48px] leading-[1.2] tracking-[-0.36px] md:tracking-[-0.48px] w-full ${titleColor}`}>
@@ -40,11 +53,11 @@ const CaseStudyDeliverablesSection = ({
           </p>
         </div>
 
-        {/* Deliverables Grid (Mobile: Stacked, Desktop: 4 Columns) */}
-        <div className="flex flex-col md:flex-row gap-12 md:gap-8 w-full">
+        {/* Deliverables Grid (Mobile: 1 col, Desktop: columns based on rows) */}
+        <div className={`grid grid-cols-1 ${mdCols} gap-12 md:gap-8 w-full`}>
           {deliverables.map((item, index) => (
-            <div key={index} className="flex flex-col gap-6 md:gap-8 w-full md:w-1/4 items-start md:items-center text-left md:text-center">
-              
+            <div key={index} className="flex flex-col gap-6 md:gap-8 items-start md:items-center text-left md:text-center">
+
               {/* Icon */}
               <div className="relative w-12 h-12 shrink-0">
                 <Image
@@ -55,7 +68,7 @@ const CaseStudyDeliverablesSection = ({
                   className="object-contain"
                 />
               </div>
-              
+
               {/* Content */}
               <div className="flex flex-col gap-4 items-start md:items-center w-full">
                 <h3 className={`font-bold text-[20px] md:text-[24px] leading-[1.4] tracking-[-0.2px] md:tracking-[-0.24px] w-full ${subtitleColor}`}>

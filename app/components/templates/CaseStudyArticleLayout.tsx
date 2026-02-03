@@ -56,6 +56,7 @@ interface CaseStudyDeliverablesData {
   subtitleColor: string;
   textColor: string;
   iconColor: string;
+  rows?: number;
 }
 
 interface FeatureItem {
@@ -322,6 +323,7 @@ const CaseStudyArticleLayout = ({ data }: CaseStudyArticleLayoutProps) => {
             subtitleColor={data.deliverables.subtitleColor}
             textColor={data.deliverables.textColor}
             iconColor={data.deliverables.iconColor}
+            rows={data.deliverables.rows}
           />
         )}
         
