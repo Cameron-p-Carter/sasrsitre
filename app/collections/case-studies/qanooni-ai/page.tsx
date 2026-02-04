@@ -9,7 +9,8 @@ interface HeroSectionData {
   titleHighlight: string;
   description: string;
   overlayOpacity: number;
-    descriptionBelow: true,
+  descriptionBelow?: boolean;
+  objectPosition?: string;
 }
 
 interface DetailItem {
@@ -95,6 +96,7 @@ const CASE_STUDY_HERO_DATA: HeroSectionData = {
   description: "Building enterprise-grade legal AI for the GCC region with precision, privacy, and speed.",
   overlayOpacity: 0.6,
   descriptionBelow: true,
+  objectPosition: "center 20%",
 };
 
 const CASE_STUDY_OVERVIEW_DATA: CaseStudyOverviewData = {

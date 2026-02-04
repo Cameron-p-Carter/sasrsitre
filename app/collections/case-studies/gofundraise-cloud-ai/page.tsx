@@ -186,12 +186,12 @@ const CASE_STUDY_PAGE_DATA = {
     sectionSubtitle: "The platform delivered improved performance, reduced dependency risk, and stronger operational insight to support ongoing optimisation.",
     outcomes: [
       {
-        iconSrc: "/images/icons/payments.svg",
+        iconSrc: "/images/icons/payments_dark.svg",
         title: "New Revenue Stream",
         description: "Enabled entry into B2B workplace giving, creating a profitable new revenue channel.",
       },
       {
-        iconSrc: "/images/icons/deployed_code_account.svg",
+        iconSrc: "/images/icons/deployed_code_account_dark.svg",
         title: "CSR Enablement",
         description: "Provided employers with a turnkey solution to meet CSR objectives with minimal administrative burden.",
       },

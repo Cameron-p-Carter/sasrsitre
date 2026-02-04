@@ -116,7 +116,7 @@ const CASE_STUDY_DELIVERABLES_DATA: CaseStudyDeliverablesData = {
   sectionSubtitle: "Software@Scale supported a holistic transformation across people, process, and technology to modernise NetBank delivery without compromising resilience or regulatory compliance.",
   deliverables: [
     {
-      iconSrc: "/images/icons/cloud_done.svg",
+      iconSrc: "/images/icons/cloud_done_light.svg",
       title: "Cloud-First Platform",
       description: "Supported migration from on‑premise legacy infrastructure to a cloud‑first AWS architecture.",
     },
@@ -197,7 +197,7 @@ const CASE_STUDY_PAGE_DATA = {
         description: "Reduced maintenance overhead by consolidating delivery onto a single cloud‑based platform.",
       },
       {
-        iconSrc: "/images/icons/monitoring.svg",
+        iconSrc: "/images/icons/monitoring_dark.svg",
         title: "Improved Stability",
         description: "Strengthened resilience through improved monitoring, alerting, and safer release patterns.",
       },
@@ -207,7 +207,7 @@ const CASE_STUDY_PAGE_DATA = {
         description: "Delivered a simpler, more accessible online banking experience aligned to customer needs.",
       },
       {
-        iconSrc: "/images/icons/search_check.svg",
+        iconSrc: "/images/icons/search_check_dark.svg",
         title: "Stronger Insight",
         description: "Improved behavioural and performance insight through unified tagging and data foundations.",
       },

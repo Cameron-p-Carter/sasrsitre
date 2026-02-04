@@ -174,27 +174,6 @@ const CASE_STUDY_DELIVERABLES_DATA: CaseStudyDeliverablesData = {
   rows: 2,
 };
 
-const CASE_STUDY_IMAGE_FEATURES_DATA: CaseStudyImageFeaturesData = {
-  sectionTitle: "Technology Advisory & Engineering",
-  features: [
-    {
-      iconSrc: "/images/icons/engineering.svg",
-      title: "Platform Scalability",
-      description: "Ensured the platform was highly scalable and resilient to support UBank's growth trajectory.",
-    },
-    {
-      iconSrc: "/images/icons/data_check.svg",
-      title: "Data Governance",
-      description: "Implemented rigorous data governance standards, providing better quality and trust in financial data.",
-    },
-  ],
-  imageSrc: "/images/case/case2.png",
-  backgroundColor: "bg-[#006cc9]",
-  titleColor: "text-white",
-  featureTitleColor: "text-[#5ae0f6]",
-  featureTextColor: "text-white",
-  imageOnRight: true,
-};
 
 const CASE_STUDY_CUSTOM_SECTION_DATA: CustomSectionData = {
   sectionTitle: "Key Challenges",
@@ -228,13 +207,13 @@ const CASE_STUDY_PAGE_DATA = {
   overview: CASE_STUDY_OVERVIEW_DATA,
   customSection: CASE_STUDY_CUSTOM_SECTION_DATA,
   deliverables: CASE_STUDY_DELIVERABLES_DATA,
-  imageFeatures: CASE_STUDY_IMAGE_FEATURES_DATA,
+
   outcome: {
     sectionTitle: "The Outcome",
     sectionSubtitle: "The platform and data uplifts delivered measurable improvements across trust, compliance, delivery speed, and operational resilience.",
     outcomes: [
       {
-        iconSrc: "/images/icons/shield_lock.svg",
+        iconSrc: "/images/icons/shield_person.svg",
         title: "Restored Trust",
         description: "Resolved critical data quality defects, rebuilding confidence in executive reporting and decision-making.",
       },
@@ -244,17 +223,17 @@ const CASE_STUDY_PAGE_DATA = {
         description: "Improved cloud security controls and governance practices to meet regulatory and audit requirements.",
       },
       {
-        iconSrc: "/images/icons/speed.svg",
+        iconSrc: "/images/icons/delivery_truck_bolt.svg",
         title: "Faster Delivery",
         description: "Accelerated development velocity through safer testing environments and streamlined CI/CD pipelines.",
       },
       {
-        iconSrc: "/images/icons/security.svg",
+        iconSrc: "/images/icons/productivity.svg",
         title: "Reduced Risk",
         description: "Lowered production and SLA risk with automated validation, resilient streaming, and controlled change management.",
       },
       {
-        iconSrc: "/images/icons/search_insights.svg",
+        iconSrc: "/images/icons/search_insights_dark.svg",
         title: "Deeper Insight",
         description: "Enabled reliable multi-year trend analysis through consistent data models and historical backfill.",
       },

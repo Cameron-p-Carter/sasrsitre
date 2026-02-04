@@ -29,15 +29,15 @@ const CaseStudyDeliverablesSection = ({
   rows = 1,
 }: CaseStudyDeliverablesSectionProps) => {
   const columnsPerRow = rows > 1 ? Math.ceil(deliverables.length / rows) : deliverables.length;
-  const gridColsClass: Record<number, string> = {
-    1: 'md:grid-cols-1',
-    2: 'md:grid-cols-2',
-    3: 'md:grid-cols-3',
-    4: 'md:grid-cols-4',
-    5: 'md:grid-cols-5',
-    6: 'md:grid-cols-6',
+  const itemWidthClass: Record<number, string> = {
+    1: 'md:w-full',
+    2: 'md:w-[calc(50%-16px)]',
+    3: 'md:w-[calc(33.333%-22px)]',
+    4: 'md:w-[calc(25%-24px)]',
+    5: 'md:w-[calc(20%-26px)]',
+    6: 'md:w-[calc(16.666%-27px)]',
   };
-  const mdCols = gridColsClass[columnsPerRow] || 'md:grid-cols-4';
+  const mdItemWidth = itemWidthClass[columnsPerRow] || 'md:w-[calc(25%-24px)]';
 
   return (
     <section className={`${backgroundColor} px-5 md:px-16 py-16 md:py-28 w-full`}>
@@ -54,9 +54,9 @@ const CaseStudyDeliverablesSection = ({
         </div>
 
         {/* Deliverables Grid (Mobile: 1 col, Desktop: columns based on rows) */}
-        <div className={`grid grid-cols-1 ${mdCols} gap-12 md:gap-8 w-full`}>
+        <div className="flex flex-col md:flex-row md:flex-wrap md:justify-center gap-12 md:gap-8 w-full">
           {deliverables.map((item, index) => (
-            <div key={index} className="flex flex-col gap-6 md:gap-8 items-start md:items-center text-left md:text-center">
+            <div key={index} className={`flex flex-col gap-6 md:gap-8 w-full ${mdItemWidth} items-start md:items-center text-left md:text-center`}>
 
               {/* Icon */}
               <div className="relative w-12 h-12 shrink-0">

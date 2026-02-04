@@ -186,7 +186,7 @@ const CASE_STUDY_PAGE_DATA = {
     sectionSubtitle: "The platform delivered improved performance, reduced dependency risk, and stronger operational insight to support ongoing optimisation.",
     outcomes: [
       {
-        iconSrc: "/images/icons/speed.svg",
+        iconSrc: "/images/icons/speed_dark2.svg",
         title: "Faster Performance",
         description: "Improved speed and responsiveness for users through a modern cloud-native delivery architecture.",
       },
@@ -201,7 +201,7 @@ const CASE_STUDY_PAGE_DATA = {
         description: "Reduced reliance on third-party vendors, enabling faster iteration and response to change.",
       },
       {
-        iconSrc: "/images/icons/search_insights.svg",
+        iconSrc: "/images/icons/search_insights_dark.svg",
         title: "Better Insight",
         description: "Introduced analytics and observability foundations to support data-driven product and experience improvements.",
       },

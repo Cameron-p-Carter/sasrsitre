@@ -116,7 +116,7 @@ const CASE_STUDY_DELIVERABLES_DATA: CaseStudyDeliverablesData = {
   sectionSubtitle: "Software@Scale partnered with Benchmark Estimating to define a pragmatic uplift plan across people, process, and engineering standards, aligned to modern AWS-enabled delivery practices.",
   deliverables: [
     {
-      iconSrc: "/images/icons/cloud_done.svg",
+      iconSrc: "/images/icons/cloud_done_light.svg",
       title: "Story Quality",
       description: "Improved story definition through clearer templates, acceptance criteria standards, and increased analysis capacity.",
     },
@@ -192,12 +192,12 @@ const CASE_STUDY_PAGE_DATA = {
         description: "Improved sprint planning accuracy and delivery confidence through shared estimation practices.",
       },
       {
-        iconSrc: "/images/icons/monitoring.svg",
+        iconSrc: "/images/icons/monitoring_dark.svg",
         title: "Higher Quality",
         description: "Reduced production risk through stronger test coverage, CI/CD enforcement, and disciplined reviews.",
       },
       {
-        iconSrc: "/images/icons/speed.svg",
+        iconSrc: "/images/icons/speed_dark2.svg",
         title: "Faster Execution",
         description: "Reduced rework and delays through clearer stories and earlier alignment.",
       },

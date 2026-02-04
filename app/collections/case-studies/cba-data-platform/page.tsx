@@ -116,12 +116,12 @@ const CASE_STUDY_DELIVERABLES_DATA: CaseStudyDeliverablesData = {
   sectionSubtitle: "Software@Scale strengthened CBA’s existing AWS-based data platform, focusing on fixing logic, automating validation, and enabling safer, faster development without replacing core tooling.",
   deliverables: [
     {
-      iconSrc: "/images/icons/transform.svg",
+      iconSrc: "/images/icons/transform_light.svg",
       title: "Transformation Logic",
       description: "Refactored dbt transformation logic on Amazon Redshift to correct calculation errors and standardise data outputs.",
     },
     {
-      iconSrc: "/images/icons/published_with_changes.svg",
+      iconSrc: "/images/icons/published_with_changes_light.svg",
       title: "Automated Validation",
       description: "Implemented AWS Lambda validation with CloudWatch and SNS alerting to detect anomalies immediately after pipeline runs.",
     },
@@ -187,7 +187,7 @@ const CASE_STUDY_PAGE_DATA = {
         description: "Resolved critical data quality defects, restoring confidence in executive reporting.",
       },
       {
-        iconSrc: "/images/icons/monitoring.svg",
+        iconSrc: "/images/icons/monitoring_dark.svg",
         title: "Reduced Risk",
         description: "Lowered production risk through automated validation across more than 40 pipelines.",
       },
@@ -197,7 +197,7 @@ const CASE_STUDY_PAGE_DATA = {
         description: "Improved development velocity with robust, isolated test environments.",
       },
       {
-        iconSrc: "/images/icons/search_check.svg",
+        iconSrc: "/images/icons/search_check_dark.svg",
         title: "Better Insight",
         description: "Enabled multi-year trend analysis through reliable historical data backfill.",
       },
