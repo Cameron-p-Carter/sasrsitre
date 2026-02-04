@@ -223,8 +223,8 @@ const CASE_STUDY_STATS_DATA = {
 
 const CASE_STUDY_CTA_DATA: CTASectionData = {
   imageSrc: "/images/placeholder/placeholder16.jpg",
-  title: "Get in Touch with Us",
-  description: "Reach out today to discover how we can help accelerate your digital transformation journey.",
+  title: "Let's Discuss Your Project",
+  description: "Contact us today to explore how we can help you achieve your goals effectively.",
   primaryButtonText: "Contact",
   secondaryButtonText: "Learn More",
 };

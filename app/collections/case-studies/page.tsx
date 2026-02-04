@@ -65,6 +65,70 @@ const CASE_STUDIES_PORTFOLIO_DATA: PortfolioSectionData = {
       image: "/images/placeholder/placeholder14.jpg",
       aspectRatio: "aspect-[335/188]",
       link: "/collections/case-studies/gofundraise"
+    },
+    {
+      id: 5,
+      title: "UBank",
+      description: "Australia's leading digital bank accelerates cloud compliance, data governance, and platform performance to improve delivery velocity and regulatory confidence.",
+      image: "/images/case/case2.png",
+      aspectRatio: "aspect-square",
+      link: "/collections/case-studies/ubank"
+    },
+    {
+      id: 6,
+      title: "Qanooni AI",
+      description: "Building enterprise-grade legal AI for the GCC region with precision, privacy, and speed.",
+      image: "/images/case/case5.png",
+      aspectRatio: "aspect-[335/188]",
+      link: "/collections/case-studies/qanooni-ai"
+    },
+    {
+      id: 7,
+      title: "IRESS",
+      description: "A global financial services technology provider modernises content delivery and analytics through a cloud-native CMS platform on AWS.",
+      image: "/images/case/case8.png",
+      aspectRatio: "aspect-[335/188]",
+      link: "/collections/case-studies/iress"
+    },
+    {
+      id: 8,
+      title: "GoFundraise Cloud and AI",
+      description: "Expanding a global fundraising platform into B2B workplace giving through cloud-native architecture and AI-powered campaign tools.",
+      image: "/images/case/case11.jpg",
+      aspectRatio: "aspect-[335/188]",
+      link: "/collections/case-studies/gofundraise-cloud-ai"
+    },
+    {
+      id: 9,
+      title: "Coates Group Automation",
+      description: "Modernising IoT fleet management with AWS Greengrass to scale digital signage across hundreds of thousands of global locations.",
+      image: "/images/case/case14.jpg",
+      aspectRatio: "aspect-[335/188]",
+      link: "/collections/case-studies/coates-group-automation"
+    },
+    {
+      id: 10,
+      title: "CBA NetBank",
+      description: "Australia's leading bank modernises online banking through a cloud-first, customer-centric digital platform transformation.",
+      image: "/images/case/case17.jpg",
+      aspectRatio: "aspect-square",
+      link: "/collections/case-studies/cba-netbank"
+    },
+    {
+      id: 11,
+      title: "CBA Data Platform",
+      description: "Australia's leading bank accelerates data platform performance to restore trust, speed delivery, and improve executive decision-making.",
+      image: "/images/case/case20.jpg",
+      aspectRatio: "aspect-[335/188]",
+      link: "/collections/case-studies/cba-data-platform"
+    },
+    {
+      id: 12,
+      title: "Benchmark Estimating",
+      description: "Benchmark Estimating accelerates delivery predictability and engineering quality through an AWS-aligned delivery uplift.",
+      image: "/images/case/case23.jpg",
+      aspectRatio: "aspect-[335/188]",
+      link: "/collections/case-studies/benchmark-estimating"
     }
   ]
 };

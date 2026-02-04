@@ -171,7 +171,7 @@ const CASE_STUDY_CUSTOM_SECTION_DATA: CustomSectionData = {
  
 const CASE_STUDY_CTA_DATA: CTASectionData = {
   imageSrc: "/images/placeholder/placeholder16.jpg",
-  title: "Ready to accelerate your platform?",
+  title: "Let's Discuss Your Project",
   description: "Contact us today to explore how we can help you achieve your goals effectively.",
   primaryButtonText: "Contact",
   secondaryButtonText: "Learn More",
