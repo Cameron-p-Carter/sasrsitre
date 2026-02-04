@@ -219,7 +219,7 @@ const CASE_STUDY_PAGE_DATA = {
     titleColor: "text-[#0c2080]",
     featureTitleColor: "text-[#00050a]",
     featureTextColor: "text-[#00050a]",
-    imageOnRight: false,
+    imageOnRight: true,
   },
   testimonial: {
     quote: "[Testimonial from Figma for UBank]",
