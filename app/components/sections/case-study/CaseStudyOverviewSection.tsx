@@ -42,8 +42,8 @@ export default function CaseStudyOverviewSection({
             {/* Details List */}
             <div className="w-full border-b border-gray-300 border-solid">
               {details.map((item, index) => (
-                <div key={index} className="flex items-center justify-between py-4 border-t border-gray-300 border-solid">
-                  <p className={`font-bold text-[18px] md:text-[20px] leading-[1.4] tracking-[-0.2px] ${textColor}`}>
+                <div key={index} className="flex items-start justify-between gap-8 py-4 border-t border-gray-300 border-solid">
+                  <p className={`font-bold text-[18px] md:text-[20px] leading-[1.4] tracking-[-0.2px] shrink-0 ${textColor}`}>
                     {item.label}
                   </p>
                   <p className={`font-normal text-base leading-[1.5] text-right ${textColor}`}>
