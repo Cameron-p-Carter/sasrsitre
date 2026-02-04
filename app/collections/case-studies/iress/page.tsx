@@ -41,6 +41,7 @@ interface CaseStudyDeliverablesData {
   subtitleColor: string;
   textColor: string;
   iconColor: string;
+  rows?: number;
 }
 
 interface FeatureItem {
@@ -49,15 +50,31 @@ interface FeatureItem {
   description: string;
 }
 
-interface CaseStudyImageFeaturesData {
+
+interface CustomSectionData {
   sectionTitle: string;
-  features: FeatureItem[];
+  description: string;
+  listItems: string[];
   imageSrc: string;
   backgroundColor: string;
   titleColor: string;
-  featureTitleColor: string;
-  featureTextColor: string;
+  textColor: string;
+  listTextColor: string;
   imageOnRight?: boolean;
+}
+
+interface Stat {
+  value: string;
+  description: string;
+}
+
+interface CaseStudyStatsData {
+  title: string;
+  technologiesContent?: string;
+  stats: Stat[];
+  backgroundColor: string;
+  titleColor: string;
+  accentColor: string;
 }
 
 interface CTASectionData {
@@ -71,24 +88,24 @@ interface CTASectionData {
 // --- Placeholder Data ---
 
 const CASE_STUDY_HERO_DATA: HeroSectionData = {
-  imageSrc: "/images/placeholder/80.jpg",
+  imageSrc: "/images/case/case7.png",
   tagline: "Case Study",
-  title: "Team Super",
+  title: "IRESS",
   titleHighlight: "",
-  description: "Seamless Data Migration Underpins a Major Superannuation Merger",
-  overlayOpacity: 0.5,
-    descriptionBelow: true,
+  description: "A global financial services technology provider modernises content delivery and analytics through a cloud-native CMS platform on AWS.",
+  overlayOpacity: 0.6,
+  descriptionBelow: true,
 };
 
 const CASE_STUDY_OVERVIEW_DATA: CaseStudyOverviewData = {
   overviewTitle: "Overview",
   details: [
-    { label: "Industry:", value: "Superannuation" },
-    { label: "Services:", value: "Data / AI Services" },
+    { label: "Industry:", value: "Financial Services Technology" },
+    { label: "Services:", value: "Engineering as a Service, Cloud Engineering, Platform Architecture, CMS Integration, Security Architecture Technology Advisory" },
   ],
-  richTextContent: `Following the merger of Mine Super and TWUSUPER to create Team Super, the newly formed fund faced a critical challenge: to unify member data, systems, and operations into a single, seamless ecosystem, without disrupting services.
+  richTextContent: `IRESS serves a sophisticated global ecosystem across the financial services value chain, supporting more than 10,000 business clients and over 500,000 end-users who rely on its technology daily. Operating across Asia-Pacific, North America, Africa, and Europe, IRESS delivers solutions that must scale across diverse regulatory environments and market structures.
 
-Software@Scale (S@S) was appointed to lead assurance and onboarding activities, overseeing the secure migration and seamless integration of TWUSUPER member data into the Mine Super platform. By de-risking this critical phase, S@S helped lay the technical foundations for a smooth transition, safeguarding member trust and ensuring the new Team Super ecosystem was ready for future growth.`,
+IRESS engaged Software@Scale to design and deliver a modern cloud-native CMS platform on AWS using Payload CMS, improving performance, reducing dependency risk, consolidating fragmented systems, and introducing stronger observability and usage insight.`,
   backgroundColor: "bg-[#cce1f4]",
   titleColor: "text-[#0c2080]",
   textColor: "text-[#00050a]",
@@ -96,27 +113,32 @@ Software@Scale (S@S) was appointed to lead assurance and onboarding activities, 
 
 const CASE_STUDY_DELIVERABLES_DATA: CaseStudyDeliverablesData = {
   sectionTitle: "What We Delivered",
-  sectionSubtitle: "Data Migration & Assurance",
+  sectionSubtitle: "Software@Scale designed a secure AWS-based platform that enabled external content administration while ensuring critical data control and reliability remained within IRESS’s AWS environment.",
   deliverables: [
     {
+      iconSrc: "/images/icons/cloud_upload.svg",
+      title: "Cloud CMS Platform",
+      description: "Delivered a modern cloud-native architecture using Payload CMS as the external content administration layer integrated into AWS.",
+    },
+    {
       iconSrc: "/images/icons/data_check.svg",
-      title: "Data Validation",
-      description: "Conducted rigorous checks to verify the completeness and accuracy of member data before, during, and after migration.",
+      title: "Secure Application Layer",
+      description: "Implemented CloudFront, WAF, Certificate Manager, Route 53, S3, Lambda, and API Gateway to support a secure and performant client-facing application.",
     },
     {
-      iconSrc: "/images/icons/deployed_code_account.svg",
-      title: "Onboarding Execution",
-      description: "Delivered a seamless onboarding of TWUSUPER members, aligning data integrity, compliance needs, and operational workflows within Mine Super's platform.",
+      iconSrc: "/images/icons/sync_lock.svg",
+      title: "Reliable Synchronisation",
+      description: "Built webhook-driven synchronisation using SNS, SQS, and Lambda to reliably sync CMS changes back into IRESS infrastructure.",
     },
     {
-      iconSrc: "/images/icons/enhanced_encryption.svg",
-      title: "Risk Mitigation",
-      description: "Delivered a detailed assurance process that reduced data integrity risks and gave stakeholders confidence in the transition.",
+      iconSrc: "/images/icons/database_upload.svg",
+      title: "Structured Storage",
+      description: "Implemented a dual storage model using S3 for assets and DynamoDB for high-performance metadata retrieval.",
     },
     {
-      iconSrc: "/images/icons/interactive_space.svg",
-      title: "Collaboration",
-      description: "Collaborated with technical teams and business leaders to ensure the platform could scale while maintaining service quality.",
+      iconSrc: "/images/icons/search_insights.svg",
+      title: "Monitoring & Insight",
+      description: "Established comprehensive observability using CloudWatch to provide real-time visibility into system health, performance, and usage.",
     },
   ],
   backgroundColor: "bg-[#006cc9]",
@@ -124,33 +146,31 @@ const CASE_STUDY_DELIVERABLES_DATA: CaseStudyDeliverablesData = {
   subtitleColor: "text-[#5ae0f6]",
   textColor: "text-white",
   iconColor: "text-[#5ae0f6]",
+  rows: 2,
 };
 
-const CASE_STUDY_IMAGE_FEATURES_DATA: CaseStudyImageFeaturesData = {
-  sectionTitle: "Data & AI Engineering",
-  features: [
-    {
-      iconSrc: "/images/icons/automation.svg", // Placeholder for automation
-      title: "Optimised onboarding",
-      description: "Applied best practices across data handling and automation to streamline onboarding, while strengthening reporting capabilities.",
-    },
-    {
-      iconSrc: "/images/icons/security.svg", // Placeholder for security
-      title: "Maintained data integrity",
-      description: "Safeguarded data integrity to ensure consistent performance across key operational areas, including reporting, service, and compliance.",
-    },
+
+
+const CASE_STUDY_CUSTOM_SECTION_DATA: CustomSectionData = {
+  sectionTitle: "Key Challenges",
+  description: "As usage increased and systems expanded, IRESS faced operational constraints that limited performance, agility, and data-driven decision-making.",
+  listItems: [
+    "Performance and responsiveness issues impacting user experience and time-sensitive financial operations",
+    "Fragmented data architecture creating silos and requiring manual consolidation for reporting",
+    "Heavy reliance on external vendors slowing development cycles and increasing operational risk",
+    "Limited visibility into user behaviour and platform usage, restricting optimisation and product insight",
   ],
-  imageSrc: "/images/placeholder/placeholder100.png", // Placeholder image
-  backgroundColor: "bg-[#006cc9]",
-  titleColor: "text-white",
-  featureTitleColor: "text-[#5ae0f6]",
-  featureTextColor: "text-white",
-  imageOnRight: true,
+  imageSrc: "/images/case/case8.png",
+  backgroundColor: "bg-[#cce1f4]",
+  titleColor: "text-[#0c2080]",
+  textColor: "text-[#00050a]",
+  listTextColor: "text-[#00050a]",
+  imageOnRight: false,
 };
-
+ 
 const CASE_STUDY_CTA_DATA: CTASectionData = {
   imageSrc: "/images/placeholder/placeholder16.jpg",
-  title: "Let's Discuss Your Project",
+  title: "Ready to accelerate your platform?",
   description: "Contact us today to explore how we can help you achieve your goals effectively.",
   primaryButtonText: "Contact",
   secondaryButtonText: "Learn More",
@@ -159,28 +179,34 @@ const CASE_STUDY_CTA_DATA: CTASectionData = {
 const CASE_STUDY_PAGE_DATA = {
   hero: CASE_STUDY_HERO_DATA,
   overview: CASE_STUDY_OVERVIEW_DATA,
+  customSection: CASE_STUDY_CUSTOM_SECTION_DATA,
   deliverables: CASE_STUDY_DELIVERABLES_DATA,
-  imageFeatures: CASE_STUDY_IMAGE_FEATURES_DATA,
   outcome: {
     sectionTitle: "The Outcome",
+    sectionSubtitle: "The platform delivered improved performance, reduced dependency risk, and stronger operational insight to support ongoing optimisation.",
     outcomes: [
       {
-        iconSrc: "/images/icons/transform.svg",
-        title: "Smooth Transition",
-        description: "Member data was migrated accurately and securely, supporting a frictionless experience for Team Super's members.",
+        iconSrc: "/images/icons/speed.svg",
+        title: "Faster Performance",
+        description: "Improved speed and responsiveness for users through a modern cloud-native delivery architecture.",
       },
       {
-        iconSrc: "/images/icons/book.svg",
-        title: "Regulatory Confidence",
-        description: "Assurance activities met industry compliance expectations, reducing operational risk.",
+        iconSrc: "/images/icons/lock_person.svg",
+        title: "Reduced Risk",
+        description: "Kept critical data within IRESS’s AWS environment, reducing single points of failure and dependency exposure.",
       },
       {
-        iconSrc: "/images/icons/brick.svg",
-        title: "Stronger Foundations",
-        description: "The new platform is now positioned to drive future growth, foster innovation and unlock better insights through data.",
+        iconSrc: "/images/icons/moved_location.svg",
+        title: "Greater Agility",
+        description: "Reduced reliance on third-party vendors, enabling faster iteration and response to change.",
+      },
+      {
+        iconSrc: "/images/icons/search_insights.svg",
+        title: "Better Insight",
+        description: "Introduced analytics and observability foundations to support data-driven product and experience improvements.",
       },
     ],
-    imageSrc: "/images/placeholder/placeholder81.jpg", // Placeholder image
+    imageSrc: "/images/case/case9.jpg",
     backgroundColor: "bg-[#cce1f4]",
     titleColor: "text-[#0c2080]",
     featureTitleColor: "text-[#00050a]",
@@ -188,12 +214,13 @@ const CASE_STUDY_PAGE_DATA = {
     imageOnRight: false,
   },
   testimonial: {
-    quote: "Merging two funds was a major undertaking, and having Software@Scale involved made a real difference. Their expertise in data assurance and migration gave us confidence through every stage. Thanks to their support, we delivered a seamless experience for our members and set Team Super up with a strong platform for the future.",
-    name: "Vasyl Nair",
-    title: "CEO, Team Super",
+    quote: "[Testimonial from Figma for UBank]",
+    name: "UBank Executive",
+    title: "Executive, UBank",
   },
   stats: {
     title: "Transforming technical challenges into strategic opportunities",
+    technologiesContent: "• Amazon Web Services (AWS) • Amazon CloudFront • AWS WAF • AWS Certificate Manager • Amazon Route 53 • Amazon S3 • AWS Lambda • Amazon API Gateway • Amazon SNS • Amazon SQS • Amazon DynamoDB • Amazon CloudWatch • Payload CMS",
     stats: [
       { value: "50%", description: "Cost reduction" },
       { value: "45", description: "Engineers" },
@@ -206,7 +233,7 @@ const CASE_STUDY_PAGE_DATA = {
   cta: CASE_STUDY_CTA_DATA,
 };
 
-export default function TeamSuperCaseStudyPage() {
+export default function UbankCaseStudyPage() {
   return (
     <CaseStudyArticleLayout data={CASE_STUDY_PAGE_DATA} />
   );
