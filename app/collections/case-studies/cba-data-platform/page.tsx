@@ -41,6 +41,7 @@ interface CaseStudyDeliverablesData {
   subtitleColor: string;
   textColor: string;
   iconColor: string;
+  rows?: number;
 }
 
 interface FeatureItem {
@@ -49,15 +50,31 @@ interface FeatureItem {
   description: string;
 }
 
-interface CaseStudyImageFeaturesData {
+
+interface CustomSectionData {
   sectionTitle: string;
-  features: FeatureItem[];
+  description: string;
+  listItems: string[];
   imageSrc: string;
   backgroundColor: string;
   titleColor: string;
-  featureTitleColor: string;
-  featureTextColor: string;
+  textColor: string;
+  listTextColor: string;
   imageOnRight?: boolean;
+}
+
+interface Stat {
+  value: string;
+  description: string;
+}
+
+interface CaseStudyStatsData {
+  title: string;
+  technologiesContent?: string;
+  stats: Stat[];
+  backgroundColor: string;
+  titleColor: string;
+  accentColor: string;
 }
 
 interface CTASectionData {
@@ -71,24 +88,24 @@ interface CTASectionData {
 // --- Placeholder Data ---
 
 const CASE_STUDY_HERO_DATA: HeroSectionData = {
-  imageSrc: "/images/placeholder/80.jpg",
+  imageSrc: "/images/case/case19.png",
   tagline: "Case Study",
-  title: "Team Super",
+  title: "CBA Data Platform",
   titleHighlight: "",
-  description: "Seamless Data Migration Underpins a Major Superannuation Merger",
-  overlayOpacity: 0.5,
-    descriptionBelow: true,
+  description: "Australia’s leading bank accelerates data platform performance to restore trust, speed delivery, and improve executive decision-making.",
+  overlayOpacity: 0.6,
+  descriptionBelow: true,
 };
 
 const CASE_STUDY_OVERVIEW_DATA: CaseStudyOverviewData = {
   overviewTitle: "Overview",
   details: [
-    { label: "Industry:", value: "Superannuation" },
-    { label: "Services:", value: "Data / AI Services" },
+    { label: "Industry:", value: "Banking / Financial Services" },
+    { label: "Services:", value: "Engineering as a Service, Data Platform Engineering, Cloud Engineering, Data Governance & Quality, Delivery Enablement, Technology Advisory" },
   ],
-  richTextContent: `Following the merger of Mine Super and TWUSUPER to create Team Super, the newly formed fund faced a critical challenge: to unify member data, systems, and operations into a single, seamless ecosystem, without disrupting services.
+  richTextContent: `Commonwealth Bank of Australia (CBA) serves more than 17 million customers across retail and commercial banking. Guided by its strategy of building tomorrow’s bank today, CBA relies heavily on trusted, timely data to support decision-making across CTO business units.
 
-Software@Scale (S@S) was appointed to lead assurance and onboarding activities, overseeing the secure migration and seamless integration of TWUSUPER member data into the Mine Super platform. By de-risking this critical phase, S@S helped lay the technical foundations for a smooth transition, safeguarding member trust and ensuring the new Team Super ecosystem was ready for future growth.`,
+CBA engaged Software@Scale to uplift the performance, reliability, and governance of its data platforms. Fragmented data sources, weak ETL foundations, and inconsistent outputs were slowing delivery and undermining confidence in executive reporting.`,
   backgroundColor: "bg-[#cce1f4]",
   titleColor: "text-[#0c2080]",
   textColor: "text-[#00050a]",
@@ -96,27 +113,27 @@ Software@Scale (S@S) was appointed to lead assurance and onboarding activities, 
 
 const CASE_STUDY_DELIVERABLES_DATA: CaseStudyDeliverablesData = {
   sectionTitle: "What We Delivered",
-  sectionSubtitle: "Data Migration & Assurance",
+  sectionSubtitle: "Software@Scale strengthened CBA’s existing AWS-based data platform, focusing on fixing logic, automating validation, and enabling safer, faster development without replacing core tooling.",
   deliverables: [
     {
-      iconSrc: "/images/icons/data_check.svg",
-      title: "Data Validation",
-      description: "Conducted rigorous checks to verify the completeness and accuracy of member data before, during, and after migration.",
+      iconSrc: "/images/icons/transform.svg",
+      title: "Transformation Logic",
+      description: "Refactored dbt transformation logic on Amazon Redshift to correct calculation errors and standardise data outputs.",
     },
     {
-      iconSrc: "/images/icons/deployed_code_account.svg",
-      title: "Onboarding Execution",
-      description: "Delivered a seamless onboarding of TWUSUPER members, aligning data integrity, compliance needs, and operational workflows within Mine Super's platform.",
+      iconSrc: "/images/icons/published_with_changes.svg",
+      title: "Automated Validation",
+      description: "Implemented AWS Lambda validation with CloudWatch and SNS alerting to detect anomalies immediately after pipeline runs.",
     },
     {
-      iconSrc: "/images/icons/enhanced_encryption.svg",
-      title: "Risk Mitigation",
-      description: "Delivered a detailed assurance process that reduced data integrity risks and gave stakeholders confidence in the transition.",
+      iconSrc: "/images/icons/cloud_lock.svg",
+      title: "Safe Development",
+      description: "Built production-mirror testing environments using Terraform and Amazon MWAA, secured with AWS Lake Formation.",
     },
     {
-      iconSrc: "/images/icons/interactive_space.svg",
-      title: "Collaboration",
-      description: "Collaborated with technical teams and business leaders to ensure the platform could scale while maintaining service quality.",
+      iconSrc: "/images/icons/storage.svg",
+      title: "Storage Standards",
+      description: "Used AWS Glue to backfill missing historical data and adopted Apache Iceberg for efficient, reliable updates.",
     },
   ],
   backgroundColor: "bg-[#006cc9]",
@@ -124,33 +141,32 @@ const CASE_STUDY_DELIVERABLES_DATA: CaseStudyDeliverablesData = {
   subtitleColor: "text-[#5ae0f6]",
   textColor: "text-white",
   iconColor: "text-[#5ae0f6]",
+  rows: 1,
 };
 
-const CASE_STUDY_IMAGE_FEATURES_DATA: CaseStudyImageFeaturesData = {
-  sectionTitle: "Data & AI Engineering",
-  features: [
-    {
-      iconSrc: "/images/icons/automation.svg", // Placeholder for automation
-      title: "Optimised onboarding",
-      description: "Applied best practices across data handling and automation to streamline onboarding, while strengthening reporting capabilities.",
-    },
-    {
-      iconSrc: "/images/icons/security.svg", // Placeholder for security
-      title: "Maintained data integrity",
-      description: "Safeguarded data integrity to ensure consistent performance across key operational areas, including reporting, service, and compliance.",
-    },
+
+
+const CASE_STUDY_CUSTOM_SECTION_DATA: CustomSectionData = {
+  sectionTitle: "Key Challenges",
+  description: "As data volumes and complexity increased, structural weaknesses in CBA’s data platform began to limit speed, trust, and squad efficiency.",
+  listItems: [
+    "Multiple disconnected data sources creating conflicting reporting outputs",
+    "Lack of robust ETL foundations leading to unreliable downstream data",
+    "Low confidence in executive reporting due to data inconsistencies",
+    "Manual reconciliation work reducing engineering squad efficiency",
+    "Slow data delivery limiting the organisation’s ability to respond quickly",
   ],
-  imageSrc: "/images/placeholder/placeholder100.png", // Placeholder image
-  backgroundColor: "bg-[#006cc9]",
-  titleColor: "text-white",
-  featureTitleColor: "text-[#5ae0f6]",
-  featureTextColor: "text-white",
-  imageOnRight: true,
+  imageSrc: "/images/case/case20.jpg",
+  backgroundColor: "bg-[#cce1f4]",
+  titleColor: "text-[#0c2080]",
+  textColor: "text-[#00050a]",
+  listTextColor: "text-[#00050a]",
+  imageOnRight: false,
 };
-
+ 
 const CASE_STUDY_CTA_DATA: CTASectionData = {
   imageSrc: "/images/placeholder/placeholder16.jpg",
-  title: "Let's Discuss Your Project",
+  title: "Ready to accelerate your platform?",
   description: "Contact us today to explore how we can help you achieve your goals effectively.",
   primaryButtonText: "Contact",
   secondaryButtonText: "Learn More",
@@ -159,28 +175,34 @@ const CASE_STUDY_CTA_DATA: CTASectionData = {
 const CASE_STUDY_PAGE_DATA = {
   hero: CASE_STUDY_HERO_DATA,
   overview: CASE_STUDY_OVERVIEW_DATA,
+  customSection: CASE_STUDY_CUSTOM_SECTION_DATA,
   deliverables: CASE_STUDY_DELIVERABLES_DATA,
-  imageFeatures: CASE_STUDY_IMAGE_FEATURES_DATA,
   outcome: {
     sectionTitle: "The Outcome",
+    sectionSubtitle: "The data platform uplift restored confidence in reporting, reduced operational risk, and improved delivery velocity across data squads.",
     outcomes: [
       {
-        iconSrc: "/images/icons/transform.svg",
-        title: "Smooth Transition",
-        description: "Member data was migrated accurately and securely, supporting a frictionless experience for Team Super's members.",
+        iconSrc: "/images/icons/document_search.svg",
+        title: "Reporting Trust",
+        description: "Resolved critical data quality defects, restoring confidence in executive reporting.",
       },
       {
-        iconSrc: "/images/icons/book.svg",
-        title: "Regulatory Confidence",
-        description: "Assurance activities met industry compliance expectations, reducing operational risk.",
+        iconSrc: "/images/icons/monitoring.svg",
+        title: "Reduced Risk",
+        description: "Lowered production risk through automated validation across more than 40 pipelines.",
       },
       {
-        iconSrc: "/images/icons/brick.svg",
-        title: "Stronger Foundations",
-        description: "The new platform is now positioned to drive future growth, foster innovation and unlock better insights through data.",
+        iconSrc: "/images/icons/delivery_truck_bolt.svg",
+        title: "Faster Delivery",
+        description: "Improved development velocity with robust, isolated test environments.",
+      },
+      {
+        iconSrc: "/images/icons/search_check.svg",
+        title: "Better Insight",
+        description: "Enabled multi-year trend analysis through reliable historical data backfill.",
       },
     ],
-    imageSrc: "/images/placeholder/placeholder81.jpg", // Placeholder image
+    imageSrc: "/images/case/case21.jpg",
     backgroundColor: "bg-[#cce1f4]",
     titleColor: "text-[#0c2080]",
     featureTitleColor: "text-[#00050a]",
@@ -188,12 +210,13 @@ const CASE_STUDY_PAGE_DATA = {
     imageOnRight: false,
   },
   testimonial: {
-    quote: "Merging two funds was a major undertaking, and having Software@Scale involved made a real difference. Their expertise in data assurance and migration gave us confidence through every stage. Thanks to their support, we delivered a seamless experience for our members and set Team Super up with a strong platform for the future.",
-    name: "Vasyl Nair",
-    title: "CEO, Team Super",
+    quote: "[Testimonial from Figma for UBank]",
+    name: "UBank Executive",
+    title: "Executive, UBank",
   },
   stats: {
     title: "Transforming technical challenges into strategic opportunities",
+    technologiesContent: "• Amazon Web Services (AWS) • Amazon Redshift • dbt • AWS Lambda • Amazon CloudWatch • Amazon SNS • Amazon MWAA • AWS Lake Formation • AWS Glue • Apache Iceberg • Terraform",
     stats: [
       { value: "50%", description: "Cost reduction" },
       { value: "45", description: "Engineers" },
@@ -206,7 +229,7 @@ const CASE_STUDY_PAGE_DATA = {
   cta: CASE_STUDY_CTA_DATA,
 };
 
-export default function TeamSuperCaseStudyPage() {
+export default function UbankCaseStudyPage() {
   return (
     <CaseStudyArticleLayout data={CASE_STUDY_PAGE_DATA} />
   );

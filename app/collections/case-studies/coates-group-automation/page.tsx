@@ -41,6 +41,7 @@ interface CaseStudyDeliverablesData {
   subtitleColor: string;
   textColor: string;
   iconColor: string;
+  rows?: number;
 }
 
 interface FeatureItem {
@@ -49,15 +50,31 @@ interface FeatureItem {
   description: string;
 }
 
-interface CaseStudyImageFeaturesData {
+
+interface CustomSectionData {
   sectionTitle: string;
-  features: FeatureItem[];
+  description: string;
+  listItems: string[];
   imageSrc: string;
   backgroundColor: string;
   titleColor: string;
-  featureTitleColor: string;
-  featureTextColor: string;
+  textColor: string;
+  listTextColor: string;
   imageOnRight?: boolean;
+}
+
+interface Stat {
+  value: string;
+  description: string;
+}
+
+interface CaseStudyStatsData {
+  title: string;
+  technologiesContent?: string;
+  stats: Stat[];
+  backgroundColor: string;
+  titleColor: string;
+  accentColor: string;
 }
 
 interface CTASectionData {
@@ -71,24 +88,24 @@ interface CTASectionData {
 // --- Placeholder Data ---
 
 const CASE_STUDY_HERO_DATA: HeroSectionData = {
-  imageSrc: "/images/placeholder/80.jpg",
+  imageSrc: "/images/case/case13.png",
   tagline: "Case Study",
-  title: "Team Super",
+  title: "Coates Group Automation",
   titleHighlight: "",
-  description: "Seamless Data Migration Underpins a Major Superannuation Merger",
-  overlayOpacity: 0.5,
-    descriptionBelow: true,
+  description: "Australia’s leading digital bank accelerates cloud compliance, data governance, and platform performance to improve delivery velocity and regulatory confidence.",
+  overlayOpacity: 0.6,
+  descriptionBelow: true,
 };
 
 const CASE_STUDY_OVERVIEW_DATA: CaseStudyOverviewData = {
   overviewTitle: "Overview",
   details: [
-    { label: "Industry:", value: "Superannuation" },
-    { label: "Services:", value: "Data / AI Services" },
+    { label: "Industry:", value: "QSR" },
+    { label: "Services:", value: "Engineering as a Service, Cloud & IoT Architecture, Platform Modernisation, DevOps & Delivery Enablement, Security Architecture, Technology Advisory" },
   ],
-  richTextContent: `Following the merger of Mine Super and TWUSUPER to create Team Super, the newly formed fund faced a critical challenge: to unify member data, systems, and operations into a single, seamless ecosystem, without disrupting services.
+  richTextContent: `Coates Group provides digital menu boards and self-serve kiosks backed by a proprietary CMS, supporting high-profile global brands including McDonald’s and Dunkin’ Donuts. Central to this solution is Coates’ fleet of Media Players—Ubuntu-based devices deployed across hundreds of thousands of locations worldwide to power digital signage and in-store menu experiences.
 
-Software@Scale (S@S) was appointed to lead assurance and onboarding activities, overseeing the secure migration and seamless integration of TWUSUPER member data into the Mine Super platform. By de-risking this critical phase, S@S helped lay the technical foundations for a smooth transition, safeguarding member trust and ensuring the new Team Super ecosystem was ready for future growth.`,
+As the fleet scaled, Coates faced increasing challenges around security, device management, and deployment velocity. Software@Scale was engaged to lead the design of a modern IoT management solution using AWS Greengrass and guide progression from proof of concept through pilot and global production rollout.`,
   backgroundColor: "bg-[#cce1f4]",
   titleColor: "text-[#0c2080]",
   textColor: "text-[#00050a]",
@@ -96,27 +113,27 @@ Software@Scale (S@S) was appointed to lead assurance and onboarding activities, 
 
 const CASE_STUDY_DELIVERABLES_DATA: CaseStudyDeliverablesData = {
   sectionTitle: "What We Delivered",
-  sectionSubtitle: "Data Migration & Assurance",
+  sectionSubtitle: "Software@Scale designed a revised IoT architecture and delivery approach to improve fleet control, security deployment, and scalability while supporting future platform uplift.",
   deliverables: [
     {
       iconSrc: "/images/icons/data_check.svg",
-      title: "Data Validation",
-      description: "Conducted rigorous checks to verify the completeness and accuracy of member data before, during, and after migration.",
+      title: "IoT Architecture",
+      description: "Designed an AWS Greengrass-based architecture enabling each Media Player to operate as a managed edge device with improved control and observability.",
     },
     {
-      iconSrc: "/images/icons/deployed_code_account.svg",
-      title: "Onboarding Execution",
-      description: "Delivered a seamless onboarding of TWUSUPER members, aligning data integrity, compliance needs, and operational workflows within Mine Super's platform.",
+      iconSrc: "/images/icons/data_thresholding.svg",
+      title: "Secure Deployment",
+      description: "Enabled safer, more reliable deployment of security patches and updates across a globally distributed fleet.",
     },
     {
-      iconSrc: "/images/icons/enhanced_encryption.svg",
-      title: "Risk Mitigation",
-      description: "Delivered a detailed assurance process that reduced data integrity risks and gave stakeholders confidence in the transition.",
+      iconSrc: "/images/icons/deployed_code_update.svg",
+      title: "Delivery Governance",
+      description: "Established delivery governance practices covering reporting, risk management, and decision-making at scale.",
     },
     {
-      iconSrc: "/images/icons/interactive_space.svg",
-      title: "Collaboration",
-      description: "Collaborated with technical teams and business leaders to ensure the platform could scale while maintaining service quality.",
+      iconSrc: "/images/icons/build_circle.svg",
+      title: "Rollout Guidance",
+      description: "Provided guidance from proof of concept through pilot execution and preparation for global fleet-wide rollout.",
     },
   ],
   backgroundColor: "bg-[#006cc9]",
@@ -124,33 +141,31 @@ const CASE_STUDY_DELIVERABLES_DATA: CaseStudyDeliverablesData = {
   subtitleColor: "text-[#5ae0f6]",
   textColor: "text-white",
   iconColor: "text-[#5ae0f6]",
+  rows: 1,
 };
 
-const CASE_STUDY_IMAGE_FEATURES_DATA: CaseStudyImageFeaturesData = {
-  sectionTitle: "Data & AI Engineering",
-  features: [
-    {
-      iconSrc: "/images/icons/automation.svg", // Placeholder for automation
-      title: "Optimised onboarding",
-      description: "Applied best practices across data handling and automation to streamline onboarding, while strengthening reporting capabilities.",
-    },
-    {
-      iconSrc: "/images/icons/security.svg", // Placeholder for security
-      title: "Maintained data integrity",
-      description: "Safeguarded data integrity to ensure consistent performance across key operational areas, including reporting, service, and compliance.",
-    },
+
+
+const CASE_STUDY_CUSTOM_SECTION_DATA: CustomSectionData = {
+  sectionTitle: "Key Challenges",
+  description: "As device volumes and operational complexity increased, the existing fleet management approach began to limit security, scalability, and delivery agility.",
+  listItems: [
+    "Difficulty deploying security patches reliably across a globally distributed device fleet",
+    "Limited visibility and control over hundreds of thousands of Media Players",
+    "Slow and risky rollout of updates and platform changes",
+    "Growing need for a cloud-native foundation to support ongoing modernisation",
   ],
-  imageSrc: "/images/placeholder/placeholder100.png", // Placeholder image
-  backgroundColor: "bg-[#006cc9]",
-  titleColor: "text-white",
-  featureTitleColor: "text-[#5ae0f6]",
-  featureTextColor: "text-white",
-  imageOnRight: true,
+  imageSrc: "/images/case/case14.jpg",
+  backgroundColor: "bg-[#cce1f4]",
+  titleColor: "text-[#0c2080]",
+  textColor: "text-[#00050a]",
+  listTextColor: "text-[#00050a]",
+  imageOnRight: false,
 };
-
+ 
 const CASE_STUDY_CTA_DATA: CTASectionData = {
   imageSrc: "/images/placeholder/placeholder16.jpg",
-  title: "Let's Discuss Your Project",
+  title: "Ready to accelerate your platform?",
   description: "Contact us today to explore how we can help you achieve your goals effectively.",
   primaryButtonText: "Contact",
   secondaryButtonText: "Learn More",
@@ -159,28 +174,34 @@ const CASE_STUDY_CTA_DATA: CTASectionData = {
 const CASE_STUDY_PAGE_DATA = {
   hero: CASE_STUDY_HERO_DATA,
   overview: CASE_STUDY_OVERVIEW_DATA,
+  customSection: CASE_STUDY_CUSTOM_SECTION_DATA,
   deliverables: CASE_STUDY_DELIVERABLES_DATA,
-  imageFeatures: CASE_STUDY_IMAGE_FEATURES_DATA,
   outcome: {
     sectionTitle: "The Outcome",
+    sectionSubtitle: "The new IoT management approach strengthened security posture, improved fleet control, and positioned Coates for scalable modernisation.",
     outcomes: [
       {
-        iconSrc: "/images/icons/transform.svg",
-        title: "Smooth Transition",
-        description: "Member data was migrated accurately and securely, supporting a frictionless experience for Team Super's members.",
+        iconSrc: "/images/icons/shield_person.svg",
+        title: "Improved Security",
+        description: "Enabled faster and more reliable deployment of security updates across the global device fleet.",
       },
       {
-        iconSrc: "/images/icons/book.svg",
-        title: "Regulatory Confidence",
-        description: "Assurance activities met industry compliance expectations, reducing operational risk.",
+        iconSrc: "/images/icons/subtitles_gear.svg",
+        title: "Greater Control",
+        description: "Improved visibility and management reliability across hundreds of thousands of Media Players.",
       },
       {
-        iconSrc: "/images/icons/brick.svg",
-        title: "Stronger Foundations",
-        description: "The new platform is now positioned to drive future growth, foster innovation and unlock better insights through data.",
+        iconSrc: "/images/icons/delivery_truck_bolt.svg",
+        title: "Faster Rollouts",
+        description: "Reduced friction and risk when deploying updates and enhancements at scale.",
+      },
+      {
+        iconSrc: "/images/icons/published_with_changes.svg",
+        title: "Future Ready",
+        description: "Established a modern cloud-native foundation to support ongoing platform evolution.",
       },
     ],
-    imageSrc: "/images/placeholder/placeholder81.jpg", // Placeholder image
+    imageSrc: "/images/case/case15.jpg",
     backgroundColor: "bg-[#cce1f4]",
     titleColor: "text-[#0c2080]",
     featureTitleColor: "text-[#00050a]",
@@ -188,12 +209,13 @@ const CASE_STUDY_PAGE_DATA = {
     imageOnRight: false,
   },
   testimonial: {
-    quote: "Merging two funds was a major undertaking, and having Software@Scale involved made a real difference. Their expertise in data assurance and migration gave us confidence through every stage. Thanks to their support, we delivered a seamless experience for our members and set Team Super up with a strong platform for the future.",
-    name: "Vasyl Nair",
-    title: "CEO, Team Super",
+    quote: "[Testimonial from Figma for UBank]",
+    name: "UBank Executive",
+    title: "Executive, UBank",
   },
   stats: {
     title: "Transforming technical challenges into strategic opportunities",
+    technologiesContent: "• Amazon Web Services (AWS) • AWS Greengrass • Ubuntu Linux • IoT Device Management",
     stats: [
       { value: "50%", description: "Cost reduction" },
       { value: "45", description: "Engineers" },
@@ -206,7 +228,7 @@ const CASE_STUDY_PAGE_DATA = {
   cta: CASE_STUDY_CTA_DATA,
 };
 
-export default function TeamSuperCaseStudyPage() {
+export default function UbankCaseStudyPage() {
   return (
     <CaseStudyArticleLayout data={CASE_STUDY_PAGE_DATA} />
   );

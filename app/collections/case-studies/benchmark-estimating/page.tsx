@@ -41,6 +41,7 @@ interface CaseStudyDeliverablesData {
   subtitleColor: string;
   textColor: string;
   iconColor: string;
+  rows?: number;
 }
 
 interface FeatureItem {
@@ -49,15 +50,31 @@ interface FeatureItem {
   description: string;
 }
 
-interface CaseStudyImageFeaturesData {
+
+interface CustomSectionData {
   sectionTitle: string;
-  features: FeatureItem[];
+  description: string;
+  listItems: string[];
   imageSrc: string;
   backgroundColor: string;
   titleColor: string;
-  featureTitleColor: string;
-  featureTextColor: string;
+  textColor: string;
+  listTextColor: string;
   imageOnRight?: boolean;
+}
+
+interface Stat {
+  value: string;
+  description: string;
+}
+
+interface CaseStudyStatsData {
+  title: string;
+  technologiesContent?: string;
+  stats: Stat[];
+  backgroundColor: string;
+  titleColor: string;
+  accentColor: string;
 }
 
 interface CTASectionData {
@@ -71,24 +88,24 @@ interface CTASectionData {
 // --- Placeholder Data ---
 
 const CASE_STUDY_HERO_DATA: HeroSectionData = {
-  imageSrc: "/images/placeholder/80.jpg",
+  imageSrc: "/images/case/case22.png",
   tagline: "Case Study",
-  title: "Team Super",
+  title: "Benchmark Estimating",
   titleHighlight: "",
-  description: "Seamless Data Migration Underpins a Major Superannuation Merger",
-  overlayOpacity: 0.5,
-    descriptionBelow: true,
+  description: "Benchmark Estimating accelerates delivery predictability and engineering quality through an AWS-aligned delivery uplift.",
+  overlayOpacity: 0.6,
+  descriptionBelow: true,
 };
 
 const CASE_STUDY_OVERVIEW_DATA: CaseStudyOverviewData = {
   overviewTitle: "Overview",
   details: [
-    { label: "Industry:", value: "Superannuation" },
-    { label: "Services:", value: "Data / AI Services" },
+    { label: "Industry:", value: "Infrastructure Technology / Estimating Software" },
+    { label: "Services:", value: "Engineering as a Service, Delivery Enablement, Cloud Engineering (AWS), Engineering Standards & Quality, Technology Advisory" },
   ],
-  richTextContent: `Following the merger of Mine Super and TWUSUPER to create Team Super, the newly formed fund faced a critical challenge: to unify member data, systems, and operations into a single, seamless ecosystem, without disrupting services.
+  richTextContent: `Built by engineers for engineers, Benchmark Estimating has served the infrastructure sector for more than 30 years with powerful cost and carbon estimating solutions. Its enterprise-grade platform supports authorities, asset owners, and contractors across Transport, Water, and Energy, enabling confident decision-making across the full asset lifecycle.
 
-Software@Scale (S@S) was appointed to lead assurance and onboarding activities, overseeing the secure migration and seamless integration of TWUSUPER member data into the Mine Super platform. By de-risking this critical phase, S@S helped lay the technical foundations for a smooth transition, safeguarding member trust and ensuring the new Team Super ecosystem was ready for future growth.`,
+As delivery demand increased, Benchmark Estimating engaged Software@Scale to improve delivery speed, quality, and predictability across engineering squads while maintaining momentum across a mature, feature-rich product.`,
   backgroundColor: "bg-[#cce1f4]",
   titleColor: "text-[#0c2080]",
   textColor: "text-[#00050a]",
@@ -96,27 +113,32 @@ Software@Scale (S@S) was appointed to lead assurance and onboarding activities, 
 
 const CASE_STUDY_DELIVERABLES_DATA: CaseStudyDeliverablesData = {
   sectionTitle: "What We Delivered",
-  sectionSubtitle: "Data Migration & Assurance",
+  sectionSubtitle: "Software@Scale partnered with Benchmark Estimating to define a pragmatic uplift plan across people, process, and engineering standards, aligned to modern AWS-enabled delivery practices.",
   deliverables: [
     {
-      iconSrc: "/images/icons/data_check.svg",
-      title: "Data Validation",
-      description: "Conducted rigorous checks to verify the completeness and accuracy of member data before, during, and after migration.",
+      iconSrc: "/images/icons/cloud_done.svg",
+      title: "Story Quality",
+      description: "Improved story definition through clearer templates, acceptance criteria standards, and increased analysis capacity.",
     },
     {
-      iconSrc: "/images/icons/deployed_code_account.svg",
-      title: "Onboarding Execution",
-      description: "Delivered a seamless onboarding of TWUSUPER members, aligning data integrity, compliance needs, and operational workflows within Mine Super's platform.",
+      iconSrc: "/images/icons/group_search.svg",
+      title: "Estimation Practices",
+      description: "Introduced team-based estimation, calibration techniques, and reference stories to improve predictability.",
     },
     {
-      iconSrc: "/images/icons/enhanced_encryption.svg",
-      title: "Risk Mitigation",
-      description: "Delivered a detailed assurance process that reduced data integrity risks and gave stakeholders confidence in the transition.",
+      iconSrc: "/images/icons/manage_accounts.svg",
+      title: "Engineering Quality",
+      description: "Established enforceable quality standards including test coverage thresholds, CI/CD gates, and smaller PR practices.",
     },
     {
-      iconSrc: "/images/icons/interactive_space.svg",
-      title: "Collaboration",
-      description: "Collaborated with technical teams and business leaders to ensure the platform could scale while maintaining service quality.",
+      iconSrc: "/images/icons/manage_history.svg",
+      title: "Performance Uplift",
+      description: "Created a structured approach to performance improvement and technical debt prioritisation.",
+    },
+    {
+      iconSrc: "/images/icons/settings_account_box.svg",
+      title: "Client Alignment",
+      description: "Improved roadmap clarity and shared definitions to align expectations around defects versus enhancements.",
     },
   ],
   backgroundColor: "bg-[#006cc9]",
@@ -124,33 +146,32 @@ const CASE_STUDY_DELIVERABLES_DATA: CaseStudyDeliverablesData = {
   subtitleColor: "text-[#5ae0f6]",
   textColor: "text-white",
   iconColor: "text-[#5ae0f6]",
+  rows: 2,
 };
 
-const CASE_STUDY_IMAGE_FEATURES_DATA: CaseStudyImageFeaturesData = {
-  sectionTitle: "Data & AI Engineering",
-  features: [
-    {
-      iconSrc: "/images/icons/automation.svg", // Placeholder for automation
-      title: "Optimised onboarding",
-      description: "Applied best practices across data handling and automation to streamline onboarding, while strengthening reporting capabilities.",
-    },
-    {
-      iconSrc: "/images/icons/security.svg", // Placeholder for security
-      title: "Maintained data integrity",
-      description: "Safeguarded data integrity to ensure consistent performance across key operational areas, including reporting, service, and compliance.",
-    },
+
+
+const CASE_STUDY_CUSTOM_SECTION_DATA: CustomSectionData = {
+  sectionTitle: "Key Challenges",
+  description: "As delivery pressure increased, several structural and operational challenges began to limit speed-to-market, quality, and predictability.",
+  listItems: [
+    "User stories lacking complete acceptance criteria, creating ambiguity and rework",
+    "Estimation variability driven by individual approaches rather than shared practices",
+    "Engineering quality gaps including low test coverage and inconsistent review discipline",
+    "Legacy code patterns impacting performance and long-term maintainability",
+    "Client-side ambiguity between defects and new requirements causing prioritisation friction",
   ],
-  imageSrc: "/images/placeholder/placeholder100.png", // Placeholder image
-  backgroundColor: "bg-[#006cc9]",
-  titleColor: "text-white",
-  featureTitleColor: "text-[#5ae0f6]",
-  featureTextColor: "text-white",
-  imageOnRight: true,
+  imageSrc: "/images/case/case23.jpg",
+  backgroundColor: "bg-[#cce1f4]",
+  titleColor: "text-[#0c2080]",
+  textColor: "text-[#00050a]",
+  listTextColor: "text-[#00050a]",
+  imageOnRight: false,
 };
-
+ 
 const CASE_STUDY_CTA_DATA: CTASectionData = {
   imageSrc: "/images/placeholder/placeholder16.jpg",
-  title: "Let's Discuss Your Project",
+  title: "Ready to accelerate your platform?",
   description: "Contact us today to explore how we can help you achieve your goals effectively.",
   primaryButtonText: "Contact",
   secondaryButtonText: "Learn More",
@@ -159,28 +180,39 @@ const CASE_STUDY_CTA_DATA: CTASectionData = {
 const CASE_STUDY_PAGE_DATA = {
   hero: CASE_STUDY_HERO_DATA,
   overview: CASE_STUDY_OVERVIEW_DATA,
+  customSection: CASE_STUDY_CUSTOM_SECTION_DATA,
   deliverables: CASE_STUDY_DELIVERABLES_DATA,
-  imageFeatures: CASE_STUDY_IMAGE_FEATURES_DATA,
   outcome: {
     sectionTitle: "The Outcome",
+    sectionSubtitle: "The uplift program strengthened delivery confidence, reduced risk, and improved long-term platform sustainability.",
     outcomes: [
       {
-        iconSrc: "/images/icons/transform.svg",
-        title: "Smooth Transition",
-        description: "Member data was migrated accurately and securely, supporting a frictionless experience for Team Super's members.",
+        iconSrc: "/images/icons/delivery_truck_speed.svg",
+        title: "Predictable Delivery",
+        description: "Improved sprint planning accuracy and delivery confidence through shared estimation practices.",
       },
       {
-        iconSrc: "/images/icons/book.svg",
-        title: "Regulatory Confidence",
-        description: "Assurance activities met industry compliance expectations, reducing operational risk.",
+        iconSrc: "/images/icons/monitoring.svg",
+        title: "Higher Quality",
+        description: "Reduced production risk through stronger test coverage, CI/CD enforcement, and disciplined reviews.",
       },
       {
-        iconSrc: "/images/icons/brick.svg",
-        title: "Stronger Foundations",
-        description: "The new platform is now positioned to drive future growth, foster innovation and unlock better insights through data.",
+        iconSrc: "/images/icons/speed.svg",
+        title: "Faster Execution",
+        description: "Reduced rework and delays through clearer stories and earlier alignment.",
+      },
+      {
+        iconSrc: "/images/icons/published_with_changes.svg",
+        title: "Improved Performance",
+        description: "Lowered legacy drag through visible, prioritised performance and technical debt initiatives.",
+      },
+      {
+        iconSrc: "/images/icons/shield_person.svg",
+        title: "Stronger Trust",
+        description: "Improved client confidence through clearer roadmaps and transparent delivery communication.",
       },
     ],
-    imageSrc: "/images/placeholder/placeholder81.jpg", // Placeholder image
+    imageSrc: "/images/case/case24.jpg",
     backgroundColor: "bg-[#cce1f4]",
     titleColor: "text-[#0c2080]",
     featureTitleColor: "text-[#00050a]",
@@ -188,12 +220,13 @@ const CASE_STUDY_PAGE_DATA = {
     imageOnRight: false,
   },
   testimonial: {
-    quote: "Merging two funds was a major undertaking, and having Software@Scale involved made a real difference. Their expertise in data assurance and migration gave us confidence through every stage. Thanks to their support, we delivered a seamless experience for our members and set Team Super up with a strong platform for the future.",
-    name: "Vasyl Nair",
-    title: "CEO, Team Super",
+    quote: "[Testimonial from Figma for UBank]",
+    name: "UBank Executive",
+    title: "Executive, UBank",
   },
   stats: {
     title: "Transforming technical challenges into strategic opportunities",
+    technologiesContent: "• Amazon Web Services (AWS) • CI/CD Pipelines • Unit Testing & Coverage Enforcement • Agile Delivery Enablement • Engineering Standards & Governance",
     stats: [
       { value: "50%", description: "Cost reduction" },
       { value: "45", description: "Engineers" },
@@ -206,7 +239,7 @@ const CASE_STUDY_PAGE_DATA = {
   cta: CASE_STUDY_CTA_DATA,
 };
 
-export default function TeamSuperCaseStudyPage() {
+export default function UbankCaseStudyPage() {
   return (
     <CaseStudyArticleLayout data={CASE_STUDY_PAGE_DATA} />
   );
