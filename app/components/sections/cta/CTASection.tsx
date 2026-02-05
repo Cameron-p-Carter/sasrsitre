@@ -47,7 +47,7 @@ export default function CTASection({
 
           {/* Action Buttons */}
           <div className="flex gap-4">
-            <Button variant="primary" href={primaryButtonUrl}>
+            <Button variant="primary" href={primaryButtonUrl} target={primaryButtonUrl?.startsWith('http') ? '_blank' : undefined}>
               {primaryButtonText}
             </Button>
             <Button variant="outline" href="/core-values">

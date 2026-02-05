@@ -53,7 +53,7 @@ export default function CareersDiscoverSection({
                 <Button variant="outline" href={primaryButtonUrl}>
                   {primaryButtonText}
                 </Button>
-                <Button variant="link" href={secondaryButtonUrl} className="!text-[#5ae0f6]">
+                <Button variant="link" href={secondaryButtonUrl} className="!text-[#5ae0f6]" target="_blank">
                   {secondaryButtonText}
                 </Button>
               </div>
