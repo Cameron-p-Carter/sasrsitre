@@ -80,7 +80,7 @@ const DISCOVER_SECTION_DATA = {
   primaryButtonText: "Explore",
   secondaryButtonText: "Apply",
   primaryButtonUrl: "/our-history",
-  secondaryButtonUrl: "https://www.seek.com.au/Software-at-Scale-jobs/at-this-company",
+  secondaryButtonUrl: "https://employmenthero.com/jobs/organisations/software-at-scale/",
 };
 
 const BENEFITS_SECTION_DATA = {
@@ -112,7 +112,7 @@ const CTA_SECTION_DATA = {
   description: "Take the next step in your career journey with Software@Scale. We're looking for talented individuals who are passionate about technology and innovation.",
   primaryButtonText: "Apply Now",
   secondaryButtonText: "Learn More",
-  primaryButtonUrl: "https://www.seek.com.au/Software-at-Scale-jobs/at-this-company"
+  primaryButtonUrl: "https://employmenthero.com/jobs/organisations/software-at-scale/"
 };
 
 export default async function CareersPage() {
