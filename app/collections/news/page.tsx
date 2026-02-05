@@ -39,6 +39,16 @@ const NEWS_GRID_DATA: NewsGridSectionData = {
   viewMoreButtonText: "View More",
   newsItems: [
     {
+      id: 14,
+      imageSrc: "/images/articles/art9.jpg",
+      title: "Software@Scale Featured in 2025 Top Tech Innovators",
+      description: "Software@Scale has been included in the CEO Magazine's 2025 Top Tech Innovators editorial, recognising the company's impact across AI, data and enterprise-scale financial services technology.",
+      link: "/collections/news/2025-top-tech-innovators",
+      date: "Feb 2026",
+      readTime: "2 min read",
+      objectPosition: "object-left",
+    },
+    {
       id: 1,
       imageSrc: "/images/articles/art3.jpg",
       title: "Software@Scale Wins Deloitte Rising Star Award for Second Year",
@@ -156,16 +166,6 @@ const NEWS_GRID_DATA: NewsGridSectionData = {
       date: "Nov 2024",
       readTime: "2 min read",
     },
-    {
-      id: 14,
-      imageSrc: "/images/articles/art9.jpg",
-      title: "Software@Scale Featured in 2025 Top Tech Innovators",
-      description: "Software@Scale has been included in the CEO Magazine's 2025 Top Tech Innovators editorial, recognising the company's impact across AI, data and enterprise-scale financial services technology.",
-      link: "/collections/news/2025-top-tech-innovators",
-      date: "Feb 2026",
-      readTime: "2 min read",
-      objectPosition: "object-left",
-    },
   ],
 };
 
@@ -186,7 +186,7 @@ export default function NewsPage() {
         <NewsGridSection
           sectionTitle={NEWS_GRID_DATA.sectionTitle}
           sectionDescription={NEWS_GRID_DATA.sectionDescription}
-          newsItems={[...NEWS_GRID_DATA.newsItems].reverse()}
+          newsItems={NEWS_GRID_DATA.newsItems}
           viewMoreButtonText={NEWS_GRID_DATA.viewMoreButtonText}
         />
         
