@@ -25,56 +25,7 @@ const BlogSection = () => {
 
   const blogCards: BlogCard[] = [
     {
-      id: 1,
-      image: '/images/placeholder/placeholder101.jpg',
-      title: 'Celebrating Growth at the 2025 CUB Awards',
-      description: 'Recognised as Australia\'s Fastest Growing Business for quality, innovation and measurable impact.',
-      link: '/collections/news/cub-awards',
-      hasCategory: false
-    },
-    {
-      id: 2,
-      image: '/images/placeholder/placeholder102.png',
-      title: 'Connecting with the Tech Community at BeerOps 2025',
-      description: 'Joined Australia\'s largest tech networking event to connect with peers and celebrate diversity.',
-      link: '/collections/news/beerops',
-      hasCategory: false
-    },
-    {
-      id: 3,
-      image: '/images/placeholder/placeholder103.jpg',
-      title: 'Louis Droguett Named Finalist in 2025 CEO of the Year Awards',
-      description: 'CEO recognised for leadership in scaling one of Australia\'s fastest-growing tech businesses.',
-      link: '/collections/news/2025-executive-of-the-year-awards',
-      hasCategory: false,
-      objectPosition: 'top'
-    },
-    {
-      id: 4,
-      image: '/images/placeholder/placeholder104.jpg',
-      title: 'Software@Scale Presents at AWS Community Day 2025',
-      description: 'Richard Ford delivered insights on innovation, embedded systems and cloud scalability.',
-      link: '/collections/news/aws-community-day',
-      hasCategory: false
-    },
-    {
-      id: 5,
-      image: '/images/placeholder/placeholder105.jpg',
-      title: 'Software@Scale at the 2025 Iress WealthTech Summit',
-      description: 'CEO shared insights on cybersecurity and digital protection in financial advice.',
-      link: '/collections/news/iress-wealthtech-summit',
-      hasCategory: false
-    },
-    {
-      id: 6,
-      image: '/images/placeholder/placeholder106jpg.jpg',
-      title: 'Patricia Droguett Recognised at Women Leading Tech Awards 2025',
-      description: 'Director of Operations recognised as finalist celebrating women driving innovation.',
-      link: '/collections/news/women-leading-tech-awards',
-      hasCategory: false
-    },
-    {
-      id: 7,
+      id: 13,
       image: '/images/placeholder/placeholder107.jpg',
       title: 'Software@Scale Named Rising Star in Deloitte Technology Fast 50',
       description: 'Recognised for exceptional growth and innovation in the technology sector.',
@@ -82,23 +33,7 @@ const BlogSection = () => {
       hasCategory: false
     },
     {
-      id: 8,
-      image: '/images/placeholder/placeholder108.png',
-      title: 'Approved Supplier: Federal Government ICT Digital and Cloud Marketplace Panels',
-      description: 'Approved for direct engagement with government agencies for digital transformation.',
-      link: '/collections/news/panels',
-      hasCategory: false
-    },
-    {
-      id: 9,
-      image: '/images/placeholder/placeholder109.jpg',
-      title: 'Software@Scale Joins Government Digital Marketplace Panels',
-      description: 'Expanding capability to support public sector digital transformation across Australia.',
-      link: '/collections/news/ict-supplier',
-      hasCategory: false
-    },
-    {
-      id: 10,
+      id: 12,
       image: '/images/articles/art1.jpg',
       title: 'Software@Scale Sponsors CISO Masterclass with Joe Sullivan',
       description: 'Software@Scale sponsored an exclusive one-day cybersecurity masterclass led by Joe Sullivan, former Chief Security Officer at Facebook, Uber and Cloudflare, convening senior CISOs from across Australia.',
@@ -107,14 +42,79 @@ const BlogSection = () => {
     },
     {
       id: 11,
-      image: '/images/articles/art3.jpg',
-      title: 'Software@Scale Wins Deloitte Rising Star Award for Second Year',
-      description: 'Software@Scale has been named the winner of Deloitte\'s 2025 Tech Fast 50 Rising Star Award, becoming the first company to receive the honour in consecutive years.',
-      link: '/collections/news/deloitte-tech-fast-50-2025',
+      image: '/images/placeholder/placeholder106jpg.jpg',
+      title: 'Patricia Droguett Recognised at Women Leading Tech Awards 2025',
+      description: 'Director of Operations recognised as finalist celebrating women driving innovation.',
+      link: '/collections/news/women-leading-tech-awards',
       hasCategory: false
     },
     {
-      id: 12,
+      id: 10,
+      image: '/images/placeholder/placeholder109.jpg',
+      title: 'Software@Scale Joins Government Digital Marketplace Panels',
+      description: 'Expanding capability to support public sector digital transformation across Australia.',
+      link: '/collections/news/ict-supplier',
+      hasCategory: false
+    },
+    {
+      id: 9,
+      image: '/images/placeholder/placeholder105.jpg',
+      title: 'Software@Scale at the 2025 Iress WealthTech Summit',
+      description: 'CEO shared insights on cybersecurity and digital protection in financial advice.',
+      link: '/collections/news/iress-wealthtech-summit',
+      hasCategory: false
+    },
+    {
+      id: 8,
+      image: '/images/placeholder/placeholder104.jpg',
+      title: 'Software@Scale Presents at AWS Community Day 2025',
+      description: 'Richard Ford delivered insights on innovation, embedded systems and cloud scalability.',
+      link: '/collections/news/aws-community-day',
+      hasCategory: false
+    },
+    {
+      id: 7,
+      image: '/images/placeholder/placeholder108.png',
+      title: 'Approved Supplier: Federal Government ICT Digital and Cloud Marketplace Panels',
+      description: 'Approved for direct engagement with government agencies for digital transformation.',
+      link: '/collections/news/panels',
+      hasCategory: false
+    },
+    {
+      id: 6,
+      image: '/images/placeholder/placeholder103.jpg',
+      title: 'Louis Droguett Named Finalist in 2025 CEO of the Year Awards',
+      description: 'CEO recognised for leadership in scaling one of Australia\'s fastest-growing tech businesses.',
+      link: '/collections/news/2025-executive-of-the-year-awards',
+      hasCategory: false,
+      objectPosition: 'top'
+    },
+    {
+      id: 5,
+      image: '/images/articles/art8.jpg',
+      title: 'Software@Scale Supports Australian Tamil Chamber of Commerce Gala',
+      description: 'Software@Scale was proud to support the Australian Tamil Chamber of Commerce\'s 10th Anniversary Gala Dinner, recognising a decade of contribution to Australia\'s multicultural business community.',
+      link: '/collections/news/chamber-of-commerce-gala',
+      hasCategory: false
+    },
+    {
+      id: 4,
+      image: '/images/placeholder/placeholder102.png',
+      title: 'Connecting with the Tech Community at BeerOps 2025',
+      description: 'Joined Australia\'s largest tech networking event to connect with peers and celebrate diversity.',
+      link: '/collections/news/beerops',
+      hasCategory: false
+    },
+    {
+      id: 3,
+      image: '/images/placeholder/placeholder101.jpg',
+      title: 'Celebrating Growth at the 2025 CUB Awards',
+      description: 'Recognised as Australia\'s Fastest Growing Business for quality, innovation and measurable impact.',
+      link: '/collections/news/cub-awards',
+      hasCategory: false
+    },
+    {
+      id: 2,
       image: '/images/articles/art5.jpg',
       title: 'Software@Scale at BeerOps 2025',
       description: 'Software@Scale joined Australia\'s largest tech networking event, BeerOps 2025, connecting with the engineering community and supporting an industry-led platform for collaboration and giving.',
@@ -122,12 +122,21 @@ const BlogSection = () => {
       hasCategory: false
     },
     {
-      id: 13,
-      image: '/images/articles/art7.jpg',
-      title: 'Software@Scale Supports Australian Tamil Chamber of Commerce Gala',
-      description: 'Software@Scale was proud to support the Australian Tamil Chamber of Commerce\'s 10th Anniversary Gala Dinner, recognising a decade of contribution to Australia\'s multicultural business community.',
-      link: '/collections/news/chamber-of-commerce-gala',
+      id: 1,
+      image: '/images/articles/art3.jpg',
+      title: 'Software@Scale Wins Deloitte Rising Star Award for Second Year',
+      description: 'Software@Scale has been named the winner of Deloitte\'s 2025 Tech Fast 50 Rising Star Award, becoming the first company to receive the honour in consecutive years.',
+      link: '/collections/news/deloitte-tech-fast-50-2025',
       hasCategory: false
+    },
+    {
+      id: 14,
+      image: '/images/articles/art9.jpg',
+      title: 'Software@Scale Featured in 2025 Top Tech Innovators',
+      description: 'Software@Scale has been included in the CEO Magazine\'s 2025 Top Tech Innovators editorial, recognising the company\'s impact across AI, data and enterprise-scale financial services technology.',
+      link: '/collections/news/2025-top-tech-innovators',
+      hasCategory: false,
+      objectPosition: 'left'
     }
   ];
 
