@@ -11,7 +11,7 @@ const CONTACT_INFO_DATA = {
       iconSrc: "/images/icons/mail.svg",
       title: "Email",
       description: "Reach us anytime at our support email.",
-      contactInfo: "info@softwareatscale.com",
+      contactInfo: "info@softwareatscale.com.au",
       isLink: true
     },
     {
