@@ -4,6 +4,8 @@ import ImageOverlapSection from '@/app/components/sections/content/ImageOverlapS
 import PeopleFeaturesSection from '@/app/components/sections/features/PeopleFeaturesSection';
 import PeopleTeamSection from '@/app/components/sections/info/PeopleTeamSection';
 import CoreValuesTestimonialSection from '@/app/components/sections/values/CoreValuesTestimonialSection';
+import CoreCompetenciesSection from '@/app/components/sections/info/CoreCompetenciesSection';
+import ServiceCapabilitiesSection from '@/app/components/sections/info/ServiceCapabilitiesSection';
 import CTASection from '@/app/components/sections/cta/CTASection';
 import Footer from '@/app/components/layout/Footer';
 
@@ -35,6 +37,8 @@ Our multi-disciplinary teams are industry experts in their fields, with speciali
           primaryButtonText="Learn More"
           secondaryButtonText="Contact"
         />
+        <CoreCompetenciesSection />
+        <ServiceCapabilitiesSection />
         <PeopleFeaturesSection />
         <PeopleTeamSection />
         <CoreValuesTestimonialSection />
