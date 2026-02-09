@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export const ServiceCapabilitiesSection: React.FC = () => {
   return (
-    <section className="relative flex justify-center py-28 px-16">
+    <section className="relative flex justify-center py-16 px-5 lg:py-28 lg:px-16">
       {/* Background Image and Overlay */}
       <div className="absolute inset-0 pointer-events-none">
         <Image
@@ -19,14 +19,14 @@ export const ServiceCapabilitiesSection: React.FC = () => {
       </div>
 
       <div className="max-w-[1280px] w-full relative z-10 text-white">
-        <div className="flex flex-col lg:flex-row gap-20">
+        <div className="flex flex-col gap-12 lg:flex-row lg:gap-20">
           {/* Left Column (Services and Industries) */}
-          <div className="flex flex-col gap-8 w-full lg:w-1/2">
+          <div className="flex flex-col gap-12 w-full lg:w-1/2">
             
             {/* General Services */}
             <div className="flex flex-col gap-6">
               <div className="border-b border-white pb-6">
-                <h3 className="text-[#14d3f3] text-[32px] font-bold tracking-[-0.32px] leading-[1.3]">
+                <h3 className="text-[#14d3f3] text-[18px] lg:text-[32px] font-bold tracking-[-0.32px] leading-[1.3]">
                   General Services
                 </h3>
               </div>
@@ -39,48 +39,78 @@ export const ServiceCapabilitiesSection: React.FC = () => {
             {/* Specialised Services */}
             <div className="flex flex-col gap-6">
               <div className="border-b border-white pb-6">
-                <h3 className="text-[#14d3f3] text-[32px] font-bold tracking-[-0.32px] leading-[1.3]">
+                <h3 className="text-[#14d3f3] text-[18px] lg:text-[32px] font-bold tracking-[-0.32px] leading-[1.3]">
                   Specialised Services
                 </h3>
               </div>
-              <div className="flex gap-12 text-base font-bold">
-                <ul className="list-disc ml-6 space-y-2">
+              <div className="text-base font-bold">
+                {/* Mobile Single List */}
+                <ul className="list-disc ml-6 space-y-2 lg:hidden">
                   <li>Cloud Engineering</li>
                   <li>Security Architecture</li>
-                </ul>
-                <ul className="list-disc ml-6 space-y-2">
                   <li>Project Acceleration</li>
                   <li>Platform Due Diligence</li>
-                </ul>
-                <ul className="list-disc ml-6 space-y-2">
                   <li>Engineering Performance</li>
                   <li>Data / AI Services</li>
                 </ul>
+                {/* Desktop Three Columns */}
+                <div className="hidden lg:flex lg:gap-12">
+                  <ul className="list-disc ml-6 space-y-2">
+                    <li>Cloud Engineering</li>
+                    <li>Security Architecture</li>
+                  </ul>
+                  <ul className="list-disc ml-6 space-y-2">
+                    <li>Project Acceleration</li>
+                    <li>Platform Due Diligence</li>
+                  </ul>
+                  <ul className="list-disc ml-6 space-y-2">
+                    <li>Engineering Performance</li>
+                    <li>Data / AI Services</li>
+                  </ul>
+                </div>
               </div>
             </div>
             
             {/* Industries */}
             <div className="flex flex-col gap-6">
               <div className="border-b border-white pb-6">
-                <h3 className="text-[#14d3f3] text-[32px] font-bold tracking-[-0.32px] leading-[1.3]">
+                <h3 className="text-[#14d3f3] text-[18px] lg:text-[32px] font-bold tracking-[-0.32px] leading-[1.3]">
                   Industries
                 </h3>
               </div>
-              <div className="flex gap-12 text-base font-bold">
-                <ul className="list-disc ml-6 space-y-2">
-                  <li>Financial Services</li>
-                  <li>Payments</li>
-                </ul>
-                <ul className="list-disc ml-6 space-y-2">
-                  <li>Superannuation</li>
-                  <li>Insurance</li>
-                  <li>QSR</li>
-                </ul>
-                <ul className="list-disc ml-6 space-y-2">
-                  <li>Media</li>
-                  <li>Retail</li>
-                  <li>Government</li>
-                </ul>
+              <div className="text-base font-bold">
+                {/* Mobile Two Columns */}
+                <div className="flex gap-6 lg:hidden">
+                  <ul className="list-disc ml-6 space-y-2 w-1/2">
+                    <li>Financial Services</li>
+                    <li>Payments</li>
+                    <li>Superannuation</li>
+                    <li>Insurance</li>
+                  </ul>
+                  <ul className="list-disc ml-6 space-y-2 w-1/2">
+                    <li>QSR</li>
+                    <li>Media</li>
+                    <li>Retail</li>
+                    <li>Government</li>
+                  </ul>
+                </div>
+                {/* Desktop Three Columns */}
+                <div className="hidden lg:flex lg:gap-12">
+                  <ul className="list-disc ml-6 space-y-2">
+                    <li>Financial Services</li>
+                    <li>Payments</li>
+                  </ul>
+                  <ul className="list-disc ml-6 space-y-2">
+                    <li>Superannuation</li>
+                    <li>Insurance</li>
+                    <li>QSR</li>
+                  </ul>
+                  <ul className="list-disc ml-6 space-y-2">
+                    <li>Media</li>
+                    <li>Retail</li>
+                    <li>Government</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -88,11 +118,11 @@ export const ServiceCapabilitiesSection: React.FC = () => {
           {/* Right Column (Technologies) */}
           <div className="flex flex-col gap-6 w-full lg:w-1/2">
             <div className="border-b border-white pb-6">
-              <h3 className="text-[#14d3f3] text-[32px] font-bold tracking-[-0.32px] leading-[1.3]">
+              <h3 className="text-[#14d3f3] text-[18px] lg:text-[32px] font-bold tracking-[-0.32px] leading-[1.3]">
                 Technologies
               </h3>
             </div>
-            <div className="flex gap-12 text-base">
+            <div className="flex flex-col lg:flex-row lg:gap-12 text-base">
               {/* Full Stack, Data, Cloud/DevOps */}
               <div className="space-y-6 flex-1">
                 {/* Full Stack */}
