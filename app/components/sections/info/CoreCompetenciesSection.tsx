@@ -7,7 +7,7 @@ export const CoreCompetenciesSection: React.FC = () => {
           <h2 className="text-[#14d3f3] text-[36px] lg:text-[48px] font-bold tracking-[-0.48px] lg:tracking-[-0.48px] leading-[1.2]">
             Core Competencies
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 text-white text-[16px] lg:text-[18px] leading-[1.5]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-4 lg:gap-x-12 text-white text-[16px] lg:text-[18px] leading-[1.5]">
             <p>
               {`Software@Scale offers a flexible high-calibre delivery model across Engineering as a Service (EaaS) and Technology Advisory, designed to accelerate digital outcomes for complex, regulated environments. `}
             </p>
