@@ -27,11 +27,11 @@ export default function HeroSection() {
           <div className="flex flex-col gap-5 md:gap-6">
             {/* Main Heading */}
             <h1 className="font-bold text-white text-[40px] md:text-[48px] lg:text-[56px] leading-[1.2] tracking-[-0.4px] md:tracking-[-0.48px] lg:tracking-[-0.56px]">
-              <span>
-                Building elite solutions for{' '}
-                <br className="hidden md:block" />
-              </span>
-              <span className="text-[#5ae0f6]">elite businesses</span>
+              <span>Solve the problem.</span>
+              <br />
+              <span>Write the code.</span>
+              <br />
+              <span className="text-[#5ae0f6]">Scale the solution.</span>
             </h1>
 
             {/* Description */}
