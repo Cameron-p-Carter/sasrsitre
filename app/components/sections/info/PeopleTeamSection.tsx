@@ -84,7 +84,7 @@ const PeopleTeamSection = () => {
                       src={member.imageSrc}
                       alt={member.name}
                       fill
-                      className="object-cover rounded-2xl"
+                      className="object-cover object-top rounded-2xl"
                     />
                   </div>
 
