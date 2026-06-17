@@ -6,8 +6,8 @@ interface CoreValuesTestimonialSectionProps {
 
 const CoreValuesTestimonialSection = ({
   quote = "Software@Scale is the only company I go to when I need immediate high calibre engineering talent to confidently solve the most difficult problems we have.",
-  name = "Tim Knoblance",
-  title = "CTO, Coates Group"
+  name = "Chief Technology Officer",
+  title = "Leading Australian Retail & Consumer Goods Organisation"
 }: CoreValuesTestimonialSectionProps) => {
   return (
     <section className="bg-[#006cc9] px-5 md:px-16 py-16 md:py-28 w-full">
