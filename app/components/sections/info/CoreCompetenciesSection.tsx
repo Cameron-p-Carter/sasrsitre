@@ -7,15 +7,15 @@ export const CoreCompetenciesSection: React.FC = () => {
           <h2 className="text-[#14d3f3] text-[36px] lg:text-[48px] font-bold tracking-[-0.48px] lg:tracking-[-0.48px] leading-[1.2]">
             Core Competencies
           </h2>
-          <div className="flex flex-col gap-4 text-white text-[16px] lg:text-[18px] leading-[1.5]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 text-white text-[16px] lg:text-[18px] leading-[1.5]">
             <p>
               {`Software@Scale offers a flexible high-calibre delivery model across Engineering as a Service (EaaS) and Technology Advisory, designed to accelerate digital outcomes for complex, regulated environments. `}
             </p>
             <p>
-              {`Our service lines span cloud engineering, security architecture, and project acceleration, underpinned by specialised offerings in platform due diligence, engineering performance, and AIdriven solutions. `}
+              {`We operate across core verticals such as banking, payments, superannuation, insurance, and QSR, with additional experience in retail and government. `}
             </p>
             <p>
-              {`We operate across core verticals such as banking, payments, superannuation, insurance, and QSR, with additional experience in retail and government. `}
+              {`Our service lines span cloud engineering, security architecture, and project acceleration, underpinned by specialised offerings in platform due diligence, engineering performance, and AIdriven solutions. `}
             </p>
             <p>
               Our teams bring deep expertise across modern stacks including React, Node.js, .NET, AWS, Azure, Kubernetes, and emerging technologies like agentic AI and RAG.
