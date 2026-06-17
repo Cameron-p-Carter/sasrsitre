@@ -18,7 +18,7 @@ const TEAM_MEMBERS = [
     name: "Li-Shuai Soh",
     title: "Head of Architecture and Solutions",
     description: "Engineering leader with diverse experience across startups and large corporations. Adept at creating and leading high-performing teams, aligning technology with business outcomes, and driving both stabilisation and innovation.",
-    imageSrc: "/images/people/Li.png",
+    imageSrc: "/images/people/Li.jpg",
   },
   {
     name: "Patricia Droguett",
@@ -36,25 +36,25 @@ const TEAM_MEMBERS = [
     name: "Bashir Ansari",
     title: "Head of Software Engineering",
     description: "Brings extensive experience leading high-performance teams across fintech and major financial institutions. Focused on building and empowering strong engineering teams while fostering a collaborative, resilient, and continuously improving culture.",
-    imageSrc: "/images/people/bashir.png",
+    imageSrc: "/images/people/bashir.jpg",
   },
   {
     name: "John Halls",
     title: "Chief Engineer",
     description: "CTO-level leader driving cloud-based digital transformation, with a passion for building scalable products and high-performing teams. Experienced across AWS, Azure, Google Cloud, and technologies including Java, Python, and .NET, solving complex architectural challenges across fintech and commerce.",
-    imageSrc: "/images/people/john.png",
+    imageSrc: "/images/people/john.jpg",
   },
   {
     name: "Ribvar Shafeei",
     title: "Chief Information Security Officer",
     description: "Cybersecurity leader with over 20 years of experience across large financial organisations. Has spearheaded large-scale security programs and developed comprehensive strategies spanning identity management, threat intelligence, and secure operations across public and private sectors.",
-    imageSrc: "/images/people/ribvar.png",
+    imageSrc: "/images/people/ribvar.jpg",
   },
   {
     name: "Richard Ford",
     title: "Head of Cloud and Infrastructure",
     description: "Career cloud and infrastructure leader helping organisations become smarter, safer, and stronger in the cloud. Experience spans resilient hosting platforms in emerging tech ecosystems through to leading cloud and infrastructure teams at AWS, Adobe, Versent, and Software@Scale.",
-    imageSrc: "/images/people/richard.png",
+    imageSrc: "/images/people/richard.jpg",
   },
 ];
 
