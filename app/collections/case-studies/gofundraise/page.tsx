@@ -264,8 +264,8 @@ const CASE_STUDY_PAGE_DATA: CaseStudyArticleData = {
   outcome: CASE_STUDY_OUTCOME_DATA,
   testimonial: {
     quote: "Software at Scale continues to impress us with their speed and quality of work. We always look forward to having the team onsite so that our teams can learn from them.",
-    name: "Stuart Finlayson",
-    title: "CEO, GoFundraise",
+    name: "Chief Executive Officer",
+    title: "Leading Fundraising Technology Company",
   },
   stats: CASE_STUDY_STATS_DATA,
   cta: CASE_STUDY_CTA_DATA,
