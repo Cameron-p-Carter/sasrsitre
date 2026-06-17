@@ -7,54 +7,63 @@ const TEAM_MEMBERS = [
     title: "Chief Executive Officer",
     description: "Technology and operations executive offering progressive leadership, working collaboratively to align diverse stakeholders to a single vision. Builds engaged and high-performing teams in times of change to deliver measurable business outcomes.",
     imageSrc: "/images/people/louis.jpg",
+    objectPosition: "object-center",
   },
   {
     name: "Hasan Husain",
     title: "Chief Delivery Officer",
     description: "Dynamic, experienced, and results-driven technology leader with deep expertise in delivering large-scale technology programs. Known for fostering a strong culture of collaboration, accountability, and growth.",
     imageSrc: "/images/people/hasan.jpg",
+    objectPosition: "object-[center_25%]",
   },
   {
     name: "Li-Shuai Soh",
     title: "Head of Architecture and Solutions",
     description: "Engineering leader with diverse experience across startups and large corporations. Adept at creating and leading high-performing teams, aligning technology with business outcomes, and driving both stabilisation and innovation.",
     imageSrc: "/images/people/Li.jpg",
+    objectPosition: "object-center",
   },
   {
     name: "Patricia Droguett",
     title: "Chief Operating Officer",
     description: "Digital transformation executive with extensive experience defining and driving the delivery of high-impact technology transformation programs within financial services.",
     imageSrc: "/images/people/patricia.jpg",
+    objectPosition: "object-top",
   },
   {
     name: "Ravi Chotalia",
     title: "Head of Platform Engineering",
     description: "Leader of large DevOps and infrastructure teams, focused on unlocking teams and maximising efficiency through the implementation of automation and continuous delivery pipelines.",
     imageSrc: "/images/people/ravi.jpg",
+    objectPosition: "object-top",
   },
   {
     name: "Bashir Ansari",
     title: "Head of Software Engineering",
     description: "Brings extensive experience leading high-performance teams across fintech and major financial institutions. Focused on building and empowering strong engineering teams while fostering a collaborative, resilient, and continuously improving culture.",
     imageSrc: "/images/people/bashir.jpg",
+    objectPosition: "object-top",
   },
   {
     name: "John Halls",
     title: "Chief Engineer",
     description: "CTO-level leader driving cloud-based digital transformation, with a passion for building scalable products and high-performing teams. Experienced across AWS, Azure, Google Cloud, and technologies including Java, Python, and .NET, solving complex architectural challenges across fintech and commerce.",
     imageSrc: "/images/people/john.jpg",
+    objectPosition: "object-top",
   },
   {
     name: "Ribvar Shafeei",
     title: "Chief Information Security Officer",
     description: "Cybersecurity leader with over 20 years of experience across large financial organisations. Has spearheaded large-scale security programs and developed comprehensive strategies spanning identity management, threat intelligence, and secure operations across public and private sectors.",
     imageSrc: "/images/people/ribvar.jpg",
+    objectPosition: "object-top",
   },
   {
     name: "Richard Ford",
     title: "Head of Cloud and Infrastructure",
     description: "Career cloud and infrastructure leader helping organisations become smarter, safer, and stronger in the cloud. Experience spans resilient hosting platforms in emerging tech ecosystems through to leading cloud and infrastructure teams at AWS, Adobe, Versent, and Software@Scale.",
     imageSrc: "/images/people/richard.jpg",
+    objectPosition: "object-top",
   },
 ];
 
@@ -84,7 +93,7 @@ const PeopleTeamSection = () => {
                       src={member.imageSrc}
                       alt={member.name}
                       fill
-                      className="object-cover object-top rounded-2xl"
+                      className={`object-cover ${member.objectPosition} rounded-2xl`}
                     />
                   </div>
 
