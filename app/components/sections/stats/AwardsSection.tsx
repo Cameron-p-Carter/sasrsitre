@@ -7,12 +7,6 @@ const AwardsSection = () => {
       src: "/images/awards/australiangov.svg",
       width: 120,
       height: 80
-    },
-    {
-      name: "NSW Government",
-      src: "/images/awards/NSWGovernment_2009.svg",
-      width: 80,
-      height: 80
     }
   ];
 
@@ -22,7 +16,7 @@ const AwardsSection = () => {
         {/* Mobile & Tablet: Text above awards */}
         <div className="lg:hidden flex flex-col gap-8 w-full">
           <p className="font-bold text-[#14d3f3] text-[16px] md:text-[17px] leading-[1.5] text-center w-full">
-            We are the preferred ICT supplier for NSW and Australian Government Agencies.
+            We are the preferred ICT supplier for NSW and Australian Government Agencies, delivering secure, scalable and innovative technology solutions that support critical services, operational excellence and digital transformation across the public sector.
           </p>
 
           {/* Awards row */}
@@ -32,7 +26,7 @@ const AwardsSection = () => {
                 key={index}
                 className="relative flex-shrink-0"
                 style={{
-                  width: index === 0 ? '140px' : '80px',
+                  width: '140px',
                   height: '80px'
                 }}
               >
@@ -50,8 +44,8 @@ const AwardsSection = () => {
         {/* Desktop: Text on left, awards on right */}
         <div className="hidden lg:flex gap-8 xl:gap-[42px] items-center w-full">
           {/* Left: Text */}
-          <p className="font-bold text-[#14d3f3] text-[18px] leading-[1.5] flex-shrink-0 whitespace-nowrap">
-            We are the preferred ICT supplier for NSW and Australian Government Agencies.
+          <p className="font-bold text-[#14d3f3] text-[18px] leading-[1.5] flex-1">
+            We are the preferred ICT supplier for NSW and Australian Government Agencies, delivering secure, scalable and innovative technology solutions that support critical services, operational excellence and digital transformation across the public sector.
           </p>
 
           {/* Right: Awards */}
@@ -62,7 +56,7 @@ const AwardsSection = () => {
                   key={index}
                   className="relative flex-shrink-0"
                   style={{
-                    width: index === 0 ? '200px' : '100px',
+                    width: '200px',
                     height: '100px'
                   }}
                 >
