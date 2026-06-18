@@ -30,7 +30,7 @@ const ProvenApproachSection = () => {
     {
       icon: (
         <Image
-          src="/images/icons/diversity_1.svg"
+          src="/images/icons/diversity_1_light.svg"
           alt="Diversity icon"
           width={48}
           height={48}
