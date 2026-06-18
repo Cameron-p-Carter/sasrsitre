@@ -40,7 +40,7 @@ export default function ImageOverlapSection({
                 src={overImageSrc}
                 alt={title}
                 fill
-                className="object-cover scale-110 translate-x-4"
+                className="object-cover scale-110 translate-x-2"
               />
             </div>
           </div>
