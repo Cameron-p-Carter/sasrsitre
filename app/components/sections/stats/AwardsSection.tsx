@@ -49,7 +49,7 @@ const AwardsSection = () => {
           </p>
 
           {/* Right: Awards */}
-          <div className="flex-1 flex items-center justify-end min-w-0">
+          <div className="flex-shrink-0 flex items-center">
             <div className="flex gap-4 xl:gap-[35px] items-center">
               {awards.map((award, index) => (
                 <div
