@@ -1,29 +1,34 @@
 import Image from 'next/image';
 
-// SVG assets from Figma context
-const ICON_ENGINEERING = "/images/icons/engineering.svg"; // Placeholder path
-const ICON_CLOUD = "/images/icons/cloud.svg"; // Placeholder path
-const ICON_SECURITY = "/images/icons/security.svg"; // Placeholder path
+interface Feature {
+  icon: string;
+  title: string;
+  description: string;
+}
 
-const PeopleFeaturesSection = () => {
-  const features = [
-    {
-      icon: ICON_ENGINEERING,
-      title: "Our Engineering Excellence at Your Service",
-      description: "Our engineering team is dedicated to delivering innovative solutions tailored to your unique challenges.",
-    },
-    {
-      icon: ICON_CLOUD,
-      title: "Cloud Solutions for Modern Businesses",
-      description: "We harness the power of cloud technology to enhance scalability and operational efficiency.",
-    },
-    {
-      icon: ICON_SECURITY,
-      title: "Robust Security for Your Peace of Mind",
-      description: "Our security experts implement proactive measures to safeguard your business from threats.",
-    },
-  ];
+interface PeopleFeaturesSectionProps {
+  features?: Feature[];
+}
 
+const DEFAULT_FEATURES: Feature[] = [
+  {
+    icon: "/images/icons/engineering.svg",
+    title: "Our Engineering Excellence at Your Service",
+    description: "Our engineering team is dedicated to delivering innovative solutions tailored to your unique challenges.",
+  },
+  {
+    icon: "/images/icons/cloud.svg",
+    title: "Cloud Solutions for Modern Businesses",
+    description: "We harness the power of cloud technology to enhance scalability and operational efficiency.",
+  },
+  {
+    icon: "/images/icons/security.svg",
+    title: "Robust Security for Your Peace of Mind",
+    description: "Our security experts implement proactive measures to safeguard your business from threats.",
+  },
+];
+
+const PeopleFeaturesSection = ({ features = DEFAULT_FEATURES }: PeopleFeaturesSectionProps) => {
   return (
     <section className="bg-[#006cc9] px-5 md:px-16 py-16 md:py-28 w-full">
       <div className="max-w-[1280px] mx-auto flex flex-col gap-12 md:gap-[80px] items-start">
@@ -40,7 +45,7 @@ const PeopleFeaturesSection = () => {
                   className="object-contain"
                 />
               </div>
-              
+
               {/* Content */}
               <div className="flex flex-col gap-5 md:gap-6 items-start w-full">
                 <h3 className="font-bold text-[#14d3f3] text-[24px] md:text-[32px] leading-[1.3] tracking-[-0.24px] md:tracking-[-0.32px] w-full">

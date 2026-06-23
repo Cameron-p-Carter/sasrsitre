@@ -106,8 +106,8 @@ export default function ContactUsPage() {
         <HeroHeaderSection
           imageSrc="/images/placeholder/101.jpg"
           tagline="Connect"
-          title="Get in"
-          titleHighlight="Touch"
+          title="Talk To A"
+          titleHighlight="Technology Leader"
           description="We're here to assist you with any inquiries or support you may need."
           overlayOpacity={0.6}
           objectPosition="center 25%"

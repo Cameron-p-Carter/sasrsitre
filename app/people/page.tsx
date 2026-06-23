@@ -12,45 +12,56 @@ import Footer from '@/app/components/layout/Footer';
 export default function PeoplePage() {
   return (
     <div className="min-h-screen bg-white">
-        <Header />
-      
-      {/* People Page Hero Section */}
+      <Header />
+
       <main>
         <HeroHeaderSection
           imageSrc="/images/placeholder/placeholder18.jpg"
-          tagline="Expertise"
-          title="Meet Our"
-          titleHighlight="Experts"
-          description="At Software at Scale, our team comprises seasoned professionals with extensive backgrounds in technology consultancy. We are committed to providing cutting-edge solutions that empower our clients to thrive in a digital-first world."
+          tagline="Leadership"
+          title="Leadership Built In The"
+          titleHighlight="Organisations You Trust"
+          description="Software@Scale was founded by technology leaders who have spent their careers building, scaling and transforming complex technology platforms across banking, payments, insurance, superannuation and digital businesses. Today, our leadership team combines executive experience with hands-on engineering capability to help clients solve difficult technology challenges and deliver outcomes with confidence."
           overlayOpacity={0.5}
           objectPosition="center"
+          descriptionBelow={true}
         />
+
+        {/* Why We Started Software@Scale */}
         <ImageOverlapSection
-          title="Company Overview"
-          description="At Software@Scale, we specialise in aligning technology strategy with business objectives, leveraging our expertise to drive innovation, efficiency and growth.
+          title="Why We Started Software@Scale"
+          description="After leading technology organisations and transformation programs inside large enterprises, we saw a gap between traditional consulting firms and what clients actually needed.
 
-We work with large scale financial and commercial institutions to bolster their teams and provide critical expertise to turn around struggling projects and unblock complex technical challenges.
+Organisations were often forced to choose between strategic consultants with limited delivery accountability and technical specialists without executive experience.
 
-Our multi-disciplinary teams are industry experts in their fields, with specialised skills in all aspects of Software Engineering, Architecture, DevOps and Cybersecurity. They hit the ground running and do whatever it takes to achieve the outcomes."
-          underImageSrc="/images/placeholder/placeholder161.jpg"
-          overImageSrc="/images/placeholder/placeholder6ontop.jpg"
-          primaryButtonText="Learn More"
-          secondaryButtonText="Contact"
+Software@Scale was founded to bridge that gap. We combine executive technology leadership, principal engineering expertise and hands-on delivery to help organisations solve difficult technology challenges and achieve meaningful outcomes."
+          underImageSrc="/images/people/louis.jpg"
+          overImageSrc="/images/people/patricia.jpg"
+          primaryButtonText="Talk To A Technology Leader"
+          secondaryButtonText="View Proven Delivery"
         />
+
+        {/* Executive Technology Leadership */}
         <CoreCompetenciesSection />
+
         <ServiceCapabilitiesSection />
+
+        {/* PeopleFeaturesSection uses defaults for people page */}
         <PeopleFeaturesSection />
+
         <PeopleTeamSection />
+
         <CoreValuesTestimonialSection />
+
         <CTASection
           imageSrc="/images/placeholder/placeholder16.jpg"
-          title="Join Our Talented Team"
-          description="Transform your career with a team that pushes the boundaries of technology and innovation."
-          primaryButtonText="Careers"
-          primaryButtonUrl="/careers"
-          secondaryButtonText="Contact"
+          title="Talk To A Technology Leader"
+          description="Whether you're facing delivery pressure, capability gaps or critical technology decisions, Software@Scale can help."
+          primaryButtonText="Talk To A Technology Leader"
+          primaryButtonUrl="/contact-us"
+          secondaryButtonText="View Proven Delivery"
         />
       </main>
+
       <Footer />
     </div>
   );

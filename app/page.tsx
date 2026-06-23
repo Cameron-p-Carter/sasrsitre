@@ -1,58 +1,70 @@
 import Header from '@/app/components/layout/Header';
 import HeroSection from '@/app/components/sections/hero/HeroSection';
-import BlogSection from '@/app/components/sections/showcase/BlogSection';
 import LogoSection from '@/app/components/sections/showcase/LogoSection';
+import AtAGlanceSection from '@/app/components/sections/stats/AtAGlanceSection';
+import PeopleFeaturesSection from '@/app/components/sections/features/PeopleFeaturesSection';
+import WhyChooseSection from '@/app/components/sections/info/WhyChooseSection';
 import ImageOverlapSection from '@/app/components/sections/content/ImageOverlapSection';
+import PortfolioSection from '@/app/components/sections/showcase/PortfolioSection';
+import TransformingIdeasSection from '@/app/components/sections/info/TransformingIdeasSection';
 import AwardsSection from '@/app/components/sections/stats/AwardsSection';
 import EliteTalentSection from '@/app/components/sections/info/EliteTalentSection';
-import WhyChooseSection from '@/app/components/sections/info/WhyChooseSection';
-import TransformingIdeasSection from '@/app/components/sections/info/TransformingIdeasSection';
-import ProvenApproachSection from '@/app/components/sections/info/ProvenApproachSection';
-import PortfolioSection from '@/app/components/sections/showcase/PortfolioSection';
+import BlogSection from '@/app/components/sections/showcase/BlogSection';
+import FoundersSection from '@/app/components/sections/info/FoundersSection';
 import CTASection from '@/app/components/sections/cta/CTASection';
 import Footer from '@/app/components/layout/Footer';
 
-interface Project {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  aspectRatio: string;
-}
+const BOOST_UNBLOCK_SAFEGUARD = [
+  {
+    icon: "/images/icons/bolt.svg",
+    title: "Boost",
+    description: "Increase engineering capability, improve delivery velocity and strengthen technology teams.",
+  },
+  {
+    icon: "/images/icons/dynamic_form.svg",
+    title: "Unblock",
+    description: "Solve difficult technology challenges, remove bottlenecks and recover critical delivery programs.",
+  },
+  {
+    icon: "/images/icons/security.svg",
+    title: "Safeguard",
+    description: "Reduce operational risk, improve resilience and strengthen security.",
+  },
+];
 
-const HOME_PORTFOLIO_DATA = {
-  title: "Our Project Highlights",
-  description: "Explore our successful projects and innovative solutions.",
-  viewAllButtonText: "View all",
+const PROVEN_DELIVERY_DATA = {
+  title: "Proven Delivery",
+  description: "We've helped organisations across banking, payments, superannuation, retail and digital platforms solve complex technology challenges and strengthen engineering capability.",
+  viewAllButtonText: "View Proven Delivery",
   projects: [
     {
       id: 1,
-      title: "Team Super",
-      description: "Seamless Data Migration Underpins a Major Superannuation Merger.",
-      image: "/images/placeholder/placeholder11.jpg",
+      title: "Coates Group",
+      description: "Scale engineering capability across a global restaurant technology platform. Built and embedded a 45-person engineering capability supporting platform growth — 30+ countries supported.",
+      image: "/images/placeholder/placeholder12.jpg",
       aspectRatio: "aspect-[335/188]",
-      link: "/collections/case-studies/team-super"
+      link: "/collections/case-studies/coates-group"
     },
     {
       id: 2,
-      title: "Mine Super",
-      description: "Preparing a Superannuation Platform for Sale and Future Growth.",
-      image: "/images/placeholder/placeholder13.jpg",
+      title: "Commonwealth Bank of Australia",
+      description: "Deliver large-scale digital banking initiatives across highly regulated environments. Supported engineering delivery across critical customer-facing platforms.",
+      image: "/images/placeholder/placeholder11.jpg",
       aspectRatio: "aspect-[335/188]",
-      link: "/collections/case-studies/mine-super"
+      link: "/collections/case-studies/commonwealth-bank"
     },
     {
       id: 3,
-      title: "Coates Group",
-      description: "Engineering Acceleration for Global Market Leadership.",
-      image: "/images/placeholder/placeholder12.jpg",
+      title: "National Australia Bank",
+      description: "Accelerate cloud and platform engineering capability within a rapidly growing digital banking environment. Strengthened platform delivery and engineering capability.",
+      image: "/images/placeholder/placeholder13.jpg",
       aspectRatio: "aspect-square",
-      link: "/collections/case-studies/coates-group"
+      link: "/collections/case-studies/nab"
     },
     {
       id: 4,
       title: "GoFundraise",
-      description: "Software@Scale delivers a world-class platform to support GoFundraise's global growth.",
+      description: "Support international growth through modern cloud-native engineering capability. Delivered scalable platform capability supporting expansion and product innovation.",
       image: "/images/placeholder/placeholder14.jpg",
       aspectRatio: "aspect-[335/188]",
       link: "/collections/case-studies/gofundraise"
@@ -64,55 +76,62 @@ export default function Home() {
   return (
     <div>
       <Header />
+
+      {/* S1: Hero */}
       <HeroSection />
-      <BlogSection />
-      
-      {/* Logo Section */}
+
+      {/* S2: Trusted By Leading Enterprises */}
       <LogoSection />
-      
-      {/* Expertise Section */}
+
+      {/* S3: Software@Scale At A Glance */}
+      <AtAGlanceSection />
+
+      {/* S4: Boost. Unblock. Safeguard. */}
+      <PeopleFeaturesSection features={BOOST_UNBLOCK_SAFEGUARD} />
+
+      {/* S5: Why Enterprise Clients Choose Software@Scale */}
+      <WhyChooseSection />
+
+      {/* S6: Meet The Leaders Behind Software@Scale */}
       <ImageOverlapSection
-        title="Specialised Engineering and Delivery Expertise"
-        description="At Software at Scale, we are dedicated to driving digital acceleration for enterprises through innovative technology solutions. Our mission is to enhance engineering performance and modernise legacy systems while minimizing risk."
+        title="Meet The Leaders Behind Software@Scale"
+        description="Software@Scale was founded by technology leaders who have spent their careers building, scaling and transforming complex technology platforms across banking, payments, insurance, superannuation and digital businesses. Today, our leadership team combines executive experience with hands-on engineering capability to help clients solve difficult technology challenges and deliver outcomes with confidence."
         underImageSrc="/images/placeholder/placeholder161.jpg"
         overImageSrc="/images/placeholder/placeholder6ontop.jpg"
-        primaryButtonText="Learn More"
-        secondaryButtonText="Contact"
+        primaryButtonText="Meet Our Leadership Team"
+        secondaryButtonText="Contact Us"
       />
-      
-      {/* Awards Section */}
-      <AwardsSection />
-      
-      {/* Elite Talent Section */}
-      <EliteTalentSection />
-      
-      {/* Why Choose Section */}
-      <WhyChooseSection />
-      
-      {/* Transforming Ideas Section */}
-      <TransformingIdeasSection />
-      
-      {/* Proven Approach Section */}
-      <ProvenApproachSection />
-      
-      {/* Portfolio Section */}
+
+      {/* S6: Featured Founders */}
+      <FoundersSection />
+
+      {/* S7: Proven Delivery */}
       <PortfolioSection
-        title={HOME_PORTFOLIO_DATA.title}
-        description={HOME_PORTFOLIO_DATA.description}
-        projects={HOME_PORTFOLIO_DATA.projects}
-        viewAllButtonText={HOME_PORTFOLIO_DATA.viewAllButtonText}
+        title={PROVEN_DELIVERY_DATA.title}
+        description={PROVEN_DELIVERY_DATA.description}
+        projects={PROVEN_DELIVERY_DATA.projects}
+        viewAllButtonText={PROVEN_DELIVERY_DATA.viewAllButtonText}
       />
-      
-      {/* CTA Section */}
+
+      {/* S8: Services Built Around Enterprise Delivery Needs */}
+      <TransformingIdeasSection />
+
+      {/* S9: Partners & Recognition */}
+      <EliteTalentSection />
+      <AwardsSection />
+
+      {/* S10: Insights */}
+      <BlogSection />
+
+      {/* S11: Contact */}
       <CTASection
         imageSrc="/images/placeholder/placeholder16.jpg"
-        title="Get in Touch with Us"
-        description="Reach out today to discover how we can help accelerate your digital transformation journey."
-        primaryButtonText="Contact"
-        secondaryButtonText="Learn More"
+        title="Talk To A Technology Leader"
+        description="Whether you're facing delivery pressure, capability gaps or critical technology decisions, Software@Scale can help."
+        primaryButtonText="Talk To A Technology Leader"
+        secondaryButtonText="View Proven Delivery"
       />
-      
-      {/* Footer */}
+
       <Footer />
     </div>
   );

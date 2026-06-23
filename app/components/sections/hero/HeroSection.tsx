@@ -36,7 +36,7 @@ export default function HeroSection() {
 
             {/* Description */}
             <p className="font-normal text-white text-[16px] md:text-[17px] lg:text-[18px] leading-[1.5]">
-              At Software@Scale, we align technology strategy with your business goals to foster innovation and growth. Our expert team tackles complex challenges, ensuring your projects thrive and deliver exceptional results.
+              Software@Scale helps enterprise organisations boost engineering performance, unblock complex technology challenges and safeguard critical platforms through executive technology leadership, principal engineering expertise and high-performing delivery teams.
             </p>
 
             {/* Award Badges */}
@@ -137,11 +137,11 @@ export default function HeroSection() {
 
           {/* Action Buttons */}
           <div className="flex flex-wrap gap-4">
-            <Button variant="primary" href="/core-values">
-              Learn More
+            <Button variant="primary" href="/contact-us">
+              Talk To A Technology Leader
             </Button>
-            <Button variant="outline" href="/contact-us">
-              Scale Now
+            <Button variant="outline" href="/collections/case-studies">
+              View Proven Delivery
             </Button>
           </div>
         </div>
