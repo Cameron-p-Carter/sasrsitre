@@ -1,0 +1,81 @@
+CLARIFICATION QUESTIONS
+Based on task.txt
+
+---
+
+NAVIGATION
+
+Q1. When the 7 pages are removed from the main navigation, what replaces them?
+The task mentions 4 new service pages (Engineering Teams, Delivery Acceleration, Technology Leadership, Data & AI).
+Is the new nav structure just those 4? What does the full nav look like?
+
+Q2. "Proven Delivery" - the task refers to this as the new name for Case Studies.
+Is the Case Studies page being renamed to "Proven Delivery"? Same URL or new one?
+
+---
+
+HOMEPAGE
+
+Q3. Section 2 - "Move existing client logos here."
+Which logos? All current ones, or a specific subset?
+
+Q4. Section 6 - "Meet The Leaders Behind Software@Scale"
+Is this a new section or an existing one being updated?
+Where does "Meet Our Leadership Team" CTA link to - the renamed Leadership page?
+
+Q5. Section 7 - Proven Delivery cards.
+Two cards are missing numbers:
+- GoFundraise: "X dollars donated" - what is the actual figure?
+- Commonwealth Bank: "X number of Australians" - what is the actual figure?
+NAB card also has no numbers listed - is that intentional?
+
+Q6. Section 9 - "Trusted By Industry Leaders"
+- "Awards & Recognition logos" - same logos as currently shown, or different set?
+- "Technology Ecosystem - Partnerships logos" - which partners should be listed here?
+  This doesn't seem to exist on the site currently - is this new content?
+
+---
+
+NEW SERVICE PAGES
+
+Q7. Are the 4 service pages (Engineering Teams, Delivery Acceleration, Technology Leadership, Data & AI)
+completely new pages, or updates to existing pages?
+What are their URLs?
+  e.g. /services/engineering-teams or /engineering-teams
+
+Q8. Delivery Acceleration - Section 7 has 3 blank examples (Challenge/Outcome/Numbers).
+Which case studies should go here?
+
+Q9. Technology Leadership - Section 5 has 3 blank examples.
+Which case studies should go here?
+
+Q10. Data & AI - Section 5 has 3 blank examples.
+Which case studies should go here?
+
+---
+
+LEADERSHIP PAGE
+
+Q11. "Rewrite Profiles - We need to fix each profile. Too AI generated."
+Are you providing new bios, or should we work with you to rewrite the existing ones?
+Which profiles need to change - all of them, or specific people?
+
+Q12. New section "Executive Technology Leadership" - where does it sit on the page?
+Before or after the founder profiles? Before or after the "Why We Started" section?
+
+---
+
+CONTACT PAGE
+
+Q13. The contact page is being renamed from "Get In Touch" to "Talk To A Technology Leader."
+Is this just the heading, or also the navigation label and page title (browser tab)?
+
+---
+
+GENERAL
+
+Q14. The 4 new service pages have a "Section 6 - Outcomes Delivered" on Engineering Teams
+and similar sections that don't have specific icons or visual treatments specified.
+Should these match the style of existing service pages, or is there a new design approach?
+
+Q15. Is there a priority order for these changes, or should everything be done together?
