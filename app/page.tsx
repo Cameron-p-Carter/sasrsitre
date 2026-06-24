@@ -73,6 +73,10 @@ export default function Home() {
 
       <PartnerStatsSection />
       <BoostUnblockSafeguardSection />
+
+      {/* Proven Approach Section */}
+      <ProvenApproachSection />
+
       <BlogSection />
       
       {/* Expertise Section */}
@@ -96,9 +100,6 @@ export default function Home() {
       
       {/* Transforming Ideas Section */}
       <TransformingIdeasSection />
-      
-      {/* Proven Approach Section */}
-      <ProvenApproachSection />
       
       {/* Portfolio Section */}
       <PortfolioSection

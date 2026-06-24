@@ -1,172 +1,75 @@
 import Image from 'next/image';
-import Button from '@/app/components/shared/Button';
 
 const ProvenApproachSection = () => {
   const approaches = [
     {
-      icon: (
-        <Image
-          src="/images/icons/dynamic_form.svg"
-          alt="Dynamic form icon"
-          width={48}
-          height={48}
-        />
-      ),
-      title: "Agile Development Process",
-      description: "We utilise agile methodologies to enhance flexibility and responsiveness throughout the project lifecycle."
+      icon: "/images/icons/productivity.svg",
+      title: "Executive Technology Leadership",
+      description: "Experienced technology leaders who understand both strategy and delivery, remaining actively involved in outcomes.",
     },
     {
-      icon: (
-        <Image
-          src="/images/icons/bolt.svg"
-          alt="Bolt icon"
-          width={48}
-          height={48}
-        />
-      ),
-      title: "Data-Driven Decisions",
-      description: "We leverage data analytics to inform strategies and optimise outcomes for our clients."
+      icon: "/images/icons/delivery_truck_bolt.svg",
+      title: "Proven Delivery In Regulated Industries",
+      description: "A track record of successful delivery across banking, payments, superannuation, insurance and retail.",
     },
     {
-      icon: (
-        <Image
-          src="/images/icons/diversity_1_light.svg"
-          alt="Diversity icon"
-          width={48}
-          height={48}
-        />
-      ),
-      title: "Collaborative Team Dynamics",
-      description: "Our multi-disciplinary teams collaborate closely to drive innovation and ensure project success."
+      icon: "/images/icons/person_pin.svg",
+      title: "Principal Engineering Expertise",
+      description: "Senior engineers and architects with deep expertise in solving complex, high-stakes technology challenges.",
     },
     {
-      icon: (
-        <Image
-          src="/images/icons/monitoring.svg"
-          alt="Monitoring icon"
-          width={48}
-          height={48}
-        />
-      ),
-      title: "Continuous Improvement",
-      description: "We focus on iterative enhancements to refine processes and deliver superior results."
+      icon: "/images/icons/modeling.svg",
+      title: "Flexible Engagement Models",
+      description: "From individual specialists to managed teams, we adapt to your delivery needs and engagement preferences.",
     }
   ];
 
   return (
-    <section className="bg-[#006cc9] flex flex-col gap-12 md:gap-16 lg:gap-20 items-center px-5 md:px-8 lg:px-16 py-16 md:py-20 lg:py-28 w-full">
-      <div className="flex flex-col gap-12 md:gap-20 items-center max-w-[1280px] w-full">
-        {/* Section Header */}
-        <div className="flex flex-col gap-3 md:gap-4 items-center max-w-[768px] w-full">
-          <div className="flex flex-col gap-5 md:gap-6 items-center text-white text-center w-full">
-            <h2 className="font-bold text-[32px] md:text-[40px] lg:text-[48px] leading-[1.2] tracking-[-0.32px] md:tracking-[-0.4px] lg:tracking-[-0.48px] w-full">
-              Our Proven Approach to Delivering Excellence
-            </h2>
-            <p className="font-normal text-base md:text-[17px] lg:text-[18px] leading-[1.5] w-full">
-              At Software at Scale, we employ a structured methodology that ensures optimal results for our clients. Our approach combines industry best practices with innovative solutions tailored to specific business needs.
-            </p>
-          </div>
+    <section className="bg-[#cce1f4] flex flex-col items-center pb-[112px] pt-[112px] px-[64px] w-full">
+      <div className="flex flex-col gap-[80px] items-center max-w-[1280px] w-full">
+        {/* Section Title */}
+        <div className="flex flex-col items-center max-w-[768px] w-full">
+          <h2 className="font-bold text-[48px] leading-[1.2] text-[#0c2080] text-center tracking-[-0.48px] w-full">
+            Why Enterprise Clients Choose Software@Scale
+          </h2>
         </div>
 
-        {/* Mobile Layout: Vertical Stack */}
-        <div className="flex flex-col gap-12 md:hidden w-full">
-          {/* All Features */}
-          {approaches.map((approach, index) => (
-            <div key={index} className="flex flex-col gap-5 items-center w-full">
-              <div className="w-12 h-12">
-                {approach.icon}
-              </div>
-              <div className="flex flex-col gap-3 items-center text-center w-full">
-                <h3 className="font-bold text-[#5ae0f6] text-[20px] leading-[1.4] tracking-[-0.2px] w-full">
-                  {approach.title}
-                </h3>
-                <p className="font-normal text-white text-base leading-[1.5] w-full">
-                  {approach.description}
-                </p>
-              </div>
-            </div>
-          ))}
-          
-          {/* Mobile Image */}
-          <div className="relative w-full aspect-square rounded-2xl overflow-hidden">
-            <Image
-              src="/images/placeholder/placeholder160.jpg"
-              alt="Our proven approach methodology"
-              fill
-              className="object-cover"
-            />
-          </div>
-        </div>
-
-        {/* Tablet Layout: Two Columns */}
-        <div className="hidden md:flex lg:hidden flex-col gap-12 w-full">
-          {/* Image */}
-          <div className="relative w-full max-w-[400px] aspect-square rounded-2xl overflow-hidden mx-auto">
-            <Image
-              src="/images/placeholder/placeholder160.jpg"
-              alt="Our proven approach methodology"
-              fill
-              className="object-cover"
-            />
-          </div>
-          
-          {/* Features Grid */}
-          <div className="grid grid-cols-2 gap-8 w-full">
-            {approaches.map((approach, index) => (
-              <div key={index} className="flex flex-col gap-4 items-center text-center">
-                <div className="w-12 h-12">
-                  {approach.icon}
-                </div>
-                <div className="flex flex-col gap-3 items-center w-full">
-                  <h3 className="font-bold text-[#5ae0f6] text-[18px] leading-[1.4] tracking-[-0.18px] w-full">
-                    {approach.title}
-                  </h3>
-                  <p className="font-normal text-white text-sm leading-[1.5] w-full">
-                    {approach.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Desktop Layout: Three Columns */}
-        <div className="hidden lg:flex gap-4 xl:gap-12 items-center w-full">
+        {/* Content */}
+        <div className="flex gap-[48px] items-center w-full">
           {/* Left Column */}
-          <div className="flex-1 flex flex-col gap-8 xl:gap-16 items-center min-w-0">
-            {/* Agile Development Process */}
-            <div className="flex flex-col gap-4 xl:gap-6 items-center w-full">
-              <div className="w-12 h-12">
-                {approaches[0].icon}
+          <div className="flex-[1_0_0] flex flex-col gap-[64px] items-center w-full">
+            {/* 1 */}
+            <div className="flex flex-col gap-[24px] items-center w-full">
+              <div className="w-[48px] h-[48px] relative">
+                <Image src={approaches[0].icon} alt={approaches[0].title} fill />
               </div>
-              <div className="flex flex-col gap-3 xl:gap-4 items-center text-center w-full">
-                <h3 className="font-bold text-[#5ae0f6] text-[20px] xl:text-[24px] leading-[1.4] tracking-[-0.2px] xl:tracking-[-0.24px] w-full">
+              <div className="flex flex-col gap-[16px] items-center text-[#00050a] text-center w-full">
+                <h3 className="font-bold text-[24px] leading-[1.4] tracking-[-0.24px] w-full">
                   {approaches[0].title}
                 </h3>
-                <p className="font-normal text-white text-sm xl:text-base leading-[1.5] w-full">
+                <p className="font-normal text-[16px] leading-[1.5] w-full">
                   {approaches[0].description}
                 </p>
               </div>
             </div>
-
-            {/* Collaborative Team Dynamics */}
-            <div className="flex flex-col gap-4 xl:gap-6 items-center w-full">
-              <div className="w-12 h-12">
-                {approaches[2].icon}
+            {/* 2 */}
+            <div className="flex flex-col gap-[24px] items-center w-full">
+              <div className="w-[48px] h-[48px] relative">
+                <Image src={approaches[1].icon} alt={approaches[1].title} fill />
               </div>
-              <div className="flex flex-col gap-3 xl:gap-4 items-center text-center w-full">
-                <h3 className="font-bold text-[#5ae0f6] text-[20px] xl:text-[24px] leading-[1.4] tracking-[-0.2px] xl:tracking-[-0.24px] w-full">
-                  {approaches[2].title}
+              <div className="flex flex-col gap-[16px] items-center text-[#00050a] text-center w-full">
+                <h3 className="font-bold text-[24px] leading-[1.4] tracking-[-0.24px] w-full">
+                  {approaches[1].title}
                 </h3>
-                <p className="font-normal text-white text-sm xl:text-base leading-[1.5] w-full">
-                  {approaches[2].description}
+                <p className="font-normal text-[16px] leading-[1.5] w-full">
+                  {approaches[1].description}
                 </p>
               </div>
             </div>
           </div>
 
           {/* Center Image */}
-          <div className="relative w-[300px] xl:w-[540px] h-[300px] xl:h-[540px] rounded-2xl overflow-hidden flex-shrink-0">
+          <div className="relative rounded-[16px] shrink-0 w-[540px] h-[540px] overflow-hidden">
             <Image
               src="/images/placeholder/placeholder160.jpg"
               alt="Our proven approach methodology"
@@ -176,47 +79,36 @@ const ProvenApproachSection = () => {
           </div>
 
           {/* Right Column */}
-          <div className="flex-1 flex flex-col gap-8 xl:gap-16 items-center min-w-0">
-            {/* Data-Driven Decisions */}
-            <div className="flex flex-col gap-4 xl:gap-6 items-center w-full">
-              <div className="w-12 h-12">
-                {approaches[1].icon}
+          <div className="flex-[1_0_0] flex flex-col gap-[64px] items-center w-full">
+            {/* 3 */}
+            <div className="flex flex-col gap-[24px] items-center w-full">
+              <div className="w-[48px] h-[48px] relative">
+                <Image src={approaches[2].icon} alt={approaches[2].title} fill />
               </div>
-              <div className="flex flex-col gap-3 xl:gap-4 items-center text-center w-full">
-                <h3 className="font-bold text-[#5ae0f6] text-[20px] xl:text-[24px] leading-[1.4] tracking-[-0.2px] xl:tracking-[-0.24px] w-full">
-                  {approaches[1].title}
+              <div className="flex flex-col gap-[16px] items-center text-[#00050a] text-center w-full">
+                <h3 className="font-bold text-[24px] leading-[1.4] tracking-[-0.24px] w-full">
+                  {approaches[2].title}
                 </h3>
-                <p className="font-normal text-white text-sm xl:text-base leading-[1.5] w-full">
-                  {approaches[1].description}
+                <p className="font-normal text-[16px] leading-[1.5] w-full">
+                  {approaches[2].description}
                 </p>
               </div>
             </div>
-
-            {/* Continuous Improvement */}
-            <div className="flex flex-col gap-4 xl:gap-6 items-center w-full">
-              <div className="w-12 h-12">
-                {approaches[3].icon}
+            {/* 4 */}
+            <div className="flex flex-col gap-[24px] items-center w-full">
+              <div className="w-[48px] h-[48px] relative">
+                <Image src={approaches[3].icon} alt={approaches[3].title} fill />
               </div>
-              <div className="flex flex-col gap-3 xl:gap-4 items-center text-center w-full">
-                <h3 className="font-bold text-[#5ae0f6] text-[20px] xl:text-[24px] leading-[1.4] tracking-[-0.2px] xl:tracking-[-0.24px] w-full">
+              <div className="flex flex-col gap-[16px] items-center text-[#00050a] text-center w-full">
+                <h3 className="font-bold text-[24px] leading-[1.4] tracking-[-0.24px] w-full">
                   {approaches[3].title}
                 </h3>
-                <p className="font-normal text-white text-sm xl:text-base leading-[1.5] w-full">
+                <p className="font-normal text-[16px] leading-[1.5] w-full">
                   {approaches[3].description}
                 </p>
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Action Buttons */}
-        <div className="flex gap-4 items-center">
-          <Button variant="primary" href="/our-history">
-            Learn More
-          </Button>
-          <Button variant="outline" href="/contact-us">
-            Scale Now
-          </Button>
         </div>
       </div>
     </section>
