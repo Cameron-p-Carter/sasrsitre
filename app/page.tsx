@@ -17,46 +17,52 @@ import Footer from '@/app/components/layout/Footer';
 interface Project {
   id: number;
   title: string;
+  subtitle: string;
   description: string;
   image: string;
   aspectRatio: string;
+  link?: string;
 }
 
 const HOME_PORTFOLIO_DATA = {
-  title: "Our Project Highlights",
-  description: "Explore our successful projects and innovative solutions.",
+  title: "Proven Delivery",
+  description: "We've helped organisations across banking, payments, superannuation, retail and digital platforms solve complex technology challenges and strengthen engineering capability.",
   viewAllButtonText: "View all",
   projects: [
     {
       id: 1,
-      title: "Team Super",
-      description: "Seamless Data Migration Underpins a Major Superannuation Merger.",
-      image: "/images/placeholder/placeholder11.jpg",
-      aspectRatio: "aspect-[335/188]",
-      link: "/collections/case-studies/team-super"
-    },
-    {
-      id: 2,
-      title: "Mine Super",
-      description: "Preparing a Superannuation Platform for Sale and Future Growth.",
-      image: "/images/placeholder/placeholder13.jpg",
-      aspectRatio: "aspect-[335/188]",
-      link: "/collections/case-studies/mine-super"
-    },
-    {
-      id: 3,
       title: "Coates Group",
-      description: "Engineering Acceleration for Global Market Leadership.",
+      subtitle: "45+ person engineering capability\n30+ countries",
+      description: "Scale engineering capability across a global restaurant technology platform. Built and embedded a 45-person engineering capability supporting platform growth — 30+ countries supported.",
       image: "/images/placeholder/placeholder12.jpg",
       aspectRatio: "aspect-square",
       link: "/collections/case-studies/coates-group"
     },
     {
+      id: 2,
+      title: "Commonwealth Bank of Australia",
+      subtitle: "45+ person engineering capability\n30+ countries",
+      description: "Deliver large-scale digital banking initiatives across highly regulated environments. Supported engineering delivery across critical customer-facing platforms.",
+      image: "/images/case/case19.png",
+      aspectRatio: "aspect-[632/346.5]",
+      link: "/collections/case-studies/cba-netbank"
+    },
+    {
+      id: 3,
+      title: "National Australia Bank",
+      subtitle: "45+ person engineering capability\n30+ countries",
+      description: "Accelerate cloud and platform engineering capability within a rapidly growing digital banking environment. Strengthened platform delivery and engineering capability.",
+      image: "/images/case/case17.jpg",
+      aspectRatio: "aspect-square",
+      link: "/collections/case-studies/nab"
+    },
+    {
       id: 4,
       title: "GoFundraise",
-      description: "Software@Scale delivers a world-class platform to support GoFundraise's global growth.",
+      subtitle: "45+ person engineering capability\n30+ countries",
+      description: "Support international growth through modern cloud-native engineering capability. Delivered scalable platform capability supporting expansion and product innovation.",
       image: "/images/placeholder/placeholder14.jpg",
-      aspectRatio: "aspect-[335/188]",
+      aspectRatio: "aspect-[632/346.5]",
       link: "/collections/case-studies/gofundraise"
     }
   ]
@@ -101,20 +107,6 @@ export default function Home() {
         ]}
       />
       
-      <BlogSection />
-      
-      {/* Awards Section */}
-      <AwardsSection />
-      
-      {/* Elite Talent Section */}
-      <EliteTalentSection />
-      
-      {/* Why Choose Section */}
-      <WhyChooseSection />
-      
-      {/* Transforming Ideas Section */}
-      <TransformingIdeasSection />
-      
       {/* Portfolio Section */}
       <PortfolioSection
         title={HOME_PORTFOLIO_DATA.title}
@@ -122,6 +114,20 @@ export default function Home() {
         projects={HOME_PORTFOLIO_DATA.projects}
         viewAllButtonText={HOME_PORTFOLIO_DATA.viewAllButtonText}
       />
+
+      <BlogSection />
+
+      {/* Awards Section */}
+      <AwardsSection />
+
+      {/* Elite Talent Section */}
+      <EliteTalentSection />
+
+      {/* Why Choose Section */}
+      <WhyChooseSection />
+
+      {/* Transforming Ideas Section */}
+      <TransformingIdeasSection />
       
       {/* CTA Section */}
       <CTASection

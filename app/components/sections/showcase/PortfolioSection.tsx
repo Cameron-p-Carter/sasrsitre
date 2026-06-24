@@ -5,6 +5,7 @@ import Button from '@/app/components/shared/Button';
 interface Project {
   id: number;
   title: string;
+  subtitle: string;
   description: string;
   image: string;
   aspectRatio: string;
@@ -50,14 +51,17 @@ export default function PortfolioSection({
                 />
               </div>
               <div className="flex flex-col gap-5">
-                <div className="flex flex-col gap-2">
-                  <h3 className="text-[20px] font-bold leading-[1.4] text-[#00050a] tracking-[-0.2px] group-hover:text-[#006cc9] transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-base font-normal leading-[1.5] text-[#00050a]">
-                    {project.description}
-                  </p>
-                </div>
+                    <div className="flex flex-col gap-2">
+                      <h3 className="text-[20px] font-bold leading-[1.4] text-[#00050a] tracking-[-0.2px] group-hover:text-[#006cc9] transition-colors">
+                        {project.title}
+                      </h3>
+                      <p className="text-[16px] font-normal leading-[1.4] text-[#006cc9]">
+                        {project.subtitle}
+                      </p>
+                      <p className="text-base font-normal leading-[1.5] text-[#00050a]">
+                        {project.description}
+                      </p>
+                    </div>
                 <div className="flex items-center gap-2 text-[#00050a]">
                   <span className="text-base font-medium leading-[1.5]">
                     View project
@@ -71,14 +75,10 @@ export default function PortfolioSection({
           ))}
         </div>
 
-        {/* Desktop Layout: Two Columns */}
-        <div className="hidden md:flex gap-8 lg:gap-12 items-start justify-center mb-16">
-          {/* Left Column */}
-          <div className="flex flex-col gap-16 flex-1 max-w-[634px]">
-            {/* Project Cards (Left Column) */}
-            {projects.filter((_, i) => i % 2 === 0).map((project) => (
-              <Link key={project.id} href={project.link || "/collections/case-studies"} className="flex flex-col gap-6 group cursor-pointer">
-                <div className={`relative w-full ${project.aspectRatio === 'aspect-square' ? 'aspect-square' : 'aspect-[632/346.5]'} rounded-2xl overflow-hidden`}>
+        <div className="hidden md:grid md:grid-cols-2 gap-8 lg:gap-12 items-start justify-center mb-16">
+            {projects.map((project) => (
+              <Link key={project.id} href={project.link || "/collections/case-studies"} className="flex flex-col gap-6 group cursor-pointer w-full">
+                <div className={`relative w-full h-[340px] rounded-2xl overflow-hidden`}>
                   <Image
                     src={project.image}
                     alt={`${project.title} project`}
@@ -89,9 +89,12 @@ export default function PortfolioSection({
                 <div className="flex flex-col gap-6">
                   <div className="flex flex-col gap-4">
                     <div className="flex flex-col gap-2">
-                      <h3 className="text-[20px] lg:text-[24px] font-bold leading-[1.4] text-[#00050a] tracking-[-0.2px] lg:tracking-[-0.24px] group-hover:text-[#006cc9] transition-colors">
+                      <h3 className="text-[20px] lg:text-[24px] font-bold leading-[1.3] text-[#0c2080] tracking-[-0.2px] lg:tracking-[-0.24px] group-hover:text-[#006cc9] transition-colors">
                         {project.title}
                       </h3>
+                      <p className="text-[18px] lg:text-[24px] font-bold leading-[1.4] text-[#006cc9]">
+                        {project.subtitle}
+                      </p>
                       <p className="text-base font-normal leading-[1.5] text-[#00050a]">
                         {project.description}
                       </p>
@@ -108,44 +111,6 @@ export default function PortfolioSection({
                 </div>
               </Link>
             ))}
-          </div>
-
-          {/* Right Column */}
-          <div className="flex flex-col gap-16 flex-1">
-            {/* Project Cards (Right Column) */}
-            {projects.filter((_, i) => i % 2 !== 0).map((project) => (
-              <Link key={project.id} href={project.link || "/collections/case-studies"} className="flex flex-col gap-6 group cursor-pointer">
-                <div className={`relative w-full ${project.aspectRatio === 'aspect-square' ? 'aspect-square' : 'aspect-[632/346.5]'} rounded-2xl overflow-hidden`}>
-                  <Image
-                    src={project.image}
-                    alt={`${project.title} project`}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="flex flex-col gap-6">
-                  <div className="flex flex-col gap-4">
-                    <div className="flex flex-col gap-2">
-                      <h3 className="text-[20px] lg:text-[24px] font-bold leading-[1.4] text-[#00050a] tracking-[-0.2px] lg:tracking-[-0.24px] group-hover:text-[#006cc9] transition-colors">
-                        {project.title}
-                      </h3>
-                      <p className="text-base font-normal leading-[1.5] text-[#00050a]">
-                        {project.description}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-base font-medium leading-[1.5] text-[#00050a]">
-                      View project
-                    </span>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
         </div>
       </div>
     </section>
