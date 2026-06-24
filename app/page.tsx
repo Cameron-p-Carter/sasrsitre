@@ -3,8 +3,8 @@ import HeroSection from '@/app/components/sections/hero/HeroSection';
 import PartnerStatsSection from '@/app/components/sections/showcase/PartnerStatsSection';
 import BoostUnblockSafeguardSection from '@/app/components/sections/showcase/BoostUnblockSafeguardSection';
 import BlogSection from '@/app/components/sections/showcase/BlogSection';
+import LeadershipSection from '@/app/components/sections/content/LeadershipSection';
 import LogoSection from '@/app/components/sections/showcase/LogoSection';
-import ImageOverlapSection from '@/app/components/sections/content/ImageOverlapSection';
 import AwardsSection from '@/app/components/sections/stats/AwardsSection';
 import EliteTalentSection from '@/app/components/sections/info/EliteTalentSection';
 import WhyChooseSection from '@/app/components/sections/info/WhyChooseSection';
@@ -77,17 +77,31 @@ export default function Home() {
       {/* Proven Approach Section */}
       <ProvenApproachSection />
 
-      <BlogSection />
-      
-      {/* Expertise Section */}
-      <ImageOverlapSection
-        title="Specialised Engineering and Delivery Expertise"
-        description="At Software at Scale, we are dedicated to driving digital acceleration for enterprises through innovative technology solutions. Our mission is to enhance engineering performance and modernise legacy systems while minimizing risk."
+      <LeadershipSection
+        title="Meet The Leaders Behind Software@Scale"
+        description="Software@Scale was founded by technology leaders who have spent their careers building, scaling and transforming complex technology platforms across banking, payments, insurance, superannuation and digital businesses. Today, our leadership team combines executive experience with hands-on engineering capability to help clients solve difficult technology challenges and deliver outcomes with confidence."
+        buttonText="Meet Our Leadership Team"
+        buttonLink="/people"
         underImageSrc="/images/placeholder/placeholder161.jpg"
         overImageSrc="/images/placeholder/placeholder6ontop.jpg"
-        primaryButtonText="Learn More"
-        secondaryButtonText="Contact"
+        founders={[
+          {
+            name: "Louis Droguett",
+            role: "Chief Executive Officer",
+            imageSrc: "/images/people/louis.jpg",
+            description: "After leading large engineering organisations inside Commonwealth Bank, Louis founded Software@Scale with a simple belief: organisations achieve better outcomes when experienced technology leaders remain accountable for delivery."
+          },
+          {
+            name: "Patricia Droguett",
+            role: "Chief Operating Officer",
+            imageSrc: "/images/people/patricia.jpg",
+            objectPosition: "center 30%",
+            description: "Patricia has spent her career delivering large-scale technology transformation programs across financial services and highly regulated environments."
+          }
+        ]}
       />
+      
+      <BlogSection />
       
       {/* Awards Section */}
       <AwardsSection />
