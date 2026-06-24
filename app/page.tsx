@@ -1,6 +1,7 @@
 import Header from '@/app/components/layout/Header';
 import HeroSection from '@/app/components/sections/hero/HeroSection';
 import PartnerStatsSection from '@/app/components/sections/showcase/PartnerStatsSection';
+import BoostUnblockSafeguardSection from '@/app/components/sections/showcase/BoostUnblockSafeguardSection';
 import BlogSection from '@/app/components/sections/showcase/BlogSection';
 import LogoSection from '@/app/components/sections/showcase/LogoSection';
 import ImageOverlapSection from '@/app/components/sections/content/ImageOverlapSection';
@@ -71,6 +72,7 @@ export default function Home() {
       <LogoSection />
 
       <PartnerStatsSection />
+      <BoostUnblockSafeguardSection />
       <BlogSection />
       
       {/* Expertise Section */}
