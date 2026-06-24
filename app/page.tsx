@@ -1,5 +1,6 @@
 import Header from '@/app/components/layout/Header';
 import HeroSection from '@/app/components/sections/hero/HeroSection';
+import PartnerStatsSection from '@/app/components/sections/showcase/PartnerStatsSection';
 import BlogSection from '@/app/components/sections/showcase/BlogSection';
 import LogoSection from '@/app/components/sections/showcase/LogoSection';
 import ImageOverlapSection from '@/app/components/sections/content/ImageOverlapSection';
@@ -65,10 +66,12 @@ export default function Home() {
     <div>
       <Header />
       <HeroSection />
-      <BlogSection />
-      
+
       {/* Logo Section */}
       <LogoSection />
+
+      <PartnerStatsSection />
+      <BlogSection />
       
       {/* Expertise Section */}
       <ImageOverlapSection
