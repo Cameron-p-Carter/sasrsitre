@@ -22,6 +22,7 @@ interface Project {
   image: string;
   aspectRatio: string;
   link?: string;
+  objectPosition?: string;
 }
 
 const HOME_PORTFOLIO_DATA = {
@@ -36,6 +37,7 @@ const HOME_PORTFOLIO_DATA = {
       description: "Scale engineering capability across a global restaurant technology platform. Built and embedded a 45-person engineering capability supporting platform growth — 30+ countries supported.",
       image: "/images/placeholder/placeholder12.jpg",
       aspectRatio: "aspect-square",
+      objectPosition: "top",
       link: "/collections/case-studies/coates-group"
     },
     {
@@ -45,6 +47,7 @@ const HOME_PORTFOLIO_DATA = {
       description: "Deliver large-scale digital banking initiatives across highly regulated environments. Supported engineering delivery across critical customer-facing platforms.",
       image: "/images/case/case19.png",
       aspectRatio: "aspect-[632/346.5]",
+      objectPosition: "right",
       link: "/collections/case-studies/cba-netbank"
     },
     {

@@ -10,6 +10,7 @@ interface Project {
   image: string;
   aspectRatio: string;
   link?: string;
+  objectPosition?: string;
 }
 
 interface PortfolioSectionProps {
@@ -48,6 +49,7 @@ export default function PortfolioSection({
                   alt={`${project.title} project`}
                   fill
                   className="object-cover"
+                  style={{ objectPosition: project.objectPosition ?? 'center' }}
                 />
               </div>
               <div className="flex flex-col gap-5">
@@ -84,6 +86,7 @@ export default function PortfolioSection({
                     alt={`${project.title} project`}
                     fill
                     className="object-cover"
+                    style={{ objectPosition: project.objectPosition ?? 'center' }}
                   />
                 </div>
                 <div className="flex flex-col gap-6">
