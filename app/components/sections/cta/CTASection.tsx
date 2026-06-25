@@ -13,7 +13,7 @@ interface CTASectionProps {
   primaryButtonUrl?: string;
 }
 
-const ease = [0.25, 0.46, 0.45, 0.94] as const;
+const ease: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
 
 export default function CTASection({
   imageSrc,

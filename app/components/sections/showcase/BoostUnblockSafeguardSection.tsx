@@ -22,6 +22,8 @@ const features = [
   },
 ];
 
+const ease: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
+
 const containerVariants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.18 } },
@@ -32,7 +34,7 @@ const cardVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.75, ease: [0.25, 0.46, 0.45, 0.94] },
+    transition: { duration: 0.75, ease },
   },
 };
 

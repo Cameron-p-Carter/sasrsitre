@@ -4,6 +4,8 @@ import { useEffect, useRef } from 'react';
 import { motion, useInView, useMotionValue, useTransform, animate } from 'framer-motion';
 import Image from 'next/image';
 
+const ease: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
+
 const containerVariants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.12 } },
@@ -14,7 +16,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.65, ease: [0.25, 0.46, 0.45, 0.94] },
+    transition: { duration: 0.65, ease },
   },
 };
 

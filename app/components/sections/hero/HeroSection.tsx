@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Button from '@/app/components/shared/Button';
 
-const ease = [0.25, 0.46, 0.45, 0.94] as const;
+const ease: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
 
 const desktopBadges = [
   { src: "/images/awards/Awards Badges_S@S_ATLASSIAN TECH LEADERSHIP FINALIST 2025.png", alt: "Atlassian Tech Leadership Finalist 2025" },
