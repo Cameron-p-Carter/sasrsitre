@@ -8,8 +8,6 @@ import LogoSection from '@/app/components/sections/showcase/LogoSection';
 import AwardsSection from '@/app/components/sections/stats/AwardsSection';
 import AwardBadgesSection from '@/app/components/sections/stats/AwardBadgesSection';
 import EliteTalentSection from '@/app/components/sections/info/EliteTalentSection';
-import WhyChooseSection from '@/app/components/sections/info/WhyChooseSection';
-import TransformingIdeasSection from '@/app/components/sections/info/TransformingIdeasSection';
 import ProvenApproachSection from '@/app/components/sections/info/ProvenApproachSection';
 import EnterpriseDeliverySection from '@/app/components/sections/info/EnterpriseDeliverySection';
 import PortfolioSection from '@/app/components/sections/showcase/PortfolioSection';
@@ -132,12 +130,6 @@ export default function Home() {
 
       <BlogSection />
 
-      {/* Why Choose Section */}
-      <WhyChooseSection />
-
-      {/* Transforming Ideas Section */}
-      <TransformingIdeasSection />
-      
       {/* CTA Section */}
       <CTASection
         imageSrc="/images/placeholder/placeholder16.jpg"
