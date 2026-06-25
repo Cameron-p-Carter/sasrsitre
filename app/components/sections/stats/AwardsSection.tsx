@@ -11,7 +11,7 @@ const AwardsSection = () => {
   ];
 
   return (
-    <section className="bg-[#006cc9] flex flex-col gap-12 md:gap-16 lg:gap-20 items-center px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-10 w-full">
+    <section className="bg-[#006cc9] flex flex-col gap-12 md:gap-16 lg:gap-20 items-center px-5 md:px-8 lg:px-16 pt-8 pb-12 md:pb-16 lg:pb-20 w-full">
       <div className="flex flex-col gap-12 md:gap-16 lg:gap-20 max-w-[1280px] w-full">
         {/* Mobile & Tablet: Text above awards */}
         <div className="lg:hidden flex flex-col gap-8 w-full">

@@ -127,10 +127,10 @@ export default function Home() {
       
       <AwardBadgesSection />
 
-      <BlogSection />
-
       {/* Awards Section */}
       <AwardsSection />
+
+      <BlogSection />
 
       {/* Why Choose Section */}
       <WhyChooseSection />

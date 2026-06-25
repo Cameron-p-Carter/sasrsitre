@@ -25,7 +25,7 @@ const awards = [
 
 const AwardBadgesSection = () => {
   return (
-    <section className="bg-[#006cc9] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-20 w-full">
+    <section className="bg-[#006cc9] px-5 md:px-8 lg:px-16 pt-12 md:pt-16 lg:pt-20 pb-0 w-full">
       <div className="max-w-[1280px] mx-auto w-full flex flex-col lg:flex-row gap-8 lg:gap-16 items-start border-b border-white/20 pb-16">
         <h2 className="text-[32px] md:text-[40px] font-bold text-[#14d3f3] leading-[1.2] lg:w-[500px]">
           Trusted by industry leaders
