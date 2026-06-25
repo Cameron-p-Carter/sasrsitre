@@ -6,10 +6,12 @@ import BlogSection from '@/app/components/sections/showcase/BlogSection';
 import LeadershipSection from '@/app/components/sections/content/LeadershipSection';
 import LogoSection from '@/app/components/sections/showcase/LogoSection';
 import AwardsSection from '@/app/components/sections/stats/AwardsSection';
+import AwardBadgesSection from '@/app/components/sections/stats/AwardBadgesSection';
 import EliteTalentSection from '@/app/components/sections/info/EliteTalentSection';
 import WhyChooseSection from '@/app/components/sections/info/WhyChooseSection';
 import TransformingIdeasSection from '@/app/components/sections/info/TransformingIdeasSection';
 import ProvenApproachSection from '@/app/components/sections/info/ProvenApproachSection';
+import EnterpriseDeliverySection from '@/app/components/sections/info/EnterpriseDeliverySection';
 import PortfolioSection from '@/app/components/sections/showcase/PortfolioSection';
 import CTASection from '@/app/components/sections/cta/CTASection';
 import Footer from '@/app/components/layout/Footer';
@@ -118,13 +120,17 @@ export default function Home() {
         viewAllButtonText={HOME_PORTFOLIO_DATA.viewAllButtonText}
       />
 
+      <EnterpriseDeliverySection />
+
+      {/* Elite Talent Section */}
+      <EliteTalentSection />
+      
+      <AwardBadgesSection />
+
       <BlogSection />
 
       {/* Awards Section */}
       <AwardsSection />
-
-      {/* Elite Talent Section */}
-      <EliteTalentSection />
 
       {/* Why Choose Section */}
       <WhyChooseSection />
