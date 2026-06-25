@@ -1,6 +1,19 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import Button from '@/app/components/shared/Button';
+
+const ease = [0.25, 0.46, 0.45, 0.94] as const;
+
+const desktopBadges = [
+  { src: "/images/awards/Awards Badges_S@S_ATLASSIAN TECH LEADERSHIP FINALIST 2025.png", alt: "Atlassian Tech Leadership Finalist 2025" },
+  { src: "/images/awards/Awards-Badges_S@S_CUB-AWARDS-WINNER-2025.png", alt: "CUB Awards Winner 2025" },
+  { src: "/images/awards/Awards Badges_S@S_DELOITTE TECHNOLOGY FAST 50 AUSTRALIA RISING STAR WINNER 2024.png", alt: "Deloitte Technology Fast 50 Australia Rising Star Winner 2024" },
+  { src: "/images/awards/Awards Badges_S@S_DELOITTE TECHNOLOGY FAST 50 AUSTRALIA RISING STAR WINNER 2024 3.png", alt: "Deloitte Technology Fast 50 Australia Rising Star Winner 2024 (2)" },
+  { src: "/images/awards/Awards Badges_S@S_CEO MAGAZINE EXECUTIVE OF THE YEAR AWARDS FINALIST 2025_Blue.png", alt: "CEO Magazine Executive of the Year Awards Finalist 2025" },
+];
 
 export default function HeroSection() {
   return (
@@ -18,132 +31,120 @@ export default function HeroSection() {
       </video>
 
       {/* Blue overlay */}
-      <div className="absolute inset-0 bg-[rgba(12,32,128,0.6)]" aria-hidden="true"></div>
+      <motion.div
+        className="absolute inset-0 bg-[rgba(12,32,128,0.6)]"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.2 }}
+        aria-hidden="true"
+      />
 
       {/* Content Container */}
       <div className="relative z-10 w-full max-w-[1280px] mx-auto py-4 md:py-6 lg:py-12">
         <div className="flex flex-col gap-8 md:gap-10 lg:gap-12 max-w-[560px]">
           {/* Main Content */}
           <div className="flex flex-col gap-5 md:gap-6">
-            {/* Main Heading */}
+            {/* Main Heading — each line slides up */}
             <h1 className="font-bold text-white text-[40px] md:text-[48px] lg:text-[56px] leading-[1.2] tracking-[-0.4px] md:tracking-[-0.48px] lg:tracking-[-0.56px]">
-              <span>Solve the problem.</span>
-              <br />
-              <span>Write the code.</span>
-              <br />
-              <span className="text-[#5ae0f6]">Scale the solution.</span>
+              <motion.span
+                className="block"
+                initial={{ opacity: 0, y: 48 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.9, delay: 0.1, ease }}
+              >
+                Solve the problem.
+              </motion.span>
+              <motion.span
+                className="block"
+                initial={{ opacity: 0, y: 48 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.9, delay: 0.26, ease }}
+              >
+                Write the code.
+              </motion.span>
+              <motion.span
+                className="block text-[#5ae0f6]"
+                initial={{ opacity: 0, y: 48 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.9, delay: 0.42, ease }}
+              >
+                Scale the solution.
+              </motion.span>
             </h1>
 
             {/* Description */}
-            <p className="font-normal text-white text-[16px] md:text-[17px] lg:text-[18px] leading-[1.5]">
+            <motion.p
+              className="font-normal text-white text-[16px] md:text-[17px] lg:text-[18px] leading-[1.5]"
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.75, delay: 0.68, ease }}
+            >
               At Software@Scale, we align technology strategy with your business goals to foster innovation and growth. Our expert team tackles complex challenges, ensuring your projects thrive and deliver exceptional results.
-            </p>
+            </motion.p>
 
             {/* Award Badges */}
             <div className="mt-2 md:mt-4">
               {/* Mobile: 3 + 2 Grid */}
-              <div className="flex flex-col gap-4 md:hidden">
+              <motion.div
+                className="flex flex-col gap-4 md:hidden"
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.88, ease }}
+              >
                 <div className="flex gap-4">
                   <Link href="/recognition" className="relative w-[100px] h-[100px] flex-shrink-0 hover:opacity-80 transition-opacity">
-                    <Image
-                      src="/images/awards/Awards Badges_S@S_ATLASSIAN TECH LEADERSHIP FINALIST 2025.png"
-                      alt="Atlassian Tech Leadership Finalist 2025"
-                      fill
-                      className="object-contain"
-                    />
+                    <Image src="/images/awards/Awards Badges_S@S_ATLASSIAN TECH LEADERSHIP FINALIST 2025.png" alt="Atlassian Tech Leadership Finalist 2025" fill className="object-contain" />
                   </Link>
                   <Link href="/recognition" className="relative w-[100px] h-[100px] flex-shrink-0 hover:opacity-80 transition-opacity">
-                    <Image
-                      src="/images/awards/Awards-Badges_S@S_CUB-AWARDS-WINNER-2025.png"
-                      alt="CUB Awards Winner 2025"
-                      fill
-                      className="object-contain"
-                    />
+                    <Image src="/images/awards/Awards-Badges_S@S_CUB-AWARDS-WINNER-2025.png" alt="CUB Awards Winner 2025" fill className="object-contain" />
                   </Link>
                   <Link href="/recognition" className="relative w-[100px] h-[100px] flex-shrink-0 hover:opacity-80 transition-opacity">
-                    <Image
-                      src="/images/awards/Awards Badges_S@S_DELOITTE TECHNOLOGY FAST 50 AUSTRALIA RISING STAR WINNER 2024.png"
-                      alt="Deloitte Technology Fast 50 Australia Rising Star Winner 2024"
-                      fill
-                      className="object-contain"
-                    />
+                    <Image src="/images/awards/Awards Badges_S@S_DELOITTE TECHNOLOGY FAST 50 AUSTRALIA RISING STAR WINNER 2024.png" alt="Deloitte Technology Fast 50 Australia Rising Star Winner 2024" fill className="object-contain" />
                   </Link>
                 </div>
                 <div className="flex gap-4">
                   <Link href="/recognition" className="relative w-[100px] h-[100px] flex-shrink-0 hover:opacity-80 transition-opacity">
-                    <Image
-                      src="/images/awards/Awards Badges_S@S_DELOITTE TECHNOLOGY FAST 50 AUSTRALIA RISING STAR WINNER 2024 3.png"
-                      alt="Deloitte Technology Fast 50 Australia Rising Star Winner 2024 (2)"
-                      fill
-                      className="object-contain"
-                    />
+                    <Image src="/images/awards/Awards Badges_S@S_DELOITTE TECHNOLOGY FAST 50 AUSTRALIA RISING STAR WINNER 2024 3.png" alt="Deloitte Technology Fast 50 Australia Rising Star Winner 2024 (2)" fill className="object-contain" />
                   </Link>
                   <Link href="/recognition" className="relative w-[100px] h-[100px] flex-shrink-0 hover:opacity-80 transition-opacity">
-                    <Image
-                      src="/images/awards/Awards Badges_S@S_CEO MAGAZINE EXECUTIVE OF THE YEAR AWARDS FINALIST 2025_Blue.png"
-                      alt="CEO Magazine Executive of the Year Awards Finalist 2025"
-                      fill
-                      className="object-contain"
-                    />
+                    <Image src="/images/awards/Awards Badges_S@S_CEO MAGAZINE EXECUTIVE OF THE YEAR AWARDS FINALIST 2025_Blue.png" alt="CEO Magazine Executive of the Year Awards Finalist 2025" fill className="object-contain" />
                   </Link>
                 </div>
-              </div>
+              </motion.div>
 
-              {/* Tablet & Desktop: Horizontal Layout */}
+              {/* Tablet & Desktop: Staggered badge pop-in */}
               <div className="hidden md:flex gap-6 lg:gap-[33px]">
-                <Link href="/recognition" className="relative w-[100px] h-[100px] flex-shrink-0 hover:opacity-80 transition-opacity">
-                  <Image
-                    src="/images/awards/Awards Badges_S@S_ATLASSIAN TECH LEADERSHIP FINALIST 2025.png"
-                    alt="Atlassian Tech Leadership Finalist 2025"
-                    fill
-                    className="object-contain"
-                  />
-                </Link>
-                <Link href="/recognition" className="relative w-[100px] h-[100px] flex-shrink-0 hover:opacity-80 transition-opacity">
-                  <Image
-                    src="/images/awards/Awards-Badges_S@S_CUB-AWARDS-WINNER-2025.png"
-                    alt="CUB Awards Winner 2025"
-                    fill
-                    className="object-contain"
-                  />
-                </Link>
-                <Link href="/recognition" className="relative w-[100px] h-[100px] flex-shrink-0 hover:opacity-80 transition-opacity">
-                  <Image
-                    src="/images/awards/Awards Badges_S@S_DELOITTE TECHNOLOGY FAST 50 AUSTRALIA RISING STAR WINNER 2024.png"
-                    alt="Deloitte Technology Fast 50 Australia Rising Star Winner 2024"
-                    fill
-                    className="object-contain"
-                  />
-                </Link>
-                <Link href="/recognition" className="relative w-[100px] h-[100px] flex-shrink-0 hover:opacity-80 transition-opacity">
-                  <Image
-                    src="/images/awards/Awards Badges_S@S_DELOITTE TECHNOLOGY FAST 50 AUSTRALIA RISING STAR WINNER 2024 3.png"
-                    alt="Deloitte Technology Fast 50 Australia Rising Star Winner 2024 (2)"
-                    fill
-                    className="object-contain"
-                  />
-                </Link>
-                <Link href="/recognition" className="relative w-[100px] h-[100px] flex-shrink-0 hover:opacity-80 transition-opacity">
-                  <Image
-                    src="/images/awards/Awards Badges_S@S_CEO MAGAZINE EXECUTIVE OF THE YEAR AWARDS FINALIST 2025_Blue.png"
-                    alt="CEO Magazine Executive of the Year Awards Finalist 2025"
-                    fill
-                    className="object-contain"
-                  />
-                </Link>
+                {desktopBadges.map((badge, i) => (
+                  <motion.div
+                    key={badge.alt}
+                    initial={{ opacity: 0, scale: 0.7, y: 10 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    transition={{ duration: 0.45, delay: 0.88 + i * 0.09, ease: 'backOut' }}
+                    whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+                  >
+                    <Link href="/recognition" className="relative w-[100px] h-[100px] flex-shrink-0 block">
+                      <Image src={badge.src} alt={badge.alt} fill className="object-contain" />
+                    </Link>
+                  </motion.div>
+                ))}
               </div>
             </div>
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-wrap gap-4">
+          <motion.div
+            className="flex flex-wrap gap-4"
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.65, delay: 1.2, ease }}
+          >
             <Button variant="primary" href="/core-values">
               Learn More
             </Button>
             <Button variant="outline" href="/contact-us">
               Scale Now
             </Button>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
