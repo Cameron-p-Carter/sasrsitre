@@ -7,7 +7,7 @@ import Link from 'next/link';
 interface Project {
   id: number;
   title: string;
-  subtitle: string;
+  subtitle?: string;
   description: string;
   image: string;
   aspectRatio: string;
@@ -94,9 +94,11 @@ export default function PortfolioSection({
                     <h3 className="text-[20px] font-bold leading-[1.4] text-[#00050a] tracking-[-0.2px] group-hover:text-[#006cc9] transition-colors">
                       {project.title}
                     </h3>
-                    <p className="text-[16px] font-normal leading-[1.4] text-[#006cc9]">
-                      {project.subtitle}
-                    </p>
+                    {project.subtitle && (
+                      <p className="text-[16px] font-normal leading-[1.4] text-[#006cc9]">
+                        {project.subtitle}
+                      </p>
+                    )}
                     <p className="text-base font-normal leading-[1.5] text-[#00050a]">
                       {project.description}
                     </p>
@@ -147,9 +149,11 @@ export default function PortfolioSection({
                       <h3 className="text-[20px] lg:text-[24px] font-bold leading-[1.3] text-[#0c2080] tracking-[-0.2px] lg:tracking-[-0.24px] group-hover:text-[#006cc9] transition-colors">
                         {project.title}
                       </h3>
-                      <p className="text-[18px] lg:text-[24px] font-bold leading-[1.4] text-[#006cc9]">
-                        {project.subtitle}
-                      </p>
+                      {project.subtitle && (
+                        <p className="text-[18px] lg:text-[24px] font-bold leading-[1.4] text-[#006cc9]">
+                          {project.subtitle}
+                        </p>
+                      )}
                       <p className="text-base font-normal leading-[1.5] text-[#00050a]">
                         {project.description}
                       </p>
