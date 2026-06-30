@@ -12,6 +12,7 @@ import BlogSection from '@/app/components/sections/showcase/BlogSection';
 import CTASection from '@/app/components/sections/cta/CTASection';
 import ServiceFeaturesSection from '@/app/components/ServiceFeaturesSection';
 import PortfolioSection from '@/app/components/sections/showcase/PortfolioSection';
+import { CoreCompetenciesInfo } from '@/app/components/sections/info/CoreCompetenciesSection';
 
 interface HeroButton {
   text: string;
@@ -130,6 +131,7 @@ interface ServicePageData {
   showServiceFeatures?: boolean;
   serviceFeatures1?: { title: string; description: string }[];
   serviceFeatures?: { title: string; description: string }[];
+  coreCompetenciesInfo?: { title: string; paragraphs: string[]; imageSrc: string; imageOnRight?: boolean };
   imageTextContent2?: ImageTextContentSectionData;
   repeatCenteredSection?: boolean;
   imageTextContent3?: ImageTextContentSectionData;
@@ -175,6 +177,14 @@ const ServicePageLayout2 = ({ data }: ServicePageLayout2Props) => {
             titleColor={data.imageTextContent.titleColor}
             imageOnRight={data.imageTextContent.imageOnRight}
             outcomeItems={data.imageTextContent.outcomeItems}
+          />
+        )}
+        {data.coreCompetenciesInfo && (
+          <CoreCompetenciesInfo
+            title={data.coreCompetenciesInfo.title}
+            paragraphs={data.coreCompetenciesInfo.paragraphs}
+            imageSrc={data.coreCompetenciesInfo.imageSrc}
+            imageOnRight={data.coreCompetenciesInfo.imageOnRight}
           />
         )}
         {data.centeredContent && (
