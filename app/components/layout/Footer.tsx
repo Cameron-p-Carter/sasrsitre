@@ -86,31 +86,16 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* 4. Service Products Column */}
+            {/* 4. Services Column */}
             <div className="flex flex-col gap-4">
               <h3 className="text-white text-base font-semibold leading-[1.5]">
-                Service Products
+                Services
               </h3>
               <div className="flex flex-col">
-                <FooterLink href="/services/cloud-engineering">Cloud Engineering</FooterLink>
-                <FooterLink href="/services/security-architecture">Security Architecture</FooterLink>
-                <FooterLink href="/services/project-acceleration">Project Acceleration</FooterLink>
-                <FooterLink href="/services/platform-due-diligence" className="whitespace-nowrap">Platform Due Diligence</FooterLink>
-                <FooterLink href="/services/engineering-performance" className="whitespace-nowrap">Engineering Performance</FooterLink>
-                <FooterLink href="/services/data-ai-engineering">Data & AI Engineering</FooterLink>
-              </div>
-            </div>
-
-            {/* 5. General Services Column */}
-            <div className="flex flex-col gap-4">
-              <h3 className="text-white text-base font-semibold leading-[1.5]">
-                General Services
-              </h3>
-              <div className="flex flex-col">
-                <FooterLink href="/services/engineering-as-a-service">EAAS</FooterLink>
-                <FooterLink href="/services/technology-advisory">
-                  Technology Advisory /<br />Fractional Services
-                </FooterLink>
+                <FooterLink href="/services/engineering-teams">Engineering Teams</FooterLink>
+                <FooterLink href="/services/technology-leadership">Technology Leadership</FooterLink>
+                <FooterLink href="/services/data-and-ai">Data and AI</FooterLink>
+                <FooterLink href="/services/delivery-acceleration">Delivery Acceleration</FooterLink>
               </div>
             </div>
 
