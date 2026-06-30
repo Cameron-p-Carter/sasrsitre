@@ -19,9 +19,9 @@ export default function PeoplePage() {
         <HeroHeaderSection
           imageSrc="/images/placeholder/placeholder18.jpg"
           tagline="Expertise"
-          title="Meet Our"
-          titleHighlight="Experts"
-          description="At Software at Scale, our team comprises seasoned professionals with extensive backgrounds in technology consultancy. We are committed to providing cutting-edge solutions that empower our clients to thrive in a digital-first world."
+          title="Leadership Built In The Organisations"
+          titleHighlight="You Trust"
+          description="Software@Scale was founded by technology leaders who have spent their careers building, scaling and transforming complex technology platforms across banking, payments, insurance, superannuation and digital businesses.&#10;&#10;Today, our leadership team combines executive experience with hands-on engineering capability to help clients solve difficult technology challenges and deliver outcomes with confidence."
           overlayOpacity={0.5}
           objectPosition="center"
         />
