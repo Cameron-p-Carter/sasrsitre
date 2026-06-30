@@ -7,10 +7,10 @@ import Link from 'next/link';
 interface Project {
   id: number;
   title: string;
-  subtitle?: string;
-  description: string;
+  challenge: string;
+  outcome: string;
+  numbers: string;
   image: string;
-  aspectRatio: string;
   link?: string;
   objectPosition?: string;
 }
@@ -74,7 +74,7 @@ export default function PortfolioSection({
           {projects.map((project) => (
             <motion.div key={project.id} variants={cardVariants}>
               <Link href={project.link || "/collections/case-studies"} className="flex flex-col gap-5 group cursor-pointer">
-                <div className={`relative w-full ${project.aspectRatio} rounded-2xl overflow-hidden`}>
+                <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
                   <motion.div
                     className="absolute inset-0"
                     whileHover={{ scale: 1.05 }}
@@ -91,21 +91,39 @@ export default function PortfolioSection({
                 </div>
                 <div className="flex flex-col gap-5">
                   <div className="flex flex-col gap-2">
-                    <h3 className="text-[20px] font-bold leading-[1.4] text-[#00050a] tracking-[-0.2px] group-hover:text-[#006cc9] transition-colors">
+                    <h3 className="text-[24px] md:text-[32px] font-bold leading-[1.3] text-[#006cc9] tracking-[-0.32px] group-hover:text-[#006cc9] transition-colors">
                       {project.title}
                     </h3>
-                    {project.subtitle && (
-                      <p className="text-[16px] font-normal leading-[1.4] text-[#006cc9]">
-                        {project.subtitle}
-                      </p>
-                    )}
-                    <p className="text-base font-normal leading-[1.5] text-[#00050a]">
-                      {project.description}
-                    </p>
+                    <div className="flex flex-col border-t border-[#00050a]/15 pt-5 mt-2">
+                      <div className="flex items-center gap-4 border-b border-[#00050a]/15 py-5">
+                        <p className="text-[16px] md:text-[18px] font-bold text-[#00050a] w-[120px] shrink-0">
+                          Challenge:
+                        </p>
+                        <p className="text-[16px] md:text-[18px] font-normal text-[#00050a] flex-1">
+                          {project.challenge}
+                        </p>
+                      </div>
+                      <div className="flex items-center gap-4 border-b border-[#00050a]/15 py-5">
+                        <p className="text-[16px] md:text-[18px] font-bold text-[#00050a] w-[120px] shrink-0">
+                          Outcome:
+                        </p>
+                        <p className="text-[16px] md:text-[18px] font-normal text-[#00050a] flex-1">
+                          {project.outcome}
+                        </p>
+                      </div>
+                      <div className="flex items-center gap-4 border-b border-[#00050a]/15 py-5">
+                        <p className="text-[16px] md:text-[18px] font-bold text-[#00050a] w-[120px] shrink-0">
+                          Numbers:
+                        </p>
+                        <p className="text-[16px] md:text-[18px] font-normal text-[#00050a] flex-1">
+                          {project.numbers}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2 text-[#00050a]">
+                  <div className="flex items-center gap-2 text-[#00050a] mt-4">
                     <span className="text-base font-medium leading-[1.5]">
-                      View project
+                      View Proven Delivery
                     </span>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                       <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -117,61 +135,100 @@ export default function PortfolioSection({
           ))}
         </motion.div>
 
-        {/* Desktop Grid */}
-        <motion.div
-          className="hidden md:grid md:grid-cols-2 gap-8 lg:gap-12 items-start justify-center mb-16"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-10% 0px' }}
-        >
-          {projects.map((project) => (
-            <motion.div key={project.id} variants={cardVariants}>
-              <Link href={project.link || "/collections/case-studies"} className="flex flex-col gap-6 group cursor-pointer w-full">
-                <div className="relative w-full h-[340px] rounded-2xl overflow-hidden">
-                  <motion.div
-                    className="absolute inset-0"
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.5, ease }}
-                  >
-                    <Image
-                      src={project.image}
-                      alt={`${project.title} project`}
-                      fill
-                      className="object-cover"
-                      style={{ objectPosition: project.objectPosition ?? 'center' }}
-                    />
-                  </motion.div>
+        {/* Desktop Grid - rendered in aligned row bands */}
+        <div className="hidden md:block mb-16">
+          {Array.from({ length: Math.ceil(projects.length / 2) }).map((_, pairIdx) => {
+            const pair = projects.slice(pairIdx * 2, pairIdx * 2 + 2);
+            return (
+              <motion.div
+                key={pairIdx}
+                className="mb-16 last:mb-0"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: '-10% 0px' }}
+              >
+                {/* Images */}
+                <div className="grid grid-cols-2 gap-8 lg:gap-12 mb-6">
+                  {pair.map((project) => (
+                    <motion.div key={project.id} variants={cardVariants}>
+                      <Link href={project.link || "/collections/case-studies"} className="block group">
+                        <div className="relative w-full h-[340px] rounded-2xl overflow-hidden">
+                          <motion.div
+                            className="absolute inset-0"
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ duration: 0.5, ease }}
+                          >
+                            <Image
+                              src={project.image}
+                              alt={`${project.title} project`}
+                              fill
+                              className="object-cover"
+                              style={{ objectPosition: project.objectPosition ?? 'center' }}
+                            />
+                          </motion.div>
+                        </div>
+                      </Link>
+                    </motion.div>
+                  ))}
                 </div>
-                <div className="flex flex-col gap-6">
-                  <div className="flex flex-col gap-4">
-                    <div className="flex flex-col gap-2">
-                      <h3 className="text-[20px] lg:text-[24px] font-bold leading-[1.3] text-[#0c2080] tracking-[-0.2px] lg:tracking-[-0.24px] group-hover:text-[#006cc9] transition-colors">
+
+                {/* Titles */}
+                <div className="grid grid-cols-2 gap-8 lg:gap-12 mb-4">
+                  {pair.map((project) => (
+                    <Link key={project.id} href={project.link || "/collections/case-studies"} className="group">
+                      <h3 className="text-[24px] md:text-[32px] font-bold leading-[1.3] text-[#006cc9] tracking-[-0.32px] group-hover:opacity-80 transition-opacity">
                         {project.title}
                       </h3>
-                      {project.subtitle && (
-                        <p className="text-[18px] lg:text-[24px] font-bold leading-[1.4] text-[#006cc9]">
-                          {project.subtitle}
-                        </p>
-                      )}
-                      <p className="text-base font-normal leading-[1.5] text-[#00050a]">
-                        {project.description}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-base font-medium leading-[1.5] text-[#00050a]">
-                      View project
-                    </span>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </div>
+                    </Link>
+                  ))}
                 </div>
-              </Link>
-            </motion.div>
-          ))}
-        </motion.div>
+
+                {/* Challenge row */}
+                <div className="grid grid-cols-2 gap-8 lg:gap-12 border-t border-[#00050a]/15">
+                  {pair.map((project) => (
+                    <div key={project.id} className="flex items-center gap-4 border-b border-[#00050a]/15 py-5">
+                      <p className="text-[16px] md:text-[18px] font-bold text-[#00050a] w-[120px] shrink-0">Challenge:</p>
+                      <p className="text-[16px] md:text-[18px] font-normal text-[#00050a] flex-1">{project.challenge}</p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Outcome row */}
+                <div className="grid grid-cols-2 gap-8 lg:gap-12">
+                  {pair.map((project) => (
+                    <div key={project.id} className="flex items-center gap-4 border-b border-[#00050a]/15 py-5">
+                      <p className="text-[16px] md:text-[18px] font-bold text-[#00050a] w-[120px] shrink-0">Outcome:</p>
+                      <p className="text-[16px] md:text-[18px] font-normal text-[#00050a] flex-1">{project.outcome}</p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Numbers row */}
+                <div className="grid grid-cols-2 gap-8 lg:gap-12">
+                  {pair.map((project) => (
+                    <div key={project.id} className="flex items-center gap-4 border-b border-[#00050a]/15 py-5">
+                      <p className="text-[16px] md:text-[18px] font-bold text-[#00050a] w-[120px] shrink-0">Numbers:</p>
+                      <p className="text-[16px] md:text-[18px] font-normal text-[#00050a] flex-1">{project.numbers}</p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* View links */}
+                <div className="grid grid-cols-2 gap-8 lg:gap-12 mt-6">
+                  {pair.map((project) => (
+                    <Link key={project.id} href={project.link || "/collections/case-studies"} className="flex items-center gap-2 text-[#00050a]">
+                      <span className="text-base font-medium leading-[1.5]">View Proven Delivery</span>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

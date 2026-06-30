@@ -17,10 +17,10 @@ import Footer from '@/app/components/layout/Footer';
 interface Project {
   id: number;
   title: string;
-  subtitle: string;
-  description: string;
+  challenge: string;
+  outcome: string;
+  numbers: string;
   image: string;
-  aspectRatio: string;
   link?: string;
   objectPosition?: string;
 }
@@ -33,39 +33,39 @@ const HOME_PORTFOLIO_DATA = {
     {
       id: 1,
       title: "Coates Group",
-      subtitle: "45+ person engineering capability\n30+ countries",
-      description: "Scale engineering capability across a global restaurant technology platform. Built and embedded a 45-person engineering capability supporting platform growth — 30+ countries supported.",
+      challenge: "Scale engineering capability across a global restaurant technology platform.",
+      outcome: "Built and embedded a 45-person engineering capability supporting platform growth — 30+ countries supported.",
+      numbers: "45+ person engineering capability\n30+ countries",
       image: "/images/placeholder/placeholder12.jpg",
-      aspectRatio: "aspect-square",
       objectPosition: "top",
       link: "/collections/case-studies/coates-group"
     },
     {
       id: 2,
       title: "Commonwealth Bank of Australia",
-      subtitle: "45+ person engineering capability\n30+ countries",
-      description: "Deliver large-scale digital banking initiatives across highly regulated environments. Supported engineering delivery across critical customer-facing platforms.",
+      challenge: "Deliver large-scale digital banking initiatives across highly regulated environments.",
+      outcome: "Supported engineering delivery across critical customer-facing platforms.",
+      numbers: "45+ person engineering capability\n30+ countries",
       image: "/images/case/case19.png",
-      aspectRatio: "aspect-[632/346.5]",
       objectPosition: "right",
       link: "/collections/case-studies/cba-netbank"
     },
     {
       id: 3,
       title: "National Australia Bank",
-      subtitle: "45+ person engineering capability\n30+ countries",
-      description: "Accelerate cloud and platform engineering capability within a rapidly growing digital banking environment. Strengthened platform delivery and engineering capability.",
+      challenge: "Accelerate cloud and platform engineering capability within a rapidly growing digital banking environment.",
+      outcome: "Strengthened platform delivery and engineering capability.",
+      numbers: "45+ person engineering capability\n30+ countries",
       image: "/images/case/case17.jpg",
-      aspectRatio: "aspect-square",
       link: "/collections/case-studies/nab"
     },
     {
       id: 4,
       title: "GoFundraise",
-      subtitle: "45+ person engineering capability\n30+ countries",
-      description: "Support international growth through modern cloud-native engineering capability. Delivered scalable platform capability supporting expansion and product innovation.",
+      challenge: "Support international growth through modern cloud-native engineering capability.",
+      outcome: "Delivered scalable platform capability supporting expansion and product innovation.",
+      numbers: "45+ person engineering capability\n30+ countries",
       image: "/images/placeholder/placeholder14.jpg",
-      aspectRatio: "aspect-[632/346.5]",
       link: "/collections/case-studies/gofundraise"
     }
   ]

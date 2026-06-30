@@ -40,7 +40,7 @@ export default function LeadershipSection({
         </div>
       </div>
       <div className="flex flex-col items-start max-w-[1280px] w-full">
-        <div className="flex gap-16 items-center w-full">
+        <div className="flex gap-16 items-start w-full">
           {/* Image Container with Overlap */}
           <div className="flex-[1_0_0] h-[883px] relative">
              <div className="absolute h-[882px] left-0 right-[12.42%] rounded-bl-[16px] rounded-br-[38px] rounded-tl-[16px] rounded-tr-[16px] top-[1.4px] overflow-hidden">
