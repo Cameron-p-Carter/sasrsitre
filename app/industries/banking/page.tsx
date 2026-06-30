@@ -26,6 +26,13 @@ const BANKING_INDUSTRY_DATA = {
   portfolio: BANKING_PORTFOLIO_DATA,
   cta: INDUSTRY_CTA_DATA,
   challengesImage: "/images/placeholder/bank2.jpg",
+  challenges: [
+    "Legacy platform modernisation",
+    "Regulatory obligations",
+    "Cloud migration",
+    "Engineering capability",
+    "Customer expectations",
+  ],
 };
 
 export default function BankingIndustryPage() {

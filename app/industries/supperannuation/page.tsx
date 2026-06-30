@@ -26,6 +26,12 @@ const BANKING_INDUSTRY_DATA = {
   portfolio: BANKING_PORTFOLIO_DATA,
   cta: INDUSTRY_CTA_DATA,
   challengesImage: "/images/placeholder/super2.jpg",
+  challenges: [
+    "Fund mergers",
+    "Legacy systems",
+    "Member migration",
+    "Regulatory obligations",
+  ],
 };
 
 export default function BankingIndustryPage() {

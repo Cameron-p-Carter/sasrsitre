@@ -26,6 +26,12 @@ const BANKING_INDUSTRY_DATA = {
   portfolio: BANKING_PORTFOLIO_DATA,
   cta: INDUSTRY_CTA_DATA,
   challengesImage: "/images/placeholder/insure2.jpg",
+  challenges: [
+    "Claims systems",
+    "Legacy technology",
+    "Data quality",
+    "Compliance",
+  ],
 };
 
 export default function BankingIndustryPage() {

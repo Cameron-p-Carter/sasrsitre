@@ -26,6 +26,12 @@ const BANKING_INDUSTRY_DATA = {
   portfolio: BANKING_PORTFOLIO_DATA,
   cta: INDUSTRY_CTA_DATA,
   challengesImage: "/images/placeholder/retail2.jpg",
+  challenges: [
+    "Omnichannel",
+    "Performance",
+    "Customer experience",
+    "Scale",
+  ],
 };
 
 export default function BankingIndustryPage() {
