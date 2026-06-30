@@ -77,26 +77,18 @@ const Header = () => {
   };
 
   return (
-    <motion.header
+    <header
       className={`bg-[#0c2080] w-full sticky top-0 z-50 transition-shadow duration-300 ${scrolled ? 'shadow-[0_4px_32px_rgba(0,0,0,0.35)]' : ''}`}
-      initial={{ y: -72, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.55, ease: [0.25, 0.46, 0.45, 0.94] }}
     >
       {/* Desktop Header */}
       <div className="hidden lg:flex items-center h-[72px] px-12 max-w-full">
         <div className="flex items-center justify-between w-full">
           {/* Logo */}
-          <motion.div
-            className="flex items-center w-[180px]"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.45, delay: 0.2, ease: 'easeOut' }}
-          >
+          <div className="flex items-center w-[180px]">
             <Link href="/" className="relative h-[50px] w-[165px]">
               <Image src="/images/logos/S@S_Logo_WHITE_RGB.png" alt="Software@Scale Logo" fill className="object-contain" priority />
             </Link>
-          </motion.div>
+          </div>
 
           {/* Decorative S Element */}
           <div className="flex-1 h-[72px] relative overflow-hidden">
@@ -108,13 +100,10 @@ const Header = () => {
           {/* Navigation */}
           <div className="flex items-center gap-6">
             <nav className="flex items-center gap-6">
-              {navItems.map((item, i) => (
-                <motion.div
+              {navItems.map((item) => (
+                <div
                   key={item.label}
                   className="relative flex flex-col gap-2.5 group"
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.35, delay: 0.3 + i * 0.07, ease: 'easeOut' }}
                 >
                   <div className="flex items-center justify-center gap-1 cursor-default">
                     <span className="font-normal text-white text-base leading-6 whitespace-nowrap">
@@ -137,20 +126,14 @@ const Header = () => {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
 
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.35, delay: 0.3 + navItems.length * 0.07, ease: 'easeOut' }}
-              >
-                <Link href="/careers" className="flex items-center justify-center gap-1">
-                  <span className="font-normal text-white text-base leading-6 whitespace-nowrap">
-                    Careers
-                  </span>
-                </Link>
-              </motion.div>
+              <Link href="/careers" className="flex items-center justify-center gap-1">
+                <span className="font-normal text-white text-base leading-6 whitespace-nowrap">
+                  Careers
+                </span>
+              </Link>
             </nav>
 
             <motion.div
@@ -317,7 +300,7 @@ const Header = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.header>
+    </header>
   );
 };
 
