@@ -1,538 +1,323 @@
 'use client';
 
+import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import Button from '@/app/components/shared/Button';
 
+const navItems = [
+  {
+    label: 'About',
+    links: [
+      { href: '/core-values', label: 'Our Purpose and Values' },
+      { href: '/people', label: 'Who We Are' },
+      { href: '/recognition', label: 'Awards and Achievements' },
+      { href: '/our-history', label: 'Our History' },
+    ],
+  },
+  {
+    label: 'Our Services',
+    links: [
+      { href: '/services/engineering-teams', label: 'Engineering Teams' },
+      { href: '/services/delivery-acceleration', label: 'Delivery Acceleration' },
+      { href: '/services/technology-leadership', label: 'Technology Leadership' },
+      { href: '/services/data-and-ai', label: 'Data and AI' },
+    ],
+  },
+  {
+    label: 'Industries',
+    links: [
+      { href: '/industries/banking', label: 'Banking' },
+      { href: '/industries/payments', label: 'Payments' },
+      { href: '/industries/supperannuation', label: 'Superannuation' },
+      { href: '/industries/insurance', label: 'Insurance' },
+      { href: '/industries/retail', label: 'Retail' },
+      { href: '/industries/media', label: 'Media' },
+    ],
+  },
+  {
+    label: 'Collections',
+    links: [
+      { href: '/collections/news', label: 'News' },
+      { href: '/collections/case-studies', label: 'Case Studies' },
+      { href: '/collections/perspectives', label: 'Perspectives' },
+    ],
+  },
+];
+
+const mobileNavSections = [
+  { key: 'about', label: 'About', links: navItems[0].links },
+  { key: 'services', label: 'Our Services', links: navItems[1].links },
+  { key: 'industries', label: 'Industries', links: navItems[2].links },
+  { key: 'collections', label: 'Collections', links: navItems[3].links },
+];
+
+const ChevronIcon = ({ className = '' }: { className?: string }) => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+    <path d="M7 14L12 9L17 14" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [expandedMobileSection, setExpandedMobileSection] = useState<string | null>(null);
+  const [scrolled, setScrolled] = useState(false);
+
+  const { scrollY } = useScroll();
+  useMotionValueEvent(scrollY, 'change', (v) => setScrolled(v > 10));
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-    setExpandedMobileSection(null); // Reset expanded sections when closing menu
+    setIsMobileMenuOpen((prev) => !prev);
+    setExpandedMobileSection(null);
   };
 
   const toggleMobileSection = (section: string) => {
-    setExpandedMobileSection(expandedMobileSection === section ? null : section);
+    setExpandedMobileSection((prev) => (prev === section ? null : section));
   };
 
   return (
-    <header className="bg-[#0c2080] w-full sticky top-0 z-50">
+    <motion.header
+      className={`bg-[#0c2080] w-full sticky top-0 z-50 transition-shadow duration-300 ${scrolled ? 'shadow-[0_4px_32px_rgba(0,0,0,0.35)]' : ''}`}
+      initial={{ y: -72, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.55, ease: [0.25, 0.46, 0.45, 0.94] }}
+    >
       {/* Desktop Header */}
       <div className="hidden lg:flex items-center h-[72px] px-12 max-w-full">
         <div className="flex items-center justify-between w-full">
-          {/* Logo Section */}
-          <div className="flex items-center w-[180px]">
+          {/* Logo */}
+          <motion.div
+            className="flex items-center w-[180px]"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.45, delay: 0.2, ease: 'easeOut' }}
+          >
             <Link href="/" className="relative h-[50px] w-[165px]">
-              <Image
-                src="/images/logos/S@S_Logo_WHITE_RGB.png"
-                alt="Software@Scale Logo"
-                fill
-                className="object-contain"
-                priority
-              />
+              <Image src="/images/logos/S@S_Logo_WHITE_RGB.png" alt="Software@Scale Logo" fill className="object-contain" priority />
             </Link>
-          </div>
+          </motion.div>
 
           {/* Decorative S Element */}
           <div className="flex-1 h-[72px] relative overflow-hidden">
             <div className="absolute h-[72px] left-1/2 -translate-x-1/2 top-0 w-[100%]">
-              <Image
-                src="/images/logos/Desktop Menu_S_Element.svg"
-                alt="Decorative S Element"
-                fill
-                className="object-cover object-center"
-              />
+              <Image src="/images/logos/Desktop Menu_S_Element.svg" alt="Decorative S Element" fill className="object-cover object-center" />
             </div>
           </div>
 
           {/* Navigation */}
           <div className="flex items-center gap-6">
             <nav className="flex items-center gap-6">
-            <div className="relative flex flex-col gap-2.5 group">
-              <div className="flex items-center justify-center gap-1">
-                <span className="font-normal text-white text-base leading-6 whitespace-nowrap">
-                  About
-                </span>
-                <div className="flex items-center justify-center">
-                  <div className="w-6 h-6 rotate-180 flex items-center justify-center">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M7 14L12 9L17 14" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
+              {navItems.map((item, i) => (
+                <motion.div
+                  key={item.label}
+                  className="relative flex flex-col gap-2.5 group"
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.35, delay: 0.3 + i * 0.07, ease: 'easeOut' }}
+                >
+                  <div className="flex items-center justify-center gap-1 cursor-default">
+                    <span className="font-normal text-white text-base leading-6 whitespace-nowrap">
+                      {item.label}
+                    </span>
+                    <div className="w-6 h-6 rotate-180 flex items-center justify-center transition-transform duration-200 group-hover:rotate-0">
+                      <ChevronIcon />
+                    </div>
                   </div>
-                </div>
-              </div>
-              
-              {/* About Dropdown Menu */}
-              <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible z-50">
-                <div className="bg-[#0c2080] border border-[#14d3f3] rounded-2xl p-6 min-w-[260px]">
-                  <div className="flex flex-col gap-4">
-                    <Link href="/core-values" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity whitespace-nowrap">
-                      Our Purpose and Values
-                    </Link>
-                    <Link href="/people" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity whitespace-nowrap">
-                      Who We Are
-                    </Link>
-                    <Link href="/recognition" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity whitespace-nowrap">
-                      Awards and Achievements
-                    </Link>
-                    <Link href="/our-history" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity whitespace-nowrap">
-                      Our History
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            <div className="relative flex flex-col gap-2.5 group">
-              <div className="flex items-center justify-center gap-1">
-                <span className="font-normal text-white text-base leading-6 whitespace-nowrap">
-                  Our Services
-                </span>
-                <div className="flex items-center justify-center">
-                  <div className="w-6 h-6 rotate-180 flex items-center justify-center">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M7 14L12 9L17 14" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
+                  {/* Dropdown */}
+                  <div className="absolute top-full left-0 pt-2 opacity-0 pointer-events-none translate-y-2 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 transition-all duration-200 ease-out z-50">
+                    <div className="bg-[#0c2080] border border-[#14d3f3] rounded-2xl p-6 min-w-[220px]">
+                      <div className="flex flex-col gap-4">
+                        {item.links.map((link) => (
+                          <Link key={link.href} href={link.href} className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity whitespace-nowrap">
+                            {link.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              
-              {/* Our Services Dropdown Menu */}
-              <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible z-50">
-                <div className="bg-[#0c2080] border border-[#14d3f3] rounded-2xl p-6 min-w-[260px]">
-                  <div className="flex flex-col gap-4">
-                    <Link href="/services/engineering-teams" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity whitespace-nowrap">
-                      Engineering Teams
-                    </Link>
-                    <Link href="/services/delivery-acceleration" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity whitespace-nowrap">
-                      Delivery Acceleration
-                    </Link>
-                    <Link href="/services/technology-leadership" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity whitespace-nowrap">
-                      Technology Leadership
-                    </Link>
-                    <Link href="/services/data-and-ai" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity whitespace-nowrap">
-                      Data and AI
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
+                </motion.div>
+              ))}
 
-            <div className="relative flex flex-col gap-2.5 group">
-              <div className="flex items-center justify-center gap-1">
-                <span className="font-normal text-white text-base leading-6 whitespace-nowrap">
-                  Industries
-                </span>
-                <div className="flex items-center justify-center">
-                  <div className="w-6 h-6 rotate-180 flex items-center justify-center">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M7 14L12 9L17 14" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Industries Dropdown Menu */}
-              <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible z-50">
-                <div className="bg-[#0c2080] border border-[#14d3f3] rounded-2xl p-6 min-w-[200px]">
-                  <div className="flex flex-col gap-4">
-                    <Link href="/industries/banking" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity">
-                      Banking
-                    </Link>
-                    <Link href="/industries/payments" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity">
-                      Payments
-                    </Link>
-                    <Link href="/industries/supperannuation" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity">
-                      Superannuation
-                    </Link>
-                    <Link href="/industries/insurance" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity">
-                      Insurance
-                    </Link>
-                    <Link href="/industries/retail" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity">
-                      Retail
-                    </Link>
-                    <Link href="/industries/media" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity">
-                      Media
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative flex flex-col gap-2.5 group">
-              <div className="flex items-center justify-center gap-1">
-                <span className="font-normal text-white text-base leading-6 whitespace-nowrap">
-                  Collections
-                </span>
-                <div className="flex items-center justify-center">
-                  <div className="w-6 h-6 rotate-180 flex items-center justify-center">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M7 14L12 9L17 14" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Collections Dropdown Menu */}
-              <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible z-50">
-                <div className="bg-[#0c2080] border border-[#14d3f3] rounded-2xl p-6 min-w-[200px]">
-                  <div className="flex flex-col gap-4">
-                    <Link href="/collections/news" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity">
-                      News
-                    </Link>
-                    <Link href="/collections/case-studies" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity">
-                      Case Studies
-                    </Link>
-                    <Link href="/collections/perspectives" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity">
-                      Perspectives
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-              <Link href="/careers" className="flex items-center justify-center gap-1">
-                <span className="font-normal text-white text-base leading-6 whitespace-nowrap">
-                  Careers
-                </span>
-              </Link>
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.35, delay: 0.3 + navItems.length * 0.07, ease: 'easeOut' }}
+              >
+                <Link href="/careers" className="flex items-center justify-center gap-1">
+                  <span className="font-normal text-white text-base leading-6 whitespace-nowrap">
+                    Careers
+                  </span>
+                </Link>
+              </motion.div>
             </nav>
 
-            {/* Contact Button */}
-            <Button variant="primary" size="sm" href="/contact-us" className="text-sm text-[#002b50]">
-              Contact
-            </Button>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.35, delay: 0.62, ease: 'easeOut' }}
+            >
+              <Button variant="primary" size="sm" href="/contact-us" className="text-sm text-[#002b50]">
+                Contact
+              </Button>
+            </motion.div>
           </div>
         </div>
       </div>
 
       {/* Tablet Header */}
       <div className="hidden md:flex lg:hidden items-center justify-between h-[72px] px-6 max-w-full">
-        {/* Logo Section */}
         <div className="flex items-center">
           <Link href="/" className="relative h-[36px] w-[169px]">
-            <Image
-              src="/images/logos/S@S_Logo_WHITE_RGB.png"
-              alt="Software@Scale Logo"
-              fill
-              className="object-contain"
-              priority
-            />
+            <Image src="/images/logos/S@S_Logo_WHITE_RGB.png" alt="Software@Scale Logo" fill className="object-contain" priority />
           </Link>
         </div>
-
-        {/* Decorative S Element - Tablet */}
         <div className="flex-1 h-[72px] relative max-w-[300px] overflow-hidden">
           <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-12 w-[280px] h-[280px]">
-            <Image
-              src="/images/logos/S@S_Logo_Mark_RGB.svg"
-              alt="Software@Scale Logo Mark"
-              fill
-              className="object-contain"
-            />
+            <Image src="/images/logos/S@S_Logo_Mark_RGB.svg" alt="Software@Scale Logo Mark" fill className="object-contain" />
           </div>
         </div>
-
-        {/* Simplified Navigation */}
         <div className="flex items-center gap-3">
           <Button variant="primary" size="sm" href="/contact-us" className="text-sm text-[#002b50] px-3 py-1.5">
             Contact
           </Button>
-          <button
-            onClick={toggleMobileMenu}
-            className="flex items-center justify-center w-10 h-10"
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3 12H21M3 6H21M3 18H21" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
+          <button onClick={toggleMobileMenu} className="flex items-center justify-center w-10 h-10">
+            <motion.div animate={{ rotate: isMobileMenuOpen ? 90 : 0 }} transition={{ duration: 0.2 }}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M3 12H21M3 6H21M3 18H21" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </motion.div>
           </button>
         </div>
       </div>
 
       {/* Mobile Header */}
       <div className="flex md:hidden items-center justify-between h-[72px] px-3 max-w-full">
-        {/* Logo Section */}
         <div className="flex items-center">
           <Link href="/" className="relative h-[28px] w-[132px]">
-            <Image
-              src="/images/logos/S@S_Logo_WHITE_RGB.png"
-              alt="Software@Scale Logo"
-              fill
-              className="object-contain"
-              priority
-            />
+            <Image src="/images/logos/S@S_Logo_WHITE_RGB.png" alt="Software@Scale Logo" fill className="object-contain" priority />
           </Link>
         </div>
-
-        {/* Decorative S Element - Mobile */}
         <div className="flex-1 h-[72px] relative max-w-[250px] overflow-hidden">
           <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-12 w-[240px] h-[240px]">
-            <Image
-              src="/images/logos/S@S_Logo_Mark_RGB.svg"
-              alt="Software@Scale Logo Mark"
-              fill
-              className="object-contain"
-            />
+            <Image src="/images/logos/S@S_Logo_Mark_RGB.svg" alt="Software@Scale Logo Mark" fill className="object-contain" />
           </div>
         </div>
-
-        {/* Hamburger Menu */}
-        <button
-          onClick={toggleMobileMenu}
-          className="flex items-center justify-center w-10 h-10"
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3 12H21M3 6H21M3 18H21" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
+        <button onClick={toggleMobileMenu} className="flex items-center justify-center w-10 h-10">
+          <motion.div animate={{ rotate: isMobileMenuOpen ? 90 : 0 }} transition={{ duration: 0.2 }}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M3 12H21M3 6H21M3 18H21" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </motion.div>
         </button>
       </div>
 
       {/* Mobile Menu Overlay */}
-      {isMobileMenuOpen && (
-        <div className="absolute top-full left-0 right-0 bg-[#0c2080] border-t border-[#1a3a9a] z-[60] md:hidden shadow-lg">
-          <nav className="flex flex-col px-4 py-3">
-            <div className="flex flex-col gap-2">
-              {/* About Section */}
-              <div className="border-b border-[#1a3a9a]">
-                <button
-                  onClick={() => toggleMobileSection('about')}
-                  className="flex items-center justify-between py-3 w-full text-left"
-                >
-                  <span className="font-normal text-white text-base leading-6">
-                    About
-                  </span>
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className={`transform transition-transform ${expandedMobileSection === 'about' ? 'rotate-180' : ''}`}
-                  >
-                    <path d="M7 14L12 9L17 14" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </button>
-                {expandedMobileSection === 'about' && (
-                  <div className="pb-4 pl-4">
-                    <div className="flex flex-col gap-4">
-                      <Link href="/core-values" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
-                        Our Purpose and Values
-                      </Link>
-                      <Link href="/people" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
-                        Who We Are
-                      </Link>
-                      <Link href="/recognition" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
-                        Awards and Achievements
-                      </Link>
-                      <Link href="/our-history" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
-                        Our History
-                      </Link>
-                    </div>
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            key="mobile-menu"
+            className="absolute top-full left-0 right-0 bg-[#0c2080] border-t border-[#1a3a9a] z-[60] md:hidden shadow-lg overflow-hidden"
+            initial={{ opacity: 0, y: -12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -12 }}
+            transition={{ duration: 0.22, ease: 'easeOut' }}
+          >
+            <nav className="flex flex-col px-4 py-3">
+              <div className="flex flex-col gap-2">
+                {mobileNavSections.map((section) => (
+                  <div key={section.key} className="border-b border-[#1a3a9a]">
+                    <button
+                      onClick={() => toggleMobileSection(section.key)}
+                      className="flex items-center justify-between py-3 w-full text-left"
+                    >
+                      <span className="font-normal text-white text-base leading-6">{section.label}</span>
+                      <motion.div
+                        animate={{ rotate: expandedMobileSection === section.key ? 180 : 0 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <ChevronIcon />
+                      </motion.div>
+                    </button>
+                    <AnimatePresence initial={false}>
+                      {expandedMobileSection === section.key && (
+                        <motion.div
+                          key={section.key + '-links'}
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.22, ease: 'easeOut' }}
+                          className="overflow-hidden"
+                        >
+                          <div className="pb-4 pl-4 flex flex-col gap-4">
+                            {section.links.map((link) => (
+                              <Link key={link.href} href={link.href} className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
+                                {link.label}
+                              </Link>
+                            ))}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </div>
-                )}
-              </div>
+                ))}
 
-              {/* Our Services Section */}
-              <div className="border-b border-[#1a3a9a]">
-                <button
-                  onClick={() => toggleMobileSection('services')}
-                  className="flex items-center justify-between py-3 w-full text-left"
-                >
-                  <span className="font-normal text-white text-base leading-6">
-                    Our Services
-                  </span>
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className={`transform transition-transform ${expandedMobileSection === 'services' ? 'rotate-180' : ''}`}
-                  >
-                    <path d="M7 14L12 9L17 14" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </button>
-                {expandedMobileSection === 'services' && (
-                  <div className="pb-4 pl-4">
-                    <div className="flex flex-col gap-4">
-                      <Link href="/services/engineering-teams" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
-                        Engineering Teams
-                      </Link>
-                      <Link href="/services/delivery-acceleration" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
-                        Delivery Acceleration
-                      </Link>
-                      <Link href="/services/technology-leadership" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
-                        Technology Leadership
-                      </Link>
-                      <Link href="/services/data-and-ai" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
-                        Data and AI
-                      </Link>
-                    </div>
-                  </div>
-                )}
-              </div>
+                <div className="py-3 border-b border-[#1a3a9a]">
+                  <Link href="/careers" className="font-normal text-white text-base leading-6">
+                    Careers
+                  </Link>
+                </div>
 
-              {/* Industries Section */}
-              <div className="border-b border-[#1a3a9a]">
-                <button
-                  onClick={() => toggleMobileSection('industries')}
-                  className="flex items-center justify-between py-3 w-full text-left"
-                >
-                  <span className="font-normal text-white text-base leading-6">
-                    Industries
-                  </span>
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className={`transform transition-transform ${expandedMobileSection === 'industries' ? 'rotate-180' : ''}`}
-                  >
-                    <path d="M7 14L12 9L17 14" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </button>
-                {expandedMobileSection === 'industries' && (
-                  <div className="pb-4 pl-4">
-                    <div className="flex flex-col gap-4">
-                      <Link href="/industries/banking" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
-                        Banking
-                      </Link>
-                      <Link href="/industries/payments" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
-                        Payments
-                      </Link>
-                      <Link href="/industries/supperannuation" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
-                        Superannuation
-                      </Link>
-                      <Link href="/industries/insurance" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
-                        Insurance
-                      </Link>
-                      <Link href="/industries/retail" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
-                        Retail
-                      </Link>
-                      <Link href="/industries/media" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
-                        Media
-                      </Link>
-                    </div>
-                  </div>
-                )}
+                <div className="pt-4">
+                  <Link href="/contact-us" className="bg-[#5ae0f6] flex items-center justify-center gap-2 px-4 py-2 rounded-xl w-full">
+                    <span className="font-medium text-[#002b50] text-base leading-6">Contact</span>
+                  </Link>
+                </div>
               </div>
-
-              {/* Collections Section */}
-              <div className="border-b border-[#1a3a9a]">
-                <button
-                  onClick={() => toggleMobileSection('collections')}
-                  className="flex items-center justify-between py-3 w-full text-left"
-                >
-                  <span className="font-normal text-white text-base leading-6">
-                    Collections
-                  </span>
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className={`transform transition-transform ${expandedMobileSection === 'collections' ? 'rotate-180' : ''}`}
-                  >
-                    <path d="M7 14L12 9L17 14" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </button>
-                {expandedMobileSection === 'collections' && (
-                  <div className="pb-4 pl-4">
-                    <div className="flex flex-col gap-4">
-                      <Link href="/collections/news" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
-                        News
-                      </Link>
-                      <Link href="/collections/case-studies" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
-                        Case Studies
-                      </Link>
-                      <Link href="/collections/perspectives" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
-                        Perspectives
-                      </Link>
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              {/* Careers - Direct Link */}
-              <div className="py-3 border-b border-[#1a3a9a]">
-                <Link href="/careers" className="font-normal text-white text-base leading-6">
-                  Careers
-                </Link>
-              </div>
-
-              {/* Contact Button */}
-              <div className="pt-4">
-                <Link href="/contact-us" className="bg-[#5ae0f6] flex items-center justify-center gap-2 px-4 py-2 rounded-xl w-full">
-                  <span className="font-medium text-[#002b50] text-base leading-6">
-                    Contact
-                  </span>
-                </Link>
-              </div>
-            </div>
-          </nav>
-        </div>
-      )}
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Tablet Menu Overlay */}
-      {isMobileMenuOpen && (
-        <div className="fixed top-[72px] left-0 right-0 bg-[#0c2080] border-t border-[#1a3a9a] z-[60] hidden md:block lg:hidden">
-          <nav className="flex flex-col p-6">
-            <div className="grid grid-cols-2 gap-6">
-              <div className="flex flex-col gap-4">
-                <div className="flex items-center justify-between py-3 border-b border-[#1a3a9a]">
-                  <span className="font-normal text-white text-base leading-6">
-                    About
-                  </span>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 14L12 9L17 14" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            key="tablet-menu"
+            className="fixed top-[72px] left-0 right-0 bg-[#0c2080] border-t border-[#1a3a9a] z-[60] hidden md:block lg:hidden shadow-lg"
+            initial={{ opacity: 0, y: -12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -12 }}
+            transition={{ duration: 0.22, ease: 'easeOut' }}
+          >
+            <nav className="flex flex-col p-6">
+              <div className="grid grid-cols-2 gap-6">
+                <div className="flex flex-col gap-4">
+                  {mobileNavSections.slice(0, 2).map((section) => (
+                    <div key={section.key} className="flex items-center justify-between py-3 border-b border-[#1a3a9a]">
+                      <span className="font-normal text-white text-base leading-6">{section.label}</span>
+                      <ChevronIcon />
+                    </div>
+                  ))}
                 </div>
-
-                <div className="flex items-center justify-between py-3 border-b border-[#1a3a9a]">
-                  <span className="font-normal text-white text-base leading-6">
-                    Our Services
-                  </span>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 14L12 9L17 14" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-4">
-                <div className="flex items-center justify-between py-3 border-b border-[#1a3a9a]">
-                  <span className="font-normal text-white text-base leading-6">
-                    Industries
-                  </span>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 14L12 9L17 14" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-
-                <div className="flex items-center justify-between py-3 border-b border-[#1a3a9a]">
-                  <span className="font-normal text-white text-base leading-6">
-                    Collections
-                  </span>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 14L12 9L17 14" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-
-                <div className="py-3">
-                  <span className="font-normal text-white text-base leading-6">
-                    Careers
-                  </span>
+                <div className="flex flex-col gap-4">
+                  {mobileNavSections.slice(2).map((section) => (
+                    <div key={section.key} className="flex items-center justify-between py-3 border-b border-[#1a3a9a]">
+                      <span className="font-normal text-white text-base leading-6">{section.label}</span>
+                      <ChevronIcon />
+                    </div>
+                  ))}
+                  <div className="py-3">
+                    <span className="font-normal text-white text-base leading-6">Careers</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          </nav>
-        </div>
-      )}
-    </header>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.header>
   );
 };
 
