@@ -2,7 +2,7 @@ import ServicePageLayout2 from '@/app/components/templates/ServicePageLayout2';
 
 const SERVICE_DATA = {
   hero: {
-    imageSrc: "/images/placeholder/placeholder36.jpg",
+    imageSrc: "/images/placeholder/tl1.jpg",
     tagline: "Lead",
     title: "Technology Leadership For",
     titleHighlight: "Critical Decisions",
@@ -19,7 +19,7 @@ const SERVICE_DATA = {
     description: `The most expensive technology decisions are often made before delivery begins.
 
 Whether you're planning a transformation, assessing a platform, evaluating an acquisition or navigating a complex technology challenge, experienced leadership can significantly reduce risk and improve outcomes.`,
-    imageSrc: "/images/placeholder/placeholder35.jpg",
+    imageSrc: "/images/placeholder/tl2.jpg",
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
     titleColor: "text-[#0c2080]",
@@ -31,7 +31,7 @@ Whether you're planning a transformation, assessing a platform, evaluating an ac
         description: "The organisation is making decisions that will have long-term implications for delivery, cost, risk or scalability.",
       },
       {
-        iconSrc: "/images/icons/flowsheet.svg",
+        iconSrc: "/images/icons/foundation.svg",
         title: "Architecture Uncertainty",
         description: "Leaders need confidence that platforms are scalable, maintainable and aligned to business goals.",
       },
@@ -50,29 +50,29 @@ Whether you're planning a transformation, assessing a platform, evaluating an ac
   imageTextContent2: {
     title: "Why Technology Leaders Trust Software@Scale",
     description: `Our leadership team combines executive experience with hands-on engineering depth — giving organisations independent, practical guidance they can trust.`,
-    imageSrc: "/images/newservice/expertiseAcross.jpg",
+    imageSrc: "/images/placeholder/tl3.jpg",
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
     titleColor: "text-[#0c2080]",
     imageOnRight: false,
     outcomeItems: [
       {
-        iconSrc: "/images/icons/award_star.svg",
+        iconSrc: "/images/icons/person_pin_circle.svg",
         title: "Leaders Who Have Done It Before",
         description: "Our leadership team has built, operated and transformed technology platforms across banking, payments, insurance, superannuation and digital businesses.",
       },
       {
-        iconSrc: "/images/icons/sync_desktop.svg",
+        iconSrc: "/images/icons/engineering_dark.svg",
         title: "Executive Experience With Engineering Depth",
         description: "We combine strategic thinking with practical engineering expertise.",
       },
       {
-        iconSrc: "/images/icons/security_dark.svg",
+        iconSrc: "/images/icons/chat_info.svg",
         title: "Independent Advice",
         description: "Recommendations are based on what is right for the organisation, not on selling larger programs of work.",
       },
       {
-        iconSrc: "/images/icons/delivery_truck_speed.svg",
+        iconSrc: "/images/icons/flag_check.svg",
         title: "Focused On Outcomes",
         description: "Every engagement is designed to improve decision quality, reduce risk and increase delivery confidence.",
       },
