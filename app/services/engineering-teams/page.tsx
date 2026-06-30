@@ -134,7 +134,7 @@ Whether it's accelerating delivery, solving a difficult technology challenge or 
   showBlog: false,
   ctaSection: {
     imageSrc: "/images/placeholder/placeholder16.jpg",
-    title: "Build your engineering team today",
+    title: "Need Engineering Capability?",
     description: "Contact us today to explore how our Engineering Teams service can transform your business.",
     primaryButtonText: "Contact",
     secondaryButtonText: "Learn More",
