@@ -7,9 +7,10 @@ import Link from 'next/link';
 interface Project {
   id: number;
   title: string;
-  challenge: string;
-  outcome: string;
-  numbers: string;
+  challenge?: string;
+  outcome?: string;
+  numbers?: string;
+  description?: string;
   image: string;
   link?: string;
   objectPosition?: string;
@@ -107,30 +108,27 @@ export default function PortfolioSection({
                       {project.title}
                     </h3>
                     <div className={`flex flex-col border-t ${borderColor} pt-5 mt-2`}>
-                      <div className={`flex items-center gap-4 border-b ${borderColor} py-5`}>
-                        <p className={`text-[16px] md:text-[18px] font-bold ${labelColor} w-[120px] shrink-0`}>
-                          Challenge:
-                        </p>
-                        <p className={`text-[16px] md:text-[18px] font-normal ${bodyColor} flex-1`}>
-                          {project.challenge}
-                        </p>
-                      </div>
-                      <div className={`flex items-center gap-4 border-b ${borderColor} py-5`}>
-                        <p className={`text-[16px] md:text-[18px] font-bold ${labelColor} w-[120px] shrink-0`}>
-                          Outcome:
-                        </p>
-                        <p className={`text-[16px] md:text-[18px] font-normal ${bodyColor} flex-1`}>
-                          {project.outcome}
-                        </p>
-                      </div>
-                      <div className={`flex items-center gap-4 border-b ${borderColor} py-5`}>
-                        <p className={`text-[16px] md:text-[18px] font-bold ${labelColor} w-[120px] shrink-0`}>
-                          Numbers:
-                        </p>
-                        <p className={`text-[16px] md:text-[18px] font-normal ${bodyColor} flex-1`}>
-                          {project.numbers}
-                        </p>
-                      </div>
+                      {project.description && (
+                        <p className={`text-[16px] md:text-[18px] font-normal ${bodyColor} pb-5`}>{project.description}</p>
+                      )}
+                      {project.challenge && (
+                        <div className={`flex items-center gap-4 border-b ${borderColor} py-5`}>
+                          <p className={`text-[16px] md:text-[18px] font-bold ${labelColor} w-[120px] shrink-0`}>Challenge:</p>
+                          <p className={`text-[16px] md:text-[18px] font-normal ${bodyColor} flex-1`}>{project.challenge}</p>
+                        </div>
+                      )}
+                      {project.outcome && (
+                        <div className={`flex items-center gap-4 border-b ${borderColor} py-5`}>
+                          <p className={`text-[16px] md:text-[18px] font-bold ${labelColor} w-[120px] shrink-0`}>Outcome:</p>
+                          <p className={`text-[16px] md:text-[18px] font-normal ${bodyColor} flex-1`}>{project.outcome}</p>
+                        </div>
+                      )}
+                      {project.numbers && (
+                        <div className={`flex items-center gap-4 border-b ${borderColor} py-5`}>
+                          <p className={`text-[16px] md:text-[18px] font-bold ${labelColor} w-[120px] shrink-0`}>Numbers:</p>
+                          <p className={`text-[16px] md:text-[18px] font-normal ${bodyColor} flex-1`}>{project.numbers}</p>
+                        </div>
+                      )}
                     </div>
                   </div>
                   <div className={`flex items-center gap-2 ${linkColor} mt-4`}>
@@ -196,34 +194,45 @@ export default function PortfolioSection({
                   ))}
                 </div>
 
-                {/* Challenge row */}
-                <div className={`grid grid-cols-2 gap-8 lg:gap-12 border-t ${borderColor}`}>
-                  {pair.map((project) => (
-                    <div key={project.id} className={`flex items-center gap-4 border-b ${borderColor} py-5`}>
-                      <p className={`text-[16px] md:text-[18px] font-bold ${labelColor} w-[120px] shrink-0`}>Challenge:</p>
-                      <p className={`text-[16px] md:text-[18px] font-normal ${bodyColor} flex-1`}>{project.challenge}</p>
+                {/* Description / Challenge / Outcome / Numbers rows */}
+                <div className={`border-t ${borderColor}`}>
+                  {pair.some(p => p.description) && (
+                    <div className="grid grid-cols-2 gap-8 lg:gap-12">
+                      {pair.map((project) => (
+                        <p key={project.id} className={`text-[16px] md:text-[18px] font-normal ${bodyColor} py-5`}>{project.description ?? ''}</p>
+                      ))}
                     </div>
-                  ))}
-                </div>
-
-                {/* Outcome row */}
-                <div className="grid grid-cols-2 gap-8 lg:gap-12">
-                  {pair.map((project) => (
-                    <div key={project.id} className={`flex items-center gap-4 border-b ${borderColor} py-5`}>
-                      <p className={`text-[16px] md:text-[18px] font-bold ${labelColor} w-[120px] shrink-0`}>Outcome:</p>
-                      <p className={`text-[16px] md:text-[18px] font-normal ${bodyColor} flex-1`}>{project.outcome}</p>
+                  )}
+                  {pair.some(p => p.challenge) && (
+                    <div className="grid grid-cols-2 gap-8 lg:gap-12">
+                      {pair.map((project) => (
+                        <div key={project.id} className={`flex items-center gap-4 border-b ${borderColor} py-5`}>
+                          <p className={`text-[16px] md:text-[18px] font-bold ${labelColor} w-[120px] shrink-0`}>Challenge:</p>
+                          <p className={`text-[16px] md:text-[18px] font-normal ${bodyColor} flex-1`}>{project.challenge ?? ''}</p>
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
-
-                {/* Numbers row */}
-                <div className="grid grid-cols-2 gap-8 lg:gap-12">
-                  {pair.map((project) => (
-                    <div key={project.id} className={`flex items-center gap-4 border-b ${borderColor} py-5`}>
-                      <p className={`text-[16px] md:text-[18px] font-bold ${labelColor} w-[120px] shrink-0`}>Numbers:</p>
-                      <p className={`text-[16px] md:text-[18px] font-normal ${bodyColor} flex-1`}>{project.numbers}</p>
+                  )}
+                  {pair.some(p => p.outcome) && (
+                    <div className="grid grid-cols-2 gap-8 lg:gap-12">
+                      {pair.map((project) => (
+                        <div key={project.id} className={`flex items-center gap-4 border-b ${borderColor} py-5`}>
+                          <p className={`text-[16px] md:text-[18px] font-bold ${labelColor} w-[120px] shrink-0`}>Outcome:</p>
+                          <p className={`text-[16px] md:text-[18px] font-normal ${bodyColor} flex-1`}>{project.outcome ?? ''}</p>
+                        </div>
+                      ))}
                     </div>
-                  ))}
+                  )}
+                  {pair.some(p => p.numbers) && (
+                    <div className="grid grid-cols-2 gap-8 lg:gap-12">
+                      {pair.map((project) => (
+                        <div key={project.id} className={`flex items-center gap-4 border-b ${borderColor} py-5`}>
+                          <p className={`text-[16px] md:text-[18px] font-bold ${labelColor} w-[120px] shrink-0`}>Numbers:</p>
+                          <p className={`text-[16px] md:text-[18px] font-normal ${bodyColor} flex-1`}>{project.numbers ?? ''}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
 
                 {/* View links */}
