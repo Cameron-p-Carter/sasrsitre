@@ -11,7 +11,7 @@ const SERVICE_DATA = {
     objectPosition: "center 25%",
     buttons: [
       { text: "Talk To A Technology Leader", href: "/contact-us", variant: "primary" as const },
-      { text: "View Proven Delivery", href: "/case-studies", variant: "outline" as const },
+      { text: "View Proven Delivery", href: "/collections/case-studies", variant: "outline" as const },
     ],
   },
   imageTextContent: {
