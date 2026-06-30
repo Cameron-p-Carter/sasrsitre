@@ -136,15 +136,9 @@ const Header = () => {
               </Link>
             </nav>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.35, delay: 0.62, ease: 'easeOut' }}
-            >
-              <Button variant="primary" size="sm" href="/contact-us" className="text-sm text-[#002b50]">
-                Contact
-              </Button>
-            </motion.div>
+            <Button variant="primary" size="sm" href="/contact-us" className="text-sm text-[#002b50]">
+              Contact
+            </Button>
           </div>
         </div>
       </div>
