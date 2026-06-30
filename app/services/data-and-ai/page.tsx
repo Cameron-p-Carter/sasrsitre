@@ -2,7 +2,7 @@ import ServicePageLayout2 from '@/app/components/templates/ServicePageLayout2';
 
 const SERVICE_DATA = {
   hero: {
-    imageSrc: "/images/placeholder/placeholder36.jpg",
+    imageSrc: "/images/placeholder/data1.jpg",
     tagline: "Data and AI",
     title: "Move Beyond AI Experiments into",
     titleHighlight: "Production",
@@ -17,48 +17,46 @@ const SERVICE_DATA = {
   imageTextContent: {
     title: "When Organisations Need Data & AI Capability",
     description: `AI is creating enormous opportunity, but many organisations struggle to move beyond experimentation.
-
-The challenge is rarely the model.
-
-The challenge is having the right data, governance, engineering capability and delivery experience to create meaningful outcomes.`,
-    imageSrc: "/images/placeholder/data1.jpg",
+ 
+ The challenge is rarely the model.
+ 
+ The challenge is having the right data, governance, engineering capability and delivery experience to create meaningful outcomes.`,
+    imageSrc: "/images/placeholder/data2.jpg",
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
     titleColor: "text-[#0c2080]",
     imageOnRight: true,
     outcomeItems: [
       {
-        iconSrc: "/images/icons/settings.svg",
+        iconSrc: "/images/icons/question_exchange.svg",
         title: "AI Pilots Aren't Delivering Value",
         description: "Proofs of concept exist, but real business outcomes remain elusive.\n\nMany organisations have experimented with AI but struggle to translate experimentation into measurable business value.",
       },
       {
-        iconSrc: "/images/icons/cloud_done.svg",
+        iconSrc: "/images/icons/data_info_alert.svg",
         title: "Poor Data Foundations",
         description: "Data quality, governance and architecture issues are preventing progress.\n\nWithout trusted, accessible and governed data, even the best AI initiatives struggle to succeed.",
       },
       {
-        iconSrc: "/images/icons/devices.svg",
+        iconSrc: "/images/icons/person_check.svg",
         title: "Capability Gaps",
         description: "Internal teams need practical engineering expertise to deliver AI solutions safely and effectively.\n\nThe challenge is often execution rather than ideas.",
       },
       {
-        iconSrc: "/images/icons/settings.svg",
+        iconSrc: "/images/icons/brightness_alert.svg",
         title: "Uncertainty Around What Matters",
         description: "Leaders need help separating genuine opportunities from hype.\n\nNot every AI initiative should be pursued. Success comes from identifying the opportunities that create meaningful business outcomes.",
       },
     ],
   },
+  centeredHeader: {
+    title: "How We Help",
+    description: "Our approach focuses on practical outcomes, engineering discipline and long-term sustainability.",
+  },
   imageTextContent2: {
-    title: "Optimise your cloud-based services",
-    description: `In today's digital landscape, many businesses have already transitioned to cloud platforms. However, the journey doesn't end with migration. Maximising performance, reducing costs and building resilience is paramount to achieving operational excellence.
-
-At Software@Scale, we specialise in enhancing and customising cloud environments across AWS, Azure and Google Cloud to align with your unique business needs. Whether you're looking to migrate, eliminate manual processes with infrastructure-as-code or fine-tune for efficiency, our cloud engineering approach delivers measurable gains in speed, performance and cost-effectiveness.
-
-Generic, out-of-the-box cloud configurations often fall short in meeting specific organisational requirements. We focus on tailoring architecture and automation to ensure it supports your objectives, enhances agility and provides a competitive edge.
-
-Our approach involves a comprehensive assessment of your current setup, deep performance analysis, and implementation of best practices to ensure your cloud platform is not just functional but exceptional.`,
-    imageSrc: "/images/newservice/expertiseAcross.jpg",
+    title: "Why AI Initiatives Succeed",
+    description: "",
+    imageSrc: "/images/placeholder/data3.jpg",
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
     titleColor: "text-[#0c2080]",
@@ -66,68 +64,51 @@ Our approach involves a comprehensive assessment of your current setup, deep per
     outcomeItems: [
       {
         iconSrc: "/images/icons/settings.svg",
-        title: "Data Platform Engineering",
-        description: "We design and build scalable data platforms that make your data accessible, reliable and production-ready.",
+        title: "Strong Data Foundations",
+        description: "Successful AI initiatives begin with trusted, governed and accessible data. We help organisations build the foundations required for long-term success.",
       },
       {
         iconSrc: "/images/icons/cloud_done.svg",
-        title: "AI and Agentic Solutions",
-        description: "From RAG pipelines to agentic AI systems, we build intelligent solutions grounded in your business context.",
+        title: "Built For Real-World Adoption",
+        description: "Successful AI initiatives require more than good ideas. They require integration into existing systems, processes and ways of working. We focus on solutions that can be adopted, scaled and sustained in real operating environments.",
       },
       {
         iconSrc: "/images/icons/devices.svg",
-        title: "Governed and Secure",
-        description: "Every solution is built with data governance, privacy and security at its core — especially in regulated industries.",
+        title: "Enterprise Governance",
+        description: "Security, compliance and operational risk are considered from the beginning, ensuring AI solutions can operate confidently in regulated environments.",
       },
       {
         iconSrc: "/images/icons/settings.svg",
-        title: "Practical, Not Experimental",
-        description: "We focus on AI that delivers measurable business value today, not proof-of-concepts that never reach production.",
+        title: "Outcomes Over Hype",
+        description: "We focus on measurable business outcomes, not technology for technology's sake. Every initiative should improve decision making, automate work or create operational value.",
       },
     ],
   },
-  imageTextContent3: {
-    title: "Optimise your cloud-based services",
-    description: `In today's digital landscape, many businesses have already transitioned to cloud platforms. However, the journey doesn't end with migration. Maximising performance, reducing costs and building resilience is paramount to achieving operational excellence.
-
-At Software@Scale, we specialise in enhancing and customising cloud environments across AWS, Azure and Google Cloud to align with your unique business needs. Whether you're looking to migrate, eliminate manual processes with infrastructure-as-code or fine-tune for efficiency, our cloud engineering approach delivers measurable gains in speed, performance and cost-effectiveness.`,
-    imageSrc: "/images/newservice/outcomesDelivered.jpg",
-    backgroundColor: "bg-white",
-    textColor: "text-[#00050a]",
-    titleColor: "text-[#0c2080]",
-    imageOnRight: true,
-    outcomeItems: [
+  serviceFeatureColumns: {
+    backgroundColor: "bg-[#006cc9]",
+    textColor: "text-white",
+    titleColor: "text-[#14d3f3]",
+    columns: [
       {
-        iconSrc: "/images/icons/settings.svg",
-        title: "Placeholder Title One",
-        description: "Placeholder description for the first outcome item.",
+        title: "Data Foundations",
+        content: `Building the architecture, governance and pipelines required to support modern analytics and AI.\n\nExamples:\n· Data Platforms\n· Data Engineering\n· Data Migration Assurance\n· Data Governance\n· Data Quality Uplift\n· Reporting & Analytics Foundations`,
       },
       {
-        iconSrc: "/images/icons/cloud_done.svg",
-        title: "Placeholder Title Two",
-        description: "Placeholder description for the second outcome item.",
+        title: "AI Engineering",
+        content: `Practical AI applications designed to improve decision making, automate manual processes and create measurable business value.\n\nExamples:\n· Intelligent Assistants\n· Knowledge Search\n· Decision Support Tools\n· Customer Service Automation\n· Internal Productivity Solutions`,
       },
       {
-        iconSrc: "/images/icons/devices.svg",
-        title: "Placeholder Title Three",
-        description: "Placeholder description for the third outcome item.",
+        title: "Intelligent Automation",
+        content: `Moving AI from experimentation into secure, scalable and governed enterprise environments.\n\nExamples:\n· Workflow Automation\n· Process Optimisation\n· Document Processing\n· Operational Automation\n· AI-Driven Productivity Solutions`,
       },
       {
-        iconSrc: "/images/icons/settings.svg",
-        title: "Placeholder Title Four",
-        description: "Placeholder description for the fourth outcome item.",
+        title: "Production Delivery",
+        content: `Moving AI from experimentation into secure, scalable production environments.\n\nExamples:\n· Generative AI\n· Agentic AI\n· Retrieval Augmented Generation (RAG)\n· Enterprise AI Integration\n· AI Governance\n· Model Monitoring`,
       },
-    ],
+    ]
   },
-  centeredHeader: {
-    title: "Flexible Engagement Models",
-    description: "Every organisation has different delivery needs. Software@Scale provides flexible engagement models that can scale with your priorities.",
-  },
-  centeredHeader2: {
-    title: "Why Data and AI Delivers",
-  },
-  showServiceFeatures: true,
-  repeatCenteredSection: true,
+  showServiceFeatures: false,
+  repeatCenteredSection: false,
   showPortfolio: true,
   showAwards: false,
   showBlog: false,

@@ -208,6 +208,14 @@ const ServicePageLayout2 = ({ data }: ServicePageLayout2Props) => {
           </section>
         )}
         {data.showServiceFeatures && <ServiceFeaturesSection features={data.serviceFeatures1} />}
+        {data.serviceFeatureColumns && (
+          <ServiceFeatureColumns
+            columns={data.serviceFeatureColumns.columns}
+            backgroundColor={data.serviceFeatureColumns.backgroundColor}
+            textColor={data.serviceFeatureColumns.textColor}
+            titleColor={data.serviceFeatureColumns.titleColor}
+          />
+        )}
         {data.imageTextContent2 && (
           <ImageTextSection
             variant="simple"
@@ -271,14 +279,6 @@ const ServicePageLayout2 = ({ data }: ServicePageLayout2Props) => {
             textColor={data.imageTextListContent.textColor}
             titleColor={data.imageTextListContent.titleColor}
             imageOnRight={data.imageTextListContent.imageOnRight}
-          />
-        )}
-        {data.serviceFeatureColumns && (
-          <ServiceFeatureColumns
-            columns={data.serviceFeatureColumns.columns}
-            backgroundColor={data.serviceFeatureColumns.backgroundColor}
-            textColor={data.serviceFeatureColumns.textColor}
-            titleColor={data.serviceFeatureColumns.titleColor}
           />
         )}
         {data.showAwards !== false && <AwardsSection />}

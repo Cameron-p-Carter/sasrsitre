@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 interface FeatureColumn {
-  iconSrc: string;
+  iconSrc?: string;
   title: string;
   content: string | string[]; // Can be a single paragraph string or an array of list items
 }
@@ -23,15 +23,17 @@ const ServiceFeatureColumns = ({ columns, backgroundColor, textColor, titleColor
             <div key={index} className="flex flex-col gap-6 md:gap-8 w-full md:w-1/3 items-start">
               
               {/* Icon */}
-              <div className="relative w-12 h-12 shrink-0">
-                <Image
-                  src={column.iconSrc}
-                  alt={column.title}
-                  width={48}
-                  height={48}
-                  className="object-contain"
-                />
-              </div>
+              {column.iconSrc && (
+                <div className="relative w-12 h-12 shrink-0">
+                  <Image
+                    src={column.iconSrc}
+                    alt={column.title}
+                    width={48}
+                    height={48}
+                    className="object-contain"
+                  />
+                </div>
+              )}
               
               {/* Content */}
               <div className="flex flex-col gap-6 md:gap-8 items-start w-full">
@@ -59,7 +61,7 @@ const ServiceFeatureColumns = ({ columns, backgroundColor, textColor, titleColor
                         ))}
                     </ul>
                   ) : (
-                    <p>{column.content}</p>
+                    <p className="whitespace-pre-wrap">{column.content}</p>
                   )}
                 </div>
               </div>
