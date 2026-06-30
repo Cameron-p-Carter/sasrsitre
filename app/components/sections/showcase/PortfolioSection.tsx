@@ -20,6 +20,7 @@ interface PortfolioSectionProps {
   description: string;
   projects: Project[];
   viewAllButtonText: string;
+  variant?: 'light' | 'dark';
 }
 
 const ease: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
@@ -43,9 +44,20 @@ export default function PortfolioSection({
   description,
   projects,
   viewAllButtonText,
+  variant = 'light',
 }: PortfolioSectionProps) {
+  const dark = variant === 'dark';
+  const bg = dark ? 'bg-[#006cc9]' : 'bg-[#cce1f4]';
+  const headingColor = dark ? 'text-white' : 'text-[#0c2080]';
+  const descColor = dark ? 'text-white/80' : 'text-[#00050a]';
+  const cardTitleColor = dark ? 'text-[#14d3f3]' : 'text-[#006cc9]';
+  const bodyColor = dark ? 'text-white/80' : 'text-[#00050a]';
+  const labelColor = dark ? 'text-white' : 'text-[#00050a]';
+  const borderColor = dark ? 'border-white/20' : 'border-[#00050a]/15';
+  const linkColor = dark ? 'text-white' : 'text-[#00050a]';
+
   return (
-    <section className="bg-[#cce1f4] px-5 md:px-8 lg:px-16 py-16 md:py-28">
+    <section className={`${bg} px-5 md:px-8 lg:px-16 py-16 md:py-28`}>
       <div className="max-w-[1280px] mx-auto">
         {/* Section Header */}
         <motion.div
@@ -55,10 +67,10 @@ export default function PortfolioSection({
           viewport={{ once: true, margin: '-10% 0px' }}
           transition={{ duration: 0.75, ease }}
         >
-          <h2 className="text-[32px] md:text-[40px] lg:text-[48px] font-bold leading-[1.2] text-[#0c2080] tracking-[-0.32px] md:tracking-[-0.4px] lg:tracking-[-0.48px] mb-5 md:mb-6">
+          <h2 className={`text-[32px] md:text-[40px] lg:text-[48px] font-bold leading-[1.2] ${headingColor} tracking-[-0.32px] md:tracking-[-0.4px] lg:tracking-[-0.48px] mb-5 md:mb-6`}>
             {title}
           </h2>
-          <p className="text-base md:text-[17px] lg:text-[18px] font-normal leading-[1.5] text-[#00050a]">
+          <p className={`text-base md:text-[17px] lg:text-[18px] font-normal leading-[1.5] ${descColor}`}>
             {description}
           </p>
         </motion.div>
@@ -91,37 +103,37 @@ export default function PortfolioSection({
                 </div>
                 <div className="flex flex-col gap-5">
                   <div className="flex flex-col gap-2">
-                    <h3 className="text-[24px] md:text-[32px] font-bold leading-[1.3] text-[#006cc9] tracking-[-0.32px] group-hover:text-[#006cc9] transition-colors">
+                    <h3 className={`text-[24px] md:text-[32px] font-bold leading-[1.3] ${cardTitleColor} tracking-[-0.32px] transition-colors`}>
                       {project.title}
                     </h3>
-                    <div className="flex flex-col border-t border-[#00050a]/15 pt-5 mt-2">
-                      <div className="flex items-center gap-4 border-b border-[#00050a]/15 py-5">
-                        <p className="text-[16px] md:text-[18px] font-bold text-[#00050a] w-[120px] shrink-0">
+                    <div className={`flex flex-col border-t ${borderColor} pt-5 mt-2`}>
+                      <div className={`flex items-center gap-4 border-b ${borderColor} py-5`}>
+                        <p className={`text-[16px] md:text-[18px] font-bold ${labelColor} w-[120px] shrink-0`}>
                           Challenge:
                         </p>
-                        <p className="text-[16px] md:text-[18px] font-normal text-[#00050a] flex-1">
+                        <p className={`text-[16px] md:text-[18px] font-normal ${bodyColor} flex-1`}>
                           {project.challenge}
                         </p>
                       </div>
-                      <div className="flex items-center gap-4 border-b border-[#00050a]/15 py-5">
-                        <p className="text-[16px] md:text-[18px] font-bold text-[#00050a] w-[120px] shrink-0">
+                      <div className={`flex items-center gap-4 border-b ${borderColor} py-5`}>
+                        <p className={`text-[16px] md:text-[18px] font-bold ${labelColor} w-[120px] shrink-0`}>
                           Outcome:
                         </p>
-                        <p className="text-[16px] md:text-[18px] font-normal text-[#00050a] flex-1">
+                        <p className={`text-[16px] md:text-[18px] font-normal ${bodyColor} flex-1`}>
                           {project.outcome}
                         </p>
                       </div>
-                      <div className="flex items-center gap-4 border-b border-[#00050a]/15 py-5">
-                        <p className="text-[16px] md:text-[18px] font-bold text-[#00050a] w-[120px] shrink-0">
+                      <div className={`flex items-center gap-4 border-b ${borderColor} py-5`}>
+                        <p className={`text-[16px] md:text-[18px] font-bold ${labelColor} w-[120px] shrink-0`}>
                           Numbers:
                         </p>
-                        <p className="text-[16px] md:text-[18px] font-normal text-[#00050a] flex-1">
+                        <p className={`text-[16px] md:text-[18px] font-normal ${bodyColor} flex-1`}>
                           {project.numbers}
                         </p>
                       </div>
                     </div>
                   </div>
-                  <div className="flex items-center gap-2 text-[#00050a] mt-4">
+                  <div className={`flex items-center gap-2 ${linkColor} mt-4`}>
                     <span className="text-base font-medium leading-[1.5]">
                       View Proven Delivery
                     </span>
@@ -177,7 +189,7 @@ export default function PortfolioSection({
                 <div className="grid grid-cols-2 gap-8 lg:gap-12 mb-4">
                   {pair.map((project) => (
                     <Link key={project.id} href={project.link || "/collections/case-studies"} className="group">
-                      <h3 className="text-[24px] md:text-[32px] font-bold leading-[1.3] text-[#006cc9] tracking-[-0.32px] group-hover:opacity-80 transition-opacity">
+                      <h3 className={`text-[24px] md:text-[32px] font-bold leading-[1.3] ${cardTitleColor} tracking-[-0.32px] group-hover:opacity-80 transition-opacity`}>
                         {project.title}
                       </h3>
                     </Link>
@@ -185,11 +197,11 @@ export default function PortfolioSection({
                 </div>
 
                 {/* Challenge row */}
-                <div className="grid grid-cols-2 gap-8 lg:gap-12 border-t border-[#00050a]/15">
+                <div className={`grid grid-cols-2 gap-8 lg:gap-12 border-t ${borderColor}`}>
                   {pair.map((project) => (
-                    <div key={project.id} className="flex items-center gap-4 border-b border-[#00050a]/15 py-5">
-                      <p className="text-[16px] md:text-[18px] font-bold text-[#00050a] w-[120px] shrink-0">Challenge:</p>
-                      <p className="text-[16px] md:text-[18px] font-normal text-[#00050a] flex-1">{project.challenge}</p>
+                    <div key={project.id} className={`flex items-center gap-4 border-b ${borderColor} py-5`}>
+                      <p className={`text-[16px] md:text-[18px] font-bold ${labelColor} w-[120px] shrink-0`}>Challenge:</p>
+                      <p className={`text-[16px] md:text-[18px] font-normal ${bodyColor} flex-1`}>{project.challenge}</p>
                     </div>
                   ))}
                 </div>
@@ -197,9 +209,9 @@ export default function PortfolioSection({
                 {/* Outcome row */}
                 <div className="grid grid-cols-2 gap-8 lg:gap-12">
                   {pair.map((project) => (
-                    <div key={project.id} className="flex items-center gap-4 border-b border-[#00050a]/15 py-5">
-                      <p className="text-[16px] md:text-[18px] font-bold text-[#00050a] w-[120px] shrink-0">Outcome:</p>
-                      <p className="text-[16px] md:text-[18px] font-normal text-[#00050a] flex-1">{project.outcome}</p>
+                    <div key={project.id} className={`flex items-center gap-4 border-b ${borderColor} py-5`}>
+                      <p className={`text-[16px] md:text-[18px] font-bold ${labelColor} w-[120px] shrink-0`}>Outcome:</p>
+                      <p className={`text-[16px] md:text-[18px] font-normal ${bodyColor} flex-1`}>{project.outcome}</p>
                     </div>
                   ))}
                 </div>
@@ -207,9 +219,9 @@ export default function PortfolioSection({
                 {/* Numbers row */}
                 <div className="grid grid-cols-2 gap-8 lg:gap-12">
                   {pair.map((project) => (
-                    <div key={project.id} className="flex items-center gap-4 border-b border-[#00050a]/15 py-5">
-                      <p className="text-[16px] md:text-[18px] font-bold text-[#00050a] w-[120px] shrink-0">Numbers:</p>
-                      <p className="text-[16px] md:text-[18px] font-normal text-[#00050a] flex-1">{project.numbers}</p>
+                    <div key={project.id} className={`flex items-center gap-4 border-b ${borderColor} py-5`}>
+                      <p className={`text-[16px] md:text-[18px] font-bold ${labelColor} w-[120px] shrink-0`}>Numbers:</p>
+                      <p className={`text-[16px] md:text-[18px] font-normal ${bodyColor} flex-1`}>{project.numbers}</p>
                     </div>
                   ))}
                 </div>
@@ -217,7 +229,7 @@ export default function PortfolioSection({
                 {/* View links */}
                 <div className="grid grid-cols-2 gap-8 lg:gap-12 mt-6">
                   {pair.map((project) => (
-                    <Link key={project.id} href={project.link || "/collections/case-studies"} className="flex items-center gap-2 text-[#00050a]">
+                    <Link key={project.id} href={project.link || "/collections/case-studies"} className={`flex items-center gap-2 ${linkColor}`}>
                       <span className="text-base font-medium leading-[1.5]">View Proven Delivery</span>
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

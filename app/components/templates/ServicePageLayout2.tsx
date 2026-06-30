@@ -10,6 +10,8 @@ import ServiceStatsSection from '@/app/components/sections/stats/ServiceStatsSec
 import CaseStudySection from '@/app/components/sections/showcase/CaseStudySection';
 import BlogSection from '@/app/components/sections/showcase/BlogSection';
 import CTASection from '@/app/components/sections/cta/CTASection';
+import ServiceFeaturesSection from '@/app/components/ServiceFeaturesSection';
+import PortfolioSection from '@/app/components/sections/showcase/PortfolioSection';
 
 interface HeroButton {
   text: string;
@@ -99,6 +101,12 @@ interface CenteredContentSectionData {
   variant?: 'light' | 'dark';
 }
 
+interface CenteredHeaderData {
+  title: string;
+  description: string;
+  backgroundColor?: string;
+}
+
 interface TestimonialData {
   quote: string;
   name: string;
@@ -117,6 +125,14 @@ interface ServicePageData {
   hero: HeroSectionData;
   imageTextContent?: ImageTextContentSectionData;
   centeredContent?: CenteredContentSectionData;
+  centeredHeader?: CenteredHeaderData;
+  showServiceFeatures?: boolean;
+  imageTextContent2?: ImageTextContentSectionData;
+  repeatCenteredSection?: boolean;
+  imageTextContent3?: ImageTextContentSectionData;
+  showPortfolio?: boolean;
+  showAwards?: boolean;
+  showBlog?: boolean;
   imageTextListContent?: ImageTextListSectionData;
   serviceFeatureColumns?: ServiceFeatureColumnsData;
   serviceStatsContent?: ServiceStatsSectionData;
@@ -166,6 +182,58 @@ const ServicePageLayout2 = ({ data }: ServicePageLayout2Props) => {
             variant={data.centeredContent.variant ?? 'light'}
           />
         )}
+        {data.centeredHeader && (
+          <section className={`${data.centeredHeader.backgroundColor ?? 'bg-[#006cc9]'} px-5 md:px-16 py-16 md:py-20 w-full`}>
+            <div className="max-w-[1280px] mx-auto flex flex-col gap-5 md:gap-6 items-center text-center">
+              <h2 className="font-bold text-white text-[36px] md:text-[48px] leading-[1.2] tracking-[-0.36px] md:tracking-[-0.48px]">
+                {data.centeredHeader.title}
+              </h2>
+              <p className="font-normal text-white text-base md:text-lg leading-[1.5] max-w-[768px]">
+                {data.centeredHeader.description}
+              </p>
+            </div>
+          </section>
+        )}
+        {data.showServiceFeatures && <ServiceFeaturesSection />}
+        {data.imageTextContent2 && (
+          <ImageTextSection
+            variant="simple"
+            title={data.imageTextContent2.title}
+            description={data.imageTextContent2.description}
+            imageSrc={data.imageTextContent2.imageSrc}
+            backgroundColor={data.imageTextContent2.backgroundColor}
+            textColor={data.imageTextContent2.textColor}
+            titleColor={data.imageTextContent2.titleColor}
+            imageOnRight={data.imageTextContent2.imageOnRight}
+            outcomeItems={data.imageTextContent2.outcomeItems}
+          />
+        )}
+        {data.repeatCenteredSection && data.centeredHeader && (
+          <section className={`${data.centeredHeader.backgroundColor ?? 'bg-[#006cc9]'} px-5 md:px-16 py-16 md:py-20 w-full`}>
+            <div className="max-w-[1280px] mx-auto flex flex-col gap-5 md:gap-6 items-center text-center">
+              <h2 className="font-bold text-white text-[36px] md:text-[48px] leading-[1.2] tracking-[-0.36px] md:tracking-[-0.48px]">
+                {data.centeredHeader.title}
+              </h2>
+              <p className="font-normal text-white text-base md:text-lg leading-[1.5] max-w-[768px]">
+                {data.centeredHeader.description}
+              </p>
+            </div>
+          </section>
+        )}
+        {data.repeatCenteredSection && data.showServiceFeatures && <ServiceFeaturesSection />}
+        {data.imageTextContent3 && (
+          <ImageTextSection
+            variant="simple"
+            title={data.imageTextContent3.title}
+            description={data.imageTextContent3.description}
+            imageSrc={data.imageTextContent3.imageSrc}
+            backgroundColor={data.imageTextContent3.backgroundColor}
+            textColor={data.imageTextContent3.textColor}
+            titleColor={data.imageTextContent3.titleColor}
+            imageOnRight={data.imageTextContent3.imageOnRight}
+            outcomeItems={data.imageTextContent3.outcomeItems}
+          />
+        )}
         {data.showTestimonial && (
           <CoreValuesTestimonialSection
             quote={data.testimonialData?.quote}
@@ -195,7 +263,7 @@ const ServicePageLayout2 = ({ data }: ServicePageLayout2Props) => {
             titleColor={data.serviceFeatureColumns.titleColor}
           />
         )}
-        <AwardsSection />
+        {data.showAwards !== false && <AwardsSection />}
         {data.serviceStatsContent && (
           <ServiceStatsSection
             title={data.serviceStatsContent.title}
@@ -207,8 +275,57 @@ const ServicePageLayout2 = ({ data }: ServicePageLayout2Props) => {
             accentColor={data.serviceStatsContent.accentColor}
           />
         )}
-        <CaseStudySection />
-        <BlogSection />
+        {data.showPortfolio ? (
+          <PortfolioSection
+            variant="dark"
+            title="Proven Delivery"
+            description="We've helped organisations across banking, payments, superannuation, retail and digital platforms solve complex technology challenges and strengthen engineering capability."
+            viewAllButtonText="View all"
+            projects={[
+              {
+                id: 1,
+                title: "Coates Group",
+                challenge: "Scale engineering capability across a global restaurant technology platform.",
+                outcome: "Built and embedded a 45-person engineering capability supporting platform growth — 30+ countries supported.",
+                numbers: "45+ person engineering capability\n30+ countries",
+                image: "/images/placeholder/placeholder12.jpg",
+                objectPosition: "top",
+                link: "/collections/case-studies/coates-group",
+              },
+              {
+                id: 2,
+                title: "Commonwealth Bank of Australia",
+                challenge: "Deliver large-scale digital banking initiatives across highly regulated environments.",
+                outcome: "Supported engineering delivery across critical customer-facing platforms.",
+                numbers: "45+ person engineering capability\n30+ countries",
+                image: "/images/case/case19.png",
+                objectPosition: "right",
+                link: "/collections/case-studies/cba-netbank",
+              },
+              {
+                id: 3,
+                title: "National Australia Bank",
+                challenge: "Accelerate cloud and platform engineering capability within a rapidly growing digital banking environment.",
+                outcome: "Strengthened platform delivery and engineering capability.",
+                numbers: "45+ person engineering capability\n30+ countries",
+                image: "/images/case/case17.jpg",
+                link: "/collections/case-studies/nab",
+              },
+              {
+                id: 4,
+                title: "GoFundraise",
+                challenge: "Support international growth through modern cloud-native engineering capability.",
+                outcome: "Delivered scalable platform capability supporting expansion and product innovation.",
+                numbers: "45+ person engineering capability\n30+ countries",
+                image: "/images/placeholder/placeholder14.jpg",
+                link: "/collections/case-studies/gofundraise",
+              },
+            ]}
+          />
+        ) : (
+          <CaseStudySection />
+        )}
+        {data.showBlog !== false && <BlogSection />}
         {data.ctaSection && (
           <CTASection
             imageSrc={data.ctaSection.imageSrc}
