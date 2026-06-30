@@ -60,7 +60,7 @@ At Software@Scale, we specialise in enhancing and customising cloud environments
 Generic, out-of-the-box cloud configurations often fall short in meeting specific organisational requirements. We focus on tailoring architecture and automation to ensure it supports your objectives, enhances agility and provides a competitive edge.
 
 Our approach involves a comprehensive assessment of your current setup, deep performance analysis, and implementation of best practices to ensure your cloud platform is not just functional but exceptional.`,
-    imageSrc: "/images/placeholder/placeholder35.jpg",
+    imageSrc: "/images/newservice/expertiseAcross.jpg",
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
     titleColor: "text-[#0c2080]",
@@ -93,7 +93,7 @@ Our approach involves a comprehensive assessment of your current setup, deep per
     description: `In today's digital landscape, many businesses have already transitioned to cloud platforms. However, the journey doesn't end with migration. Maximising performance, reducing costs and building resilience is paramount to achieving operational excellence.
 
 At Software@Scale, we specialise in enhancing and customising cloud environments across AWS, Azure and Google Cloud to align with your unique business needs. Whether you're looking to migrate, eliminate manual processes with infrastructure-as-code or fine-tune for efficiency, our cloud engineering approach delivers measurable gains in speed, performance and cost-effectiveness.`,
-    imageSrc: "/images/placeholder/placeholder35.jpg",
+    imageSrc: "/images/newservice/outcomesDelivered.jpg",
     backgroundColor: "bg-white",
     textColor: "text-[#00050a]",
     titleColor: "text-[#0c2080]",
@@ -124,6 +124,9 @@ At Software@Scale, we specialise in enhancing and customising cloud environments
   centeredHeader: {
     title: "Flexible Engagement Models",
     description: "Every organisation has different delivery needs. Software@Scale provides flexible engagement models that can scale with your priorities.",
+  },
+  centeredHeader2: {
+    title: "Why Data and AI Delivers",
   },
   showServiceFeatures: true,
   repeatCenteredSection: true,

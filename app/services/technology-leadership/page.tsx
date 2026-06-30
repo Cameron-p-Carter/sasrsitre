@@ -4,25 +4,21 @@ const SERVICE_DATA = {
   hero: {
     imageSrc: "/images/placeholder/placeholder36.jpg",
     tagline: "Lead",
-    title: "Technology",
-    titleHighlight: "Leadership",
-    description: "We provide experienced technology leaders who remain accountable for delivery and drive outcomes with confidence.",
+    title: "Technology Leadership For",
+    titleHighlight: "Critical Decisions",
+    description: "Not every technology challenge requires more engineers.\n\nSometimes organisations need experienced leaders who have solved similar problems before.\n\nSoftware@Scale provides access to technology executives, architects and engineering leaders who help organisations navigate complex decisions, reduce risk and move forward with confidence.",
     overlayOpacity: 0.5,
     objectPosition: "center 25%",
     buttons: [
-      { text: "Talk to a Technology Leader", href: "/contact-us", variant: "primary" as const },
+      { text: "Talk To A Technology Leader", href: "/contact-us", variant: "primary" as const },
       { text: "View Proven Delivery", href: "/case-studies", variant: "outline" as const },
     ],
   },
   imageTextContent: {
-    title: "Optimise your cloud-based services",
-    description: `In today's digital landscape, many businesses have already transitioned to cloud platforms. However, the journey doesn't end with migration. Maximising performance, reducing costs and building resilience is paramount to achieving operational excellence.
+    title: "When Organisations Need Technology Leadership",
+    description: `The most expensive technology decisions are often made before delivery begins.
 
-At Software@Scale, we specialise in enhancing and customising cloud environments across AWS, Azure and Google Cloud to align with your unique business needs. Whether you're looking to migrate, eliminate manual processes with infrastructure-as-code or fine-tune for efficiency, our cloud engineering approach delivers measurable gains in speed, performance and cost-effectiveness.
-
-Generic, out-of-the-box cloud configurations often fall short in meeting specific organisational requirements. We focus on tailoring architecture and automation to ensure it supports your objectives, enhances agility and provides a competitive edge.
-
-Our approach involves a comprehensive assessment of your current setup, deep performance analysis, and implementation of best practices to ensure your cloud platform is not just functional but exceptional.`,
+Whether you're planning a transformation, assessing a platform, evaluating an acquisition or navigating a complex technology challenge, experienced leadership can significantly reduce risk and improve outcomes.`,
     imageSrc: "/images/placeholder/placeholder35.jpg",
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
@@ -30,103 +26,103 @@ Our approach involves a comprehensive assessment of your current setup, deep per
     imageOnRight: true,
     outcomeItems: [
       {
-        iconSrc: "/images/icons/settings.svg",
-        title: "Executive Experience",
-        description: "Our leaders have held CTO, CIO and VP Engineering roles inside large financial services and technology organisations.",
+        iconSrc: "/images/icons/tactic.svg",
+        title: "Major Technology Decisions",
+        description: "The organisation is making decisions that will have long-term implications for delivery, cost, risk or scalability.",
       },
       {
-        iconSrc: "/images/icons/cloud_done.svg",
-        title: "Accountable for Delivery",
-        description: "Unlike advisors who observe from the sidelines, our leaders stay involved and own outcomes alongside your team.",
+        iconSrc: "/images/icons/flowsheet.svg",
+        title: "Architecture Uncertainty",
+        description: "Leaders need confidence that platforms are scalable, maintainable and aligned to business goals.",
       },
       {
-        iconSrc: "/images/icons/devices.svg",
-        title: "Regulatory Confidence",
-        description: "Deep experience navigating compliance, governance and risk in highly regulated sectors.",
+        iconSrc: "/images/icons/person_search.svg",
+        title: "Executive Capability Gaps",
+        description: "Internal teams need additional leadership capacity or independent guidance.",
       },
       {
-        iconSrc: "/images/icons/settings.svg",
-        title: "Strategic Alignment",
-        description: "We align technology investment with business objectives, ensuring your roadmap drives measurable commercial outcomes.",
+        iconSrc: "/images/icons/handshake.svg",
+        title: "Transactions, Funding Or Mergers",
+        description: "Technology platforms need to be assessed before investment, acquisition or strategic decisions are made.",
       },
     ],
   },
   imageTextContent2: {
-    title: "Optimise your cloud-based services",
-    description: `In today's digital landscape, many businesses have already transitioned to cloud platforms. However, the journey doesn't end with migration. Maximising performance, reducing costs and building resilience is paramount to achieving operational excellence.
-
-At Software@Scale, we specialise in enhancing and customising cloud environments across AWS, Azure and Google Cloud to align with your unique business needs. Whether you're looking to migrate, eliminate manual processes with infrastructure-as-code or fine-tune for efficiency, our cloud engineering approach delivers measurable gains in speed, performance and cost-effectiveness.
-
-Generic, out-of-the-box cloud configurations often fall short in meeting specific organisational requirements. We focus on tailoring architecture and automation to ensure it supports your objectives, enhances agility and provides a competitive edge.
-
-Our approach involves a comprehensive assessment of your current setup, deep performance analysis, and implementation of best practices to ensure your cloud platform is not just functional but exceptional.`,
-    imageSrc: "/images/placeholder/placeholder35.jpg",
+    title: "Why Technology Leaders Trust Software@Scale",
+    description: `Our leadership team combines executive experience with hands-on engineering depth — giving organisations independent, practical guidance they can trust.`,
+    imageSrc: "/images/newservice/expertiseAcross.jpg",
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
     titleColor: "text-[#0c2080]",
     imageOnRight: false,
     outcomeItems: [
       {
-        iconSrc: "/images/icons/settings.svg",
-        title: "Executive Experience",
-        description: "Our leaders have held CTO, CIO and VP Engineering roles inside large financial services and technology organisations.",
+        iconSrc: "/images/icons/award_star.svg",
+        title: "Leaders Who Have Done It Before",
+        description: "Our leadership team has built, operated and transformed technology platforms across banking, payments, insurance, superannuation and digital businesses.",
       },
       {
-        iconSrc: "/images/icons/cloud_done.svg",
-        title: "Accountable for Delivery",
-        description: "Unlike advisors who observe from the sidelines, our leaders stay involved and own outcomes alongside your team.",
+        iconSrc: "/images/icons/sync_desktop.svg",
+        title: "Executive Experience With Engineering Depth",
+        description: "We combine strategic thinking with practical engineering expertise.",
       },
       {
-        iconSrc: "/images/icons/devices.svg",
-        title: "Regulatory Confidence",
-        description: "Deep experience navigating compliance, governance and risk in highly regulated sectors.",
+        iconSrc: "/images/icons/security_dark.svg",
+        title: "Independent Advice",
+        description: "Recommendations are based on what is right for the organisation, not on selling larger programs of work.",
       },
       {
-        iconSrc: "/images/icons/settings.svg",
-        title: "Strategic Alignment",
-        description: "We align technology investment with business objectives, ensuring your roadmap drives measurable commercial outcomes.",
-      },
-    ],
-  },
-  imageTextContent3: {
-    title: "Optimise your cloud-based services",
-    description: `In today's digital landscape, many businesses have already transitioned to cloud platforms. However, the journey doesn't end with migration. Maximising performance, reducing costs and building resilience is paramount to achieving operational excellence.
-
-At Software@Scale, we specialise in enhancing and customising cloud environments across AWS, Azure and Google Cloud to align with your unique business needs. Whether you're looking to migrate, eliminate manual processes with infrastructure-as-code or fine-tune for efficiency, our cloud engineering approach delivers measurable gains in speed, performance and cost-effectiveness.`,
-    imageSrc: "/images/placeholder/placeholder35.jpg",
-    backgroundColor: "bg-white",
-    textColor: "text-[#00050a]",
-    titleColor: "text-[#0c2080]",
-    imageOnRight: true,
-    outcomeItems: [
-      {
-        iconSrc: "/images/icons/settings.svg",
-        title: "Placeholder Title One",
-        description: "Placeholder description for the first outcome item.",
-      },
-      {
-        iconSrc: "/images/icons/cloud_done.svg",
-        title: "Placeholder Title Two",
-        description: "Placeholder description for the second outcome item.",
-      },
-      {
-        iconSrc: "/images/icons/devices.svg",
-        title: "Placeholder Title Three",
-        description: "Placeholder description for the third outcome item.",
-      },
-      {
-        iconSrc: "/images/icons/settings.svg",
-        title: "Placeholder Title Four",
-        description: "Placeholder description for the fourth outcome item.",
+        iconSrc: "/images/icons/delivery_truck_speed.svg",
+        title: "Focused On Outcomes",
+        description: "Every engagement is designed to improve decision quality, reduce risk and increase delivery confidence.",
       },
     ],
   },
   centeredHeader: {
-    title: "Flexible Engagement Models",
-    description: "Every organisation has different delivery needs. Software@Scale provides flexible engagement models that can scale with your priorities.",
+    title: "How We Help",
+    description: "Software@Scale combines executive leadership experience with practical engineering expertise to help organisations make better technology decisions.",
+  },
+  serviceFeatures1: [
+    {
+      title: "Fractional Technology Leadership",
+      description: "Access experienced technology leaders without the overhead of permanent executive hires.\n\nFractional CTO, Fractional CIO, Technology Leadership Support",
+    },
+    {
+      title: "Architecture & Platform Reviews",
+      description: "Independent assessment of platform health, scalability, security and technical risk.\n\nArchitecture Reviews, Platform Assessments, Modernisation Planning",
+    },
+    {
+      title: "Technology Due Diligence",
+      description: "Technical assessments that help organisations make informed investment, acquisition and strategic decisions.\n\nPlatform Due Diligence, Technology Risk Reviews, M&A Support",
+    },
+    {
+      title: "Technology Strategy",
+      description: "Practical technology roadmaps aligned to business objectives and delivery realities.\n\nTechnology Strategy, Transformation Planning, Operating Model Reviews",
+    },
+  ],
+  serviceFeatures: [
+    {
+      title: "Fractional Technology Leadership",
+      description: "Access experienced technology leaders without the overhead of permanent executive hires.\n\nFractional CTO, Fractional CIO, Technology Leadership Support",
+    },
+    {
+      title: "Architecture & Platform Reviews",
+      description: "Independent assessment of platform health, scalability, security and technical risk.\n\nArchitecture Reviews, Platform Assessments, Modernisation Planning",
+    },
+    {
+      title: "Technology Due Diligence",
+      description: "Technical assessments that help organisations make informed investment, acquisition and strategic decisions.\n\nPlatform Due Diligence, Technology Risk Reviews, M&A Support",
+    },
+    {
+      title: "Technology Strategy",
+      description: "Practical technology roadmaps aligned to business objectives and delivery realities.\n\nTechnology Strategy, Transformation Planning, Operating Model Reviews",
+    },
+  ],
+  centeredHeader2: {
+    title: "Why Technology Leadership Matters",
   },
   showServiceFeatures: true,
-  repeatCenteredSection: true,
+  repeatCenteredSection: false,
   showPortfolio: true,
   showAwards: false,
   showBlog: false,

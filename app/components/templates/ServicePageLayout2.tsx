@@ -126,7 +126,10 @@ interface ServicePageData {
   imageTextContent?: ImageTextContentSectionData;
   centeredContent?: CenteredContentSectionData;
   centeredHeader?: CenteredHeaderData;
+  centeredHeader2?: CenteredHeaderData;
   showServiceFeatures?: boolean;
+  serviceFeatures1?: { title: string; description: string }[];
+  serviceFeatures?: { title: string; description: string }[];
   imageTextContent2?: ImageTextContentSectionData;
   repeatCenteredSection?: boolean;
   imageTextContent3?: ImageTextContentSectionData;
@@ -194,7 +197,7 @@ const ServicePageLayout2 = ({ data }: ServicePageLayout2Props) => {
             </div>
           </section>
         )}
-        {data.showServiceFeatures && <ServiceFeaturesSection />}
+        {data.showServiceFeatures && <ServiceFeaturesSection features={data.serviceFeatures1} />}
         {data.imageTextContent2 && (
           <ImageTextSection
             variant="simple"
@@ -208,19 +211,24 @@ const ServicePageLayout2 = ({ data }: ServicePageLayout2Props) => {
             outcomeItems={data.imageTextContent2.outcomeItems}
           />
         )}
-        {data.repeatCenteredSection && data.centeredHeader && (
-          <section className={`${data.centeredHeader.backgroundColor ?? 'bg-[#006cc9]'} px-5 md:px-16 py-16 md:py-20 w-full`}>
-            <div className="max-w-[1280px] mx-auto flex flex-col gap-5 md:gap-6 items-center text-center">
-              <h2 className="font-bold text-white text-[36px] md:text-[48px] leading-[1.2] tracking-[-0.36px] md:tracking-[-0.48px]">
-                {data.centeredHeader.title}
-              </h2>
-              <p className="font-normal text-white text-base md:text-lg leading-[1.5] max-w-[768px]">
-                {data.centeredHeader.description}
-              </p>
-            </div>
-          </section>
-        )}
-        {data.repeatCenteredSection && data.showServiceFeatures && <ServiceFeaturesSection />}
+        {data.repeatCenteredSection && (data.centeredHeader2 ?? data.centeredHeader) && (() => {
+          const h = data.centeredHeader2 ?? data.centeredHeader!;
+          return (
+            <section className={`${h.backgroundColor ?? 'bg-[#006cc9]'} px-5 md:px-16 py-16 md:py-20 w-full`}>
+              <div className="max-w-[1280px] mx-auto flex flex-col gap-5 md:gap-6 items-center text-center">
+                <h2 className="font-bold text-white text-[36px] md:text-[48px] leading-[1.2] tracking-[-0.36px] md:tracking-[-0.48px]">
+                  {h.title}
+                </h2>
+                {h.description && (
+                  <p className="font-normal text-white text-base md:text-lg leading-[1.5] max-w-[768px]">
+                    {h.description}
+                  </p>
+                )}
+              </div>
+            </section>
+          );
+        })()}
+        {data.repeatCenteredSection && data.showServiceFeatures && <ServiceFeaturesSection features={data.serviceFeatures} />}
         {data.imageTextContent3 && (
           <ImageTextSection
             variant="simple"
