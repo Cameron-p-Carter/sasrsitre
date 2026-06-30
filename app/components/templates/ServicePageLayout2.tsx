@@ -104,7 +104,7 @@ interface CenteredContentSectionData {
 
 interface CenteredHeaderData {
   title: string;
-  description: string;
+  description?: string;
   backgroundColor?: string;
 }
 
