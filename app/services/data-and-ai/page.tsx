@@ -128,7 +128,7 @@ Our approach involves a comprehensive assessment of your current setup, deep per
     primaryButtonText: "Contact",
     secondaryButtonText: "Learn More",
   },
-  showTestimonial: true,
+  showTestimonial: false,
 };
 
 export default function DataAndAIPage() {

@@ -105,7 +105,7 @@ From initial assessments to ongoing monitoring, our security architecture servic
     primaryButtonText: "Contact",
     secondaryButtonText: "Learn More",
   },
-  showTestimonial: true,
+  showTestimonial: false,
 };
 
 export default function SecurityArchitecturePage() {

@@ -105,7 +105,7 @@ Our assessments are designed to be low disruption but high value. With a clear v
     primaryButtonText: "Contact",
     secondaryButtonText: "Learn More",
   },
-  showTestimonial: true,
+  showTestimonial: false,
 };
 
 export default function EngineeringPerformancePage() {

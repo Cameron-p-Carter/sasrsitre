@@ -103,7 +103,7 @@ Our focus is on practical, tailored solutions that distinguish genuine AI capabi
     primaryButtonText: "Contact",
     secondaryButtonText: "Learn More",
   },
-  showTestimonial: true,
+  showTestimonial: false,
 };
 
 export default function DataAIServicesPage() {

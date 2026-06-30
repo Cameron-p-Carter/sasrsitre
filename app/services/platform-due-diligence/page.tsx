@@ -104,7 +104,7 @@ We combine technical rigour with commercial awareness, helping you make smarter 
     primaryButtonText: "Contact",
     secondaryButtonText: "Learn More",
   },
-  showTestimonial: true,
+  showTestimonial: false,
 };
 
 export default function PlatformDueDiligencePage() {
