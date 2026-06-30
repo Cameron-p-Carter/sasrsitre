@@ -136,8 +136,8 @@ Whether it's accelerating delivery, solving a difficult technology challenge or 
     imageSrc: "/images/placeholder/placeholder16.jpg",
     title: "Need Engineering Capability?",
     description: "Contact us today to explore how our Engineering Teams service can transform your business.",
-    primaryButtonText: "Contact",
-    secondaryButtonText: "Learn More",
+    primaryButtonText: "Talk to a Technology Leader",
+    secondaryButtonText: "View Proven Delivery",
   },
   centeredHeader: {
     title: "Flexible Engagement Models",

@@ -72,7 +72,7 @@ export default function CTASection({
             <Button variant="primary" href={primaryButtonUrl} target={primaryButtonUrl?.startsWith('http') ? '_blank' : undefined}>
               {primaryButtonText}
             </Button>
-            <Button variant="outline" href="/core-values">
+            <Button variant="outline" href="/collections/case-studies">
               {secondaryButtonText}
             </Button>
           </motion.div>

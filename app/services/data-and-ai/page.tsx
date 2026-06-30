@@ -138,8 +138,8 @@ At Software@Scale, we specialise in enhancing and customising cloud environments
     imageSrc: "/images/placeholder/placeholder16.jpg",
     title: "Unlock your data and AI potential today",
     description: "Contact us today to explore how our Data and AI service can transform your business.",
-    primaryButtonText: "Contact",
-    secondaryButtonText: "Learn More",
+    primaryButtonText: "Talk to a Technology Leader",
+    secondaryButtonText: "View Proven Delivery",
   },
 };
 

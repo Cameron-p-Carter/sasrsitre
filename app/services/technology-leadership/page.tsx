@@ -131,8 +131,8 @@ Whether you're planning a transformation, assessing a platform, evaluating an ac
     imageSrc: "/images/placeholder/placeholder16.jpg",
     title: "Strengthen your technology leadership today",
     description: "Contact us today to explore how our Technology Leadership service can transform your business.",
-    primaryButtonText: "Contact",
-    secondaryButtonText: "Learn More",
+    primaryButtonText: "Talk To A Technology Leader",
+    secondaryButtonText: "View Proven Delivery",
   },
 };
 

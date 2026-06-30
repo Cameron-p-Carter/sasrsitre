@@ -28,22 +28,22 @@ Whether it's a delayed program, technical debt, capability gaps or delivery unce
     imageOnRight: true,
     outcomeItems: [
       {
-        iconSrc: "/images/icons/tactic.svg",
+        iconSrc: "/images/icons/timer_arrow_down.svg",
         title: "Programs Are Behind Schedule",
         description: "Critical initiatives are slipping and stakeholder confidence is starting to erode.",
       },
       {
-        iconSrc: "/images/icons/handyman_dark.svg",
+        iconSrc: "/images/icons/send_money.svg",
         title: "Technical Debt Is Slowing Progress",
         description: "Delivery teams are spending more time working around problems than delivering outcomes.",
       },
       {
-        iconSrc: "/images/icons/person_search.svg",
+        iconSrc: "/images/icons/social_leaderboard.svg",
         title: "Capability Gaps Exist",
         description: "The right leadership, engineering expertise or specialist capability is missing.",
       },
       {
-        iconSrc: "/images/icons/delivery_truck_speed.svg",
+        iconSrc: "/images/icons/flag_2.svg",
         title: "Market Deadlines Cannot Move",
         description: "The organisation has committed to a delivery date that cannot be missed.",
       },
@@ -97,10 +97,10 @@ Whether it's a delayed program, technical debt, capability gaps or delivery unce
   showTestimonial: false,
   ctaSection: {
     imageSrc: "/images/placeholder/placeholder16.jpg",
-    title: "Accelerate your delivery today",
-    description: "Contact us today to explore how our Delivery Acceleration service can transform your business.",
-    primaryButtonText: "Contact",
-    secondaryButtonText: "Learn More",
+    title: "Need Delivery Momentum?",
+    description: "Whether you're facing delivery pressure, capability gaps or critical deadlines, Software@Scale can help.",
+    primaryButtonText: "Talk to a Technology Leader",
+    secondaryButtonText: "View Proven Delivery",
   },
 };
 
