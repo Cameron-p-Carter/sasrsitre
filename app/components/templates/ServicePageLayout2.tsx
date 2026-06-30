@@ -3,6 +3,7 @@ import HeroHeaderSection from '@/app/components/sections/hero/HeroHeaderSection'
 import Footer from '@/app/components/layout/Footer';
 import ImageTextSection from '@/app/components/shared/ImageTextSection';
 import CoreValuesTestimonialSection from '@/app/components/sections/values/CoreValuesTestimonialSection';
+import CoreValuesGridSection from '@/app/components/sections/features/CoreValuesGridSection';
 import ServiceFeatureColumns from '@/app/components/sections/features/ServiceFeatureColumns';
 import AwardsSection from '@/app/components/sections/stats/AwardsSection';
 import ServiceStatsSection from '@/app/components/sections/stats/ServiceStatsSection';
@@ -85,6 +86,19 @@ interface ServiceStatsSectionData {
   accentColor: string;
 }
 
+interface CenteredGridItem {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+interface CenteredContentSectionData {
+  title: string;
+  description: string;
+  values: CenteredGridItem[];
+  variant?: 'light' | 'dark';
+}
+
 interface TestimonialData {
   quote: string;
   name: string;
@@ -102,6 +116,7 @@ interface CTASectionData {
 interface ServicePageData {
   hero: HeroSectionData;
   imageTextContent?: ImageTextContentSectionData;
+  centeredContent?: CenteredContentSectionData;
   imageTextListContent?: ImageTextListSectionData;
   serviceFeatureColumns?: ServiceFeatureColumnsData;
   serviceStatsContent?: ServiceStatsSectionData;
@@ -141,6 +156,14 @@ const ServicePageLayout2 = ({ data }: ServicePageLayout2Props) => {
             titleColor={data.imageTextContent.titleColor}
             imageOnRight={data.imageTextContent.imageOnRight}
             outcomeItems={data.imageTextContent.outcomeItems}
+          />
+        )}
+        {data.centeredContent && (
+          <CoreValuesGridSection
+            title={data.centeredContent.title}
+            description={data.centeredContent.description}
+            values={data.centeredContent.values}
+            variant={data.centeredContent.variant ?? 'light'}
           />
         )}
         {data.showTestimonial && (

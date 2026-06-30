@@ -51,6 +51,28 @@ Our approach involves a comprehensive assessment of your current setup, deep per
       },
     ],
   },
+  centeredContent: {
+    title: "Flexible Engagement Models",
+    description: "Every organisation has different delivery needs. Software@Scale provides flexible engagement models that can scale with your priorities.",
+    variant: 'dark' as const,
+    values: [
+      {
+        icon: "/images/icons/group_work.svg",
+        title: "Collaborate: We win as one.",
+        description: "Our engineers integrate seamlessly into your team, sharing knowledge and working alongside your people to drive outcomes together.",
+      },
+      {
+        icon: "/images/icons/heart_plus.svg",
+        title: "Own it: We step up.",
+        description: "We take full ownership of our work and our impact — no handoffs, no excuses. If something needs doing, we do it.",
+      },
+      {
+        icon: "/images/icons/explore.svg",
+        title: "Innovate: We stay curious.",
+        description: "We bring fresh thinking and modern engineering practices that help your team work smarter and build better, faster.",
+      },
+    ],
+  },
   imageTextListContent: {
     title: "Secure, compliant and resilient systems",
     introDescription: "Software@Scale's engineers focus on building and managing resilient cloud environments that reduce costs, support your growth, enhance agility and ensure operational excellence.",
