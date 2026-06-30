@@ -102,49 +102,20 @@ const Header = () => {
               
               {/* Our Services Dropdown Menu */}
               <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible z-50">
-                <div className="bg-[#0c2080] border border-[#14d3f3] rounded-2xl p-6 min-w-[520px]">
-                  <div className="flex gap-8">
-                    {/* Service Products Column */}
-                    <div className="flex flex-col gap-4 flex-1">
-                      <h3 className="font-semibold text-white text-sm leading-6">
-                        Service Products
-                      </h3>
-                      <div className="flex flex-col gap-4">
-                        <Link href="/services/cloud-engineering" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity">
-                          Cloud Engineering
-                        </Link>
-                        <Link href="/services/security-architecture" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity">
-                          Security Architecture
-                        </Link>
-                        <Link href="/services/project-acceleration" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity">
-                          Project Acceleration
-                        </Link>
-                        <Link href="/services/platform-due-diligence" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity">
-                          Platform Due Diligence
-                        </Link>
-                        <Link href="/services/engineering-performance" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity whitespace-nowrap">
-                          Engineering Performance
-                        </Link>
-                        <Link href="/services/data-ai-engineering" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity">
-                          Data & AI Engineering
-                        </Link>
-                      </div>
-                    </div>
-                    
-                    {/* General Services Column */}
-                    <div className="flex flex-col gap-4 flex-1">
-                      <h3 className="font-semibold text-white text-sm leading-6">
-                        General Services
-                      </h3>
-                      <div className="flex flex-col gap-4">
-                        <Link href="/services/engineering-as-a-service" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity">
-                          EAAS
-                        </Link>
-                        <Link href="/services/technology-advisory" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity">
-                          <span className="block">Technology Advisory /<br />Fractional Services</span>
-                        </Link>
-                      </div>
-                    </div>
+                <div className="bg-[#0c2080] border border-[#14d3f3] rounded-2xl p-6 min-w-[260px]">
+                  <div className="flex flex-col gap-4">
+                    <Link href="/services/engineering-teams" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity whitespace-nowrap">
+                      Engineering Teams
+                    </Link>
+                    <Link href="/services/delivery-acceleration" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity whitespace-nowrap">
+                      Delivery Acceleration
+                    </Link>
+                    <Link href="/services/technology-leadership" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity whitespace-nowrap">
+                      Technology Leadership
+                    </Link>
+                    <Link href="/services/data-and-ai" className="font-semibold text-[#14d3f3] text-base leading-6 hover:opacity-80 transition-opacity whitespace-nowrap">
+                      Data and AI
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -387,40 +358,18 @@ const Header = () => {
                 {expandedMobileSection === 'services' && (
                   <div className="pb-4 pl-4">
                     <div className="flex flex-col gap-4">
-                      <div className="mb-2">
-                        <h4 className="font-semibold text-white text-sm leading-6 mb-2">Service Products</h4>
-                        <div className="flex flex-col gap-2">
-                          <Link href="/services/cloud-engineering" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
-                            Cloud Engineering
-                          </Link>
-                          <Link href="/services/security-architecture" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
-                            Security Architecture
-                          </Link>
-                          <Link href="/services/project-acceleration" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
-                            Project Acceleration
-                          </Link>
-                          <Link href="/services/platform-due-diligence" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
-                            Platform Due Diligence
-                          </Link>
-                          <Link href="/services/engineering-performance" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
-                            Engineering Performance
-                          </Link>
-                          <Link href="/services/data-ai-engineering" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
-                            Data & AI Engineering
-                          </Link>
-                        </div>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-white text-sm leading-6 mb-2">General Services</h4>
-                        <div className="flex flex-col gap-2">
-                          <Link href="/services/engineering-as-a-service" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
-                            EAAS
-                          </Link>
-                          <Link href="/services/technology-advisory" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
-                            Technology Advisory / Fractional Services
-                          </Link>
-                        </div>
-                      </div>
+                      <Link href="/services/engineering-teams" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
+                        Engineering Teams
+                      </Link>
+                      <Link href="/services/delivery-acceleration" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
+                        Delivery Acceleration
+                      </Link>
+                      <Link href="/services/technology-leadership" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
+                        Technology Leadership
+                      </Link>
+                      <Link href="/services/data-and-ai" className="font-semibold text-[#14d3f3] text-base leading-6 py-1">
+                        Data and AI
+                      </Link>
                     </div>
                   </div>
                 )}

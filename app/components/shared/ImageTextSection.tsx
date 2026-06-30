@@ -4,6 +4,12 @@ import { ReactNode } from 'react';
 
 type ContentVariant = 'simple' | 'list' | 'custom';
 
+interface OutcomeItem {
+  iconSrc: string;
+  title: string;
+  description: string;
+}
+
 interface ImageTextSectionProps {
   // Layout
   imageOnRight?: boolean;
@@ -25,6 +31,9 @@ interface ImageTextSectionProps {
   backgroundColor?: string;
   textColor?: string;
   titleColor?: string;
+
+  // Outcome items (icon + title + description grid, shown below description in simple variant)
+  outcomeItems?: OutcomeItem[];
 
   // Image sizing
   imageHeight?: string;
@@ -51,6 +60,7 @@ export default function ImageTextSection({
   listTitle,
   listItems = [],
   customContent,
+  outcomeItems,
   backgroundColor = 'bg-white',
   textColor = 'text-[#00050a]',
   titleColor = 'text-[#0c2080]',
@@ -93,12 +103,39 @@ export default function ImageTextSection({
       case 'simple':
       default:
         return (
-          <div className={`font-normal text-base md:text-[16px] leading-[1.5] w-full ${textColor}`}>
-            {description && description.split('\n\n').map((paragraph, index) => (
-              <p key={index} className="mb-4 last:mb-0">
-                {paragraph}
-              </p>
-            ))}
+          <div className={`flex flex-col gap-8 w-full`}>
+            <div className={`font-normal text-base md:text-[16px] leading-[1.5] w-full ${textColor}`}>
+              {description && description.split('\n\n').map((paragraph, index) => (
+                <p key={index} className="mb-4 last:mb-0">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+            {outcomeItems && outcomeItems.length > 0 && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-x-6 md:gap-y-10 w-full">
+                {outcomeItems.map((item, index) => (
+                  <div key={index} className="flex flex-col gap-4 items-start w-full">
+                    <div className="relative w-12 h-12 shrink-0">
+                      <Image
+                        src={item.iconSrc}
+                        alt={item.title}
+                        width={48}
+                        height={48}
+                        className="object-contain"
+                      />
+                    </div>
+                    <div className="flex flex-col gap-2 items-start w-full">
+                      <p className="font-bold text-[18px] md:text-[20px] leading-[1.4] tracking-[-0.2px] w-full text-[#00050a]">
+                        {item.title}
+                      </p>
+                      <p className={`font-normal text-base leading-[1.5] w-full ${textColor}`}>
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         );
     }

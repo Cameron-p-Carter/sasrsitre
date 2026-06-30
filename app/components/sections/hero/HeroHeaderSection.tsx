@@ -1,4 +1,12 @@
 import Image from 'next/image';
+import Button from '../../shared/Button';
+
+interface HeroButton {
+  text: string;
+  href?: string;
+  onClick?: () => void;
+  variant?: 'primary' | 'secondary' | 'outline' | 'accent' | 'link';
+}
 
 interface HeroHeaderSectionProps {
   imageSrc: string;
@@ -9,6 +17,7 @@ interface HeroHeaderSectionProps {
   overlayOpacity: number; // 0.5 for People, 0.6 for Core Values
   objectPosition?: string; // Optional image positioning (default: 'top')
   descriptionBelow?: boolean; // If true, description goes below title instead of to the right
+  buttons?: HeroButton[];
 }
 
 export default function HeroHeaderSection({
@@ -20,8 +29,22 @@ export default function HeroHeaderSection({
   overlayOpacity,
   objectPosition = 'center',
   descriptionBelow = false,
+  buttons,
 }: HeroHeaderSectionProps) {
   const overlayColor = `rgba(12, 32, 128, ${overlayOpacity})`;
+
+  const renderButtons = () => {
+    if (!buttons || buttons.length === 0) return null;
+    return (
+      <div className="flex flex-wrap gap-4 pt-4">
+        {buttons.map((btn, index) => (
+          <Button key={index} variant={btn.variant || 'primary'} href={btn.href} onClick={btn.onClick}>
+            {btn.text}
+          </Button>
+        ))}
+      </div>
+    );
+  };
 
   return (
     <section className="relative w-full overflow-hidden">
@@ -56,6 +79,7 @@ export default function HeroHeaderSection({
                   <span>{title} </span>
                   <span className="text-[#14d3f3]">{titleHighlight}</span>
                 </h1>
+                {renderButtons()}
               </div>
 
               {/* Right Column: Description */}
@@ -82,6 +106,7 @@ export default function HeroHeaderSection({
                   <p className="font-normal text-base md:text-lg leading-[1.5] w-full">
                     {description}
                   </p>
+                  {renderButtons()}
                 </div>
               </div>
             </div>
@@ -101,6 +126,7 @@ export default function HeroHeaderSection({
                   <p className="font-normal text-base md:text-lg leading-[1.5] w-full">
                     {description}
                   </p>
+                  {renderButtons()}
                 </div>
               </div>
             </div>
