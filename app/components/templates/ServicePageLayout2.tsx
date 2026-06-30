@@ -62,7 +62,7 @@ interface ImageTextListSectionData {
 }
 
 interface FeatureColumn {
-  iconSrc: string;
+  iconSrc?: string;
   title: string;
   content: string | string[];
 }
