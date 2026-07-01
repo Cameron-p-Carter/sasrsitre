@@ -23,10 +23,10 @@ export default function ValuesSection() {
       <div className="flex flex-col items-center gap-20">
         <motion.div
           className="max-w-[768px] mx-auto"
-          initial={{ opacity: 0, y: 32 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-10% 0px' }}
-          transition={{ duration: 0.7, ease }}
+          transition={{ duration: 0.65, ease }}
         >
           <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">{valuesSection.title}</h2>
           <p className="text-lg text-white/90">{valuesSection.description}</p>
@@ -46,17 +46,11 @@ export default function ValuesSection() {
                 key={img.alt}
                 className={`relative w-full ${img.ratio} rounded-xl overflow-hidden shadow-2xl`}
                 variants={{
-                  hidden: { opacity: 0, y: 40 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.75, ease } },
+                  hidden: { opacity: 0, y: 16 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease } },
                 }}
               >
-                <motion.div
-                  className="absolute inset-0"
-                  whileHover={{ scale: 1.04 }}
-                  transition={{ duration: 0.45, ease }}
-                >
-                  <Image src={img.src} alt={img.alt} fill className="object-cover rounded-xl" />
-                </motion.div>
+                <Image src={img.src} alt={img.alt} fill className="object-cover rounded-xl" />
               </motion.div>
             ))}
           </motion.div>
@@ -64,19 +58,13 @@ export default function ValuesSection() {
           {/* Right column: tall image slides from right */}
           <motion.div
             className="flex w-full md:max-w-[632px]"
-            initial={{ opacity: 0, x: 48 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-10% 0px' }}
-            transition={{ duration: 0.85, delay: 0.1, ease }}
+            transition={{ duration: 0.65, delay: 0.1, ease }}
           >
             <div className="relative w-full aspect-[632/767] rounded-xl overflow-hidden shadow-2xl">
-              <motion.div
-                className="absolute inset-0"
-                whileHover={{ scale: 1.04 }}
-                transition={{ duration: 0.45, ease }}
-              >
-                <Image src={images.right} alt="Value Image 3" fill className="object-cover rounded-xl" />
-              </motion.div>
+              <Image src={images.right} alt="Value Image 3" fill className="object-cover rounded-xl" />
             </div>
           </motion.div>
         </div>

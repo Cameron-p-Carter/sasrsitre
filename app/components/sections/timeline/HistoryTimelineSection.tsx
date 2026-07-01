@@ -29,10 +29,10 @@ const HistoryTimelineSection = () => {
     const imageBlock = (
       <motion.div
         className={`w-full md:w-1/2 flex ${isLeftAligned ? 'justify-end' : 'justify-start'} pb-12 md:pb-0 md:pt-8`}
-        initial={{ opacity: 0, x: isLeftAligned ? 48 : -48 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-10% 0px' }}
-        transition={{ duration: 0.8, ease }}
+        transition={{ duration: 0.65, ease }}
       >
         <div className="relative aspect-square w-full md:w-[576px] rounded-2xl overflow-hidden">
           <Image src={item.imageSrc} alt={item.title} fill className="object-cover rounded-2xl" />
@@ -43,10 +43,10 @@ const HistoryTimelineSection = () => {
     const contentBlock = (
       <motion.div
         className={`w-full md:w-1/2 flex flex-col gap-8 md:gap-12 pt-4 md:pt-8 ${isLeftAligned ? 'items-start md:items-end md:text-right' : 'items-start md:text-left'}`}
-        initial={{ opacity: 0, x: isLeftAligned ? -48 : 48 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-10% 0px' }}
-        transition={{ duration: 0.8, ease }}
+        transition={{ duration: 0.65, delay: 0.08, ease }}
       >
         <div className="flex flex-col gap-6 w-full">
           <h3 className="font-bold text-[#006cc9] text-[32px] md:text-[40px] leading-[1.2] tracking-[-0.4px] w-full">{item.year}</h3>
@@ -105,10 +105,10 @@ const HistoryTimelineSection = () => {
       <div className="max-w-[1280px] mx-auto flex flex-col gap-12 md:gap-[80px] items-center">
         <motion.div
           className="flex flex-col gap-5 md:gap-4 items-center max-w-[768px] w-full text-center"
-          initial={{ opacity: 0, y: 32 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-10% 0px' }}
-          transition={{ duration: 0.7, ease }}
+          transition={{ duration: 0.65, ease }}
         >
           <h2 className="font-bold text-[#0c2080] text-[36px] md:text-[48px] leading-[1.2] tracking-[-0.36px] md:tracking-[-0.48px] w-full">
             Our Journey Through Time

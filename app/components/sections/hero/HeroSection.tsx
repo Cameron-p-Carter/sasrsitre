@@ -48,25 +48,25 @@ export default function HeroSection() {
             <h1 className="font-bold text-white text-[40px] md:text-[48px] lg:text-[56px] leading-[1.2] tracking-[-0.4px] md:tracking-[-0.48px] lg:tracking-[-0.56px]">
               <motion.span
                 className="block"
-                initial={{ opacity: 0, y: 48 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.9, delay: 0.1, ease }}
+                transition={{ duration: 0.7, delay: 0.1, ease }}
               >
                 Solve the problem.
               </motion.span>
               <motion.span
                 className="block"
-                initial={{ opacity: 0, y: 48 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.9, delay: 0.26, ease }}
+                transition={{ duration: 0.7, delay: 0.22, ease }}
               >
                 Write the code.
               </motion.span>
               <motion.span
                 className="block text-[#5ae0f6]"
-                initial={{ opacity: 0, y: 48 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.9, delay: 0.42, ease }}
+                transition={{ duration: 0.7, delay: 0.34, ease }}
               >
                 Scale the solution.
               </motion.span>
@@ -75,9 +75,9 @@ export default function HeroSection() {
             {/* Description */}
             <motion.p
               className="font-normal text-white text-[16px] md:text-[17px] lg:text-[18px] leading-[1.5]"
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.75, delay: 0.68, ease }}
+              transition={{ duration: 0.65, delay: 0.52, ease }}
             >
               At Software@Scale, we align technology strategy with your business goals to foster innovation and growth. Our expert team tackles complex challenges, ensuring your projects thrive and deliver exceptional results.
             </motion.p>
@@ -87,9 +87,9 @@ export default function HeroSection() {
               {/* Mobile: 3 + 2 Grid */}
               <motion.div
                 className="flex flex-col gap-4 md:hidden"
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.88, ease }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.68, ease }}
               >
                 <div className="flex gap-4">
                   <Link href="/recognition" className="relative w-[100px] h-[100px] flex-shrink-0 hover:opacity-80 transition-opacity">
@@ -112,31 +112,33 @@ export default function HeroSection() {
                 </div>
               </motion.div>
 
-              {/* Tablet & Desktop: Staggered badge pop-in */}
-              <div className="hidden md:flex gap-6 lg:gap-[33px]">
-                {desktopBadges.map((badge, i) => (
+              {/* Tablet & Desktop: Staggered badge fade-in */}
+              <motion.div
+                className="hidden md:flex gap-6 lg:gap-[33px]"
+                initial="hidden"
+                animate="visible"
+                variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08, delayChildren: 0.68 } } }}
+              >
+                {desktopBadges.map((badge) => (
                   <motion.div
                     key={badge.alt}
-                    initial={{ opacity: 0, scale: 0.7, y: 10 }}
-                    animate={{ opacity: 1, scale: 1, y: 0 }}
-                    transition={{ duration: 0.45, delay: 0.88 + i * 0.09, ease: 'backOut' }}
-                    whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+                    variants={{ hidden: { opacity: 0, y: 8 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease } } }}
                   >
-                    <Link href="/recognition" className="relative w-[100px] h-[100px] flex-shrink-0 block">
+                    <Link href="/recognition" className="relative w-[100px] h-[100px] flex-shrink-0 block opacity-90 hover:opacity-100 transition-opacity">
                       <Image src={badge.src} alt={badge.alt} fill className="object-contain" />
                     </Link>
                   </motion.div>
                 ))}
-              </div>
+              </motion.div>
             </div>
           </div>
 
           {/* Action Buttons */}
           <motion.div
             className="flex flex-wrap gap-4"
-            initial={{ opacity: 0, y: 18 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65, delay: 1.2, ease }}
+            transition={{ duration: 0.6, delay: 0.86, ease }}
           >
             <Button variant="primary" href="/core-values">
               Learn More

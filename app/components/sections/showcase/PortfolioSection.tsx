@@ -32,11 +32,11 @@ const containerVariants = {
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 44 },
+  hidden: { opacity: 0, y: 16 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease },
+    transition: { duration: 0.65, ease },
   },
 };
 
@@ -63,10 +63,10 @@ export default function PortfolioSection({
         {/* Section Header */}
         <motion.div
           className="text-center mb-12 md:mb-20 max-w-[768px] mx-auto"
-          initial={{ opacity: 0, y: 32 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-10% 0px' }}
-          transition={{ duration: 0.75, ease }}
+          transition={{ duration: 0.65, ease }}
         >
           <h2 className={`text-[32px] md:text-[40px] lg:text-[48px] font-bold leading-[1.2] ${headingColor} tracking-[-0.32px] md:tracking-[-0.4px] lg:tracking-[-0.48px] mb-5 md:mb-6`}>
             {title}
@@ -88,19 +88,13 @@ export default function PortfolioSection({
             <motion.div key={project.id} variants={cardVariants}>
               <Link href={project.link || "/collections/case-studies"} className="flex flex-col gap-5 group cursor-pointer">
                 <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
-                  <motion.div
-                    className="absolute inset-0"
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.5, ease }}
-                  >
-                    <Image
-                      src={project.image}
-                      alt={`${project.title} project`}
-                      fill
-                      className="object-cover"
-                      style={{ objectPosition: project.objectPosition ?? 'center' }}
-                    />
-                  </motion.div>
+                  <Image
+                    src={project.image}
+                    alt={`${project.title} project`}
+                    fill
+                    className="object-cover"
+                    style={{ objectPosition: project.objectPosition ?? 'center' }}
+                  />
                 </div>
                 <div className="flex flex-col gap-5">
                   <div className="flex flex-col gap-2">
@@ -164,11 +158,6 @@ export default function PortfolioSection({
                     <motion.div key={project.id} variants={cardVariants}>
                       <Link href={project.link || "/collections/case-studies"} className="block group">
                         <div className="relative w-full h-[340px] rounded-2xl overflow-hidden">
-                          <motion.div
-                            className="absolute inset-0"
-                            whileHover={{ scale: 1.05 }}
-                            transition={{ duration: 0.5, ease }}
-                          >
                             <Image
                               src={project.image}
                               alt={`${project.title} project`}
@@ -176,7 +165,6 @@ export default function PortfolioSection({
                               className="object-cover"
                               style={{ objectPosition: project.objectPosition ?? 'center' }}
                             />
-                          </motion.div>
                         </div>
                       </Link>
                     </motion.div>

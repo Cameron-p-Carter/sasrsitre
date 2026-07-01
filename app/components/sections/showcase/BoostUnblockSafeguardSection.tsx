@@ -30,11 +30,11 @@ const containerVariants = {
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 48 },
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.75, ease },
+    transition: { duration: 0.65, ease },
   },
 };
 
@@ -53,14 +53,13 @@ const BoostUnblockSafeguardSection = () => {
             key={index}
             variants={cardVariants}
             className="flex flex-col items-center justify-start text-center w-full md:w-[30%] min-w-[250px]"
-            whileHover={{ y: -8, transition: { duration: 0.25, ease: 'easeOut' } }}
           >
             <motion.div
               className="h-[48px] w-[48px] mb-6 relative"
-              initial={{ scale: 0, rotate: -15, opacity: 0 }}
-              whileInView={{ scale: 1, rotate: 0, opacity: 1 }}
+              initial={{ opacity: 0, y: 8 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.55, delay: 0.25 + index * 0.18, ease: 'backOut' }}
+              transition={{ duration: 0.5, delay: 0.15 + index * 0.1, ease }}
             >
               <Image src={feature.icon} alt={feature.title} fill className="object-contain" />
             </motion.div>

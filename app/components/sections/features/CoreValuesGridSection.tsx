@@ -68,10 +68,10 @@ const CoreValuesGridSection = ({ title, description, values, variant = 'light' }
       <div className="max-w-[1280px] mx-auto flex flex-col gap-12 md:gap-[80px] items-center">
         <motion.div
           className="flex flex-col gap-5 md:gap-6 items-center max-w-[768px] w-full text-center"
-          initial={{ opacity: 0, y: 32 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-10% 0px' }}
-          transition={{ duration: 0.7, ease }}
+          transition={{ duration: 0.65, ease }}
         >
           <h2 className={`font-bold ${titleColorClass} text-[36px] md:text-[48px] leading-[1.2] tracking-[-0.36px] md:tracking-[-0.48px] w-full`}>
             {title}
@@ -93,16 +93,16 @@ const CoreValuesGridSection = ({ title, description, values, variant = 'light' }
               key={index}
               className="flex flex-col gap-6 md:gap-8 items-center w-full md:w-1/3 text-center"
               variants={{
-                hidden: { opacity: 0, y: 40 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease } },
+                hidden: { opacity: 0, y: 16 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease } },
               }}
             >
               <motion.div
                 className={`relative w-12 h-12 shrink-0`}
-                initial={{ scale: 0, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
+                initial={{ opacity: 0, y: 8 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.2 + index * 0.14, ease: 'backOut' }}
+                transition={{ duration: 0.5, delay: 0.1 + index * 0.08, ease }}
               >
                 <Image src={value.icon} alt={value.title} fill className="object-contain" />
               </motion.div>

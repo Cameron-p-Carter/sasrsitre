@@ -35,10 +35,10 @@ const ProvenApproachSection = () => {
         {/* Section Title */}
         <motion.div
           className="flex flex-col items-center max-w-[768px] w-full"
-          initial={{ opacity: 0, y: 32 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-10% 0px' }}
-          transition={{ duration: 0.75, ease }}
+          transition={{ duration: 0.65, ease }}
         >
           <h2 className="font-bold text-[48px] leading-[1.2] text-[#0c2080] text-center tracking-[-0.48px] w-full">
             Why Enterprise Clients Choose Software@Scale
@@ -53,10 +53,10 @@ const ProvenApproachSection = () => {
               <motion.div
                 key={approach.title}
                 className="flex flex-col gap-[24px] items-center w-full"
-                initial={{ opacity: 0, x: -56 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-10% 0px' }}
-                transition={{ duration: 0.75, delay: i * 0.14, ease }}
+                transition={{ duration: 0.65, delay: i * 0.1, ease }}
               >
                 <div className="w-[48px] h-[48px] relative">
                   <Image src={approach.icon} alt={approach.title} fill />
@@ -76,10 +76,10 @@ const ProvenApproachSection = () => {
           {/* Center Image — scale + fade reveal */}
           <motion.div
             className="relative rounded-[16px] shrink-0 w-[540px] h-[540px] overflow-hidden"
-            initial={{ opacity: 0, scale: 1.08 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: '-10% 0px' }}
-            transition={{ duration: 1.0, ease }}
+            transition={{ duration: 0.75, ease }}
           >
             <Image
               src="/images/placeholder/placeholder160.jpg"
@@ -95,10 +95,10 @@ const ProvenApproachSection = () => {
               <motion.div
                 key={approach.title}
                 className="flex flex-col gap-[24px] items-center w-full"
-                initial={{ opacity: 0, x: 56 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-10% 0px' }}
-                transition={{ duration: 0.75, delay: i * 0.14, ease }}
+                transition={{ duration: 0.65, delay: i * 0.1, ease }}
               >
                 <div className="w-[48px] h-[48px] relative">
                   <Image src={approach.icon} alt={approach.title} fill />

@@ -30,10 +30,10 @@ const CaseStudySection = () => {
         {/* Header */}
         <motion.div
           className="flex flex-col md:flex-row gap-4 md:gap-8 items-start md:items-end justify-between w-full"
-          initial={{ opacity: 0, y: 32 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-10% 0px' }}
-          transition={{ duration: 0.7, ease }}
+          transition={{ duration: 0.65, ease }}
         >
           <div className="flex flex-col gap-4 md:gap-6 items-start max-w-[768px] w-full">
             <h2 className="font-bold text-white text-[40px] md:text-[48px] leading-[1.2] tracking-[-0.4px] md:tracking-[-0.48px] w-full">
@@ -60,20 +60,14 @@ const CaseStudySection = () => {
             <motion.div
               key={index}
               variants={{
-                hidden: { opacity: 0, y: 40 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease } },
+                hidden: { opacity: 0, y: 16 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease } },
               }}
               className="w-full md:w-1/3"
             >
               <Link href={study.url} className="flex flex-col gap-6 items-start group">
                 <div className="relative aspect-[405.333/270] rounded-2xl w-full overflow-hidden">
-                  <motion.div
-                    className="absolute inset-0"
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.45, ease }}
-                  >
-                    <Image src={study.imageSrc} alt={study.title} fill className="object-cover rounded-2xl" />
-                  </motion.div>
+                  <Image src={study.imageSrc} alt={study.title} fill className="object-cover rounded-2xl" />
                 </div>
                 <div className="flex flex-col gap-4 w-full items-start">
                   <div className="flex flex-col gap-2 items-start text-white w-full">

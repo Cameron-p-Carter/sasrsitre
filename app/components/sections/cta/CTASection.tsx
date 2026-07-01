@@ -28,10 +28,10 @@ export default function CTASection({
       {/* Background Image */}
       <motion.div
         className="absolute inset-0 pointer-events-none"
-        initial={{ opacity: 0, scale: 1.04 }}
-        whileInView={{ opacity: 1, scale: 1 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 1.1, ease }}
+        transition={{ duration: 0.8, ease }}
       >
         <Image
           src={imageSrc}
@@ -48,10 +48,10 @@ export default function CTASection({
           {/* Content */}
           <motion.div
             className="flex flex-col gap-5 md:gap-6 text-white"
-            initial={{ opacity: 0, y: 36 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-10% 0px' }}
-            transition={{ duration: 0.8, ease }}
+            transition={{ duration: 0.7, ease }}
           >
             <h2 className="text-[36px] md:text-[48px] font-bold leading-[1.2] tracking-[-0.36px] md:tracking-[-0.48px]">
               {title}
@@ -64,10 +64,10 @@ export default function CTASection({
           {/* Action Buttons */}
           <motion.div
             className="flex gap-4"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-10% 0px' }}
-            transition={{ duration: 0.65, delay: 0.18, ease }}
+            transition={{ duration: 0.6, delay: 0.14, ease }}
           >
             <Button variant="primary" href={primaryButtonUrl} target={primaryButtonUrl?.startsWith('http') ? '_blank' : undefined}>
               {primaryButtonText}

@@ -43,9 +43,9 @@ export default function HeroHeaderSection({
     return (
       <motion.div
         className="flex flex-wrap gap-4 pt-4"
-        initial={{ opacity: 0, y: 16 }}
+        initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.6, ease }}
+        transition={{ duration: 0.55, delay: 0.5, ease }}
       >
         {buttons.map((btn, index) => (
           <Button key={index} variant={btn.variant || 'primary'} href={btn.href} onClick={btn.onClick}>
@@ -62,9 +62,9 @@ export default function HeroHeaderSection({
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
         <motion.div
           className="absolute inset-0 overflow-hidden"
-          initial={{ scale: 1.05, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1.1, ease }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.9, ease }}
         >
           <Image
             src={imageSrc}
@@ -93,17 +93,17 @@ export default function HeroHeaderSection({
               <div className="flex flex-col gap-3 md:gap-4 w-full md:w-1/2 flex-shrink-0">
                 <motion.p
                   className="font-semibold text-base leading-[1.5] text-[#14d3f3] whitespace-pre"
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.15, ease }}
+                  transition={{ duration: 0.55, delay: 0.15, ease }}
                 >
                   {tagline}
                 </motion.p>
                 <motion.h1
                   className="font-extrabold text-white text-[40px] md:text-[56px] leading-[1.2] tracking-[-0.4px] md:tracking-[-0.56px]"
-                  initial={{ opacity: 0, y: 28 }}
+                  initial={{ opacity: 0, y: 16 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.7, delay: 0.28, ease }}
+                  transition={{ duration: 0.65, delay: 0.25, ease }}
                 >
                   <span>{title} </span>
                   <span className="text-[#14d3f3]">{titleHighlight}</span>
@@ -113,9 +113,9 @@ export default function HeroHeaderSection({
               {/* Right: Description */}
               <motion.div
                 className="flex flex-col gap-6 md:gap-8 w-full md:w-1/2"
-                initial={{ opacity: 0, x: 32 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.75, delay: 0.38, ease }}
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.35, ease }}
               >
                 <p className="font-normal text-base md:text-lg leading-[1.5] text-white">
                   {description}
@@ -127,9 +127,9 @@ export default function HeroHeaderSection({
               <div className="flex flex-col gap-4 items-start w-full">
                 <motion.p
                   className="font-semibold text-base leading-[1.5] text-[#14d3f3] whitespace-pre"
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.15, ease }}
+                  transition={{ duration: 0.55, delay: 0.15, ease }}
                 >
                   {tagline}
                 </motion.p>

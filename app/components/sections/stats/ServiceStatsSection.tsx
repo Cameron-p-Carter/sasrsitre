@@ -66,10 +66,10 @@ const ServiceStatsSection = ({
           {/* Left: slides in from left */}
           <motion.div
             className="flex flex-col gap-8 md:gap-12 w-full md:w-1/2 items-start"
-            initial={{ opacity: 0, x: -48 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-10% 0px' }}
-            transition={{ duration: 0.75, ease }}
+            transition={{ duration: 0.65, ease }}
           >
             <div className="flex flex-col gap-4 md:gap-6 items-start w-full">
               <h2 className={`font-bold text-[36px] md:text-[48px] leading-[1.2] tracking-[-0.36px] md:tracking-[-0.48px] w-full ${titleColor}`}>
@@ -95,8 +95,8 @@ const ServiceStatsSection = ({
               <motion.div
                 key={index}
                 variants={{
-                  hidden: { opacity: 0, y: 28 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease } },
+                  hidden: { opacity: 0, y: 16 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease } },
                 }}
               >
                 <AnimatedStat value={stat.value} accentColor={accentColor} textColor={textColor} description={stat.description} />

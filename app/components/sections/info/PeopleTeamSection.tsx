@@ -27,10 +27,10 @@ const PeopleTeamSection = () => {
       <div className="max-w-[1280px] mx-auto flex flex-col gap-12 md:gap-[80px] items-start">
         <motion.div
           className="flex flex-col gap-3 md:gap-4 items-start max-w-[768px] w-full"
-          initial={{ opacity: 0, y: 28 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-10% 0px' }}
-          transition={{ duration: 0.7, ease }}
+          transition={{ duration: 0.65, ease }}
         >
           <h2 className="font-bold text-[#0c2080] text-[36px] md:text-[48px] leading-[1.2] tracking-[-0.36px] md:tracking-[-0.48px] w-full">
             Executive leadership
@@ -55,14 +55,14 @@ const PeopleTeamSection = () => {
                   key={member.name}
                   className="flex flex-col gap-5 md:gap-6 w-full items-start md:w-1/3"
                   variants={{
-                    hidden: { opacity: 0, y: 36 },
-                    visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease } },
+                    hidden: { opacity: 0, y: 16 },
+                    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease } },
                   }}
                 >
                   <div className="relative aspect-square rounded-2xl w-full overflow-hidden">
                     <motion.div
                       className="absolute inset-0"
-                      whileHover={{ scale: 1.04 }}
+                      whileHover={{ scale: 1.02 }}
                       transition={{ duration: 0.45, ease }}
                     >
                       <Image src={member.imageSrc} alt={member.name} fill className={`object-cover ${member.objectPosition} rounded-2xl`} />
@@ -83,10 +83,10 @@ const PeopleTeamSection = () => {
 
         <motion.div
           className="flex flex-col gap-6 items-start max-w-[768px] w-full"
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-10% 0px' }}
-          transition={{ duration: 0.65, ease }}
+          transition={{ duration: 0.6, ease }}
         >
           <div className="flex flex-col gap-4 w-full">
             <h4 className="font-bold text-[#0c2080] text-[24px] md:text-[32px] leading-[1.3] tracking-[-0.24px] md:tracking-[-0.32px] w-full">

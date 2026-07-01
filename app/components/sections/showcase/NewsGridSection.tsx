@@ -33,13 +33,7 @@ const ICON_CHEVRON_RIGHT = "/images/icons/chevron_right.svg";
 const NewsCard = ({ item }: { item: NewsItem }) => (
   <Link href={item.link || "/collections/news/first-article"} className="flex flex-col gap-6 cursor-pointer group">
     <div className="relative aspect-[405.333/270] rounded-2xl w-full overflow-hidden">
-      <motion.div
-        className="absolute inset-0"
-        whileHover={{ scale: 1.05 }}
-        transition={{ duration: 0.45, ease }}
-      >
-        <Image src={item.imageSrc} alt={item.title} fill className={`object-cover rounded-2xl ${item.objectPosition || ''}`} />
-      </motion.div>
+      <Image src={item.imageSrc} alt={item.title} fill className={`object-cover rounded-2xl ${item.objectPosition || ''}`} />
     </div>
     <div className="flex flex-col gap-6">
       {(item.date || item.readTime) && (
@@ -83,10 +77,10 @@ const NewsGridSection = ({ sectionTitle, sectionDescription, newsItems, viewMore
 
         <motion.div
           className="flex flex-col gap-4 md:gap-6 items-center max-w-[768px] w-full text-center"
-          initial={{ opacity: 0, y: 32 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-10% 0px' }}
-          transition={{ duration: 0.7, ease }}
+          transition={{ duration: 0.65, ease }}
         >
           <h1 className="font-bold text-[#0c2080] text-[40px] md:text-[56px] leading-[1.2] tracking-[-0.4px] md:tracking-[-0.56px] w-full">
             {sectionTitle}
@@ -107,7 +101,7 @@ const NewsGridSection = ({ sectionTitle, sectionDescription, newsItems, viewMore
           {displayedItems.map((item) => (
             <motion.div
               key={item.id}
-              variants={{ hidden: { opacity: 0, y: 32 }, visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease } } }}
+              variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease } } }}
             >
               <NewsCard item={item} />
             </motion.div>
@@ -126,8 +120,8 @@ const NewsGridSection = ({ sectionTitle, sectionDescription, newsItems, viewMore
             {displayedItems.map((item) => (
               <motion.div
                 key={item.id}
-                variants={{ hidden: { opacity: 0, y: 32 }, visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease } } }}
-                exit={{ opacity: 0, y: 20, transition: { duration: 0.3 } }}
+                variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease } } }}
+                exit={{ opacity: 0, transition: { duration: 0.2 } }}
                 layout
               >
                 <NewsCard item={item} />

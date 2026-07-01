@@ -34,8 +34,8 @@ const ServiceFeatureColumns = ({ columns, backgroundColor, textColor, titleColor
               key={index}
               className="flex flex-col gap-6 md:gap-8 w-full md:w-1/3 items-start"
               variants={{
-                hidden: { opacity: 0, y: 36 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease } },
+                hidden: { opacity: 0, y: 16 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease } },
               }}
             >
               {column.iconSrc && (

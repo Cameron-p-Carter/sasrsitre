@@ -34,10 +34,10 @@ export default function CareersOpenPositionsSection({ sectionTitle, sectionDescr
             {/* Title: slides from left */}
             <motion.div
               className="flex flex-col gap-3 md:gap-4 items-start w-full lg:max-w-[256px] flex-shrink-0"
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-10% 0px' }}
-              transition={{ duration: 0.7, ease }}
+              transition={{ duration: 0.65, ease }}
             >
               <div className="flex flex-col gap-5 md:gap-6 items-center w-full">
                 <h2 className={`font-bold text-[36px] md:text-[48px] leading-[1.2] tracking-[-0.36px] md:tracking-[-0.48px] w-full ${titleColor}`}>
@@ -60,8 +60,8 @@ export default function CareersOpenPositionsSection({ sectionTitle, sectionDescr
                   key={index}
                   className="border-t border-[rgba(0,5,10,0.15)] flex gap-4 items-start py-6 md:py-8 w-full"
                   variants={{
-                    hidden: { opacity: 0, y: 28 },
-                    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease } },
+                    hidden: { opacity: 0, y: 16 },
+                    visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease } },
                   }}
                 >
                   {position.iconSrc && (

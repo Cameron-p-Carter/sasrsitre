@@ -18,10 +18,10 @@ const HistoryFeaturesSection = () => {
       <div className="max-w-[1280px] mx-auto flex flex-col gap-12 md:gap-[80px] items-center">
         <motion.h2
           className="font-bold text-white text-[32px] md:text-[40px] leading-[1.2] tracking-[-0.32px] md:tracking-[-0.4px] max-w-[768px] text-center w-full"
-          initial={{ opacity: 0, y: 28 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-10% 0px' }}
-          transition={{ duration: 0.7, ease }}
+          transition={{ duration: 0.65, ease }}
         >
           Milestones That Define Our Journey in Technology Consulting
         </motion.h2>
@@ -38,18 +38,12 @@ const HistoryFeaturesSection = () => {
               key={index}
               className="flex flex-col gap-6 md:gap-8 w-full md:w-1/3 items-center text-center overflow-hidden"
               variants={{
-                hidden: { opacity: 0, y: 40 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease } },
+                hidden: { opacity: 0, y: 16 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease } },
               }}
             >
               <div className="relative aspect-[335/198] md:aspect-[394.667/240] rounded-2xl w-full overflow-hidden">
-                <motion.div
-                  className="absolute inset-0"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.45, ease }}
-                >
-                  <Image src={feature.imageSrc} alt={feature.title} fill className="object-cover rounded-2xl" />
-                </motion.div>
+                <Image src={feature.imageSrc} alt={feature.title} fill className="object-cover rounded-2xl" />
               </div>
               <div className="flex flex-col gap-6 md:gap-8 w-full items-center">
                 <div className="flex flex-col gap-3 md:gap-4 w-full items-center text-white">

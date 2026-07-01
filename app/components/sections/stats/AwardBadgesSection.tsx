@@ -19,10 +19,10 @@ const AwardBadgesSection = () => {
       <div className="max-w-[1280px] mx-auto w-full flex flex-col lg:flex-row gap-8 lg:gap-16 items-start border-b border-white/20 pb-16">
         <motion.h2
           className="text-[32px] md:text-[40px] font-bold text-[#14d3f3] leading-[1.2] lg:w-[500px]"
-          initial={{ opacity: 0, x: -32 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-10% 0px' }}
-          transition={{ duration: 0.7, ease }}
+          transition={{ duration: 0.65, ease }}
         >
           Trusted by industry leaders
         </motion.h2>
@@ -39,10 +39,10 @@ const AwardBadgesSection = () => {
               key={index}
               className="relative w-[80px] h-[80px] md:w-[100px] md:h-[100px]"
               variants={{
-                hidden: { opacity: 0, scale: 0.7, y: 10 },
-                visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.45, ease: 'backOut' } },
+                hidden: { opacity: 0, y: 12 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease } },
               }}
-              whileHover={{ scale: 1.12, transition: { duration: 0.2 } }}
+              whileHover={{ scale: 1.06, transition: { duration: 0.2 } }}
             >
               <Image src={award.src} alt={award.name} fill className="object-contain" />
             </motion.div>

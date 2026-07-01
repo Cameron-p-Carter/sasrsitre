@@ -44,10 +44,10 @@ export default function ContactFormSection({
             {/* Image: slides from left */}
             <motion.div
               className="relative w-full md:w-1/2 h-[335px] md:h-auto rounded-2xl overflow-hidden"
-              initial={{ opacity: 0, x: -48 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-10% 0px' }}
-              transition={{ duration: 0.8, ease }}
+              transition={{ duration: 0.65, ease }}
             >
               <Image src={imageSrc} alt={title} fill className="object-cover scale-225" />
             </motion.div>
@@ -55,10 +55,10 @@ export default function ContactFormSection({
             {/* Form: slides from right */}
             <motion.div
               className="flex flex-col gap-6 md:gap-8 items-start w-full md:w-1/2"
-              initial={{ opacity: 0, x: 48 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-10% 0px' }}
-              transition={{ duration: 0.8, ease }}
+              transition={{ duration: 0.65, delay: 0.1, ease }}
             >
               <div className="flex flex-col gap-3 md:gap-4 items-start w-full">
                 <div className="flex flex-col gap-5 md:gap-6 items-start w-full">

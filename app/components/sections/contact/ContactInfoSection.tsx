@@ -45,16 +45,16 @@ export default function ContactInfoSection({ contactItems, backgroundColor, titl
               key={index}
               className="flex flex-col gap-5 md:gap-6 items-center flex-1 w-full text-center"
               variants={{
-                hidden: { opacity: 0, y: 36 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease } },
+                hidden: { opacity: 0, y: 16 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease } },
               }}
             >
               <motion.div
                 className="relative w-12 h-12 shrink-0"
-                initial={{ scale: 0, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
+                initial={{ opacity: 0, y: 8 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.45, delay: 0.2 + index * 0.1, ease: 'backOut' }}
+                transition={{ duration: 0.5, delay: 0.1 + index * 0.08, ease }}
               >
                 <Image src={item.iconSrc} alt={item.title} fill className="object-contain" />
               </motion.div>

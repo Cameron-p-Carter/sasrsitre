@@ -97,8 +97,8 @@ export default function ImageTextSection({
                     key={index}
                     className="flex flex-col gap-4 items-start w-full"
                     variants={{
-                      hidden: { opacity: 0, y: 24 },
-                      visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease } },
+                      hidden: { opacity: 0, y: 12 },
+                      visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease } },
                     }}
                   >
                     <div className="relative w-12 h-12 shrink-0">
@@ -121,15 +121,13 @@ export default function ImageTextSection({
     }
   };
 
-  const textSide = imageOnRight ? -1 : 1;
-
   const content = (
     <motion.div
       className={`content-stretch flex flex-col gap-6 md:gap-8 grow md:basis-0 items-start relative shrink-0 w-full md:w-1/2 order-2 ${imageOnRight ? 'md:order-1' : 'md:order-2'}`}
-      initial={{ opacity: 0, x: textSide * 40 }}
-      whileInView={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-10% 0px' }}
-      transition={{ duration: 0.75, ease }}
+      transition={{ duration: 0.65, ease }}
     >
       <h2 className={`font-bold text-[36px] md:text-[48px] leading-[1.2] tracking-[-0.36px] md:tracking-[-0.48px] w-full ${titleColor}`}>
         {title}
@@ -141,23 +139,17 @@ export default function ImageTextSection({
   const image = (
     <motion.div
       className={`relative rounded-2xl shrink-0 w-full h-[335px] md:h-auto md:w-1/2 order-1 overflow-hidden ${imageOnRight ? 'md:order-2' : 'md:order-1'}`}
-      initial={{ opacity: 0, x: textSide * -40 }}
-      whileInView={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-10% 0px' }}
-      transition={{ duration: 0.75, ease }}
+      transition={{ duration: 0.65, delay: 0.1, ease }}
     >
-      <motion.div
-        className="absolute inset-0"
-        whileHover={{ scale: 1.04 }}
-        transition={{ duration: 0.5, ease }}
-      >
-        <Image
-          src={imageSrc}
-          alt={imageAlt || title}
-          fill
-          className="object-cover rounded-2xl"
-        />
-      </motion.div>
+      <Image
+        src={imageSrc}
+        alt={imageAlt || title}
+        fill
+        className="object-cover rounded-2xl"
+      />
     </motion.div>
   );
 
