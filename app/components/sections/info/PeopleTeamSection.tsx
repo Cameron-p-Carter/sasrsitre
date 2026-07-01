@@ -16,10 +16,11 @@ const TEAM_MEMBERS = [
   { name: "John Halls", title: "Chief Engineer", description: "CTO-level leader driving cloud-based digital transformation, with a passion for building scalable products and high-performing teams. Experienced across AWS, Azure, Google Cloud, and technologies including Java, Python, and .NET, solving complex architectural challenges across fintech and commerce.", imageSrc: "/images/people/john.jpg", objectPosition: "object-top" },
   { name: "Ribvar Shafeei", title: "Chief Information Security Officer", description: "Cybersecurity leader with over 20 years of experience across large financial organisations. Has spearheaded large-scale security programs and developed comprehensive strategies spanning identity management, threat intelligence, and secure operations across public and private sectors.", imageSrc: "/images/people/ribvar.jpg", objectPosition: "object-top" },
   { name: "Richard Ford", title: "Head of Cloud and Infrastructure", description: "Career cloud and infrastructure leader helping organisations become smarter, safer, and stronger in the cloud. Experience spans resilient hosting platforms in emerging tech ecosystems through to leading cloud and infrastructure teams at AWS, Adobe, Versent, and Software@Scale.", imageSrc: "/images/people/richard.jpg", objectPosition: "object-top" },
+  { name: "James Morey", title: "Head of Data", description: "Data leader with deep expertise in designing and delivering enterprise data platforms, analytics capabilities and AI-ready infrastructure. Brings a practical, outcome-focused approach to helping organisations unlock the value of their data assets at scale.", imageSrc: "/images/people/james.jpg", objectPosition: "object-top" },
 ];
 
 const PeopleTeamSection = () => {
-  const rows = [TEAM_MEMBERS.slice(0, 3), TEAM_MEMBERS.slice(3, 6), TEAM_MEMBERS.slice(6, 9)];
+  const rows = Array.from({ length: Math.ceil(TEAM_MEMBERS.length / 3) }, (_, i) => TEAM_MEMBERS.slice(i * 3, i * 3 + 3));
 
   return (
     <section className="bg-[#cce1f4] px-5 md:px-16 py-16 md:py-28 w-full">
