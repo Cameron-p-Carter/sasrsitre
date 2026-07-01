@@ -1,9 +1,8 @@
 import Header from '@/app/components/layout/Header';
 import HeroHeaderSection from '@/app/components/sections/hero/HeroHeaderSection';
 import PortfolioSection from '@/app/components/sections/showcase/PortfolioSection';
-import CoreValuesTestimonialSection from '@/app/components/sections/values/CoreValuesTestimonialSection';
-import BlogSection from '@/app/components/sections/showcase/BlogSection';
 import CTASection from '@/app/components/sections/cta/CTASection';
+import { CoreCompetenciesGrid } from '@/app/components/sections/info/CoreCompetenciesSection';
 import Footer from '@/app/components/layout/Footer';
 
 // --- Shared Data Structures ---
@@ -11,15 +10,56 @@ import Footer from '@/app/components/layout/Footer';
 interface Project {
   id: number;
   title: string;
-  description: string;
+  challenge: string;
+  outcome: string;
+  numbers: string;
   image: string;
-  aspectRatio: string;
+  objectPosition?: string;
+  link?: string;
 }
 
+const SHARED_PROJECTS: Project[] = [
+  {
+    id: 1,
+    title: "Coates Group",
+    challenge: "Scale engineering capability across a global restaurant technology platform.",
+    outcome: "Built and embedded a 45-person engineering capability supporting platform growth — 30+ countries supported.",
+    numbers: "45+ person engineering capability\n30+ countries",
+    image: "/images/placeholder/placeholder12.jpg",
+    objectPosition: "top",
+    link: "/collections/case-studies/coates-group",
+  },
+  {
+    id: 2,
+    title: "Commonwealth Bank of Australia",
+    challenge: "Deliver large-scale digital banking initiatives across highly regulated environments.",
+    outcome: "Supported engineering delivery across critical customer-facing platforms.",
+    numbers: "45+ person engineering capability\n30+ countries",
+    image: "/images/case/case19.png",
+    objectPosition: "right",
+    link: "/collections/case-studies/cba-netbank",
+  },
+  {
+    id: 3,
+    title: "National Australia Bank",
+    challenge: "Accelerate cloud and platform engineering capability within a rapidly growing digital banking environment.",
+    outcome: "Strengthened platform delivery and engineering capability.",
+    numbers: "45+ person engineering capability\n30+ countries",
+    image: "/images/case/case17.jpg",
+    link: "/collections/case-studies/nab",
+  },
+  {
+    id: 4,
+    title: "GoFundraise",
+    challenge: "Support international growth through modern cloud-native engineering capability.",
+    outcome: "Delivered scalable platform capability supporting expansion and product innovation.",
+    numbers: "45+ person engineering capability\n30+ countries",
+    image: "/images/placeholder/placeholder14.jpg",
+    link: "/collections/case-studies/gofundraise",
+  },
+];
+
 interface PortfolioSectionData {
-  title: string;
-  description: string;
-  projects: Project[];
   viewAllButtonText: string;
 }
 
@@ -47,7 +87,8 @@ interface IndustryPageData {
   hero: HeroSectionData;
   portfolio: PortfolioSectionData;
   cta: CTASectionData;
-  // Testimonial and Blog are hardcoded components, so no data needed here
+  challenges?: string[];
+  challengesImage?: string;
 }
 
 interface IndustryPageLayoutProps {
@@ -70,16 +111,15 @@ const IndustryPageLayout = ({ data }: IndustryPageLayoutProps) => {
           objectPosition={data.hero.objectPosition}
         />
         
+        <CoreCompetenciesGrid title="Common Challenges" imageSrc={data.challengesImage ?? "/images/people/execkeader.jpg"} imageOnRight={false} items={data.challenges} />
+
         <PortfolioSection
-          title={data.portfolio.title}
-          description={data.portfolio.description}
-          projects={data.portfolio.projects}
+          variant="dark"
+          title="Proven Delivery"
+          description="We've helped organisations across banking, payments, superannuation, retail and digital platforms solve complex technology challenges and strengthen engineering capability."
+          projects={SHARED_PROJECTS}
           viewAllButtonText={data.portfolio.viewAllButtonText}
         />
-        
-        <CoreValuesTestimonialSection />
-        
-        <BlogSection />
         
         <CTASection
           imageSrc={data.cta.imageSrc}

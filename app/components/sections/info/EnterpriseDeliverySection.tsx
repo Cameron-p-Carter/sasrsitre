@@ -17,10 +17,6 @@ const features = [
     description: "Access experienced technology executives, architects and engineering leaders for critical decisions and transformation."
   },
   {
-    icon: "/images/icons/developer_board.svg", // Re-checking icons, need to match best I can if exact not found.
-    // Actually the Figma had "robot_2" icon, I will try to find something similar or use placeholder if not found.
-    // "robot_2" is not in list, checking again... robot? No. Maybe "automation1.svg"?
-    // I will use "automation1.svg" for now.
     icon: "/images/icons/automation1.svg",
     title: "Data & AI",
     description: "Build data foundations and deploy practical AI solutions that create measurable business outcomes."

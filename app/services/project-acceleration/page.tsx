@@ -105,7 +105,7 @@ Every engagement is shaped to your goals, resources and delivery model. Whether 
     primaryButtonText: "Contact",
     secondaryButtonText: "Learn More",
   },
-  showTestimonial: true,
+  showTestimonial: false,
 };
 
 export default function PlatformAccelerationPage() {

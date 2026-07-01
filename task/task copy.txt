@@ -1,0 +1,374 @@
+PAGES TO BE REMOVED FROM MAIN NAVIGATION
+Do NOT delete these pages.
+Keep for:
+ SEO
+ Capability validation
+ Deep links
+ Procurement
+Pages:
+ Cloud Engineering
+ Security Architecture
+ Project Acceleration
+ Platform Due Diligence
+ Engineering Performance
+ EAAS
+ Technology Advisory
+[STATUS: ✅ DONE — all 8 pages removed from nav. Pages still exist for SEO.]
+
+Detailed Updates
+HOMEPAGE
+
+SECTION 1
+REPLACE supporting text:
+Software@Scale helps enterprise organisations boost engineering performance, unblock
+complex technology challenges and safeguard critical platforms through executive
+technology leadership, principal engineering expertise and high-performing delivery teams.
+Buttons:
+Talk To A Technology Leader
+View Proven Delivery
+[STATUS: ✅ DONE]
+
+SECTION 2
+ Trusted By Leading Enterprises
+ Move existing client logos here.
+ Immediately below hero.
+ Purpose: Instant credibility.
+[STATUS: ✅ DONE]
+
+SECTION 3
+Software@Scale At A Glance
+Purpose: Objective proof.
+Metrics:
+ 180+
+Specialists
+ 30+
+Enterprise Clients
+ 2x
+Deloitte Rising Star Winner
+ AWS
+Advanced Partner
+ Government
+Approved ICT Supplier
+[STATUS: ✅ DONE]
+
+SECTION 4
+Boost. Unblock. Safeguard.
+Purpose: Explain how Software@Scale creates value.
+Card 1
+BOOST
+Increase engineering capability, improve delivery velocity and strengthen technology
+teams.
+Card 2
+UNBLOCK
+Solve difficult technology challenges, remove bottlenecks and recover critical
+delivery programs.
+Card 3
+SAFEGUARD
+Reduce operational risk, improve resilience and strengthen security.
+[STATUS: ✅ DONE]
+
+SECTION 5
+Why Enterprise Clients Choose Software@Scale
+Purpose:Differentiation.
+Card 1
+Executive Technology Leadership
+Card 2
+Principal Engineering Expertise
+Card 3
+Proven Delivery In Regulated Industries
+Card 4
+Flexible Engagement Models
+[STATUS: ✅ DONE — 4 cards implemented with supporting descriptions]
+
+SECTION 6
+Meet The Leaders Behind Software@Scale
+Purpose: Trust.
+Copy:
+Software@Scale was founded by technology leaders who have spent their careers building,
+scaling and transforming complex technology platforms across banking, payments, insurance,
+superannuation and digital businesses.
+Today, our leadership team combines executive experience with hands-on engineering
+capability to help clients solve difficult technology challenges and deliver outcomes with
+confidence.
+Featured Founders:
+Louis Droguett
+After leading large engineering organisations inside Commonwealth Bank, Louis founded
+Software@Scale with a simple belief: organisations achieve better outcomes when
+experienced technology leaders remain accountable for delivery.
+Today he works directly with enterprise clients to solve difficult technology challenges, build
+high-performing engineering teams and execute complex transformation programs.
+Patricia Droguett
+Patricia has spent her career delivering large-scale technology transformation programs
+across financial services and highly regulated environments.
+She specialises in turning complex challenges into executable plans, building delivery
+capability and helping organisations improve performance without increasing risk.
+CTA: Meet Our Leadership Team
+[STATUS: ✅ DONE — split into two components: ImageOverlapSection (intro copy) + FoundersSection (Louis & Patricia bios + CTA)]
+
+SECTION 7
+Purpose: Proof.
+Heading: Proven Delivery
+Show:
+ Coates Group
+ Commonwealth Bank of Australia
+ National Australia Bank
+ GoFundraise
+Each card:
+ Challenge
+ Outcome
+ Metric
+CTA View Proven Delivery This takes them to the main Proven Delivery page (formerly
+Case Studies).
+[STATUS: ⚠️ NEEDS CONTENT — cards exist and show Challenge + Outcome but metrics are placeholders:
+  - Coates Group: ✅ "30+ countries supported"
+  - GoFundraise: ❌ Metric unknown ("X dollars donated")
+  - Commonwealth Bank: ❌ Metric unknown ("X number of Australians / 6 million logins per day")
+  - NAB: ❌ No metric yet
+  Real figures needed from the client before these can be completed.]
+
+SECTION 8
+Services Built Around Enterprise Delivery Needs
+Show:
+ Engineering Teams
+ Delivery Acceleration
+ Technology Leadership
+ Data & AI
+[STATUS: ✅ DONE — 2x2 image grid linking to each service page]
+
+SECTION 9
+Trusted By Industry Leaders
+ Awards & Recognition logos
+ Government Approved Supplier
+ Technology Ecosystem – Partnerships logos
+[STATUS: ✅ DONE — implemented as two components:
+  - AwardsSection: 5 award badges (Atlassian, CUB, Deloitte x2, CEO Magazine) + government supplier text + logo
+  - EliteTalentSection: AWS, Vercel, Microsoft, Guidewire, New Relic, Monoova, 6pillars, Zai logos]
+
+SECTION 10
+Insights
+Show:
+ 2 Perspectives
+ 2 News
+[STATUS: ⚠️ NEEDS REVIEW — BlogSection exists and renders blog posts, but filtering to exactly "2 Perspectives + 2 News" may not be enforced. Depends on CMS/blog data structure.]
+
+SECTION 11
+Contact
+Talk To A Technology Leader
+[STATUS: ✅ DONE — CTASection at bottom of homepage]
+
+---
+
+NEW SERVICES PAGE - ENGINEERING TEAMS
+
+HERO Heading
+Build High-Performing Engineering Teams Faster
+Supporting Copy
+Whether you need an individual specialist, a cross-functional squad or ongoing engineering
+capability, Software@Scale provides experienced engineers, architects and technology
+leaders who integrate quickly, operate with ownership and deliver outcomes from day one.
+Trusted by organisations across banking, payments, superannuation, insurance and retail, our
+teams help clients accelerate delivery, reduce technology risk and strengthen engineering
+capability.
+Primary CTA - Talk To A Technology Leader
+Secondary CTA - View Proven Delivery
+[STATUS: ✅ DONE]
+
+SECTION 2
+Heading
+When Clients Need Engineering Teams
+Intro Copy
+Organisations rarely engage Software@Scale because they need more people. They engage
+us because they need outcomes.
+Whether it's accelerating delivery, solving a difficult technology challenge or strengthening
+engineering capability, our teams are brought in to make progress where it matters most.
+Card 1
+Hiring Takes Too Long
+Critical delivery initiatives often move faster than internal recruitment processes. By the time
+a role is approved, advertised and filled, delivery timelines have already slipped.
+Card 2
+Specialist Skills Are Difficult To Find
+Cloud, platform, security, DevOps and senior engineering capability remain some of the
+hardest skills to source in the market.
+Card 3
+Projects Need Momentum Now
+Major programs often need experienced engineers immediately to unblock delivery, reduce
+risk and support internal teams.
+Card 4
+Existing Teams Need Support
+Internal teams sometimes require additional expertise, leadership or specialised capability to
+successfully deliver critical initiatives.
+[STATUS: ⚠️ SIMPLIFIED — intro copy is shown as a text+image block but the 4 detail cards are not rendered. Template does not currently support a 4-card "reasons" layout for this section.]
+
+SECTION 3
+Heading
+Flexible Engagement Models
+Intro Copy
+Every organisation has different delivery needs.
+Software@Scale provides flexible engagement models that can scale with your priorities.
+Card 1
+Individual Specialists
+...
+Card 2
+Engineering Squads
+...
+Card 3
+Managed Teams
+...
+Card 4
+Engineering As A Service
+...
+[STATUS: ⚠️ SIMPLIFIED — implemented as a bullet list (Individual Specialists, Engineering Squads, Managed Teams, Engineering As A Service) rather than 4 full cards with detailed sub-points. The "best suited to" and composition details are omitted.]
+
+SECTION 4
+Heading
+Expertise Across The Engineering Lifecycle
+Intro Copy
+Software@Scale combines engineering depth with enterprise delivery experience.
+Our teams are structured around outcomes, not technology silos.
+Software Engineering / Platform Engineering / DevOps & SRE / Security Engineering / Quality Engineering / Data Engineering
+[STATUS: ✅ DONE — all 6 areas shown as icon columns]
+
+SECTION 5
+Heading
+Why Engineering Teams Succeed
+Senior Capability From Day One / Built For Complex Environments / Flexible Engagement Models / Capability That Stays Behind
+[STATUS: ❌ NOT IMPLEMENTED — this section is missing from the page. The template skips from the expertise columns to Outcomes Delivered.]
+
+SECTION 6
+Heading
+Outcomes Delivered
+Faster Delivery / Reduced Delivery Risk / Stronger Internal Teams / Improved Engineering Quality / Flexible Scale / Access To Specialist Expertise
+[STATUS: ✅ DONE — rendered as a stats + bullet list block]
+
+SECTION 7
+Heading
+Proven Delivery
+Coates Group / GoFundraise / Commonwealth Bank / NAB
+[STATUS: ❌ NOT IMPLEMENTED — no Proven Delivery card section on this service page. Only a testimonial quote is shown. Case study cards with Challenge/Outcome/Metric need to be added.]
+
+FINAL CTA
+Need Engineering Capability?
+[STATUS: ✅ DONE]
+
+---
+
+SERVICE PAGE 2 - DELIVERY ACCELERATION
+
+HERO
+Recover Delivery Momentum And Accelerate Outcomes
+[STATUS: ✅ DONE]
+
+SECTION 2
+When Organisations Need Delivery Acceleration — 4 cards
+[STATUS: ⚠️ SIMPLIFIED — intro copy shown, but the 4 specific cards (Programs Behind Schedule, Technical Debt, Capability Gaps, Market Deadlines) are not rendered as cards. Same template limitation as Engineering Teams S2.]
+
+SECTION 3
+How We Help — 4 cards
+Rapid Squad Deployment / Engineering Recovery / Delivery Leadership / Capability Uplift
+[STATUS: ✅ DONE — implemented as bullet list items]
+
+SECTION 4
+Built For High Pressure Environments
+[STATUS: ✅ DONE — rendered as stats block with 3 metrics (180+, 30+, Day 1)]
+
+SECTION 5
+Why Delivery Acceleration Engagements Succeed — 4 columns
+[STATUS: ✅ DONE — Rapid Mobilisation / Engineering-Led Recovery / Executive Oversight / Sustainable Improvement]
+
+SECTION 7
+Proven Delivery — 3 examples with Challenge/Outcome/Numbers
+[STATUS: ❌ PLACEHOLDER — shows "Example 1 / Example 2 / Example 3" with no real content. Real case studies for Delivery Acceleration engagements needed.]
+
+FINAL CTA
+Need Delivery Momentum?
+[STATUS: ✅ DONE]
+
+---
+
+SERVICE PAGE - TECHNOLOGY LEADERSHIP
+
+HERO
+Technology Leadership For Critical Decisions
+[STATUS: ✅ DONE]
+
+SECTION 2
+When Organisations Need Technology Leadership — 4 cards
+[STATUS: ⚠️ SIMPLIFIED — intro copy shown as text+image block. The 4 cards (Major Technology Decisions, Architecture Uncertainty, Executive Capability Gaps, Transactions/Funding/Mergers) are not rendered.]
+
+SECTION 3
+How We Help
+Fractional Technology Leadership / Architecture & Platform Reviews / Technology Due Diligence / Technology Strategy
+(Each with sub-examples)
+[STATUS: ⚠️ SIMPLIFIED — implemented as a bullet list of the 4 service names only. The nested examples under each (e.g. Fractional CTO, Fractional CIO etc.) are omitted.]
+
+SECTION 4
+Why Technology Leaders Trust Software@Scale — 4 columns
+Leaders Who Have Done It Before / Executive Experience With Engineering Depth / Independent Advice / Focused On Outcomes
+[STATUS: ✅ DONE]
+
+SECTION 5
+Proven Delivery — 3 examples
+[STATUS: ❌ PLACEHOLDER — shows "Example 1 / Example 2 / Example 3" with no real content. Real case studies needed.]
+
+FINAL CTA
+Need Experienced Technology Leadership?
+[STATUS: ✅ DONE]
+
+---
+
+SERVICE PAGE - DATA & AI
+
+HERO
+Move Beyond AI Experiments Into Production
+[STATUS: ✅ DONE]
+
+SECTION 2
+When Organisations Need Data & AI Capability — 4 cards
+AI Pilots Aren't Delivering Value / Poor Data Foundations / Capability Gaps / Uncertainty Around What Matters
+[STATUS: ⚠️ SIMPLIFIED — intro copy shown. The 4 specific problem cards are not rendered as cards.]
+
+SECTION 3
+How We Help
+Data Foundations / AI Engineering / Intelligent Automation / Production Delivery
+(Each with sub-examples)
+[STATUS: ⚠️ SIMPLIFIED — implemented as a bullet list of high-level service names. The nested examples under each category are omitted.]
+
+SECTION 4
+Why AI Initiatives Succeed — 4 columns
+Strong Data Foundations / Built For Real-World Adoption / Enterprise Governance / Outcomes Over Hype
+[STATUS: ✅ DONE]
+
+SECTION 5
+Proven Delivery — 3 examples
+[STATUS: ❌ PLACEHOLDER — shows "Example 1 / Example 2 / Example 3" with no real content. Real case studies needed.]
+
+FINAL CTA
+Need Practical AI Outcomes?
+[STATUS: ✅ DONE]
+
+---
+
+LEADERSHIP PAGE
+
+Page Rename: Leadership
+[STATUS: ✅ DONE]
+
+Hero: Leadership Built In The Organisations You Trust
+[STATUS: ✅ DONE]
+
+Replace Company Overview with: Why We Started Software@Scale
+[STATUS: ✅ DONE — ImageOverlapSection with Louis & Patricia photos and the "Why We Started" copy]
+
+New Section: Executive Technology Leadership
+[STATUS: ✅ DONE — CoreCompetenciesSection]
+
+Rewrite Profiles
+We need to fix each profile. Too ai generated.
+[STATUS: ❌ NOT DONE — team member bios on the Leadership page still need human rewrites. No new copy has been provided yet.]
+
+---
+
+CONTACT PAGE
+
+Talk To A Technology Leader
+[STATUS: ✅ DONE]

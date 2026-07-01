@@ -8,9 +8,12 @@ import PortfolioSection from '@/app/components/sections/showcase/PortfolioSectio
 interface Project {
   id: number;
   title: string;
-  description: string;
+  challenge?: string;
+  outcome?: string;
+  numbers?: string;
+  description?: string;
   image: string;
-  aspectRatio: string;
+  objectPosition?: string;
   link?: string;
 }
 

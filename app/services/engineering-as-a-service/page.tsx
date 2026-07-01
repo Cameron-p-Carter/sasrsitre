@@ -105,7 +105,7 @@ It’s engineering support that fits around your needs, accelerates your roadmap
     primaryButtonText: "Contact",
     secondaryButtonText: "Learn More",
   },
-  showTestimonial: true,
+  showTestimonial: false,
   testimonialData: {
     quote: "Merging two funds was a major undertaking, and having Software@Scale involved made a real difference. Their expertise in data assurance and migration gave us confidence through every stage. Thanks to their support, we delivered a seamless experience for our members and set Team Super up with a strong platform for the future.",
     name: "Chief Executive Officer",
