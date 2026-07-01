@@ -26,7 +26,7 @@ Whether you're planning a transformation, assessing a platform, evaluating an ac
     imageOnRight: true,
     outcomeItems: [
       {
-        iconSrc: "/images/icons/tactic.svg",
+        iconSrc: "/images/icons/flowchart.svg",
         title: "Major Technology Decisions",
         description: "The organisation is making decisions that will have long-term implications for delivery, cost, risk or scalability.",
       },
@@ -36,7 +36,7 @@ Whether you're planning a transformation, assessing a platform, evaluating an ac
         description: "Leaders need confidence that platforms are scalable, maintainable and aligned to business goals.",
       },
       {
-        iconSrc: "/images/icons/person_search.svg",
+        iconSrc: "/images/icons/person_check.svg",
         title: "Executive Capability Gaps",
         description: "Internal teams need additional leadership capacity or independent guidance.",
       },

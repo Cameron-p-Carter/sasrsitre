@@ -63,22 +63,22 @@ const SERVICE_DATA = {
     imageOnRight: false,
     outcomeItems: [
       {
-        iconSrc: "/images/icons/settings.svg",
+        iconSrc: "/images/icons/policy.svg",
         title: "Strong Data Foundations",
         description: "Successful AI initiatives begin with trusted, governed and accessible data. We help organisations build the foundations required for long-term success.",
       },
       {
-        iconSrc: "/images/icons/cloud_done.svg",
+        iconSrc: "/images/icons/globe_location_pin.svg",
         title: "Built For Real-World Adoption",
         description: "Successful AI initiatives require more than good ideas. They require integration into existing systems, processes and ways of working. We focus on solutions that can be adopted, scaled and sustained in real operating environments.",
       },
       {
-        iconSrc: "/images/icons/devices.svg",
+        iconSrc: "/images/icons/group_search.svg",
         title: "Enterprise Governance",
         description: "Security, compliance and operational risk are considered from the beginning, ensuring AI solutions can operate confidently in regulated environments.",
       },
       {
-        iconSrc: "/images/icons/settings.svg",
+        iconSrc: "/images/icons/flag_check.svg",
         title: "Outcomes Over Hype",
         description: "We focus on measurable business outcomes, not technology for technology's sake. Every initiative should improve decision making, automate work or create operational value.",
       },
