@@ -73,7 +73,7 @@ const SERVICE_DATA = {
         description: "Successful AI initiatives require more than good ideas. They require integration into existing systems, processes and ways of working. We focus on solutions that can be adopted, scaled and sustained in real operating environments.",
       },
       {
-        iconSrc: "/images/icons/group_search.svg",
+        iconSrc: "/images/icons/group_search_dark.svg",
         title: "Enterprise Governance",
         description: "Security, compliance and operational risk are considered from the beginning, ensuring AI solutions can operate confidently in regulated environments.",
       },
