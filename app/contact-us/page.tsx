@@ -80,7 +80,7 @@ const FAQ_DATA = {
     },
     {
       question: "Can I schedule a consultation?",
-      answer: "Absolutely! We encourage you to schedule a consultation to discuss your needs. You can book an appointment through our website or contact us directly. We look forward to connecting with you."
+      answer: "Absolutely. Send us a message using the form above or email info@softwareatscale.com.au, and we'll arrange a time to discuss your needs."
     }
   ],
   ctaTitle: "Still have questions?",
