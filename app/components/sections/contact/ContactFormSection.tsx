@@ -2,9 +2,14 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 
 const ease: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
+
+const FALLBACK_EMAIL = 'info@softwareatscale.com.au';
+
+type Status = 'idle' | 'sending' | 'sent' | 'error';
 
 interface ContactFormSectionProps {
   title: string;
@@ -23,16 +28,28 @@ interface ContactFormSectionProps {
 export default function ContactFormSection({
   title, description, imageSrc, backgroundColor, titleColor, textColor, labelColor, buttonColor, buttonTextColor, checkboxTextColor, placeholderColor,
 }: ContactFormSectionProps) {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', message: '', website: '' });
+  const [status, setStatus] = useState<Status>('idle');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value, type } = e.target;
-    setFormData(prev => ({ ...prev, [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value }));
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    if (status === 'sending') return;
+    setStatus('sending');
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      setStatus(response.ok ? 'sent' : 'error');
+    } catch {
+      setStatus('error');
+    }
   };
 
   return (
@@ -69,6 +86,12 @@ export default function ContactFormSection({
                 </div>
               </div>
 
+              {status === 'sent' ? (
+                <div role="status" className={`flex flex-col gap-2 w-full rounded-xl border border-[#14d3f3] p-6 ${textColor}`}>
+                  <p className="font-bold text-[20px] leading-[1.4]">Thanks, your message has been sent.</p>
+                  <p className="text-base leading-[1.5]">We&apos;ll be in touch within one business day.</p>
+                </div>
+              ) : (
               <form onSubmit={handleSubmit} className="flex flex-col gap-6 items-start w-full">
                 {(['name', 'email'] as const).map((field, i) => (
                   <motion.div
@@ -79,12 +102,15 @@ export default function ContactFormSection({
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.1 + i * 0.08, ease }}
                   >
-                    <label className={`font-normal text-base leading-[1.5] w-full ${labelColor}`}>
+                    <label htmlFor={`contact-${field}`} className={`font-normal text-base leading-[1.5] w-full ${labelColor}`}>
                       {field.charAt(0).toUpperCase() + field.slice(1)}
                     </label>
                     <input
+                      id={`contact-${field}`}
                       type={field === 'email' ? 'email' : 'text'}
                       name={field}
+                      autoComplete={field}
+                      maxLength={field === 'email' ? 254 : 200}
                       value={formData[field]}
                       onChange={handleInputChange}
                       className="bg-black/5 border border-black/15 rounded-xl px-3 py-2 w-full text-base leading-[1.5] text-white focus:outline-none focus:ring-2 focus:ring-[#14d3f3] transition-shadow"
@@ -99,9 +125,11 @@ export default function ContactFormSection({
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.26, ease }}
                 >
-                  <label className={`font-normal text-base leading-[1.5] w-full ${labelColor}`}>Message</label>
+                  <label htmlFor="contact-message" className={`font-normal text-base leading-[1.5] w-full ${labelColor}`}>Message</label>
                   <textarea
+                    id="contact-message"
                     name="message"
+                    maxLength={5000}
                     value={formData.message}
                     onChange={handleInputChange}
                     placeholder="Type your message..."
@@ -109,9 +137,35 @@ export default function ContactFormSection({
                     required
                   />
                 </motion.div>
+                {/* Spam trap: hidden from people and screen readers, bots fill it in */}
+                <div aria-hidden="true" className="absolute -left-[9999px] w-px h-px overflow-hidden">
+                  <label htmlFor="contact-website">Website</label>
+                  <input
+                    id="contact-website"
+                    type="text"
+                    name="website"
+                    value={formData.website}
+                    onChange={handleInputChange}
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
+                </div>
+                <p className={`text-sm leading-[1.5] ${textColor}`}>
+                  We&apos;ll only use your details to reply to your enquiry. See our{' '}
+                  <Link href="/privacy-policy" className="underline">privacy policy</Link>.
+                </p>
+                <div role="status" aria-live="polite" className="w-full empty:hidden">
+                  {status === 'error' && (
+                    <p className={`text-base leading-[1.5] rounded-xl bg-black/20 p-3 ${textColor}`}>
+                      Sorry, your message didn&apos;t go through. Please try again, or email us at{' '}
+                      <a href={`mailto:${FALLBACK_EMAIL}`} className="underline">{FALLBACK_EMAIL}</a>.
+                    </p>
+                  )}
+                </div>
                 <motion.button
                   type="submit"
-                  className={`${buttonColor} border border-[#14d3f3] rounded-xl px-6 py-2.5 font-medium text-base leading-[1.5] ${buttonTextColor} hover:opacity-90 transition-opacity`}
+                  disabled={status === 'sending'}
+                  className={`${buttonColor} border border-[#14d3f3] rounded-xl px-6 py-2.5 font-medium text-base leading-[1.5] ${buttonTextColor} hover:opacity-90 transition-opacity disabled:opacity-60 disabled:cursor-wait`}
                   initial={{ opacity: 0, y: 12 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -119,9 +173,10 @@ export default function ContactFormSection({
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
                 >
-                  Submit
+                  {status === 'sending' ? 'Sending…' : 'Submit'}
                 </motion.button>
               </form>
+              )}
             </motion.div>
           </div>
         </div>
