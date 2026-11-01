@@ -30,7 +30,7 @@ const navItems = [
     links: [
       { href: '/industries/banking', label: 'Banking' },
       { href: '/industries/payments', label: 'Payments' },
-      { href: '/industries/supperannuation', label: 'Superannuation' },
+      { href: '/industries/superannuation', label: 'Superannuation' },
       { href: '/industries/insurance', label: 'Insurance' },
       { href: '/industries/retail', label: 'Retail' },
       { href: '/industries/media', label: 'Media' },

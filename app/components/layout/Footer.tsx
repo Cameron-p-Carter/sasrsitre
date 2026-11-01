@@ -105,13 +105,12 @@ export default function Footer() {
                 Industries
               </h3>
               <div className="flex flex-col">
-                {/* Note: Linking to # as specific industry pages are not confirmed */}
-                <FooterLink href="#">Banking</FooterLink>
-                <FooterLink href="#">Payments</FooterLink>
-                <FooterLink href="#">Superannuation</FooterLink>
-                <FooterLink href="#">Insurance</FooterLink>
-                <FooterLink href="#">Retail</FooterLink>
-                <FooterLink href="#">Media</FooterLink>
+                <FooterLink href="/industries/banking">Banking</FooterLink>
+                <FooterLink href="/industries/payments">Payments</FooterLink>
+                <FooterLink href="/industries/superannuation">Superannuation</FooterLink>
+                <FooterLink href="/industries/insurance">Insurance</FooterLink>
+                <FooterLink href="/industries/retail">Retail</FooterLink>
+                <FooterLink href="/industries/media">Media</FooterLink>
               </div>
             </div>
           </div>
