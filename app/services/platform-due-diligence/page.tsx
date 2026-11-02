@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ServicePageLayout from '@/app/components/templates/ServicePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "Platform Due Diligence",
+  description: "Our Platform Due Diligence service is designed to provide a comprehensive assessment of your technology landscape. By identifying risks and opportunities, we…",
+  alternates: { canonical: "/services/platform-due-diligence" },
+};
 
 // Define the test content for the service page
 const TEST_SERVICE_DATA = {
@@ -95,7 +103,7 @@ We combine technical rigour with commercial awareness, helping you make smarter 
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
     titleColor: "text-[#0c2080]",
-    accentColor: "text-[#006cc9]",
+    accentColor: "text-[#004f99]",
   },
   ctaSection: {
     imageSrc: "/images/placeholder/placeholder16.jpg",

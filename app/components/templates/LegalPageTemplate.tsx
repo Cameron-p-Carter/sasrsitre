@@ -13,7 +13,7 @@ export default function LegalPageTemplate({ title, children }: LegalPageTemplate
     <div className="min-h-screen bg-white">
       <Header />
 
-      <main>
+      <main id="main-content" tabIndex={-1} className="outline-none">
         <ArticleHeaderSection
           title={title}
           description=""

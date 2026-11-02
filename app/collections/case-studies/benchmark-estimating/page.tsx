@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import CaseStudyArticleLayout from '@/app/components/templates/CaseStudyArticleLayout';
+
+
+export const metadata: Metadata = {
+  title: "Benchmark Estimating",
+  description: "Benchmark Estimating accelerates delivery predictability and engineering quality through an AWS-aligned delivery uplift.",
+  alternates: { canonical: "/collections/case-studies/benchmark-estimating" },
+};
 
 // --- Data Structures copied from CaseStudyArticleLayout.tsx ---
 
@@ -141,7 +149,7 @@ const CASE_STUDY_DELIVERABLES_DATA: CaseStudyDeliverablesData = {
       description: "Improved roadmap clarity and shared definitions to align expectations around defects versus enhancements.",
     },
   ],
-  backgroundColor: "bg-[#006cc9]",
+  backgroundColor: "bg-[#004f99]",
   titleColor: "text-white",
   subtitleColor: "text-[#5ae0f6]",
   textColor: "text-white",
@@ -234,7 +242,7 @@ const CASE_STUDY_PAGE_DATA = {
     ],
     backgroundColor: "bg-[#cce1f4]",
     titleColor: "text-[#0c2080]",
-    accentColor: "text-[#006cc9]",
+    accentColor: "text-[#004f99]",
   },
   cta: CASE_STUDY_CTA_DATA,
 };

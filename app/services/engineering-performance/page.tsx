@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ServicePageLayout from '@/app/components/templates/ServicePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "Engineering Performance",
+  description: "Engineering Performance is crucial for enterprises aiming to enhance their software delivery capabilities. By focusing on efficiency and quality, we empower…",
+  alternates: { canonical: "/services/engineering-performance" },
+};
 
 // Define the test content for the service page
 const TEST_SERVICE_DATA = {
@@ -96,7 +104,7 @@ Our assessments are designed to be low disruption but high value. With a clear v
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
     titleColor: "text-[#0c2080]",
-    accentColor: "text-[#006cc9]",
+    accentColor: "text-[#004f99]",
   },
   ctaSection: {
     imageSrc: "/images/placeholder/placeholder16.jpg",

@@ -33,7 +33,7 @@ export default function LeadershipSection({
   overImageSrc,
 }: LeadershipSectionProps) {
   return (
-    <section className="bg-[#006cc9] px-5 md:px-16 py-16 md:py-28 w-full">
+    <section className="bg-[#004f99] px-5 md:px-16 py-16 md:py-28 w-full">
       <div className="flex flex-col gap-12 md:gap-20 items-start max-w-[1280px] mx-auto w-full">
 
         {/* Header */}

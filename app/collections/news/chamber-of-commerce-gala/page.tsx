@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ArticlePageLayout from '@/app/components/templates/ArticlePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "Software@Scale Supports Australian Tamil Chamber of Commerce Gala",
+  description: "Software@Scale was proud to support the Australian Tamil Chamber of Commerce's 10th Anniversary Gala Dinner, recognising a decade of contribution to…",
+  alternates: { canonical: "/collections/news/chamber-of-commerce-gala" },
+};
 
 // --- Data Structures copied from ArticlePageLayout.tsx ---
 

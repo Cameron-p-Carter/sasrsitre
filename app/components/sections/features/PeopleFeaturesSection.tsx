@@ -17,7 +17,7 @@ const PeopleFeaturesSection = () => {
   ];
 
   return (
-    <section className="bg-[#006cc9] px-5 md:px-16 py-16 md:py-28 w-full">
+    <section className="bg-[#004f99] px-5 md:px-16 py-16 md:py-28 w-full">
       <div className="max-w-[1280px] mx-auto flex flex-col gap-12 md:gap-[80px] items-start">
         <motion.div
           className="flex flex-col md:flex-row gap-12 md:gap-12 w-full"

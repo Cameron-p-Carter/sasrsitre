@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ArticlePageLayout from '@/app/components/templates/ArticlePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "From Hype to Engineered Success: Be the Pragmatist",
+  description: "Three approaches dominate how teams use AI today, but only one consistently ships reliable outcomes.",
+  alternates: { canonical: "/collections/perspectives/pragmatism" },
+};
 
 // --- Data Structures copied from ArticlePageLayout.tsx ---
 

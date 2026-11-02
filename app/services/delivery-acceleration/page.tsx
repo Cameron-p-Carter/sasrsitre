@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ServicePageLayout2 from '@/app/components/templates/ServicePageLayout2';
+
+
+export const metadata: Metadata = {
+  title: "Delivery Acceleration",
+  description: "When delivery slows, deadlines slip and stakeholder confidence starts to fall, adding more people is rarely enough. Software@Scale helps organisations…",
+  alternates: { canonical: "/services/delivery-acceleration" },
+};
 
 const SERVICE_DATA = {
   hero: {

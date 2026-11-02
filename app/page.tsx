@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Header from '@/app/components/layout/Header';
 import HeroSection from '@/app/components/sections/hero/HeroSection';
 import PartnerStatsSection from '@/app/components/sections/showcase/PartnerStatsSection';
@@ -13,6 +14,13 @@ import EnterpriseDeliverySection from '@/app/components/sections/info/Enterprise
 import PortfolioSection from '@/app/components/sections/showcase/PortfolioSection';
 import CTASection from '@/app/components/sections/cta/CTASection';
 import Footer from '@/app/components/layout/Footer';
+
+
+export const metadata: Metadata = {
+  title: {"absolute": "Software@Scale | Solve the problem. Write the code. Scale the solution."},
+  description: "Software@Scale helps enterprise organisations boost engineering performance, unblock complex technology challenges and safeguard critical platforms through…",
+  alternates: { canonical: "/" },
+};
 
 interface Project {
   id: number;
@@ -75,6 +83,7 @@ export default function Home() {
   return (
     <div>
       <Header />
+      <main id="main-content" tabIndex={-1} className="outline-none">
       <HeroSection />
 
       {/* Logo Section */}
@@ -140,6 +149,7 @@ export default function Home() {
       />
       
       {/* Footer */}
+      </main>
       <Footer />
     </div>
   );

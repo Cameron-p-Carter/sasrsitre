@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ArticlePageLayout from '@/app/components/templates/ArticlePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "Software@Scale Sponsors CISO Masterclass with Joe Sullivan",
+  description: "Software@Scale sponsored an exclusive one-day cybersecurity masterclass led by Joe Sullivan, former Chief Security Officer at Facebook, Uber and Cloudflare…",
+  alternates: { canonical: "/collections/news/ciso" },
+};
 
 // --- Data Structures copied from ArticlePageLayout.tsx ---
 

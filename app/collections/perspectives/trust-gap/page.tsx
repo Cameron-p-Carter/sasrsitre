@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ArticlePageLayout from '@/app/components/templates/ArticlePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "Bridging the Trust Gap Between Business and Technology",
+  description: "A clear breakdown of why trust fails between business and tech teams, and what both sides must change to rebuild it.",
+  alternates: { canonical: "/collections/perspectives/trust-gap" },
+};
 
 // --- Data Structures copied from ArticlePageLayout.tsx ---
 

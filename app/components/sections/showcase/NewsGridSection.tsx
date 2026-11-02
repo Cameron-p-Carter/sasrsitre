@@ -44,7 +44,7 @@ const NewsCard = ({ item }: { item: NewsItem }) => (
         </p>
       )}
       <div className="flex flex-col gap-2">
-        <h3 className="font-bold text-[20px] md:text-[24px] leading-[1.4] tracking-[-0.2px] md:tracking-[-0.24px] text-[#00050a] group-hover:text-[#006cc9] transition-colors">
+        <h3 className="font-bold text-[20px] md:text-[24px] leading-[1.4] tracking-[-0.2px] md:tracking-[-0.24px] text-[#00050a] group-hover:text-[#004f99] transition-colors">
           {item.title}
         </h3>
         <p className="font-normal text-base leading-[1.5] text-[#00050a]">{item.description}</p>

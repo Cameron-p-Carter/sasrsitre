@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ServicePageLayout2 from '@/app/components/templates/ServicePageLayout2';
+
+
+export const metadata: Metadata = {
+  title: "Technology Leadership",
+  description: "Not every technology challenge requires more engineers. Sometimes organisations need experienced leaders who have solved similar problems before.…",
+  alternates: { canonical: "/services/technology-leadership" },
+};
 
 const SERVICE_DATA = {
   hero: {

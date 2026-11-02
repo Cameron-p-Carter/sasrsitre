@@ -48,10 +48,10 @@ export default function PortfolioSection({
   variant = 'light',
 }: PortfolioSectionProps) {
   const dark = variant === 'dark';
-  const bg = dark ? 'bg-[#006cc9]' : 'bg-[#cce1f4]';
+  const bg = dark ? 'bg-[#004f99]' : 'bg-[#cce1f4]';
   const headingColor = dark ? 'text-white' : 'text-[#0c2080]';
   const descColor = dark ? 'text-white/80' : 'text-[#00050a]';
-  const cardTitleColor = dark ? 'text-[#14d3f3]' : 'text-[#006cc9]';
+  const cardTitleColor = dark ? 'text-[#14d3f3]' : 'text-[#004f99]';
   const bodyColor = dark ? 'text-white/80' : 'text-[#00050a]';
   const labelColor = dark ? 'text-white' : 'text-[#00050a]';
   const borderColor = dark ? 'border-white/20' : 'border-[#00050a]/15';
@@ -227,7 +227,7 @@ export default function PortfolioSection({
                 <div className="grid grid-cols-2 gap-8 lg:gap-12 mt-6">
                   {pair.map((project) => (
                     <Link key={project.id} href={project.link || "/collections/case-studies"} className={`flex items-center gap-2 ${linkColor}`}>
-                      <span className="text-base font-medium leading-[1.5]">View Proven Delivery</span>
+                      <span className="text-base font-medium leading-[1.5]">View Proven Delivery<span className="sr-only">: {project.title}</span></span>
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>

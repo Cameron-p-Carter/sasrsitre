@@ -1,9 +1,17 @@
+import type { Metadata } from 'next';
 import Header from '@/app/components/layout/Header';
 import Footer from '@/app/components/layout/Footer';
 import HeroHeaderSection from '@/app/components/sections/hero/HeroHeaderSection';
 import ContactInfoSection from '@/app/components/sections/contact/ContactInfoSection';
 import ContactFormSection from '@/app/components/sections/contact/ContactFormSection';
 import FAQSection from '@/app/components/sections/contact/FAQSection';
+
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description: "Contact Software@Scale to discuss your requirements. Offices in Sydney, Parramatta and Melbourne.",
+  alternates: { canonical: "/contact-us" },
+};
 
 const CONTACT_INFO_DATA = {
   contactItems: [
@@ -48,7 +56,7 @@ const CONTACT_FORM_DATA = {
   title: "Contact us",
   description: "Connect with us to discuss your requirements.",
   imageSrc: "/images/placeholder/placeholder90.jpg",
-  backgroundColor: "bg-[#006cc9]",
+  backgroundColor: "bg-[#004f99]",
   titleColor: "text-white",
   textColor: "text-white",
   labelColor: "text-white",
@@ -102,7 +110,7 @@ export default function ContactUsPage() {
     <div className="min-h-screen bg-white">
         <Header />
       
-      <main>
+      <main id="main-content" tabIndex={-1} className="outline-none">
         <HeroHeaderSection
           imageSrc="/images/placeholder/101.jpg"
           tagline="Connect"

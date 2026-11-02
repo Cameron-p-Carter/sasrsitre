@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Button from '@/app/components/shared/Button';
@@ -16,10 +17,31 @@ const desktopBadges = [
 ];
 
 export default function HeroSection() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  // With reduced motion on, the video stops on its first frame instead of playing
+  useEffect(() => {
+    const query = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const apply = () => {
+      const video = videoRef.current;
+      if (!video) return;
+      if (query.matches) {
+        video.pause();
+        video.currentTime = 0;
+      } else {
+        video.play().catch(() => {});
+      }
+    };
+    apply();
+    query.addEventListener('change', apply);
+    return () => query.removeEventListener('change', apply);
+  }, []);
+
   return (
     <section className="relative min-h-screen 2xl:min-h-0 2xl:h-[900px] flex items-center justify-center px-5 md:px-8 lg:px-16 py-0 pt-[72px] overflow-hidden">
       {/* Video Background */}
       <video
+        ref={videoRef}
         autoPlay
         muted
         loop

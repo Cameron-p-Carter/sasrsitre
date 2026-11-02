@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Header from '@/app/components/layout/Header';
 import HeroHeaderSection from '@/app/components/sections/hero/HeroHeaderSection';
 import CoreValuesMissionSection from '@/app/components/sections/values/CoreValuesMissionSection';
@@ -6,6 +7,13 @@ import CoreValuesGridSection, { defaultCoreValues } from '@/app/components/secti
 import ValuesSection from '@/app/components/sections/values/ValuesSection';
 import CTASection from '@/app/components/sections/cta/CTASection';
 import Footer from '@/app/components/layout/Footer';
+
+
+export const metadata: Metadata = {
+  title: "Our Purpose and Values",
+  description: "Our values define our culture and are the foundation of our success. They guide our decisions, shape our interactions, and inspire us to achieve excellence…",
+  alternates: { canonical: "/core-values" },
+};
 
 const SECOND_CORE_VALUES_DATA = {
   title: "Our values make us a stronger team",
@@ -35,7 +43,7 @@ export default function CoreValuesPage() {
         <Header />
       
       {/* Core Values Content */}
-      <main>
+      <main id="main-content" tabIndex={-1} className="outline-none">
         <HeroHeaderSection
           imageSrc="/images/placeholder/placeholder17.jpg"
           tagline="Empower"

@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ServicePageLayout from '@/app/components/templates/ServicePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "Project Acceleration",
+  description: "Our Project Acceleration service empowers organisations to modernise their software delivery processes. Experience faster deployment and enhanced performance…",
+  alternates: { canonical: "/services/project-acceleration" },
+};
 
 // Define the test content for the service page
 const TEST_SERVICE_DATA = {
@@ -96,7 +104,7 @@ Every engagement is shaped to your goals, resources and delivery model. Whether 
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
     titleColor: "text-[#0c2080]",
-    accentColor: "text-[#006cc9]",
+    accentColor: "text-[#004f99]",
   },
   ctaSection: {
     imageSrc: "/images/placeholder/placeholder16.jpg",

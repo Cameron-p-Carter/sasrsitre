@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ServicePageLayout from '@/app/components/templates/ServicePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "Data and AI Engineering",
+  description: "In today's fast-paced digital landscape, harnessing the power of data and artificial intelligence is crucial for business success. Our Data & AI Engineering…",
+  alternates: { canonical: "/services/data-ai-engineering" },
+};
 
 // Define the test content for the service page
 const TEST_SERVICE_DATA = {
@@ -94,7 +102,7 @@ Our focus is on practical, tailored solutions that distinguish genuine AI capabi
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
     titleColor: "text-[#0c2080]",
-    accentColor: "text-[#006cc9]",
+    accentColor: "text-[#004f99]",
   },
   ctaSection: {
     imageSrc: "/images/placeholder/placeholder16.jpg",

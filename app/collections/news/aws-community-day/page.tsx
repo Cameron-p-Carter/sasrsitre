@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ArticlePageLayout from '@/app/components/templates/ArticlePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "Software@Scale Presents at AWS Community Day 2025",
+  description: "Software@Scale's Head of Cloud and Infrastructure, Richard Ford, joined AWS Community Day Australia 2025 in Brisbane to share new perspectives on innovation…",
+  alternates: { canonical: "/collections/news/aws-community-day" },
+};
 
 // --- Data Structures copied from ArticlePageLayout.tsx ---
 

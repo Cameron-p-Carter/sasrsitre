@@ -155,7 +155,7 @@ const ServicePageLayout2 = ({ data }: ServicePageLayout2Props) => {
     <div className="min-h-screen bg-white">
       <Header />
 
-      <main>
+      <main id="main-content" tabIndex={-1} className="outline-none">
         <HeroHeaderSection
           imageSrc={data.hero.imageSrc}
           tagline={data.hero.tagline}
@@ -196,7 +196,7 @@ const ServicePageLayout2 = ({ data }: ServicePageLayout2Props) => {
           />
         )}
         {data.centeredHeader && (
-          <section className={`${data.centeredHeader.backgroundColor ?? 'bg-[#006cc9]'} px-5 md:px-16 py-16 md:py-20 w-full`}>
+          <section className={`${data.centeredHeader.backgroundColor ?? 'bg-[#004f99]'} px-5 md:px-16 py-16 md:py-20 w-full`}>
             <div className="max-w-[1280px] mx-auto flex flex-col gap-5 md:gap-6 items-center text-center">
               <h2 className="font-bold text-white text-[36px] md:text-[48px] leading-[1.2] tracking-[-0.36px] md:tracking-[-0.48px]">
                 {data.centeredHeader.title}
@@ -232,7 +232,7 @@ const ServicePageLayout2 = ({ data }: ServicePageLayout2Props) => {
         {data.repeatCenteredSection && (data.centeredHeader2 ?? data.centeredHeader) && (() => {
           const h = data.centeredHeader2 ?? data.centeredHeader!;
           return (
-            <section className={`${h.backgroundColor ?? 'bg-[#006cc9]'} px-5 md:px-16 py-16 md:py-20 w-full`}>
+            <section className={`${h.backgroundColor ?? 'bg-[#004f99]'} px-5 md:px-16 py-16 md:py-20 w-full`}>
               <div className="max-w-[1280px] mx-auto flex flex-col gap-5 md:gap-6 items-center text-center">
                 <h2 className="font-bold text-white text-[36px] md:text-[48px] leading-[1.2] tracking-[-0.36px] md:tracking-[-0.48px]">
                   {h.title}

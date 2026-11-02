@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ServicePageLayout2 from '@/app/components/templates/ServicePageLayout2';
+
+
+export const metadata: Metadata = {
+  title: "Engineering Teams",
+  description: "Whether you need an individual specialist, a cross-functional squad or ongoing engineering capability, Software@Scale provides experienced engineers…",
+  alternates: { canonical: "/services/engineering-teams" },
+};
 
 const SERVICE_DATA = {
   hero: {

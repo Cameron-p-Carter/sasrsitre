@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ServicePageLayout2 from '@/app/components/templates/ServicePageLayout2';
+
+
+export const metadata: Metadata = {
+  title: "Data and AI",
+  description: "Most organisations don't need another AI proof of concept. They need practical solutions that improve decision making, automate manual processes and deliver…",
+  alternates: { canonical: "/services/data-and-ai" },
+};
 
 const SERVICE_DATA = {
   hero: {
@@ -85,7 +93,7 @@ const SERVICE_DATA = {
     ],
   },
   serviceFeatureColumns: {
-    backgroundColor: "bg-[#006cc9]",
+    backgroundColor: "bg-[#004f99]",
     textColor: "text-white",
     titleColor: "text-[#14d3f3]",
     columns: [

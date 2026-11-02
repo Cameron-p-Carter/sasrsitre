@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import CaseStudyArticleLayout from '@/app/components/templates/CaseStudyArticleLayout';
+
+
+export const metadata: Metadata = {
+  title: "Coates Group Automation",
+  description: "Coates Group provides digital menu boards and self-serve kiosks backed by a proprietary CMS, supporting high-profile global brands including McDonald’s and…",
+  alternates: { canonical: "/collections/case-studies/coates-group-automation" },
+};
 
 // --- Data Structures copied from CaseStudyArticleLayout.tsx ---
 
@@ -136,7 +144,7 @@ const CASE_STUDY_DELIVERABLES_DATA: CaseStudyDeliverablesData = {
       description: "Provided guidance from proof of concept through pilot execution and preparation for global fleet-wide rollout.",
     },
   ],
-  backgroundColor: "bg-[#006cc9]",
+  backgroundColor: "bg-[#004f99]",
   titleColor: "text-white",
   subtitleColor: "text-[#5ae0f6]",
   textColor: "text-white",
@@ -223,7 +231,7 @@ const CASE_STUDY_PAGE_DATA = {
     ],
     backgroundColor: "bg-[#cce1f4]",
     titleColor: "text-[#0c2080]",
-    accentColor: "text-[#006cc9]",
+    accentColor: "text-[#004f99]",
   },
   cta: CASE_STUDY_CTA_DATA,
 };

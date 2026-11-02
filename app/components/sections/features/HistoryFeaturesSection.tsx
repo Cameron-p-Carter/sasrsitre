@@ -14,7 +14,7 @@ const FEATURES_DATA = [
 
 const HistoryFeaturesSection = () => {
   return (
-    <section className="bg-[#006cc9] px-5 md:px-16 py-16 md:py-28 w-full">
+    <section className="bg-[#004f99] px-5 md:px-16 py-16 md:py-28 w-full">
       <div className="max-w-[1280px] mx-auto flex flex-col gap-12 md:gap-[80px] items-center">
         <motion.h2
           className="font-bold text-white text-[32px] md:text-[40px] leading-[1.2] tracking-[-0.32px] md:tracking-[-0.4px] max-w-[768px] text-center w-full"

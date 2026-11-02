@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import CaseStudiesPageLayout from '@/app/components/templates/CaseStudiesPageLayout';
+
+
+export const metadata: Metadata = {
+  title: "Case Studies",
+  description: "Explore our successful projects and innovative solutions.",
+  alternates: { canonical: "/collections/case-studies" },
+};
 
 // --- Data Structures copied from CaseStudiesPageLayout.tsx and app/page.tsx ---
 

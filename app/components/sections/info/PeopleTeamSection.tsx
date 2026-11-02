@@ -71,7 +71,7 @@ const PeopleTeamSection = () => {
                   <div className="flex flex-col gap-3 md:gap-4 w-full items-start">
                     <div className="flex flex-col gap-0 items-start w-full">
                       <p className="font-semibold text-[#00050a] text-base md:text-[20px] leading-[1.5] w-full">{member.name}</p>
-                      <p className="font-semibold text-[#006cc9] text-base md:text-[18px] leading-[1.5] w-full">{member.title}</p>
+                      <p className="font-semibold text-[#004f99] text-base md:text-[18px] leading-[1.5] w-full">{member.title}</p>
                     </div>
                     <p className="font-normal text-base leading-[1.5] text-[#00050a] w-full">{member.description}</p>
                   </div>

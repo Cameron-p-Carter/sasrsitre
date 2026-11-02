@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import IndustryPageLayout from '@/app/components/templates/IndustryPageLayout';
+
+
+export const metadata: Metadata = {
+  title: "Payments",
+  description: "Discover tailored solutions that drive success in your Payments operations with our expert guidance.",
+  alternates: { canonical: "/industries/payments" },
+};
 
 const BANKING_PORTFOLIO_DATA = {
   viewAllButtonText: "View all",

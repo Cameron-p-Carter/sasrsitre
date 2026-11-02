@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ArticlePageLayout from '@/app/components/templates/ArticlePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "Small Decisions, Big Consequences",
+  description: "How seemingly minor choices in technology and business can create long-term impacts, and what leaders can do to avoid preventable outcomes.",
+  alternates: { canonical: "/collections/perspectives/decision-making" },
+};
 
 // --- Data Structures copied from ArticlePageLayout.tsx ---
 

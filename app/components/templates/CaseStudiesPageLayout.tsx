@@ -48,7 +48,7 @@ const CaseStudiesPageLayout = ({ data }: CaseStudiesPageLayoutProps) => {
     <div className="min-h-screen bg-white">
         <Header />
       
-      <main>
+      <main id="main-content" tabIndex={-1} className="outline-none">
         {/* Portfolio Section (Main Content) */}
         <PortfolioSection
           title={data.portfolio.title}

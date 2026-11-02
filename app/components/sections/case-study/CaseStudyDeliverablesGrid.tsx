@@ -21,7 +21,7 @@ const CaseStudyDeliverablesGrid = ({
   sectionTitle,
   sectionDescription,
   deliverables,
-  backgroundColor = "bg-[#006cc9]",
+  backgroundColor = "bg-[#004f99]",
   titleColor = "text-white",
   descriptionColor = "text-white",
   deliverableTitleColor = "text-[#5ae0f6]",

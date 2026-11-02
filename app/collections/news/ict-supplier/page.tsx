@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ArticlePageLayout from '@/app/components/templates/ArticlePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "Software@Scale Approved as ICT Supplier for NSW Government",
+  description: "Software@Scale has been added to the NSW Government Advanced Registration Supplier List (SCM0020), reflecting its proven capability in delivering complex…",
+  alternates: { canonical: "/collections/news/ict-supplier" },
+};
 
 // --- Data Structures copied from ArticlePageLayout.tsx ---
 

@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import CaseStudyArticleLayout from '@/app/components/templates/CaseStudyArticleLayout';
+
+
+export const metadata: Metadata = {
+  title: "UBank",
+  description: "Australia’s leading digital bank accelerates cloud compliance, data governance, and platform performance to improve delivery velocity and regulatory confidence.",
+  alternates: { canonical: "/collections/case-studies/ubank" },
+};
 
 // --- Data Structures copied from CaseStudyArticleLayout.tsx ---
 
@@ -166,7 +174,7 @@ const CASE_STUDY_DELIVERABLES_DATA: CaseStudyDeliverablesData = {
       description: "Refactored transformation logic using dbt on Amazon Redshift, introduced automated validation, and enabled safe testing through production-mirror environments.",
     },
   ],
-  backgroundColor: "bg-[#006cc9]",
+  backgroundColor: "bg-[#004f99]",
   titleColor: "text-white",
   subtitleColor: "text-[#5ae0f6]",
   textColor: "text-white",
@@ -260,7 +268,7 @@ const CASE_STUDY_PAGE_DATA = {
     ],
     backgroundColor: "bg-[#cce1f4]",
     titleColor: "text-[#0c2080]",
-    accentColor: "text-[#006cc9]",
+    accentColor: "text-[#004f99]",
   },
   cta: CASE_STUDY_CTA_DATA,
 };

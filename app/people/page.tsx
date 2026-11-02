@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Header from '@/app/components/layout/Header';
 import HeroHeaderSection from '@/app/components/sections/hero/HeroHeaderSection';
 import ImageOverlapSection from '@/app/components/sections/content/ImageOverlapSection';
@@ -9,13 +10,20 @@ import ServiceCapabilitiesSection from '@/app/components/sections/info/ServiceCa
 import CTASection from '@/app/components/sections/cta/CTASection';
 import Footer from '@/app/components/layout/Footer';
 
+
+export const metadata: Metadata = {
+  title: "Who We Are",
+  description: "Software@Scale was founded by technology leaders who have spent their careers building, scaling and transforming complex technology platforms across banking…",
+  alternates: { canonical: "/people" },
+};
+
 export default function PeoplePage() {
   return (
     <div className="min-h-screen bg-white">
         <Header />
       
       {/* People Page Hero Section */}
-      <main>
+      <main id="main-content" tabIndex={-1} className="outline-none">
         <HeroHeaderSection
           imageSrc="/images/placeholder/placeholder18.jpg"
           tagline="Expertise"

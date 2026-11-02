@@ -8,7 +8,7 @@ interface CaseStudySectionHeaderProps {
 const CaseStudySectionHeader = ({
   title,
   description,
-  backgroundColor = "bg-[#006cc9]",
+  backgroundColor = "bg-[#004f99]",
   textColor = "text-white",
 }: CaseStudySectionHeaderProps) => {
   return (

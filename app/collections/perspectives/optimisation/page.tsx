@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ArticlePageLayout from '@/app/components/templates/ArticlePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "The Best Optimisation Is the One You Do Not Write",
+  description: "A practical approach to performance engineering where measurement, clarity, and value-driven decisions outperform quick fixes.",
+  alternates: { canonical: "/collections/perspectives/optimisation" },
+};
 
 // --- Data Structures copied from ArticlePageLayout.tsx ---
 

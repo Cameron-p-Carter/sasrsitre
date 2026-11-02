@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ArticlePageLayout from '@/app/components/templates/ArticlePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "Great Delivery Starts With Strong Partnerships",
+  description: "The strongest delivery outcomes come from true partnerships between Engineering Leads and Delivery or Program Managers working as one.",
+  alternates: { canonical: "/collections/perspectives/partnerships" },
+};
 
 // --- Data Structures copied from ArticlePageLayout.tsx ---
 

@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ArticlePageLayout from '@/app/components/templates/ArticlePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "What Good Leadership Really Looks Like",
+  description: "A clearer definition of effective leadership based on problem solving, forward planning, and empowering teams rather than simply directing them.",
+  alternates: { canonical: "/collections/perspectives/good-leadership" },
+};
 
 // --- Data Structures copied from ArticlePageLayout.tsx ---
 

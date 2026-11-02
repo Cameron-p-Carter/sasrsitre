@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Header from '@/app/components/layout/Header';
 import HeroHeaderSection from '@/app/components/sections/hero/HeroHeaderSection';
 import AwardsSection from '@/app/components/sections/stats/AwardsSection';
@@ -7,13 +8,20 @@ import CoreValuesTestimonialSection from '@/app/components/sections/values/CoreV
 import CTASection from '@/app/components/sections/cta/CTASection';
 import Footer from '@/app/components/layout/Footer';
 
+
+export const metadata: Metadata = {
+  title: "Awards and Achievements",
+  description: "At Software at Scale, we take pride in our accolades that reflect our commitment to innovation and quality. Awards and recognitions not only validate our…",
+  alternates: { canonical: "/recognition" },
+};
+
 export default function RecognitionPage() {
   return (
     <div className="min-h-screen bg-white">
         <Header />
       
       {/* Recognition Page Hero Section */}
-      <main>
+      <main id="main-content" tabIndex={-1} className="outline-none">
         <HeroHeaderSection
           imageSrc="/images/placeholder/placeholder20.jpg"
           tagline="Excellence"
@@ -30,7 +38,7 @@ export default function RecognitionPage() {
           title="Back-to-back Winner – Deloitte Technology Fast 50 Rising Star 2024 and 2025"
           description="Software@Scale is proud to be recognised for the second consecutive year as the Deloitte Technology Fast 50 Rising Star Winner for 2024 and 2025. This back-to-back achievement celebrates our consistent innovation, exceptional growth, and leading performance among Australia's most dynamic technology companies. Earning the top position two years running underscores our unwavering commitment to scaling sustainably, driving meaningful outcomes for our clients, and shaping the future of Australia's digital economy. These consecutive honours reflect not only our pace of progress but also our enduring vision - to build technology that delivers lasting impact and opportunity across the industry."
           imageSrc="/images/placeholder/placeholder25.jpg"
-          backgroundColor="bg-[#006cc9]"
+          backgroundColor="bg-[#004f99]"
           textColor="text-white"
           titleColor="text-[#14d3f3]"
           imageOnRight={true}
@@ -50,7 +58,7 @@ export default function RecognitionPage() {
           title="Approved Supplier – Federal Government ICT Digital & Cloud Marketplace Panels"
           description="Software@Scale is an approved supplier on the Australian Government's Digital and Cloud Marketplace Panels, allowing federal agencies to directly engage us for ICT and digital services. Approved across every service category we applied for - including software engineering, architecture, cybersecurity and cloud consulting - this accreditation demonstrates our national capability to deliver complex, high-impact digital projects for government."
           imageSrc="/images/placeholder/placeholder21.jpg"
-          backgroundColor="bg-[#006cc9]"
+          backgroundColor="bg-[#004f99]"
           textColor="text-white"
           titleColor="text-[#14d3f3]"
           imageOnRight={true}
@@ -70,7 +78,7 @@ export default function RecognitionPage() {
           title="Finalist – Atlassian Tech Leadership Awards 2025"
           description="Software@Scale has proudly been named a finalist in the prestigious Atlassian Tech Leadership Awards 2025, which recognises exceptional leadership in the realms of technology, innovation, and organisational culture. This nomination not only highlights our commitment to delivering transformative digital solutions through Atlassian's robust ecosystem but also celebrates our dedication to empowering both teams and clients to achieve remarkable operational excellence at scale."
           imageSrc="/images/placeholder/placeholder23.jpg"
-          backgroundColor="bg-[#006cc9]"
+          backgroundColor="bg-[#004f99]"
           textColor="text-white"
           titleColor="text-[#14d3f3]"
           imageOnRight={true}

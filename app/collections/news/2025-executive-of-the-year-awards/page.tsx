@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ArticlePageLayout from '@/app/components/templates/ArticlePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "Louis Droguett Named Finalist in 2025 CEO of the Year Awards",
+  description: "Software@Scale's CEO and co-founder, Louis Droguett, has been named a finalist in The CEO Magazine's 2025 Executive of the Year Awards, recognised for his…",
+  alternates: { canonical: "/collections/news/2025-executive-of-the-year-awards" },
+};
 
 // --- Data Structures copied from ArticlePageLayout.tsx ---
 

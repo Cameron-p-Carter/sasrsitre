@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import IndustryPageLayout from '@/app/components/templates/IndustryPageLayout';
+
+
+export const metadata: Metadata = {
+  title: "Superannuation",
+  description: "Unlock the potential of your superannuation firm with our tailored technology solutions.",
+  alternates: { canonical: "/industries/superannuation" },
+};
 
 const BANKING_PORTFOLIO_DATA = {
   viewAllButtonText: "View all",

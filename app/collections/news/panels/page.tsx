@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ArticlePageLayout from '@/app/components/templates/ArticlePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "Software@Scale Approved on Federal Digital and Cloud Marketplace Panels",
+  description: "Software@Scale has been officially approved as a supplier on the Australian Government's Digital and Cloud Marketplace Panels, reinforcing its position as a…",
+  alternates: { canonical: "/collections/news/panels" },
+};
 
 // --- Data Structures copied from ArticlePageLayout.tsx ---
 

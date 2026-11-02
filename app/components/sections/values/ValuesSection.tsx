@@ -19,7 +19,7 @@ const valuesSection = {
 
 export default function ValuesSection() {
   return (
-    <SectionWrapper backgroundColor="bg-[#006cc9]" padding="px-5 md:px-16 py-16 md:py-28" className="text-center">
+    <SectionWrapper backgroundColor="bg-[#004f99]" padding="px-5 md:px-16 py-16 md:py-28" className="text-center">
       <div className="flex flex-col items-center gap-20">
         <motion.div
           className="max-w-[768px] mx-auto"

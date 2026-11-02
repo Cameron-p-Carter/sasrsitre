@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import CaseStudyArticleLayout from '@/app/components/templates/CaseStudyArticleLayout';
+
+
+export const metadata: Metadata = {
+  title: "Team Super",
+  description: "Seamless Data Migration Underpins a Major Superannuation Merger",
+  alternates: { canonical: "/collections/case-studies/team-super" },
+};
 
 // --- Data Structures copied from CaseStudyArticleLayout.tsx ---
 
@@ -119,7 +127,7 @@ const CASE_STUDY_DELIVERABLES_DATA: CaseStudyDeliverablesData = {
       description: "Collaborated with technical teams and business leaders to ensure the platform could scale while maintaining service quality.",
     },
   ],
-  backgroundColor: "bg-[#006cc9]",
+  backgroundColor: "bg-[#004f99]",
   titleColor: "text-white",
   subtitleColor: "text-[#5ae0f6]",
   textColor: "text-white",
@@ -141,7 +149,7 @@ const CASE_STUDY_IMAGE_FEATURES_DATA: CaseStudyImageFeaturesData = {
     },
   ],
   imageSrc: "/images/placeholder/placeholder100.png", // Placeholder image
-  backgroundColor: "bg-[#006cc9]",
+  backgroundColor: "bg-[#004f99]",
   titleColor: "text-white",
   featureTitleColor: "text-[#5ae0f6]",
   featureTextColor: "text-white",
@@ -201,7 +209,7 @@ const CASE_STUDY_PAGE_DATA = {
     ],
     backgroundColor: "bg-[#cce1f4]",
     titleColor: "text-[#0c2080]",
-    accentColor: "text-[#006cc9]",
+    accentColor: "text-[#004f99]",
   },
   cta: CASE_STUDY_CTA_DATA,
 };

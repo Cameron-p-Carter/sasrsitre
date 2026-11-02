@@ -24,7 +24,7 @@ const ICON_CHEVRON_RIGHT = "/images/icons/chevron_right.svg";
 
 const CaseStudySection = () => {
   return (
-    <section className="bg-[#006cc9] px-5 md:px-16 py-16 md:py-28 w-full">
+    <section className="bg-[#004f99] px-5 md:px-16 py-16 md:py-28 w-full">
       <div className="max-w-[1280px] mx-auto flex flex-col gap-12 md:gap-[64px] items-start w-full">
 
         {/* Header */}
@@ -44,7 +44,7 @@ const CaseStudySection = () => {
             </p>
           </div>
           <div className="hidden md:flex flex-col gap-4 w-auto">
-            <Button variant="outline" href="/collections/case-studies">View all</Button>
+            <Button variant="outline" href="/collections/case-studies">View all<span className="sr-only"> case studies</span></Button>
           </div>
         </motion.div>
 
@@ -89,7 +89,7 @@ const CaseStudySection = () => {
         </motion.div>
 
         <div className="flex md:hidden justify-end w-full">
-          <Button variant="outline" href="/collections/case-studies">View all</Button>
+          <Button variant="outline" href="/collections/case-studies">View all<span className="sr-only"> case studies</span></Button>
         </div>
       </div>
     </section>

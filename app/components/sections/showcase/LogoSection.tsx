@@ -27,7 +27,7 @@ const LogoSection = () => {
   const duplicatedLogos = [...logos, ...logos];
 
   return (
-    <section className="bg-[#006cc9] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-20 w-full overflow-hidden">
+    <section className="bg-[#004f99] px-5 md:px-8 lg:px-16 py-12 md:py-16 lg:py-20 w-full overflow-hidden">
       <div className="max-w-[1280px] mx-auto">
         {/* Mobile: Header above logos */}
         <div className="md:hidden mb-5">
@@ -75,10 +75,10 @@ const LogoSection = () => {
           {/* Right: Marquee Logos */}
           <div className="flex-1 relative overflow-hidden h-[100px]">
             {/* Left fade gradient */}
-            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#006cc9] to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#004f99] to-transparent z-10 pointer-events-none"></div>
 
             {/* Right fade gradient */}
-            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#006cc9] to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#004f99] to-transparent z-10 pointer-events-none"></div>
 
             <motion.div
               className="flex gap-8 xl:gap-10 2xl:gap-12 items-center h-full"
@@ -98,6 +98,8 @@ const LogoSection = () => {
               {duplicatedLogos.map((logo, index) => (
                 <div
                   key={`${logo.name}-${index}`}
+                  // The second copy only exists to make the loop seamless; hide it from screen readers
+                  aria-hidden={index >= logos.length || undefined}
                   className="flex items-center justify-center flex-shrink-0"
                   style={{
                     width: `${logo.width}px`,
@@ -139,6 +141,8 @@ const LogoSection = () => {
               {duplicatedLogos.map((logo, index) => (
                 <div
                   key={`${logo.name}-${index}`}
+                  // The second copy only exists to make the loop seamless; hide it from screen readers
+                  aria-hidden={index >= logos.length || undefined}
                   className="flex items-center justify-center flex-shrink-0"
                   style={{ minWidth: '120px' }}
                 >

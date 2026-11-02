@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { motion, useInView, useMotionValue, useTransform, animate } from 'framer-motion';
+import { motion, useInView, useMotionValue, useTransform, useReducedMotion, animate } from 'framer-motion';
 
 const ease: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
 
@@ -28,9 +28,15 @@ function AnimatedStat({ value, accentColor, textColor, description }: { value: s
   const suffix = match ? match[2] : '';
   const count = useMotionValue(0);
   const rounded = useTransform(count, (v) => Math.round(v));
+  const reduceMotion = useReducedMotion();
 
   useEffect(() => {
     if (inView && match) {
+      // Show the final number straight away for people who've asked for reduced motion
+      if (reduceMotion) {
+        count.set(targetNum);
+        return;
+      }
       const controls = animate(count, targetNum, { duration: 1.8, ease: 'easeOut' });
       return controls.stop;
     }

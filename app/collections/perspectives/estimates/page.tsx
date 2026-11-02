@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ArticlePageLayout from '@/app/components/templates/ArticlePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "Why Everyone Hates Estimates",
+  description: "Estimates frustrate everyone, but understanding the purpose behind them can make the process faster, clearer, and far more useful.",
+  alternates: { canonical: "/collections/perspectives/estimates" },
+};
 
 // --- Data Structures copied from ArticlePageLayout.tsx ---
 

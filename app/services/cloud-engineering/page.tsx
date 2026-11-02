@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ServicePageLayout from '@/app/components/templates/ServicePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "Cloud Engineering",
+  description: "Cloud Engineering is vital for modern enterprises seeking agility and scalability. Our services ensure robust cloud infrastructure that supports your business…",
+  alternates: { canonical: "/services/cloud-engineering" },
+};
 
 // Define the test content for the service page
 const TEST_SERVICE_DATA = {
@@ -95,7 +103,7 @@ Our approach involves a comprehensive assessment of your current setup, deep per
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
     titleColor: "text-[#0c2080]",
-    accentColor: "text-[#006cc9]",
+    accentColor: "text-[#004f99]",
   },
   ctaSection: {
     imageSrc: "/images/placeholder/placeholder16.jpg",

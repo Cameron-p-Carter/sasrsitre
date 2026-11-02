@@ -42,7 +42,7 @@ export const defaultCoreValues: CoreValue[] = [
 
 const CoreValuesGridSection = ({ title, description, values, variant = 'light' }: CoreValuesGridSectionProps) => {
   const isDark = variant === 'dark';
-  const sectionBgClass = isDark ? 'bg-[#006cc9]' : 'bg-[#cce1f4]';
+  const sectionBgClass = isDark ? 'bg-[#004f99]' : 'bg-[#cce1f4]';
   const titleColorClass = isDark ? 'text-white' : 'text-[#0c2080]';
   const descriptionColorClass = isDark ? 'text-white' : 'text-[#00050a]';
   const valueContentColorClass = isDark ? 'text-white' : 'text-[#00050a]';

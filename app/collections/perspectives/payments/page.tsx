@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ArticlePageLayout from '@/app/components/templates/ArticlePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "Australia's Payment Infrastructure: A Decade Ahead",
+  description: "A look at Australia's real-time payment ecosystem is considered world leading, and how its technical foundations continue to set it apart.",
+  alternates: { canonical: "/collections/perspectives/payments" },
+};
 
 // --- Data Structures copied from ArticlePageLayout.tsx ---
 

@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ArticlePageLayout from '@/app/components/templates/ArticlePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "The Cobra Effect in Software",
+  description: "How well-intended metrics can create perverse incentives and lead teams further from the outcomes they are trying to achieve.",
+  alternates: { canonical: "/collections/perspectives/cobra-effect" },
+};
 
 // --- Data Structures copied from ArticlePageLayout.tsx ---
 

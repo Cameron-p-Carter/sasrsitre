@@ -66,6 +66,7 @@ export default function ImageOverlapSection({
               </Button>
               <Button variant="link" href="/contact-us">
                 {secondaryButtonText}
+                <span className="sr-only">: contact us</span>
               </Button>
             </div>
           </div>

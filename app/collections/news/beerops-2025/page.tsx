@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ArticlePageLayout from '@/app/components/templates/ArticlePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "Software@Scale at BeerOps 2025",
+  description: "Software@Scale joined Australia's largest tech networking event, BeerOps 2025, connecting with the engineering community and supporting an industry-led…",
+  alternates: { canonical: "/collections/news/beerops-2025" },
+};
 
 // --- Data Structures copied from ArticlePageLayout.tsx ---
 

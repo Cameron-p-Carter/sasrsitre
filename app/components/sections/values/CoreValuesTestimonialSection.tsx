@@ -10,7 +10,7 @@ const CoreValuesTestimonialSection = ({
   title = "Leading Australian Retail & Consumer Goods Organisation"
 }: CoreValuesTestimonialSectionProps) => {
   return (
-    <section className="bg-[#006cc9] px-5 md:px-16 py-16 md:py-28 w-full">
+    <section className="bg-[#004f99] px-5 md:px-16 py-16 md:py-28 w-full">
       <div className="max-w-[1280px] mx-auto">
         <div className="flex flex-col gap-12 md:gap-8 items-center max-w-[768px] mx-auto w-full">
           {/* Testimonial Quote */}

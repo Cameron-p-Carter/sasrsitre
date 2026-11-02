@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import CaseStudyArticleLayout from '@/app/components/templates/CaseStudyArticleLayout';
+
+
+export const metadata: Metadata = {
+  title: "Mine Super",
+  description: "Preparing a Superannuation Platform for Sale and Future Growth",
+  alternates: { canonical: "/collections/case-studies/mine-super" },
+};
 
 // --- Data Structures copied from CaseStudyArticleLayout.tsx ---
 
@@ -186,7 +194,7 @@ const CASE_STUDY_OUTCOME_DATA: CaseStudyOutcomeData = {
 const CASE_STUDY_SECTION_HEADER_DATA: SectionHeaderData = {
   title: "What We Delivered",
   description: "Precision-driven data assurance strategies that transform complex migration challenges into seamless operational excellence.",
-  backgroundColor: "bg-[#006cc9]",
+  backgroundColor: "bg-[#004f99]",
   textColor: "text-white",
 };
 
@@ -215,7 +223,7 @@ const CASE_STUDY_DELIVERABLES_GRID_DATA: DeliverablesGridData = {
       description: "Delivered a platform fully prepared for immediate activation, reducing onboarding friction for the future buyer."
     }
   ],
-  backgroundColor: "bg-[#006cc9]",
+  backgroundColor: "bg-[#004f99]",
   titleColor: "text-white",
   descriptionColor: "text-white",
   deliverableTitleColor: "text-[#5ae0f6]",
@@ -247,7 +255,7 @@ const CASE_STUDY_DELIVERABLES_GRID_DATA_2: DeliverablesGridData = {
       description: "Worked closely with business stakeholders to validate key portal functionality and ensure alignment with buyer expectations."
     }
   ],
-  backgroundColor: "bg-[#006cc9]",
+  backgroundColor: "bg-[#004f99]",
   titleColor: "text-white",
   descriptionColor: "text-white",
   deliverableTitleColor: "text-[#5ae0f6]",
@@ -266,7 +274,7 @@ const CASE_STUDY_STATS_DATA = {
   ],
   backgroundColor: "bg-[#cce1f4]",
   titleColor: "text-[#0c2080]",
-  accentColor: "text-[#006cc9]",
+  accentColor: "text-[#004f99]",
 };
 
 const CASE_STUDY_CTA_DATA: CTASectionData = {

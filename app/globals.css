@@ -59,3 +59,12 @@ body {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;  /* Safari and Chrome */
 }
+
+/* Keyboard focus: a cyan ring with a navy inner edge, visible on both light and dark backgrounds.
+   :focus-visible only shows it for keyboard users, not on mouse clicks. */
+:where(a, button, input, textarea, select, summary, [tabindex]:not([tabindex="-1"])):focus-visible {
+  outline: 3px solid #5ae0f6;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px #0c2080;
+  border-radius: 4px;
+}

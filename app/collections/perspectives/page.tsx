@@ -1,7 +1,15 @@
+import type { Metadata } from 'next';
 import Header from '@/app/components/layout/Header';
 import Footer from '@/app/components/layout/Footer';
 import CTASection from '@/app/components/sections/cta/CTASection';
 import NewsGridSection from '@/app/components/sections/showcase/NewsGridSection';
+
+
+export const metadata: Metadata = {
+  title: "Perspectives",
+  description: "Perspectives on engineering, delivery and technology leadership from the Software@Scale team.",
+  alternates: { canonical: "/collections/perspectives" },
+};
 
 // --- Data Structures ---
 
@@ -172,7 +180,7 @@ export default function NewsPage() {
     <div className="min-h-screen bg-white">
         <Header />
       
-      <main>
+      <main id="main-content" tabIndex={-1} className="outline-none">
         <NewsGridSection
           sectionTitle={NEWS_GRID_DATA.sectionTitle}
           sectionDescription={NEWS_GRID_DATA.sectionDescription}

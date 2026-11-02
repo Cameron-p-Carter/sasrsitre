@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import CaseStudyArticleLayout from '@/app/components/templates/CaseStudyArticleLayout';
+
+
+export const metadata: Metadata = {
+  title: "Coates Group",
+  description: "Engineering Acceleration for Global Market Leadership",
+  alternates: { canonical: "/collections/case-studies/coates-group" },
+};
 
 // --- Data Structures copied from CaseStudyArticleLayout.tsx ---
 
@@ -201,7 +209,7 @@ const CASE_STUDY_WHAT_WE_DELIVERED_DATA: WhatWeDeliveredSectionData = {
       description: "Technology and delivery governance frameworks were introduced to improve transparency and consistency. A full-stack technical audit identified key engineering and performance risks, enabling proactive fixes and cutting operational overhead by 30%."
     }
   ],
-  backgroundColor: "bg-[#006cc9]",
+  backgroundColor: "bg-[#004f99]",
   titleColor: "text-white",
   descriptionColor: "text-white",
   deliverableTitleColor: "text-[#5ae0f6]",
@@ -218,7 +226,7 @@ const CASE_STUDY_STATS_DATA = {
   ],
   backgroundColor: "bg-[#cce1f4]",
   titleColor: "text-[#0c2080]",
-  accentColor: "text-[#006cc9]",
+  accentColor: "text-[#004f99]",
 };
 
 const CASE_STUDY_CTA_DATA: CTASectionData = {

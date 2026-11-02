@@ -73,7 +73,7 @@ const ArticlePageLayout = ({ data }: ArticlePageLayoutProps) => {
     <div className="min-h-screen bg-white">
         <Header />
       
-      <main>
+      <main id="main-content" tabIndex={-1} className="outline-none">
         <ArticleHeaderSection
           title={data.header.title}
           description={data.header.description}

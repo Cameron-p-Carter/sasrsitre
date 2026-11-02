@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Header from '@/app/components/layout/Header';
 import Footer from '@/app/components/layout/Footer';
 import HeroHeaderSection from '@/app/components/sections/hero/HeroHeaderSection';
@@ -5,6 +6,13 @@ import CareersOpenPositionsSection from '@/app/components/sections/careers/Caree
 import CareersDiscoverSection from '@/app/components/sections/careers/CareersDiscoverSection';
 import CareersBenefitsSection from '@/app/components/sections/careers/CareersBenefitsSection';
 import CTASection from '@/app/components/sections/cta/CTASection';
+
+
+export const metadata: Metadata = {
+  title: "Careers",
+  description: "Open roles at Software@Scale. Become part of an innovative community focused on digital transformation and engineering excellence.",
+  alternates: { canonical: "/careers" },
+};
 
 interface EmploymentHeroJob {
   title: string;
@@ -74,7 +82,7 @@ const DISCOVER_SECTION_DATA = {
   sectionTitle: "Discover Your Future with Us",
   sectionDescription: "At Software at Scale, we believe in fostering a culture of innovation and collaboration. Join us to work on cutting-edge projects that make a real impact.",
   imageSrc: "/images/placeholder/96.jpg",
-  backgroundColor: "bg-[#006cc9]",
+  backgroundColor: "bg-[#004f99]",
   titleColor: "text-white",
   textColor: "text-white",
   primaryButtonText: "Explore",
@@ -122,7 +130,7 @@ export default async function CareersPage() {
     <div className="min-h-screen bg-white">
         <Header />
 
-      <main>
+      <main id="main-content" tabIndex={-1} className="outline-none">
         <HeroHeaderSection
           imageSrc="/images/placeholder/91.jpg"
           tagline="Careers"

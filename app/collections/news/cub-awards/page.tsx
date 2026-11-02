@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ArticlePageLayout from '@/app/components/templates/ArticlePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "Celebrating Growth at the 2025 CUB Awards",
+  description: "Software@Scale has been recognised as Australia's Fastest Growing Business at the 2025 CUB Awards, a distinction that reflects its commitment to quality…",
+  alternates: { canonical: "/collections/news/cub-awards" },
+};
 
 // --- Data Structures copied from ArticlePageLayout.tsx ---
 

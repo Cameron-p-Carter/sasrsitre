@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Header from '@/app/components/layout/Header';
 import HeroHeaderSection from '@/app/components/sections/hero/HeroHeaderSection';
 import HistoryTimelineSection from '@/app/components/sections/timeline/HistoryTimelineSection';
@@ -5,13 +6,20 @@ import HistoryFeaturesSection from '@/app/components/sections/features/HistoryFe
 import CTASection from '@/app/components/sections/cta/CTASection';
 import Footer from '@/app/components/layout/Footer';
 
+
+export const metadata: Metadata = {
+  title: "Our History",
+  description: "At Software at Scale, our journey has been marked by innovation and growth. From our founding to becoming an industry leader, we have consistently expanded…",
+  alternates: { canonical: "/our-history" },
+};
+
 export default function OurHistoryPage() {
   return (
     <div className="min-h-screen bg-white">
         <Header />
       
       {/* Our History Page Hero Section */}
-      <main>
+      <main id="main-content" tabIndex={-1} className="outline-none">
         <HeroHeaderSection
           imageSrc="/images/placeholder/placeholder27.jpg"
           tagline="Heritage"

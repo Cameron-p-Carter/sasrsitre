@@ -264,7 +264,7 @@ const BlogSection = () => {
                       )}
 
                       <div className="flex flex-col gap-2 text-[#00050a] w-full">
-                        <h3 className="font-bold text-[20px] leading-[1.4] tracking-[-0.2px] w-full group-hover:text-[#006cc9] transition-colors">
+                        <h3 className="font-bold text-[20px] leading-[1.4] tracking-[-0.2px] w-full group-hover:text-[#004f99] transition-colors">
                           {card.title}
                         </h3>
                         <p className="font-normal text-base leading-[1.5] w-full">
@@ -330,7 +330,7 @@ const BlogSection = () => {
                       )}
 
                       <div className="flex flex-col gap-2 text-[#00050a] w-full">
-                        <h3 className="font-bold text-[20px] md:text-[22px] lg:text-[24px] leading-[1.4] tracking-[-0.2px] md:tracking-[-0.22px] lg:tracking-[-0.24px] w-full group-hover:text-[#006cc9] transition-colors">
+                        <h3 className="font-bold text-[20px] md:text-[22px] lg:text-[24px] leading-[1.4] tracking-[-0.2px] md:tracking-[-0.22px] lg:tracking-[-0.24px] w-full group-hover:text-[#004f99] transition-colors">
                           {card.title}
                         </h3>
                         <p className="font-normal text-base leading-[1.5] w-full">
@@ -363,7 +363,10 @@ const BlogSection = () => {
               {Array.from({ length: maxSlides + 1 }).map((_, index) => (
                 <button
                   key={index}
+                  type="button"
                   onClick={() => setCurrentSlide(index)}
+                  aria-label={`Go to slide ${index + 1}`}
+                  aria-current={index === currentSlide ? 'true' : undefined}
                   className={`w-2 h-2 rounded-full transition-colors ${
                     index === currentSlide ? 'bg-[#0c2080]' : 'bg-[#0c2080]/30'
                   }`}
@@ -374,22 +377,26 @@ const BlogSection = () => {
             {/* Navigation Arrows */}
             <div className="flex gap-4">
               <motion.button
+                type="button"
                 onClick={prevSlide}
+                aria-label="Previous slide"
                 className="bg-[#5ae0f6] flex items-center justify-center p-3 rounded-lg hover:bg-[#4ac9e0] transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M15 18L9 12L15 6" stroke="#00050a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </motion.button>
               <motion.button
+                type="button"
                 onClick={nextSlide}
+                aria-label="Next slide"
                 className="bg-[#5ae0f6] flex items-center justify-center p-3 rounded-lg hover:bg-[#4ac9e0] transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M9 18L15 12L9 6" stroke="#00050a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </motion.button>

@@ -74,6 +74,7 @@ export default function CTASection({
             </Button>
             <Button variant="outline" href="/collections/case-studies">
               {secondaryButtonText}
+              <span className="sr-only">: our case studies</span>
             </Button>
           </motion.div>
         </div>

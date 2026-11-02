@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ArticlePageLayout from '@/app/components/templates/ArticlePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "Building a Production Tool as an Intern with AI",
+  description: "How combining AI tool with sound engineering principles enabled a complex workforce planning system to be delivered in just one month.",
+  alternates: { canonical: "/collections/perspectives/intern" },
+};
 
 // --- Data Structures copied from ArticlePageLayout.tsx ---
 

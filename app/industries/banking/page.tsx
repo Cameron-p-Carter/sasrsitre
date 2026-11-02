@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import IndustryPageLayout from '@/app/components/templates/IndustryPageLayout';
+
+
+export const metadata: Metadata = {
+  title: "Banking",
+  description: "Unlock tailored consulting solutions designed specifically for the banking sector's unique challenges.",
+  alternates: { canonical: "/industries/banking" },
+};
 
 const BANKING_PORTFOLIO_DATA = {
   viewAllButtonText: "View all",

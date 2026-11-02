@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ServicePageLayout from '@/app/components/templates/ServicePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "Technology Advisory and Fractional Resources",
+  description: "Our Technology Advisory and Fractional Services offer tailored strategies to guide your organisation through the challenges of digital transformation. With…",
+  alternates: { canonical: "/services/technology-advisory" },
+};
 
 // Define the test content for the service page
 const TEST_SERVICE_DATA = {
@@ -96,7 +104,7 @@ Our approach involves a comprehensive assessment of your current setup, deep per
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
     titleColor: "text-[#0c2080]",
-    accentColor: "text-[#006cc9]",
+    accentColor: "text-[#004f99]",
   },
   ctaSection: {
     imageSrc: "/images/placeholder/placeholder16.jpg",

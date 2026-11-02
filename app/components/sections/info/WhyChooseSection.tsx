@@ -79,7 +79,7 @@ const WhyChooseSection = () => {
   ];
 
   return (
-    <section className="bg-[#006cc9] flex flex-col gap-12 lg:gap-20 items-center px-5 lg:px-16 py-16 lg:py-28 w-full">
+    <section className="bg-[#004f99] flex flex-col gap-12 lg:gap-20 items-center px-5 lg:px-16 py-16 lg:py-28 w-full">
       <div className="flex flex-col gap-12 lg:gap-20 max-w-[1280px] w-full">
         {/* Main Heading */}
         <h2 className="font-bold text-white text-[32px] lg:text-[40px] leading-[1.2] tracking-[-0.32px] lg:tracking-[-0.4px] max-w-[768px] w-full lg:w-[768px]">

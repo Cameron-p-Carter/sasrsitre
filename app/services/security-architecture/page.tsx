@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ServicePageLayout from '@/app/components/templates/ServicePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "Security Architecture",
+  description: "Our Security Architecture service equips enterprises with the tools to defend against modern threats. Tailored solutions ensure your infrastructure is…",
+  alternates: { canonical: "/services/security-architecture" },
+};
 
 // Define the test content for the service page
 const TEST_SERVICE_DATA = {
@@ -96,7 +104,7 @@ From initial assessments to ongoing monitoring, our security architecture servic
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
     titleColor: "text-[#0c2080]",
-    accentColor: "text-[#006cc9]",
+    accentColor: "text-[#004f99]",
   },
   ctaSection: {
     imageSrc: "/images/placeholder/placeholder16.jpg",

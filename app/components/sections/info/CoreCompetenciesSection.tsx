@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const ExecutiveTechnologyLeadership: React.FC = () => {
   return (
-    <section className="bg-[#006cc9] flex justify-center py-16 px-5 lg:py-28 lg:px-16">
+    <section className="bg-[#004f99] flex justify-center py-16 px-5 lg:py-28 lg:px-16">
       <div className="max-w-[1280px] w-full flex flex-col md:flex-row gap-[80px] items-center">
         <div className="flex flex-[1_0_0] flex-col gap-[24px] items-start">
           <h2 className="text-[#14d3f3] text-[36px] lg:text-[48px] font-bold tracking-[-0.48px] leading-[1.2]">
@@ -53,14 +53,14 @@ export const CoreCompetenciesGrid: React.FC<CoreCompetenciesGridProps> = ({ titl
           </div>
         )}
         <div className={`w-full ${imageSrc ? 'flex-[1_0_0]' : ''} flex flex-col gap-6 items-start`}>
-          <h2 className="text-[#006cc9] text-[36px] lg:text-[48px] font-bold tracking-[-0.48px] leading-[1.2]">
+          <h2 className="text-[#004f99] text-[36px] lg:text-[48px] font-bold tracking-[-0.48px] leading-[1.2]">
             {title}
           </h2>
           {items ? (
             <ul className="flex flex-col gap-3 text-[#00050a] text-[16px] lg:text-[18px] leading-[1.5]">
               {items.map((item, i) => (
                 <li key={i} className="flex items-center gap-3">
-                  <span className="w-2 h-2 rounded-full bg-[#006cc9] shrink-0" />
+                  <span className="w-2 h-2 rounded-full bg-[#004f99] shrink-0" />
                   {item}
                 </li>
               ))}
@@ -97,7 +97,7 @@ interface CoreCompetenciesInfoProps {
 
 export const CoreCompetenciesInfo: React.FC<CoreCompetenciesInfoProps> = ({ title, paragraphs, imageSrc, imageOnRight = true }) => {
   return (
-    <section className="bg-[#006cc9] flex justify-center py-16 px-5 lg:py-28 lg:px-16">
+    <section className="bg-[#004f99] flex justify-center py-16 px-5 lg:py-28 lg:px-16">
       <div className={`max-w-[1280px] w-full flex flex-col gap-[80px] items-center ${imageOnRight ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
         <div className="flex flex-[1_0_0] flex-col gap-[24px] items-start">
           <h2 className="text-[#14d3f3] text-[36px] lg:text-[48px] font-bold tracking-[-0.48px] leading-[1.2]">

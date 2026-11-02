@@ -20,7 +20,7 @@ export default function NotFound() {
     <div className="min-h-screen bg-white flex flex-col">
       <Header />
 
-      <main className="flex-1 bg-[#0c2080]">
+      <main id="main-content" tabIndex={-1} className="outline-none flex-1 bg-[#0c2080]">
         <div className="max-w-[1280px] mx-auto px-5 md:px-16 py-20 md:py-28 flex flex-col gap-8 items-start">
           <p className="text-[#5ae0f6] font-semibold text-base leading-[1.5]">404</p>
           <h1 className="text-white font-bold text-[40px] md:text-[56px] leading-[1.2] tracking-[-0.4px] md:tracking-[-0.56px]">

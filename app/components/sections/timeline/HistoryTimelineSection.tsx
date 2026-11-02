@@ -49,7 +49,7 @@ const HistoryTimelineSection = () => {
         transition={{ duration: 0.65, delay: 0.08, ease }}
       >
         <div className="flex flex-col gap-6 w-full">
-          <h3 className="font-bold text-[#006cc9] text-[32px] md:text-[40px] leading-[1.2] tracking-[-0.4px] w-full">{item.year}</h3>
+          <h3 className="font-bold text-[#004f99] text-[32px] md:text-[40px] leading-[1.2] tracking-[-0.4px] w-full">{item.year}</h3>
           <h4 className="font-bold text-[#0c2080] text-[28px] md:text-[32px] leading-[1.3] tracking-[-0.32px] w-full">{item.title}</h4>
         </div>
         <p className="font-normal text-base md:text-lg leading-[1.5] text-[#00050a] w-full">{item.description}</p>

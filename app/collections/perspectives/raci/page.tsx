@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ArticlePageLayout from '@/app/components/templates/ArticlePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "When RACI Goes Wrong",
+  description: "How seemingly subtle behaviours can distort the RACI model and quietly undermine team accountability.",
+  alternates: { canonical: "/collections/perspectives/raci" },
+};
 
 // --- Data Structures copied from ArticlePageLayout.tsx ---
 

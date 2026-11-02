@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import CaseStudyArticleLayout from '@/app/components/templates/CaseStudyArticleLayout';
+
+
+export const metadata: Metadata = {
+  title: "GoFundraise Cloud and AI",
+  description: "Expanding a global fundraising platform into B2B workplace giving through cloud-native architecture and AI-powered campaign tools.",
+  alternates: { canonical: "/collections/case-studies/gofundraise-cloud-ai" },
+};
 
 // --- Data Structures copied from CaseStudyArticleLayout.tsx ---
 
@@ -141,7 +149,7 @@ const CASE_STUDY_DELIVERABLES_DATA: CaseStudyDeliverablesData = {
       description: "Utilised AWS Bedrock and Microsoft Agent Framework to orchestrate AI-powered workflows.",
     },
   ],
-  backgroundColor: "bg-[#006cc9]",
+  backgroundColor: "bg-[#004f99]",
   titleColor: "text-white",
   subtitleColor: "text-[#5ae0f6]",
   textColor: "text-white",
@@ -228,7 +236,7 @@ const CASE_STUDY_PAGE_DATA = {
     ],
     backgroundColor: "bg-[#cce1f4]",
     titleColor: "text-[#0c2080]",
-    accentColor: "text-[#006cc9]",
+    accentColor: "text-[#004f99]",
   },
   cta: CASE_STUDY_CTA_DATA,
 };

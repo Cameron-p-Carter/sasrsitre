@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ArticlePageLayout from '@/app/components/templates/ArticlePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "Software@Scale Featured in 2025 Top Tech Innovators",
+  description: "Software@Scale has been included in the CEO Magazine's 2025 Top Tech Innovators editorial, recognising the company's impact across AI, data and…",
+  alternates: { canonical: "/collections/news/2025-top-tech-innovators" },
+};
 
 // --- Data Structures copied from ArticlePageLayout.tsx ---
 

@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ArticlePageLayout from '@/app/components/templates/ArticlePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "Software@Scale Named #1 Rising Star in Deloitte Tech Fast 50 2024",
+  description: "Software@Scale has taken the top spot in Deloitte's 2024 Tech Fast 50 Rising Star Awards, recognised for its exceptional growth and contribution to…",
+  alternates: { canonical: "/collections/news/deloitte-tech-fast-50" },
+};
 
 // --- Data Structures copied from ArticlePageLayout.tsx ---
 

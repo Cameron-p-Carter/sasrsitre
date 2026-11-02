@@ -28,7 +28,7 @@ const ServiceFeaturesSection = ({ features }: { features?: ServiceFeature[] }) =
   const items = features ?? DEFAULT_FEATURES;
 
   return (
-    <section className="bg-[#006cc9] w-full py-[112px] px-[64px] flex flex-col items-center text-white" data-node-id="10449:21406">
+    <section className="bg-[#004f99] w-full py-[112px] px-[64px] flex flex-col items-center text-white" data-node-id="10449:21406">
       <div className="max-w-[1280px] w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[48px]">
           {items.map((feature, index) => (

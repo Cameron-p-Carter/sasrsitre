@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ArticlePageLayout from '@/app/components/templates/ArticlePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "Software@Scale at the 2025 Iress WealthTech Summit",
+  description: "Bringing together the nation's financial, technology and advice leaders, the Iress WealthTech Summit 2025 explored innovation, trust and the evolving role of…",
+  alternates: { canonical: "/collections/news/iress-wealthtech-summit" },
+};
 
 // --- Data Structures copied from ArticlePageLayout.tsx ---
 

@@ -1,5 +1,13 @@
+import type { Metadata } from 'next';
 import LegalPageTemplate from "@/app/components/templates/LegalPageTemplate";
 import LegalContentBlock from "@/app/components/shared/LegalContentBlock";
+
+
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description: "Software@Scale privacy policy.",
+  alternates: { canonical: "/privacy-policy" },
+};
 
 const PRIVACY_POLICY_CONTENT = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet dui ut erat rutrum vestibulum quis eget sapien. Donec massa est, placerat ac scelerisque sit amet, commodo et felis. Curabitur non lobortis nunc. Aenean a nibh ipsum. Vivamus quis mattis erat, at porttitor massa. Nam scelerisque nunc at neque gravida sollicitudin. Nam luctus in orci eget consectetur. Maecenas vehicula efficitur neque, at rutrum tellus tincidunt pellentesque. Aenean sollicitudin at justo nec vulputate. Phasellus orci arcu, tristique a fermentum vitae, pellentesque mollis urna. Suspendisse mollis volutpat mi, ut bibendum sem euismod ut. Quisque metus metus, luctus a lacus vel, dapibus suscipit justo. Maecenas pulvinar velit ex, ut condimentum dolor efficitur at.
 

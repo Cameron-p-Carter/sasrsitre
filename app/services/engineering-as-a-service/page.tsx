@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ServicePageLayout from '@/app/components/templates/ServicePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "Engineering as a Service",
+  description: "EAAS (Engineering as a Service) redefines operational efficiency by providing bespoke, on-demand engineering solutions. Focus on your core business while we…",
+  alternates: { canonical: "/services/engineering-as-a-service" },
+};
 
 // Define the test content for the service page
 const TEST_SERVICE_DATA = {
@@ -96,7 +104,7 @@ It’s engineering support that fits around your needs, accelerates your roadmap
     backgroundColor: "bg-[#cce1f4]",
     textColor: "text-[#00050a]",
     titleColor: "text-[#0c2080]",
-    accentColor: "text-[#006cc9]",
+    accentColor: "text-[#004f99]",
   },
   ctaSection: {
     imageSrc: "/images/placeholder/placeholder16.jpg",

@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ArticlePageLayout from '@/app/components/templates/ArticlePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "Care. Delivery. Honesty. The Consultant Trifecta",
+  description: "What separates brilliant consultants from genuinely valuable ones is not skill alone, but the right mix of care, delivery, and candour.",
+  alternates: { canonical: "/collections/perspectives/consulting" },
+};
 
 // --- Data Structures copied from ArticlePageLayout.tsx ---
 

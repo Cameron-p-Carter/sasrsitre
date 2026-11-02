@@ -40,7 +40,7 @@ const cardVariants = {
 
 const BoostUnblockSafeguardSection = () => {
   return (
-    <section className="bg-[#006cc9] w-full py-20 px-4 md:px-16 text-white">
+    <section className="bg-[#004f99] w-full py-20 px-4 md:px-16 text-white">
       <motion.div
         className="max-w-[1280px] mx-auto flex flex-wrap gap-8 items-start justify-center"
         variants={containerVariants}

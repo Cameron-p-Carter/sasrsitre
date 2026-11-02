@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ArticlePageLayout from '@/app/components/templates/ArticlePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "What Makes a Great Tech Leader?",
+  description: "A practical look at the three intangible qualities that distinguish strong technical managers from exceptional tech leaders.",
+  alternates: { canonical: "/collections/perspectives/tech-leadership" },
+};
 
 // --- Data Structures copied from ArticlePageLayout.tsx ---
 

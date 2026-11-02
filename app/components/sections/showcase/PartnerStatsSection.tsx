@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { motion, useInView, useMotionValue, useTransform, animate } from 'framer-motion';
+import { motion, useInView, useMotionValue, useTransform, useReducedMotion, animate } from 'framer-motion';
 import Image from 'next/image';
 
 const ease: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
@@ -28,9 +28,15 @@ function AnimatedCounter({ value }: { value: string }) {
   const suffix = match ? match[2] : '';
   const count = useMotionValue(0);
   const rounded = useTransform(count, (v) => Math.round(v));
+  const reduceMotion = useReducedMotion();
 
   useEffect(() => {
     if (inView && match) {
+      // Show the final number straight away for people who've asked for reduced motion
+      if (reduceMotion) {
+        count.set(targetNum);
+        return;
+      }
       const controls = animate(count, targetNum, { duration: 1.8, ease: 'easeOut' });
       return controls.stop;
     }
@@ -76,7 +82,7 @@ const PartnerStatsSection = () => {
               variants={itemVariants}
               className="flex flex-col items-center text-center md:pr-8 md:mr-8 md:border-r md:border-[#00050a]/15 last:md:border-0 last:md:pr-0 last:md:mr-0"
             >
-              <p className="font-extrabold text-[40px] sm:text-[56px] md:text-[64px] lg:text-[80px] leading-[1.2] text-[#006cc9] w-full">
+              <p className="font-extrabold text-[40px] sm:text-[56px] md:text-[64px] lg:text-[80px] leading-[1.2] text-[#004f99] w-full">
                 <AnimatedCounter value={stat.value} />
               </p>
               <p className="font-bold text-[13px] sm:text-[15px] md:text-[18px] lg:text-[20px] leading-[1.4] tracking-[-0.2px] text-[#00050a] whitespace-pre-wrap">

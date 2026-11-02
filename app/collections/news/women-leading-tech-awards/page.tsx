@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import ArticlePageLayout from '@/app/components/templates/ArticlePageLayout';
+
+
+export const metadata: Metadata = {
+  title: "Patricia Droguett Recognised at Women Leading Tech Awards 2025",
+  description: "Software@Scale's Chief Operating Officer, Patricia Droguett, was named a finalist at the 2025 Atlassian Women Leading Tech Awards, recognising her leadership…",
+  alternates: { canonical: "/collections/news/women-leading-tech-awards" },
+};
 
 // --- Data Structures copied from ArticlePageLayout.tsx ---
 
