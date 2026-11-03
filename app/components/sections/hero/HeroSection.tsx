@@ -46,10 +46,13 @@ export default function HeroSection() {
         muted
         loop
         playsInline
+        poster="/videos/hero-poster.jpg"
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-[120vw] min-h-[120vh] w-auto h-auto object-cover"
         aria-hidden="true"
       >
-        <source src="/videos/manager-programmer-and-business-man-with-tablet-f-2025-08-29-01-56-12-utc.mp4" type="video/mp4" />
+        {/* Phones get the 720p encode (about 0.8 MB); larger screens get 1080p (about 1.7 MB) */}
+        <source src="/videos/hero-720.mp4" type="video/mp4" media="(max-width: 767px)" />
+        <source src="/videos/hero-1080.mp4" type="video/mp4" />
       </video>
 
       {/* Blue overlay */}
