@@ -3,7 +3,8 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
+import { trackEvent } from '@/app/analytics';
 
 const ease: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
 
@@ -30,9 +31,14 @@ export default function ContactFormSection({
 }: ContactFormSectionProps) {
   const [formData, setFormData] = useState({ name: '', email: '', message: '', website: '' });
   const [status, setStatus] = useState<Status>('idle');
+  const formStarted = useRef(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
+    if (!formStarted.current && name !== 'website') {
+      formStarted.current = true;
+      trackEvent('enquiry_form_start');
+    }
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
@@ -47,8 +53,12 @@ export default function ContactFormSection({
         body: JSON.stringify(formData),
       });
       setStatus(response.ok ? 'sent' : 'error');
+      // Only a 200 from the server counts as delivered; the spam trap also gets a 200 but sends nothing
+      if (!response.ok) trackEvent('enquiry_failed', { error_type: `http_${response.status}` });
+      else if (!formData.website) trackEvent('enquiry_delivered');
     } catch {
       setStatus('error');
+      trackEvent('enquiry_failed', { error_type: 'network' });
     }
   };
 

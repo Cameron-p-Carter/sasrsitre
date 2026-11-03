@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import MotionProvider from "@/app/components/shared/MotionProvider";
+import Analytics from "@/app/components/shared/Analytics";
 import { SITE_URL } from "./site-url";
 
 const montserrat = Montserrat({
@@ -48,6 +49,7 @@ export default function RootLayout({
           Skip to content
         </a>
         <MotionProvider>{children}</MotionProvider>
+        {process.env.VERCEL_ENV === "production" && <Analytics />}
       </body>
     </html>
   );
