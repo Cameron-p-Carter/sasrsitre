@@ -359,7 +359,12 @@ const BlogSection = () => {
           {/* Slider Controls */}
           <div className="flex items-center justify-between w-full mt-8">
             {/* Dots */}
-            <div className="flex gap-2">
+            {/* Phones show one card per slide, so a dot per card won't fit beside the arrows; show a count instead */}
+            <p className="md:hidden font-medium text-[#0c2080] text-base leading-6 tabular-nums" aria-live="polite">
+              {currentSlide + 1} / {maxSlides + 1}
+            </p>
+            {/* Each dot is drawn at 8px but sits in a 24px tap area (WCAG target size) */}
+            <div className="hidden md:flex -mx-2">
               {Array.from({ length: maxSlides + 1 }).map((_, index) => (
                 <button
                   key={index}
@@ -367,10 +372,15 @@ const BlogSection = () => {
                   onClick={() => setCurrentSlide(index)}
                   aria-label={`Go to slide ${index + 1}`}
                   aria-current={index === currentSlide ? 'true' : undefined}
-                  className={`w-2 h-2 rounded-full transition-colors ${
-                    index === currentSlide ? 'bg-[#0c2080]' : 'bg-[#0c2080]/30'
-                  }`}
-                />
+                  className="w-6 h-6 flex items-center justify-center"
+                >
+                  <span
+                    aria-hidden="true"
+                    className={`w-2 h-2 rounded-full transition-colors ${
+                      index === currentSlide ? 'bg-[#0c2080]' : 'bg-[#0c2080]/30'
+                    }`}
+                  />
+                </button>
               ))}
             </div>
 

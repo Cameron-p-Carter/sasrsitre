@@ -65,7 +65,7 @@ const PartnerStatsSection = () => {
   return (
     <section className="bg-[#cce1f4] w-full px-5 md:px-16 py-16 md:py-20">
       <motion.div
-        className="max-w-[1280px] mx-auto flex flex-col gap-10 md:gap-0 md:flex-row md:items-center md:justify-between"
+        className="max-w-[1280px] mx-auto flex flex-col gap-10 md:items-center lg:gap-0 lg:flex-row lg:justify-between"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -90,7 +90,7 @@ const PartnerStatsSection = () => {
         </div>
 
         {/* Divider — desktop only */}
-        <div className="hidden md:block w-px h-20 bg-[#00050a]/15 mx-8 shrink-0" />
+        <div className="hidden lg:block w-px h-20 bg-[#00050a]/15 mx-8 shrink-0" />
 
         {/* Logos: 2-up row */}
         <div className="grid grid-cols-2 gap-6 md:gap-0 md:flex md:items-start">

@@ -24,7 +24,7 @@ export default function CareersBenefitsSection({ benefits, backgroundColor, titl
       <div className="max-w-[1280px] mx-auto px-5 md:px-16 py-16 md:py-28">
         <div className="flex flex-col gap-12 md:gap-20 items-start w-full">
           <motion.div
-            className="flex flex-col md:flex-row gap-12 items-start w-full"
+            className="flex flex-col lg:flex-row gap-12 items-start w-full"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: '-10% 0px' }}

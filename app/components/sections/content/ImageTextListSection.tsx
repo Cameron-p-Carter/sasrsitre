@@ -25,7 +25,7 @@ export default function ImageTextListSection({
 }: ImageTextListSectionProps) {
   
   const content = (
-    <div className="content-stretch flex flex-col gap-6 md:gap-8 grow md:basis-0 items-start relative shrink-0 w-full md:w-1/2 order-2 md:order-2">
+    <div className="content-stretch flex flex-col gap-6 md:gap-8 grow md:basis-0 items-start relative shrink-0 min-w-0 w-full md:w-1/2 order-2 md:order-2">
       <h2 className={`font-bold text-[36px] md:text-[48px] leading-[1.2] tracking-[-0.36px] md:tracking-[-0.48px] w-full ${titleColor}`}>
         {title}
       </h2>
@@ -65,7 +65,7 @@ export default function ImageTextListSection({
   return (
     <section className={`${backgroundColor} px-5 md:px-16 py-16 md:py-28 w-full`}>
       <div className="max-w-[1280px] mx-auto">
-        <div className={`flex flex-col gap-12 md:gap-[80px] items-start w-full ${imageOnRight ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+        <div className={`flex flex-col gap-12 md:gap-10 lg:gap-[80px] items-start w-full ${imageOnRight ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
           {imageOnRight ? content : image}
           {imageOnRight ? image : content}
         </div>

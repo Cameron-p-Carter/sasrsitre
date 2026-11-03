@@ -10,10 +10,10 @@ const CoreValuesMissionSection = () => {
   return (
     <section className="bg-[#cce1f4] px-5 md:px-16 py-16 md:py-28 w-full">
       <div className="max-w-[1280px] mx-auto">
-        <div className="flex flex-col md:flex-row gap-12 md:gap-[80px] items-center w-full">
+        <div className="flex flex-col md:flex-row gap-12 md:gap-10 lg:gap-[80px] items-center w-full">
           {/* Left: slides from left */}
           <motion.div
-            className="flex flex-col gap-6 md:gap-8 w-full md:w-1/2 order-1"
+            className="flex flex-col gap-6 md:gap-8 min-w-0 w-full md:w-1/2 order-1"
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-10% 0px' }}

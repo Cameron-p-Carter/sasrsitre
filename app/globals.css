@@ -68,3 +68,13 @@ body {
   box-shadow: 0 0 0 2px #0c2080;
   border-radius: 4px;
 }
+
+/* On phones and tablets, long words such as "Software@Scale" in large headings can be wider than the
+   screen or a narrow column. Hyphenate them, or break them as a last resort, rather than pushing the page
+   sideways. Laptop and desktop layouts are left as designed. */
+@media (max-width: 1023px) {
+  :where(h1, h2, h3, h4) {
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+}

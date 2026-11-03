@@ -69,7 +69,7 @@ export default function CareersOpenPositionsSection({ sectionTitle, sectionDescr
                       <Image src={position.iconSrc} alt="" width={48} height={48} className="object-contain" />
                     </div>
                   )}
-                  <div className="flex flex-col gap-6 md:gap-8 items-start flex-grow">
+                  <div className="flex flex-col gap-6 md:gap-8 items-start flex-grow min-w-0">
                     <div className="flex flex-col gap-5 md:gap-6 items-start w-full">
                       <div className="flex flex-col gap-3 md:gap-4 items-start w-full">
                         <h3 className={`font-bold text-[20px] md:text-[24px] leading-[1.4] tracking-[-0.2px] md:tracking-[-0.24px] ${textColor}`}>
@@ -77,12 +77,12 @@ export default function CareersOpenPositionsSection({ sectionTitle, sectionDescr
                         </h3>
                         <p className={`font-normal text-base leading-[1.5] w-full ${textColor}`}>{position.description}</p>
                       </div>
-                      <div className="flex gap-6 items-start w-full text-[18px]">
+                      <div className="flex flex-wrap gap-x-6 gap-y-2 items-start w-full text-[18px]">
                         <div className="flex gap-3 items-center">
                           <div className="relative w-6 h-6 shrink-0">
                             <Image src="/images/icons/location_on.svg" alt="Location" width={24} height={24} className="object-contain" />
                           </div>
-                          <p className={`font-normal leading-[1.5] text-nowrap ${textColor}`}>{position.location}</p>
+                          <p className={`font-normal leading-[1.5] ${textColor}`}>{position.location}</p>
                         </div>
                         <div className="flex gap-3 items-center">
                           <div className="relative w-6 h-6 shrink-0">

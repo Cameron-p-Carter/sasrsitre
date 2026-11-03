@@ -30,9 +30,9 @@ const CaseStudyDeliverablesGrid = ({
   return (
     <div className={`${backgroundColor} box-border flex flex-col gap-12 md:gap-20 items-center px-5 md:px-16 pb-16 md:pb-28 w-full`}>
       <div className="flex flex-col gap-12 md:gap-20 items-start max-w-[1280px] w-full">
-        <div className="flex flex-col md:flex-row gap-12 md:gap-20 items-start w-full">
+        <div className="flex flex-col lg:flex-row gap-12 md:gap-20 items-start w-full">
           {/* Section Title */}
-          <div className="flex flex-col gap-6 md:gap-8 items-start shrink-0 w-full md:w-[380px]">
+          <div className="flex flex-col gap-6 md:gap-8 items-start shrink-0 w-full lg:w-[380px]">
             <div className="flex flex-col gap-3 md:gap-4 items-start w-full">
               <div className={`flex flex-col gap-5 md:gap-6 items-start ${titleColor} w-full`}>
                 <h2 className="font-sans font-bold leading-[1.2] text-[36px] md:text-[48px] tracking-[-0.36px] md:tracking-[-0.48px] w-full">
@@ -46,7 +46,7 @@ const CaseStudyDeliverablesGrid = ({
           </div>
 
           {/* Content Grid - Mobile: Single Column, Desktop: 2x2 Grid */}
-          <div className="flex-1 flex flex-col gap-8 md:gap-16 items-start">
+          <div className="flex-1 min-w-0 w-full flex flex-col gap-8 md:gap-16 items-start">
             {/* Mobile: Single Column Layout */}
             <div className="flex flex-col gap-8 md:hidden w-full">
               {deliverables.map((item, index) => (
@@ -67,7 +67,7 @@ const CaseStudyDeliverablesGrid = ({
               {/* First Row */}
               <div className="flex gap-12 items-start w-full">
                 {deliverables.slice(0, 2).map((item, index) => (
-                  <div key={index} className="flex-1 flex flex-col gap-6 items-start">
+                  <div key={index} className="flex-1 min-w-0 flex flex-col gap-6 items-start">
                     <Image src={item.iconSrc} alt="" width={48} height={48} className="w-12 h-12" aria-hidden="true" />
                     <h3 className={`font-sans font-bold leading-[1.4] text-[24px] tracking-[-0.24px] ${deliverableTitleColor} w-full`}>
                       {item.title}
@@ -83,7 +83,7 @@ const CaseStudyDeliverablesGrid = ({
               {deliverables.length > 2 && (
                 <div className="flex gap-12 items-start w-full">
                   {deliverables.slice(2, 4).map((item, index) => (
-                    <div key={index} className="flex-1 flex flex-col gap-6 items-start">
+                    <div key={index} className="flex-1 min-w-0 flex flex-col gap-6 items-start">
                       <Image src={item.iconSrc} alt="" width={48} height={48} className="w-12 h-12" aria-hidden="true" />
                       <h3 className={`font-sans font-bold leading-[1.4] text-[24px] tracking-[-0.24px] ${deliverableTitleColor} w-full`}>
                         {item.title}

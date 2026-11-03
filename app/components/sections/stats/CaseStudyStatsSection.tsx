@@ -27,20 +27,20 @@ export default function CaseStudyStatsSection({
         {/* Section Header & Technologies */}
         {technologiesContent ? (
           // Two-column layout when technologies are present
-          <div className="flex flex-col md:flex-row gap-8 md:gap-20 w-full">
+          <div className="flex flex-col md:flex-row gap-8 md:gap-10 lg:gap-20 w-full">
             {/* Title Column (Left) */}
-            <div className="w-full md:w-1/2 flex flex-col gap-4 md:gap-6 items-start">
+            <div className="min-w-0 w-full md:w-1/2 flex flex-col gap-4 md:gap-6 items-start">
               <h3 className={`font-bold text-[32px] md:text-[40px] leading-[1.2] tracking-[-0.32px] md:tracking-[-0.4px] w-full ${titleColor}`}>
                 {title}
               </h3>
             </div>
             
             {/* Technologies Column (Right) */}
-            <div className="w-full md:w-1/2 flex flex-col gap-4 items-start">
+            <div className="min-w-0 w-full md:w-1/2 flex flex-col gap-4 items-start">
               <p className={`font-bold text-[18px] md:text-[20px] leading-[1.4] tracking-[-0.2px] w-full ${titleColor}`}>
                 Key Technologies
               </p>
-              <ul className="list-disc list-outside pl-5 space-y-2 md:columns-2 text-[16px] md:text-[18px] text-[#00050a]" style={{ columnGap: '3rem' }}>
+              <ul className="list-disc list-outside pl-5 space-y-2 lg:columns-2 text-[16px] md:text-[18px] text-[#00050a]" style={{ columnGap: '3rem' }}>
                 {technologiesContent
                   .split('•')
                   .map(item => item.trim())
@@ -65,11 +65,11 @@ export default function CaseStudyStatsSection({
           {stats.map((stat, index) => (
             <div
               key={index}
-              className={`flex flex-col gap-2 md:gap-4 w-full md:w-1/3 items-start text-left
+              className={`flex flex-col gap-2 md:gap-4 min-w-0 w-full md:w-1/3 items-start text-left
                 ${index > 0 ? 'md:border-l border-gray-300 border-solid md:pl-8 lg:pl-12' : ''}
               `}
             >
-              <p className={`font-extrabold text-[64px] md:text-[80px] leading-[1.3] ${accentColor} w-full`}>
+              <p className={`font-extrabold text-[64px] md:text-[56px] lg:text-[80px] leading-[1.3] ${accentColor} w-full`}>
                 {stat.value}
               </p>
               <p className={`font-bold text-[18px] md:text-[20px] leading-[1.4] tracking-[-0.2px] w-full ${titleColor}`}>

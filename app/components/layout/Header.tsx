@@ -156,6 +156,36 @@ const Header = () => {
   const { scrollY } = useScroll();
   useMotionValueEvent(scrollY, 'change', (v) => setScrolled(v > 10));
 
+  const tabletMenuButtonRef = useRef<HTMLButtonElement>(null);
+  const mobileMenuButtonRef = useRef<HTMLButtonElement>(null);
+
+  // While the menu is open: stop the page scrolling behind it, close it with Esc (returning focus to the
+  // menu button), and close it if the window widens to desktop, where the menu isn't shown
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const close = () => {
+      setIsMobileMenuOpen(false);
+      setExpandedMobileSection(null);
+    };
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key !== 'Escape') return;
+      close();
+      const visibleButton = [tabletMenuButtonRef.current, mobileMenuButtonRef.current].find((b) => b && b.offsetParent !== null);
+      visibleButton?.focus();
+    };
+    const desktop = window.matchMedia('(min-width: 1024px)');
+    const onWiden = () => { if (desktop.matches) close(); };
+    document.addEventListener('keydown', onKeyDown);
+    desktop.addEventListener('change', onWiden);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener('keydown', onKeyDown);
+      desktop.removeEventListener('change', onWiden);
+    };
+  }, [isMobileMenuOpen]);
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen((prev) => !prev);
     setExpandedMobileSection(null);
@@ -224,10 +254,11 @@ const Header = () => {
             Contact
           </Button>
           <button
+            ref={tabletMenuButtonRef}
             type="button"
             onClick={toggleMobileMenu}
             aria-expanded={isMobileMenuOpen}
-            aria-controls="tablet-menu"
+            aria-controls="mobile-menu"
             aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
             className="flex items-center justify-center w-10 h-10"
           >
@@ -253,6 +284,7 @@ const Header = () => {
           </div>
         </div>
         <button
+          ref={mobileMenuButtonRef}
           type="button"
           onClick={toggleMobileMenu}
           aria-expanded={isMobileMenuOpen}
@@ -268,19 +300,19 @@ const Header = () => {
         </button>
       </div>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile and Tablet Menu Overlay */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
             key="mobile-menu"
             id="mobile-menu"
-            className="absolute top-full left-0 right-0 bg-[#0c2080] border-t border-[#1a3a9a] z-[60] md:hidden shadow-lg overflow-hidden"
+            className="fixed top-[72px] bottom-0 left-0 right-0 bg-[#0c2080] border-t border-[#1a3a9a] z-[60] lg:hidden shadow-lg overflow-y-auto overscroll-contain"
             initial={{ opacity: 0, y: -12 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.22, ease: 'easeOut' }}
           >
-            <nav className="flex flex-col px-4 py-3">
+            <nav aria-label="Main" className="flex flex-col px-4 md:px-6 py-3 md:py-6">
               <div className="flex flex-col gap-2">
                 {mobileNavSections.map((section) => (
                   <div key={section.key} className="border-b border-[#1a3a9a]">
@@ -293,7 +325,7 @@ const Header = () => {
                       <span className="font-normal text-white text-base leading-6">{section.label}</span>
                       <motion.div
                         aria-hidden="true"
-                        animate={{ rotate: expandedMobileSection === section.key ? 180 : 0 }}
+                        animate={{ rotate: expandedMobileSection === section.key ? 0 : 180 }}
                         transition={{ duration: 0.2 }}
                       >
                         <ChevronIcon />
@@ -339,44 +371,6 @@ const Header = () => {
         )}
       </AnimatePresence>
 
-      {/* Tablet Menu Overlay */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            key="tablet-menu"
-            id="tablet-menu"
-            className="fixed top-[72px] left-0 right-0 bg-[#0c2080] border-t border-[#1a3a9a] z-[60] hidden md:block lg:hidden shadow-lg"
-            initial={{ opacity: 0, y: -12 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -12 }}
-            transition={{ duration: 0.22, ease: 'easeOut' }}
-          >
-            <nav className="flex flex-col p-6">
-              <div className="grid grid-cols-2 gap-6">
-                <div className="flex flex-col gap-4">
-                  {mobileNavSections.slice(0, 2).map((section) => (
-                    <div key={section.key} className="flex items-center justify-between py-3 border-b border-[#1a3a9a]">
-                      <span className="font-normal text-white text-base leading-6">{section.label}</span>
-                      <ChevronIcon />
-                    </div>
-                  ))}
-                </div>
-                <div className="flex flex-col gap-4">
-                  {mobileNavSections.slice(2).map((section) => (
-                    <div key={section.key} className="flex items-center justify-between py-3 border-b border-[#1a3a9a]">
-                      <span className="font-normal text-white text-base leading-6">{section.label}</span>
-                      <ChevronIcon />
-                    </div>
-                  ))}
-                  <div className="py-3">
-                    <span className="font-normal text-white text-base leading-6">Careers</span>
-                  </div>
-                </div>
-              </div>
-            </nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </header>
   );
 };

@@ -20,7 +20,7 @@ const PeopleFeaturesSection = () => {
     <section className="bg-[#004f99] px-5 md:px-16 py-16 md:py-28 w-full">
       <div className="max-w-[1280px] mx-auto flex flex-col gap-12 md:gap-[80px] items-start">
         <motion.div
-          className="flex flex-col md:flex-row gap-12 md:gap-12 w-full"
+          className="flex flex-col lg:flex-row gap-12 w-full"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-10% 0px' }}
@@ -29,7 +29,7 @@ const PeopleFeaturesSection = () => {
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              className="flex flex-col gap-6 md:gap-8 w-full md:w-1/3 items-start"
+              className="flex flex-col gap-6 md:gap-8 w-full lg:w-1/3 items-start"
               variants={{
                 hidden: { opacity: 0, y: 16 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease } },

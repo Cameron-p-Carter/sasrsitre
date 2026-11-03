@@ -86,7 +86,7 @@ export default function ImageTextSection({
             </div>
             {outcomeItems && outcomeItems.length > 0 && (
               <motion.div
-                className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-x-6 md:gap-y-10 w-full"
+                className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-x-6 lg:gap-y-10 w-full"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: '-10% 0px' }}
@@ -123,7 +123,7 @@ export default function ImageTextSection({
 
   const content = (
     <motion.div
-      className={`content-stretch flex flex-col gap-6 md:gap-8 grow md:basis-0 items-start relative shrink-0 w-full md:w-1/2 order-2 ${imageOnRight ? 'md:order-1' : 'md:order-2'}`}
+      className={`content-stretch flex flex-col gap-6 md:gap-8 grow lg:basis-0 items-start relative shrink-0 min-w-0 w-full lg:w-1/2 order-2 ${imageOnRight ? 'lg:order-1' : 'lg:order-2'}`}
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-10% 0px' }}
@@ -138,7 +138,7 @@ export default function ImageTextSection({
 
   const image = (
     <motion.div
-      className={`relative rounded-2xl shrink-0 w-full h-[335px] md:h-auto md:w-1/2 order-1 overflow-hidden ${imageOnRight ? 'md:order-2' : 'md:order-1'}`}
+      className={`relative rounded-2xl shrink-0 w-full h-[335px] md:h-[420px] lg:h-auto lg:w-1/2 order-1 overflow-hidden ${imageOnRight ? 'lg:order-2' : 'lg:order-1'}`}
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-10% 0px' }}
@@ -155,7 +155,8 @@ export default function ImageTextSection({
 
   return (
     <SectionWrapper backgroundColor={backgroundColor} id={id}>
-      <div className="flex flex-col md:flex-row gap-12 md:gap-20 items-start md:items-stretch">
+      {/* Side by side from 1024px; on tablets the two halves are too narrow for the 48px heading */}
+      <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start lg:items-stretch">
         {imageOnRight ? <>{content}{image}</> : <>{image}{content}</>}
       </div>
     </SectionWrapper>
