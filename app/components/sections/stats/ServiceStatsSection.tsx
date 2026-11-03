@@ -26,18 +26,15 @@ function AnimatedStat({ value, accentColor, textColor, description }: { value: s
   const match = value.match(/^(\d+)([^0-9]*)$/);
   const targetNum = match ? parseInt(match[1]) : 0;
   const suffix = match ? match[2] : '';
-  const count = useMotionValue(0);
+  // Start at the real number so the server-rendered page (and search engines) show it, not 0
+  const count = useMotionValue(targetNum);
   const rounded = useTransform(count, (v) => Math.round(v));
   const reduceMotion = useReducedMotion();
 
   useEffect(() => {
-    if (inView && match) {
-      // Show the final number straight away for people who've asked for reduced motion
-      if (reduceMotion) {
-        count.set(targetNum);
-        return;
-      }
-      const controls = animate(count, targetNum, { duration: 1.8, ease: 'easeOut' });
+    // Count up from 0 once the stat scrolls into view; with reduced motion it just stays on the real number
+    if (inView && match && !reduceMotion) {
+      const controls = animate(count, targetNum, { from: 0, duration: 1.8, ease: 'easeOut' });
       return controls.stop;
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
