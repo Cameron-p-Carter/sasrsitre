@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import "./motion.css";
 import MotionProvider from "@/app/components/shared/MotionProvider";
 import Analytics from "@/app/components/shared/Analytics";
 import { SITE_URL } from "./site-url";
