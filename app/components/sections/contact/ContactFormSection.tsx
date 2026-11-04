@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRef, useState } from 'react';
@@ -9,6 +9,9 @@ import { trackEvent } from '@/app/analytics';
 const ease: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
 
 const FALLBACK_EMAIL = 'info@softwareatscale.com.au';
+
+// Moves keyboard and screen-reader users to the confirmation, as the form they were in has gone
+const focusOnMount = (el: HTMLDivElement | null) => el?.focus();
 
 type Status = 'idle' | 'sending' | 'sent' | 'error';
 
@@ -32,6 +35,10 @@ export default function ContactFormSection({
   const [formData, setFormData] = useState({ name: '', email: '', message: '', website: '' });
   const [status, setStatus] = useState<Status>('idle');
   const formStarted = useRef(false);
+  const formRef = useRef<HTMLFormElement>(null);
+  // The thank-you message takes the form's height, so the page doesn't jump when it appears
+  const [formHeight, setFormHeight] = useState<number>();
+  const reduceMotion = useReducedMotion();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -45,6 +52,7 @@ export default function ContactFormSection({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (status === 'sending') return;
+    setFormHeight(formRef.current?.offsetHeight);
     setStatus('sending');
     try {
       const response = await fetch('/api/contact', {
@@ -68,25 +76,11 @@ export default function ContactFormSection({
         <div className="flex flex-col gap-12 md:gap-20 items-start w-full">
           <div className="flex flex-col md:flex-row gap-12 md:gap-20 items-stretch w-full">
 
-            {/* Image: slides from left */}
-            <motion.div
-              className="relative w-full md:w-1/2 h-[335px] md:h-auto rounded-2xl overflow-hidden"
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-10% 0px' }}
-              transition={{ duration: 0.65, ease }}
-            >
+            <div className="relative w-full md:w-1/2 h-[335px] md:h-auto rounded-2xl overflow-hidden">
               <Image src={imageSrc} alt={title} fill className="object-cover scale-225" />
-            </motion.div>
+            </div>
 
-            {/* Form: slides from right */}
-            <motion.div
-              className="flex flex-col gap-6 md:gap-8 items-start w-full md:w-1/2"
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-10% 0px' }}
-              transition={{ duration: 0.65, delay: 0.1, ease }}
-            >
+            <div className="flex flex-col gap-6 md:gap-8 items-start w-full md:w-1/2">
               <div className="flex flex-col gap-3 md:gap-4 items-start w-full">
                 <div className="flex flex-col gap-5 md:gap-6 items-start w-full">
                   <h2 className={`font-bold text-[36px] md:text-[48px] leading-[1.2] tracking-[-0.36px] md:tracking-[-0.48px] w-full ${titleColor}`}>
@@ -96,22 +90,46 @@ export default function ContactFormSection({
                 </div>
               </div>
 
+              <AnimatePresence mode="wait" initial={false}>
               {status === 'sent' ? (
-                <div role="status" className={`flex flex-col gap-2 w-full rounded-xl border border-[#14d3f3] p-6 ${textColor}`}>
+                <motion.div
+                  key="sent"
+                  ref={focusOnMount}
+                  tabIndex={-1}
+                  role="status"
+                  className={`flex flex-col gap-3 items-center justify-center text-center w-full rounded-xl border border-[#14d3f3] p-6 outline-none ${textColor}`}
+                  style={{ minHeight: formHeight }}
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, ease }}
+                >
+                  <svg viewBox="0 0 52 52" width="48" height="48" aria-hidden="true" className="text-[#14d3f3]">
+                    <circle cx="26" cy="26" r="24" fill="none" stroke="currentColor" strokeWidth="3" />
+                    <motion.path
+                      d="M15 27l7 7 15-15"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      initial={{ pathLength: reduceMotion ? 1 : 0 }}
+                      animate={{ pathLength: 1 }}
+                      transition={{ duration: 0.45, delay: 0.2, ease }}
+                    />
+                  </svg>
                   <p className="font-bold text-[20px] leading-[1.4]">Thanks, your message has been sent.</p>
                   <p className="text-base leading-[1.5]">We&apos;ll be in touch within one business day.</p>
-                </div>
+                </motion.div>
               ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col gap-6 items-start w-full">
-                {(['name', 'email'] as const).map((field, i) => (
-                  <motion.div
-                    key={field}
-                    className="flex flex-col gap-2 items-start w-full"
-                    initial={{ opacity: 0, y: 16 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.1 + i * 0.08, ease }}
-                  >
+              <motion.form
+                key="form"
+                ref={formRef}
+                onSubmit={handleSubmit}
+                className="flex flex-col gap-6 items-start w-full"
+                exit={{ opacity: 0, transition: { duration: 0.2 } }}
+              >
+                {(['name', 'email'] as const).map((field) => (
+                  <div key={field} className="flex flex-col gap-2 items-start w-full">
                     <label htmlFor={`contact-${field}`} className={`font-normal text-base leading-[1.5] w-full ${labelColor}`}>
                       {field.charAt(0).toUpperCase() + field.slice(1)}
                     </label>
@@ -126,15 +144,9 @@ export default function ContactFormSection({
                       className="bg-black/5 border border-black/15 rounded-xl px-3 py-2 w-full text-base leading-[1.5] text-white focus:outline-none focus:ring-2 focus:ring-[#14d3f3] transition-shadow"
                       required
                     />
-                  </motion.div>
+                  </div>
                 ))}
-                <motion.div
-                  className="flex flex-col gap-2 items-start w-full"
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.26, ease }}
-                >
+                <div className="flex flex-col gap-2 items-start w-full">
                   <label htmlFor="contact-message" className={`font-normal text-base leading-[1.5] w-full ${labelColor}`}>Message</label>
                   <textarea
                     id="contact-message"
@@ -146,7 +158,7 @@ export default function ContactFormSection({
                     className={`bg-black/5 border border-black/15 rounded-xl p-3 w-full h-[180px] text-base leading-[1.5] text-white resize-none focus:outline-none focus:ring-2 focus:ring-[#14d3f3] transition-shadow placeholder:${placeholderColor}`}
                     required
                   />
-                </motion.div>
+                </div>
                 {/* Spam trap: hidden from people and screen readers, bots fill it in */}
                 <div aria-hidden="true" className="absolute -left-[9999px] w-px h-px overflow-hidden">
                   <label htmlFor="contact-website">Website</label>
@@ -172,22 +184,16 @@ export default function ContactFormSection({
                     </p>
                   )}
                 </div>
-                <motion.button
-                  type="submit"
-                  disabled={status === 'sending'}
-                  className={`${buttonColor} border border-[#14d3f3] rounded-xl px-6 py-2.5 font-medium text-base leading-[1.5] ${buttonTextColor} hover:opacity-90 transition-opacity disabled:opacity-60 disabled:cursor-wait`}
-                  initial={{ opacity: 0, y: 12 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.45, delay: 0.34, ease }}
-                  whileHover={{ scale: 1.03 }}
-                  whileTap={{ scale: 0.97 }}
-                >
+                <button type="submit" disabled={status === 'sending'} className={`${buttonColor} border border-[#14d3f3] rounded-xl px-6 py-2.5 font-medium text-base leading-[1.5] ${buttonTextColor} hover:opacity-90 press inline-flex items-center gap-2 disabled:opacity-60 disabled:cursor-wait`}>
                   {status === 'sending' ? 'Sending…' : 'Submit'}
-                </motion.button>
-              </form>
+                  {status === 'sending' && (
+                    <span aria-hidden="true" className="w-4 h-4 rounded-full border-2 border-current border-r-transparent motion-safe:animate-spin motion-reduce:hidden" />
+                  )}
+                </button>
+              </motion.form>
               )}
-            </motion.div>
+              </AnimatePresence>
+            </div>
           </div>
         </div>
       </div>

@@ -1,9 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import Image from 'next/image';
-
-const ease: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
 
 const approaches = [
   {
@@ -34,29 +31,16 @@ const ProvenApproachSection = () => {
       <div className="flex flex-col gap-12 md:gap-20 items-center max-w-[1280px] mx-auto w-full">
 
         {/* Title */}
-        <motion.div
-          className="flex flex-col items-center max-w-[768px] w-full text-center"
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-10% 0px' }}
-          transition={{ duration: 0.65, ease }}
-        >
+        <div className="flex flex-col items-center max-w-[768px] w-full text-center">
           <h2 className="font-bold text-[36px] md:text-[48px] leading-[1.2] text-[#0c2080] tracking-[-0.36px] md:tracking-[-0.48px] w-full">
             Why Enterprise Clients Choose Software@Scale
           </h2>
-        </motion.div>
+        </div>
 
         {/* Mobile & Tablet: 2-column grid of cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full lg:hidden">
-          {approaches.map((approach, i) => (
-            <motion.div
-              key={approach.title}
-              className="flex flex-col gap-4 items-start"
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-10% 0px' }}
-              transition={{ duration: 0.6, delay: i * 0.08, ease }}
-            >
+          {approaches.map((approach) => (
+            <div key={approach.title} className="flex flex-col gap-4 items-start">
               <div className="w-10 h-10 relative shrink-0">
                 <Image src={approach.icon} alt={approach.title} fill />
               </div>
@@ -68,7 +52,7 @@ const ProvenApproachSection = () => {
                   {approach.description}
                 </p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
@@ -76,15 +60,8 @@ const ProvenApproachSection = () => {
         <div className="hidden lg:flex gap-12 xl:gap-[48px] items-center w-full">
           {/* Left column */}
           <div className="flex-1 flex flex-col gap-16 items-center">
-            {[approaches[0], approaches[1]].map((approach, i) => (
-              <motion.div
-                key={approach.title}
-                className="flex flex-col gap-6 items-center text-center w-full"
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-10% 0px' }}
-                transition={{ duration: 0.65, delay: i * 0.1, ease }}
-              >
+            {[approaches[0], approaches[1]].map((approach) => (
+              <div key={approach.title} className="flex flex-col gap-6 items-center text-center w-full">
                 <div className="w-12 h-12 relative">
                   <Image src={approach.icon} alt={approach.title} fill />
                 </div>
@@ -96,37 +73,24 @@ const ProvenApproachSection = () => {
                     {approach.description}
                   </p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
           {/* Center image */}
-          <motion.div
-            className="relative rounded-2xl shrink-0 w-[420px] xl:w-[500px] h-[420px] xl:h-[500px] overflow-hidden"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, margin: '-10% 0px' }}
-            transition={{ duration: 0.75, ease }}
-          >
+          <div className="relative rounded-2xl shrink-0 w-[420px] xl:w-[500px] h-[420px] xl:h-[500px] overflow-hidden">
             <Image
               src="/images/placeholder/placeholder160.jpg"
               alt="Our proven approach methodology"
               fill
               className="object-cover"
             />
-          </motion.div>
+          </div>
 
           {/* Right column */}
           <div className="flex-1 flex flex-col gap-16 items-center">
-            {[approaches[2], approaches[3]].map((approach, i) => (
-              <motion.div
-                key={approach.title}
-                className="flex flex-col gap-6 items-center text-center w-full"
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-10% 0px' }}
-                transition={{ duration: 0.65, delay: i * 0.1, ease }}
-              >
+            {[approaches[2], approaches[3]].map((approach) => (
+              <div key={approach.title} className="flex flex-col gap-6 items-center text-center w-full">
                 <div className="w-12 h-12 relative">
                   <Image src={approach.icon} alt={approach.title} fill />
                 </div>
@@ -138,7 +102,7 @@ const ProvenApproachSection = () => {
                     {approach.description}
                   </p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

@@ -1,10 +1,7 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-
-const ease: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
 
 const TEAM_MEMBERS = [
   { name: "Louis Droguett", title: "Chief Executive Officer", description: "Technology and operations executive offering progressive leadership, working collaboratively to align diverse stakeholders to a single vision. Builds engaged and high-performing teams in times of change to deliver measurable business outcomes.", imageSrc: "/images/people/louis.jpg", objectPosition: "object-center" },
@@ -25,48 +22,24 @@ const PeopleTeamSection = () => {
   return (
     <section className="bg-[#cce1f4] px-5 md:px-16 py-16 md:py-28 w-full">
       <div className="max-w-[1280px] mx-auto flex flex-col gap-12 md:gap-[80px] items-start">
-        <motion.div
-          className="flex flex-col gap-3 md:gap-4 items-start max-w-[768px] w-full"
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-10% 0px' }}
-          transition={{ duration: 0.65, ease }}
-        >
+        <div className="flex flex-col gap-3 md:gap-4 items-start max-w-[768px] w-full">
           <h2 className="font-bold text-[#0c2080] text-[36px] md:text-[48px] leading-[1.2] tracking-[-0.36px] md:tracking-[-0.48px] w-full">
             Executive leadership
           </h2>
           <p className="font-normal text-base md:text-lg leading-[1.5] text-[#00050a] w-full">
             Meet the talented individuals driving our success.
           </p>
-        </motion.div>
+        </div>
 
         <div className="flex flex-col gap-12 md:gap-16 w-full">
           {rows.map((row, rowIndex) => (
-            <motion.div
-              key={rowIndex}
-              className="flex flex-col md:flex-row gap-12 md:gap-12 w-full"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: '-10% 0px' }}
-              variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.12 } } }}
-            >
+            <div key={rowIndex} className="flex flex-col md:flex-row gap-12 md:gap-12 w-full">
               {row.map((member) => (
-                <motion.div
-                  key={member.name}
-                  className="flex flex-col gap-5 md:gap-6 w-full items-start md:w-1/3"
-                  variants={{
-                    hidden: { opacity: 0, y: 16 },
-                    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease } },
-                  }}
-                >
+                <div key={member.name} className="flex flex-col gap-5 md:gap-6 w-full items-start md:w-1/3">
                   <div className="relative aspect-square rounded-2xl w-full overflow-hidden">
-                    <motion.div
-                      className="absolute inset-0"
-                      whileHover={{ scale: 1.02 }}
-                      transition={{ duration: 0.45, ease }}
-                    >
+                    <div className="absolute inset-0 lift">
                       <Image src={member.imageSrc} alt={member.name} fill className={`object-cover ${member.objectPosition} rounded-2xl`} />
-                    </motion.div>
+                    </div>
                   </div>
                   <div className="flex flex-col gap-3 md:gap-4 w-full items-start">
                     <div className="flex flex-col gap-0 items-start w-full">
@@ -75,19 +48,13 @@ const PeopleTeamSection = () => {
                     </div>
                     <p className="font-normal text-base leading-[1.5] text-[#00050a] w-full">{member.description}</p>
                   </div>
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
+            </div>
           ))}
         </div>
 
-        <motion.div
-          className="flex flex-col gap-6 items-start max-w-[768px] w-full"
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-10% 0px' }}
-          transition={{ duration: 0.6, ease }}
-        >
+        <div className="flex flex-col gap-6 items-start max-w-[768px] w-full">
           <div className="flex flex-col gap-4 w-full">
             <h4 className="font-bold text-[#0c2080] text-[24px] md:text-[32px] leading-[1.3] tracking-[-0.24px] md:tracking-[-0.32px] w-full">
               We're hiring!
@@ -97,13 +64,13 @@ const PeopleTeamSection = () => {
             </p>
           </div>
           <div className="flex flex-col gap-4 w-[155px]">
-            <Link href="/careers" className="border border-[#0c2080] border-solid flex items-center justify-center px-6 py-2.5 rounded-xl w-full hover:bg-[#0c2080] hover:text-white transition-colors">
+            <Link href="/careers" className="press border border-[#0c2080] border-solid flex items-center justify-center px-6 py-2.5 rounded-xl w-full hover:bg-[#0c2080] hover:text-white transition-colors">
               <span className="font-medium text-[#0c2080] hover:text-white text-base leading-[1.5] whitespace-nowrap">
                 Open Positions
               </span>
             </Link>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

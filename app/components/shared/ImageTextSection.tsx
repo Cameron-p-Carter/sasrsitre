@@ -1,11 +1,8 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import SectionWrapper from './SectionWrapper';
 import { ReactNode } from 'react';
-
-const ease: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
 
 type ContentVariant = 'simple' | 'list' | 'custom';
 
@@ -85,22 +82,9 @@ export default function ImageTextSection({
               ))}
             </div>
             {outcomeItems && outcomeItems.length > 0 && (
-              <motion.div
-                className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-x-6 lg:gap-y-10 w-full"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: '-10% 0px' }}
-                variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
-              >
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-x-6 lg:gap-y-10 w-full">
                 {outcomeItems.map((item, index) => (
-                  <motion.div
-                    key={index}
-                    className="flex flex-col gap-4 items-start w-full"
-                    variants={{
-                      hidden: { opacity: 0, y: 12 },
-                      visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease } },
-                    }}
-                  >
+                  <div key={index} className="flex flex-col gap-4 items-start w-full">
                     <div className="relative w-12 h-12 shrink-0">
                       <Image src={item.iconSrc} alt={item.title} width={48} height={48} className="object-contain" />
                     </div>
@@ -112,9 +96,9 @@ export default function ImageTextSection({
                         {item.description}
                       </p>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
-              </motion.div>
+              </div>
             )}
           </div>
         );
@@ -122,35 +106,23 @@ export default function ImageTextSection({
   };
 
   const content = (
-    <motion.div
-      className={`content-stretch flex flex-col gap-6 md:gap-8 grow lg:basis-0 items-start relative shrink-0 min-w-0 w-full lg:w-1/2 order-2 ${imageOnRight ? 'lg:order-1' : 'lg:order-2'}`}
-      initial={{ opacity: 0, y: 16 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-10% 0px' }}
-      transition={{ duration: 0.65, ease }}
-    >
+    <div className={`content-stretch flex flex-col gap-6 md:gap-8 grow lg:basis-0 items-start relative shrink-0 min-w-0 w-full lg:w-1/2 order-2 ${imageOnRight ? 'lg:order-1' : 'lg:order-2'}`}>
       <h2 className={`font-bold text-[36px] md:text-[48px] leading-[1.2] tracking-[-0.36px] md:tracking-[-0.48px] w-full ${titleColor}`}>
         {title}
       </h2>
       {renderContent()}
-    </motion.div>
+    </div>
   );
 
   const image = (
-    <motion.div
-      className={`relative rounded-2xl shrink-0 w-full h-[335px] md:h-[420px] lg:h-auto lg:w-1/2 order-1 overflow-hidden ${imageOnRight ? 'lg:order-2' : 'lg:order-1'}`}
-      initial={{ opacity: 0, y: 16 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-10% 0px' }}
-      transition={{ duration: 0.65, delay: 0.1, ease }}
-    >
+    <div className={`relative rounded-2xl shrink-0 w-full h-[335px] md:h-[420px] lg:h-auto lg:w-1/2 order-1 overflow-hidden ${imageOnRight ? 'lg:order-2' : 'lg:order-1'}`}>
       <Image
         src={imageSrc}
         alt={imageAlt || title}
         fill
         className="object-cover rounded-2xl"
       />
-    </motion.div>
+    </div>
   );
 
   return (

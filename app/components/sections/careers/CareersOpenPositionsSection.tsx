@@ -1,10 +1,7 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Button from '@/app/components/shared/Button';
-
-const ease: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
 
 interface JobPosition {
   title: string;
@@ -32,38 +29,19 @@ export default function CareersOpenPositionsSection({ sectionTitle, sectionDescr
           <div className="flex flex-col lg:flex-row gap-12 md:gap-20 items-start w-full">
 
             {/* Title: slides from left */}
-            <motion.div
-              className="flex flex-col gap-3 md:gap-4 items-start w-full lg:max-w-[256px] flex-shrink-0"
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-10% 0px' }}
-              transition={{ duration: 0.65, ease }}
-            >
+            <div className="flex flex-col gap-3 md:gap-4 items-start w-full lg:max-w-[256px] flex-shrink-0">
               <div className="flex flex-col gap-5 md:gap-6 items-center w-full">
                 <h2 className={`font-bold text-[36px] md:text-[48px] leading-[1.2] tracking-[-0.36px] md:tracking-[-0.48px] w-full ${titleColor}`}>
                   {sectionTitle}
                 </h2>
                 <p className={`font-normal text-base md:text-[18px] leading-[1.5] w-full ${textColor}`}>{sectionDescription}</p>
               </div>
-            </motion.div>
+            </div>
 
             {/* Positions: stagger */}
-            <motion.div
-              className="flex flex-col items-center flex-grow w-full"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: '-10% 0px' }}
-              variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.12 } } }}
-            >
+            <div className="flex flex-col items-center flex-grow w-full">
               {positions.map((position, index) => (
-                <motion.div
-                  key={index}
-                  className="border-t border-[rgba(0,5,10,0.15)] flex gap-4 items-start py-6 md:py-8 w-full"
-                  variants={{
-                    hidden: { opacity: 0, y: 16 },
-                    visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease } },
-                  }}
-                >
+                <div key={index} className="border-t border-[rgba(0,5,10,0.15)] flex gap-4 items-start py-6 md:py-8 w-full">
                   {position.iconSrc && (
                     <div className="relative w-12 h-12 shrink-0">
                       <Image src={position.iconSrc} alt="" width={48} height={48} className="object-contain" />
@@ -96,9 +74,9 @@ export default function CareersOpenPositionsSection({ sectionTitle, sectionDescr
                       <Button variant="secondary" href={position.applyUrl} target="_blank">Apply Now</Button>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>

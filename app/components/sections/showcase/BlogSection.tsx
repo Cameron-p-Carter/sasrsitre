@@ -278,7 +278,7 @@ const BlogSection = () => {
                       <span className="font-normal text-base leading-[1.5] whitespace-nowrap">
                         Read more
                       </span>
-                      <div className="w-6 h-6 flex items-center justify-center">
+                      <div className="nudge w-6 h-6 flex items-center justify-center">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
@@ -344,7 +344,7 @@ const BlogSection = () => {
                       <span className="font-normal text-base leading-[1.5] whitespace-nowrap">
                         Read more
                       </span>
-                      <div className="w-6 h-6 flex items-center justify-center">
+                      <div className="nudge w-6 h-6 flex items-center justify-center">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
@@ -386,30 +386,26 @@ const BlogSection = () => {
 
             {/* Navigation Arrows */}
             <div className="flex gap-4">
-              <motion.button
+              <button
                 type="button"
                 onClick={prevSlide}
                 aria-label="Previous slide"
-                className="bg-[#5ae0f6] flex items-center justify-center p-3 rounded-lg hover:bg-[#4ac9e0] transition-colors"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                className="bg-[#5ae0f6] flex items-center justify-center p-3 rounded-lg hover:bg-[#4ac9e0] press"
               >
                 <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M15 18L9 12L15 6" stroke="#00050a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-              </motion.button>
-              <motion.button
+              </button>
+              <button
                 type="button"
                 onClick={nextSlide}
                 aria-label="Next slide"
-                className="bg-[#5ae0f6] flex items-center justify-center p-3 rounded-lg hover:bg-[#4ac9e0] transition-colors"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                className="bg-[#5ae0f6] flex items-center justify-center p-3 rounded-lg hover:bg-[#4ac9e0] press"
               >
                 <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M9 18L15 12L9 6" stroke="#00050a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-              </motion.button>
+              </button>
             </div>
           </div>
         </div>

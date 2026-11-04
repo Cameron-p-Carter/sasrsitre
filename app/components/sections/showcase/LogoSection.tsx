@@ -1,9 +1,25 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useState } from 'react';
+
+// Moving content needs a way to stop it (WCAG 2.2.2). Hovering pauses it for mouse users; this works for everyone.
+const PauseButton = ({ paused, onToggle, className = '' }: { paused: boolean; onToggle: () => void; className?: string }) => (
+  <button
+    type="button"
+    onClick={onToggle}
+    aria-label={paused ? 'Play logo animation' : 'Pause logo animation'}
+    className={`press w-11 h-11 shrink-0 items-center justify-center rounded-full border border-[#5ae0f6]/60 text-[#5ae0f6] hover:bg-[#5ae0f6] hover:text-[#004f99] motion-reduce:hidden ${className}`}
+  >
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+      {paused ? <path d="M4 2.5v11l9-5.5z" /> : <path d="M4 2.5h3v11H4zM9 2.5h3v11H9z" />}
+    </svg>
+  </button>
+);
 
 const LogoSection = () => {
+  const [paused, setPaused] = useState(false);
+
   // White logos for better contrast on blue background
   const logos = [
     { name: "McDonald's", src: "/images/Company Logos/McDonald's_logo_White.png", width: 92, height: 69 },
@@ -73,27 +89,16 @@ const LogoSection = () => {
           </p>
 
           {/* Right: Marquee Logos */}
-          <div className="flex-1 relative overflow-hidden h-[100px]">
+          <div className="marquee flex-1 min-w-0 relative overflow-hidden h-[100px]" data-paused={paused}>
             {/* Left fade gradient */}
             <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#004f99] to-transparent z-10 pointer-events-none"></div>
 
             {/* Right fade gradient */}
             <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#004f99] to-transparent z-10 pointer-events-none"></div>
 
-            <motion.div
-              className="flex gap-8 xl:gap-10 2xl:gap-12 items-center h-full"
-              style={{ width: 'max-content' }}
-              animate={{
-                x: ['0%', '-50%']
-              }}
-              transition={{
-                x: {
-                  repeat: Infinity,
-                  repeatType: "loop",
-                  duration: 30,
-                  ease: "linear",
-                },
-              }}
+            <div
+              className="marquee-track flex w-max gap-8 xl:gap-10 2xl:gap-12 pr-8 xl:pr-10 2xl:pr-12 items-center h-full"
+              style={{ '--marquee-duration': '30s' } as React.CSSProperties}
             >
               {duplicatedLogos.map((logo, index) => (
                 <div
@@ -116,27 +121,18 @@ const LogoSection = () => {
                   />
                 </div>
               ))}
-            </motion.div>
+            </div>
           </div>
+
+          <PauseButton paused={paused} onToggle={() => setPaused(!paused)} className="flex" />
         </div>
 
         {/* Mobile: Marquee Animation */}
-        <div className="md:hidden relative">
-          <div className="flex overflow-hidden">
-            <motion.div
-              className="flex gap-8 items-center"
-              animate={{
-                x: [0, -50 * logos.length]
-              }}
-              transition={{
-                x: {
-                  repeat: Infinity,
-                  repeatType: "loop",
-                  duration: 20,
-                  ease: "linear",
-                },
-              }}
-              style={{ width: `${100 * duplicatedLogos.length}px` }}
+        <div className="md:hidden relative flex flex-col items-center gap-4">
+          <div className="marquee flex overflow-hidden w-full" data-paused={paused}>
+            <div
+              className="marquee-track flex w-max gap-8 pr-8 items-center"
+              style={{ '--marquee-duration': '60s' } as React.CSSProperties}
             >
               {duplicatedLogos.map((logo, index) => (
                 <div
@@ -144,7 +140,7 @@ const LogoSection = () => {
                   // The second copy only exists to make the loop seamless; hide it from screen readers
                   aria-hidden={index >= logos.length || undefined}
                   className="flex items-center justify-center flex-shrink-0"
-                  style={{ minWidth: '120px' }}
+                  style={{ width: '120px' }}
                 >
                   <Image
                     src={logo.src}
@@ -152,12 +148,13 @@ const LogoSection = () => {
                     width={Math.min(logo.width, 100)}
                     height={Math.min(logo.height, 50)}
                     className="object-contain filter brightness-0 invert"
-                    style={{ maxHeight: '40px', width: 'auto' }}
+                    style={{ maxHeight: '40px', width: 'auto', maxWidth: '100%' }}
                   />
                 </div>
               ))}
-            </motion.div>
+            </div>
           </div>
+          <PauseButton paused={paused} onToggle={() => setPaused(!paused)} className="flex" />
         </div>
       </div>
     </section>

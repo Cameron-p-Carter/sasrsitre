@@ -43,7 +43,7 @@ export default function Button({
 }: ButtonProps) {
 
   // Base styles (common to all buttons)
-  const baseStyles = 'font-medium text-base leading-[1.5] whitespace-nowrap transition-colors inline-flex items-center justify-center gap-2';
+  const baseStyles = 'font-medium text-base leading-[1.5] whitespace-nowrap press inline-flex items-center justify-center gap-2';
 
   // Size styles
   const sizeStyles = {
@@ -57,7 +57,7 @@ export default function Button({
     secondary: 'border border-[#0c2080] text-[#0c2080] hover:bg-[#0c2080] hover:text-white',
     outline: 'border border-[#5ae0f6] text-[#5ae0f6] hover:bg-[#5ae0f6] hover:text-[#0c2080]',
     accent: 'bg-[#14d3f3] border border-[#14d3f3] text-[#0c2080] hover:bg-[#10c0d8]',
-    link: 'text-[#00050a] hover:opacity-70 px-0 py-0', // No padding, no background
+    link: 'group text-[#00050a] hover:opacity-70 px-0 py-0', // No padding, no background
   };
 
   // Width styles
@@ -71,7 +71,7 @@ export default function Button({
     const content = (
       <>
         <span>{children}</span>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="nudge" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       </>

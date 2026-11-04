@@ -8,6 +8,12 @@ import Button from '@/app/components/shared/Button';
 
 const ease: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
 
+const moreItemMotion = {
+  initial: { opacity: 0, y: 16 },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.4, ease } },
+  exit: { opacity: 0, transition: { duration: 0.2 } },
+};
+
 interface NewsItem {
   id: number;
   imageSrc: string;
@@ -58,7 +64,7 @@ const NewsCard = ({ item }: { item: NewsItem }) => (
       </div>
       <div className="flex items-center gap-2 text-[#00050a]">
         <span className="text-base font-medium leading-[1.5]">Read more</span>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <svg className="nudge" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       </div>
@@ -75,60 +81,37 @@ const NewsGridSection = ({ sectionTitle, sectionDescription, newsItems, viewMore
     <section className="bg-[#cce1f4] px-5 md:px-16 py-16 md:py-28 w-full">
       <div className="max-w-[1280px] mx-auto flex flex-col gap-12 md:gap-[80px] items-center">
 
-        <motion.div
-          className="flex flex-col gap-4 md:gap-6 items-center max-w-[768px] w-full text-center"
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-10% 0px' }}
-          transition={{ duration: 0.65, ease }}
-        >
+        <div className="flex flex-col gap-4 md:gap-6 items-center max-w-[768px] w-full text-center">
           <h1 className="font-bold text-[#0c2080] text-[40px] md:text-[56px] leading-[1.2] tracking-[-0.4px] md:tracking-[-0.56px] w-full">
             {sectionTitle}
           </h1>
           <p className="font-normal text-base md:text-lg leading-[1.5] text-[#00050a] w-full">
             {sectionDescription}
           </p>
-        </motion.div>
+        </div>
 
+        {/* Cards are there on arrival; only the extra ones from "show more" animate, in response to the click */}
         {/* Mobile grid */}
-        <motion.div
-          className="flex flex-col gap-12 md:hidden w-full"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-10% 0px' }}
-          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
-        >
-          {displayedItems.map((item) => (
-            <motion.div
-              key={item.id}
-              variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease } } }}
-            >
-              <NewsCard item={item} />
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Desktop grid */}
-        <motion.div
-          className="hidden md:grid grid-cols-3 gap-8 w-full"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-10% 0px' }}
-          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
-        >
-          <AnimatePresence>
+        <div className="flex flex-col gap-12 md:hidden w-full">
+          <AnimatePresence initial={false}>
             {displayedItems.map((item) => (
-              <motion.div
-                key={item.id}
-                variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease } } }}
-                exit={{ opacity: 0, transition: { duration: 0.2 } }}
-                layout
-              >
+              <motion.div key={item.id} {...moreItemMotion}>
                 <NewsCard item={item} />
               </motion.div>
             ))}
           </AnimatePresence>
-        </motion.div>
+        </div>
+
+        {/* Desktop grid */}
+        <div className="hidden md:grid grid-cols-3 gap-8 w-full">
+          <AnimatePresence initial={false}>
+            {displayedItems.map((item) => (
+              <motion.div key={item.id} {...moreItemMotion} layout>
+                <NewsCard item={item} />
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </div>
 
         {hasMore && (
           <div className="flex justify-center w-full">

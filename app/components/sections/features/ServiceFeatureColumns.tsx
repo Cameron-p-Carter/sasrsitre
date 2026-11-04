@@ -1,9 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import Image from 'next/image';
-
-const ease: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
 
 interface FeatureColumn {
   iconSrc?: string;
@@ -22,22 +19,9 @@ const ServiceFeatureColumns = ({ columns, backgroundColor, textColor, titleColor
   return (
     <section className={`${backgroundColor} px-5 md:px-16 pb-16 md:pb-28 w-full`}>
       <div className="max-w-[1280px] mx-auto">
-        <motion.div
-          className="flex flex-col lg:flex-row gap-12 w-full"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-10% 0px' }}
-          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.14 } } }}
-        >
+        <div className="flex flex-col lg:flex-row gap-12 w-full">
           {columns.map((column, index) => (
-            <motion.div
-              key={index}
-              className="flex flex-col gap-6 md:gap-8 w-full lg:w-1/3 items-start"
-              variants={{
-                hidden: { opacity: 0, y: 16 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease } },
-              }}
-            >
+            <div key={index} className="flex flex-col gap-6 md:gap-8 w-full lg:w-1/3 items-start">
               {column.iconSrc && (
                 <div className="relative w-12 h-12 shrink-0">
                   <Image src={column.iconSrc} alt={column.title} width={48} height={48} className="object-contain" />
@@ -63,9 +47,9 @@ const ServiceFeatureColumns = ({ columns, backgroundColor, textColor, titleColor
                   )}
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

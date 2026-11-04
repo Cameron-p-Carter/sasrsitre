@@ -75,7 +75,7 @@ const EliteTalentSection = ({ hideLearnMore = false }: EliteTalentSectionProps) 
             {/* Action Buttons */}
             <div className="flex gap-6 items-center">
               {!hideLearnMore && (
-                <Link href="/recognition" className="bg-[#5ae0f6] border border-[#5ae0f6] border-solid rounded-xl hover:bg-[#4dd4e8] transition-colors">
+                <Link href="/recognition" className="bg-[#5ae0f6] border border-[#5ae0f6] border-solid rounded-xl hover:bg-[#4dd4e8] press">
                   <div className="flex items-center justify-center gap-2 px-6 py-2.5 rounded-inherit overflow-hidden">
                     <span className="font-medium text-[#0c2080] text-base leading-[1.5] whitespace-nowrap">
                       Learn More
@@ -87,8 +87,8 @@ const EliteTalentSection = ({ hideLearnMore = false }: EliteTalentSectionProps) 
               <Link
                 href="/contact-us"
                 className={hideLearnMore
-                  ? "bg-[#5ae0f6] border border-[#5ae0f6] border-solid rounded-xl hover:bg-[#4dd4e8] transition-colors"
-                  : "flex items-center justify-center gap-2 rounded-xl overflow-hidden transition-opacity hover:opacity-70 px-2 py-1"
+                  ? "bg-[#5ae0f6] border border-[#5ae0f6] border-solid rounded-xl hover:bg-[#4dd4e8] press"
+                  : "group flex items-center justify-center gap-2 rounded-xl overflow-hidden press hover:opacity-70 px-2 py-1"
                 }
               >
                 <div className={hideLearnMore
@@ -99,7 +99,7 @@ const EliteTalentSection = ({ hideLearnMore = false }: EliteTalentSectionProps) 
                     Contact
                   </span>
                   {!hideLearnMore && (
-                    <div className="w-6 h-6 flex items-center justify-center">
+                    <div className="nudge w-6 h-6 flex items-center justify-center">
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9 18L15 12L9 6" stroke="#0c2080" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>

@@ -67,7 +67,7 @@ const CaseStudySection = () => {
             >
               <Link href={study.url} className="flex flex-col gap-6 items-start group">
                 <div className="relative aspect-[405.333/270] rounded-2xl w-full overflow-hidden">
-                  <Image src={study.imageSrc} alt={study.title} fill className="object-cover rounded-2xl" />
+                  <Image src={study.imageSrc} alt={study.title} fill className="object-cover rounded-2xl zoom" />
                 </div>
                 <div className="flex flex-col gap-4 w-full items-start">
                   <div className="flex flex-col gap-2 items-start text-white w-full">
@@ -78,7 +78,7 @@ const CaseStudySection = () => {
                   </div>
                   <div className="flex items-center justify-center gap-2 rounded-xl overflow-hidden">
                     <span className="font-normal text-[#14d3f3] text-base leading-[1.5] whitespace-nowrap">View project</span>
-                    <div className="w-6 h-6 flex items-center justify-center">
+                    <div className="nudge w-6 h-6 flex items-center justify-center">
                       <Image src={ICON_CHEVRON_RIGHT} alt="Arrow" width={24} height={24} className="object-contain filter brightness-[2.5]" />
                     </div>
                   </div>

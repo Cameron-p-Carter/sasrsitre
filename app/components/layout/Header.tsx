@@ -361,7 +361,7 @@ const Header = () => {
                 </div>
 
                 <div className="pt-4">
-                  <Link href="/contact-us" className="bg-[#5ae0f6] flex items-center justify-center gap-2 px-4 py-2 rounded-xl w-full">
+                  <Link href="/contact-us" className="bg-[#5ae0f6] press flex items-center justify-center gap-2 px-4 py-2 rounded-xl w-full">
                     <span className="font-medium text-[#002b50] text-base leading-6">Contact</span>
                   </Link>
                 </div>

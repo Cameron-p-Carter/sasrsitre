@@ -92,7 +92,7 @@ export default function PortfolioSection({
                     src={project.image}
                     alt={`${project.title} project`}
                     fill
-                    className="object-cover"
+                    className="object-cover zoom"
                     style={{ objectPosition: project.objectPosition ?? 'center' }}
                   />
                 </div>
@@ -129,7 +129,7 @@ export default function PortfolioSection({
                     <span className="text-base font-medium leading-[1.5]">
                       View Proven Delivery
                     </span>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <svg className="nudge" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none">
                       <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
@@ -162,7 +162,7 @@ export default function PortfolioSection({
                               src={project.image}
                               alt={`${project.title} project`}
                               fill
-                              className="object-cover"
+                              className="object-cover zoom"
                               style={{ objectPosition: project.objectPosition ?? 'center' }}
                             />
                         </div>
@@ -226,9 +226,9 @@ export default function PortfolioSection({
                 {/* View links */}
                 <div className="grid grid-cols-2 gap-8 lg:gap-12 mt-6">
                   {pair.map((project) => (
-                    <Link key={project.id} href={project.link || "/collections/case-studies"} className={`flex items-center gap-2 ${linkColor}`}>
+                    <Link key={project.id} href={project.link || "/collections/case-studies"} className={`group flex items-center gap-2 ${linkColor}`}>
                       <span className="text-base font-medium leading-[1.5]">View Proven Delivery<span className="sr-only">: {project.title}</span></span>
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <svg className="nudge" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                     </Link>

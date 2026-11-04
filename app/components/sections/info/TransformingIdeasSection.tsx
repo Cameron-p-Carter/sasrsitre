@@ -94,7 +94,7 @@ const TransformingIdeasSection = () => {
 
         {/* Action Buttons */}
         <div className="flex gap-6 items-center">
-          <Link href="/recognition" className="bg-[#5ae0f6] border border-[#5ae0f6] border-solid rounded-xl hover:bg-[#4dd0e6] transition-colors">
+          <Link href="/recognition" className="bg-[#5ae0f6] border border-[#5ae0f6] border-solid rounded-xl hover:bg-[#4dd0e6] press">
             <div className="flex items-center justify-center gap-2 px-6 py-2.5 rounded-inherit overflow-hidden">
               <span className="font-medium text-[#0c2080] text-base leading-[1.5] whitespace-nowrap">
                 Learn More
@@ -102,11 +102,11 @@ const TransformingIdeasSection = () => {
             </div>
           </Link>
           
-          <Link href="/contact-us" className="flex items-center justify-center gap-2 rounded-xl overflow-hidden hover:bg-[#e6f7ff] transition-colors px-4 py-2.5">
+          <Link href="/contact-us" className="group flex items-center justify-center gap-2 rounded-xl overflow-hidden hover:bg-[#e6f7ff] press px-4 py-2.5">
             <span className="font-medium text-[#0c2080] text-base leading-[1.5] whitespace-nowrap">
               Get Started
             </span>
-            <div className="w-6 h-6 flex items-center justify-center">
+            <div className="nudge w-6 h-6 flex items-center justify-center">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M9 18L15 12L9 6" stroke="#0c2080" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
