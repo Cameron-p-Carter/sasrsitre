@@ -118,7 +118,7 @@ export default function ContactFormSection({
                     />
                   </svg>
                   <p className="font-bold text-[20px] leading-[1.4]">Thanks, your message has been sent.</p>
-                  <p className="text-base leading-[1.5]">We&apos;ll be in touch within one business day.</p>
+                  <p className="text-base leading-[1.5]">We&apos;ll be in touch.</p>
                 </motion.div>
               ) : (
               <motion.form

@@ -2,7 +2,7 @@
 // Needs these environment variables (set them in Vercel, never in the code):
 //   RESEND_API_KEY  secret key from Resend
 //   ENQUIRY_TO      inbox that receives enquiries, e.g. info@softwareatscale.com.au
-//   ENQUIRY_FROM    sender on a domain verified in Resend, e.g. "Software@Scale website <enquiries@send.softwareatscale.com.au>"
+//   ENQUIRY_FROM    sender on a domain verified in Resend, e.g. "Software at Scale website <enquiries@send.softwareatscale.com.au>" (no @ in the name)
 
 const MAX_LENGTH = { name: 200, email: 254, message: 5000 };
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
