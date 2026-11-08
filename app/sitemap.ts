@@ -4,7 +4,12 @@ import path from 'node:path';
 import { SITE_URL } from './site-url';
 
 // Pages that exist but shouldn't be listed for search engines
-const EXCLUDED_ROUTES = new Set(['/collections/pop']);
+// The branded case studies are standalone pages for now, not linked from anywhere
+const EXCLUDED_ROUTES = new Set([
+  '/collections/pop',
+  '/collections/case-studies/cba-netbank-next',
+  '/collections/case-studies/team-super-onetrust',
+]);
 
 // Every folder under app/ with a page file is a route; walk them at build time so new pages are included automatically
 function findRoutes(dir: string, route = ''): string[] {

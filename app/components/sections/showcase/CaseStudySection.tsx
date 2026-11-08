@@ -15,7 +15,7 @@ interface CaseStudy {
 }
 
 const CASE_STUDIES: CaseStudy[] = [
-  { imageSrc: '/images/placeholder/placeholder38.jpg', title: 'Team Super', description: 'Seamless Data Migration Underpins a Major Superannuation Merger.', url: '/collections/case-studies/team-super' },
+  { imageSrc: '/images/placeholder/placeholder38.jpg', title: 'Team Super', description: 'Decoupling 100+ components to turn a super fund’s legacy registry into a sale-ready asset.', url: '/collections/case-studies/team-super' },
   { imageSrc: '/images/placeholder/placeholder39.jpg', title: 'Coates Group', description: 'Engineering Acceleration for Global Market Leadership.', url: '/collections/case-studies/coates-group' },
   { imageSrc: '/images/placeholder/placeholder40.jpg', title: 'GoFundraise', description: "Software@Scale delivers a world-class platform to support GoFundraise's global growth.", url: '/collections/case-studies/gofundraise' },
 ];
