@@ -65,7 +65,7 @@ const CASE_STUDY: CaseStudyStory = {
       { title: "Specialists embedded in CBA teams", text: "CBA then asked for specialist engineers to be placed inside its own teams to scale up technical leadership." },
       { title: "A third squad for critical priorities", text: "CBA also engaged a third squad, known as the SWAT team, to take on critical program priorities. Each squad pairs a Product Owner and a Principal Engineer with four engineers, working directly with CBA’s product, UX, architecture, platform, fraud, risk and compliance teams." },
     ],
-    photo: { src: "/images/case-studies/cba-netbank-next/engagement.jpg", fit: "contain", background: "#4e4c4d" },
+    photo: { src: "/images/case-studies/cba-netbank-next/engagement.jpg" },
   },
   solution: {
     title: "Modern banking features, built faster on cloud-native foundations",
@@ -95,7 +95,7 @@ const CASE_STUDY: CaseStudyStory = {
       { icon: "award_star", title: "A top-five squad", text: "One Software@Scale squad ranked in the top five of more than 100 CBA retail squads for consistently meeting commitments, and our teams received six recognitions, including Group CIO recognition for accessibility improvements." },
     ],
     closing: "CBA expanded the NetBank engagement to three squads plus two embedded engineers. Within about a year, Software@Scale’s presence across CBA grew from 12 people to more than 70, spanning business banking, credit cards, home buying, payments, AI, cloud and platform engineering.",
-    photo: { src: "/images/case-studies/cba-netbank-next/result.jpg", background: "#ffcc00" },
+    photo: { src: "/images/case-studies/cba-netbank-next/result.jpg", fit: "contain", background: "#ffcc00" },
   },
   closing: {
     title: "From two squads to a partnership across the bank",

@@ -94,7 +94,7 @@ function HalfPhoto({ photo, className = '' }: { photo: Photo; className?: string
   const contain = photo.fit === 'contain';
   return (
     <div className={`relative w-full md:w-1/2 min-h-[300px] md:min-h-0 ${className}`} style={{ backgroundColor: photo.background }}>
-      <Image src={photo.src} alt="" fill sizes="(min-width: 768px) 50vw, 100vw" className={contain ? 'object-contain' : 'object-cover'} />
+      <Image src={photo.src} alt="" fill sizes={contain ? '(min-width: 768px) 50vw, 100vw' : '100vw'} className={contain ? 'object-contain' : 'object-cover'} />
     </div>
   );
 }
@@ -269,8 +269,12 @@ export default function CaseStudyStoryLayout({ data }: { data: CaseStudyStory })
               </ul>
               <p className="font-bold text-[#0c2080] text-base leading-[1.6]">{result.closing}</p>
             </div>
-            <div className="relative w-full lg:w-[45%] min-h-[300px] rounded-2xl overflow-hidden" style={{ backgroundColor: result.photo.background }}>
-              <Image src={result.photo.src} alt="" fill sizes="(min-width: 1024px) 45vw, 100vw" className={result.photo.fit === 'contain' ? 'object-contain' : 'object-cover'} />
+            {/* A contained photo keeps its own shape (a small source image would blur if stretched to the column's height) */}
+            <div
+              className={`relative w-full lg:w-[45%] rounded-2xl overflow-hidden ${result.photo.fit === 'contain' ? 'aspect-[16/9] self-center' : 'min-h-[300px]'}`}
+              style={{ backgroundColor: result.photo.background }}
+            >
+              <Image src={result.photo.src} alt="" fill sizes={result.photo.fit === 'contain' ? '(min-width: 1024px) 45vw, 100vw' : '(min-width: 1024px) 90vw, 100vw'} className={result.photo.fit === 'contain' ? 'object-contain' : 'object-cover'} />
             </div>
           </div>
         </section>

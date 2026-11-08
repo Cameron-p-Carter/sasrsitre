@@ -67,7 +67,7 @@ const CASE_STUDY: CaseStudyStory = {
       { title: "Eight senior specialists", text: "We scaled up with eight senior specialists, led by a Delivery Principal, our Head of Platform Engineering and a Security Architect, who had designed, built and operated enterprise superannuation administration platforms." },
       { title: "From scoping to start", text: "The engagement assessment moved from executive discussions to technical scoping, a statement of work and project planning, with work commencing in September 2023." },
     ],
-    photo: { src: "/images/case-studies/team-super-onetrust/engagement.jpg", fit: "contain", background: "#ffffff" },
+    photo: { src: "/images/case-studies/team-super-onetrust/engagement.jpg" },
   },
   solution: {
     title: "From fund-specific system to independent, sale-ready platform",
