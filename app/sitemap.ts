@@ -4,9 +4,10 @@ import path from 'node:path';
 import { SITE_URL } from './site-url';
 
 // Pages that exist but shouldn't be listed for search engines
-// The branded case studies are standalone pages for now, not linked from anywhere
+// Standalone case studies, not linked from anywhere for now (the new CBA ones are waiting on Callum)
 const EXCLUDED_ROUTES = new Set([
   '/collections/pop',
+  '/collections/case-studies/cba-payto',
   '/collections/case-studies/cba-netbank-next',
   '/collections/case-studies/team-super-onetrust',
 ]);

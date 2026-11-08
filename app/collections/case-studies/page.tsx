@@ -117,7 +117,7 @@ const CASE_STUDIES_PORTFOLIO_DATA: PortfolioSectionData = {
     {
       id: 10,
       title: "CBA NetBank",
-      description: "AI-enabled engineering cuts estimated PayTo build time by 67% for a major Australian bank.",
+      description: "Australia's leading bank modernises online banking through a cloud-first, customer-centric digital platform transformation.",
       image: "/images/case/case17.jpg",
       aspectRatio: "aspect-square",
       link: "/collections/case-studies/cba-netbank"

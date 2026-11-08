@@ -3,7 +3,7 @@ import CaseStudyStoryLayout, { type CaseStudyStory } from '@/app/components/temp
 
 // Branded version, naming the client. For now it is a standalone page: nothing on the site links here,
 // search engines are asked not to index it, and it is left out of the sitemap (app/sitemap.ts).
-// The public, unbranded version is at /collections/case-studies/cba-netbank.
+// The unbranded version is at /collections/case-studies/cba-payto.
 
 export const metadata: Metadata = {
   title: "CBA NetBank Next: AI-enabled engineering cuts estimated PayTo build time by 67%",
