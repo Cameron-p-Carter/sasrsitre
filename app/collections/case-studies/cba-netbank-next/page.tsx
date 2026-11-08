@@ -95,7 +95,7 @@ const CASE_STUDY: CaseStudyStory = {
       { icon: "award_star", title: "A top-five squad", text: "One Software@Scale squad ranked in the top five of more than 100 CBA retail squads for consistently meeting commitments, and our teams received six recognitions, including Group CIO recognition for accessibility improvements." },
     ],
     closing: "CBA expanded the NetBank engagement to three squads plus two embedded engineers. Within about a year, Software@Scale’s presence across CBA grew from 12 people to more than 70, spanning business banking, credit cards, home buying, payments, AI, cloud and platform engineering.",
-    photo: { src: "/images/case-studies/cba-netbank-next/result.jpg", fit: "contain", background: "#ffcc00" },
+    photo: { src: "/images/case-studies/cba-netbank-next/result.jpg", background: "#ffcc00" },
   },
   closing: {
     title: "From two squads to a partnership across the bank",
