@@ -59,14 +59,6 @@ const CASE_STUDIES_PORTFOLIO_DATA: PortfolioSectionData = {
       link: "/collections/case-studies/coates-group"
     },
     {
-      id: 2,
-      title: "Mine Super",
-      description: "Preparing a Superannuation Platform for Sale and Future Growth.",
-      image: "/images/placeholder/placeholder13.jpg",
-      aspectRatio: "aspect-[335/188]",
-      link: "/collections/case-studies/mine-super"
-    },
-    {
       id: 4,
       title: "GoFundraise",
       description: "Software@Scale delivers a world-class platform to support GoFundraise's global growth.",

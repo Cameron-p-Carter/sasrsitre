@@ -36,6 +36,8 @@ const nextConfig: NextConfig = {
     return [
       // The superannuation page was first published under a misspelt URL; keep old links working
       { source: '/industries/supperannuation', destination: '/industries/superannuation', permanent: true },
+      // Mine Super became Team Super; the Team Super case study supersedes the old Mine Super one
+      { source: '/collections/case-studies/mine-super', destination: '/collections/case-studies/team-super', permanent: true },
     ];
   },
 };
