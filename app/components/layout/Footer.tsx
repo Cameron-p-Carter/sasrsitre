@@ -128,6 +128,9 @@ export default function Footer() {
               <span className="shrink-0">
                 © 2026 Software@Scale. All rights reserved.
               </span>
+              <Link href="/privacy-policy" className="underline underline-offset-4 hover:text-[#5ae0f6] transition-colors">
+                Privacy Policy
+              </Link>
             </div>
 
             {/* LinkedIn Logo */}
